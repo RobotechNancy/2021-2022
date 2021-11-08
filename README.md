@@ -13,6 +13,14 @@ Carré de fouille, trésors enterrés et statuettes sacrées, voilà ce qui atte
 rien ne les arrêtera dans la quête de leur Histoire.
 Alors sortez les pelles et les pioches, car l’aventure nous attend !
 
+## **`Devise :`** ##
+*L’utilsation optimale de l’énergie est une base élémentaire
+dans l’ensemble de nos conceptions.
+Savoir optimiser l’utilisation des robots existant ne nous satisfait pas.
+Nous voulons apprendre à concevoir les robots de demain
+utilisant des technologies novatrices ainsi qu’une 
+intelligence réelle supportée par une électronique et une informatique de haut niveau.*
+
 Nos objectifs de cet année sont :
 
 - Construire les 2 robots nécessaires dans la version 2022 de la compétition.
@@ -28,4 +36,4 @@ Nos objectifs de cet année sont :
 
 ## **`EQUIPE DE L'ANNEE 2021-2022`**  ##
 
-![](https://samsam.go.yo.fr/Equipe_ROBOTECH_2021-2022.png)
+![](https://polytech-nancy.univ-lorraine.fr/sites/dev-esstin.univ-lorraine.fr/files/users/Vie_etudiante/Images/equipe_robotech_2021-2022reduit.jpg)
