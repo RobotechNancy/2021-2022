@@ -14,12 +14,12 @@ rien ne les arrêtera dans la quête de leur Histoire.
 Alors sortez les pelles et les pioches, car l’aventure nous attend !
 
 ## **`Devise :`** ##
-L’utilsation optimale de l’énergie est une base élémentaire
+*L’utilsation optimale de l’énergie est une base élémentaire
 dans l’ensemble de nos conceptions.
 Savoir optimiser l’utilisation des robots existant ne nous satisfait pas.
 Nous voulons apprendre à concevoir les robots de demain
 utilisant des technologies novatrices ainsi qu’une 
-intelligence réelle supportée par une électronique et une informatique de haut niveau.
+intelligence réelle supportée par une électronique et une informatique de haut niveau.*
 
 Nos objectifs de cet année sont :
 
