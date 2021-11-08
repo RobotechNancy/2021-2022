@@ -1,0 +1,28 @@
+Robot 1 (Statue et résistance) :
+-Savoir se déplacer dans toutes les directions
+-Savoir éviter les collision avec les objets du terrain ou les autres robots
+-Savoir récupérer la statuette du piédestal
+-Savoir déposer la réplique sur le piédestal
+-Savoir déposer la statuette dans la vitrine
+-Savoir lire la valeur des résistances
+-Savoir pousser les plaques correspondantes aux bonnes résistances
+-Savoir pousser les jetons dans l'abri de chantier
+-Savoir situer la position du robot a tout moment par rapport au terrain
+-Savoir situer la position du robot a tout moment par rapport a l'autre robot
+-Savoir éviter les obstacles lorsqu'ils sont détéctés
+
+
+
+
+Robot 2 (Echantillons) :
+-Savoir se déplacer (avant arrière gauche droite)
+-Savoir attraper les jetons à l'aide d'une ventouse 
+-Savoir relacher les jetons à l'aide d'une ventouse
+-Savoir détecter la couleur du jetons que l'ont vient de récupérer 
+-Savoir déposer le jeton dans un stockage interne au robot
+-Savoir récupérer le jeton dans le stockage interne au robot
+-Savoir tourner la ventouse pour la positionner parfaitement sur le jeton
+-Déplacer la ventouse via le bras pour déposer les jetons sur la galerie
+-Savoir situer la position du robot a tout moment par rapport au terrain
+-Savoir situer la position du robot a tout moment par rapport a l'autre robot
+-Savoir éviter les collision avec les objets du terrain ou les autres robots
