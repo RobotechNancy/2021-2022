@@ -36,4 +36,4 @@ Nos objectifs de cet année sont :
 
 ## **`EQUIPE DE L'ANNEE 2021-2022`**  ##
 
-![](https://samsam.go.yo.fr/Equipe_ROBOTECH_2021-2022.png)
+![](https://polytech-nancy.univ-lorraine.fr/sites/dev-esstin.univ-lorraine.fr/files/users/Vie_etudiante/Images/equipe_robotech_2021-2022reduit.jpg)
