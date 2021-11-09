@@ -1,0 +1,31 @@
+
+Pinout du shield de la base roulante
+
+Driver 1 : 
+
+DIR -> PA9
+STEP -> PA10
+
+Driver 2 : 
+
+DIR -> PA7
+STEP -> PA2
+
+Driver 3 : 
+
+DIR -> PA0
+STEP -> PA1
+
+Driver 4 : 
+
+DIR -> PB5
+STEP -> PB4
+
+
+MS1, MS2, EN => Interrupteurs
+
+M1	M2
+0	0 	=> 8 microsteps
+0	1	=> 4 microsteps (quarter step)
+1	0	=> 2 microsteps (half step)
+1	1	=> 16 microsteps
