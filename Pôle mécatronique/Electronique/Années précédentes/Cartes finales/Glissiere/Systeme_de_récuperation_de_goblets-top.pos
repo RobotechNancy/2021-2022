@@ -1,0 +1,22 @@
+### Module positions - created on 19/05/2020 16:38:04 ###
+### Printed by Pcbnew version kicad (5.1.5)-3
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref      Val            Package                                       PosX       PosY       Rot  Side
+C1         10_nF          C_0402_1005Metric                          40.5100  -160.0300  180.0000  top
+C2         10_nF          C_0402_1005Metric                          48.0060  -151.8690  270.0000  top
+C3         10_nF          C_0402_1005Metric                          59.0900  -156.9850   90.0000  top
+C4         10_nF          C_0402_1005Metric                          49.3100  -168.5000  180.0000  top
+C5         10_nF          C_0402_1005Metric                          51.1700  -158.5100   90.0000  top
+C6         22µF          C_0402_1005Metric                          51.7700  -177.2100  270.0000  top
+C7         22µF          C_0402_1005Metric                          51.7500  -179.3000  270.0000  top
+C8         10_nF          C_0402_1005Metric                          40.5000  -164.3800  180.0000  top
+C9         10_nF          C_0402_1005Metric                          44.1000  -156.3000   90.0000  top
+C10        10_nF          C_0402_1005Metric                          64.1096  -156.9720   90.0000  top
+C11        10_nF          C_0402_1005Metric                          64.1000  -168.7900   90.0000  top
+R10KOHMS1  R_Small        R_0603_1608Metric                          72.3000  -172.3000    0.0000  top
+U1         STM32F103C8Tx  LQFP-48_7x7mm_P0.5mm                       46.8000  -162.7000    0.0000  top
+U2         TCAN337        SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm    43.6880  -151.8920  180.0000  top
+U3         AMS1117-3.3    SOT-223                                    46.6700  -178.2100  180.0000  top
+U6         TXB0104D       SOIC-14_3.9x8.7mm_P1.27mm                  61.6000  -162.9000    0.0000  top
+## End

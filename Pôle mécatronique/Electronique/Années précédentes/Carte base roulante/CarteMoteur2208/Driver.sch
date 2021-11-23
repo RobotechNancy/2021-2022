@@ -1,0 +1,149 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CarteMoteur2208-rescue:TMC2208-Trinamic_Drivers U6
+U 1 1 5EF45592
+P 5550 3000
+AR Path="/5EF44C19/5EF45592" Ref="U6"  Part="1" 
+AR Path="/5EF50879/5EF45592" Ref="U7"  Part="1" 
+AR Path="/5EF50EE4/5EF45592" Ref="U8"  Part="1" 
+AR Path="/5EF51556/5EF45592" Ref="U9"  Part="1" 
+F 0 "U6" H 5450 3315 50  0000 C CNN
+F 1 "TMC2208" H 5450 3224 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 5500 3300 50  0001 C CNN
+F 3 "" H 5500 3300 50  0001 C CNN
+	1    5550 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR043
+U 1 1 5EF46207
+P 4100 4000
+AR Path="/5EF44C19/5EF46207" Ref="#PWR043"  Part="1" 
+AR Path="/5EF50879/5EF46207" Ref="#PWR047"  Part="1" 
+AR Path="/5EF50EE4/5EF46207" Ref="#PWR051"  Part="1" 
+AR Path="/5EF51556/5EF46207" Ref="#PWR055"  Part="1" 
+F 0 "#PWR043" H 4100 3750 50  0001 C CNN
+F 1 "GND" H 4105 3827 50  0000 C CNN
+F 2 "" H 4100 4000 50  0001 C CNN
+F 3 "" H 4100 4000 50  0001 C CNN
+	1    4100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR042
+U 1 1 5EF465BF
+P 6900 3950
+AR Path="/5EF44C19/5EF465BF" Ref="#PWR042"  Part="1" 
+AR Path="/5EF50879/5EF465BF" Ref="#PWR046"  Part="1" 
+AR Path="/5EF50EE4/5EF465BF" Ref="#PWR050"  Part="1" 
+AR Path="/5EF51556/5EF465BF" Ref="#PWR054"  Part="1" 
+F 0 "#PWR042" H 6900 3700 50  0001 C CNN
+F 1 "GND" H 6905 3777 50  0000 C CNN
+F 2 "" H 6900 3950 50  0001 C CNN
+F 3 "" H 6900 3950 50  0001 C CNN
+	1    6900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR041
+U 1 1 5EF468C9
+P 4400 3650
+AR Path="/5EF44C19/5EF468C9" Ref="#PWR041"  Part="1" 
+AR Path="/5EF50879/5EF468C9" Ref="#PWR045"  Part="1" 
+AR Path="/5EF50EE4/5EF468C9" Ref="#PWR049"  Part="1" 
+AR Path="/5EF51556/5EF468C9" Ref="#PWR053"  Part="1" 
+F 0 "#PWR041" H 4400 3500 50  0001 C CNN
+F 1 "+BATT" H 4415 3823 50  0000 C CNN
+F 2 "" H 4400 3650 50  0001 C CNN
+F 3 "" H 4400 3650 50  0001 C CNN
+	1    4400 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR040
+U 1 1 5EF471DE
+P 4400 3050
+AR Path="/5EF44C19/5EF471DE" Ref="#PWR040"  Part="1" 
+AR Path="/5EF50879/5EF471DE" Ref="#PWR044"  Part="1" 
+AR Path="/5EF50EE4/5EF471DE" Ref="#PWR048"  Part="1" 
+AR Path="/5EF51556/5EF471DE" Ref="#PWR052"  Part="1" 
+F 0 "#PWR040" H 4400 2900 50  0001 C CNN
+F 1 "+5V" H 4415 3223 50  0000 C CNN
+F 2 "" H 4400 3050 50  0001 C CNN
+F 3 "" H 4400 3050 50  0001 C CNN
+	1    4400 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 4000 4100 2950
+Wire Wire Line
+	4400 3650 4900 3650
+Wire Wire Line
+	4400 3050 4900 3050
+Wire Wire Line
+	4100 2950 4900 2950
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5EF4AA83
+P 3700 3350
+AR Path="/5EF44C19/5EF4AA83" Ref="J4"  Part="1" 
+AR Path="/5EF50879/5EF4AA83" Ref="J5"  Part="1" 
+AR Path="/5EF50EE4/5EF4AA83" Ref="J6"  Part="1" 
+AR Path="/5EF51556/5EF4AA83" Ref="J7"  Part="1" 
+F 0 "J4" H 3618 3667 50  0000 C CNN
+F 1 "Conn_01x04" H 3618 3576 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Nano-Fit_105313-xx04_1x04_P2.50mm_Horizontal" H 3700 3350 50  0001 C CNN
+F 3 "~" H 3700 3350 50  0001 C CNN
+	1    3700 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 3150 4900 3150
+Wire Wire Line
+	4900 3250 3900 3250
+Wire Wire Line
+	3900 3350 4900 3350
+Wire Wire Line
+	4900 3450 3900 3450
+Wire Wire Line
+	6000 3150 6100 3150
+Wire Wire Line
+	6100 3150 6100 3250
+Wire Wire Line
+	6100 3250 6000 3250
+Text HLabel 6550 3650 2    50   Input ~ 0
+EN
+Text HLabel 6550 2950 2    50   Input ~ 0
+DIR
+Text HLabel 6550 3050 2    50   Input ~ 0
+STEP
+Wire Wire Line
+	6550 3050 6000 3050
+Wire Wire Line
+	6000 2950 6550 2950
+Wire Wire Line
+	6550 3650 6000 3650
+Wire Wire Line
+	6900 3950 6900 3550
+Wire Wire Line
+	6900 3450 6000 3450
+Wire Wire Line
+	6000 3550 6900 3550
+Connection ~ 6900 3550
+Wire Wire Line
+	6900 3550 6900 3450
+$EndSCHEMATC

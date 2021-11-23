@@ -1,0 +1,371 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 6900 5050 2    50   BiDi ~ 0
+CAN_H
+Text HLabel 6900 5150 2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	6900 5150 6750 5150
+Wire Wire Line
+	6750 5050 6900 5050
+Text Label 4800 4900 0    50   ~ 0
+CAN_SILENT
+Text Label 4800 5000 0    50   ~ 0
+CAN_FAULT
+Text Label 4800 5100 0    50   ~ 0
+CAN_SHDN
+Text Label 4800 5300 0    50   ~ 0
+CAN_TX
+Text Label 4800 5400 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	4800 5400 5300 5400
+Wire Wire Line
+	5300 5300 4800 5300
+Wire Wire Line
+	4800 5100 5300 5100
+Wire Wire Line
+	5300 5000 4800 5000
+Wire Wire Line
+	4800 4900 5300 4900
+Text Label 4800 5950 0    50   ~ 0
+CAN_SILENT
+Text Label 4800 6050 0    50   ~ 0
+CAN_FAULT
+Text Label 4800 6150 0    50   ~ 0
+CAN_SHDN
+Text Label 4800 6350 0    50   ~ 0
+CAN_TX
+Text Label 4800 6450 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	4800 6450 5300 6450
+Wire Wire Line
+	5300 6350 4800 6350
+Wire Wire Line
+	4800 6150 5300 6150
+Wire Wire Line
+	5300 6050 4800 6050
+Wire Wire Line
+	4800 5950 5300 5950
+$Sheet
+S 1500 700  1800 900 
+U 5FB40824
+F0 "Mesure du Courant" 50
+F1 "../../../BMS/bms/mesuerCourant.sch" 50
+F2 "IN_P" I L 1500 950 50 
+F3 "OUT_P" O R 3300 950 50 
+F4 "OUT_VCURRENT" O R 3300 1400 50 
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x06 J202
+U 1 1 5FB40B8E
+P 1050 6650
+F 0 "J202" H 968 6125 50  0000 C CNN
+F 1 "Conn_01x06" H 968 6216 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical" H 1050 6650 50  0001 C CNN
+F 3 "~" H 1050 6650 50  0001 C CNN
+	1    1050 6650
+	-1   0    0    1   
+$EndComp
+Text Label 1500 6850 2    50   ~ 0
+CELL0
+Text Label 1500 6750 2    50   ~ 0
+CELL1
+Text Label 1500 6650 2    50   ~ 0
+CELL2
+Text Label 1500 6550 2    50   ~ 0
+CELL3
+Text Label 1500 6450 2    50   ~ 0
+CELL4
+Text Label 1500 6350 2    50   ~ 0
+CELL5
+Wire Wire Line
+	1500 6850 1250 6850
+Wire Wire Line
+	1500 6750 1250 6750
+Wire Wire Line
+	1500 6650 1250 6650
+Wire Wire Line
+	1500 6550 1250 6550
+Wire Wire Line
+	1500 6450 1250 6450
+Wire Wire Line
+	1500 6350 1250 6350
+Entry Wire Line
+	1500 6350 1600 6450
+Entry Wire Line
+	1500 6450 1600 6550
+Entry Wire Line
+	1500 6550 1600 6650
+Entry Wire Line
+	1500 6650 1600 6750
+Entry Wire Line
+	1500 6750 1600 6850
+Entry Wire Line
+	1500 6850 1600 6950
+Text Label 1750 7000 0    50   ~ 0
+CELL[5..0]
+$Comp
+L Connecteurs:XT60 J201
+U 1 1 5FB42C4C
+P 1000 1050
+F 0 "J201" H 723 1004 50  0000 R CNN
+F 1 "XT60" H 723 1095 50  0000 R CNN
+F 2 "Connecteurs:XT60" H 1000 1500 50  0001 C CNN
+F 3 "" H 1000 1500 50  0001 C CNN
+	1    1000 1050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1100 1200 1100 1100
+Wire Wire Line
+	1100 1100 1000 1100
+$Sheet
+S 5050 2850 1800 900 
+U 5FB4C14D
+F0 "Ouvre Circuit" 50
+F1 "../../../BMS/bms/breaker.sch" 50
+F2 "IN" I L 5050 3100 50 
+F3 "OUT" O R 6850 3100 50 
+F4 "EN" I L 5050 3550 50 
+$EndSheet
+Text Label 3400 950  0    50   ~ 0
+UNREGULATED_POWER
+Text Label 3700 1400 2    50   ~ 0
+I_GENERAL
+Text Label 7500 3300 0    50   ~ 0
+EN_12V
+Text Label 7500 3400 0    50   ~ 0
+EN_5V
+Text Label 4500 3550 0    50   ~ 0
+EN_GENERAL
+Text Label 1100 950  0    50   ~ 0
+IN_XT60
+Wire Wire Line
+	4500 3550 5050 3550
+Text Label 7500 3550 0    50   ~ 0
+I_12V
+Text Label 7500 3650 0    50   ~ 0
+I_5V
+Text Notes 750  2000 0    157  ~ 31
+IMAX 19A
+Entry Wire Line
+	1650 7000 1750 7100
+Wire Wire Line
+	1750 7100 1750 7300
+Text Label 1750 7100 3    50   ~ 0
+CELL0
+$Comp
+L power:GND #PWR0207
+U 1 1 5FCBE45B
+P 1750 7300
+F 0 "#PWR0207" H 1750 7050 50  0001 C CNN
+F 1 "GND" H 1755 7127 50  0000 C CNN
+F 2 "" H 1750 7300 50  0001 C CNN
+F 3 "" H 1750 7300 50  0001 C CNN
+	1    1750 7300
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2300 6700 1000 600 
+U 5FCCA741
+F0 "Adaptation" 50
+F1 "../../../BMS/bms/adapt.sch" 50
+F2 "IN[5..0]" I L 2300 7000 50 
+F3 "OUT[5..0]" O R 3300 7000 50 
+$EndSheet
+Wire Bus Line
+	3300 7000 3900 7000
+Text Label 3350 7000 0    50   ~ 0
+UCELLA[5..0]
+$Comp
+L power:GND #PWR?
+U 1 1 5FD0B6E2
+P 7000 1400
+AR Path="/5FB514CA/5FD0B6E2" Ref="#PWR?"  Part="1" 
+AR Path="/5FD0B6E2" Ref="#PWR?"  Part="1" 
+AR Path="/5FB7B166/5FD0B6E2" Ref="#PWR0203"  Part="1" 
+F 0 "#PWR0203" H 7000 1150 50  0001 C CNN
+F 1 "GND" H 7005 1227 50  0000 C CNN
+F 2 "" H 7000 1400 50  0001 C CNN
+F 3 "" H 7000 1400 50  0001 C CNN
+	1    7000 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2433 U201
+U 1 1 5FD26272
+P 7000 1050
+F 0 "U201" H 7000 1417 50  0000 C CNN
+F 1 "TSR_1-2433" H 7000 1326 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 7000 900 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 7000 1050 50  0001 C CNN
+	1    7000 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 1250 7000 1400
+$Comp
+L power:+3.3V #PWR0201
+U 1 1 5FD2925C
+P 7550 950
+F 0 "#PWR0201" H 7550 800 50  0001 C CNN
+F 1 "+3.3V" V 7565 1078 50  0000 L CNN
+F 2 "" H 7550 950 50  0001 C CNN
+F 3 "" H 7550 950 50  0001 C CNN
+	1    7550 950 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 950  7400 950 
+Wire Wire Line
+	1000 950  1500 950 
+$Comp
+L power:GND #PWR0202
+U 1 1 5FB60D05
+P 1100 1200
+F 0 "#PWR0202" H 1100 950 50  0001 C CNN
+F 1 "GND" H 1105 1027 50  0000 C CNN
+F 2 "" H 1100 1200 50  0001 C CNN
+F 3 "" H 1100 1200 50  0001 C CNN
+	1    1100 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1400 3700 1400
+Wire Wire Line
+	5050 3100 4900 3100
+Wire Wire Line
+	6850 3100 6950 3100
+Wire Wire Line
+	7500 3300 7850 3300
+Wire Wire Line
+	7850 3400 7500 3400
+Wire Wire Line
+	7500 3550 7850 3550
+Wire Wire Line
+	7850 3650 7500 3650
+Wire Wire Line
+	3300 950  4900 950 
+$Comp
+L Regulator_Switching:TSR_1-2450 U?
+U 1 1 5FD93F68
+P 7000 2100
+AR Path="/5FB7B166/5FB514CA/5FD93F68" Ref="U?"  Part="1" 
+AR Path="/5FB7B166/5FD93F68" Ref="U202"  Part="1" 
+F 0 "U202" H 7000 2467 50  0000 C CNN
+F 1 "TSR_1-2450" H 7000 2376 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 7000 1950 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 7000 2100 50  0001 C CNN
+	1    7000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD93F6E
+P 7000 2300
+AR Path="/5FB7B166/5FB514CA/5FD93F6E" Ref="#PWR?"  Part="1" 
+AR Path="/5FB7B166/5FD93F6E" Ref="#PWR0205"  Part="1" 
+F 0 "#PWR0205" H 7000 2050 50  0001 C CNN
+F 1 "GND" H 7005 2127 50  0000 C CNN
+F 2 "" H 7000 2300 50  0001 C CNN
+F 3 "" H 7000 2300 50  0001 C CNN
+	1    7000 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2000 6350 2000
+Wire Wire Line
+	6350 2000 6350 950 
+$Comp
+L power:+5P #PWR?
+U 1 1 5FD93F76
+P 7600 2000
+AR Path="/5FB7B166/5FB514CA/5FD93F76" Ref="#PWR?"  Part="1" 
+AR Path="/5FB7B166/5FD93F76" Ref="#PWR0204"  Part="1" 
+F 0 "#PWR0204" H 7600 1850 50  0001 C CNN
+F 1 "+5P" V 7615 2128 50  0000 L CNN
+F 2 "" H 7600 2000 50  0001 C CNN
+F 3 "" H 7600 2000 50  0001 C CNN
+	1    7600 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 2000 7400 2000
+Connection ~ 4900 950 
+Wire Wire Line
+	4900 950  6600 950 
+Wire Wire Line
+	4900 950  4900 3100
+Text Label 7000 3100 0    50   ~ 0
+BREAKABLE_POWER
+$Sheet
+S 7850 2850 1800 900 
+U 5FD9D86A
+F0 "Regulateurs 12v et 5v" 50
+F1 "Regulateurs.sch" 50
+F2 "IN" I L 7850 3100 50 
+F3 "EN_12V" I L 7850 3300 50 
+F4 "EN_5V" I L 7850 3400 50 
+F5 "I_12V" O L 7850 3550 50 
+F6 "I_5V" O L 7850 3650 50 
+$EndSheet
+$Comp
+L power:+BATT #PWR0206
+U 1 1 5FCD6A9B
+P 6950 2900
+F 0 "#PWR0206" H 6950 2750 50  0001 C CNN
+F 1 "+BATT" H 6965 3073 50  0000 C CNN
+F 2 "" H 6950 2900 50  0001 C CNN
+F 3 "" H 6950 2900 50  0001 C CNN
+	1    6950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2900 6950 3100
+Wire Bus Line
+	1600 7000 2300 7000
+Wire Bus Line
+	1600 6450 1600 7000
+Connection ~ 6950 3100
+Wire Wire Line
+	6950 3100 7850 3100
+$Sheet
+S 5300 4800 1450 750 
+U 5FCE176A
+F0 "CAN_ALIM" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 5300 4900 50 
+F3 "TX" I L 5300 5300 50 
+F4 "FAULT" O L 5300 5000 50 
+F5 "SHDN" I L 5300 5100 50 
+F6 "RX" O L 5300 5400 50 
+F7 "CAN_H" B R 6750 5050 50 
+F8 "CAN_L" B R 6750 5150 50 
+$EndSheet
+$Sheet
+S 5300 5850 1450 1750
+U 5FCEC8D3
+F0 "STM_ALIM" 50
+F1 "STM_ALIM.sch" 50
+F2 "CAN_FAULT" I L 5300 6050 50 
+F3 "CAN_SILENT" O L 5300 5950 50 
+F4 "CAN_SHDN" O L 5300 6150 50 
+F5 "CAN_TX" O L 5300 6350 50 
+F6 "CAN_RX" I L 5300 6450 50 
+$EndSheet
+$EndSCHEMATC

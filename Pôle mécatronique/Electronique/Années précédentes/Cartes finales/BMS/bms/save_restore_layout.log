@@ -1,0 +1,28 @@
+12-01 22:44:54 save_restore_layout.action_save_restore_layout 154:Plugin executed with python version: '2.7.16 (default, Aug 15 2019, 17:51:40)  [GCC 9.2.0 64 bit (AMD64)]'
+12-01 22:44:54 save_restore_layout.action_save_restore_layout 155:Save/Restore Layout plugin version: 25 started
+12-01 22:44:55 save_restore_layout.action_save_restore_layout 192:Save layout chosen
+12-01 22:44:55 save_restore_layout.save_restore_layout 805:Saving the current board temporary in order to leave current layout intact
+12-01 22:44:55 save_restore_layout.save_restore_layout 815:Getting schematics info
+12-01 22:44:55 save_restore_layout.save_restore_layout 150:getting project hierarchy from schematics
+12-01 22:44:55 save_restore_layout.save_restore_layout 152:Project hierarchy looks like:
+{'5FB40824': ['Mesure du Courant', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\mesuerCourant.sch'], '5FB4C14D': ['Ouvre Circuit', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\breaker.sch'], '5FB40946': ['Microcontrolleur', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\mcu.sch'], '5FB514CA': ['R\xc3\xa9gulateur', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\regul.sch'], '5FBD6585': ['TCAN', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\tcan.sch'], '5FCCA741': ['Adaptation', u'C:\\Users\\Fran\xe7ois SULER\\Desktop\\Robotech\\Kicad\\En developpement\\Cartes finales\\BMS\\bms\\adapt.sch']}
+12-01 22:44:55 save_restore_layout.save_restore_layout 817:Getting layout info
+12-01 22:44:55 save_restore_layout.save_restore_layout 225:getting a list of all footprints on board
+12-01 22:44:55 save_restore_layout.save_restore_layout 819:Updating layout info with schematics info
+12-01 22:44:56 root 47:highlighting module: u'U601'
+12-01 22:44:56 root 47:highlighting module: u'R607'
+12-01 22:44:56 root 47:highlighting module: u'R606'
+12-01 22:44:56 root 47:highlighting module: u'R605'
+12-01 22:44:56 root 47:highlighting module: u'R604'
+12-01 22:44:56 root 47:highlighting module: u'R603'
+12-01 22:44:56 root 47:highlighting module: u'R602'
+12-01 22:44:56 root 47:highlighting module: u'R601'
+12-01 22:44:56 root 47:highlighting module: u'D601'
+12-01 22:44:56 root 47:highlighting module: u'C608'
+12-01 22:44:56 root 47:highlighting module: u'C607'
+12-01 22:44:56 root 47:highlighting module: u'C606'
+12-01 22:44:56 root 47:highlighting module: u'C605'
+12-01 22:44:56 root 47:highlighting module: u'C604'
+12-01 22:44:56 root 47:highlighting module: u'C603'
+12-01 22:44:56 root 47:highlighting module: u'C602'
+12-01 22:44:56 root 47:highlighting module: u'C601'

@@ -1,0 +1,161 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2450 2750 0    50   Input ~ 10
+IN_P
+Text HLabel 5700 2750 2    50   Output ~ 10
+OUT_P
+Text HLabel 5700 3300 2    50   Output ~ 0
+OUT_VCURRENT
+$Comp
+L Device:R_Small R303
+U 1 1 5FBC99A3
+P 3950 2750
+F 0 "R303" V 3754 2750 50  0000 C CNN
+F 1 "22m" V 3845 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 3950 2750 50  0001 C CNN
+F 3 "~" H 3950 2750 50  0001 C CNN
+	1    3950 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 2750 3750 2750
+Wire Wire Line
+	4050 2750 4150 2750
+Wire Wire Line
+	3750 2950 3750 2750
+Connection ~ 3750 2750
+Wire Wire Line
+	3750 2750 3850 2750
+Wire Wire Line
+	4150 2950 4150 2750
+Connection ~ 4150 2750
+Wire Wire Line
+	4150 2750 5700 2750
+$Comp
+L IC_Divers:ZXCT1086E5TA U301
+U 1 1 5FBCD047
+P 3950 3100
+F 0 "U301" H 4394 2946 50  0000 L CNN
+F 1 "ZXCT1084E5TA" H 4394 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4350 2700 50  0001 C CNN
+F 3 "" H 4350 2700 50  0001 C CNN
+	1    3950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0301
+U 1 1 5FBCD554
+P 3200 3200
+F 0 "#PWR0301" H 3200 3050 50  0001 C CNN
+F 1 "+3.3V" H 3215 3373 50  0000 C CNN
+F 2 "" H 3200 3200 50  0001 C CNN
+F 3 "" H 3200 3200 50  0001 C CNN
+	1    3200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3200 3200 3300
+$Comp
+L Device:R_Small R302
+U 1 1 5FBCDFB0
+P 3950 2450
+F 0 "R302" V 3754 2450 50  0000 C CNN
+F 1 "22m" V 3845 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 3950 2450 50  0001 C CNN
+F 3 "~" H 3950 2450 50  0001 C CNN
+	1    3950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R301
+U 1 1 5FBCE35E
+P 3950 2150
+F 0 "R301" V 3754 2150 50  0000 C CNN
+F 1 "22m" V 3845 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 3950 2150 50  0001 C CNN
+F 3 "~" H 3950 2150 50  0001 C CNN
+	1    3950 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2750 3750 2450
+Wire Wire Line
+	3750 2150 3850 2150
+Wire Wire Line
+	3850 2450 3750 2450
+Connection ~ 3750 2450
+Wire Wire Line
+	3750 2450 3750 2150
+Wire Wire Line
+	4050 2150 4150 2150
+Wire Wire Line
+	4150 2150 4150 2450
+Wire Wire Line
+	4050 2450 4150 2450
+Connection ~ 4150 2450
+Wire Wire Line
+	4150 2450 4150 2750
+$Comp
+L power:GND #PWR0303
+U 1 1 5FBCE9C5
+P 3950 3650
+F 0 "#PWR0303" H 3950 3400 50  0001 C CNN
+F 1 "GND" H 3955 3477 50  0000 C CNN
+F 2 "" H 3950 3650 50  0001 C CNN
+F 3 "" H 3950 3650 50  0001 C CNN
+	1    3950 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C301
+U 1 1 5FBCEE34
+P 3200 3550
+F 0 "C301" H 3108 3596 50  0000 R CNN
+F 1 "100n" H 3108 3505 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3200 3550 50  0001 C CNN
+F 3 "~" H 3200 3550 50  0001 C CNN
+	1    3200 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0302
+U 1 1 5FBCF6EE
+P 3200 3650
+F 0 "#PWR0302" H 3200 3400 50  0001 C CNN
+F 1 "GND" H 3205 3477 50  0000 C CNN
+F 2 "" H 3200 3650 50  0001 C CNN
+F 3 "" H 3200 3650 50  0001 C CNN
+	1    3200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3450 3200 3300
+Connection ~ 3200 3300
+Wire Wire Line
+	3200 3300 3550 3300
+Wire Wire Line
+	4350 3300 5700 3300
+Text Notes 4400 3650 0    50   ~ 0
+Vout = 25x(VS+ - VS-)\nVmax = 16 * 0.022 * 25 / 3 = 2.93V
+Text Notes 4400 3900 0    50   ~ 0
+Imax = V * N / (25 * R)\nImax = 3.6 * 3 / (25 * 0.022) = 19.6A
+Text Notes 2550 4250 0    118  ~ 0
+Vout = 25 * I * R / N = 0.183 * I
+Text Label 3100 2750 0    50   ~ 0
+IN_P
+Text Label 4650 2750 0    50   ~ 0
+OUT_P
+$EndSCHEMATC

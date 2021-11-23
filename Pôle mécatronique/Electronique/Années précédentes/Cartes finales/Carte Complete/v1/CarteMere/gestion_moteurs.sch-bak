@@ -1,0 +1,282 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 8750 1900 2    50   BiDi ~ 0
+CAN_H
+Text HLabel 8750 2000 2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	8750 2000 8600 2000
+Wire Wire Line
+	8600 1900 8750 1900
+Text Label 6650 1750 0    50   ~ 0
+CAN_SILENT
+Text Label 6650 1850 0    50   ~ 0
+CAN_FAULT
+Text Label 6650 1950 0    50   ~ 0
+CAN_SHDN
+Text Label 6650 2150 0    50   ~ 0
+CAN_TX
+Text Label 6650 2250 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	6650 2250 7150 2250
+Wire Wire Line
+	7150 2150 6650 2150
+Wire Wire Line
+	6650 1950 7150 1950
+Wire Wire Line
+	7150 1850 6650 1850
+Wire Wire Line
+	6650 1750 7150 1750
+$Sheet
+S 7150 1650 1450 750 
+U 5FCE90B3
+F0 "CAN_MOT" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 7150 1750 50 
+F3 "TX" I L 7150 2150 50 
+F4 "FAULT" O L 7150 1850 50 
+F5 "SHDN" I L 7150 1950 50 
+F6 "RX" O L 7150 2250 50 
+F7 "CAN_H" B R 8600 1900 50 
+F8 "CAN_L" B R 8600 2000 50 
+$EndSheet
+$Sheet
+S 7150 2650 1450 2600
+U 5FCFA830
+F0 "STM_MOT" 50
+F1 "STM_MOT.sch" 50
+F2 "CAN_FAULT" I L 7150 2850 50 
+F3 "CAN_SILENT" O L 7150 2750 50 
+F4 "CAN_SHDN" O L 7150 2950 50 
+F5 "CAN_TX" O L 7150 3150 50 
+F6 "CAN_RX" I L 7150 3250 50 
+F7 "STEP1" O L 7150 3500 50 
+F8 "STEP2" O L 7150 3600 50 
+F9 "STEP3" O L 7150 3700 50 
+F10 "STEP4" O L 7150 3800 50 
+F11 "DIR1" O L 7150 3950 50 
+F12 "DIR2" O L 7150 4050 50 
+F13 "DIR3" O L 7150 4150 50 
+F14 "DIR4" O L 7150 4250 50 
+F15 "PDN" O L 7150 4450 50 
+F16 "EN" O L 7150 4600 50 
+F17 "MS[1..2]" O L 7150 5000 50 
+$EndSheet
+Text Label 6650 2750 0    50   ~ 0
+CAN_SILENT
+Text Label 6650 2850 0    50   ~ 0
+CAN_FAULT
+Text Label 6650 2950 0    50   ~ 0
+CAN_SHDN
+Text Label 6650 3150 0    50   ~ 0
+CAN_TX
+Text Label 6650 3250 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	6650 3250 7150 3250
+Wire Wire Line
+	7150 3150 6650 3150
+Wire Wire Line
+	6650 2950 7150 2950
+Wire Wire Line
+	7150 2850 6650 2850
+Wire Wire Line
+	6650 2750 7150 2750
+Wire Bus Line
+	4050 1600 4400 1600
+Wire Bus Line
+	4400 1600 4400 2650
+Wire Bus Line
+	4400 2650 4050 2650
+Connection ~ 4400 1600
+Wire Bus Line
+	4400 1600 5050 1600
+Wire Bus Line
+	4400 2650 4400 3700
+Wire Bus Line
+	4400 3700 4050 3700
+Connection ~ 4400 2650
+Wire Bus Line
+	4400 3700 4400 4750
+Wire Bus Line
+	4400 4750 4050 4750
+Connection ~ 4400 3700
+Wire Wire Line
+	4050 1750 4450 1750
+Wire Wire Line
+	4450 1750 4450 2800
+Wire Wire Line
+	4450 2800 4050 2800
+Connection ~ 4450 1750
+Wire Wire Line
+	4450 1750 5050 1750
+Wire Wire Line
+	4450 2800 4450 3850
+Wire Wire Line
+	4450 3850 4050 3850
+Connection ~ 4450 2800
+Wire Wire Line
+	4450 3850 4450 4900
+Wire Wire Line
+	4450 4900 4050 4900
+Connection ~ 4450 3850
+Wire Wire Line
+	4050 1900 4500 1900
+Wire Wire Line
+	4500 1900 4500 2950
+Wire Wire Line
+	4500 2950 4050 2950
+Connection ~ 4500 1900
+Wire Wire Line
+	4500 1900 5050 1900
+Wire Wire Line
+	4500 2950 4500 4000
+Wire Wire Line
+	4500 4000 4050 4000
+Connection ~ 4500 2950
+Wire Wire Line
+	4500 4000 4500 5050
+Wire Wire Line
+	4500 5050 4050 5050
+Connection ~ 4500 4000
+Wire Wire Line
+	4050 2050 4350 2050
+Text Label 4350 2050 2    50   ~ 0
+STEP1
+Text Label 4350 3100 2    50   ~ 0
+STEP2
+Text Label 4350 4150 2    50   ~ 0
+STEP3
+Text Label 4350 5200 2    50   ~ 0
+STEP4
+Wire Wire Line
+	4050 3100 4350 3100
+Wire Wire Line
+	4050 4150 4350 4150
+Wire Wire Line
+	4050 5200 4350 5200
+Wire Wire Line
+	4050 2150 4350 2150
+Wire Wire Line
+	4050 3200 4350 3200
+Wire Wire Line
+	4050 4250 4350 4250
+Wire Wire Line
+	4050 5300 4350 5300
+Text Label 4350 2150 2    50   ~ 0
+DIR1
+Text Label 4350 3200 2    50   ~ 0
+DIR2
+Text Label 4350 4250 2    50   ~ 0
+DIR3
+Text Label 4350 5300 2    50   ~ 0
+DIR4
+Text Label 5050 1600 2    50   ~ 0
+MS[1..2]
+Text Label 5050 1750 2    50   ~ 0
+EN
+Text Label 5050 1900 2    50   ~ 0
+PDN
+Wire Bus Line
+	7150 5000 6500 5000
+Text Label 6500 5000 0    50   ~ 0
+MS[1..2]
+Wire Wire Line
+	7150 4600 6550 4600
+Text Label 6550 4600 0    50   ~ 0
+EN
+Text Label 6550 4450 0    50   ~ 0
+PDN
+Wire Wire Line
+	6550 4450 7150 4450
+Wire Wire Line
+	6550 3500 7150 3500
+Wire Wire Line
+	6550 3600 7150 3600
+Wire Wire Line
+	6550 3700 7150 3700
+Wire Wire Line
+	6550 3800 7150 3800
+Wire Wire Line
+	6550 3950 7150 3950
+Wire Wire Line
+	6550 4050 7150 4050
+Wire Wire Line
+	6550 4150 7150 4150
+Wire Wire Line
+	6550 4250 7150 4250
+Text Label 6550 3500 0    50   ~ 0
+STEP1
+Text Label 6550 3600 0    50   ~ 0
+STEP2
+Text Label 6550 3700 0    50   ~ 0
+STEP3
+Text Label 6550 3800 0    50   ~ 0
+STEP4
+Text Label 6550 3950 0    50   ~ 0
+DIR1
+Text Label 6550 4050 0    50   ~ 0
+DIR2
+Text Label 6550 4150 0    50   ~ 0
+DIR3
+Text Label 6550 4250 0    50   ~ 0
+DIR4
+$Sheet
+S 3350 1450 700  850 
+U 5FCDBC4C
+F0 "TMC_M1" 50
+F1 "tmc.sch" 50
+F2 "MS[1..2]" I R 4050 1600 50 
+F3 "EN" I R 4050 1750 50 
+F4 "PDN" I R 4050 1900 50 
+F5 "STEP" I R 4050 2050 50 
+F6 "DIR" I R 4050 2150 50 
+$EndSheet
+$Sheet
+S 3350 2500 700  850 
+U 5FCE0CFA
+F0 "TMC_M2" 50
+F1 "tmc.sch" 50
+F2 "MS[1..2]" I R 4050 2650 50 
+F3 "EN" I R 4050 2800 50 
+F4 "PDN" I R 4050 2950 50 
+F5 "STEP" I R 4050 3100 50 
+F6 "DIR" I R 4050 3200 50 
+$EndSheet
+$Sheet
+S 3350 3550 700  850 
+U 5FCE1005
+F0 "TMC_M3" 50
+F1 "tmc.sch" 50
+F2 "MS[1..2]" I R 4050 3700 50 
+F3 "EN" I R 4050 3850 50 
+F4 "PDN" I R 4050 4000 50 
+F5 "STEP" I R 4050 4150 50 
+F6 "DIR" I R 4050 4250 50 
+$EndSheet
+$Sheet
+S 3350 4600 700  850 
+U 5FCE1388
+F0 "TMC_M4" 50
+F1 "tmc.sch" 50
+F2 "MS[1..2]" I R 4050 4750 50 
+F3 "EN" I R 4050 4900 50 
+F4 "PDN" I R 4050 5050 50 
+F5 "STEP" I R 4050 5200 50 
+F6 "DIR" I R 4050 5300 50 
+$EndSheet
+$EndSCHEMATC

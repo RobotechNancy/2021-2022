@@ -1,0 +1,29 @@
+### Module positions - created on 20/05/2020 23:32:40 ###
+### Printed by Pcbnew version kicad (5.1.5)-3
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val         Package                                                 PosX       PosY       Rot  Side
+C1        33µF       CP_EIA-7343-31_Kemet-D                               85.4600   -80.5200   90.0000  top
+C2        33µF       CP_EIA-7343-31_Kemet-D                               98.7100   -80.5200   90.0000  top
+C3        0,1µF      C_0402_1005Metric                                    98.7100   -85.7700    0.0000  top
+C4        10nF        C_0402_1005Metric                                    90.4750   -57.2700    0.0000  top
+C5        10nF        C_0402_1005Metric                                    82.4200   -51.1700    0.0000  top
+C6        10nF        C_0402_1005Metric                                    82.4600   -62.7700  270.0000  top
+C7        15pF        C_0402_1005Metric                                    79.9100   -62.7150  270.0000  top
+C8        10nF        C_0402_1005Metric                                   114.7250   -56.0200  180.0000  top
+C9        10nF        C_0402_1005Metric                                    97.2100   -65.0200   90.0000  top
+C10       10nF        C_0402_1005Metric                                    86.7100   -72.5350   90.0000  top
+D1        DIODE       D_SMA_Handsoldering                                 107.7100   -81.7700  270.0000  top
+D2        DIODE       D_SMA_Handsoldering                                 106.7100   -49.7700  270.0000  top
+D3        DIODE       D_SMA_Handsoldering                                 111.7100   -81.7700  270.0000  top
+D4        DIODE       D_SMA_Handsoldering                                 102.7100   -49.7700  270.0000  top
+D5        DIODE       D_SMA_Handsoldering                                 115.7100   -81.7700  270.0000  top
+D6        DIODE       D_SMA_Handsoldering                                 110.7100   -49.7700  270.0000  top
+D7        DIODE       D_SMA_Handsoldering                                 103.9600   -81.7700  270.0000  top
+D8        DIODE       D_SMA_Handsoldering                                 114.7100   -49.7700  270.0000  top
+R1        R_Small     R_0603_1608Metric                                    82.4300   -53.0200  180.0000  top
+U1        XC9536VQ44  LQFP-44_10x10mm_P0.8mm                               89.9600   -64.5200  180.0000  top
+U2        L298P       HSOP-20-1EP_11.0x15.9mm_P1.27mm_SlugUp              109.7100   -64.7700   90.0000  top
+U3        LF50_TO252  TO-252-2                                             92.2100   -80.6950   90.0000  top
+X1        SG-7050CAN  Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm    75.2750   -63.4500  270.0000  top
+## End

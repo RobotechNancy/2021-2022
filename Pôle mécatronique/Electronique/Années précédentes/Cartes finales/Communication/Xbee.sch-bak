@@ -1,0 +1,211 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L bus_raspi-rescue:XBeePro-xbeepro U?
+U 1 1 5FCC9DC2
+P 4750 4600
+AR Path="/5FCC9DC2" Ref="U?"  Part="1" 
+AR Path="/5FCC9010/5FCC9DC2" Ref="U201"  Part="1" 
+F 0 "U201" H 5675 5975 50  0000 C CNN
+F 1 "XBee" H 5675 5884 50  0000 C CNN
+F 2 "Connecteurs:XBEE_PRO-20_THT" H 4400 5100 50  0001 C CNN
+F 3 "" H 4400 5100 50  0001 C CNN
+	1    4750 4600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4750 3750
+NoConn ~ 4750 3950
+NoConn ~ 4750 4050
+NoConn ~ 4750 4250
+NoConn ~ 6600 4350
+NoConn ~ 6600 4250
+NoConn ~ 6600 4150
+NoConn ~ 6600 4050
+NoConn ~ 6600 3950
+NoConn ~ 6600 3850
+NoConn ~ 6600 3750
+NoConn ~ 6600 3650
+NoConn ~ 6600 3550
+NoConn ~ 6600 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5FCC9DD6
+P 4750 4350
+AR Path="/5FCC9DD6" Ref="#PWR?"  Part="1" 
+AR Path="/5FCC9010/5FCC9DD6" Ref="#PWR0205"  Part="1" 
+F 0 "#PWR0205" H 4750 4100 50  0001 C CNN
+F 1 "GND" V 4750 4200 50  0000 R CNN
+F 2 "" H 4750 4350 50  0001 C CNN
+F 3 "" H 4750 4350 50  0001 C CNN
+	1    4750 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCC9DE2
+P 3050 3850
+AR Path="/5FCC9DE2" Ref="#PWR?"  Part="1" 
+AR Path="/5FCC9010/5FCC9DE2" Ref="#PWR0203"  Part="1" 
+F 0 "#PWR0203" H 3050 3600 50  0001 C CNN
+F 1 "GND" V 3050 3700 50  0000 R CNN
+F 2 "" H 3050 3850 50  0001 C CNN
+F 3 "" H 3050 3850 50  0001 C CNN
+	1    3050 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FCC9DE9
+P 4750 3450
+AR Path="/5FCC9DE9" Ref="#PWR?"  Part="1" 
+AR Path="/5FCC9010/5FCC9DE9" Ref="#PWR0201"  Part="1" 
+F 0 "#PWR0201" H 4750 3300 50  0001 C CNN
+F 1 "+3.3V" V 4765 3578 50  0000 L CNN
+F 2 "" H 4750 3450 50  0001 C CNN
+F 3 "" H 4750 3450 50  0001 C CNN
+	1    4750 3450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4750 3550 0    50   Input ~ 0
+UART_TX_Xbee
+Text GLabel 4750 3650 0    50   Input ~ 0
+UART_RX_Xbee
+Text Notes 5450 2900 0    118  ~ 0
+XBee
+Text Label 4350 3850 0    50   ~ 0
+XBEE_RST
+Wire Wire Line
+	3500 3850 3650 3850
+$Comp
+L Switch:SW_Push RST_XB201
+U 1 1 5FCCC049
+P 3300 3850
+F 0 "RST_XB201" H 3300 4043 50  0000 C CNN
+F 1 "BTN 6x6" H 3300 4044 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3300 4050 50  0001 C CNN
+F 3 "~" H 3300 4050 50  0001 C CNN
+	1    3300 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 5100 2    50   Input ~ 0
+UART_RX_Raspi
+Text GLabel 5850 5600 2    50   Input ~ 0
+UART_TX_Raspi
+Text GLabel 5450 5200 0    50   Input ~ 0
+UART_TX_Xbee
+Text GLabel 5450 5700 0    50   Input ~ 0
+UART_RX_Xbee
+Text GLabel 5850 5800 2    50   Input ~ 0
+UART_TX_STM
+Text GLabel 5850 5300 2    50   Input ~ 0
+UART_RX_STM
+Text Notes 4900 4750 0    118  ~ 0
+Jumper Bus UART
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 5FCD4D50
+P 5650 5200
+AR Path="/5FCD4D50" Ref="SW?"  Part="1" 
+AR Path="/5FCC9010/5FCD4D50" Ref="SW201"  Part="1" 
+F 0 "SW201" H 5650 5485 50  0000 C CNN
+F 1 "SW 2P2T" H 5650 5394 50  0000 C CNN
+F 2 "Connecteurs:SW_2P2T_2.54_01x03" H 5650 5200 50  0001 C CNN
+F 3 "~" H 5650 5200 50  0001 C CNN
+	1    5650 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 5FCD4D56
+P 5650 5700
+AR Path="/5FCD4D56" Ref="SW?"  Part="1" 
+AR Path="/5FCC9010/5FCD4D56" Ref="SW202"  Part="1" 
+F 0 "SW202" H 5650 5985 50  0000 C CNN
+F 1 "SW 2P2T" H 5650 5894 50  0000 C CNN
+F 2 "Connecteurs:SW_2P2T_2.54_01x03" H 5650 5700 50  0001 C CNN
+F 3 "~" H 5650 5700 50  0001 C CNN
+	1    5650 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5FED6378
+P 3650 3600
+AR Path="/5FC789B7/5FED6378" Ref="R?"  Part="1" 
+AR Path="/5FCCE0C2/5FED6378" Ref="R?"  Part="1" 
+AR Path="/5FCC9010/5FED6378" Ref="R201"  Part="1" 
+F 0 "R201" H 3709 3646 50  0000 L CNN
+F 1 "10k" H 3709 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 3600 50  0001 C CNN
+F 3 "~" H 3650 3600 50  0001 C CNN
+F 4 "0603WAF1002T5E" H 3650 3600 50  0001 C CNN "MFR.Part #"
+F 5 "C25804" H 3650 3600 50  0001 C CNN "LCSC Part #"
+F 6 "0603" H 3650 3600 50  0001 C CNN "Package"
+	1    3650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FED637E
+P 3650 3500
+AR Path="/5FC789B7/5FED637E" Ref="#PWR?"  Part="1" 
+AR Path="/5FCCE0C2/5FED637E" Ref="#PWR?"  Part="1" 
+AR Path="/5FCC9010/5FED637E" Ref="#PWR0202"  Part="1" 
+F 0 "#PWR0202" H 3650 3350 50  0001 C CNN
+F 1 "+3.3V" H 3400 3600 50  0000 L CNN
+F 2 "" H 3650 3500 50  0001 C CNN
+F 3 "" H 3650 3500 50  0001 C CNN
+	1    3650 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3700 3650 3850
+Connection ~ 3650 3850
+Wire Wire Line
+	3650 3850 4750 3850
+$Comp
+L Device:C_Small C?
+U 1 1 5FB34E85
+P 3650 4050
+AR Path="/5FCD74DC/5FB34E85" Ref="C?"  Part="1" 
+AR Path="/5FCC9010/5FB34E85" Ref="C201"  Part="1" 
+F 0 "C201" H 3742 4096 50  0000 L CNN
+F 1 "100n" H 3742 4005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3650 4050 50  0001 C CNN
+F 3 "~" H 3650 4050 50  0001 C CNN
+	1    3650 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB34EA0
+P 3650 4150
+AR Path="/5FCD74DC/5FB34EA0" Ref="#PWR?"  Part="1" 
+AR Path="/5FCC9010/5FB34EA0" Ref="#PWR0204"  Part="1" 
+F 0 "#PWR0204" H 3650 3900 50  0001 C CNN
+F 1 "GND" H 3655 3977 50  0000 C CNN
+F 2 "" H 3650 4150 50  0001 C CNN
+F 3 "" H 3650 4150 50  0001 C CNN
+	1    3650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3850 3650 3950
+Wire Wire Line
+	3050 3850 3100 3850
+Text Notes 6600 5600 0    79   ~ 0
+Selection de l'operateur du XBee\n\nSoit la RPi soit le STM32
+$EndSCHEMATC

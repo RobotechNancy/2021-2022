@@ -1,0 +1,6 @@
+Bras: 	2 Servos Moteurs (UART; 2 Analog)
+	1 Moteur Pas à Pas
+	2 Servos Moteurs (PWM; 1 TOR; 1 Analog)
+
+Piles:	4 Servos Moteurs (PWM; 1 TOR)
+	2 Moteur Pas à Pas

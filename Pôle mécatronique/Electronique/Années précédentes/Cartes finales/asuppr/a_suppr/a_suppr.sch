@@ -1,0 +1,33 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7300 2200 1100 950 
+U 5FC4C592
+F0 "Sheet5FC4C591" 50
+F1 "file5FC4C591.sch" 50
+F2 "IN" I L 7300 2500 50 
+F3 "EN" I L 7300 2700 50 
+F4 "CS" O L 7300 2950 50 
+F5 "OUT" O R 8400 2500 50 
+$EndSheet
+$Sheet
+S 2550 2000 2850 1650
+U 5FC4FB99
+F0 "Sheet5FC4FB98" 50
+F1 "file5FC4FB98.sch" 50
+F2 "EN12V" O R 5400 2700 50 
+$EndSheet
+$EndSCHEMATC

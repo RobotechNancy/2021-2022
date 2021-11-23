@@ -1,0 +1,260 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 20 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7450 6750 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 7450 6900 0    50   BiDi ~ 0
+CAN_L
+Text HLabel 8650 2250 2    50   BiDi ~ 0
+CAN_H
+Text HLabel 8650 2350 2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	8650 2350 8500 2350
+Wire Wire Line
+	8500 2250 8650 2250
+Text Label 6550 2100 0    50   ~ 0
+CAN_SILENT
+Text Label 6550 2200 0    50   ~ 0
+CAN_FAULT
+Text Label 6550 2300 0    50   ~ 0
+CAN_SHDN
+Text Label 6550 2500 0    50   ~ 0
+CAN_TX
+Text Label 6550 2600 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	6550 2600 7050 2600
+Wire Wire Line
+	7050 2500 6550 2500
+Wire Wire Line
+	6550 2300 7050 2300
+Wire Wire Line
+	7050 2200 6550 2200
+Wire Wire Line
+	6550 2100 7050 2100
+$Sheet
+S 7050 2000 1450 750 
+U 5FCEA32D
+F0 "CAN_ODO" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 7050 2100 50 
+F3 "TX" I L 7050 2500 50 
+F4 "FAULT" O L 7050 2200 50 
+F5 "SHDN" I L 7050 2300 50 
+F6 "RX" O L 7050 2600 50 
+F7 "CAN_H" B R 8500 2250 50 
+F8 "CAN_L" B R 8500 2350 50 
+$EndSheet
+Text Label 6550 3100 0    50   ~ 0
+CAN_SILENT
+Text Label 6550 3200 0    50   ~ 0
+CAN_FAULT
+Text Label 6550 3300 0    50   ~ 0
+CAN_SHDN
+Text Label 6550 3500 0    50   ~ 0
+CAN_TX
+Text Label 6550 3600 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	6550 3600 7050 3600
+Wire Wire Line
+	7050 3500 6550 3500
+Wire Wire Line
+	6550 3300 7050 3300
+Wire Wire Line
+	7050 3200 6550 3200
+Wire Wire Line
+	6550 3100 7050 3100
+$Sheet
+S 7050 3050 1450 1650
+U 5FD0F0F5
+F0 "STM_ODO" 50
+F1 "STM_ODO.sch" 50
+F2 "CAN_FAULT" I L 7050 3200 50 
+F3 "CAN_SILENT" O L 7050 3100 50 
+F4 "CAN_SHDN" O L 7050 3300 50 
+F5 "CAN_TX" O L 7050 3500 50 
+F6 "CAN_RX" I L 7050 3600 50 
+F7 "SDA" B L 7050 3850 50 
+F8 "SCL" B L 7050 3950 50 
+F9 "INT_IMU" I L 7050 3750 50 
+F10 "INT_BCZ" I L 7050 4150 50 
+F11 "CS_BCZ" O L 7050 4250 50 
+F12 "MOSI" O L 7050 4350 50 
+F13 "MISO" I L 7050 4450 50 
+F14 "CLK" O L 7050 4550 50 
+$EndSheet
+$Sheet
+S 3450 2150 1350 1100
+U 5FDA8650
+F0 "IMU" 50
+F1 "IMU.sch" 50
+F2 "INT" O R 4800 2450 50 
+F3 "SDA" B R 4800 2550 50 
+F4 "SCL" B R 4800 2650 50 
+$EndSheet
+Text Label 5600 2100 1    50   ~ 0
+SDA
+Text Label 5950 2100 1    50   ~ 0
+SCL
+Wire Wire Line
+	5600 1950 5600 2100
+$Comp
+L Device:R R2002
+U 1 1 5FDB2C55
+P 5950 1800
+F 0 "R2002" V 6157 1800 50  0000 C CNN
+F 1 "2.2k" V 6066 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 1800 50  0001 C CNN
+F 3 "~" H 5950 1800 50  0001 C CNN
+F 4 "C25879" V 5950 1800 50  0001 C CNN "LCSC Part #"
+	1    5950 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR02001
+U 1 1 5FDB2C5E
+P 5600 1450
+F 0 "#PWR02001" H 5600 1300 50  0001 C CNN
+F 1 "+3.3V" H 5615 1623 50  0000 C CNN
+F 2 "" H 5600 1450 50  0001 C CNN
+F 3 "" H 5600 1450 50  0001 C CNN
+	1    5600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2001
+U 1 1 5FDB2C4E
+P 5600 1800
+F 0 "R2001" V 5807 1800 50  0000 C CNN
+F 1 "2.2k" V 5716 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5530 1800 50  0001 C CNN
+F 3 "~" H 5600 1800 50  0001 C CNN
+F 4 "C25879" V 5600 1800 50  0001 C CNN "LCSC Part #"
+	1    5600 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 2100 5950 1950
+Wire Wire Line
+	5600 1450 5600 1550
+Wire Wire Line
+	5600 1550 5950 1550
+Wire Wire Line
+	5950 1550 5950 1650
+Connection ~ 5600 1550
+Wire Wire Line
+	5600 1550 5600 1650
+Text Label 5100 2550 2    50   ~ 0
+SDA
+Text Label 5100 2650 2    50   ~ 0
+SCL
+Text Label 5100 2450 2    50   ~ 0
+INT_IMU
+Wire Wire Line
+	5100 2450 4800 2450
+Wire Wire Line
+	4800 2550 5100 2550
+Wire Wire Line
+	4800 2650 5100 2650
+$Comp
+L Connector_Generic:Conn_01x07 J2001
+U 1 1 5FDC82DE
+P 4100 3950
+F 0 "J2001" H 4180 3992 50  0000 L CNN
+F 1 "Conn_01x07" H 4180 3901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 4100 3950 50  0001 C CNN
+F 3 "~" H 4100 3950 50  0001 C CNN
+	1    4100 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02003
+U 1 1 5FDC82E4
+P 4300 4250
+F 0 "#PWR02003" H 4300 4000 50  0001 C CNN
+F 1 "GND" V 4305 4122 50  0000 R CNN
+F 2 "" H 4300 4250 50  0001 C CNN
+F 3 "" H 4300 4250 50  0001 C CNN
+	1    4300 4250
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR02002
+U 1 1 5FDC82EA
+P 4300 3650
+F 0 "#PWR02002" H 4300 3500 50  0001 C CNN
+F 1 "+3.3V" V 4315 3778 50  0000 L CNN
+F 2 "" H 4300 3650 50  0001 C CNN
+F 3 "" H 4300 3650 50  0001 C CNN
+	1    4300 3650
+	0    1    -1   0   
+$EndComp
+Text Label 4500 3950 2    50   ~ 0
+MOSI
+Wire Wire Line
+	4500 3950 4300 3950
+Wire Wire Line
+	4300 3850 4500 3850
+Text Label 4500 3850 2    50   ~ 0
+CLK
+Text Label 4500 4050 2    50   ~ 0
+MISO
+Wire Wire Line
+	4500 4050 4300 4050
+Text Label 4600 3750 2    50   ~ 0
+CS_BCZ
+Text Label 4600 4150 2    50   ~ 0
+INT_BCZ
+Text Notes 3700 4550 0    157  ~ 0
+Bitcraze
+Wire Wire Line
+	4300 3750 4600 3750
+Wire Wire Line
+	4300 4150 4600 4150
+Text Label 6550 4350 0    50   ~ 0
+MOSI
+Text Label 6550 4550 0    50   ~ 0
+CLK
+Text Label 6550 4450 0    50   ~ 0
+MISO
+Text Label 6550 4150 0    50   ~ 0
+CS_BCZ
+Text Label 6550 4250 0    50   ~ 0
+INT_BCZ
+Wire Wire Line
+	6550 4150 7050 4150
+Wire Wire Line
+	6550 4250 7050 4250
+Wire Wire Line
+	6550 4350 7050 4350
+Wire Wire Line
+	6550 4450 7050 4450
+Wire Wire Line
+	6550 4550 7050 4550
+Text Label 6550 3850 0    50   ~ 0
+SDA
+Text Label 6550 3950 0    50   ~ 0
+SCL
+Text Label 6550 3750 0    50   ~ 0
+INT_IMU
+Wire Wire Line
+	6550 3950 7050 3950
+Wire Wire Line
+	6550 3850 7050 3850
+Wire Wire Line
+	6550 3750 7050 3750
+$EndSCHEMATC

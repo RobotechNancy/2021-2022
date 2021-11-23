@@ -1,0 +1,122 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 25 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5150 5150 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 5150 5750 0    50   BiDi ~ 0
+CAN_L
+$Comp
+L Device:R_Small R3001
+U 1 1 5FCE1912
+P 5450 5300
+F 0 "R3001" H 5509 5346 50  0000 L CNN
+F 1 "56" H 5509 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5450 5300 50  0001 C CNN
+F 3 "~" H 5450 5300 50  0001 C CNN
+	1    5450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3002
+U 1 1 5FCE1913
+P 5450 5600
+F 0 "R3002" H 5509 5646 50  0000 L CNN
+F 1 "56" H 5509 5555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5450 5600 50  0001 C CNN
+F 3 "~" H 5450 5600 50  0001 C CNN
+	1    5450 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5750 5450 5700
+Wire Wire Line
+	5150 5750 5450 5750
+Wire Wire Line
+	5450 5150 5450 5200
+Wire Wire Line
+	5150 5150 5450 5150
+Wire Wire Line
+	5450 5400 5450 5450
+$Comp
+L Device:C_Small C3002
+U 1 1 5FCE1914
+P 5750 5450
+F 0 "C3002" H 5842 5496 50  0000 L CNN
+F 1 "10n" H 5842 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5750 5450 50  0001 C CNN
+F 3 "~" H 5750 5450 50  0001 C CNN
+	1    5750 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5650 5450 5450 5450
+Connection ~ 5450 5450
+Wire Wire Line
+	5450 5450 5450 5500
+$Comp
+L power:GND #PWR03001
+U 1 1 5FCDF56F
+P 6300 5500
+F 0 "#PWR03001" H 6300 5250 50  0001 C CNN
+F 1 "GND" H 6305 5327 50  0000 C CNN
+F 2 "" H 6300 5500 50  0001 C CNN
+F 3 "" H 6300 5500 50  0001 C CNN
+	1    6300 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5500 5950 5450
+Wire Wire Line
+	5950 5450 5850 5450
+$Comp
+L Device:C_Small C3001
+U 1 1 5FCE1916
+P 5950 5300
+F 0 "C3001" H 6042 5346 50  0000 L CNN
+F 1 "10n" H 6042 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5950 5300 50  0001 C CNN
+F 3 "~" H 5950 5300 50  0001 C CNN
+	1    5950 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3003
+U 1 1 5FCE1917
+P 5950 5600
+F 0 "C3003" H 6042 5646 50  0000 L CNN
+F 1 "10n" H 6042 5555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5950 5600 50  0001 C CNN
+F 3 "~" H 5950 5600 50  0001 C CNN
+	1    5950 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5400 5950 5450
+Connection ~ 5950 5450
+Wire Wire Line
+	5450 5150 5950 5150
+Wire Wire Line
+	5950 5150 5950 5200
+Connection ~ 5450 5150
+Wire Wire Line
+	5450 5750 5950 5750
+Wire Wire Line
+	5950 5750 5950 5700
+Connection ~ 5450 5750
+Wire Wire Line
+	5950 5450 6300 5450
+Wire Wire Line
+	6300 5450 6300 5500
+$EndSCHEMATC

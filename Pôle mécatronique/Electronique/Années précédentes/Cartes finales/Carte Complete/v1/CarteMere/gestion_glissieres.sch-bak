@@ -1,0 +1,92 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 27 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7400 6700 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 7400 6850 0    50   BiDi ~ 0
+CAN_L
+Text HLabel 10900 850  2    50   BiDi ~ 0
+CAN_H
+Text HLabel 10900 950  2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	10900 950  10750 950 
+Wire Wire Line
+	10750 850  10900 850 
+Text Label 8800 700  0    50   ~ 0
+CAN_SILENT
+Text Label 8800 800  0    50   ~ 0
+CAN_FAULT
+Text Label 8800 900  0    50   ~ 0
+CAN_SHDN
+Text Label 8800 1100 0    50   ~ 0
+CAN_TX
+Text Label 8800 1200 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	8800 1200 9300 1200
+Wire Wire Line
+	9300 1100 8800 1100
+Wire Wire Line
+	8800 900  9300 900 
+Wire Wire Line
+	9300 800  8800 800 
+Wire Wire Line
+	8800 700  9300 700 
+$Sheet
+S 9300 600  1450 750 
+U 5FCEB8B9
+F0 "CAN_GLISSIERES" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 9300 700 50 
+F3 "TX" I L 9300 1100 50 
+F4 "FAULT" O L 9300 800 50 
+F5 "SHDN" I L 9300 900 50 
+F6 "RX" O L 9300 1200 50 
+F7 "CAN_H" B R 10750 850 50 
+F8 "CAN_L" B R 10750 950 50 
+$EndSheet
+$Sheet
+S 9300 1550 1450 1650
+U 5FD3DECF
+F0 "STM_GLISSIERES" 50
+F1 "STM_GLISS.sch" 50
+F2 "CAN_FAULT" I L 9300 1750 50 
+F3 "CAN_SILENT" O L 9300 1650 50 
+F4 "CAN_SHDN" O L 9300 1850 50 
+F5 "CAN_TX" O L 9300 2050 50 
+F6 "CAN_RX" I L 9300 2150 50 
+$EndSheet
+Text Label 8800 1650 0    50   ~ 0
+CAN_SILENT
+Text Label 8800 1750 0    50   ~ 0
+CAN_FAULT
+Text Label 8800 1850 0    50   ~ 0
+CAN_SHDN
+Text Label 8800 2050 0    50   ~ 0
+CAN_TX
+Text Label 8800 2150 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	8800 2150 9300 2150
+Wire Wire Line
+	9300 2050 8800 2050
+Wire Wire Line
+	8800 1850 9300 1850
+Wire Wire Line
+	9300 1750 8800 1750
+Wire Wire Line
+	8800 1650 9300 1650
+$EndSCHEMATC

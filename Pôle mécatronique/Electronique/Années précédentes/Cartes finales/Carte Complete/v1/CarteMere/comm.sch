@@ -1,0 +1,112 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 17 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7500 6750 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 7500 6900 0    50   BiDi ~ 0
+CAN_L
+Text HLabel 6600 1750 2    50   BiDi ~ 0
+CAN_H
+Text HLabel 6600 1850 2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	6600 1850 6450 1850
+Wire Wire Line
+	6450 1750 6600 1750
+Text Label 4500 1600 0    50   ~ 0
+CAN_SILENT
+Text Label 4500 1700 0    50   ~ 0
+CAN_FAULT
+Text Label 4500 1800 0    50   ~ 0
+CAN_SHDN
+Text Label 4500 2000 0    50   ~ 0
+CAN_TX
+Text Label 4500 2100 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	4500 2100 5000 2100
+Wire Wire Line
+	5000 2000 4500 2000
+Wire Wire Line
+	4500 1800 5000 1800
+Wire Wire Line
+	5000 1700 4500 1700
+Wire Wire Line
+	4500 1600 5000 1600
+$Sheet
+S 5000 1500 1450 750 
+U 5FCEC37F
+F0 "CAN_COM" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 5000 1600 50 
+F3 "TX" I L 5000 2000 50 
+F4 "FAULT" O L 5000 1700 50 
+F5 "SHDN" I L 5000 1800 50 
+F6 "RX" O L 5000 2100 50 
+F7 "CAN_H" B R 6450 1750 50 
+F8 "CAN_L" B R 6450 1850 50 
+$EndSheet
+$Sheet
+S 5000 2450 1450 1500
+U 5FD5970E
+F0 "STM_COM" 50
+F1 "STM_COM.sch" 50
+F2 "CAN_FAULT" I L 5000 2650 50 
+F3 "CAN_SILENT" O L 5000 2550 50 
+F4 "CAN_SHDN" O L 5000 2750 50 
+F5 "CAN_TX" O L 5000 2950 50 
+F6 "CAN_RX" I L 5000 3050 50 
+F7 "CS" I R 6450 2550 50 
+F8 "CLK" I R 6450 2650 50 
+F9 "MISO" O R 6450 2750 50 
+F10 "MOSI" I R 6450 2850 50 
+$EndSheet
+Text Label 4500 2550 0    50   ~ 0
+CAN_SILENT
+Text Label 4500 2650 0    50   ~ 0
+CAN_FAULT
+Text Label 4500 2750 0    50   ~ 0
+CAN_SHDN
+Text Label 4500 2950 0    50   ~ 0
+CAN_TX
+Text Label 4500 3050 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	4500 3050 5000 3050
+Wire Wire Line
+	5000 2950 4500 2950
+Wire Wire Line
+	4500 2750 5000 2750
+Wire Wire Line
+	5000 2650 4500 2650
+Wire Wire Line
+	4500 2550 5000 2550
+Text HLabel 6600 2550 2    50   Input ~ 0
+CS
+Text HLabel 6600 2650 2    50   Input ~ 0
+CLK
+Text HLabel 6600 2750 2    50   Output ~ 0
+MISO
+Text HLabel 6600 2850 2    50   Input ~ 0
+MOSI
+Wire Wire Line
+	6600 2550 6450 2550
+Wire Wire Line
+	6450 2650 6600 2650
+Wire Wire Line
+	6600 2750 6450 2750
+Wire Wire Line
+	6450 2850 6600 2850
+$EndSCHEMATC

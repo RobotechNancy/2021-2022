@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name bus_raspi-rescue)(type Legacy)(uri ${KIPRJMOD}/bus_raspi-rescue.lib)(options "")(descr ""))
+)

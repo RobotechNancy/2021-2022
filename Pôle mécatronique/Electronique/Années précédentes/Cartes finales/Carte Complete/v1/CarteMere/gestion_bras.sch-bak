@@ -1,0 +1,92 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 15 31
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7350 6800 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 7350 6950 0    50   BiDi ~ 0
+CAN_L
+Text HLabel 10900 850  2    50   BiDi ~ 0
+CAN_H
+Text HLabel 10900 950  2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	10900 950  10750 950 
+Wire Wire Line
+	10750 850  10900 850 
+Text Label 8800 700  0    50   ~ 0
+CAN_SILENT
+Text Label 8800 800  0    50   ~ 0
+CAN_FAULT
+Text Label 8800 900  0    50   ~ 0
+CAN_SHDN
+Text Label 8800 1100 0    50   ~ 0
+CAN_TX
+Text Label 8800 1200 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	8800 1200 9300 1200
+Wire Wire Line
+	9300 1100 8800 1100
+Wire Wire Line
+	8800 900  9300 900 
+Wire Wire Line
+	9300 800  8800 800 
+Wire Wire Line
+	8800 700  9300 700 
+$Sheet
+S 9300 600  1450 750 
+U 5FCEAD2D
+F0 "CAN_BRAS" 50
+F1 "TCAN.sch" 50
+F2 "SILENT" I L 9300 700 50 
+F3 "TX" I L 9300 1100 50 
+F4 "FAULT" O L 9300 800 50 
+F5 "SHDN" I L 9300 900 50 
+F6 "RX" O L 9300 1200 50 
+F7 "CAN_H" B R 10750 850 50 
+F8 "CAN_L" B R 10750 950 50 
+$EndSheet
+$Sheet
+S 9300 1600 1450 1700
+U 5FD1F39F
+F0 "STM_BRAS" 50
+F1 "STM_BRAS.sch" 50
+F2 "CAN_FAULT" I L 9300 1800 50 
+F3 "CAN_SILENT" O L 9300 1700 50 
+F4 "CAN_SHDN" O L 9300 1900 50 
+F5 "CAN_TX" O L 9300 2100 50 
+F6 "CAN_RX" I L 9300 2200 50 
+$EndSheet
+Text Label 8800 1700 0    50   ~ 0
+CAN_SILENT
+Text Label 8800 1800 0    50   ~ 0
+CAN_FAULT
+Text Label 8800 1900 0    50   ~ 0
+CAN_SHDN
+Text Label 8800 2100 0    50   ~ 0
+CAN_TX
+Text Label 8800 2200 0    50   ~ 0
+CAN_RX
+Wire Wire Line
+	8800 2200 9300 2200
+Wire Wire Line
+	9300 2100 8800 2100
+Wire Wire Line
+	8800 1900 9300 1900
+Wire Wire Line
+	9300 1800 8800 1800
+Wire Wire Line
+	8800 1700 9300 1700
+$EndSCHEMATC

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Systeme_de_récuperation_de_goblets-rescue)(type Legacy)(uri ${KIPRJMOD}/Systeme_de_récuperation_de_goblets-rescue.lib)(options "")(descr ""))
+)

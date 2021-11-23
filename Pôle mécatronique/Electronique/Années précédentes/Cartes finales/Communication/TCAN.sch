@@ -1,0 +1,494 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_CAN_LIN:TCAN337 U?
+U 1 1 5FCD8D66
+P 5750 2250
+AR Path="/5FCD8D66" Ref="U?"  Part="1" 
+AR Path="/5FCD74DC/5FCD8D66" Ref="U401"  Part="1" 
+F 0 "U401" H 6200 1750 50  0000 C CNN
+F 1 "TCAN337" H 6200 1850 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5750 1750 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tcan337.pdf" H 5750 2250 50  0001 C CNN
+F 4 "TCAN337GDR" H 5750 2250 50  0001 C CNN "MFR.Part #"
+F 5 " C191004" H 5750 2250 50  0001 C CNN "LCSC Part #"
+F 6 "SOIC-8_3.9x4.9x1.27P" H 5750 2250 50  0001 C CNN "Package"
+	1    5750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCD8D6C
+P 5750 2650
+AR Path="/5FCD8D6C" Ref="#PWR?"  Part="1" 
+AR Path="/5FCD74DC/5FCD8D6C" Ref="#PWR0405"  Part="1" 
+F 0 "#PWR0405" H 5750 2400 50  0001 C CNN
+F 1 "GND" H 5755 2522 50  0000 R CNN
+F 2 "" H 5750 2650 50  0001 C CNN
+F 3 "" H 5750 2650 50  0001 C CNN
+	1    5750 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 5100 1350 0    118  ~ 0
+CAN Tranceiver
+Text GLabel 2350 6250 2    50   Output ~ 0
+CAN_FAULT
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FCD8D7A
+P 5750 1850
+AR Path="/5FCD8D7A" Ref="#PWR?"  Part="1" 
+AR Path="/5FCD74DC/5FCD8D7A" Ref="#PWR0402"  Part="1" 
+F 0 "#PWR0402" H 5750 1700 50  0001 C CNN
+F 1 "+3.3V" H 5765 2023 50  0000 C CNN
+F 2 "" H 5750 1850 50  0001 C CNN
+F 3 "" H 5750 1850 50  0001 C CNN
+	1    5750 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 4800 4900 0    118  ~ 0
+Protection Bus CAN
+Text Notes 4800 3950 0    118  ~ 0
+Connecteur Bus CAN
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5FE95C38
+P 5950 4250
+AR Path="/5FE95C38" Ref="J?"  Part="1" 
+AR Path="/5FC789B7/5FE95C38" Ref="J?"  Part="1" 
+AR Path="/5FCD74DC/5FE95C38" Ref="J401"  Part="1" 
+F 0 "J401" H 6030 4242 50  0000 L CNN
+F 1 "Conn_01x02 JST" H 6030 4151 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5950 4250 50  0001 C CNN
+F 3 "~" H 5950 4250 50  0001 C CNN
+	1    5950 4250
+	1    0    0    -1  
+$EndComp
+Text Label 6500 2150 2    50   ~ 0
+CAN_P
+Text Label 6500 2350 2    50   ~ 0
+CAN_N
+Text Label 5500 4250 0    50   ~ 0
+CAN_P
+Text Label 5500 4350 0    50   ~ 0
+CAN_N
+Wire Wire Line
+	5750 4350 5500 4350
+Wire Wire Line
+	5500 4250 5750 4250
+Wire Wire Line
+	6500 2350 6250 2350
+Wire Wire Line
+	6250 2150 6500 2150
+$Comp
+L Device:C_Small C401
+U 1 1 5FED8C0F
+P 2700 2250
+F 0 "C401" H 2792 2296 50  0000 L CNN
+F 1 "100n" H 2792 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2700 2250 50  0001 C CNN
+F 3 "~" H 2700 2250 50  0001 C CNN
+	1    2700 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C402
+U 1 1 5FED8C15
+P 3050 2250
+F 0 "C402" H 3142 2296 50  0000 L CNN
+F 1 "10u" H 3142 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3050 2250 50  0001 C CNN
+F 3 "~" H 3050 2250 50  0001 C CNN
+	1    3050 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2050 2700 2150
+Wire Wire Line
+	2700 2050 3050 2050
+Wire Wire Line
+	3050 2050 3050 2150
+Wire Wire Line
+	3050 2350 3050 2450
+Connection ~ 3050 2450
+Wire Wire Line
+	2700 2350 2700 2450
+Wire Wire Line
+	2700 2450 3050 2450
+Connection ~ 3050 2050
+$Comp
+L power:+3.3V #PWR0403
+U 1 1 5FED8C29
+P 3050 1900
+F 0 "#PWR0403" H 3050 1750 50  0001 C CNN
+F 1 "+3.3V" H 3065 2073 50  0000 C CNN
+F 2 "" H 3050 1900 50  0001 C CNN
+F 3 "" H 3050 1900 50  0001 C CNN
+	1    3050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1900 3050 2050
+$Comp
+L power:GND #PWR0404
+U 1 1 5FED8C30
+P 3050 2600
+F 0 "#PWR0404" H 3050 2350 50  0001 C CNN
+F 1 "GND" H 3055 2427 50  0000 C CNN
+F 2 "" H 3050 2600 50  0001 C CNN
+F 3 "" H 3050 2600 50  0001 C CNN
+	1    3050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2600 3050 2450
+Text Label 5050 5200 0    50   ~ 0
+CAN_P
+Text Label 5050 5800 0    50   ~ 0
+CAN_N
+$Comp
+L Device:R_Small R404
+U 1 1 5FB44870
+P 5350 5350
+F 0 "R404" H 5409 5396 50  0000 L CNN
+F 1 "56" H 5409 5305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 5350 50  0001 C CNN
+F 3 "~" H 5350 5350 50  0001 C CNN
+	1    5350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R405
+U 1 1 5FB45D50
+P 5350 5650
+F 0 "R405" H 5409 5696 50  0000 L CNN
+F 1 "56" H 5409 5605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 5650 50  0001 C CNN
+F 3 "~" H 5350 5650 50  0001 C CNN
+	1    5350 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5800 5350 5750
+Wire Wire Line
+	5050 5800 5350 5800
+Wire Wire Line
+	5350 5200 5350 5250
+Wire Wire Line
+	5050 5200 5350 5200
+Wire Wire Line
+	5350 5450 5350 5500
+$Comp
+L Device:C_Small C406
+U 1 1 5FB47434
+P 5650 5500
+F 0 "C406" H 5742 5546 50  0000 L CNN
+F 1 "10n" H 5742 5455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5650 5500 50  0001 C CNN
+F 3 "~" H 5650 5500 50  0001 C CNN
+	1    5650 5500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 5500 5350 5500
+Connection ~ 5350 5500
+Wire Wire Line
+	5350 5500 5350 5550
+$Comp
+L power:GND #PWR0408
+U 1 1 5FB478EB
+P 6200 5550
+F 0 "#PWR0408" H 6200 5300 50  0001 C CNN
+F 1 "GND" H 6205 5377 50  0000 C CNN
+F 2 "" H 6200 5550 50  0001 C CNN
+F 3 "" H 6200 5550 50  0001 C CNN
+	1    6200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5550 5850 5500
+Wire Wire Line
+	5850 5500 5750 5500
+$Comp
+L Device:C_Small C405
+U 1 1 5FB487D5
+P 5850 5350
+F 0 "C405" H 5942 5396 50  0000 L CNN
+F 1 "10n" H 5942 5305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5850 5350 50  0001 C CNN
+F 3 "~" H 5850 5350 50  0001 C CNN
+	1    5850 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C407
+U 1 1 5FB49031
+P 5850 5650
+F 0 "C407" H 5942 5696 50  0000 L CNN
+F 1 "10n" H 5942 5605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5850 5650 50  0001 C CNN
+F 3 "~" H 5850 5650 50  0001 C CNN
+	1    5850 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5450 5850 5500
+Connection ~ 5850 5500
+Wire Wire Line
+	5350 5200 5850 5200
+Wire Wire Line
+	5850 5200 5850 5250
+Connection ~ 5350 5200
+Wire Wire Line
+	5350 5800 5850 5800
+Wire Wire Line
+	5850 5800 5850 5750
+Connection ~ 5350 5800
+Wire Wire Line
+	5850 5500 6200 5500
+Wire Wire Line
+	6200 5500 6200 5550
+$Comp
+L Device:D_Zener_x2_ACom_KKA D401
+U 1 1 5FB4A7CC
+P 6400 5500
+F 0 "D401" V 6354 5578 50  0000 L CNN
+F 1 "D_Zener_x2_ACom_KKA" V 6445 5578 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6400 5500 50  0001 C CNN
+F 3 "~" H 6400 5500 50  0001 C CNN
+	1    6400 5500
+	0    1    -1   0   
+$EndComp
+Connection ~ 6200 5500
+Wire Wire Line
+	6400 5200 5850 5200
+Connection ~ 5850 5200
+Wire Wire Line
+	6400 5800 5850 5800
+Connection ~ 5850 5800
+$Comp
+L Device:R_Small R?
+U 1 1 5FB54370
+P 2050 4250
+AR Path="/5FB54370" Ref="R?"  Part="1" 
+AR Path="/5FCD74DC/5FB54370" Ref="R402"  Part="1" 
+F 0 "R402" V 1854 4250 50  0000 C CNN
+F 1 "1k" V 1945 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2050 4250 50  0001 C CNN
+F 3 "~" H 2050 4250 50  0001 C CNN
+	1    2050 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C403
+U 1 1 5FB54376
+P 2200 4400
+F 0 "C403" H 2292 4446 50  0000 L CNN
+F 1 "10n" H 2292 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 4400 50  0001 C CNN
+F 3 "~" H 2200 4400 50  0001 C CNN
+	1    2200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0406
+U 1 1 5FB5437C
+P 2200 4500
+F 0 "#PWR0406" H 2200 4250 50  0001 C CNN
+F 1 "GND" H 2205 4327 50  0000 C CNN
+F 2 "" H 2200 4500 50  0001 C CNN
+F 3 "" H 2200 4500 50  0001 C CNN
+	1    2200 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4300 2200 4250
+Wire Wire Line
+	2200 4250 2150 4250
+Wire Wire Line
+	2200 4250 3050 4250
+Connection ~ 2200 4250
+Text Label 3050 4250 2    50   ~ 0
+CAN_SILENT_FILTERED
+Wire Wire Line
+	5250 2450 4400 2450
+Text Label 4400 2450 0    50   ~ 0
+CAN_SILENT_FILTERED
+Text GLabel 1950 5000 0    50   Input ~ 0
+TXD_TCAN337
+$Comp
+L Device:R_Small R?
+U 1 1 5FB57FC0
+P 2050 5000
+AR Path="/5FB57FC0" Ref="R?"  Part="1" 
+AR Path="/5FCD74DC/5FB57FC0" Ref="R403"  Part="1" 
+F 0 "R403" V 1854 5000 50  0000 C CNN
+F 1 "0R" V 1945 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2050 5000 50  0001 C CNN
+F 3 "~" H 2050 5000 50  0001 C CNN
+	1    2050 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C404
+U 1 1 5FB57FC6
+P 2200 5150
+F 0 "C404" H 2292 5196 50  0000 L CNN
+F 1 "10n" H 2292 5105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 5150 50  0001 C CNN
+F 3 "~" H 2200 5150 50  0001 C CNN
+	1    2200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0407
+U 1 1 5FB57FCC
+P 2200 5250
+F 0 "#PWR0407" H 2200 5000 50  0001 C CNN
+F 1 "GND" H 2205 5077 50  0000 C CNN
+F 2 "" H 2200 5250 50  0001 C CNN
+F 3 "" H 2200 5250 50  0001 C CNN
+	1    2200 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5050 2200 5000
+Wire Wire Line
+	2200 5000 2150 5000
+Wire Wire Line
+	2200 5000 3050 5000
+Connection ~ 2200 5000
+Text Label 3050 5000 2    50   ~ 0
+CAN_TX_FILTERED
+Text Label 4400 2050 0    50   ~ 0
+CAN_TX_FILTERED
+Text Label 4400 2350 0    50   ~ 0
+CAN_FAULT_OUT
+Wire Wire Line
+	4400 2350 5250 2350
+Text Label 1500 6250 0    50   ~ 0
+CAN_FAULT_OUT
+Wire Wire Line
+	1500 6250 2200 6250
+$Comp
+L Device:C_Small C408
+U 1 1 5FB5D2E7
+P 2200 6450
+F 0 "C408" H 2292 6496 50  0000 L CNN
+F 1 "10n" H 2292 6405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 6450 50  0001 C CNN
+F 3 "~" H 2200 6450 50  0001 C CNN
+	1    2200 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0410
+U 1 1 5FB5D2ED
+P 2200 6550
+F 0 "#PWR0410" H 2200 6300 50  0001 C CNN
+F 1 "GND" H 2205 6377 50  0000 C CNN
+F 2 "" H 2200 6550 50  0001 C CNN
+F 3 "" H 2200 6550 50  0001 C CNN
+	1    2200 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6350 2200 6250
+Connection ~ 2200 6250
+Wire Wire Line
+	2200 6250 2350 6250
+Text GLabel 2550 6100 2    50   Input ~ 0
+CAN_SHDN
+$Comp
+L Device:R_Small R?
+U 1 1 5FB5FACD
+P 2450 6100
+AR Path="/5FB5FACD" Ref="R?"  Part="1" 
+AR Path="/5FCD74DC/5FB5FACD" Ref="R407"  Part="1" 
+F 0 "R407" V 2254 6100 50  0000 C CNN
+F 1 "0R" V 2345 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2450 6100 50  0001 C CNN
+F 3 "~" H 2450 6100 50  0001 C CNN
+	1    2450 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 6100 2200 6100
+Wire Wire Line
+	2200 6100 2200 6250
+$Comp
+L Device:R_Small R?
+U 1 1 5FB61E3B
+P 2200 5950
+AR Path="/5FB61E3B" Ref="R?"  Part="1" 
+AR Path="/5FCD74DC/5FB61E3B" Ref="R406"  Part="1" 
+F 0 "R406" V 2004 5950 50  0000 C CNN
+F 1 "10k" V 2095 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2200 5950 50  0001 C CNN
+F 3 "~" H 2200 5950 50  0001 C CNN
+	1    2200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6050 2200 6100
+Connection ~ 2200 6100
+$Comp
+L power:+3.3V #PWR0409
+U 1 1 5FB634D1
+P 2200 5850
+F 0 "#PWR0409" H 2200 5700 50  0001 C CNN
+F 1 "+3.3V" H 2215 6023 50  0000 C CNN
+F 2 "" H 2200 5850 50  0001 C CNN
+F 3 "" H 2200 5850 50  0001 C CNN
+	1    2200 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 7150 2    50   Output ~ 0
+RXD_TCAN337
+Text Label 4400 2150 0    50   ~ 0
+CAN_RX_DIRECT
+Wire Wire Line
+	4400 2150 5250 2150
+Text Label 1450 7150 0    50   ~ 0
+CAN_RX_DIRECT
+Wire Wire Line
+	1450 7150 2300 7150
+Text Notes 2400 1500 0    118  ~ 0
+Decouplage
+Text Notes 1550 3850 0    118  ~ 0
+Adaptation des IO
+$Comp
+L Device:R_Small R?
+U 1 1 5FB71DA7
+P 2400 7150
+AR Path="/5FB71DA7" Ref="R?"  Part="1" 
+AR Path="/5FCD74DC/5FB71DA7" Ref="R408"  Part="1" 
+F 0 "R408" V 2204 7150 50  0000 C CNN
+F 1 "0R" V 2295 7150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2400 7150 50  0001 C CNN
+F 3 "~" H 2400 7150 50  0001 C CNN
+	1    2400 7150
+	0    1    1    0   
+$EndComp
+Text GLabel 1950 4250 0    50   Input ~ 0
+CAN_SILENT
+Text Notes 7150 4750 0    79   ~ 0
+Protection de la carte contre les ESD par deux diodes TVS
+Text Notes 3550 7200 0    79   ~ 0
+Diodes 0R à dimensionner en fonction \nde la fréquence des signaux.\nElles permettent de limiter le courant appelé\net de réduire les perturbation EM provenant\ndes traces correspondantes.
+Wire Wire Line
+	4400 2050 5250 2050
+$EndSCHEMATC

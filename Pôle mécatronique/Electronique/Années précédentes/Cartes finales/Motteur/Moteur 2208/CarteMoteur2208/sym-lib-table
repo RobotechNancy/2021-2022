@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name CarteMoteur2208-rescue)(type Legacy)(uri ${KIPRJMOD}/CarteMoteur2208-rescue.lib)(options "")(descr ""))
+)
