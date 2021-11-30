@@ -133,7 +133,7 @@ U 1 1 61A9C7AE
 P 1100 1000
 F 0 "J1" V 1064 712 50  0000 R CNN
 F 1 "Conn_01x04" V 973 712 50  0000 R CNN
-F 2 "" H 1100 1000 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 1100 1000 50  0001 C CNN
 F 3 "~" H 1100 1000 50  0001 C CNN
 	1    1100 1000
 	0    -1   -1   0   
@@ -144,7 +144,7 @@ U 1 1 61A9E8A7
 P 1350 2700
 F 0 "J5" H 1400 3017 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 1400 2926 50  0000 C CNN
-F 2 "" H 1350 2700 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 1350 2700 50  0001 C CNN
 F 3 "~" H 1350 2700 50  0001 C CNN
 	1    1350 2700
 	1    0    0    -1  
@@ -195,7 +195,7 @@ U 1 1 61ABEAEF
 P 2100 1000
 F 0 "J2" V 2064 712 50  0000 R CNN
 F 1 "Conn_01x04" V 1973 712 50  0000 R CNN
-F 2 "" H 2100 1000 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 2100 1000 50  0001 C CNN
 F 3 "~" H 2100 1000 50  0001 C CNN
 	1    2100 1000
 	0    -1   -1   0   
@@ -222,7 +222,7 @@ U 1 1 61ABFAFB
 P 3150 1000
 F 0 "J3" V 3114 712 50  0000 R CNN
 F 1 "Conn_01x04" V 3023 712 50  0000 R CNN
-F 2 "" H 3150 1000 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 3150 1000 50  0001 C CNN
 F 3 "~" H 3150 1000 50  0001 C CNN
 	1    3150 1000
 	0    -1   -1   0   
@@ -259,17 +259,6 @@ Wire Wire Line
 	1000 2600 1150 2600
 Wire Wire Line
 	1150 2800 1000 2800
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 61AD32BF
-P 5350 1000
-F 0 "J4" V 5314 712 50  0000 R CNN
-F 1 "Conn_01x04" V 5223 712 50  0000 R CNN
-F 2 "" H 5350 1000 50  0001 C CNN
-F 3 "~" H 5350 1000 50  0001 C CNN
-	1    5350 1000
-	0    -1   -1   0   
-$EndComp
 Text GLabel 5350 1300 3    50   Input ~ 0
 can_H
 Text GLabel 5450 1300 3    50   Input ~ 0
@@ -285,18 +274,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 1200 5450 1300
 Wire Wire Line
-	5550 1200 5550 1300
-$Comp
-L Connector_Generic:Conn_01x04 J6
-U 1 1 61AD32CD
-P 6400 1000
-F 0 "J6" V 6364 712 50  0000 R CNN
-F 1 "Conn_01x04" V 6273 712 50  0000 R CNN
-F 2 "" H 6400 1000 50  0001 C CNN
-F 3 "~" H 6400 1000 50  0001 C CNN
-	1    6400 1000
-	0    -1   -1   0   
-$EndComp
+	5550 1200 5550 1250
 Text GLabel 6400 1300 3    50   Input ~ 0
 can_H
 Text GLabel 6500 1300 3    50   Input ~ 0
@@ -312,7 +290,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1200 6500 1300
 Wire Wire Line
-	6600 1200 6600 1300
+	6600 1200 6600 1250
 $Comp
 L Relay:G5LE-1 K1
 U 1 1 61AEE719
@@ -325,18 +303,6 @@ F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 7700 4100 50  0001 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Current:ACS712xLCTR-20A U4
-U 1 1 61AF3C8B
-P 8000 2950
-F 0 "U4" V 8046 2506 50  0000 R CNN
-F 1 "ACS712xLCTR-20A" V 7955 2506 50  0000 R CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8100 2600 50  0001 L CIN
-F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS712-Datasheet.ashx?la=en" H 8000 2950 50  0001 C CNN
-F 4 "680-7135" V 8000 2950 50  0001 C CNN "Réf"
-	1    8000 2950
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Transistor_FET:2N7002 Q1
 U 1 1 61AF51C2
 P 7400 4750
@@ -347,55 +313,8 @@ F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7400 4750 50  0001 
 	1    7400 4750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C2
-U 1 1 61AF7B30
-P 8450 2500
-F 0 "C2" V 8198 2500 50  0000 C CNN
-F 1 "1nF" V 8289 2500 50  0000 C CNN
-F 2 "" H 8488 2350 50  0001 C CNN
-F 3 "~" H 8450 2500 50  0001 C CNN
-	1    8450 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 61AF853B
-P 7300 2950
-F 0 "C1" V 7048 2950 50  0000 C CNN
-F 1 "1nF" V 7139 2950 50  0000 C CNN
-F 2 "" H 7338 2800 50  0001 C CNN
-F 3 "~" H 7300 2950 50  0001 C CNN
-	1    7300 2950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8300 2500 8100 2500
-Wire Wire Line
-	8100 2500 8100 2550
-Wire Wire Line
-	8400 2950 8600 2950
-Wire Wire Line
-	8600 2950 8600 2500
-Wire Wire Line
-	7600 2950 7500 2950
-Text GLabel 7150 3100 3    50   Input ~ 0
-GND
-Wire Wire Line
-	7150 2950 7150 3100
-Wire Wire Line
-	7500 2750 7500 2950
-Connection ~ 7500 2950
-Wire Wire Line
-	7500 2950 7450 2950
-Text GLabel 8350 3550 2    50   Input ~ 0
+Text GLabel 7800 3550 1    50   Input ~ 0
 VbattProtected
-Wire Wire Line
-	7800 3800 7800 3350
-Wire Wire Line
-	8200 3350 8200 3550
-Wire Wire Line
-	8200 3550 8350 3550
 Text GLabel 3900 5600 2    50   Input ~ 0
 5V
 Wire Wire Line
@@ -403,18 +322,16 @@ Wire Wire Line
 Connection ~ 3700 5600
 Wire Wire Line
 	3700 5600 3700 5700
-Text GLabel 7500 2750 1    50   Input ~ 0
-5V
 Text GLabel 7500 3600 1    50   Input ~ 0
 5V
 Wire Wire Line
-	7500 3600 7500 3800
+	7500 3600 7500 3750
 Text GLabel 7900 4550 3    50   Input ~ 0
 Vbatt
 Wire Wire Line
 	7900 4550 7900 4400
 Wire Wire Line
-	7500 4400 7500 4550
+	7500 4400 7500 4450
 Text GLabel 7500 5050 3    50   Input ~ 0
 GND
 Wire Wire Line
@@ -427,4 +344,67 @@ Text GLabel 1000 2700 0    50   Input ~ 0
 cmd_relais
 Wire Wire Line
 	1000 2700 1150 2700
+Wire Wire Line
+	7800 3800 7800 3550
+$Comp
+L Device:D D1
+U 1 1 61BF5AF4
+P 7050 4100
+F 0 "D1" V 7004 4180 50  0000 L CNN
+F 1 "D" V 7095 4180 50  0000 L CNN
+F 2 "" H 7050 4100 50  0001 C CNN
+F 3 "~" H 7050 4100 50  0001 C CNN
+	1    7050 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 3950 7050 3750
+Wire Wire Line
+	7050 3750 7500 3750
+Connection ~ 7500 3750
+Wire Wire Line
+	7500 3750 7500 3800
+Wire Wire Line
+	7050 4250 7050 4450
+Wire Wire Line
+	7050 4450 7500 4450
+Connection ~ 7500 4450
+Wire Wire Line
+	7500 4450 7500 4550
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 61C1A2AF
+P 5450 1000
+F 0 "J4" V 5414 712 50  0000 R CNN
+F 1 "Conn_01x05" V 5323 712 50  0000 R CNN
+F 2 "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical" H 5450 1000 50  0001 C CNN
+F 3 "~" H 5450 1000 50  0001 C CNN
+	1    5450 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J6
+U 1 1 61C1C197
+P 6500 1000
+F 0 "J6" V 6464 712 50  0000 R CNN
+F 1 "Conn_01x05" V 6373 712 50  0000 R CNN
+F 2 "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical" H 6500 1000 50  0001 C CNN
+F 3 "~" H 6500 1000 50  0001 C CNN
+	1    6500 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1250 5650 1250
+Wire Wire Line
+	5650 1250 5650 1200
+Connection ~ 5550 1250
+Wire Wire Line
+	5550 1250 5550 1300
+Wire Wire Line
+	6600 1250 6700 1250
+Wire Wire Line
+	6700 1250 6700 1200
+Connection ~ 6600 1250
+Wire Wire Line
+	6600 1250 6600 1300
 $EndSCHEMATC
