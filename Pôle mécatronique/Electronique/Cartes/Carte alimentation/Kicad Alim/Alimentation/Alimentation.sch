@@ -29,17 +29,6 @@ GND
 Text GLabel 3550 6600 3    50   Input ~ 0
 Vbatt
 $Comp
-L Connector_Generic:Conn_2Rows-15Pins J7
-U 1 1 61A77683
-P 3700 4800
-F 0 "J7" V 3704 5180 50  0000 L CNN
-F 1 "Conn_2Rows-15Pins" V 3795 5180 50  0000 L CNN
-F 2 "" H 3700 4800 50  0001 C CNN
-F 3 "~" H 3700 4800 50  0001 C CNN
-	1    3700 4800
-	0    1    1    0   
-$EndComp
-$Comp
 L Regulator_Switching:TSR_1-24120 U3
 U 1 1 61A799CF
 P 5000 6100
@@ -76,14 +65,12 @@ Wire Wire Line
 Wire Wire Line
 	4900 5700 4900 5250
 Wire Wire Line
-	4900 5250 4000 5250
+	4200 5250 4200 5100
 Wire Wire Line
-	4000 5250 4000 5100
+	4200 5250 4100 5250
 Wire Wire Line
-	4000 5250 3900 5250
-Wire Wire Line
-	3900 5250 3900 5100
-Connection ~ 4000 5250
+	4100 5250 4100 5100
+Connection ~ 4200 5250
 Wire Wire Line
 	3800 5100 3800 5250
 Wire Wire Line
@@ -144,7 +131,7 @@ U 1 1 61A9E8A7
 P 1350 2700
 F 0 "J5" H 1400 3017 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 1400 2926 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 1350 2700 50  0001 C CNN
+F 2 "Connector_Hirose:Hirose_DF11-6DP-2DSA_2x03_P2.00mm_Vertical" H 1350 2700 50  0001 C CNN
 F 3 "~" H 1350 2700 50  0001 C CNN
 	1    1350 2700
 	1    0    0    -1  
@@ -155,9 +142,9 @@ Text GLabel 3700 4500 1    50   Input ~ 0
 5Vout2
 Text GLabel 3800 4500 1    50   Input ~ 0
 5Vout3
-Text GLabel 3900 4500 1    50   Input ~ 0
+Text GLabel 4100 4500 1    50   Input ~ 0
 12Vout1
-Text GLabel 4000 4500 1    50   Input ~ 0
+Text GLabel 4200 4500 1    50   Input ~ 0
 12Vout2
 Text GLabel 3500 4500 1    50   Input ~ 0
 5VRPI
@@ -170,9 +157,9 @@ Wire Wire Line
 Wire Wire Line
 	3800 4500 3800 4600
 Wire Wire Line
-	3900 4500 3900 4600
+	4100 4500 4100 4600
 Wire Wire Line
-	4000 4500 4000 4600
+	4200 4500 4200 4600
 Text GLabel 1100 1300 3    50   Input ~ 0
 can_H
 Text GLabel 1200 1300 3    50   Input ~ 0
@@ -265,7 +252,7 @@ Text GLabel 5450 1300 3    50   Input ~ 0
 can_L
 Text GLabel 5250 1300 3    50   Input ~ 0
 GND
-Text GLabel 5550 1300 3    50   Input ~ 0
+Text GLabel 5650 1300 3    50   Input ~ 0
 12Vout1
 Wire Wire Line
 	5250 1200 5250 1300
@@ -273,15 +260,13 @@ Wire Wire Line
 	5350 1200 5350 1300
 Wire Wire Line
 	5450 1200 5450 1300
-Wire Wire Line
-	5550 1200 5550 1250
 Text GLabel 6400 1300 3    50   Input ~ 0
 can_H
 Text GLabel 6500 1300 3    50   Input ~ 0
 can_L
 Text GLabel 6300 1300 3    50   Input ~ 0
 GND
-Text GLabel 6600 1300 3    50   Input ~ 0
+Text GLabel 6700 1300 3    50   Input ~ 0
 12Vout2
 Wire Wire Line
 	6300 1200 6300 1300
@@ -289,8 +274,6 @@ Wire Wire Line
 	6400 1200 6400 1300
 Wire Wire Line
 	6500 1200 6500 1300
-Wire Wire Line
-	6600 1200 6600 1250
 $Comp
 L Relay:G5LE-1 K1
 U 1 1 61AEE719
@@ -300,17 +283,6 @@ F 1 "G5LE-1" H 8130 4055 50  0000 L CNN
 F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 8150 4050 50  0001 L CNN
 F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 7700 4100 50  0001 C CNN
 	1    7700 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:2N7002 Q1
-U 1 1 61AF51C2
-P 7400 4750
-F 0 "Q1" H 7604 4796 50  0000 L CNN
-F 1 "2N7002" H 7604 4705 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7600 4675 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7400 4750 50  0001 L CNN
-	1    7400 4750
 	1    0    0    -1  
 $EndComp
 Text GLabel 7800 3550 1    50   Input ~ 0
@@ -352,7 +324,7 @@ U 1 1 61BF5AF4
 P 7050 4100
 F 0 "D1" V 7004 4180 50  0000 L CNN
 F 1 "D" V 7095 4180 50  0000 L CNN
-F 2 "" H 7050 4100 50  0001 C CNN
+F 2 "Diode_THT:D_DO-15_P12.70mm_Horizontal" H 7050 4100 50  0001 C CNN
 F 3 "~" H 7050 4100 50  0001 C CNN
 	1    7050 4100
 	0    1    1    0   
@@ -394,17 +366,57 @@ F 3 "~" H 6500 1000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5550 1250 5650 1250
+	4900 5250 4200 5250
 Wire Wire Line
-	5650 1250 5650 1200
-Connection ~ 5550 1250
+	3800 5250 3900 5250
 Wire Wire Line
-	5550 1250 5550 1300
+	3900 5250 3900 5100
+Connection ~ 3800 5250
 Wire Wire Line
-	6600 1250 6700 1250
+	3900 5250 4000 5250
 Wire Wire Line
-	6700 1250 6700 1200
-Connection ~ 6600 1250
+	4000 5250 4000 5100
+Connection ~ 3900 5250
+Text GLabel 3900 4500 1    50   Input ~ 0
+5Vout4
+Text GLabel 4000 4500 1    50   Input ~ 0
+5Vout5
 Wire Wire Line
-	6600 1250 6600 1300
+	3900 4500 3900 4600
+Wire Wire Line
+	4000 4500 4000 4600
+Text GLabel 5550 1300 3    50   Input ~ 0
+5Vout4
+Text GLabel 6600 1300 3    50   Input ~ 0
+5Vout5
+Wire Wire Line
+	6600 1200 6600 1300
+Wire Wire Line
+	5550 1200 5550 1300
+Wire Wire Line
+	5650 1200 5650 1300
+Wire Wire Line
+	6700 1200 6700 1300
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 61B55D17
+P 7400 4750
+F 0 "Q1" H 7604 4796 50  0000 L CNN
+F 1 "BSS138" H 7604 4705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7600 4675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 7400 4750 50  0001 L CNN
+	1    7400 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J7
+U 1 1 61BA0206
+P 3800 4800
+F 0 "J7" V 3804 5280 50  0000 L CNN
+F 1 "Conn_02x10_Odd_Even" V 3895 5280 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x10_P2.54mm_Vertical" H 3800 4800 50  0001 C CNN
+F 3 "~" H 3800 4800 50  0001 C CNN
+	1    3800 4800
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
