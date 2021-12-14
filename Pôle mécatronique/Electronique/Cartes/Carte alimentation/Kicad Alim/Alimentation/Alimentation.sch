@@ -59,9 +59,9 @@ GND
 Text GLabel 2500 6600 3    50   Input ~ 0
 Vbatt
 Wire Wire Line
-	2800 6100 2900 6100
+	2800 6100 2850 6100
 Wire Wire Line
-	2500 6500 2500 6600
+	2500 6500 2500 6550
 Wire Wire Line
 	4900 5700 4900 5250
 Wire Wire Line
@@ -308,14 +308,8 @@ Text GLabel 7500 5050 3    50   Input ~ 0
 GND
 Wire Wire Line
 	7500 4950 7500 5050
-Text GLabel 7050 4750 0    50   Input ~ 0
+Text GLabel 6450 4750 0    50   Input ~ 0
 cmd_relais
-Wire Wire Line
-	7050 4750 7200 4750
-Text GLabel 1000 2700 0    50   Input ~ 0
-cmd_relais
-Wire Wire Line
-	1000 2700 1150 2700
 Wire Wire Line
 	7800 3800 7800 3550
 $Comp
@@ -419,4 +413,54 @@ F 3 "~" H 3800 4800 50  0001 C CNN
 	1    3800 4800
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:R R1
+U 1 1 61B93DBB
+P 6750 4750
+F 0 "R1" V 6543 4750 50  0000 C CNN
+F 1 "6000" V 6634 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6680 4750 50  0001 C CNN
+F 3 "~" H 6750 4750 50  0001 C CNN
+	1    6750 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 4750 7200 4750
+Wire Wire Line
+	6600 4750 6450 4750
+Text GLabel 1800 2700 2    50   Input ~ 0
+cmd_relais
+Wire Wire Line
+	1800 2700 1650 2700
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 61BCA73F
+P 2850 7150
+F 0 "J8" V 2722 7230 50  0000 L CNN
+F 1 "Conn_01x02" V 2813 7230 50  0000 L CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 2850 7150 50  0001 C CNN
+F 3 "~" H 2850 7150 50  0001 C CNN
+	1    2850 7150
+	0    1    1    0   
+$EndComp
+Connection ~ 2850 6100
+Wire Wire Line
+	2850 6100 2900 6100
+Wire Wire Line
+	2650 6850 2650 6550
+Wire Wire Line
+	2650 6550 2500 6550
+Connection ~ 2500 6550
+Wire Wire Line
+	2500 6550 2500 6600
+Wire Wire Line
+	2650 6850 2850 6850
+Wire Wire Line
+	2850 6850 2850 6950
+Wire Wire Line
+	2850 6100 2850 6750
+Wire Wire Line
+	2850 6750 2750 6750
+Wire Wire Line
+	2750 6750 2750 6950
 $EndSCHEMATC
