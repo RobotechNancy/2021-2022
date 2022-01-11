@@ -1,0 +1,290 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NUCLEO-F303K8:NUCLEO-F303K8 A1
+U 2 1 61A70FF2
+P 6200 2950
+F 0 "A1" H 6308 3915 50  0000 C CNN
+F 1 "NUCLEO-F303K8" H 6308 3824 50  0000 C CNN
+F 2 "empreinte:MODULE_NUCLEO-F303K8" H 6200 2950 50  0001 L BNN
+F 3 "" H 6200 2950 50  0001 L BNN
+F 4 "ST Microelectronics" H 6200 2950 50  0001 L BNN "MANUFACTURER"
+F 5 "Manufacturer rEcommendation" H 6200 2950 50  0001 L BNN "STANDARD"
+F 6 "3" H 6200 2950 50  0001 L BNN "PARTREV"
+	2    6200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L NUCLEO-F303K8:NUCLEO-F303K8 A1
+U 1 1 61A7038C
+P 5700 2950
+F 0 "A1" H 5808 3915 50  0000 C CNN
+F 1 "NUCLEO-F303K8" H 5808 3824 50  0000 C CNN
+F 2 "empreinte:MODULE_NUCLEO-F303K8" H 5700 2950 50  0001 L BNN
+F 3 "" H 5700 2950 50  0001 L BNN
+F 4 "ST Microelectronics" H 5700 2950 50  0001 L BNN "MANUFACTURER"
+F 5 "Manufacturer rEcommendation" H 5700 2950 50  0001 L BNN "STANDARD"
+F 6 "3" H 5700 2950 50  0001 L BNN "PARTREV"
+	1    5700 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Shield_BR-cache:power_GND #PWR0101
+U 1 1 61A793A4
+P 5100 2550
+F 0 "#PWR0101" H 5100 2300 50  0001 C CNN
+F 1 "power_GND" V 5105 2423 50  0000 R CNN
+F 2 "" H 5100 2550 50  0001 C CNN
+F 3 "" H 5100 2550 50  0001 C CNN
+	1    5100 2550
+	0    1    -1   0   
+$EndComp
+$Comp
+L Shield_BR-cache:power_GND #PWR0102
+U 1 1 61A79891
+P 6750 2350
+F 0 "#PWR0102" H 6750 2100 50  0001 C CNN
+F 1 "power_GND" V 6755 2222 50  0000 R CNN
+F 2 "" H 6750 2350 50  0001 C CNN
+F 3 "" H 6750 2350 50  0001 C CNN
+	1    6750 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Shield_BR-cache:power_+5V #PWR0103
+U 1 1 61A79A49
+P 7150 2550
+F 0 "#PWR0103" H 7150 2400 50  0001 C CNN
+F 1 "power_+5V" V 7165 2678 50  0000 L CNN
+F 2 "" H 7150 2550 50  0001 C CNN
+F 3 "" H 7150 2550 50  0001 C CNN
+	1    7150 2550
+	0    1    1    0   
+$EndComp
+Text GLabel 5200 2250 0    50   Input ~ 0
+UART1_TX
+Text GLabel 5200 2350 0    50   Input ~ 0
+UART1_RX
+Wire Wire Line
+	5300 2250 5200 2250
+Wire Wire Line
+	5300 2350 5200 2350
+Wire Wire Line
+	5300 2550 5100 2550
+Wire Wire Line
+	6600 2350 6750 2350
+Wire Wire Line
+	6600 2550 7150 2550
+Text GLabel 2650 1550 2    50   Input ~ 0
+UART1_TX
+Text GLabel 2650 1650 2    50   Input ~ 0
+UART1_RX
+$Comp
+L Shield_BR-cache:power_GND #PWR0104
+U 1 1 61AF8569
+P 2700 1450
+F 0 "#PWR0104" H 2700 1200 50  0001 C CNN
+F 1 "power_GND" V 2705 1322 50  0000 R CNN
+F 2 "" H 2700 1450 50  0001 C CNN
+F 3 "" H 2700 1450 50  0001 C CNN
+	1    2700 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Shield_BR-cache:power_+5V #PWR0105
+U 1 1 61AF8B91
+P 2650 1750
+F 0 "#PWR0105" H 2650 1600 50  0001 C CNN
+F 1 "power_+5V" V 2665 1878 50  0000 L CNN
+F 2 "" H 2650 1750 50  0001 C CNN
+F 3 "" H 2650 1750 50  0001 C CNN
+	1    2650 1750
+	0    1    -1   0   
+$EndComp
+Text GLabel 5100 3450 0    50   Input ~ 0
+CAN_L
+Text GLabel 5100 2650 0    50   Input ~ 0
+CAN_H
+Wire Wire Line
+	5300 2650 5100 2650
+Wire Wire Line
+	5300 3450 5100 3450
+$Comp
+L Interface_CAN_LIN:TCAN332 CAN_Transceiver1
+U 1 1 61AFC2AE
+P 5900 4950
+F 0 "CAN_Transceiver1" H 5900 5531 50  0000 C CNN
+F 1 "TCAN332" H 5900 5440 50  0000 C CNN
+F 2 "empreinte:SO-8_S" H 5900 4450 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tcan337.pdf" H 5900 4950 50  0001 C CNN
+	1    5900 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 6500 5050 2    50   Output ~ 0
+CAN_L
+Text GLabel 6500 4850 2    50   Output ~ 0
+CAN_H
+Wire Wire Line
+	6500 4850 6400 4850
+Wire Wire Line
+	6500 5050 6400 5050
+Text GLabel 5250 4750 0    50   Input ~ 0
+CAN_TX
+Text GLabel 5250 4850 0    50   Input ~ 0
+CAN_RX
+Wire Wire Line
+	5250 4850 5400 4850
+Wire Wire Line
+	5250 4750 5400 4750
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 61B045F7
+P 6750 3550
+F 0 "#PWR0106" H 6750 3400 50  0001 C CNN
+F 1 "+3.3V" V 6765 3678 50  0000 L CNN
+F 2 "" H 6750 3550 50  0001 C CNN
+F 3 "" H 6750 3550 50  0001 C CNN
+	1    6750 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 3550 6600 3550
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 61B05953
+P 5900 4400
+F 0 "#PWR0107" H 5900 4250 50  0001 C CNN
+F 1 "+3.3V" H 5915 4573 50  0000 C CNN
+F 2 "" H 5900 4400 50  0001 C CNN
+F 3 "" H 5900 4400 50  0001 C CNN
+	1    5900 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4550 5900 4400
+$Comp
+L Shield_BR-cache:power_GND #PWR0108
+U 1 1 61B06198
+P 5900 5450
+F 0 "#PWR0108" H 5900 5200 50  0001 C CNN
+F 1 "power_GND" H 5905 5277 50  0000 C CNN
+F 2 "" H 5900 5450 50  0001 C CNN
+F 3 "" H 5900 5450 50  0001 C CNN
+	1    5900 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5350 5900 5450
+$Comp
+L Shield_BR-cache:power_+BATT #PWR0109
+U 1 1 61B07E4C
+P 8550 1700
+F 0 "#PWR0109" H 8550 1550 50  0001 C CNN
+F 1 "power_+BATT" V 8565 1828 50  0000 L CNN
+F 2 "" H 8550 1700 50  0001 C CNN
+F 3 "" H 8550 1700 50  0001 C CNN
+	1    8550 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Shield_BR-cache:power_GND #PWR0110
+U 1 1 61B08B93
+P 8550 1400
+F 0 "#PWR0110" H 8550 1150 50  0001 C CNN
+F 1 "power_GND" V 8555 1273 50  0000 R CNN
+F 2 "" H 8550 1400 50  0001 C CNN
+F 3 "" H 8550 1400 50  0001 C CNN
+	1    8550 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Shield_BR-cache:power_+BATT #PWR0111
+U 1 1 61B0A6DE
+P 6700 2250
+F 0 "#PWR0111" H 6700 2100 50  0001 C CNN
+F 1 "power_+BATT" V 6715 2378 50  0000 L CNN
+F 2 "" H 6700 2250 50  0001 C CNN
+F 3 "" H 6700 2250 50  0001 C CNN
+	1    6700 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 2250 6700 2250
+NoConn ~ 6600 2450
+NoConn ~ 6600 2650
+NoConn ~ 6600 2750
+NoConn ~ 6600 2850
+NoConn ~ 6600 2950
+NoConn ~ 6600 3050
+NoConn ~ 6600 3150
+NoConn ~ 6600 3250
+NoConn ~ 6600 3350
+NoConn ~ 6600 3450
+NoConn ~ 6600 3650
+NoConn ~ 5300 3650
+NoConn ~ 5300 3550
+NoConn ~ 5300 3350
+NoConn ~ 5300 3250
+NoConn ~ 5300 3150
+NoConn ~ 5300 3050
+NoConn ~ 5300 2950
+NoConn ~ 5300 2850
+NoConn ~ 5300 2750
+NoConn ~ 5300 2450
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 61B15EA5
+P 9200 1500
+F 0 "J1" H 9280 1492 50  0000 L CNN
+F 1 "Conn_01x04" H 9280 1401 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 9200 1500 50  0001 C CNN
+F 3 "~" H 9200 1500 50  0001 C CNN
+	1    9200 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 1400 9000 1400
+Wire Wire Line
+	8550 1700 9000 1700
+Text GLabel 8550 1500 0    50   Input ~ 0
+CAN_RX
+Wire Wire Line
+	8550 1500 9000 1500
+Wire Wire Line
+	8550 1600 9000 1600
+Text GLabel 8550 1600 0    50   Input ~ 0
+CAN_TX
+$Comp
+L Connector_Generic:Conn_01x05 Lidar1
+U 1 1 61B27006
+P 2200 1550
+F 0 "Lidar1" H 2118 1967 50  0000 C CNN
+F 1 "Conn_01x05" H 2118 1876 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical" H 2200 1550 50  0001 C CNN
+F 3 "~" H 2200 1550 50  0001 C CNN
+	1    2200 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1450 2700 1450
+Wire Wire Line
+	2400 1550 2650 1550
+Wire Wire Line
+	2400 1650 2650 1650
+Wire Wire Line
+	2400 1750 2650 1750
+NoConn ~ 2400 1350
+$EndSCHEMATC
