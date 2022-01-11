@@ -1,0 +1,7 @@
+"Source:","C:\Users\Gabriel\Desktop\RPi_Hat_Template-master\RPi_Hat.kicad_sch"
+"Date:","06/01/2022 22:35:43"
+"Tool:","Eeschema (6.0.0)"
+"Generator:","C:\Program Files\KiCad\6.0\bin\scripting\plugins/bom_csv_grouped_by_value_with_fp.py"
+"Component Count:","1"
+"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
+"J2, ","1","RPi_GPIO","RPi_GPIO","RPi_Hat:Pin_Header_Straight_2x20","",""
