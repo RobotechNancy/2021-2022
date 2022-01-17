@@ -1,6 +1,0 @@
-(sym_lib_table
-  (lib (name "STM32F410CBU6")(type "Legacy")(uri "C:/Users/tomro/Downloads/STM32F410CBU6/KiCad/STM32F410CBU6.lib")(options "")(descr ""))
-  (lib (name "Shield_BR-cache")(type "Legacy")(uri "C:/Users/tomro/OneDrive/Documents/GitHub/2021-2022/Pôle mécatronique/Electronique/Années précédentes/Carte base roulante/Shield BR/Shield BR-cache.lib")(options "")(descr ""))
-  (lib (name "Shield_BR-rescue")(type "Legacy")(uri "C:/Users/tomro/OneDrive/Documents/GitHub/2021-2022/Pôle mécatronique/Electronique/Années précédentes/Carte base roulante/Shield BR/Shield BR-rescue.lib")(options "")(descr ""))
-  (lib (name "NUCLEO-F303K8")(type "Legacy")(uri "C:/Users/tomro/Downloads/NUCLEO-F303K8.lib")(options "")(descr ""))
-)
