@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Gabriel\Desktop\RPi_Hat_Template-master\RPi_Hat.kicad_sch</source>
+    <date>06/01/2022 22:35:43</date>
+    <tool>Eeschema (6.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>RPi_Hat.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/RPi_GPIO/" tstamps="/00000000-0000-0000-0000-00005515d395/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>RPi_GPIO.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J2">
+      <value>RPi_GPIO</value>
+      <footprint>RPi_Hat:Pin_Header_Straight_2x20</footprint>
+      <libsource lib="RPi_Hat" part="RPi_GPIO" description=""/>
+      <property name="Sheetname" value="RPi_GPIO"/>
+      <property name="Sheetfile" value="RPi_GPIO.kicad_sch"/>
+      <sheetpath names="/RPi_GPIO/" tstamps="/00000000-0000-0000-0000-00005515d395/"/>
+      <tstamps>00000000-0000-0000-0000-00005516ae26</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RPi_Hat" part="RPi_GPIO">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RPi_GPIO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3.3V" type="power_in"/>
+        <pin num="2" name="5V" type="power_in"/>
+        <pin num="3" name="BCM2_SDA" type="bidirectional"/>
+        <pin num="4" name="5V" type="power_in"/>
+        <pin num="5" name="BCM3_SCL" type="bidirectional"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="BCM4_GPCLK0" type="bidirectional"/>
+        <pin num="8" name="BCM14_TXD" type="bidirectional"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="BCM15_RXD" type="bidirectional"/>
+        <pin num="11" name="BCM17" type="bidirectional"/>
+        <pin num="12" name="BCM18_PCM_C" type="bidirectional"/>
+        <pin num="13" name="BCM27" type="bidirectional"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="BCM22" type="bidirectional"/>
+        <pin num="16" name="BCM23" type="bidirectional"/>
+        <pin num="17" name="3.3V" type="power_in"/>
+        <pin num="18" name="BCM24" type="bidirectional"/>
+        <pin num="19" name="BCM10_MOSI" type="bidirectional"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="BCM9_MISO" type="bidirectional"/>
+        <pin num="22" name="BCM25" type="bidirectional"/>
+        <pin num="23" name="BCM11_SCLK" type="bidirectional"/>
+        <pin num="24" name="BCM8_CE0" type="bidirectional"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="BCM7_CE1" type="bidirectional"/>
+        <pin num="27" name="BCM0_ID_SD" type="bidirectional"/>
+        <pin num="28" name="BCM1_ID_SC" type="bidirectional"/>
+        <pin num="29" name="BCM5" type="bidirectional"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="BCM6" type="bidirectional"/>
+        <pin num="32" name="BCM12_PWM0" type="bidirectional"/>
+        <pin num="33" name="BCM13_PWM1" type="bidirectional"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="BCM19_MISO_PCM_FS" type="bidirectional"/>
+        <pin num="36" name="BCM16" type="bidirectional"/>
+        <pin num="37" name="BCM26" type="bidirectional"/>
+        <pin num="38" name="BCM20_MOSI_PCM_DI" type="bidirectional"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="BCM21_SCLK_PCM_DO" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RPi_Hat">
+      <uri>C:\Users\Gabriel\Desktop\RPi_Hat_Template-master/RPi_Hat.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="unconnected-(J2-Pad1)">
+      <node ref="J2" pin="1" pinfunction="3.3V" pintype="power_in"/>
+    </net>
+    <net code="2" name="unconnected-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="5V" pintype="power_in"/>
+    </net>
+    <net code="3" name="unconnected-(J2-Pad3)">
+      <node ref="J2" pin="3" pinfunction="BCM2_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="unconnected-(J2-Pad4)">
+      <node ref="J2" pin="4" pinfunction="5V" pintype="power_in"/>
+    </net>
+    <net code="5" name="unconnected-(J2-Pad5)">
+      <node ref="J2" pin="5" pinfunction="BCM3_SCL" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="unconnected-(J2-Pad6)">
+      <node ref="J2" pin="6" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="7" name="unconnected-(J2-Pad7)">
+      <node ref="J2" pin="7" pinfunction="BCM4_GPCLK0" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="unconnected-(J2-Pad8)">
+      <node ref="J2" pin="8" pinfunction="BCM14_TXD" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="unconnected-(J2-Pad9)">
+      <node ref="J2" pin="9" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="10" name="unconnected-(J2-Pad10)">
+      <node ref="J2" pin="10" pinfunction="BCM15_RXD" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="unconnected-(J2-Pad11)">
+      <node ref="J2" pin="11" pinfunction="BCM17" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="unconnected-(J2-Pad12)">
+      <node ref="J2" pin="12" pinfunction="BCM18_PCM_C" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="unconnected-(J2-Pad13)">
+      <node ref="J2" pin="13" pinfunction="BCM27" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="unconnected-(J2-Pad14)">
+      <node ref="J2" pin="14" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="15" name="unconnected-(J2-Pad15)">
+      <node ref="J2" pin="15" pinfunction="BCM22" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="unconnected-(J2-Pad16)">
+      <node ref="J2" pin="16" pinfunction="BCM23" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="unconnected-(J2-Pad17)">
+      <node ref="J2" pin="17" pinfunction="3.3V" pintype="power_in"/>
+    </net>
+    <net code="18" name="unconnected-(J2-Pad18)">
+      <node ref="J2" pin="18" pinfunction="BCM24" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="unconnected-(J2-Pad19)">
+      <node ref="J2" pin="19" pinfunction="BCM10_MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="unconnected-(J2-Pad20)">
+      <node ref="J2" pin="20" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="21" name="unconnected-(J2-Pad21)">
+      <node ref="J2" pin="21" pinfunction="BCM9_MISO" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="unconnected-(J2-Pad22)">
+      <node ref="J2" pin="22" pinfunction="BCM25" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="unconnected-(J2-Pad23)">
+      <node ref="J2" pin="23" pinfunction="BCM11_SCLK" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="unconnected-(J2-Pad24)">
+      <node ref="J2" pin="24" pinfunction="BCM8_CE0" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="unconnected-(J2-Pad25)">
+      <node ref="J2" pin="25" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="26" name="unconnected-(J2-Pad26)">
+      <node ref="J2" pin="26" pinfunction="BCM7_CE1" pintype="bidirectional"/>
+    </net>
+    <net code="27" name="unconnected-(J2-Pad27)">
+      <node ref="J2" pin="27" pinfunction="BCM0_ID_SD" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="unconnected-(J2-Pad28)">
+      <node ref="J2" pin="28" pinfunction="BCM1_ID_SC" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="unconnected-(J2-Pad29)">
+      <node ref="J2" pin="29" pinfunction="BCM5" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="unconnected-(J2-Pad30)">
+      <node ref="J2" pin="30" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="31" name="unconnected-(J2-Pad31)">
+      <node ref="J2" pin="31" pinfunction="BCM6" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="unconnected-(J2-Pad32)">
+      <node ref="J2" pin="32" pinfunction="BCM12_PWM0" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="unconnected-(J2-Pad33)">
+      <node ref="J2" pin="33" pinfunction="BCM13_PWM1" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="unconnected-(J2-Pad34)">
+      <node ref="J2" pin="34" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="35" name="unconnected-(J2-Pad35)">
+      <node ref="J2" pin="35" pinfunction="BCM19_MISO_PCM_FS" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="unconnected-(J2-Pad36)">
+      <node ref="J2" pin="36" pinfunction="BCM16" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="unconnected-(J2-Pad37)">
+      <node ref="J2" pin="37" pinfunction="BCM26" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="unconnected-(J2-Pad38)">
+      <node ref="J2" pin="38" pinfunction="BCM20_MOSI_PCM_DI" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="unconnected-(J2-Pad39)">
+      <node ref="J2" pin="39" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="40" name="unconnected-(J2-Pad40)">
+      <node ref="J2" pin="40" pinfunction="BCM21_SCLK_PCM_DO" pintype="bidirectional"/>
+    </net>
+  </nets>
+</export>
