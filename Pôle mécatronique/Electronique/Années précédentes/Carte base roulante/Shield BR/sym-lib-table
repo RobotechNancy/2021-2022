@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Shield-BR-rescue)(type Legacy)(uri "${KIPRJMOD}/Shield BR-rescue.lib")(options "")(descr ""))
-)

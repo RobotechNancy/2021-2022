@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name carteOdometrie-rescue)(type Legacy)(uri ${KIPRJMOD}/carteOdometrie-rescue.lib)(options "")(descr ""))
-)
