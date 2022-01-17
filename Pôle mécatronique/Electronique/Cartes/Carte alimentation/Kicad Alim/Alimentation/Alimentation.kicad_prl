@@ -62,7 +62,15 @@
       35,
       36
     ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "visible_layers": "003ffcd_ffffffff",
+=======
     "visible_layers": "000fffd_ffffffff",
+>>>>>>> parent of 5fda5d9 (Update)
+=======
+    "visible_layers": "000fffd_7ffffffe",
+>>>>>>> parent of 1a860c2 (Revert "Update")
     "zone_display_mode": 0
   },
   "meta": {
