@@ -1,0 +1,416 @@
+\begin{theindex}
+
+  \item {$\sim$serialib}
+    \subitem {serialib}, \hyperpage{6}
+  \item {$\sim$xbee}
+    \subitem {xbee}, \hyperpage{20}
+
+  \indexspace
+
+  \item {AT\_EMPTY\_VALUE}
+    \subitem {define.h}, \hyperpage{26}
+  \item {AT\_END\_LINE}
+    \subitem {define.h}, \hyperpage{26}
+  \item {AT\_ENTER}
+    \subitem {define.h}, \hyperpage{26}
+  \item {AT\_ERROR\_16BIT\_SOURCE\_ADDR}
+    \subitem {define.h}, \hyperpage{26}
+  \item {AT\_ERROR\_AES}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_AES\_KEY}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_API}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_BAUDRATE}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_CHANEL}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_COORDINATOR}
+    \subitem {define.h}, \hyperpage{27}
+  \item {AT\_ERROR\_ENTER}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_EXIT}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_LOW\_DEST\_ADDR}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_PAN\_ID}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_PARITY}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_SUCCESS}
+    \subitem {define.h}, \hyperpage{28}
+  \item {AT\_ERROR\_VALUE}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_ERROR\_WRITE\_CONFIG}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_EXIT}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_GET\_16BIT\_SOURCE\_ADDR}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_GET\_AES}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_GET\_AES\_KEY}
+    \subitem {define.h}, \hyperpage{29}
+  \item {AT\_GET\_API}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_BAUDRATE}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_CHANEL}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_COORDINATOR}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_LOW\_DEST\_ADDR}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_PAN\_ID}
+    \subitem {define.h}, \hyperpage{30}
+  \item {AT\_GET\_PARITY}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_MODE\_GET}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_MODE\_SET}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_SUCCESS\_VALUE}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_VALUE\_16BIT\_SOURCE\_ADDR}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_VALUE\_AES}
+    \subitem {define.h}, \hyperpage{31}
+  \item {AT\_VALUE\_AES\_KEY}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_API}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_BAUDRATE}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_CHANEL}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_COORDINATOR}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_LOW\_DEST\_ADDR}
+    \subitem {define.h}, \hyperpage{32}
+  \item {AT\_VALUE\_PAN\_ID}
+    \subitem {define.h}, \hyperpage{33}
+  \item {AT\_VALUE\_PARITY}
+    \subitem {define.h}, \hyperpage{33}
+  \item {AT\_WRITE\_CONFIG}
+    \subitem {define.h}, \hyperpage{33}
+  \item {available}
+    \subitem {serialib}, \hyperpage{7}
+
+  \indexspace
+
+  \item {BAUDRATE}
+    \subitem {define.h}, \hyperpage{33}
+  \item {BROADCAST}
+    \subitem {define.h}, \hyperpage{33}
+
+  \indexspace
+
+  \item {checkATConfig}
+    \subitem {xbee}, \hyperpage{20}
+  \item {clearDTR}
+    \subitem {serialib}, \hyperpage{7}
+  \item {clearRTS}
+    \subitem {serialib}, \hyperpage{7}
+  \item {closeDevice}
+    \subitem {serialib}, \hyperpage{7}
+  \item {closeSerialConnection}
+    \subitem {xbee}, \hyperpage{20}
+  \item {code\_fct}
+    \subitem {Trame}, \hyperpage{18}
+  \item {CURRENT\_ROBOT}
+    \subitem {define.h}, \hyperpage{33}
+
+  \indexspace
+
+  \item {data}
+    \subitem {Trame}, \hyperpage{18}
+  \item {DATABITS}
+    \subitem {define.h}, \hyperpage{34}
+  \item {define.h}, \hyperpage{25}
+    \subitem {AT\_EMPTY\_VALUE}, \hyperpage{26}
+    \subitem {AT\_END\_LINE}, \hyperpage{26}
+    \subitem {AT\_ENTER}, \hyperpage{26}
+    \subitem {AT\_ERROR\_16BIT\_SOURCE\_ADDR}, \hyperpage{26}
+    \subitem {AT\_ERROR\_AES}, \hyperpage{27}
+    \subitem {AT\_ERROR\_AES\_KEY}, \hyperpage{27}
+    \subitem {AT\_ERROR\_API}, \hyperpage{27}
+    \subitem {AT\_ERROR\_BAUDRATE}, \hyperpage{27}
+    \subitem {AT\_ERROR\_CHANEL}, \hyperpage{27}
+    \subitem {AT\_ERROR\_COORDINATOR}, \hyperpage{27}
+    \subitem {AT\_ERROR\_ENTER}, \hyperpage{28}
+    \subitem {AT\_ERROR\_EXIT}, \hyperpage{28}
+    \subitem {AT\_ERROR\_LOW\_DEST\_ADDR}, \hyperpage{28}
+    \subitem {AT\_ERROR\_PAN\_ID}, \hyperpage{28}
+    \subitem {AT\_ERROR\_PARITY}, \hyperpage{28}
+    \subitem {AT\_ERROR\_SUCCESS}, \hyperpage{28}
+    \subitem {AT\_ERROR\_VALUE}, \hyperpage{29}
+    \subitem {AT\_ERROR\_WRITE\_CONFIG}, \hyperpage{29}
+    \subitem {AT\_EXIT}, \hyperpage{29}
+    \subitem {AT\_GET\_16BIT\_SOURCE\_ADDR}, \hyperpage{29}
+    \subitem {AT\_GET\_AES}, \hyperpage{29}
+    \subitem {AT\_GET\_AES\_KEY}, \hyperpage{29}
+    \subitem {AT\_GET\_API}, \hyperpage{30}
+    \subitem {AT\_GET\_BAUDRATE}, \hyperpage{30}
+    \subitem {AT\_GET\_CHANEL}, \hyperpage{30}
+    \subitem {AT\_GET\_COORDINATOR}, \hyperpage{30}
+    \subitem {AT\_GET\_LOW\_DEST\_ADDR}, \hyperpage{30}
+    \subitem {AT\_GET\_PAN\_ID}, \hyperpage{30}
+    \subitem {AT\_GET\_PARITY}, \hyperpage{31}
+    \subitem {AT\_MODE\_GET}, \hyperpage{31}
+    \subitem {AT\_MODE\_SET}, \hyperpage{31}
+    \subitem {AT\_SUCCESS\_VALUE}, \hyperpage{31}
+    \subitem {AT\_VALUE\_16BIT\_SOURCE\_ADDR}, \hyperpage{31}
+    \subitem {AT\_VALUE\_AES}, \hyperpage{31}
+    \subitem {AT\_VALUE\_AES\_KEY}, \hyperpage{32}
+    \subitem {AT\_VALUE\_API}, \hyperpage{32}
+    \subitem {AT\_VALUE\_BAUDRATE}, \hyperpage{32}
+    \subitem {AT\_VALUE\_CHANEL}, \hyperpage{32}
+    \subitem {AT\_VALUE\_COORDINATOR}, \hyperpage{32}
+    \subitem {AT\_VALUE\_LOW\_DEST\_ADDR}, \hyperpage{32}
+    \subitem {AT\_VALUE\_PAN\_ID}, \hyperpage{33}
+    \subitem {AT\_VALUE\_PARITY}, \hyperpage{33}
+    \subitem {AT\_WRITE\_CONFIG}, \hyperpage{33}
+    \subitem {BAUDRATE}, \hyperpage{33}
+    \subitem {BROADCAST}, \hyperpage{33}
+    \subitem {CURRENT\_ROBOT}, \hyperpage{33}
+    \subitem {DATABITS}, \hyperpage{34}
+    \subitem {END\_SEQ}, \hyperpage{34}
+    \subitem {ERROR\_SUCCESS}, \hyperpage{34}
+    \subitem {PARITY}, \hyperpage{34}
+    \subitem {ROBOT\_01}, \hyperpage{34}
+    \subitem {ROBOT\_02}, \hyperpage{34}
+    \subitem {SERIAL\_PORT}, \hyperpage{35}
+    \subitem {START\_SEQ}, \hyperpage{35}
+    \subitem {STOPBITS}, \hyperpage{35}
+    \subitem {TEST\_ALIVE}, \hyperpage{35}
+  \item {DTR}
+    \subitem {serialib}, \hyperpage{8}
+
+  \indexspace
+
+  \item {elapsedTime\_ms}
+    \subitem {timeOut}, \hyperpage{17}
+  \item {END\_SEQ}
+    \subitem {define.h}, \hyperpage{34}
+  \item {enterATMode}
+    \subitem {xbee}, \hyperpage{21}
+  \item {ERROR\_SUCCESS}
+    \subitem {define.h}, \hyperpage{34}
+  \item {exitATMode}
+    \subitem {xbee}, \hyperpage{21}
+
+  \indexspace
+
+  \item {flushReceiver}
+    \subitem {serialib}, \hyperpage{8}
+
+  \indexspace
+
+  \item {id\_dest}
+    \subitem {Trame}, \hyperpage{18}
+  \item {id\_exp}
+    \subitem {Trame}, \hyperpage{18}
+  \item {id\_trame}
+    \subitem {Trame}, \hyperpage{18}
+  \item {initTimer}
+    \subitem {timeOut}, \hyperpage{17}
+  \item {isCTS}
+    \subitem {serialib}, \hyperpage{8}
+  \item {isDCD}
+    \subitem {serialib}, \hyperpage{8}
+  \item {isDeviceOpen}
+    \subitem {serialib}, \hyperpage{9}
+  \item {isDSR}
+    \subitem {serialib}, \hyperpage{9}
+  \item {isDTR}
+    \subitem {serialib}, \hyperpage{9}
+  \item {isRI}
+    \subitem {serialib}, \hyperpage{9}
+  \item {isRTS}
+    \subitem {serialib}, \hyperpage{10}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{37}
+  \item {main.cpp}, \hyperpage{37}
+    \subitem {main}, \hyperpage{37}
+
+  \indexspace
+
+  \item {openDevice}
+    \subitem {serialib}, \hyperpage{10}
+  \item {openSerialConnection}
+    \subitem {xbee}, \hyperpage{21}
+
+  \indexspace
+
+  \item {PARITY}
+    \subitem {define.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {readATResponse}
+    \subitem {xbee}, \hyperpage{22}
+  \item {readBytes}
+    \subitem {serialib}, \hyperpage{12}
+  \item {readChar}
+    \subitem {serialib}, \hyperpage{12}
+  \item {readString}
+    \subitem {serialib}, \hyperpage{13}
+  \item {ROBOT\_01}
+    \subitem {define.h}, \hyperpage{34}
+  \item {ROBOT\_02}
+    \subitem {define.h}, \hyperpage{34}
+  \item {RTS}
+    \subitem {serialib}, \hyperpage{13}
+
+  \indexspace
+
+  \item {sendATCommand}
+    \subitem {xbee}, \hyperpage{22}
+  \item {sendTrame}
+    \subitem {xbee}, \hyperpage{23}
+  \item {serial}
+    \subitem {xbee.cpp}, \hyperpage{54}
+  \item {SERIAL\_DATABITS\_16}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_DATABITS\_5}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_DATABITS\_6}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_DATABITS\_7}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_DATABITS\_8}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PARITY\_EVEN}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PARITY\_MARK}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PARITY\_NONE}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PARITY\_ODD}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PARITY\_SPACE}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_PORT}
+    \subitem {define.h}, \hyperpage{35}
+  \item {SERIAL\_STOPBITS\_1}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_STOPBITS\_1\_5}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SERIAL\_STOPBITS\_2}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SerialDataBits}
+    \subitem {serialib.h}, \hyperpage{49}
+  \item {serialib}, \hyperpage{5}
+    \subitem {$\sim$serialib}, \hyperpage{6}
+    \subitem {available}, \hyperpage{7}
+    \subitem {clearDTR}, \hyperpage{7}
+    \subitem {clearRTS}, \hyperpage{7}
+    \subitem {closeDevice}, \hyperpage{7}
+    \subitem {DTR}, \hyperpage{8}
+    \subitem {flushReceiver}, \hyperpage{8}
+    \subitem {isCTS}, \hyperpage{8}
+    \subitem {isDCD}, \hyperpage{8}
+    \subitem {isDeviceOpen}, \hyperpage{9}
+    \subitem {isDSR}, \hyperpage{9}
+    \subitem {isDTR}, \hyperpage{9}
+    \subitem {isRI}, \hyperpage{9}
+    \subitem {isRTS}, \hyperpage{10}
+    \subitem {openDevice}, \hyperpage{10}
+    \subitem {readBytes}, \hyperpage{12}
+    \subitem {readChar}, \hyperpage{12}
+    \subitem {readString}, \hyperpage{13}
+    \subitem {RTS}, \hyperpage{13}
+    \subitem {serialib}, \hyperpage{6}
+    \subitem {setDTR}, \hyperpage{14}
+    \subitem {setRTS}, \hyperpage{14}
+    \subitem {writeBytes}, \hyperpage{14}
+    \subitem {writeChar}, \hyperpage{15}
+    \subitem {writeString}, \hyperpage{15}
+  \item {serialib.cpp}, \hyperpage{38}
+  \item {serialib.h}, \hyperpage{48}
+    \subitem {SERIAL\_DATABITS\_16}, \hyperpage{50}
+    \subitem {SERIAL\_DATABITS\_5}, \hyperpage{50}
+    \subitem {SERIAL\_DATABITS\_6}, \hyperpage{50}
+    \subitem {SERIAL\_DATABITS\_7}, \hyperpage{50}
+    \subitem {SERIAL\_DATABITS\_8}, \hyperpage{50}
+    \subitem {SERIAL\_PARITY\_EVEN}, \hyperpage{50}
+    \subitem {SERIAL\_PARITY\_MARK}, \hyperpage{50}
+    \subitem {SERIAL\_PARITY\_NONE}, \hyperpage{50}
+    \subitem {SERIAL\_PARITY\_ODD}, \hyperpage{50}
+    \subitem {SERIAL\_PARITY\_SPACE}, \hyperpage{50}
+    \subitem {SERIAL\_STOPBITS\_1}, \hyperpage{50}
+    \subitem {SERIAL\_STOPBITS\_1\_5}, \hyperpage{50}
+    \subitem {SERIAL\_STOPBITS\_2}, \hyperpage{50}
+    \subitem {SerialDataBits}, \hyperpage{49}
+    \subitem {SerialParity}, \hyperpage{50}
+    \subitem {SerialStopBits}, \hyperpage{50}
+    \subitem {UNUSED}, \hyperpage{49}
+  \item {SerialParity}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {SerialStopBits}
+    \subitem {serialib.h}, \hyperpage{50}
+  \item {setDTR}
+    \subitem {serialib}, \hyperpage{14}
+  \item {setRTS}
+    \subitem {serialib}, \hyperpage{14}
+  \item {size}
+    \subitem {Trame}, \hyperpage{18}
+  \item {START\_SEQ}
+    \subitem {define.h}, \hyperpage{35}
+  \item {STOPBITS}
+    \subitem {define.h}, \hyperpage{35}
+
+  \indexspace
+
+  \item {TEST\_ALIVE}
+    \subitem {define.h}, \hyperpage{35}
+  \item {timeOut}, \hyperpage{16}
+    \subitem {elapsedTime\_ms}, \hyperpage{17}
+    \subitem {initTimer}, \hyperpage{17}
+    \subitem {timeOut}, \hyperpage{16}
+  \item {Trame}, \hyperpage{17}
+    \subitem {code\_fct}, \hyperpage{18}
+    \subitem {data}, \hyperpage{18}
+    \subitem {id\_dest}, \hyperpage{18}
+    \subitem {id\_exp}, \hyperpage{18}
+    \subitem {id\_trame}, \hyperpage{18}
+    \subitem {size}, \hyperpage{18}
+
+  \indexspace
+
+  \item {UNUSED}
+    \subitem {serialib.h}, \hyperpage{49}
+
+  \indexspace
+
+  \item {writeATConfig}
+    \subitem {xbee}, \hyperpage{23}
+  \item {writeBytes}
+    \subitem {serialib}, \hyperpage{14}
+  \item {writeChar}
+    \subitem {serialib}, \hyperpage{15}
+  \item {writeString}
+    \subitem {serialib}, \hyperpage{15}
+
+  \indexspace
+
+  \item {xbee}, \hyperpage{19}
+    \subitem {$\sim$xbee}, \hyperpage{20}
+    \subitem {checkATConfig}, \hyperpage{20}
+    \subitem {closeSerialConnection}, \hyperpage{20}
+    \subitem {enterATMode}, \hyperpage{21}
+    \subitem {exitATMode}, \hyperpage{21}
+    \subitem {openSerialConnection}, \hyperpage{21}
+    \subitem {readATResponse}, \hyperpage{22}
+    \subitem {sendATCommand}, \hyperpage{22}
+    \subitem {sendTrame}, \hyperpage{23}
+    \subitem {writeATConfig}, \hyperpage{23}
+    \subitem {xbee}, \hyperpage{20}
+  \item {xbee.cpp}, \hyperpage{53}
+    \subitem {serial}, \hyperpage{54}
+  \item {xbee.h}, \hyperpage{57}
+
+\end{theindex}

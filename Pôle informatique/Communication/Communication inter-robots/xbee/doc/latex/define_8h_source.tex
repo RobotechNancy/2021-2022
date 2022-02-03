@@ -1,0 +1,86 @@
+\hypertarget{define_8h_source}{}\doxysection{define.\+h}
+\mbox{\hyperlink{define_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef DEFINE\_XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00002}00002 \textcolor{preprocessor}{\#define DEFINE\_XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00004}00004 \textcolor{comment}{// Paramètres du port série}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00005}\mbox{\hyperlink{define_8h_ac08f8f916661bb5fc606373bea93d274}{00005}} \textcolor{preprocessor}{\#define SERIAL\_PORT "{}/dev/ttyAMA0"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00006}\mbox{\hyperlink{define_8h_a734bbab06e1a9fd2e5522db0221ff6e3}{00006}} \textcolor{preprocessor}{\#define BAUDRATE 9600}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00007}\mbox{\hyperlink{define_8h_a155a9a6160c909e29d95e7c75b79612a}{00007}} \textcolor{preprocessor}{\#define DATABITS SERIAL\_DATABITS\_8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00008}\mbox{\hyperlink{define_8h_af6996d12e71a534569c41a25de7d6d52}{00008}} \textcolor{preprocessor}{\#define PARITY SERIAL\_PARITY\_NONE}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00009}\mbox{\hyperlink{define_8h_aa5d0b84610803adad91c781c7a51be82}{00009}} \textcolor{preprocessor}{\#define STOPBITS SERIAL\_STOPBITS\_1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00011}00011 \textcolor{comment}{// Addresses des robots}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00012}\mbox{\hyperlink{define_8h_ac286e1243ab6be2c950c277e5e1377f9}{00012}} \textcolor{preprocessor}{\#define BROADCAST 0x0A}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00013}\mbox{\hyperlink{define_8h_aaf824e961e1515372ddf730e74b8e69f}{00013}} \textcolor{preprocessor}{\#define ROBOT\_01 0x01}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00014}\mbox{\hyperlink{define_8h_ad8b82522ffbfe9accdffb453b80784fd}{00014}} \textcolor{preprocessor}{\#define ROBOT\_02 0x02}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00016}\mbox{\hyperlink{define_8h_ac2ccd874ca0e49787957ba22a9d0a45a}{00016}} \textcolor{preprocessor}{\#define CURRENT\_ROBOT ROBOT\_01}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00018}00018 \textcolor{comment}{// Paramètres de la trame message}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00019}\mbox{\hyperlink{define_8h_a0e263175c08c00143ac9a19616a6169e}{00019}} \textcolor{preprocessor}{\#define START\_SEQ 0x02}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00020}\mbox{\hyperlink{define_8h_a9abe269665f7749735989fe11d5cb7f8}{00020}} \textcolor{preprocessor}{\#define END\_SEQ 0x04}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00022}00022 \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} ID\_TRAME = 0x00;}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00024}00024 \textcolor{comment}{// Codes fonctions}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00025}\mbox{\hyperlink{define_8h_a53ca199a0498cebf9481adf10cfbb8dd}{00025}} \textcolor{preprocessor}{\#define TEST\_ALIVE 0x01}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00027}00027 \textcolor{comment}{// Commandes AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00028}\mbox{\hyperlink{define_8h_a880429b947d286a3b7179849c95022bd}{00028}} \textcolor{preprocessor}{\#define AT\_ENTER "{}+++"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00029}\mbox{\hyperlink{define_8h_aea81ecd876c4b133a8e5f244f2c2610b}{00029}} \textcolor{preprocessor}{\#define AT\_EXIT "{}ATCN"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00030}\mbox{\hyperlink{define_8h_a39e484d972db2487689437d8b83f8b08}{00030}} \textcolor{preprocessor}{\#define AT\_END\_LINE "{}\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00031}\mbox{\hyperlink{define_8h_a2cb6162831ce287de2d3665cc20fd5d6}{00031}} \textcolor{preprocessor}{\#define AT\_WRITE\_CONFIG "{}ATWR"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00033}\mbox{\hyperlink{define_8h_aea36c3379f32afdd963e32ec2370bf33}{00033}} \textcolor{preprocessor}{\#define AT\_GET\_API "{}ATAP"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00034}\mbox{\hyperlink{define_8h_ac884f687cf71e0e685fc939f2e5d696a}{00034}} \textcolor{preprocessor}{\#define AT\_GET\_BAUDRATE "{}ATBD"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00035}\mbox{\hyperlink{define_8h_a2cde23733657b26ae62d1b498bebfbd4}{00035}} \textcolor{preprocessor}{\#define AT\_GET\_AES "{}ATEE"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00036}\mbox{\hyperlink{define_8h_acf384ffa36cab76a718bbc7ce46f1918}{00036}} \textcolor{preprocessor}{\#define AT\_GET\_AES\_KEY "{}ATKY"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00037}\mbox{\hyperlink{define_8h_a42cd58b55e7168ee73dd1c72b51dc4a1}{00037}} \textcolor{preprocessor}{\#define AT\_GET\_CHANEL "{}ATCH"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00038}\mbox{\hyperlink{define_8h_ae67ad54e429f9e3546cb4685c157bf21}{00038}} \textcolor{preprocessor}{\#define AT\_GET\_PAN\_ID "{}ATID"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00039}\mbox{\hyperlink{define_8h_a7fee70e58e53228c101e2a17a6a8b3af}{00039}} \textcolor{preprocessor}{\#define AT\_GET\_COORDINATOR "{}ATCE"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00040}\mbox{\hyperlink{define_8h_a3f605473a624eea2a915bf26521f5d37}{00040}} \textcolor{preprocessor}{\#define AT\_GET\_PARITY "{}ATNB"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00041}\mbox{\hyperlink{define_8h_a333f2a10e7bb9e8c2fada878a224c034}{00041}} \textcolor{preprocessor}{\#define AT\_GET\_16BIT\_SOURCE\_ADDR "{}ATMY"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00042}\mbox{\hyperlink{define_8h_a8611eee6d261ccc752846f2f05a386de}{00042}} \textcolor{preprocessor}{\#define AT\_GET\_LOW\_DEST\_ADDR "{}ATDL"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00044}\mbox{\hyperlink{define_8h_aceff2fb52059a54c76a590d4b8afa940}{00044}} \textcolor{preprocessor}{\#define AT\_VALUE\_API "{}1"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00045}\mbox{\hyperlink{define_8h_a58a8c11ecb99ed82353cbb3c49820b6f}{00045}} \textcolor{preprocessor}{\#define AT\_VALUE\_BAUDRATE "{}3"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00046}\mbox{\hyperlink{define_8h_a978cc3852dcc6fcb81c1a4c79186f267}{00046}} \textcolor{preprocessor}{\#define AT\_VALUE\_AES "{}1"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00047}\mbox{\hyperlink{define_8h_ac9faa7cc8de2d84e7c0039ff02a50c17}{00047}} \textcolor{preprocessor}{\#define AT\_VALUE\_AES\_KEY "{}32303032"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00048}\mbox{\hyperlink{define_8h_a8c0c3bfb65674ad89571ed13237379a6}{00048}} \textcolor{preprocessor}{\#define AT\_VALUE\_CHANEL "{}C"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00049}\mbox{\hyperlink{define_8h_aa1e0466468dde0e14dd4dab98a7ca05e}{00049}} \textcolor{preprocessor}{\#define AT\_VALUE\_PAN\_ID "{}3332"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00050}\mbox{\hyperlink{define_8h_ae9f9ce38c321d34fb4b09e61af51af0d}{00050}} \textcolor{preprocessor}{\#define AT\_VALUE\_COORDINATOR "{}0"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00051}\mbox{\hyperlink{define_8h_a9c3f9ada6ad1d178af8f253e77019c75}{00051}} \textcolor{preprocessor}{\#define AT\_VALUE\_PARITY "{}0"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00052}\mbox{\hyperlink{define_8h_ac7b37239121f83efb6101cebec2cc817}{00052}} \textcolor{preprocessor}{\#define AT\_VALUE\_16BIT\_SOURCE\_ADDR "{}2"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00053}\mbox{\hyperlink{define_8h_a6253146cf2e04f71bc36e6bbbce9e91b}{00053}} \textcolor{preprocessor}{\#define AT\_VALUE\_LOW\_DEST\_ADDR "{}1"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00055}\mbox{\hyperlink{define_8h_a8896c61fb2850aef354c5fad462cafa5}{00055}} \textcolor{preprocessor}{\#define AT\_EMPTY\_VALUE "{}"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00056}\mbox{\hyperlink{define_8h_acdddd25b1e31cbeed9084ce3faefdb6b}{00056}} \textcolor{preprocessor}{\#define AT\_SUCCESS\_VALUE "{}OK\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00057}\mbox{\hyperlink{define_8h_af3717f7af981d970b0c9eacf8be40bb9}{00057}} \textcolor{preprocessor}{\#define AT\_ERROR\_VALUE "{}ERROR\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00059}\mbox{\hyperlink{define_8h_a70d542b9018624d368916860d15c0527}{00059}} \textcolor{preprocessor}{\#define AT\_MODE\_GET 1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00060}\mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{00060}} \textcolor{preprocessor}{\#define AT\_MODE\_SET 2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00062}00062 \textcolor{comment}{// Codes d'erreurs en mode AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00063}\mbox{\hyperlink{define_8h_a5fce1600fad75d878f7821abc8cd7f52}{00063}} \textcolor{preprocessor}{\#define AT\_ERROR\_ENTER -\/1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00064}\mbox{\hyperlink{define_8h_a079e94036cff33efe0c2394e1f3541da}{00064}} \textcolor{preprocessor}{\#define AT\_ERROR\_API -\/2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00065}\mbox{\hyperlink{define_8h_ad58278928f8bd196a9c8057342ebae30}{00065}} \textcolor{preprocessor}{\#define AT\_ERROR\_BAUDRATE -\/3}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00066}\mbox{\hyperlink{define_8h_a961b3c4f8bc70fd3b52d0e4e57d12260}{00066}} \textcolor{preprocessor}{\#define AT\_ERROR\_AES -\/4}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00067}\mbox{\hyperlink{define_8h_a37e412e41dd1e3be55dda1a81c8a306b}{00067}} \textcolor{preprocessor}{\#define AT\_ERROR\_AES\_KEY -\/13}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00068}\mbox{\hyperlink{define_8h_add053e10f5dec6dd56a49f0dbf55f4bf}{00068}} \textcolor{preprocessor}{\#define AT\_ERROR\_CHANEL -\/5}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00069}\mbox{\hyperlink{define_8h_a67108555ff3e9e856900dcc008a2c481}{00069}} \textcolor{preprocessor}{\#define AT\_ERROR\_PAN\_ID -\/6}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00070}\mbox{\hyperlink{define_8h_ad187f68f35e7961e22bdeba7ab5aadf6}{00070}} \textcolor{preprocessor}{\#define AT\_ERROR\_COORDINATOR -\/7}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00071}\mbox{\hyperlink{define_8h_a11be7418ffe44fb6f61be22668775627}{00071}} \textcolor{preprocessor}{\#define AT\_ERROR\_PARITY -\/8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00072}\mbox{\hyperlink{define_8h_a55011a072a8a5ae37de4cbeb44aa6707}{00072}} \textcolor{preprocessor}{\#define AT\_ERROR\_16BIT\_SOURCE\_ADDR -\/9}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00073}\mbox{\hyperlink{define_8h_ac94fc7d8f8a82f1e15f8524ebeb9434f}{00073}} \textcolor{preprocessor}{\#define AT\_ERROR\_LOW\_DEST\_ADDR -\/10}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00074}\mbox{\hyperlink{define_8h_a0cd49664318538c86f243e65f32d9a9f}{00074}} \textcolor{preprocessor}{\#define AT\_ERROR\_EXIT -\/11}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00075}\mbox{\hyperlink{define_8h_a89ef9b0e12073b135b547f94760bf1d9}{00075}} \textcolor{preprocessor}{\#define AT\_ERROR\_WRITE\_CONFIG -\/12}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00076}\mbox{\hyperlink{define_8h_a7be76275e7e91ee7bae2aca5851d70e6}{00076}} \textcolor{preprocessor}{\#define AT\_ERROR\_SUCCESS 0}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00078}00078 \textcolor{comment}{// Codes d'erreurs }}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00079}\mbox{\hyperlink{define_8h_aea0ae801b7d25c979655a7eb20d034af}{00079}} \textcolor{preprocessor}{\#define ERROR\_SUCCESS 0}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00081}00081 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
