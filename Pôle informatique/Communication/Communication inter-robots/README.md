@@ -5,9 +5,14 @@
 
 > *Remarque :* Tout les codes sont écrits en style **C/C++**
 
-# Description de la trame des messages envoyés et reçus :
+# Format de la trame des messages envoyés et reçus :
 
+|Début de trame|Adr_emetteur|Adr_destinataire|Id_trame|Nb octets msg|Code_fonction|Paramètres|CRC16 Modbus|Fin de trame|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|*1 octet*|*1 octet*|*1 octet*|*1 octet*|*2 octets*|*1 octet*|*255 octets*|*2 octets*|*1 octet*|
+|STX|0xXX|0xXX|0xXX|0xXX|0xXX 0xXX|DATA|0xXX 0xXX|EOT|
 
+> *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#define.h**
 
 # Installation du code (sous Linux x86-64) :
 
@@ -38,9 +43,11 @@ sudo g++ *.cpp -o output
 > un câble USB/Micro USB de mauvaise qualité entraine un fonctionnement erroné
 
 - Le câblage du module XBee :
-> ne pas utiliser les 4 pins situés à l'arrière du support XBee !
+> ne pas utiliser les 4 pins situés à l'arrière du support XBee -> utiliser les pins situés sur le dessous du support **uniquement**
 
 > vérifier le [GPIO Pinout Diagram](https://pinout.xyz) de votre modèle de Raspberry
+
+> les modules XBee s'alimentent en 3,3V
 
 - La compatibilité entre les modules XBee :
 > 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee et XBee Pro ne sont pas compatibles entre eux)
