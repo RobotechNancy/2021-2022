@@ -57,7 +57,7 @@ sudo g++ *.cpp -o output
 
 > dans le logiciel XCTU, cliquez sur l'icône avec la loupe et non celui avec le + pour ajouter un module
 
-- Si vous rencontrez un autre problème, la **meilleure** solution est d'utiliser un analyseur numérique de signal (ou un oscilloscope), notamment les oscilloscopes digitaux Rohde & Schwarz de la salle C244
+- Si vous rencontrez un autre problème, la **meilleure** solution est d'utiliser [un analyseur numérique de signal (ou un oscilloscope)](./images/oscilloscope.jpg), notamment les oscilloscopes digitaux Rohde & Schwarz de la salle C244
 
 
 ### Schéma de câblage :
