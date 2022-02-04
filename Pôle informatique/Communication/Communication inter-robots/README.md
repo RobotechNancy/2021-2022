@@ -7,7 +7,7 @@
 # Installation du code :
 
 ```bash
-sudo git clone 
+sudo git clone https://github.com/RobotechNancy/2021-2022.git
 
 cd 
 
