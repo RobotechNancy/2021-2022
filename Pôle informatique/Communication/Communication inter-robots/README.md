@@ -9,6 +9,9 @@
 ```bash
 sudo git clone https://github.com/RobotechNancy/2021-2022.git
 
+[Username for GitHub : votre nom d'utilisateur GitHub] 
+[Password : vous devez générer un personal access token dans Github -> Settings -> Developer Settings -> Personal Access Token -> Generate new token]
+
 cd 
 
 sudo g++ *.cpp -o output
