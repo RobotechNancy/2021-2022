@@ -38,7 +38,7 @@ sudo g++ *.cpp -o output
 ### Points de vigilance :
 
 - L'alimentation de la RaspberryPi, pour une RaspberryPi3B+ ou modèle antérieur : 5.5V / 2A max. (utilisez une alimentation de la salle C244)
-> une sous-alimentation entraine une dégradation notoire de la communication UART !
+> une sous-alimentation entraine une dégradation notoire de la communication UART : ne pas utiliser de chargeur de téléphone (même charge rapide) !
 
 > un câble USB/Micro USB de mauvaise qualité entraine un fonctionnement erroné
 
