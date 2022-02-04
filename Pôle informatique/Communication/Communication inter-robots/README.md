@@ -83,4 +83,4 @@ sudo g++ *.cpp -o output
 - pour consulter la documentation, ouvrer le PDF **refman.pdf** dans le dossier `doc -> latex -> refman.pdf`
 
 ***
-En cas de besoin, contactez moi sur Discord @heatsink.ru#1183 ou par mail samueldittedestree@protonmail.com
+En cas de besoin, contactez moi sur Discord `@heatsink.ru#1183` ou par mail samueldittedestree@protonmail.com
