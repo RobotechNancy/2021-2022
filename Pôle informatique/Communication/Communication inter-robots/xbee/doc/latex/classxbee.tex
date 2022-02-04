@@ -1,4 +1,4 @@
-\hypertarget{classxbee}{}\doxysection{xbee Class Reference}
+\hypertarget{classxbee}{}\doxysection{Référence de la classe xbee}
 \label{classxbee}\index{xbee@{xbee}}
 
 
@@ -9,7 +9,7 @@ Cette classe est utilisée pour la communication entre un module XBee et une Ras
 
 {\ttfamily \#include $<$xbee.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classxbee_a524440833ff50c0e1752a405b8fbd1f6}{xbee}} ()
@@ -36,14 +36,14 @@ void \mbox{\hyperlink{classxbee_a422aef48ffa5a946bdb477dc4731e95f}{send\+Trame}}
 \begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}envoyer une trame de message structurée via UART en XBee. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 Cette classe est utilisée pour la communication entre un module XBee et une Raspberry\+Pi et entre plusieurs modules XBee. 
 
-Definition at line \mbox{\hyperlink{xbee_8h_source_l00022}{22}} of file \mbox{\hyperlink{xbee_8h_source}{xbee.\+h}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8h_source_l00022}{22}} du fichier \mbox{\hyperlink{xbee_8h_source}{xbee.\+h}}.
 
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Documentation des constructeurs et destructeur}
 \mbox{\Hypertarget{classxbee_a524440833ff50c0e1752a405b8fbd1f6}\label{classxbee_a524440833ff50c0e1752a405b8fbd1f6}} 
 \index{xbee@{xbee}!xbee@{xbee}}
 \index{xbee@{xbee}!xbee@{xbee}}
@@ -56,7 +56,7 @@ Constructeur de la classe xbee.
 
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00033}{33}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_a933410b267b5dc30acb860344f975fff}\label{classxbee_a933410b267b5dc30acb860344f975fff}} 
 \index{xbee@{xbee}!````~xbee@{$\sim$xbee}}
@@ -70,11 +70,11 @@ Destructeur de la classe xbee.
 
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00038}{38}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Documentation des fonctions membres}
 \mbox{\Hypertarget{classxbee_abb6a4d026ff839bdab7d8d7303c6360c}\label{classxbee_abb6a4d026ff839bdab7d8d7303c6360c}} 
 \index{xbee@{xbee}!checkATConfig@{checkATConfig}}
 \index{checkATConfig@{checkATConfig}!xbee@{xbee}}
@@ -85,7 +85,7 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00038}{38}} of file \mbox{
 
 Vérification et paramétrage de la bonne configuration pour le module XBee. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 succès 
 
 -\/1 impossible d\textquotesingle{}entrer dans le mode AT 
@@ -114,7 +114,7 @@ Vérification et paramétrage de la bonne configuration pour le module XBee.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00091}{91}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_a528a578228c9e0af3a6d58d5e57c6a61}\label{classxbee_a528a578228c9e0af3a6d58d5e57c6a61}} 
 \index{xbee@{xbee}!closeSerialConnection@{closeSerialConnection}}
@@ -128,7 +128,7 @@ Nettoyage du buffer et fermeture de la connexion UART entre la Raspberry\+Pi et 
 
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00067}{67}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_aefc556d89894a691d7f1386bc24e1ebe}\label{classxbee_aefc556d89894a691d7f1386bc24e1ebe}} 
 \index{xbee@{xbee}!enterATMode@{enterATMode}}
@@ -140,14 +140,14 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00067}{67}} of file \mbox{
 
 Fonction permettant d\textquotesingle{}entrer dans le mode AT. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true la réponse du module XBee est celle attendue 
 
 false la réponse du module XBee n\textquotesingle{}est pas celle attendue 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00173}{173}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}\label{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}} 
 \index{xbee@{xbee}!exitATMode@{exitATMode}}
@@ -159,14 +159,14 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00173}{173}} of file \mbox
 
 Fonction permettant de sortir du mode AT. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true la réponse du module XBee est celle attendue 
 
 false la réponse du module XBee n\textquotesingle{}est pas celle attendue 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00186}{186}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00186}{186}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_abf99767e4b2ece4d1a157e077c9a227d}\label{classxbee_abf99767e4b2ece4d1a157e077c9a227d}} 
 \index{xbee@{xbee}!openSerialConnection@{openSerialConnection}}
@@ -178,7 +178,7 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00186}{186}} of file \mbox
 
 Nettoyage du buffer et ouverture de la connexion UART entre la Raspberry\+Pi et le module XBee. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 1 succès 
 
 -\/1 port série non trouvé 
@@ -201,7 +201,7 @@ Nettoyage du buffer et ouverture de la connexion UART entre la Raspberry\+Pi et 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00057}{57}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}\label{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}} 
 \index{xbee@{xbee}!readATResponse@{readATResponse}}
@@ -214,18 +214,18 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00057}{57}} of file \mbox{
 Fonction permettant de lire la réponse à un envoi de commande AT au module XBee. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em value} & \+: la valeur de réponse attendue pour la commande envoyée \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true la réponse du module XBee est celle attendue 
 
 false la réponse du module XBee n\textquotesingle{}est pas celle attendue 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00147}{147}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}\label{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}} 
 \index{xbee@{xbee}!sendATCommand@{sendATCommand}}
@@ -238,7 +238,7 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00147}{147}} of file \mbox
 Fonction permettant d\textquotesingle{}envoyer en UART via le port série une commmande AT. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em command} & \+: le paramètre AT a envoyer au module \\
 \hline
 {\em value} & \+: la valeur de réponse attendue \\
@@ -246,14 +246,14 @@ Fonction permettant d\textquotesingle{}envoyer en UART via le port série une co
 {\em mode} & \+: le mode de transmission de la commande AT (mode lecture ou écriture) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true la réponse du module XBee est celle attendue 
 
 false la réponse du module XBee n\textquotesingle{}est pas celle attendue 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00213}{213}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00213}{213}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_a422aef48ffa5a946bdb477dc4731e95f}\label{classxbee_a422aef48ffa5a946bdb477dc4731e95f}} 
 \index{xbee@{xbee}!sendTrame@{sendTrame}}
@@ -266,7 +266,7 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00213}{213}} of file \mbox
 Fonction permettant d\textquotesingle{}envoyer une trame de message structurée via UART en XBee. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em ad\+\_\+dest} & \+: l\textquotesingle{}adresse du destinataire du message \\
 \hline
 {\em code\+\_\+fct} & \+: le code de la fonction concernée par le message \\
@@ -276,7 +276,7 @@ Fonction permettant d\textquotesingle{}envoyer une trame de message structurée 
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00266}{266}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00266}{266}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 \mbox{\Hypertarget{classxbee_a9cc6332e514615b39489e45233f98563}\label{classxbee_a9cc6332e514615b39489e45233f98563}} 
 \index{xbee@{xbee}!writeATConfig@{writeATConfig}}
@@ -288,18 +288,18 @@ Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00266}{266}} of file \mbox
 
 Fonction permettant d\textquotesingle{}écrire dans la mémoire flash du module XBee, les paramètres AT définis. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true la réponse du module XBee est celle attendue 
 
 false la réponse du module XBee n\textquotesingle{}est pas celle attendue 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{xbee_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
+Définition à la ligne \mbox{\hyperlink{xbee_8cpp_source_l00198}{198}} du fichier \mbox{\hyperlink{xbee_8cpp_source}{xbee.\+cpp}}.
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{xbee_8h}{xbee.\+h}}\item 
 \mbox{\hyperlink{xbee_8cpp}{xbee.\+cpp}}\end{DoxyCompactItemize}
