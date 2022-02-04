@@ -35,11 +35,13 @@ sudo g++ *.cpp -o output
 - Le câblage du module XBee :
 > ne pas utiliser les 4 pins situés à l'arrière du support XBee !
 
+> vérifier le [GPIO Pinout Diagram](https://pinout.xyz) de votre modèle de Raspberry
+
 - La compatibilité entre les modules XBee :
 > 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee et XBee Pro ne sont pas compatibles entre eux)
 
 - En cas d'impossibilité d'accès au module XBee et pour vérifier s'il n'est pas endommagé :
-> utiliser le logiciel propriétaire [XCTU](https://hub.digi.com/dp/path=/support/asset/xctu-v-658-windows-x86x64/) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](https://s2.qwant.com/thumbr/0x380/e/2/01204fd8c357d0dce8acc47a0934b507685351a3559f81f2ed4661b6b831aa/RPI-326222.jpg?u=https%3A%2F%2Fwww.rpibolt.hu%2Fimg%2F15922%2FRPI-326222%2FRPI-326222.jpg)
+> utiliser le logiciel propriétaire [XCTU](https://hub.digi.com/dp/path=/support/asset/xctu-v-658-windows-x86x64/) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
 
 > dans le logiciel XCTU, cliquez sur l'icône avec la loupe et non celui avec le + pour ajouter un module
 
@@ -48,7 +50,17 @@ sudo g++ *.cpp -o output
 
 ### Schéma de câblage :
 
+> Câblage RaspberryPi 3B + Xbee S2C :
 
+<img alt="Câblage RaspberryPi 3B + Xbee S2C" src='./images/cablage_raspberry_xbee.png' width='450px'>
+
+> GPIO Pinout Xbee S2C :
+
+<img alt='GPIO Pinout Xbee' src='./images/gpio_pinout_xbee.jpg' width='250px'>
+
+> GPIO Pinout RaspberryPi 3B :
+
+<img alt='GPIO Pinout RaspberryPi' src='./images/gpio_pinout_raspberry_pi.png' width='600px'>
 
 # Documentation du code :
 
