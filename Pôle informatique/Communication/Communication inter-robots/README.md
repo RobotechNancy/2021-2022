@@ -1,7 +1,12 @@
 # Le code permet de réaliser :
 
 - la communication inter-robots via XBee (envoi/réception de trames)
-- le paramétrage des modules XBee en UART via le port GPIO de la RaspberryPi
+- le paramétrage des modules XBee en UART via le port GPIO de la RaspberryPi 
+
+> *Remarque :* Tout les codes sont écrits en style **C/C++**
+
+# Description de la trame des messages envoyés et reçus :
+
 
 
 # Installation du code (sous Linux x86-64) :
