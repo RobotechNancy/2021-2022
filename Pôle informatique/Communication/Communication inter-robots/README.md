@@ -43,7 +43,7 @@ sudo g++ *.cpp -o output
 > un câble USB/Micro USB de mauvaise qualité entraine un fonctionnement erroné
 
 - Le câblage du module XBee :
-> ne pas utiliser les 4 pins situés à l'arrière du support XBee -> utiliser les pins situés sur le dessous du support **uniquement**
+> ne pas utiliser les 4 pins situés à l'arrière du [support/adaptateur XBee](./images/adaptateur_xbee.jpg) -> utiliser les pins situés sur le dessous du support **uniquement**
 
 > vérifier le [GPIO Pinout Diagram](https://pinout.xyz) de votre modèle de Raspberry
 
