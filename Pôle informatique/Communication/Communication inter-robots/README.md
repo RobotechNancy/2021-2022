@@ -62,17 +62,19 @@ sudo g++ *.cpp -o output
 
 ### Schéma de câblage :
 
-> Câblage RaspberryPi 3B + Xbee S2C :
+- Câblage RaspberryPi 3B + Xbee S2C :
 
 <img alt="Câblage RaspberryPi 3B + Xbee S2C" src='./images/cablage_raspberry_xbee.png' width='450px'>
 
-> GPIO Pinout Xbee S2C :
+- GPIO Pinout Xbee S2C :
 
 <img alt='GPIO Pinout Xbee' src='./images/gpio_pinout_xbee.jpg' width='250px'>
 
-> GPIO Pinout RaspberryPi 3B :
+- GPIO Pinout RaspberryPi 3B :
 
 <img alt='GPIO Pinout RaspberryPi' src='./images/gpio_pinout_raspberry_pi.png' width='600px'>
+
+> Les pins dessinés en noir non légendés représentent la masse commune de la Raspberry
 
 # Documentation du code :
 
