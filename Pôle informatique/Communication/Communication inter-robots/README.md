@@ -76,7 +76,9 @@ sudo g++ *.cpp -o output
 
 # Documentation du code :
 
-- voir le PDF **refman.pdf** dans le dossier `doc -> latex -> refman.pdf`
+- toute la documentation a été générée grâce à l'outil [Doxygen](https://www.doxygen.nl/index.html)
+- le fichier de configuration de Doxygen se trouve dans le dossie **xbee** (fichier *Doxyfile*)
+- pour consulter la documentation, ouvrer le PDF **refman.pdf** dans le dossier `doc -> latex -> refman.pdf`
 
 ***
 En cas de besoin, contactez moi sur Discord @heatsink.ru#1183 ou par mail samueldittedestree@protonmail.com
