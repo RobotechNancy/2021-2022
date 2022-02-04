@@ -35,7 +35,7 @@ sudo g++ *.cpp -o output
 
 # Câblage des modules XBee avec la RaspberryPi
 
-### Points de vigilence :
+### Points de vigilance :
 
 - L'alimentation de la RaspberryPi, pour une RaspberryPi3B+ ou modèle antérieur : 5.5V / 2A max. (utilisez une alimentation de la salle C244)
 > une sous-alimentation entraine une dégradation notoire de la communication UART !
