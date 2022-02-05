@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Base roulante - Robotech 2021-2022:  Fichier source de Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Base roulante - Robotech 2021-2022<span id="projectnumber">&#160;1.2.0</span>
+   </div>
+   <div id="projectbrief">1 roue commandée par le bus CAN, on peut avancer un certains nombre de pas à vitesse constante, choisir la direction, s&#39;arrêter</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('stm32f0xx__hal__pwr__ex_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">stm32f0xx_hal_pwr_ex.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="stm32f0xx__hal__pwr__ex_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="stm32f0xx__hal_8h.html">stm32f0xx_hal.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifdef HAL_PWR_MODULE_ENABLED</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/* Private typedef -----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/* Private define ------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define PVD_MODE_IT               (0x00010000U)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define PVD_MODE_EVT              (0x00020000U)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define PVD_RISING_EDGE           (0x00000001U)</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define PVD_FALLING_EDGE          (0x00000002U)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/* Private macro -------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Private function prototypes -----------------------------------------------*/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/* Exported functions ---------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#if defined (STM32F031x6) || defined (STM32F051x8) || \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    defined (STM32F071xB) || defined (STM32F091xC) || \</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    defined (STM32F042x6) || defined (STM32F072xB)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">void</span> HAL_PWR_ConfigPVD(PWR_PVDTypeDef *sConfigPVD)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">/* Check the parameters */</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="stm32f0xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21">assert_param</a>(IS_PWR_PVD_LEVEL(sConfigPVD-&gt;PVDLevel));</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_define" href="stm32f0xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21">assert_param</a>(IS_PWR_PVD_MODE(sConfigPVD-&gt;Mode));</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">/* Set PLS[7:5] bits according to PVDLevel value */</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_define" href="group___exported__macros.html#ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</a>(<a class="code hl_define" href="group___peripheral__declaration.html#ga04651c526497822a859942b928e57f8e">PWR</a>-&gt;CR, <a class="code hl_define" href="group___peripheral___registers___bits___definition.html#gac73c24d43953c7598e42acdd4c4e7435">PWR_CR_PLS</a>, sConfigPVD-&gt;PVDLevel);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="comment">/* Clear any previous config. Keep it clear if no event or IT mode is selected */</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  __HAL_PWR_PVD_EXTI_DISABLE_EVENT();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  __HAL_PWR_PVD_EXTI_DISABLE_IT();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE();__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="comment">/* Configure interrupt mode */</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordflow">if</span>((sConfigPVD-&gt;Mode &amp; PVD_MODE_IT) == PVD_MODE_IT)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    __HAL_PWR_PVD_EXTI_ENABLE_IT();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="comment">/* Configure event mode */</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordflow">if</span>((sConfigPVD-&gt;Mode &amp; PVD_MODE_EVT) == PVD_MODE_EVT)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    __HAL_PWR_PVD_EXTI_ENABLE_EVENT();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">/* Configure the edge */</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordflow">if</span>((sConfigPVD-&gt;Mode &amp; PVD_RISING_EDGE) == PVD_RISING_EDGE)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    __HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">if</span>((sConfigPVD-&gt;Mode &amp; PVD_FALLING_EDGE) == PVD_FALLING_EDGE)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    __HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">void</span> HAL_PWR_EnablePVD(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_define" href="group___peripheral__declaration.html#ga04651c526497822a859942b928e57f8e">PWR</a>-&gt;CR |= (uint32_t)<a class="code hl_define" href="group___peripheral___registers___bits___definition.html#ga05d5c39759e69a294c0ab9bea8f142e5">PWR_CR_PVDE</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>}</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">void</span> HAL_PWR_DisablePVD(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>{</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_define" href="group___peripheral__declaration.html#ga04651c526497822a859942b928e57f8e">PWR</a>-&gt;CR &amp;= ~((uint32_t)<a class="code hl_define" href="group___peripheral___registers___bits___definition.html#ga05d5c39759e69a294c0ab9bea8f142e5">PWR_CR_PVDE</a>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keywordtype">void</span> HAL_PWR_PVD_IRQHandler(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">/* Check PWR exti flag */</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordflow">if</span>(__HAL_PWR_PVD_EXTI_GET_FLAG() != <a class="code hl_enumvalue" href="group___exported__types.html#gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</a>)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">/* PWR PVD interrupt user callback */</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    HAL_PWR_PVDCallback();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">/* Clear PWR Exti pending bit */</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    __HAL_PWR_PVD_EXTI_CLEAR_FLAG();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>__weak <span class="keywordtype">void</span> HAL_PWR_PVDCallback(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="comment">/* NOTE : This function Should not be modified, when the callback is needed,</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">            the HAL_PWR_PVDCallback could be implemented in the user file</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">#endif </span><span class="comment">/* defined (STM32F031x6) || defined (STM32F051x8) || */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>       <span class="comment">/* defined (STM32F071xB) || defined (STM32F091xC) || */</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>       <span class="comment">/* defined (STM32F042x6) || defined (STM32F072xB)    */</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">#if defined (STM32F042x6) || defined (STM32F048xx) || \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">    defined (STM32F071xB) || defined (STM32F072xB) || defined (STM32F078xx) || \</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    defined (STM32F091xC) || defined (STM32F098xx)</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">void</span> HAL_PWREx_EnableVddio2Monitor(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  __HAL_PWR_VDDIO2_EXTI_ENABLE_IT();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  __HAL_PWR_VDDIO2_EXTI_ENABLE_FALLING_EDGE();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keywordtype">void</span> HAL_PWREx_DisableVddio2Monitor(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  __HAL_PWR_VDDIO2_EXTI_DISABLE_IT();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  __HAL_PWR_VDDIO2_EXTI_DISABLE_FALLING_EDGE();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keywordtype">void</span> HAL_PWREx_Vddio2Monitor_IRQHandler(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>{</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <span class="comment">/* Check PWR exti flag */</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <span class="keywordflow">if</span>(__HAL_PWR_VDDIO2_EXTI_GET_FLAG() != <a class="code hl_enumvalue" href="group___exported__types.html#gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</a>)</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">/* PWR Vddio2 monitor interrupt user callback */</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    HAL_PWREx_Vddio2MonitorCallback();</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">/* Clear PWR Exti pending bit */</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    __HAL_PWR_VDDIO2_EXTI_CLEAR_FLAG();</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>__weak <span class="keywordtype">void</span> HAL_PWREx_Vddio2MonitorCallback(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>{</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="comment">/* NOTE : This function Should not be modified, when the callback is needed,</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">            the HAL_PWREx_Vddio2MonitorCallback could be implemented in the user file</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#endif </span><span class="comment">/* defined (STM32F042x6) || defined (STM32F048xx) || \</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">          defined (STM32F071xB) || defined (STM32F072xB) || defined (STM32F078xx) || \</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">          defined (STM32F091xC) || defined (STM32F098xx) */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">#endif </span><span class="comment">/* HAL_PWR_MODULE_ENABLED */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+<div class="ttc" id="agroup___exported__macros_html_ga6553c99f510c3bab8cc0a91602053247"><div class="ttname"><a href="group___exported__macros.html#ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</a></div><div class="ttdeci">#define MODIFY_REG(REG, CLEARMASK, SETMASK)</div><div class="ttdef"><b>Definition:</b> <a href="stm32f0xx_8h_source.html#l00208">stm32f0xx.h:208</a></div></div>
+<div class="ttc" id="agroup___exported__types_html_gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05"><div class="ttname"><a href="group___exported__types.html#gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</a></div><div class="ttdeci">@ RESET</div><div class="ttdef"><b>Definition:</b> <a href="stm32f0xx_8h_source.html#l00171">stm32f0xx.h:171</a></div></div>
+<div class="ttc" id="agroup___peripheral___registers___bits___definition_html_ga05d5c39759e69a294c0ab9bea8f142e5"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#ga05d5c39759e69a294c0ab9bea8f142e5">PWR_CR_PVDE</a></div><div class="ttdeci">#define PWR_CR_PVDE</div><div class="ttdef"><b>Definition:</b> <a href="stm32f072xb_8h_source.html#l07398">stm32f072xb.h:7398</a></div></div>
+<div class="ttc" id="agroup___peripheral___registers___bits___definition_html_gac73c24d43953c7598e42acdd4c4e7435"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#gac73c24d43953c7598e42acdd4c4e7435">PWR_CR_PLS</a></div><div class="ttdeci">#define PWR_CR_PLS</div><div class="ttdef"><b>Definition:</b> <a href="stm32f072xb_8h_source.html#l07402">stm32f072xb.h:7402</a></div></div>
+<div class="ttc" id="agroup___peripheral__declaration_html_ga04651c526497822a859942b928e57f8e"><div class="ttname"><a href="group___peripheral__declaration.html#ga04651c526497822a859942b928e57f8e">PWR</a></div><div class="ttdeci">#define PWR</div><div class="ttdef"><b>Definition:</b> <a href="stm32f072xb_8h_source.html#l00733">stm32f072xb.h:733</a></div></div>
+<div class="ttc" id="astm32f0xx__hal_8h_html"><div class="ttname"><a href="stm32f0xx__hal_8h.html">stm32f0xx_hal.h</a></div><div class="ttdoc">This file contains all the functions prototypes for the HAL module driver.</div></div>
+<div class="ttc" id="astm32f0xx__hal__conf_8h_html_a631dea7b230e600555f979c62af1de21"><div class="ttname"><a href="stm32f0xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21">assert_param</a></div><div class="ttdeci">#define assert_param(expr)</div><div class="ttdoc">Uncomment the line below to expanse the &quot;assert_param&quot; macro in the HAL drivers code.</div><div class="ttdef"><b>Definition:</b> <a href="stm32f0xx__hal__conf_8h_source.html#l00314">stm32f0xx_hal_conf.h:314</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_f6d082ef8243343fa015a75598738e75.html">STM32F0xx_HAL_Driver</a></li><li class="navelem"><a class="el" href="dir_ad04d73aaee646fa29a01906e8747e48.html">Src</a></li><li class="navelem"><a class="el" href="stm32f0xx__hal__pwr__ex_8c.html">stm32f0xx_hal_pwr_ex.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Base roulante - Robotech 2021-2022:  Fichier source de Core/Inc/can.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Base roulante - Robotech 2021-2022<span id="projectnumber">&#160;1.2.0</span>
+   </div>
+   <div id="projectbrief">1 roue commandée par le bus CAN, on peut avancer un certains nombre de pas à vitesse constante, choisir la direction, s&#39;arrêter</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('can_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">can.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="can_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * can.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: Jan 21, 2022</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: lucie</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef INC_CAN_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INC_CAN_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="stm32f0xx__hal_8h.html">stm32f0xx_hal.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">int</span> <a class="code hl_function" href="can_8h.html#a1019af6399d18e14f2ee35e830e0db05">send_one</a>(<span class="keywordtype">int</span> adr, uint8_t data);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">int</span> <a class="code hl_function" href="can_8h.html#a8a749c449cdf4997353566638ca69e08">send_can</a>(<span class="keywordtype">int</span> adr, uint8_t msg[], <span class="keywordtype">int</span> msg_size);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="can_8h.html#ad81256847b3c7d9ebf12c17d278e0adf">   14</a></span>CAN_HandleTypeDef <a class="code hl_variable" href="can_8h.html#ad81256847b3c7d9ebf12c17d278e0adf">hcan_p</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="can_8h.html#a2e43859c5609def87ab33a8d4e29ef56">CAN_Config</a>(CAN_HandleTypeDef <a class="code hl_variable" href="main_8c.html#ae21c10daa2f8cbd18a0e66bb28a19d2d">hcan</a>, <span class="keywordtype">int</span> adresse);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">/* INC_CAN_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="acan_8h_html_a1019af6399d18e14f2ee35e830e0db05"><div class="ttname"><a href="can_8h.html#a1019af6399d18e14f2ee35e830e0db05">send_one</a></div><div class="ttdeci">int send_one(int adr, uint8_t data)</div><div class="ttdef"><b>Definition:</b> <a href="can_8c_source.html#l00066">can.c:66</a></div></div>
+<div class="ttc" id="acan_8h_html_a2e43859c5609def87ab33a8d4e29ef56"><div class="ttname"><a href="can_8h.html#a2e43859c5609def87ab33a8d4e29ef56">CAN_Config</a></div><div class="ttdeci">void CAN_Config(CAN_HandleTypeDef hcan, int adresse)</div><div class="ttdoc">Configure le bus can.</div><div class="ttdef"><b>Definition:</b> <a href="can_8c_source.html#l00037">can.c:37</a></div></div>
+<div class="ttc" id="acan_8h_html_a8a749c449cdf4997353566638ca69e08"><div class="ttname"><a href="can_8h.html#a8a749c449cdf4997353566638ca69e08">send_can</a></div><div class="ttdeci">int send_can(int adr, uint8_t msg[], int msg_size)</div><div class="ttdef"><b>Definition:</b> <a href="can_8c_source.html#l00078">can.c:78</a></div></div>
+<div class="ttc" id="acan_8h_html_ad81256847b3c7d9ebf12c17d278e0adf"><div class="ttname"><a href="can_8h.html#ad81256847b3c7d9ebf12c17d278e0adf">hcan_p</a></div><div class="ttdeci">CAN_HandleTypeDef hcan_p</div><div class="ttdef"><b>Definition:</b> <a href="can_8h_source.html#l00014">can.h:14</a></div></div>
+<div class="ttc" id="amain_8c_html_ae21c10daa2f8cbd18a0e66bb28a19d2d"><div class="ttname"><a href="main_8c.html#ae21c10daa2f8cbd18a0e66bb28a19d2d">hcan</a></div><div class="ttdeci">CAN_HandleTypeDef hcan</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00047">main.c:47</a></div></div>
+<div class="ttc" id="astm32f0xx__hal_8h_html"><div class="ttname"><a href="stm32f0xx__hal_8h.html">stm32f0xx_hal.h</a></div><div class="ttdoc">This file contains all the functions prototypes for the HAL module driver.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_e2489e887f17afa3cbc07a4ec152cdd2.html">Inc</a></li><li class="navelem"><a class="el" href="can_8h.html">can.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
