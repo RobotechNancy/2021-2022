@@ -1,0 +1,152 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Index des classes}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Liste des classes}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Index des fichiers}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Liste des fichiers}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Documentation des classes}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Référence de la classe serialib}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Description détaillée}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Documentation des constructeurs et destructeur}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}serialib()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $serialib()}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsection}{\numberline {3.1.3}Documentation des fonctions membres}{7}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}available()}{7}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}clearDTR()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}clearRTS()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}closeDevice()}{7}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}DTR()}{7}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}flushReceiver()}{8}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}isCTS()}{8}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}isDCD()}{8}{subsubsection.3.1.3.8}%
+\contentsline {subsubsection}{\numberline {3.1.3.9}isDeviceOpen()}{9}{subsubsection.3.1.3.9}%
+\contentsline {subsubsection}{\numberline {3.1.3.10}isDSR()}{9}{subsubsection.3.1.3.10}%
+\contentsline {subsubsection}{\numberline {3.1.3.11}isDTR()}{9}{subsubsection.3.1.3.11}%
+\contentsline {subsubsection}{\numberline {3.1.3.12}isRI()}{9}{subsubsection.3.1.3.12}%
+\contentsline {subsubsection}{\numberline {3.1.3.13}isRTS()}{10}{subsubsection.3.1.3.13}%
+\contentsline {subsubsection}{\numberline {3.1.3.14}openDevice()}{10}{subsubsection.3.1.3.14}%
+\contentsline {subsubsection}{\numberline {3.1.3.15}readBytes()}{11}{subsubsection.3.1.3.15}%
+\contentsline {subsubsection}{\numberline {3.1.3.16}readChar()}{12}{subsubsection.3.1.3.16}%
+\contentsline {subsubsection}{\numberline {3.1.3.17}readString()}{12}{subsubsection.3.1.3.17}%
+\contentsline {subsubsection}{\numberline {3.1.3.18}RTS()}{13}{subsubsection.3.1.3.18}%
+\contentsline {subsubsection}{\numberline {3.1.3.19}setDTR()}{13}{subsubsection.3.1.3.19}%
+\contentsline {subsubsection}{\numberline {3.1.3.20}setRTS()}{14}{subsubsection.3.1.3.20}%
+\contentsline {subsubsection}{\numberline {3.1.3.21}writeBytes()}{14}{subsubsection.3.1.3.21}%
+\contentsline {subsubsection}{\numberline {3.1.3.22}writeChar()}{14}{subsubsection.3.1.3.22}%
+\contentsline {subsubsection}{\numberline {3.1.3.23}writeString()}{15}{subsubsection.3.1.3.23}%
+\contentsline {section}{\numberline {3.2}Référence de la classe time\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Out}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Description détaillée}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Documentation des constructeurs et destructeur}{16}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}timeOut()}{16}{subsubsection.3.2.2.1}%
+\contentsline {subsection}{\numberline {3.2.3}Documentation des fonctions membres}{16}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}elapsedTime\_ms()}{16}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}initTimer()}{16}{subsubsection.3.2.3.2}%
+\contentsline {section}{\numberline {3.3}Référence de la structure Trame}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Description détaillée}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Documentation des données membres}{17}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}code\_fct}{17}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}data}{17}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}id\_dest}{17}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}id\_exp}{17}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}id\_trame}{18}{subsubsection.3.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.6}size}{18}{subsubsection.3.3.2.6}%
+\contentsline {section}{\numberline {3.4}Référence de la classe xbee}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Description détaillée}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Documentation des constructeurs et destructeur}{19}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}xbee()}{19}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}$\sim $xbee()}{19}{subsubsection.3.4.2.2}%
+\contentsline {subsection}{\numberline {3.4.3}Documentation des fonctions membres}{19}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}checkATConfig()}{19}{subsubsection.3.4.3.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}closeSerialConnection()}{20}{subsubsection.3.4.3.2}%
+\contentsline {subsubsection}{\numberline {3.4.3.3}enterATMode()}{20}{subsubsection.3.4.3.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.4}exitATMode()}{20}{subsubsection.3.4.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.3.5}openSerialConnection()}{20}{subsubsection.3.4.3.5}%
+\contentsline {subsubsection}{\numberline {3.4.3.6}readATResponse()}{21}{subsubsection.3.4.3.6}%
+\contentsline {subsubsection}{\numberline {3.4.3.7}sendATCommand()}{21}{subsubsection.3.4.3.7}%
+\contentsline {subsubsection}{\numberline {3.4.3.8}sendTrame()}{21}{subsubsection.3.4.3.8}%
+\contentsline {subsubsection}{\numberline {3.4.3.9}writeATConfig()}{22}{subsubsection.3.4.3.9}%
+\contentsline {chapter}{\numberline {4}Documentation des fichiers}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Référence du fichier define.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Documentation des macros}{24}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}AT\_EMPTY\_VALUE}{24}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}AT\_END\_LINE}{24}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}AT\_ENTER}{24}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}AT\_ERROR\_16BIT\_SOURCE\_ADDR}{24}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}AT\_ERROR\_AES}{25}{subsubsection.4.1.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}AT\_ERROR\_AES\_KEY}{25}{subsubsection.4.1.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.1.7}AT\_ERROR\_API}{25}{subsubsection.4.1.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.1.8}AT\_ERROR\_BAUDRATE}{25}{subsubsection.4.1.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.1.9}AT\_ERROR\_CHANEL}{25}{subsubsection.4.1.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.1.10}AT\_ERROR\_COORDINATOR}{25}{subsubsection.4.1.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.1.11}AT\_ERROR\_ENTER}{26}{subsubsection.4.1.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.1.12}AT\_ERROR\_EXIT}{26}{subsubsection.4.1.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.1.13}AT\_ERROR\_LOW\_DEST\_ADDR}{26}{subsubsection.4.1.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.1.14}AT\_ERROR\_PAN\_ID}{26}{subsubsection.4.1.1.14}%
+\contentsline {subsubsection}{\numberline {4.1.1.15}AT\_ERROR\_PARITY}{26}{subsubsection.4.1.1.15}%
+\contentsline {subsubsection}{\numberline {4.1.1.16}AT\_ERROR\_SUCCESS}{26}{subsubsection.4.1.1.16}%
+\contentsline {subsubsection}{\numberline {4.1.1.17}AT\_ERROR\_VALUE}{27}{subsubsection.4.1.1.17}%
+\contentsline {subsubsection}{\numberline {4.1.1.18}AT\_ERROR\_WRITE\_CONFIG}{27}{subsubsection.4.1.1.18}%
+\contentsline {subsubsection}{\numberline {4.1.1.19}AT\_EXIT}{27}{subsubsection.4.1.1.19}%
+\contentsline {subsubsection}{\numberline {4.1.1.20}AT\_GET\_16BIT\_SOURCE\_ADDR}{27}{subsubsection.4.1.1.20}%
+\contentsline {subsubsection}{\numberline {4.1.1.21}AT\_GET\_AES}{27}{subsubsection.4.1.1.21}%
+\contentsline {subsubsection}{\numberline {4.1.1.22}AT\_GET\_AES\_KEY}{27}{subsubsection.4.1.1.22}%
+\contentsline {subsubsection}{\numberline {4.1.1.23}AT\_GET\_API}{28}{subsubsection.4.1.1.23}%
+\contentsline {subsubsection}{\numberline {4.1.1.24}AT\_GET\_BAUDRATE}{28}{subsubsection.4.1.1.24}%
+\contentsline {subsubsection}{\numberline {4.1.1.25}AT\_GET\_CHANEL}{28}{subsubsection.4.1.1.25}%
+\contentsline {subsubsection}{\numberline {4.1.1.26}AT\_GET\_COORDINATOR}{28}{subsubsection.4.1.1.26}%
+\contentsline {subsubsection}{\numberline {4.1.1.27}AT\_GET\_LOW\_DEST\_ADDR}{28}{subsubsection.4.1.1.27}%
+\contentsline {subsubsection}{\numberline {4.1.1.28}AT\_GET\_PAN\_ID}{28}{subsubsection.4.1.1.28}%
+\contentsline {subsubsection}{\numberline {4.1.1.29}AT\_GET\_PARITY}{29}{subsubsection.4.1.1.29}%
+\contentsline {subsubsection}{\numberline {4.1.1.30}AT\_MODE\_GET}{29}{subsubsection.4.1.1.30}%
+\contentsline {subsubsection}{\numberline {4.1.1.31}AT\_MODE\_SET}{29}{subsubsection.4.1.1.31}%
+\contentsline {subsubsection}{\numberline {4.1.1.32}AT\_SUCCESS\_VALUE}{29}{subsubsection.4.1.1.32}%
+\contentsline {subsubsection}{\numberline {4.1.1.33}AT\_VALUE\_16BIT\_SOURCE\_ADDR}{29}{subsubsection.4.1.1.33}%
+\contentsline {subsubsection}{\numberline {4.1.1.34}AT\_VALUE\_AES}{29}{subsubsection.4.1.1.34}%
+\contentsline {subsubsection}{\numberline {4.1.1.35}AT\_VALUE\_AES\_KEY}{30}{subsubsection.4.1.1.35}%
+\contentsline {subsubsection}{\numberline {4.1.1.36}AT\_VALUE\_API}{30}{subsubsection.4.1.1.36}%
+\contentsline {subsubsection}{\numberline {4.1.1.37}AT\_VALUE\_BAUDRATE}{30}{subsubsection.4.1.1.37}%
+\contentsline {subsubsection}{\numberline {4.1.1.38}AT\_VALUE\_CHANEL}{30}{subsubsection.4.1.1.38}%
+\contentsline {subsubsection}{\numberline {4.1.1.39}AT\_VALUE\_COORDINATOR}{30}{subsubsection.4.1.1.39}%
+\contentsline {subsubsection}{\numberline {4.1.1.40}AT\_VALUE\_LOW\_DEST\_ADDR}{30}{subsubsection.4.1.1.40}%
+\contentsline {subsubsection}{\numberline {4.1.1.41}AT\_VALUE\_PAN\_ID}{31}{subsubsection.4.1.1.41}%
+\contentsline {subsubsection}{\numberline {4.1.1.42}AT\_VALUE\_PARITY}{31}{subsubsection.4.1.1.42}%
+\contentsline {subsubsection}{\numberline {4.1.1.43}AT\_WRITE\_CONFIG}{31}{subsubsection.4.1.1.43}%
+\contentsline {subsubsection}{\numberline {4.1.1.44}BAUDRATE}{31}{subsubsection.4.1.1.44}%
+\contentsline {subsubsection}{\numberline {4.1.1.45}BROADCAST}{31}{subsubsection.4.1.1.45}%
+\contentsline {subsubsection}{\numberline {4.1.1.46}CURRENT\_ROBOT}{31}{subsubsection.4.1.1.46}%
+\contentsline {subsubsection}{\numberline {4.1.1.47}DATABITS}{32}{subsubsection.4.1.1.47}%
+\contentsline {subsubsection}{\numberline {4.1.1.48}END\_SEQ}{32}{subsubsection.4.1.1.48}%
+\contentsline {subsubsection}{\numberline {4.1.1.49}ERROR\_SUCCESS}{32}{subsubsection.4.1.1.49}%
+\contentsline {subsubsection}{\numberline {4.1.1.50}PARITY}{32}{subsubsection.4.1.1.50}%
+\contentsline {subsubsection}{\numberline {4.1.1.51}ROBOT\_01}{32}{subsubsection.4.1.1.51}%
+\contentsline {subsubsection}{\numberline {4.1.1.52}ROBOT\_02}{32}{subsubsection.4.1.1.52}%
+\contentsline {subsubsection}{\numberline {4.1.1.53}SERIAL\_PORT}{33}{subsubsection.4.1.1.53}%
+\contentsline {subsubsection}{\numberline {4.1.1.54}START\_SEQ}{33}{subsubsection.4.1.1.54}%
+\contentsline {subsubsection}{\numberline {4.1.1.55}STOPBITS}{33}{subsubsection.4.1.1.55}%
+\contentsline {subsubsection}{\numberline {4.1.1.56}TEST\_ALIVE}{33}{subsubsection.4.1.1.56}%
+\contentsline {section}{\numberline {4.2}define.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Référence du fichier main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Documentation des fonctions}{34}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}main()}{35}{subsubsection.4.3.1.1}%
+\contentsline {section}{\numberline {4.4}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Référence du fichier serialib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{35}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Description détaillée}{35}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}serialib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{36}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Référence du fichier serialib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Description détaillée}{46}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Documentation des macros}{46}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}UNUSED}{47}{subsubsection.4.7.2.1}%
+\contentsline {subsection}{\numberline {4.7.3}Documentation du type de l\textquotesingle {}énumération}{47}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}SerialDataBits}{47}{subsubsection.4.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}SerialParity}{47}{subsubsection.4.7.3.2}%
+\contentsline {subsubsection}{\numberline {4.7.3.3}SerialStopBits}{48}{subsubsection.4.7.3.3}%
+\contentsline {section}{\numberline {4.8}serialib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Référence du fichier xbee.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{51}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Description détaillée}{51}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Documentation des variables}{51}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}serial}{52}{subsubsection.4.9.2.1}%
+\contentsline {section}{\numberline {4.10}xbee.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{52}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Référence du fichier xbee.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Description détaillée}{55}{subsection.4.11.1}%
+\contentsline {section}{\numberline {4.12}xbee.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.4.12}%
+\contentsline {chapter}{Index}{57}{section*.13}%
