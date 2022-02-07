@@ -21,7 +21,7 @@ Nous voulons apprendre à concevoir les robots de demain
 utilisant des technologies novatrices ainsi qu’une 
 intelligence réelle supportée par une électronique et une informatique de haut niveau.*
 
-Nos objectifs de cet année sont :
+Nos objectifs de cette année sont :
 
 - Construire les 2 robots nécessaires dans la version 2022 de la compétition.
 - Consolider la structuration en blocs fonctionnels indépendants ( Base roulante, Odométrie, partie robotique annuelle spécifique, Introduction des services de maintenance, … ).
