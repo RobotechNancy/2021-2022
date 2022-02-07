@@ -18,8 +18,8 @@
 
 |Nom de la communication|Vitesse de transfert|Portée|Type de communication|Caractéristiques de transmission utilisés (série)|Bande(s) de fréquence
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|Module XBee type S2C|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|115200 bauds - 1 bit de parité pair - 2 bits de stop - 8 bits de data|2,4 GHz avec étalement de spectre|
-|Liaison UART|9600 - 115200 bauds|/|Filaire|115200 bauds - 1 bit de parité pair - 2 bits de stop - 8 bits de data|/|
+|Module XBee type S2C|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de dataa|2,4 GHz avec étalement de spectre|
+|Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data|/|
 
 
 
