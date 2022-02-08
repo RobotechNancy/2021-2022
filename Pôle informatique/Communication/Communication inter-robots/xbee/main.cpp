@@ -1,10 +1,10 @@
-#include "xbee.h"
+#include "xbeelib.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]){
     
-    xbee xbee;
+    XBee xbee;
 
     int error_open_connection = xbee.openSerialConnection();
 
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]){
     else
         cout << ": Connexion ouverte avec succès sur le port \"" << SERIAL_PORT << "\".\n" << endl;
 
-
+    /*
     int error_configuration = xbee.checkATConfig();
     
     if(error_configuration == AT_ERROR_SUCCESS)
@@ -23,8 +23,11 @@ int main(int argc, char *argv[]){
     
     char msg[1];
     msg[0] = 0x02;
+    
+    */
+    //sendTrame((char) ROBOT_02, (char) TEST_ALIVE, msg);
 
-    //sendTrame(serial, (char) ROBOT_02, (char) TEST_ALIVE, msg);
+    xbee.sendMsg("coucou");
 
     return EXIT_SUCCESS;
 }
