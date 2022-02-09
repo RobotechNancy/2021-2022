@@ -54,14 +54,18 @@ public:
     bool writeATConfig();
 
     // Création et envoi de la trame de message structurée
-    void sendTrame(char ad_dest, char code_fct, char data[]);
+    void sendTrame(std::string ad_dest, std::string code_fct, std::string data);
 
-    void sendMsg(char* msg);
+    void sendMsg(std::string msg);
+
+    std::string readBuffer();
 
 private:
 
+    char* stringToChar(std::string chaine);
+
     // Calcul du CRC16 Modbus de la trame
-    int crc16(std::vector<char> trame);
+    int crc16(std::string trame);
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);

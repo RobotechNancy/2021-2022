@@ -145,24 +145,10 @@ void XBee::delay(unsigned int time){ usleep(time*1000000); }
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::readATResponse(const char *value){
-    char *reponse(0);
-    unsigned int timeout = 100;
-    reponse = new char;
-    delay(1);
-    string rep = "";
-    int i = 0;
-    while(serial.available() > 0){
-        i++;
-        serial.readChar(reponse, timeout);
-        rep += *reponse;
-    }
-    delete reponse;
-    reponse = 0;
+    string reponse = readBuffer();
 
-    if(rep == value)
-        return true;
-    else
-        return false;
+    if(reponse == value) return true;
+    else return false;
 }
 
 /*!
@@ -231,7 +217,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     \param trame : la trame XBee complète sauf le CRC et le caractère de fin de trame
     \return la valeur entière du crc calculé sur 16 bits
  */
-int XBee::crc16(vector<char> trame){
+int XBee::crc16(string trame){
     int crc = 0xFFFF, count = 0;
     unsigned char octet_a_traiter;
     const int POLYNOME = 0xA001;
@@ -263,51 +249,52 @@ int XBee::crc16(vector<char> trame){
     \param code_fct : le code de la fonction concernée par le message
     \param data : les valeurs des paramètres demandées par le code fonction
  */
-void XBee::sendTrame(char ad_dest, char code_fct, char data[]){
-    vector<char> trame;
-    string convert_data = data;
-    uint8_t taille_message = (uint8_t) code_fct + (convert_data.size()) + 0x05;
+void XBee::sendTrame(string ad_dest, string code_fct, string data){
+    string trame;
+    trame += START_SEQ;
+    trame += CURRENT_ROBOT;
+    trame += ad_dest;
+    trame += ++ID_TRAME;
+    trame += data.size() + 1;
+    trame += code_fct;
+    trame += data;
 
-    uint8_t high = (taille_message >> 8) & 0xFF;
-    uint8_t low = taille_message & 0xFF; 
-
-    //cout << taille_message << endl;
-    //cout << (int) high << endl;
-    //cout << (int) low << endl;
-
-    //char taille_message_h = (char) high;
-    //char taille_message_l = (char) low;
-
-    trame.push_back(START_SEQ);
-
-    trame.push_back(CURRENT_ROBOT);
-    trame.push_back(ad_dest);
-    trame.push_back(++ID_TRAME);
-    trame.push_back((char)taille_message);
-    //trame.push_back(taille_message_l);
-    
-    trame.push_back(code_fct);
-
-    for(int i=0; i < convert_data.size(); i++)
-        trame.push_back(convert_data[i]);
-    
     int crc = crc16(trame);
 
-    trame.push_back((char) crc);
+    trame += crc;
+    trame += END_SEQ;
 
-    trame.push_back(END_SEQ);
-    
-    for(int i=0; i < trame.size(); i++)
-        cout << hex << showbase << setw(4) << static_cast<int>(trame[i]);
+    //serial.writeString(stringToChar(trame));
 
-    cout << endl;
-
-    char* message = reinterpret_cast<char*>(trame.data());;
-    //serial.writeString(message);
-    
+    cout << "Trame : \"" << trame << "\"" << endl;
 }
 
-void XBee::sendMsg(char* msg){
-    serial.writeString(msg);
+string XBee::readBuffer(){
+    char *reponse(0);
+    unsigned int timeout = 100;
+    reponse = new char;
+    delay(1);
+    string rep = "";
+    int i = 0;
+    while(serial.available() > 0){
+        i++;
+        serial.readChar(reponse, timeout);
+        rep += *reponse;
+    }
+    delete reponse;
+    reponse = 0;
+
+    return rep;
+}
+
+void XBee::sendMsg(string msg){
+    serial.writeString(stringToChar(msg));
     cout << "Message envoyé avec succès !" << endl;
+}
+
+char* XBee::stringToChar(string chaine){
+    char* message = new char(chaine.length() + 1);
+    strcpy(message, chaine.c_str());
+
+    return message;
 }
