@@ -36,7 +36,7 @@ sudo git clone https://github.com/RobotechNancy/2021-2022.git
 ```bash
 cd 2021-2022/Pôle\ informatique/Communication/Communication\ inter-robots/xbee/  
 
-sudo g++ *.cpp -o output
+sudo g++ *.cpp -std=c++11 -pthread -o output
 
 ./output
 
