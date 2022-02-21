@@ -9,20 +9,20 @@
 #define STOPBITS SERIAL_STOPBITS_1
 
 // Addresses des robots
-#define BROADCAST 0x0A
-#define ROBOT_01 0x01
-#define ROBOT_02 0x02
+#define BROADCAST 0
+#define ROBOT_01 1
+#define ROBOT_02 2
 
 #define CURRENT_ROBOT ROBOT_01
 
 // Paramètres de la trame message
-#define START_SEQ 0x02
-#define END_SEQ 0x04
+#define START_SEQ 2
+#define END_SEQ 4
 
-static unsigned char ID_TRAME = 0x00;
+static unsigned char ID_TRAME = 0;
 
 // Codes fonctions
-#define TEST_ALIVE 0x01
+#define TEST_ALIVE 1
 
 // Commandes AT
 #define AT_ENTER "+++"

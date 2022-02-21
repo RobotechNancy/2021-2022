@@ -5,14 +5,14 @@ using namespace std;
 int main(int argc, char *argv[]){
     
     XBee xbee;
-
+/*
     int error_open_connection = xbee.openSerialConnection();
 
     if(error_open_connection != 1)
         cout << ": Erreur de connexion à " << SERIAL_PORT << " [Code erreur : " << error_open_connection << "]." << endl;
     else
         cout << ": Connexion ouverte avec succès sur le port \"" << SERIAL_PORT << "\".\n" << endl;
-
+*/
     /*
     int error_configuration = xbee.checkATConfig();
     
@@ -25,9 +25,15 @@ int main(int argc, char *argv[]){
     msg[0] = 0x02;
     
     */
-    //sendTrame((char) ROBOT_02, (char) TEST_ALIVE, msg);
 
-    xbee.sendMsg("coucou");
+    char msg[2];
+    msg[0]= 'c';
+    msg[1] = 'o';
+
+    char* trame = xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
+    xbee.processTrame(trame);
+
+    //xbee.sendMsg("coucou");
 
     return EXIT_SUCCESS;
 }

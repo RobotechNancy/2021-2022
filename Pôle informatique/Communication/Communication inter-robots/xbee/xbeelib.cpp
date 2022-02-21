@@ -21,7 +21,7 @@ struct Trame{
     int code_fct;
     int id_trame;
     int size;
-    vector<char> data;
+    string data;
 };
 
 //_____________________________________
@@ -217,7 +217,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     \param trame : la trame XBee complète sauf le CRC et le caractère de fin de trame
     \return la valeur entière du crc calculé sur 16 bits
  */
-int XBee::crc16(string trame){
+int XBee::crc16(vector<uint8_t> trame){
     int crc = 0xFFFF, count = 0;
     unsigned char octet_a_traiter;
     const int POLYNOME = 0xA001;
@@ -249,24 +249,61 @@ int XBee::crc16(string trame){
     \param code_fct : le code de la fonction concernée par le message
     \param data : les valeurs des paramètres demandées par le code fonction
  */
-void XBee::sendTrame(string ad_dest, string code_fct, string data){
-    string trame;
-    trame += START_SEQ;
-    trame += CURRENT_ROBOT;
-    trame += ad_dest;
-    trame += ++ID_TRAME;
-    trame += data.size() + 1;
-    trame += code_fct;
-    trame += data;
+char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
+    string trame_str = "";
+    vector<uint8_t>trame((strlen(data)+8)*4);
+
+    trame.push_back(START_SEQ);
+    trame.push_back(CURRENT_ROBOT);
+    trame.push_back(ad_dest);
+    trame.push_back(++ID_TRAME);
+    trame.push_back(strlen(data)+1);
+    trame.push_back(TEST_ALIVE);
+    
+    for(uint8_t i = 0; i < strlen(data); i++){
+        trame.push_back(data[i]); 
+    }
 
     int crc = crc16(trame);
+    
+    trame.push_back(crc);
+    trame.push_back(END_SEQ);
 
-    trame += crc;
-    trame += END_SEQ;
+    stringstream ss;
+
+    for(uint8_t i : trame){
+       if(i != 0)
+       ss << hex << setfill('0') << setw(2) << int(i);
+    }
+
+    trame_str = ss.str();
+
+    cout << "Trame envoyée convertie : " << trame_str << endl;
 
     //serial.writeString(stringToChar(trame));
+    return stringToChar(trame_str);
+}
 
-    cout << "Trame : \"" << trame << "\"" << endl;
+void XBee::processTrame(char* trame){
+    string trame_convertie = charToString(trame);
+
+    Trame trame_recue;
+    trame_recue.id_exp = stoi(trame_convertie.substr(2,2));
+    trame_recue.id_dest = stoi(trame_convertie.substr(4,2));
+    trame_recue.id_trame = stoi(trame_convertie.substr(6,2));
+    trame_recue.size = stoi(trame_convertie.substr(8,2));
+    trame_recue.code_fct = stoi(trame_convertie.substr(10,2));
+    trame_recue.data = trame_convertie.substr(12,2*trame_recue.size-2);
+
+    cout << "STX : " << hex << showbase << stoi(trame_convertie.substr(0,2)) << endl;
+    cout << "ID EXP : " << trame_recue.id_exp << endl;
+    cout << "ID DEST : " << trame_recue.id_dest << endl;
+    cout << "ID TRAME : " << trame_recue.id_trame << endl;
+    cout << "TAILLE MSG : " << trame_recue.size << endl;
+    cout << "CODE FCT : " << trame_recue.code_fct << endl;
+    cout << "DATA : " << trame_recue.data << endl;
+    cout << "CRC : " << stoi(trame_convertie.substr(12+2*trame_recue.size-2)) << endl;
+    //cout << "EOT : " << stoi(trame_convertie.substr(12+2*trame_recue.size, 2)) << endl;
 }
 
 string XBee::readBuffer(){
@@ -297,4 +334,10 @@ char* XBee::stringToChar(string chaine){
     strcpy(message, chaine.c_str());
 
     return message;
+}
+
+string XBee::charToString(char* message){
+    string chaine = string(message);
+    
+    return chaine;
 }
