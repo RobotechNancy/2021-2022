@@ -135,7 +135,7 @@ int XBee::checkATConfig(){
     \brief Fonction permettant de retarder l'exécution du code
     \param time : temps du retard en secondes
  */
-void XBee::delay(unsigned int time){ usleep(time*1000000); }
+void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::milliseconds(time*1000)); }
 
 
 /*!
@@ -286,7 +286,7 @@ char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
 
 void XBee::processTrame(char* trame){
     string trame_convertie = charToString(trame);
-
+/*
     Trame trame_recue;
     trame_recue.id_exp = stoi(trame_convertie.substr(2,2));
     trame_recue.id_dest = stoi(trame_convertie.substr(4,2));
@@ -302,8 +302,10 @@ void XBee::processTrame(char* trame){
     cout << "TAILLE MSG : " << trame_recue.size << endl;
     cout << "CODE FCT : " << trame_recue.code_fct << endl;
     cout << "DATA : " << trame_recue.data << endl;
-    cout << "CRC : " << stoi(trame_convertie.substr(12+2*trame_recue.size-2)) << endl;
+    //cout << "CRC : " << stoi(trame_convertie.substr(12+2*trame_recue.size-2)) << endl;
     //cout << "EOT : " << stoi(trame_convertie.substr(12+2*trame_recue.size, 2)) << endl;
+
+*/
 }
 
 string XBee::readBuffer(){
@@ -324,14 +326,21 @@ string XBee::readBuffer(){
     return rep;
 }
 
+void XBee::waitForATrame(){
+    if(serial.available() > 0){
+      cout << readBuffer(); 
+    } 
+}
+
 void XBee::sendMsg(string msg){
     serial.writeString(stringToChar(msg));
     cout << "Message envoyé avec succès !" << endl;
 }
 
 char* XBee::stringToChar(string chaine){
-    char* message = new char(chaine.length() + 1);
-    strcpy(message, chaine.c_str());
+    char* message;
+    string str_obj(chaine);
+    message = &str_obj[0];
 
     return message;
 }

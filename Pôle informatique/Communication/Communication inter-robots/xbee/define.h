@@ -76,6 +76,6 @@ static unsigned char ID_TRAME = 0;
 #define AT_ERROR_SUCCESS 0
 
 // Codes d'erreurs 
-#define ERROR_SUCCESS 0
+#define XBEE_ERROR_SUCCESS 0
 
 #endif

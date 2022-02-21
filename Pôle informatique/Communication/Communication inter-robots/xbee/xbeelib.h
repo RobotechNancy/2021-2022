@@ -15,6 +15,11 @@
 #include <vector>
 #include <iomanip>
 #include <iostream>
+#include <chrono>
+#include <thread>
+#include <algorithm>
+#include <sstream>
+#include <iterator>
 
 /*!  \class     XBee
      \brief     Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plusieurs modules XBee.
@@ -59,6 +64,8 @@ public:
     void processTrame(char* trame);
     
     void sendMsg(std::string msg);
+
+    void waitForATrame();
 
     std::string readBuffer();
 

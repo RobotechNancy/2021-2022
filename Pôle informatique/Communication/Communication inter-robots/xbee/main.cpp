@@ -33,6 +33,10 @@ int main(int argc, char *argv[]){
     char* trame = xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
     xbee.processTrame(trame);
 
+    //thread t(xbee.waitForATrame());
+
+    //t.join();
+
     //xbee.sendMsg("coucou");
 
     return EXIT_SUCCESS;
