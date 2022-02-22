@@ -26,14 +26,20 @@ int main(int argc, char *argv[]){
     
     */
 
-    char msg[2];
-    msg[0]= 'c';
-    msg[1] = 'o';
+    char msg[6] = {'c', 'o', 'u', 'c', 'o', 'u'};
 
-    char* trame = xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
-    xbee.processTrame(trame);
+    char* message = xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
+    char* message_2 = xbee.sendTrame(ROBOT_01, TEST_ALIVE, msg);
+    
+    string trame = xbee.charToString(message);
+    string trame_2 = xbee.charToString(message_2);
 
-    //thread t(xbee.waitForATrame());
+    string trame_totale = "iefuahaiuhfiuh" + trame + trame_2;
+
+    xbee.subTrame(trame_totale);
+
+    //thread t(&XBee::waitForATrame, xbee);
+    //while(true){}
 
     //t.join();
 

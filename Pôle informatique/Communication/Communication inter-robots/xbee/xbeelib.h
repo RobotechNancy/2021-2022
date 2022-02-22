@@ -61,7 +61,7 @@ public:
     // Création et envoi de la trame de message structurée
     char* sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data);
 
-    void processTrame(char* trame);
+    void processTrame(std::string trame);
     
     void sendMsg(std::string msg);
 
@@ -69,9 +69,13 @@ public:
 
     std::string readBuffer();
 
-private:
+    std::string msg_recu = "";
+
+    void subTrame(std::string msg_recu);
 
     std::string charToString(char* message);
+
+private:
 
     char* stringToChar(std::string chaine);
 
@@ -80,6 +84,10 @@ private:
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);
+
+    unsigned char ID_TRAME = 0;
+
+    std::vector<std::string> trames {};
 };
 
 #endif // XBEE_H

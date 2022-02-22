@@ -21,7 +21,7 @@ struct Trame{
     int code_fct;
     int id_trame;
     int size;
-    string data;
+    char* data;
 };
 
 //_____________________________________
@@ -284,35 +284,45 @@ char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     return stringToChar(trame_str);
 }
 
-void XBee::processTrame(char* trame){
-    string trame_convertie = charToString(trame);
-/*
-    Trame trame_recue;
-    trame_recue.id_exp = stoi(trame_convertie.substr(2,2));
-    trame_recue.id_dest = stoi(trame_convertie.substr(4,2));
-    trame_recue.id_trame = stoi(trame_convertie.substr(6,2));
-    trame_recue.size = stoi(trame_convertie.substr(8,2));
-    trame_recue.code_fct = stoi(trame_convertie.substr(10,2));
-    trame_recue.data = trame_convertie.substr(12,2*trame_recue.size-2);
+void XBee::processTrame(string trame){
+    cout << endl << "Trame reçue : " << trame << endl;
+    Trame trame_traitee;
 
-    cout << "STX : " << hex << showbase << stoi(trame_convertie.substr(0,2)) << endl;
-    cout << "ID EXP : " << trame_recue.id_exp << endl;
-    cout << "ID DEST : " << trame_recue.id_dest << endl;
-    cout << "ID TRAME : " << trame_recue.id_trame << endl;
-    cout << "TAILLE MSG : " << trame_recue.size << endl;
-    cout << "CODE FCT : " << trame_recue.code_fct << endl;
-    cout << "DATA : " << trame_recue.data << endl;
-    //cout << "CRC : " << stoi(trame_convertie.substr(12+2*trame_recue.size-2)) << endl;
-    //cout << "EOT : " << stoi(trame_convertie.substr(12+2*trame_recue.size, 2)) << endl;
+    int id_trame, expediteur, destinataire, code_fonction, taille_msg, debut_trame, fin_trame;
+    string data, crc;
 
-*/
+    debut_trame = stoi(trame.substr(0,2));
+    expediteur = stoi(trame.substr(2,2));
+    destinataire = stoi(trame.substr(4,2));
+    id_trame = stoi(trame.substr(6,2));
+    taille_msg = stoi(trame.substr(8,2));
+    code_fonction = stoi(trame.substr(10,2));
+    data = trame.substr(12, taille_msg*2-2);
+    crc = trame.substr(10+taille_msg*2, 2);
+    fin_trame = stoi(trame.substr(12+taille_msg*2, 2));
+
+    trame_traitee.data = stringToChar(data); 
+    trame_traitee.code_fct = code_fonction;
+    trame_traitee.id_dest = destinataire;
+    trame_traitee.id_exp = expediteur;
+    trame_traitee.size = taille_msg; 
+    trame_traitee.id_trame = id_trame;
+
+    cout << "\n\t-> Debut trame : " << debut_trame << endl;
+    cout << "\t-> Exp : " << expediteur << endl;
+    cout << "\t-> Dest : " << destinataire << endl;
+    cout << "\t-> ID trame : " << id_trame << endl;
+    cout << "\t-> Taille msg : " << taille_msg << endl;
+    cout << "\t-> Code fonction : " << code_fonction << endl;
+    cout << "\t-> Data : " << data << endl;
+    cout << "\t-> Crc : " << crc << endl;
+    cout << "\t-> Fin trame : " << fin_trame << endl; 
 }
 
 string XBee::readBuffer(){
     char *reponse(0);
     unsigned int timeout = 100;
     reponse = new char;
-    delay(1);
     string rep = "";
     int i = 0;
     while(serial.available() > 0){
@@ -327,9 +337,29 @@ string XBee::readBuffer(){
 }
 
 void XBee::waitForATrame(){
-    if(serial.available() > 0){
-      cout << readBuffer(); 
-    } 
+   while(true){
+     delay(1/100);
+     if(serial.available() > 0){
+       msg_recu += readBuffer();
+       subTrame(msg_recu);
+     }
+   }
+}
+
+void XBee::subTrame(string msg_recu){
+    string decoupe = "", debut_trame = to_string(START_SEQ), fin_trame = to_string(END_SEQ);
+ 
+    size_t search_one = msg_recu.find(debut_trame);
+    size_t search_two = msg_recu.find(fin_trame);
+    
+    while(search_one != string::npos && search_two != string::npos){
+        decoupe = msg_recu.substr(search_one-1, search_two-search_one+2);
+        trames.push_back(decoupe);
+        processTrame(decoupe);
+
+        search_one = msg_recu.find(debut_trame, search_two+1);
+        search_two = msg_recu.find(fin_trame, search_two+1);
+    }
 }
 
 void XBee::sendMsg(string msg){
@@ -338,15 +368,11 @@ void XBee::sendMsg(string msg){
 }
 
 char* XBee::stringToChar(string chaine){
-    char* message;
-    string str_obj(chaine);
-    message = &str_obj[0];
-
+    char* message = strcpy(new char[chaine.size() + 1], chaine.c_str());
     return message;
 }
 
 string XBee::charToString(char* message){
     string chaine = string(message);
-    
     return chaine;
 }

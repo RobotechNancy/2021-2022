@@ -19,8 +19,6 @@
 #define START_SEQ 2
 #define END_SEQ 4
 
-static unsigned char ID_TRAME = 0;
-
 // Codes fonctions
 #define TEST_ALIVE 1
 
