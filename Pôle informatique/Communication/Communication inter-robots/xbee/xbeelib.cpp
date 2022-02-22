@@ -250,8 +250,14 @@ int XBee::crc16(vector<uint8_t> trame){
     \param data : les valeurs des paramètres demandées par le code fonction
  */
 char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
+    
+    unsigned char matrame[];
+
+    matrame[0] = ad_dest;
+
+
     string trame_str = "";
-    vector<uint8_t>trame((strlen(data)+8)*4);
+    vector<uint8_t>trame {};
 
     trame.push_back(START_SEQ);
     trame.push_back(CURRENT_ROBOT);
@@ -265,8 +271,11 @@ char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     }
 
     int crc = crc16(trame);
+    uint8_t crc_low = crc & 0xFF;
+    uint8_t crc_high = (crc >> 8) & 0xFF;
     
-    trame.push_back(crc);
+    trame.push_back(crc_low);
+    trame.push_back(crc_high);
     trame.push_back(END_SEQ);
 
     stringstream ss;
@@ -280,7 +289,9 @@ char* XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
 
     cout << "Trame envoyée convertie : " << trame_str << endl;
 
-    //serial.writeString(stringToChar(trame));
+    
+
+    serial.writeBytes(stringToChar(trame_str), trame_str.size());
     return stringToChar(trame_str);
 }
 
@@ -288,8 +299,10 @@ void XBee::processTrame(string trame){
     cout << endl << "Trame reçue : " << trame << endl;
     Trame trame_traitee;
 
-    int id_trame, expediteur, destinataire, code_fonction, taille_msg, debut_trame, fin_trame;
+    int newcrc, id_trame, expediteur, destinataire, code_fonction, taille_msg, debut_trame, fin_trame;
     string data, crc;
+
+    vector<uint8_t>param {};
 
     debut_trame = stoi(trame.substr(0,2));
     expediteur = stoi(trame.substr(2,2));
@@ -298,8 +311,8 @@ void XBee::processTrame(string trame){
     taille_msg = stoi(trame.substr(8,2));
     code_fonction = stoi(trame.substr(10,2));
     data = trame.substr(12, taille_msg*2-2);
-    crc = trame.substr(10+taille_msg*2, 2);
-    fin_trame = stoi(trame.substr(12+taille_msg*2, 2));
+    crc = trame.substr(10+taille_msg*2, 4);
+    fin_trame = stoi(trame.substr(14+taille_msg*2, 2));
 
     trame_traitee.data = stringToChar(data); 
     trame_traitee.code_fct = code_fonction;
@@ -308,6 +321,32 @@ void XBee::processTrame(string trame){
     trame_traitee.size = taille_msg; 
     trame_traitee.id_trame = id_trame;
 
+    string decoupe = trame.substr(0, taille_msg*2+10);
+    for(uint8_t i = 0; i < decoupe.size(); i++)
+	param.push_back(decoupe[i]);
+    
+    cout << "decoupe" << decoupe << endl;
+    newcrc = crc16(param);
+
+    uint8_t newcrc_low = newcrc & 0xFF;
+    uint8_t newcrc_high = (newcrc >> 8) & 0xFF;
+    
+    cout << crc << endl;
+    cout << newcrc << endl;
+   
+    if(to_string(newcrc) == crc)
+	cout << "crc bon" << endl;
+
+    if(debut_trame == START_SEQ)
+ 	cout << "debut bon" << endl;
+
+    if(fin_trame == END_SEQ)
+	cout << "fin bonne" << endl;
+
+    if(code_fonction == TEST_ALIVE){
+       sendTrame(expediteur, code_fonction, "OK");
+    }
+    /*
     cout << "\n\t-> Debut trame : " << debut_trame << endl;
     cout << "\t-> Exp : " << expediteur << endl;
     cout << "\t-> Dest : " << destinataire << endl;
@@ -317,6 +356,7 @@ void XBee::processTrame(string trame){
     cout << "\t-> Data : " << data << endl;
     cout << "\t-> Crc : " << crc << endl;
     cout << "\t-> Fin trame : " << fin_trame << endl; 
+    */
 }
 
 string XBee::readBuffer(){
@@ -324,6 +364,7 @@ string XBee::readBuffer(){
     unsigned int timeout = 100;
     reponse = new char;
     string rep = "";
+    delay(1);
     int i = 0;
     while(serial.available() > 0){
         i++;
@@ -340,8 +381,9 @@ void XBee::waitForATrame(){
    while(true){
      delay(1/100);
      if(serial.available() > 0){
-       msg_recu += readBuffer();
+       msg_recu = readBuffer();
        subTrame(msg_recu);
+       //cout << "Lecture : " << readBuffer() << endl;
      }
    }
 }
