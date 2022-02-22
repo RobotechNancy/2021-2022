@@ -39,7 +39,7 @@
 #define AT_GET_16BIT_SOURCE_ADDR "ATMY"
 #define AT_GET_LOW_DEST_ADDR "ATDL"
 
-#define AT_VALUE_API "1"
+#define AT_VALUE_API "0"
 #define AT_VALUE_BAUDRATE "3"
 #define AT_VALUE_AES "1"
 #define AT_VALUE_AES_KEY "32303032"
