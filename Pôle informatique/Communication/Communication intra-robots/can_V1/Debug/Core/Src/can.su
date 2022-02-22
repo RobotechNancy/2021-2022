@@ -1,3 +1,0 @@
-can.c:21:6:CAN_Config	56	static
-can.c:45:5:send_one	24	static
-can.c:52:5:send_can	56	static

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.6)  3 FEB 2022 18:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.6)  4 FEB 2022 14:24
 entering extended mode
 **./refman.tex
 (refman.tex
@@ -451,6 +451,55 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (C:\Program Files\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/07/22 3.63 The Babel package
+
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2021/07/22 3.63 Babel common definitions
+\babel@savecnt=\count313
+\U@D=\dimen188
+\l@unhyphenated=\language79
+
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+)
+\bbl@dirlevel=\count314
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\scdit\AppData\Roaming\MiKTeX\tex/generic/babel-french\french.ldf
+Language: french 2021/07/20 v3.5m French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language22). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language22). Reported on input line 92.
+\FB@nonchar=\count315
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count316
+\FBold@everypar=\toks34
+\FB@Mht=\dimen189
+\mc@charclass=\count317
+\mc@charfam=\count318
+\mc@charslot=\count319
+\std@mcc=\count320
+\dec@mcc=\count321
+\listindentFB=\dimen190
+\descindentFB=\dimen191
+\labelindentFB=\dimen192
+\labelwidthFB=\dimen193
+\leftmarginFB=\dimen194
+\parindentFFN=\dimen195
+\FBfnindent=\dimen196
+))
+(C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/carlisle\scalefnt.sty)
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
@@ -478,18 +527,18 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count313
-\Gm@cntv=\count314
-\c@Gm@tempcnt=\count315
-\Gm@bindingoffset=\dimen188
-\Gm@wd@mp=\dimen189
-\Gm@odd@mp=\dimen190
-\Gm@even@mp=\dimen191
-\Gm@layoutwidth=\dimen192
-\Gm@layoutheight=\dimen193
-\Gm@layouthoffset=\dimen194
-\Gm@layoutvoffset=\dimen195
-\Gm@dimlist=\toks34
+\Gm@cnth=\count322
+\Gm@cntv=\count323
+\c@Gm@tempcnt=\count324
+\Gm@bindingoffset=\dimen197
+\Gm@wd@mp=\dimen198
+\Gm@odd@mp=\dimen199
+\Gm@even@mp=\dimen256
+\Gm@layoutwidth=\dimen257
+\Gm@layoutheight=\dimen258
+\Gm@layouthoffset=\dimen259
+\Gm@layoutvoffset=\dimen260
+\Gm@dimlist=\toks35
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
@@ -510,7 +559,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip91
 \bibsep=\skip92
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count316
+\c@NAT@ctr=\count325
 )
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
@@ -544,8 +593,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip119
 \cftfigindent=\skip120
 \cftfignumwidth=\skip121
-\c@lofdepth=\count317
-\c@lotdepth=\count318
+\c@lofdepth=\count326
+\c@lotdepth=\count327
 \cftbeforelottitleskip=\skip122
 \cftafterlottitleskip=\skip123
 \cftbeforetabskip=\skip124
@@ -563,11 +612,11 @@ sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 )
 
-Package newunicodechar Warning: Redefining Unicode character on input line 116.
+Package newunicodechar Warning: Redefining Unicode character on input line 118.
 
 
 
-Package newunicodechar Warning: Redefining Unicode character on input line 117.
+Package newunicodechar Warning: Redefining Unicode character on input line 119.
 
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
@@ -604,9 +653,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen196
-\Hy@linkcounter=\count319
-\Hy@pagecounter=\count320
+\@linkdim=\dimen261
+\Hy@linkcounter=\count328
+\Hy@pagecounter=\count329
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
@@ -620,7 +669,7 @@ nguages
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count321
+\Hy@SavedSpaceFactor=\count330
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -657,20 +706,20 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 ))
-\c@Hy@tempcnt=\count322
+\c@Hy@tempcnt=\count331
  (C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen197
+\XeTeXLinkMargin=\dimen262
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count323
-\Field@Width=\dimen198
-\Fld@charsize=\dimen199
+\Fld@menulength=\count332
+\Field@Width=\dimen263
+\Fld@charsize=\dimen264
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -685,9 +734,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count324
-\c@Item=\count325
-\c@Hfootnote=\count326
+\Hy@abspage=\count333
+\c@Item=\count334
+\c@Hfootnote=\count335
 
 
 LaTeX Warning: Command \LT@p@ftntext  has changed.
@@ -697,29 +746,30 @@ LaTeX Warning: Command \LT@p@ftntext  has changed.
 Package hyperref Info: Driver: hpdftex.
  (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
-\Fld@listcount=\count327
-\c@bookmark@seq@number=\count328
+\Fld@listcount=\count336
+\c@bookmark@seq@number=\count337
 \Hy@SectionHShift=\skip127
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 136.
-Package hyperref Info: Option `unicode' set `true' on input line 136.
+Package hyperref Info: Option `colorlinks' set `true' on input line 138.
+Package hyperref Info: Option `unicode' set `true' on input line 138.
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen256
-\captionmargin@=\dimen257
-\captionwidth=\dimen258
-\caption@tempdima=\dimen259
-\caption@indent=\dimen260
-\caption@parindent=\dimen261
-\caption@hangindent=\dimen262
+\captionmargin=\dimen265
+\captionmargin@=\dimen266
+\captionwidth=\dimen267
+\caption@tempdima=\dimen268
+\caption@indent=\dimen269
+\caption@parindent=\dimen270
+\caption@hangindent=\dimen271
 Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
 )
-\c@caption@flags=\count329
-\c@continuedfloat=\count330
+\c@caption@flags=\count338
+\c@continuedfloat=\count339
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -729,59 +779,59 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 ))
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/etoc\etoc.sty
 Package: etoc 2021/09/23 v1.09e Completely customisable TOCs (JFB)
-\Etoc@toctoks=\toks35
-\c@etoc@tocid=\count331
-\c@etoc@tocdepth=\count332
+\Etoc@toctoks=\toks36
+\c@etoc@tocid=\count340
+\c@etoc@tocdepth=\count341
 \etoc@framed@titlebox=\box120
 \etoc@framed@contentsbox=\box121
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
-2.
+4.
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 152.
+(Font)              scaled to size 8.99994pt on input line 154.
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count333
+\l__color_backend_stack_int=\count342
 \l__pdf_internal_box=\box122
 ) (refman.aux)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count334
-\scratchdimen=\dimen263
+\scratchcounter=\count343
+\scratchdimen=\dimen272
 \scratchbox=\box123
-\nofMPsegments=\count335
-\nofMParguments=\count336
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count337
-\MPscratchDim=\dimen264
-\MPnumerator=\count338
-\makeMPintoPDFobject=\count339
-\everyMPtoPDFconversion=\toks37
+\nofMPsegments=\count344
+\nofMParguments=\count345
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count346
+\MPscratchDim=\dimen273
+\MPnumerator=\count347
+\makeMPintoPDFobject=\count348
+\everyMPtoPDFconversion=\toks38
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -790,6 +840,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+LaTeX Info: Redefining \degres on input line 154.
+
+
+Package french.ldf Warning: Please load the "natbib" package
+(french.ldf)                BEFORE babel/french; reported on input line 154.
+
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 154.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 154.
+LaTeX Info: Redefining \up on input line 154.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -824,7 +887,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 152.
+Package hyperref Info: Link coloring ON on input line 154.
 (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -835,27 +898,27 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 g.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count340
+\c@section@level=\count349
 )
-LaTeX Info: Redefining \ref on input line 152.
-LaTeX Info: Redefining \pageref on input line 152.
-LaTeX Info: Redefining \nameref on input line 152.
+LaTeX Info: Redefining \ref on input line 154.
+LaTeX Info: Redefining \pageref on input line 154.
+LaTeX Info: Redefining \nameref on input line 154.
  (refman.out) (refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 152.
+Package backref Info: ** backref set up for natbib ** on input line 154.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\Etoc@tf=\read4
-Package hyperref Info: Option `pageanchor' set `false' on input line 160.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 160.
+\Etoc@tf=\read5
+Package hyperref Info: Option `pageanchor' set `false' on input line 162.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 162.
 
-Package hyperref Info: Option `unicode' set `true' on input line 160.
+Package hyperref Info: Option `unicode' set `true' on input line 162.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 165.
+(Font)              scaled to size 12.9599pt on input line 167.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 167.
+(Font)              scaled to size 10.79993pt on input line 169.
  [1
 
 
@@ -866,45 +929,53 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 173.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 173
+(Font)              scaled to size 8.99994pt on input line 175.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 175
 .
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 173
+LaTeX Font Info:    Trying to load font information for U+msb on input line 175
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 17
-3.
+5.
 
 (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/wasysym\uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 173.
+(Font)              scaled to size 6.29996pt on input line 175.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 173.
+(Font)              scaled to size 6.29996pt on input line 175.
  [1] [2]
-[3] [4]
-Package hyperref Info: Option `pageanchor' set `true' on input line 176.
+[3]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+75.
+ (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 175.
+ [4]
+Package hyperref Info: Option `pageanchor' set `true' on input line 178.
 
-Chapter 1.
+Chapitre 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 (annotated.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
@@ -914,20 +985,11 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ] [2
 
 ]
-Chapter 2.
-(files.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 8
-.
- (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 8.
-)
-[3] [4
+Chapitre 2.
+(files.tex) [3] [4
 
 ]
-Chapter 3.
+Chapitre 3.
 (classserialib.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
 .
@@ -989,12 +1051,12 @@ Underfull \hbox (badness 10000) detected at line 220
 [][][]
  []
 
-[8]
+
 Underfull \hbox (badness 10000) detected at line 237
 [][][]
  []
 
-
+[8]
 Underfull \hbox (badness 10000) detected at line 266
 [][][]
  []
@@ -1009,17 +1071,21 @@ Underfull \hbox (badness 10000) detected at line 300
 [][][]
  []
 
-[9]
+
 Underfull \hbox (badness 10000) detected at line 317
 [][][]
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 328.
-[10]
+[9] [10]
 Underfull \hbox (badness 10000) detected at line 396
 [][][]
  []
+
+
+Overfull \vbox (47.57523pt too high) has occurred while \output is active []
+
 
 [11]
 Underfull \hbox (badness 10000) detected at line 442
@@ -1027,20 +1093,16 @@ Underfull \hbox (badness 10000) detected at line 442
  []
 
 
-Overfull \vbox (18.84615pt too high) has occurred while \output is active []
-
-
-[12]
 Underfull \hbox (badness 10000) detected at line 470
 [][][]
  []
 
-
+[12]
 Underfull \hbox (badness 10000) detected at line 504
 [][][]
  []
 
-[13]
+
 Underfull \hbox (badness 10000) detected at line 534
 [][][]
  []
@@ -1055,7 +1117,7 @@ Underfull \hbox (badness 10000) detected at line 570
 [][][]
  []
 
-[14]
+[13]
 Underfull \hbox (badness 10000) detected at line 594
 [][][]
  []
@@ -1065,22 +1127,22 @@ Underfull \hbox (badness 10000) detected at line 618
 [][][]
  []
 
-[15]
+[14]
 Underfull \hbox (badness 10000) detected at line 642
 [][][]
  []
 
-) (classtime_out.tex [16]
+) (classtime_out.tex [15]
 Underfull \hbox (badness 10000) detected at line 58
 [][][]
  []
 
-) (struct_trame.tex [17]) (classxbee.tex [18] [19]
+) (struct_trame.tex [16] [17]) (classxbee.tex [18]
 Underfull \hbox (badness 10000) detected at line 88
 [][][]
  []
 
-[20]
+[19]
 Underfull \hbox (badness 10000) detected at line 143
 [][][]
  []
@@ -1095,37 +1157,37 @@ Underfull \hbox (badness 10000) detected at line 181
 [][][]
  []
 
-[21]
+[20]
 Underfull \hbox (badness 10000) detected at line 221
 [][][]
  []
 
-[22]
+
 Underfull \hbox (badness 10000) detected at line 249
 [][][]
  []
 
-
+[21]
 Underfull \hbox (badness 10000) detected at line 291
 [][][]
  []
 
-) [23] [24
+) [22]
+Chapitre 4.
+(define_8h.tex [23
 
-]
-Chapter 4.
-(define_8h.tex [25] [26] [27] [28] [29] [30] [31] [32] [33] [34])
-(define_8h_source.tex [35]) (main_8cpp.tex
+] [24] [25] [26] [27] [28] [29] [30] [31] [32])
+(define_8h_source.tex [33]) (main_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[36]) (main_8cpp_source.tex) (serialib_8cpp.tex
+) (main_8cpp_source.tex [34]) (serialib_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[37]
+
 Underfull \hbox (badness 10000) detected at line 14
 [][][]
  []
@@ -1140,8 +1202,8 @@ Underfull \hbox (badness 10000) detected at line 20
 [][][]
  []
 
-) (serialib_8cpp_source.tex [38] [39] [40] [41] [42] [43] [44] [45] [46]
-[47]) (serialib_8h.tex
+[35]) (serialib_8cpp_source.tex [36] [37] [38] [39] [40] [41] [42] [43]
+[44]) (serialib_8h.tex [45]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
@@ -1151,17 +1213,19 @@ Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
-[48]
+
 Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
-[49]) (serialib_8h_source.tex [50] [51] [52]) (xbee_8cpp.tex
+LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 81.
+[46] [47]) (serialib_8h_source.tex [48] [49] [50]) (xbee_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[53]
+
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -1176,12 +1240,12 @@ Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-) (xbee_8cpp_source.tex [54] [55] [56]) (xbee_8h.tex
+) (xbee_8cpp_source.tex [51] [52] [53]) (xbee_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-[57]
+[54]
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -1196,26 +1260,24 @@ Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-) (xbee_8h_source.tex [58]) [59] [60
-
-] (refman.ind [61
+) (xbee_8h_source.tex [55]) [56] (refman.ind [57
 
 
-] [62] [63] [64
 
-])
-(refman.aux)
+] [58] [59] [60
+
+]) (refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 8B641DB0B97D2AF9583C4068D986077F;28056.
+(rerunfilecheck)             Checksum: 00FF7E20FCCEA2E903ACB76B41FB28C0;29130.
  ) 
 Here is how much of TeX's memory you used:
- 19077 strings out of 478927
- 312028 string characters out of 2862392
- 645885 words of memory out of 3000000
- 34743 multiletter control sequences out of 15000+600000
- 461393 words of font info for 97 fonts, out of 8000000 for 9000
+ 20716 strings out of 478927
+ 339276 string characters out of 2862392
+ 689646 words of memory out of 3000000
+ 36362 multiletter control sequences out of 15000+600000
+ 461705 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,999b,723s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,16n,117p,999b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
@@ -1227,9 +1289,9 @@ TeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
 fb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Program Fi
 les/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (70 pages, 808678 bytes).
+Output written on refman.pdf (66 pages, 808031 bytes).
 PDF statistics:
- 4152 PDF objects out of 4296 (max. 8388607)
- 1825 named destinations out of 2073 (max. 500000)
+ 4134 PDF objects out of 4296 (max. 8388607)
+ 1821 named destinations out of 2073 (max. 500000)
  1201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

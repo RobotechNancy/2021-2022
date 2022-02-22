@@ -9,20 +9,18 @@
 #define STOPBITS SERIAL_STOPBITS_1
 
 // Addresses des robots
-#define BROADCAST 0x0A
-#define ROBOT_01 0x01
-#define ROBOT_02 0x02
+#define BROADCAST 0
+#define ROBOT_01 1
+#define ROBOT_02 2
 
 #define CURRENT_ROBOT ROBOT_01
 
 // Paramètres de la trame message
-#define START_SEQ 0x02
-#define END_SEQ 0x04
-
-static unsigned char ID_TRAME = 0x00;
+#define START_SEQ 2
+#define END_SEQ 4
 
 // Codes fonctions
-#define TEST_ALIVE 0x01
+#define TEST_ALIVE 1
 
 // Commandes AT
 #define AT_ENTER "+++"
@@ -41,7 +39,7 @@ static unsigned char ID_TRAME = 0x00;
 #define AT_GET_16BIT_SOURCE_ADDR "ATMY"
 #define AT_GET_LOW_DEST_ADDR "ATDL"
 
-#define AT_VALUE_API "1"
+#define AT_VALUE_API "0"
 #define AT_VALUE_BAUDRATE "3"
 #define AT_VALUE_AES "1"
 #define AT_VALUE_AES_KEY "32303032"
@@ -76,6 +74,6 @@ static unsigned char ID_TRAME = 0x00;
 #define AT_ERROR_SUCCESS 0
 
 // Codes d'erreurs 
-#define ERROR_SUCCESS 0
+#define XBEE_ERROR_SUCCESS 0
 
 #endif
