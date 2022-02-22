@@ -351,6 +351,9 @@ void XBee::subTrame(string msg_recu){
  
     size_t search_one = msg_recu.find(debut_trame);
     size_t search_two = msg_recu.find(fin_trame);
+
+    while(search_two < search_one)
+        search_two = msg_recu.find(fin_trame, search_two+1);
     
     while(search_one != string::npos && search_two != string::npos){
         decoupe = msg_recu.substr(search_one-1, search_two-search_one+2);

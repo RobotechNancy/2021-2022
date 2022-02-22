@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
     string trame = xbee.charToString(message);
     string trame_2 = xbee.charToString(message_2);
 
-    string trame_totale = "iefuahaiuhfiuh" + trame + trame_2;
+    string trame_totale = "iefuahaiuhfiuh04" + trame + trame_2;
 
     xbee.subTrame(trame_totale);
 
