@@ -39,8 +39,17 @@ cd 2021-2022/Pôle\ informatique/Communication/Communication\ inter-robots/xbee/
 sudo g++ *.cpp -std=c++17 -pthread -o output
 
 ./output
-
 ```
+
+# Publication d'une nouvelle version du code (sous Linux x86-64) :
+
+```bash
+sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo git push
+```
+
+[**Username** : votre nom d'utilisateur GitHub] 
+
+[**Password** : vous devez générer un personal access token dans `Github -> Settings -> Developer Settings -> Personal Access Token -> Generate new token`]
 
 # Câblage des modules XBee avec la RaspberryPi
 
