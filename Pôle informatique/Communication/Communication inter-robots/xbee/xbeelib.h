@@ -62,7 +62,7 @@ public:
     // Création et envoi de la trame de message structurée
     int sendTrame(int ad_dest, int code_fct, char* data);
 
-    void processTrame(std::string trame);
+    void processTrame(int trame[]);
     
     void sendMsg(std::string msg);
 

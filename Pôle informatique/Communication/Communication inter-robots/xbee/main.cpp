@@ -23,6 +23,8 @@ int main(int argc, char *argv[]){
 */
     char msg[6] = {'c', 'o', 'u', 'c', 'o', 'u'};
 
+    xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
+
     string trame_totale = "";
 
     xbee.subTrame(trame_totale);
