@@ -9,18 +9,18 @@
 #define STOPBITS SERIAL_STOPBITS_1
 
 // Addresses des robots
-#define BROADCAST 0
-#define ROBOT_01 1
-#define ROBOT_02 2
+#define BROADCAST 0x11
+#define ROBOT_01 0x12
+#define ROBOT_02 0x13
 
 #define CURRENT_ROBOT ROBOT_01
 
 // Paramètres de la trame message
-#define START_SEQ 2
-#define END_SEQ 4
+#define START_SEQ 0x02
+#define END_SEQ 0x03
 
 // Codes fonctions
-#define TEST_ALIVE 1
+#define TEST_ALIVE 0x1E
 
 // Commandes AT
 #define AT_ENTER "+++"

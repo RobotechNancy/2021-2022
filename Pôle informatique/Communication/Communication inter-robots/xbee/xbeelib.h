@@ -20,6 +20,7 @@
 #include <algorithm>
 #include <sstream>
 #include <iterator>
+#include <bitset>
 
 /*!  \class     XBee
      \brief     Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plusieurs modules XBee.
@@ -59,7 +60,7 @@ public:
     bool writeATConfig();
 
     // Création et envoi de la trame de message structurée
-    char* sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data);
+    int sendTrame(int ad_dest, int code_fct, char* data);
 
     void processTrame(std::string trame);
     
@@ -68,6 +69,8 @@ public:
     void waitForATrame();
 
     std::string readBuffer();
+
+    int* readBytes();
 
     std::string msg_recu = "";
 
@@ -80,12 +83,12 @@ private:
     char* stringToChar(std::string chaine);
 
     // Calcul du CRC16 Modbus de la trame
-    int crc16(std::vector<uint8_t> trame);
+    int crc16(int trame[], int taille);
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);
 
-    unsigned char ID_TRAME = 0;
+    int ID_TRAME = 0x00;
 
     std::vector<std::string> trames {};
 };
