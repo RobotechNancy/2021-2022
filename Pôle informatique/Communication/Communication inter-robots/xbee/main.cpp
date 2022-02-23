@@ -21,13 +21,16 @@ int main(int argc, char *argv[]){
         cout << "Configuration AT non réussie | [Code erreur : " << error_configuration << "]" << endl;
        
 */
-    char msg[6] = {'c', 'o', 'u', 'c', 'o', 'u'};
+    char msg[] = {'c', 'o', 'u', 'c', 'o', 'u'};
 
     xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
 
-    string trame_totale = "";
+    int test[] = {START_SEQ, CURRENT_ROBOT, ROBOT_02, 0x01, 0x09, TEST_ALIVE, 0x63, 0x6F, 0x75, 0x63, 0x6F, 0x75, 0xDB, 0x43, END_SEQ};
+    xbee.processTrame(test);
 
-    xbee.subTrame(trame_totale);
+    //string trame_totale = "";
+
+    //xbee.subTrame(trame_totale);
 
     //thread t(&XBee::waitForATrame, xbee);
     //while(true){}

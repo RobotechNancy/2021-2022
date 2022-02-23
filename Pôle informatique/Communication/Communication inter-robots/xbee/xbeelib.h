@@ -80,10 +80,34 @@ public:
 
 private:
 
+    typedef struct{
+      int start_seq;
+      int adr_emetteur;
+      int adr_dest;
+      int id_trame;
+      int nb_octets_msg;
+      int code_fct;
+      std::vector<int> param;
+      int crc_low;
+      int crc_high;
+      int end_seq;
+
+    } Trame_t;
+
+    void afficherTrameRecue(Trame_t trame);
+
     char* stringToChar(std::string chaine);
+
+    void print(const std::vector<int> &v);
 
     // Calcul du CRC16 Modbus de la trame
     int crc16(int trame[], int taille);
+    
+    bool isStartSeqCorrect(int value);
+
+    bool isEndSeqCorrect(int value);
+
+    bool isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size);
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);

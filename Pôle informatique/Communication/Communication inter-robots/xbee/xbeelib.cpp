@@ -6,23 +6,12 @@
     \date    03/02/2022
  */
 #include "xbeelib.h"
+#include <iterator>
 
 using namespace std;
 
 serialib serial;
 
-/*!
-    \struct Trame
-    \brief Structure permettant de définir une trame de message reçue et envoyée
- */
-struct Trame{
-    int id_exp;
-    int id_dest;
-    int code_fct;
-    int id_trame;
-    int size;
-    char* data;
-};
 
 //_____________________________________
 // ::: Constructeurs et destructeurs :::
@@ -283,23 +272,84 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
     return AT_ERROR_EXIT;
 }
 
-void XBee::processTrame(int trame[]){
+void XBee::processTrame(int trame_recue[]){
     
-    Trame trame_traitee;
- 
-    trame_traitee.code_fct = trame[5];
-    trame_traitee.id_dest = trame[2];
-    trame_traitee.id_exp = trame[1];
-    trame_traitee.size = trame[4]; 
-    trame_traitee.id_trame = trame[3];
+    Trame_t trame = {
+        .start_seq = trame_recue[0],
+        .adr_emetteur = trame_recue[1],
+        .adr_dest = trame_recue[2],
+        .id_trame = trame_recue[3],
+        .nb_octets_msg = trame_recue[4]-3,
+        .code_fct = trame_recue[5],
+        .crc_low = trame_recue[3+trame_recue[4]],
+        .crc_high = trame_recue[4+trame_recue[4]],
+        .end_seq = trame_recue[5+trame_recue[4]]
+    };
 
-    cout << trame_traitee.code_fct << endl;
+    vector<int> data {};
+    
+    for(int i = 0; i < trame.nb_octets_msg; i++){
+       data.push_back(trame_recue[6+i]); 
+    }
+
+    trame.param = data;
+
+    afficherTrameRecue(trame);
+
+    int decoupe_trame[trame_recue[4]+2];
+
+    for(int i = 0; i < trame_recue[4]+3; i++){
+        decoupe_trame[i] = trame_recue[i];
+    }
+
+    if(isStartSeqCorrect(trame.start_seq))
+        cout << "\n~Caractère de début correct !" << endl;
+
+    if(isEndSeqCorrect(trame.end_seq))
+        cout << "~Caractère de fin correct !" << endl;
+
+    if(isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2))
+        cout << "~Le crc est correct ! " << endl;
 
     //newcrc = crc16(param);
 
     //uint8_t newcrc_low = newcrc & 0xFF;
     //uint8_t newcrc_high = (newcrc >> 8) & 0xFF;
     
+}
+
+bool XBee::isStartSeqCorrect(int value){
+    if(value == START_SEQ)
+        return true;
+
+    return false;
+}
+
+bool XBee::isEndSeqCorrect(int value){
+    if(value == END_SEQ)
+        return true;
+
+    return false;
+}
+
+bool XBee::isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size){
+    int crc = crc16(trame, trame_size);
+
+    int newcrc_low = crc & 0xFF;
+    int newcrc_high = (crc >> 8) & 0xFF;
+
+    if(newcrc_low == crc_low && newcrc_high == crc_high)
+        return true;
+
+    int essai[] = {2, 5};
+    int test = crc16(essai, 2);
+
+    cout << test;
+
+    cout << "Crc : " << crc_low << " " << crc_high << endl;
+    cout << "Crc calculé : " << newcrc_low << " " << newcrc_high << endl; 
+
+    return false;
 }
 
 string XBee::readBuffer(){
@@ -357,7 +407,7 @@ void XBee::subTrame(string msg_recu){
     while(search_one != string::npos && search_two != string::npos){
         decoupe = msg_recu.substr(search_one-1, search_two-search_one+2);
         trames.push_back(decoupe);
-        processTrame(decoupe);
+        //processTrame(decoupe);
 
         search_one = msg_recu.find(debut_trame, search_two+1);
         search_two = msg_recu.find(fin_trame, search_two+1);
@@ -377,4 +427,24 @@ char* XBee::stringToChar(string chaine){
 string XBee::charToString(char* message){
     string chaine = string(message);
     return chaine;
+}
+
+void XBee::afficherTrameRecue(Trame_t trame){
+    cout << hex << showbase;
+    cout << "\t-> Start seq : " << trame.start_seq << endl;
+    cout << "\t-> Emetteur : " << trame.adr_emetteur << endl;
+    cout << "\t-> Destinataire : " << trame.adr_dest << endl;
+    cout << "\t-> Id trame : " << trame.id_trame << endl;
+    cout << "\t-> Taille msg : " << trame.nb_octets_msg << endl;
+    cout << "\t-> Code fct : " << trame.code_fct << endl;
+    cout << "\t-> Data : ";
+    print(trame.param);
+    cout << "\t-> CRC : " << trame.crc_low << " " << trame.crc_high << endl;
+    cout << "\t-> End seq : " << trame.end_seq << endl;
+}
+
+void XBee::print(const vector<int> &v){
+    copy(v.begin(), v.end(),
+            ostream_iterator<int>(cout, " "));
+    cout << endl;
 }
