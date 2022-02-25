@@ -208,7 +208,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
  */
 int XBee::crc16(int trame[], int taille){
     int crc = 0xFFFF, count = 0;
-    unsigned char octet_a_traiter;
+    int octet_a_traiter;
     const int POLYNOME = 0xA001;
 
     octet_a_traiter = trame[0];
@@ -226,7 +226,7 @@ int XBee::crc16(int trame[], int taille){
         }
         count++;
         octet_a_traiter = trame[count];
-
+        
     }while(count < taille);
 
     return crc;
@@ -239,9 +239,11 @@ int XBee::crc16(int trame[], int taille){
     \param data : les valeurs des paramètres demandées par le code fonction
  */
 int XBee::sendTrame(int ad_dest, int code_fct, char* data){
-    
+   
+    cout << hex << showbase;
+
     int length_trame = strlen(data)+8;
-    int trame[length_trame];
+    int trame[strlen(data)+5];
     trame[0] = START_SEQ;
     trame[1] = CURRENT_ROBOT;
     trame[2] = ad_dest;
@@ -249,11 +251,11 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
     trame[4] = strlen(data)+3;
     trame[5] = code_fct;
  
-    for(int i = 0; i < strlen(data); i++){
+    for(size_t i = 0; i < strlen(data); i++){
         trame[i+6] = data[i]; 
     }
 
-    int crc = crc16(trame, strlen(data)+6);
+    int crc = crc16(trame, strlen(data)+5);
     uint8_t crc_low = crc & 0xFF;
     uint8_t crc_high = (crc >> 8) & 0xFF;
 
@@ -262,18 +264,21 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
     trame[strlen(data)+8] = END_SEQ;
 
     for(int i = 0; i < length_trame+1; i++){
-        cout << hex << trame[i] << " ";
+        cout << trame[i] << " ";
     }
 
     cout << endl;
 
     serial.writeBytes(trame, length_trame);
 
-    return AT_ERROR_EXIT;
+    return XBEE_ERROR_SUCCESS;
 }
 
-void XBee::processTrame(int trame_recue[]){
+int XBee::processTrame(vector<int> trame_recue){
     
+    if(!isTrameSizeCorrect(trame_recue))
+        return TRAME_ERR_SIZE;
+
     Trame_t trame = {
         .start_seq = trame_recue[0],
         .adr_emetteur = trame_recue[1],
@@ -296,26 +301,93 @@ void XBee::processTrame(int trame_recue[]){
 
     afficherTrameRecue(trame);
 
-    int decoupe_trame[trame_recue[4]+2];
+    int decoupe_trame[trame_recue[4]+5];
 
     for(int i = 0; i < trame_recue[4]+3; i++){
         decoupe_trame[i] = trame_recue[i];
     }
 
-    if(isStartSeqCorrect(trame.start_seq))
-        cout << "\n~Caractère de début correct !" << endl;
+    if(!isStartSeqCorrect(trame.start_seq))
+        return TRAME_ERR_START_SEQ;
 
-    if(isEndSeqCorrect(trame.end_seq))
-        cout << "~Caractère de fin correct !" << endl;
+    if(!isEndSeqCorrect(trame.end_seq))
+        return TRAME_ERR_END_SEQ;
 
-    if(isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2))
-        cout << "~Le crc est correct ! " << endl;
+    if(!isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2))
+        return TRAME_ERR_CRC;
 
-    //newcrc = crc16(param);
+    if(!isExpCorrect(trame.adr_emetteur))
+        return TRAME_ERR_EXP;
 
-    //uint8_t newcrc_low = newcrc & 0xFF;
-    //uint8_t newcrc_high = (newcrc >> 8) & 0xFF;
+    if(!isDestCorrect(trame.adr_dest))
+        return TRAME_ERR_DEST;
+
+    processCodeFct(trame.code_fct, trame.adr_emetteur);
     
+    return XBEE_ERROR_SUCCESS;
+}
+
+int XBee::processCodeFct(int code_fct, int exp){
+    if(!isCodeFctCorrect(code_fct))
+        return CODE_FCT_ERR;
+
+    char msg[] = {};
+    switch(code_fct){
+       case TEST_ALIVE :
+           msg[0] = {RETURN_ACK};
+           sendTrame(exp, TEST_ALIVE, msg);
+           break;
+
+       default : 
+           return CODE_FCT_NT;
+    }
+
+    return XBEE_ERROR_SUCCESS;
+}
+
+bool XBee::isCodeFctCorrect(int code_fct){
+    int size_list_code_fct = sizeof(LIST_CODE_FCT)/sizeof(LIST_CODE_FCT[0]), i = 0;
+
+    while(i < size_list_code_fct){
+        if(LIST_CODE_FCT[i] == code_fct)
+            return true;
+        i++;
+    }
+
+    return false;
+}
+
+bool XBee::isTrameSizeCorrect(vector<int> trame){
+    if(trame.size() == trame[4]+5)
+        return true;
+
+    return false;
+}
+
+bool XBee::isExpCorrect(int exp){
+    int size_list_addr = sizeof(LIST_ADDR)/sizeof(LIST_ADDR[0]), i = 0;
+
+    while(i < size_list_addr){
+        if(LIST_ADDR[i] == exp)
+            return true;
+
+        i++;
+    }
+
+    return false;
+}
+
+bool XBee::isDestCorrect(int dest){
+    int size_list_addr = sizeof(LIST_ADDR)/sizeof(LIST_ADDR[0]), i = 0;
+
+    while(i < size_list_addr){
+        if(LIST_ADDR[i] == dest)
+            return true;
+
+        i++;
+    }
+
+    return false;
 }
 
 bool XBee::isStartSeqCorrect(int value){
@@ -341,14 +413,6 @@ bool XBee::isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size){
     if(newcrc_low == crc_low && newcrc_high == crc_high)
         return true;
 
-    int essai[] = {2, 5};
-    int test = crc16(essai, 2);
-
-    cout << test;
-
-    cout << "Crc : " << crc_low << " " << crc_high << endl;
-    cout << "Crc calculé : " << newcrc_low << " " << newcrc_high << endl; 
-
     return false;
 }
 
@@ -370,53 +434,85 @@ string XBee::readBuffer(){
     return rep;
 }
 
-int* XBee::readBytes(){
-    static int rep[] = {};
-    int i = 0;
+vector<int> XBee::readBytes(){
+    int *rep;
+    vector<int> rep_vector;
     delay(1);
+    BUFFER_SIZE = serial.available();
 
-    while(serial.available() > 0){
-      serial.readBytes(rep, 100);
-      i++;
+    serial.readBytes(rep, BUFFER_SIZE);
+   
+    for(int i = 0; i < BUFFER_SIZE; i++){
+        rep_vector.push_back(rep[i]);
     }
 
-    return rep;
+    return rep_vector;
 }
 
 void XBee::waitForATrame(){
    while(true){
-     int* msg_recu;
+     vector<int> rep;
+
      delay(1/100);
+     
      if(serial.available() > 0){
-       msg_recu = readBytes();
-       //subTrame(msg_recu);
-       cout << "Lecture : " << msg_recu[0] << msg_recu[1] << endl;
+       rep = readBytes();
+
+       subTrame(rep);
      }
    }
 }
 
-void XBee::subTrame(string msg_recu){
-    string decoupe = "", debut_trame = to_string(START_SEQ), fin_trame = to_string(END_SEQ);
- 
-    size_t search_one = msg_recu.find(debut_trame);
-    size_t search_two = msg_recu.find(fin_trame);
+int XBee::subTrame(vector<int> msg_recu){
 
-    while(search_two < search_one)
-        search_two = msg_recu.find(fin_trame, search_two+1);
-    
-    while(search_one != string::npos && search_two != string::npos){
-        decoupe = msg_recu.substr(search_one-1, search_two-search_one+2);
-        trames.push_back(decoupe);
-        //processTrame(decoupe);
+    vector<int> list_start_seq {};
+    vector<int> list_end_seq {};
+    vector<int> decoupe {};
 
-        search_one = msg_recu.find(debut_trame, search_two+1);
-        search_two = msg_recu.find(fin_trame, search_two+1);
+    for(int i = 0; i < msg_recu.size(); i++){
+        if(msg_recu[i] == START_SEQ)
+            list_start_seq.push_back(i);
+
+        if(msg_recu[i] == END_SEQ)
+            list_end_seq.push_back(i);
     }
+
+    if(list_start_seq.size() != list_end_seq.size())
+        return -1;
+
+    for(int i = 0; i < list_start_seq.size(); i++){
+        if(list_start_seq[i] > list_end_seq[i])
+            return -2;
+
+        if(i != 0){
+            if(list_start_seq[i] != list_end_seq[i-1]-1)
+                return -3;
+        }
+    }
+
+    if(list_start_seq[0] != 0)
+        return -4;
+
+    if(list_end_seq[list_end_seq.size()] != msg_recu.size())
+        return -5;
+    
+    for(int i = 0; i < msg_recu.size(); i++){
+       for(i = list_start_seq[i]; i < list_end_seq[i]; i++){
+            decoupe.push_back(msg_recu[i]);
+       }
+       processTrame(decoupe);
+    }   
+
+    return XBEE_ERROR_SUCCESS;  
+}
+
+void XBee::sendHeatbeat(){
+    
 }
 
 void XBee::sendMsg(string msg){
     serial.writeString(stringToChar(msg));
-    cout << "Message envoyé avec succès !" << endl;
+    //cout << "Message envoyé avec succès !" << endl;
 }
 
 char* XBee::stringToChar(string chaine){

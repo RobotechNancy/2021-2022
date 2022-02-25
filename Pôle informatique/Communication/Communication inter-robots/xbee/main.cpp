@@ -25,8 +25,14 @@ int main(int argc, char *argv[]){
 
     xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
 
-    int test[] = {START_SEQ, CURRENT_ROBOT, ROBOT_02, 0x01, 0x09, TEST_ALIVE, 0x63, 0x6F, 0x75, 0x63, 0x6F, 0x75, 0xDB, 0x43, END_SEQ};
-    xbee.processTrame(test);
+    //string test = "21213191E63";
+
+    int test[3] = {0x02, 0x09, 0x03};
+
+    if(xbee.isCodeFctCorrect(TEST_ALIVE))
+        cout << "coucou" << endl;
+
+    //xbee.subTrame(test);
 
     //string trame_totale = "";
 

@@ -8,10 +8,14 @@
 #define PARITY SERIAL_PARITY_NONE
 #define STOPBITS SERIAL_STOPBITS_1
 
+#define RETURN_ACK 0x06
+
 // Addresses des robots
 #define BROADCAST 0x11
 #define ROBOT_01 0x12
 #define ROBOT_02 0x13
+
+#define LIST_ADDR (int[]){BROADCAST, ROBOT_01, ROBOT_02}
 
 #define CURRENT_ROBOT ROBOT_01
 
@@ -21,6 +25,18 @@
 
 // Codes fonctions
 #define TEST_ALIVE 0x1E
+
+#define LIST_CODE_FCT (int[]){TEST_ALIVE}
+
+#define CODE_FCT_ERR -1
+#define CODE_FCT_NT -2
+
+#define TRAME_ERR_SIZE -1
+#define TRAME_ERR_START_SEQ -2
+#define TRAME_ERR_END_SEQ -3
+#define TRAME_ERR_CRC -4
+#define TRAME_ERR_EXP -5
+#define TRAME_ERR_DEST -6
 
 // Commandes AT
 #define AT_ENTER "+++"

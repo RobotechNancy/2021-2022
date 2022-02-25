@@ -62,7 +62,7 @@ public:
     // Création et envoi de la trame de message structurée
     int sendTrame(int ad_dest, int code_fct, char* data);
 
-    void processTrame(int trame[]);
+    int processTrame(std::vector<int> trame);
     
     void sendMsg(std::string msg);
 
@@ -70,13 +70,23 @@ public:
 
     std::string readBuffer();
 
-    int* readBytes();
+    std::vector<int> readBytes();
 
-    std::string msg_recu = "";
-
-    void subTrame(std::string msg_recu);
+    int subTrame(std::vector<int> msg_recu);
 
     std::string charToString(char* message);
+
+    bool isExpCorrect(int exp);
+
+    bool isDestCorrect(int dest);
+
+    bool isCodeFctCorrect(int code_fct);
+
+    bool isTrameSizeCorrect(std::vector<int> trame);
+
+    int processCodeFct(int code_fct, int exp);
+
+    void sendHeatbeat();
 
 private:
 
@@ -113,6 +123,7 @@ private:
     void delay(unsigned int time);
 
     int ID_TRAME = 0x00;
+    int BUFFER_SIZE = 0;
 
     std::vector<std::string> trames {};
 };
