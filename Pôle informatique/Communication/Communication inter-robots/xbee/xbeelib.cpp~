@@ -507,9 +507,10 @@ int XBee::subTrame(vector<int> msg_recu){
 }
 
 void XBee::sendHeatbeat(){
+   char *msg = {''};
    while(true){
       delay(1/100);
-      sendTrame(ROBOT_02, TEST_ALIVE, stringToChar(""));
+      sendMsg(ROBOT_02, TEST_ALIVE, msg);
    } 
 }
 
