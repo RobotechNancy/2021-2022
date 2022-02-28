@@ -506,7 +506,7 @@ int XBee::subTrame(vector<int> msg_recu){
     return XBEE_ERROR_SUCCESS;  
 }
 
-void XBee::sendHeatbeat(){
+void XBee::sendHeartbeat(){
    while(true){
       delay(1/100);
       sendTrame(ROBOT_02, TEST_ALIVE, stringToChar(""));

@@ -9,6 +9,7 @@
 #define STOPBITS SERIAL_STOPBITS_1
 
 #define RETURN_ACK 0x06
+#define RETURN_NACK 0x15
 
 // Addresses des robots
 #define BROADCAST 0x11

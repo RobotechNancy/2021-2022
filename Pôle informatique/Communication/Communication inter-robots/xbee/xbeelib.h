@@ -86,7 +86,7 @@ public:
 
     int processCodeFct(int code_fct, int exp);
 
-    void sendHeatbeat();
+    void sendHeartbeat();
 
 private:
 
