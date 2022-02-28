@@ -60,7 +60,7 @@ public:
     bool writeATConfig();
 
     // Création et envoi de la trame de message structurée
-    int sendTrame(int ad_dest, int code_fct, char* data);
+    int sendTrame(int ad_dest, int code_fct, char* data = 0x00);
 
     int processTrame(std::vector<int> trame);
     
@@ -121,6 +121,8 @@ private:
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);
+
+    std::vector<int> slice(const std::vector<int> &v, int a, int b);
 
     int ID_TRAME = 0x00;
     int BUFFER_SIZE = 0;

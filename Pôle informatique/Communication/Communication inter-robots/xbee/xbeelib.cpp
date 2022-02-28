@@ -336,7 +336,7 @@ int XBee::processTrame(vector<int> trame_recue){
         return XB_TRAME_E_DEST;
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
-    
+
     return XB_TRAME_E_SUCCESS;
 }
 
@@ -355,6 +355,7 @@ int XBee::processCodeFct(int code_fct, int exp){
        case XB_FCT_TEST_ALIVE :
            msg[0] = {XB_V_ACK};
            sendTrame(exp, XB_FCT_TEST_ALIVE, msg);
+           cout << "trame de réponse envoyée !" << endl;
            break;
 
        default : 
@@ -389,7 +390,7 @@ bool XBee::isCodeFctCorrect(int code_fct){
  *  \return false : la taille de la trame est incorrecte, trop petite ou non cohérente
  */
 bool XBee::isTrameSizeCorrect(vector<int> trame){
-    if(trame.size() > 9 && trame.size() == trame[4]+5)
+    if(trame.size() > 9 && trame.size() == trame[4]+6)
         return true;
 
     return false;
@@ -507,7 +508,7 @@ string XBee::readBuffer(){
  *  \return rep : la valeur du buffer concaténée sous forme d'un vecteur d'entiers
  */
 vector<int> XBee::readBytes(){
-    int *rep;
+    int *rep(0);
     vector<int> rep_vector;
     delay(1);
     BUFFER_SIZE = serial.available();
@@ -517,6 +518,8 @@ vector<int> XBee::readBytes(){
     for(int i = 0; i < BUFFER_SIZE; i++){
         rep_vector.push_back(rep[i]);
     }
+    delete rep;
+    rep = 0;
 
     return rep_vector;
 }
@@ -525,14 +528,15 @@ vector<int> XBee::readBytes(){
  *  \brief Permet l'attente et la vérification régulée d'une trame en entrée dans le buffer du port Rx de la RaspberryPi et d'appeler la fonction de découpe des trames.
  */
 void XBee::waitForATrame(){
+   vector<int> rep;
+   
    while(true){
-     vector<int> rep;
+     rep.clear();
 
      delay(1/100);
      
      if(serial.available() > 0){
        rep = readBytes();
-
        subTrame(rep);
      }
    }
@@ -554,6 +558,7 @@ int XBee::subTrame(vector<int> msg_recu){
     vector<int> list_start_seq {};
     vector<int> list_end_seq {};
     vector<int> decoupe {};
+    int decoupe_retour;
 
     for(int i = 0; i < msg_recu.size(); i++){
         if(msg_recu[i] == XB_V_START)
@@ -582,12 +587,15 @@ int XBee::subTrame(vector<int> msg_recu){
     if(list_end_seq[list_end_seq.size()] != msg_recu[msg_recu.size()])
         return XB_SUB_TRAME_E_END;
     
-    for(int i = 0; i < msg_recu.size(); i++){
-       for(i = list_start_seq[i]; i < list_end_seq[i]; i++){
-            decoupe.push_back(msg_recu[i]);
-       }
+    for(int i = 0; i < list_start_seq.size(); i++){
+       decoupe.clear();
+       decoupe = slice(msg_recu, list_start_seq[i], list_end_seq[i]); 
        print(decoupe);
-       processTrame(decoupe);
+       decoupe_retour = processTrame(decoupe);
+
+       if(decoupe_retour != XB_TRAME_E_SUCCESS){
+            cout << "code erreur : " << dec << decoupe_retour << endl;
+       }
     }   
 
     return XB_SUB_TRAME_E_SUCCESS;  
@@ -599,7 +607,7 @@ int XBee::subTrame(vector<int> msg_recu){
 void XBee::sendHeartbeat(){
    while(true){
       delay(1/100);
-      sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, stringToChar(""));
+      sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE);
    } 
 }
 
@@ -657,4 +665,19 @@ void XBee::print(const vector<int> &v){
     copy(v.begin(), v.end(),
             ostream_iterator<int>(cout, " "));
     cout << endl;
+}
+
+/*!
+ *  \brief Fonction de traitement permettant d'extraire un sous-vecteur d'entiers d'un vecteur d'entiers
+ *  \param v : le vecteur à découper
+ *  \param a : l'indice de la première valeur à découper
+ *  \param b : l'indice de la dernière valeur à découper
+ *  \return vec : le sous-vecteur d'entiers découpé
+ */
+vector<int> XBee::slice(const vector<int> &v, int a, int b){
+    auto first = v.cbegin() + a;
+    auto last = v.cbegin() + b + 1;
+
+    vector<int> vec(first, last);
+    return vec;
 }

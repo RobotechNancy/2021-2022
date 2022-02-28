@@ -23,15 +23,17 @@ int main(int argc, char *argv[]){
 */
     char msg[] = {'c', 'o', 'u', 'c', 'o', 'u'};
 
-    xbee.sendTrame(ROBOT_02, TEST_ALIVE, msg);
+    xbee.sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, msg);
 
     //string test = "21213191E63";
 
-    vector<int> test = {0x02, 0x09, 0x03};
+    vector<int> test = {0x02, 0x12, 0X13, 0X1, 0X9, 0x1E, 0x63, 0x6F, 0x75, 0x63, 0x6F, 0x75, 0x8F, 0x5B, 0x03};
 
     int result = xbee.subTrame(test);
 
-    cout << dec << "code erreur : " << result << endl; 
+    if(result != XB_SUB_TRAME_E_SUCCESS){
+        cout << dec << "code erreur : " << result << endl; 
+    }
     //xbee.subTrame(test);
 
     //string trame_totale = "";
