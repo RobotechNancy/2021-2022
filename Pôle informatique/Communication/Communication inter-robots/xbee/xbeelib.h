@@ -51,10 +51,10 @@ public:
     int checkATConfig();
 
     // Lecture de la réponse du module à une commande AT
-    bool readATResponse(const char *value = AT_EMPTY_VALUE);
+    bool readATResponse(const char *value = XB_AT_R_EMPTY);
 
     // Envoi d'une commande AT 
-    bool sendATCommand(const char *command, const char *value, unsigned int mode);
+    bool sendATCommand(const char *command, const char *value, unsigned int mode = XB_AT_M_SET);
 
     // Ecriture de la configuration AT dans la mémoire flash du module
     bool writeATConfig();

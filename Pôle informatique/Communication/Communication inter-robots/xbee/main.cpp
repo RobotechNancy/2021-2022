@@ -27,11 +27,11 @@ int main(int argc, char *argv[]){
 
     //string test = "21213191E63";
 
-    int test[3] = {0x02, 0x09, 0x03};
+    vector<int> test = {0x02, 0x09, 0x03};
 
-    if(xbee.isCodeFctCorrect(TEST_ALIVE))
-        cout << "coucou" << endl;
+    int result = xbee.subTrame(test);
 
+    cout << dec << "code erreur : " << result << endl; 
     //xbee.subTrame(test);
 
     //string trame_totale = "";

@@ -45,7 +45,7 @@ XBee::~XBee(){ }
  */
 int XBee::openSerialConnection(){
     serial.flushReceiver();
-    char errorOpening = serial.openDevice(SERIAL_PORT, BAUDRATE, DATABITS, PARITY, STOPBITS);
+    char errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
 
     return (int) errorOpening;
 }
@@ -63,7 +63,7 @@ void XBee::closeSerialConnection(){
 
 /*!
     \brief Vérification et paramétrage de la bonne configuration pour le module XBee
-    \return 0 succès
+    \return {XB_AT_E_SUCCESS} succès
     \return -1 impossible d'entrer dans le mode AT
     \return -2 impossible de configurer le mode API
     \return -3 impossible de configurer le baudrate
@@ -79,45 +79,45 @@ void XBee::closeSerialConnection(){
  */
 int XBee::checkATConfig(){
     if(!enterATMode())
-	return AT_ERROR_ENTER;
+	return XB_AT_E_ENTER;
 
-    if(!sendATCommand(AT_GET_API, AT_VALUE_API, AT_MODE_SET))
-	return AT_ERROR_API;
+    if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API))
+	return XB_AT_E_API;
 
-    if(!sendATCommand(AT_GET_BAUDRATE, AT_VALUE_BAUDRATE, AT_MODE_SET))
-	return AT_ERROR_BAUDRATE;
+    if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE))
+	return XB_AT_E_BAUDRATE;
 
-    if(!sendATCommand(AT_GET_AES, AT_VALUE_AES, AT_MODE_SET))
-	return AT_ERROR_AES;
+    if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES))
+	return XB_AT_E_AES;
 
-    if(!sendATCommand(AT_GET_AES_KEY, AT_VALUE_AES_KEY, AT_MODE_SET))
-	return AT_ERROR_AES_KEY;
+    if(!sendATCommand(XB_AT_CMD_AES_KEY, XB_AT_V_AES_KEY))
+	return XB_AT_E_AES_KEY;
 
-    if(!sendATCommand(AT_GET_CHANEL, AT_VALUE_CHANEL, AT_MODE_SET))
-	return AT_ERROR_CHANEL;
+    if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL))
+	return XB_AT_E_CHANEL;
 
-    if(!sendATCommand(AT_GET_PAN_ID, AT_VALUE_PAN_ID, AT_MODE_SET))
-	return AT_ERROR_PAN_ID;
+    if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID))
+	return XB_AT_E_PAN_ID;
 
-    if(!sendATCommand(AT_GET_COORDINATOR, AT_VALUE_COORDINATOR, AT_MODE_SET))
-	return AT_ERROR_COORDINATOR;
+    if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR))
+	return XB_AT_E_COORDINATOR;
 
-    if(!sendATCommand(AT_GET_PARITY, AT_VALUE_PARITY, AT_MODE_SET))
-	return AT_ERROR_PARITY;
+    if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY))
+	return XB_AT_E_PARITY;
 
-    if(!sendATCommand(AT_GET_16BIT_SOURCE_ADDR, AT_VALUE_16BIT_SOURCE_ADDR, AT_MODE_SET))
-	return AT_ERROR_16BIT_SOURCE_ADDR;
+    if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR))
+	return XB_AT_E_16BIT_SOURCE_ADDR;
 
-    if(!sendATCommand(AT_GET_LOW_DEST_ADDR, AT_VALUE_LOW_DEST_ADDR, AT_MODE_SET))
-	return AT_ERROR_LOW_DEST_ADDR;
+    if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR))
+	return XB_AT_E_LOW_DEST_ADDR;
 
     if(!writeATConfig())
-	return AT_ERROR_WRITE_CONFIG;
+	return XB_AT_E_WRITE_CONFIG;
 
     if(!exitATMode())
-	return AT_ERROR_EXIT;
+	return XB_AT_E_EXIT;
 
-    return AT_ERROR_SUCCESS;
+    return XB_AT_E_SUCCESS;
 }
 
 /*!
@@ -146,11 +146,11 @@ bool XBee::readATResponse(const char *value){
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::enterATMode(){
-    serial.writeString(AT_ENTER);
+    serial.writeString(XB_AT_CMD_ENTER);
     //cout << "* Entrée en mode AT..." << endl;
     delay(2);
-    serial.writeString(AT_END_LINE);
-    return readATResponse(AT_SUCCESS_VALUE);
+    serial.writeString(XB_AT_V_END_LINE);
+    return readATResponse(XB_AT_R_SUCCESS);
 }
 
 /*!
@@ -159,10 +159,10 @@ bool XBee::enterATMode(){
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::exitATMode(){
-    serial.writeString(AT_EXIT);
-    serial.writeString(AT_END_LINE);
+    serial.writeString(XB_AT_CMD_EXIT);
+    serial.writeString(XB_AT_V_END_LINE);
     //cout << "* Sortie du mode AT..." << endl;
-    return readATResponse(AT_SUCCESS_VALUE);
+    return readATResponse(XB_AT_R_SUCCESS);
 }
 
 /*!
@@ -171,10 +171,10 @@ bool XBee::exitATMode(){
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::writeATConfig(){
-    serial.writeString(AT_WRITE_CONFIG);
-    serial.writeString(AT_END_LINE);
+    serial.writeString(XB_AT_CMD_WRITE_CONFIG);
+    serial.writeString(XB_AT_V_END_LINE);
     //cout << "* Ecriture de la configuration AT..." << endl;
-    return readATResponse(AT_SUCCESS_VALUE);
+    return readATResponse(XB_AT_R_SUCCESS);
 }
 
 /*!
@@ -188,13 +188,13 @@ bool XBee::writeATConfig(){
 bool XBee::sendATCommand(const char *command, const char *value, unsigned int mode){
     serial.writeString(command);
     serial.writeString(value);
-    serial.writeString(AT_END_LINE);
-    if(mode == AT_MODE_GET){
+    serial.writeString(XB_AT_V_END_LINE);
+    if(mode == XB_AT_M_GET){
         //cout << "* Envoi de la commande " << command << "...\n";
         return readATResponse(value);
     }else{
         //cout << "* Envoi de la commande " << command << "=" << value << "...\n";
-        return readATResponse(AT_SUCCESS_VALUE);
+        return readATResponse(XB_AT_R_SUCCESS);
     }
 }
 
@@ -244,8 +244,8 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
 
     int length_trame = strlen(data)+8;
     int trame[strlen(data)+5];
-    trame[0] = START_SEQ;
-    trame[1] = CURRENT_ROBOT;
+    trame[0] = XB_V_START;
+    trame[1] = XB_ADR_CURRENT_ROBOT;
     trame[2] = ad_dest;
     trame[3] = ++ID_TRAME;
     trame[4] = strlen(data)+3;
@@ -261,7 +261,7 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
 
     trame[strlen(data)+6] = crc_low;
     trame[strlen(data)+7] = crc_high;
-    trame[strlen(data)+8] = END_SEQ;
+    trame[strlen(data)+8] = XB_V_END;
 
     for(int i = 0; i < length_trame+1; i++){
         cout << trame[i] << " ";
@@ -271,13 +271,13 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
 
     serial.writeBytes(trame, length_trame);
 
-    return XBEE_ERROR_SUCCESS;
+    return XB_TRAME_E_SUCCESS;
 }
 
 int XBee::processTrame(vector<int> trame_recue){
     
     if(!isTrameSizeCorrect(trame_recue))
-        return TRAME_ERR_SIZE;
+        return XB_TRAME_E_SIZE;
 
     Trame_t trame = {
         .start_seq = trame_recue[0],
@@ -308,48 +308,48 @@ int XBee::processTrame(vector<int> trame_recue){
     }
 
     if(!isStartSeqCorrect(trame.start_seq))
-        return TRAME_ERR_START_SEQ;
+        return XB_TRAME_E_START;
 
     if(!isEndSeqCorrect(trame.end_seq))
-        return TRAME_ERR_END_SEQ;
+        return XB_TRAME_E_END;
 
     if(!isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2))
-        return TRAME_ERR_CRC;
+        return XB_TRAME_E_CRC;
 
     if(!isExpCorrect(trame.adr_emetteur))
-        return TRAME_ERR_EXP;
+        return XB_TRAME_E_EXP;
 
     if(!isDestCorrect(trame.adr_dest))
-        return TRAME_ERR_DEST;
+        return XB_TRAME_E_DEST;
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
     
-    return XBEE_ERROR_SUCCESS;
+    return XB_FCT_E_SUCCESS;
 }
 
 int XBee::processCodeFct(int code_fct, int exp){
     if(!isCodeFctCorrect(code_fct))
-        return CODE_FCT_ERR;
+        return XB_FCT_E_NOT_FOUND;
 
     char msg[] = {};
     switch(code_fct){
-       case TEST_ALIVE :
-           msg[0] = {RETURN_ACK};
-           sendTrame(exp, TEST_ALIVE, msg);
+       case XB_FCT_TEST_ALIVE :
+           msg[0] = {XB_V_ACK};
+           sendTrame(exp, XB_FCT_TEST_ALIVE, msg);
            break;
 
        default : 
-           return CODE_FCT_NT;
+           return XB_FCT_E_NONE_REACHABLE;
     }
 
-    return XBEE_ERROR_SUCCESS;
+    return XB_FCT_E_SUCCESS;
 }
 
 bool XBee::isCodeFctCorrect(int code_fct){
-    int size_list_code_fct = sizeof(LIST_CODE_FCT)/sizeof(LIST_CODE_FCT[0]), i = 0;
+    int size_list_code_fct = sizeof(XB_LIST_CODE_FCT)/sizeof(XB_LIST_CODE_FCT[0]), i = 0;
 
     while(i < size_list_code_fct){
-        if(LIST_CODE_FCT[i] == code_fct)
+        if(XB_LIST_CODE_FCT[i] == code_fct)
             return true;
         i++;
     }
@@ -358,17 +358,17 @@ bool XBee::isCodeFctCorrect(int code_fct){
 }
 
 bool XBee::isTrameSizeCorrect(vector<int> trame){
-    if(trame.size() == trame[4]+5)
+    if(trame.size() > 9 && trame.size() == trame[4]+5)
         return true;
 
     return false;
 }
 
 bool XBee::isExpCorrect(int exp){
-    int size_list_addr = sizeof(LIST_ADDR)/sizeof(LIST_ADDR[0]), i = 0;
+    int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
     while(i < size_list_addr){
-        if(LIST_ADDR[i] == exp)
+        if(XB_LIST_ADR[i] == exp)
             return true;
 
         i++;
@@ -378,10 +378,10 @@ bool XBee::isExpCorrect(int exp){
 }
 
 bool XBee::isDestCorrect(int dest){
-    int size_list_addr = sizeof(LIST_ADDR)/sizeof(LIST_ADDR[0]), i = 0;
+    int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
     while(i < size_list_addr){
-        if(LIST_ADDR[i] == dest)
+        if(XB_LIST_ADR[i] == dest)
             return true;
 
         i++;
@@ -391,14 +391,14 @@ bool XBee::isDestCorrect(int dest){
 }
 
 bool XBee::isStartSeqCorrect(int value){
-    if(value == START_SEQ)
+    if(value == XB_V_START)
         return true;
 
     return false;
 }
 
 bool XBee::isEndSeqCorrect(int value){
-    if(value == END_SEQ)
+    if(value == XB_V_END)
         return true;
 
     return false;
@@ -470,46 +470,47 @@ int XBee::subTrame(vector<int> msg_recu){
     vector<int> decoupe {};
 
     for(int i = 0; i < msg_recu.size(); i++){
-        if(msg_recu[i] == START_SEQ)
+        if(msg_recu[i] == XB_V_START)
             list_start_seq.push_back(i);
 
-        if(msg_recu[i] == END_SEQ)
+        if(msg_recu[i] == XB_V_END)
             list_end_seq.push_back(i);
     }
 
     if(list_start_seq.size() != list_end_seq.size())
-        return -1;
+        return XB_SUB_TRAME_E_SIZE;
 
     for(int i = 0; i < list_start_seq.size(); i++){
         if(list_start_seq[i] > list_end_seq[i])
-            return -2;
+            return XB_SUB_TRAME_E_REPARTITION;
 
         if(i != 0){
             if(list_start_seq[i] != list_end_seq[i-1]-1)
-                return -3;
+                return XB_SUB_TRAME_E_DECOUPAGE;
         }
     }
 
     if(list_start_seq[0] != 0)
-        return -4;
+        return XB_SUB_TRAME_E_START;
 
-    if(list_end_seq[list_end_seq.size()] != msg_recu.size())
-        return -5;
+    if(list_end_seq[list_end_seq.size()] != msg_recu[msg_recu.size()])
+        return XB_SUB_TRAME_E_END;
     
     for(int i = 0; i < msg_recu.size(); i++){
        for(i = list_start_seq[i]; i < list_end_seq[i]; i++){
             decoupe.push_back(msg_recu[i]);
        }
+       print(decoupe);
        processTrame(decoupe);
     }   
 
-    return XBEE_ERROR_SUCCESS;  
+    return XB_SUB_TRAME_E_SUCCESS;  
 }
 
 void XBee::sendHeartbeat(){
    while(true){
       delay(1/100);
-      sendTrame(ROBOT_02, TEST_ALIVE, stringToChar(""));
+      sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, stringToChar(""));
    } 
 }
 
