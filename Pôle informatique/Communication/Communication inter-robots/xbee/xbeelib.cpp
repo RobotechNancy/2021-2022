@@ -538,6 +538,17 @@ void XBee::waitForATrame(){
    }
 }
 
+/*!
+ *  \brief Découpe le résultat de la lecture du buffer en différentes trames avant le traitement 
+ *
+ *  \param msg_recu : le résultat de la lecture du buffer
+ *  \return {XB_SUB_TRAME_E_SUCCESS} succès
+ *  \return {XB_SUB_TRAME_E_SIZE} la position des trames dans le message reçu est incorrecte : les caractères de début et de fin de trame ne sont pas au même nombre
+ *  \return {XB_SUB_TRAME_E_REPARTITION} la position des trames dans le message reçu est incorrecte : certains caractères de début de trame sont placés après des caractères de fin de trame
+ *  \return {XB_SUB_TRAME_E_DECOUPAGE} la position des trames dans le message reçu est incorrecte : des caractères inconnus sont placés entre deux trames
+ *  \return {XB_SUB_TRAME_E_START} le premier caractère lu dans le buffer n'est pas celui d'un début de trame
+ *  \return {XB_SUB_TRAME_E_END} le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame
+ */
 int XBee::subTrame(vector<int> msg_recu){
 
     vector<int> list_start_seq {};
@@ -582,6 +593,9 @@ int XBee::subTrame(vector<int> msg_recu){
     return XB_SUB_TRAME_E_SUCCESS;  
 }
 
+/*!
+ *  \brief Permet d'envoyer des demandes de battements de coeur au second robot afin de savoir s'il est toujours opérationnel
+ */
 void XBee::sendHeartbeat(){
    while(true){
       delay(1/100);
@@ -589,21 +603,38 @@ void XBee::sendHeartbeat(){
    } 
 }
 
+/*!
+ *  \brief Permet d'envoyer un mesage ASCII sans format particulier via XBee
+ *  \param msg : le message à envoyer
+ */
 void XBee::sendMsg(string msg){
     serial.writeString(stringToChar(msg));
     //cout << "Message envoyé avec succès !" << endl;
 }
 
+/*!
+ *  \brief Permet de convertir un objet de type string en chaine de caractère standard C
+ *  \param chaine : l'objet string à convertir
+ *  \return message : la chaine de caractère convertie
+ */
 char* XBee::stringToChar(string chaine){
     char* message = strcpy(new char[chaine.size() + 1], chaine.c_str());
     return message;
 }
 
+/*!
+ *  \brief Permet de convertir une chaine de caractère standard C en objet de type string
+ *  \param message : la chaine de caractère à convertir
+ *  \return chaine : l'objet de type string converti
+ */
 string XBee::charToString(char* message){
     string chaine = string(message);
     return chaine;
 }
 
+/*!
+ * \brief Fonction d'affichage des données découpées d'une structure de type Trame
+ */
 void XBee::afficherTrameRecue(Trame_t trame){
     cout << hex << showbase;
     cout << "\t-> Start seq : " << trame.start_seq << endl;
@@ -618,6 +649,10 @@ void XBee::afficherTrameRecue(Trame_t trame){
     cout << "\t-> End seq : " << trame.end_seq << endl;
 }
 
+/*!
+ *  \brief Fonction d'affichage des valeurs contenues dans un vecteur d'entiers
+ *  \param v : le vecteur dont on souhaite afficher le contenu
+ */
 void XBee::print(const vector<int> &v){
     copy(v.begin(), v.end(),
             ostream_iterator<int>(cout, " "));
