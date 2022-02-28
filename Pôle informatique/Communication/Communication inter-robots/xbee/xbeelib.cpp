@@ -64,18 +64,19 @@ void XBee::closeSerialConnection(){
 /*!
     \brief Vérification et paramétrage de la bonne configuration pour le module XBee
     \return {XB_AT_E_SUCCESS} succès
-    \return -1 impossible d'entrer dans le mode AT
-    \return -2 impossible de configurer le mode API
-    \return -3 impossible de configurer le baudrate
-    \return -4 impossible de configurer le paramètre de chiffrement AES
-    \return -5 impossible de configurer la clé de chiffrement AES 
-    \return -6 impossible de configurer le canal de découverte réseau
-    \return -7 impossible de configurer l'ID du réseau
-    \return -8 impossible de configurer le mode coordinateur
-    \return -9 impossible de configurer le nombre de bits de parité
-    \return -10 impossible de configurer l'addresse source 16bits
-    \return -11 impossible de sortir du mode AT 
-    \return -12 impossible d'écrire les paramètres dans la mémoire flash
+    \return {XB_AT_E_ENTER} impossible d'entrer dans le mode AT
+    \return {XB_AT_E_API} impossible de configurer le mode API
+    \return {XB_AT_E_BAUDRATE} impossible de configurer le baudrate
+    \return {XB_AT_E_AES} impossible de configurer le paramètre de chiffrement AES
+    \return {XB_AT_E_AES_KEY} impossible de configurer la clé de chiffrement AES 
+    \return {XB_AT_E_CHANEL} impossible de configurer le canal de découverte réseau
+    \return {XB_AT_E_PAN_ID} impossible de configurer l'ID du réseau
+    \return {XB_AT_E_COORDINATOR} impossible de configurer le mode coordinateur
+    \return {XB_AT_E_PARITY} impossible de configurer le nombre de bits de parité
+    \return {XB_AT_E_16BIT_SOURCE_ADDR} impossible de configurer l'addresse source 16bits
+    \return {XB_AD_E_LOW_DEST_ADDR} impossible de sortir du mode AT 
+    \return {XB_AT_E_WRITE_CONFIG} impossible d'écrire les paramètres dans la mémoire flash
+    \return {XB_AT_E_EXIT} impossible de sortir du mode AT
  */
 int XBee::checkATConfig(){
     if(!enterATMode())
@@ -204,7 +205,8 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
 /*!
     \brief Fonction permettant de calculer le CRC16 Modbus de la trame XBee envoyée
     \param trame : la trame XBee complète sauf le CRC et le caractère de fin de trame
-    \return la valeur entière du crc calculé sur 16 bits
+    \param taille : la taille de la trame
+    \return la valeur entière du crc calculée sur 16 bits
  */
 int XBee::crc16(int trame[], int taille){
     int crc = 0xFFFF, count = 0;
@@ -237,6 +239,7 @@ int XBee::crc16(int trame[], int taille){
     \param ad_dest : l'adresse du destinataire du message
     \param code_fct : le code de la fonction concernée par le message
     \param data : les valeurs des paramètres demandées par le code fonction
+    \return {XB_TRAME_E_SUCCESS} succès
  */
 int XBee::sendTrame(int ad_dest, int code_fct, char* data){
    
@@ -274,6 +277,16 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
     return XB_TRAME_E_SUCCESS;
 }
 
+/*!
+ *  \brief Découpe une trame reçue en fonction de ses paramètres et interprete son code fonction
+ *  \return {XB_TRAME_E_SUCCESS} succès
+ *  \return {XB_TRAME_E_SIZE} taille de la trame incorrecte ou non concordante
+ *  \return {XB_TRAME_E_START} premier caractère de la trame incorrect
+ *  \return {XB_TRAME_E_END} dernier caractère de la trame incorrect
+ *  \return {XB_TRAME_E_CRC} valeur du CRC incorrecte
+ *  \return {XB_TRAME_E_EXP} adresse de l'expéditeur incorrecte ou inconnue
+ *  \return {XB_TRAME_E_DEST} addresse du destinataire incorrecte ou inconnue
+ */
 int XBee::processTrame(vector<int> trame_recue){
     
     if(!isTrameSizeCorrect(trame_recue))
@@ -324,9 +337,15 @@ int XBee::processTrame(vector<int> trame_recue){
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
     
-    return XB_FCT_E_SUCCESS;
+    return XB_TRAME_E_SUCCESS;
 }
 
+/*!
+ *  \brief Interprète le code fonction issu d'une trame reçue
+ *  \return {XB_FCT_E_SUCCESS} succès
+ *  \return {XB_FCT_E_NOT_FOUND} code erreur incorrect
+ *  \return {XB_FCT_E_NONE_REACHABLE} code erreur existant mais ne déclenchant aucune action  
+ */
 int XBee::processCodeFct(int code_fct, int exp){
     if(!isCodeFctCorrect(code_fct))
         return XB_FCT_E_NOT_FOUND;
@@ -345,6 +364,12 @@ int XBee::processCodeFct(int code_fct, int exp){
     return XB_FCT_E_SUCCESS;
 }
 
+/*!
+ *  \brief Vérifie si le code fonction donné est présent dans le fichier define.h
+ *  \param code_fct : le code fonction à vérifier
+ *  \return true : le code fonction est correct
+ *  \return false : le code fonction est incorrect/n'existe pas
+ */
 bool XBee::isCodeFctCorrect(int code_fct){
     int size_list_code_fct = sizeof(XB_LIST_CODE_FCT)/sizeof(XB_LIST_CODE_FCT[0]), i = 0;
 
@@ -357,6 +382,12 @@ bool XBee::isCodeFctCorrect(int code_fct){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si la taille de la trame est cohérente
+ *  \param trame : la trame à vérifier
+ *  \return true : la taille de la trame semble cohérente
+ *  \return false : la taille de la trame est incorrecte, trop petite ou non cohérente
+ */
 bool XBee::isTrameSizeCorrect(vector<int> trame){
     if(trame.size() > 9 && trame.size() == trame[4]+5)
         return true;
@@ -364,6 +395,12 @@ bool XBee::isTrameSizeCorrect(vector<int> trame){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si une adresse d'expéditeur est correcte
+ *  \param exp : l'adresse de l'expéditeur à vérifier
+ *  \return true : l'adresse est correcte
+ *  \return false : l'adresse est incorrecte
+ */
 bool XBee::isExpCorrect(int exp){
     int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
@@ -377,6 +414,12 @@ bool XBee::isExpCorrect(int exp){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si une adresse de destination est correcte
+ *  \param exp : l'adresse de destination à vérifier
+ *  \return true : l'adresse est correcte
+ *  \return false : l'adresse est incorrecte
+ */
 bool XBee::isDestCorrect(int dest){
     int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
@@ -390,6 +433,12 @@ bool XBee::isDestCorrect(int dest){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si le caractère de début de la trame correpond à celui attendu
+ *  \param value : le caractère à vérifier
+ *  \return true : le caratère est bien celui attendu
+ *  \return false : le caractère est incorrect
+ */
 bool XBee::isStartSeqCorrect(int value){
     if(value == XB_V_START)
         return true;
@@ -397,6 +446,12 @@ bool XBee::isStartSeqCorrect(int value){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si le caractère de fin de la trame correpond à celui attendu
+ *  \param value : le caractère à vérifier
+ *  \return true : le caratère est bien celui attendu
+ *  \return false : le caractère est incorrect
+ */
 bool XBee::isEndSeqCorrect(int value){
     if(value == XB_V_END)
         return true;
@@ -404,6 +459,15 @@ bool XBee::isEndSeqCorrect(int value){
     return false;
 }
 
+/*!
+ *  \brief Vérifie si le CRC reçu est cohérent avec la trame reçue
+ *  \param crc_low : les bits de poids faible du CRC reçu
+ *  \param crc_high : les bits de poids forts du CRC reçu
+ *  \param trame : la trame reçue (en enlevant le CRC et le caratère de fin de trame)
+ *  \param trame_size : la taille de le trame telle qu'entrée dans la fonction
+ *  \return true : la valeur du CRC reçue est bien celle calculée à partir du reste de la trame
+ *  \return false : la valeur du CRC est incohérente ou non calculable
+ */
 bool XBee::isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size){
     int crc = crc16(trame, trame_size);
 
@@ -416,6 +480,10 @@ bool XBee::isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size){
     return false;
 }
 
+/*!
+ *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
+ *  \return rep : la valeur du buffer concaténée sous forme d'une chaine de caractère
+ */
 string XBee::readBuffer(){
     char *reponse(0);
     unsigned int timeout = 100;
@@ -434,6 +502,10 @@ string XBee::readBuffer(){
     return rep;
 }
 
+/*!
+ *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
+ *  \return rep : la valeur du buffer concaténée sous forme d'un vecteur d'entiers
+ */
 vector<int> XBee::readBytes(){
     int *rep;
     vector<int> rep_vector;
@@ -449,6 +521,9 @@ vector<int> XBee::readBytes(){
     return rep_vector;
 }
 
+/*!
+ *  \brief Permet l'attente et la vérification régulée d'une trame en entrée dans le buffer du port Rx de la RaspberryPi et d'appeler la fonction de découpe des trames.
+ */
 void XBee::waitForATrame(){
    while(true){
      vector<int> rep;

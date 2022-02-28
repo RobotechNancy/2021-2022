@@ -1,3 +1,10 @@
+/*!
+ *  \file define.h
+ *  \brief Fichier contenant l'ensemble des constantes utilisées dans la librairie XBee.
+ *  \author Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
+ *  \version 2.0
+ *  \date 28/02/2022
+ */
 #ifndef DEFINE_XBEE_H
 #define DEFINE_XBEE_H
 

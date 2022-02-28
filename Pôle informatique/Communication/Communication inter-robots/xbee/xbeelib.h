@@ -2,8 +2,8 @@
  \file    xbeelib.h
  \brief   Fichier d'en-tête de la classe XBee. Cette classe est utilisée afin de programmer les modules XBee en UART et de mettre en place des communications entre différents modules XBee.
  \author  Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
- \version 1.0
- \date    03/02/2022
+ \version 3.0
+ \date    28/02/2022
  */
 
 #ifndef XBEE_H
