@@ -72,51 +72,78 @@ void XBee::closeSerialConnection(){
     \return {XB_AT_E_PAN_ID} impossible de configurer l'ID du réseau
     \return {XB_AT_E_COORDINATOR} impossible de configurer le mode coordinateur
     \return {XB_AT_E_PARITY} impossible de configurer le nombre de bits de parité
-    \return {XB_AT_E_16BIT_SOURCE_ADDR} impossible de configurer l'addresse source 16bits
-    \return {XB_AD_E_LOW_DEST_ADDR} impossible de sortir du mode AT 
+    \return {XB_AT_E_16BIT_SOURCE_ADDR} impossible de configurer l'adresse source 16bits
+    \return {XB_AD_E_LOW_DEST_ADDR} impossible de configuer l'adresse de destination
     \return {XB_AT_E_WRITE_CONFIG} impossible d'écrire les paramètres dans la mémoire flash
     \return {XB_AT_E_EXIT} impossible de sortir du mode AT
  */
 int XBee::checkATConfig(){
-    if(!enterATMode())
-	return XB_AT_E_ENTER;
+    if(!enterATMode()){
+	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
+        return XB_AT_E_ENTER;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API))
-	return XB_AT_E_API;
+    if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_API << " : impossible de configurer le mode API" << mendl;
+	    return XB_AT_E_API;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE))
-	return XB_AT_E_BAUDRATE;
+    if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_BAUDRATE << " : impossible de configurer le baudrate" << mendl;
+	    return XB_AT_E_BAUDRATE;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES))
-	return XB_AT_E_AES;
+    if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES << " : impossible de configurer le paramètre de chiffrement AES" << mendl;
+	    return XB_AT_E_AES;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_AES_KEY, XB_AT_V_AES_KEY))
-	return XB_AT_E_AES_KEY;
+    if(!sendATCommand(XB_AT_CMD_AES_KEY, XB_AT_V_AES_KEY)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES_KEY << " : impossible de configurer la clé de chiffrement AES" << mendl;
+	    return XB_AT_E_AES_KEY;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL))
-	return XB_AT_E_CHANEL;
+    if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_CHANEL << " : impossible de configurer le canal de découverte réseau" << mendl;
+	    return XB_AT_E_CHANEL;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID))
-	return XB_AT_E_PAN_ID;
+    if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PAN_ID << " : impossible de configurer l'ID du réseau" << mendl;
+	    return XB_AT_E_PAN_ID;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR))
-	return XB_AT_E_COORDINATOR;
+    if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_COORDINATOR << " : impossible de configurer le mode coordinateur" << mendl;
+	    return XB_AT_E_COORDINATOR;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY))
-	return XB_AT_E_PARITY;
+    if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PARITY << " : impossible de configurer le nombre de bits de parité" << mendl;
+	    return XB_AT_E_PARITY;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR))
-	return XB_AT_E_16BIT_SOURCE_ADDR;
+    if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_16BIT_SOURCE_ADDR << " : impossible de configurer l'adresse source 16bits" << mendl;
+	    return XB_AT_E_16BIT_SOURCE_ADDR;
+    }
 
-    if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR))
-	return XB_AT_E_LOW_DEST_ADDR;
+    if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR)){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_LOW_DEST_ADDR << " : impossible de configuer l'adresse de destination" << mendl;
+	    return XB_AT_E_LOW_DEST_ADDR;
+    }
 
-    if(!writeATConfig())
-	return XB_AT_E_WRITE_CONFIG;
+    if(!writeATConfig()){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_WRITE_CONFIG << " : impossible d'écrire les paramètres dans la mémoire flash" << mendl;
+	    return XB_AT_E_WRITE_CONFIG;
+    }
 
-    if(!exitATMode())
-	return XB_AT_E_EXIT;
+    if(!exitATMode()){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_EXIT << " : impossible de sortir du mode AT" << mendl;
+	    return XB_AT_E_EXIT;
+    }
 
+    logXbee << "configuration AT réalisée avec succès" << mendl;
     return XB_AT_E_SUCCESS;
 }
 

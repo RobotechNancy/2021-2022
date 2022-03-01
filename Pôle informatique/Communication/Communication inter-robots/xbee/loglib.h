@@ -15,7 +15,7 @@ const Mendl mendl;
 char* stringToChar(std::string chaine);
 
 
-class Log : public  std::ostream{
+class Log : public std::ostream{
     private:
         std::stringstream ss;
 
