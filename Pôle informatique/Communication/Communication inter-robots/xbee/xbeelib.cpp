@@ -244,31 +244,36 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
    
     cout << hex << showbase;
 
-    uint8_t length_trame = strlen(data)+9;
+    uint8_t length_trame = strlen(data)+10;
     uint8_t trame[length_trame];
     int trame_int[length_trame];
+    int id_trame = ++ID_TRAME;
+    uint8_t id_trame_low = id_trame & 0xFF;
+    uint8_t id_trame_high = (id_trame >> 8) & 0xFF;
+
     trame[0] = XB_V_START;
     trame[1] = XB_ADR_CURRENT_ROBOT;
     trame[2] = ad_dest;
-    trame[3] = ++ID_TRAME;
-    trame[4] = strlen(data)+3;
-    trame[5] = code_fct;
+    trame[3] = id_trame_low+4;
+    trame[4] = id_trame_high+4;
+    trame[5] = strlen(data)+4;
+    trame[6] = code_fct;
  
     for(size_t i = 0; i < strlen(data); i++){
-        trame[i+6] = data[i]; 
+        trame[i+7] = data[i]; 
     }
     
     
     for(int i=0; i < length_trame; i++){
     	trame_int[i] = int(trame[i]);
     }
-    int crc = crc16(trame_int, strlen(data)+5);
+    int crc = crc16(trame_int, strlen(data)+6);
     uint8_t crc_low = crc & 0xFF;
     uint8_t crc_high = (crc >> 8) & 0xFF;
 
-    trame[strlen(data)+6] = crc_low;
-    trame[strlen(data)+7] = crc_high;
-    trame[strlen(data)+8] = XB_V_END;
+    trame[strlen(data)+7] = crc_low;
+    trame[strlen(data)+8] = crc_high;
+    trame[strlen(data)+9] = XB_V_END;
 
     serial.writeBytes(trame, length_trame);
 
@@ -294,25 +299,26 @@ int XBee::processTrame(vector<int> trame_recue){
         .start_seq = trame_recue[0],
         .adr_emetteur = trame_recue[1],
         .adr_dest = trame_recue[2],
-        .id_trame = trame_recue[3],
-        .nb_octets_msg = trame_recue[4]-3,
-        .code_fct = trame_recue[5],
-        .crc_low = trame_recue[2+trame_recue[4]],
-        .crc_high = trame_recue[3+trame_recue[4]],
-        .end_seq = trame_recue[4+trame_recue[4]]
+        .id_trame_low = trame_recue[3]-4,
+        .id_trame_high = trame_recue[4]-4,
+        .nb_octets_msg = trame_recue[5]-4,
+        .code_fct = trame_recue[6],
+        .crc_low = trame_recue[3+trame_recue[4]],
+        .crc_high = trame_recue[4+trame_recue[4]],
+        .end_seq = trame_recue[5+trame_recue[4]]
     };
 
     vector<int> data {};
     
     for(uint8_t i = 0; i < trame.nb_octets_msg; i++){
-       data.push_back(trame_recue[6+i]); 
+       data.push_back(trame_recue[7+i]); 
     }
 
     trame.param = data;
 
     afficherTrameRecue(trame);
 
-    int decoupe_trame[trame_recue[4]+5];
+    int decoupe_trame[trame_recue[4]+6];
 
     for(uint8_t i = 0; i < trame_recue[4]+3; i++){
         decoupe_trame[i] = trame_recue[i];
@@ -387,7 +393,7 @@ bool XBee::isCodeFctCorrect(int code_fct){
  *  \return false : la taille de la trame est incorrecte, trop petite ou non cohérente
  */
 bool XBee::isTrameSizeCorrect(vector<int> trame){
-    if(trame.size() > 9 && trame.size() == trame[4]+5)
+    if(trame.size() > 10 && trame.size() == trame[4]+5)
         return true;
 
     return false;
@@ -651,7 +657,7 @@ void XBee::afficherTrameRecue(Trame_t trame){
     cout << "\t-> Start seq : " << trame.start_seq << endl;
     cout << "\t-> Emetteur : " << trame.adr_emetteur << endl;
     cout << "\t-> Destinataire : " << trame.adr_dest << endl;
-    cout << "\t-> Id trame : " << trame.id_trame << endl;
+    cout << "\t-> Id trame  : " << trame.id_trame_low << " " << trame.crc_high << endl;
     cout << "\t-> Taille msg : " << trame.nb_octets_msg - 3 << endl;
     cout << "\t-> Code fct : " << trame.code_fct << endl;
     cout << "\t-> Data : ";
