@@ -11,8 +11,8 @@ char* stringToChar(std::string chaine){
 }
 
 
-Log::Log(nom){
-    this.name = nom;
+Log::Log(string nom){
+    name = nom;
     stringstream ss;
 }
 
