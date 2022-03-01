@@ -13,7 +13,7 @@
 
 
 
-#include "define.h"
+#include "defineCan.h"
 using namespace std;
 
 
@@ -28,14 +28,23 @@ int main(int argc, char **argv)
 {
 	
     Can can;
-
-	int data[8] = {'H','e','l','l','o'};
-	//can.send(BASE_ROULANTE, AVANCE, data, 5);;
-    thread tListen(&Can::listen, can);
+	int err = can.init(CAN_ADDR_RASPBERRY);
+	if(err <0){
+		cout << "erreur dans l'init du bus can. err n°" << dec << err << "\t\t c.f. #define" << endl;
+		return;
+	}
 	
+	can.start_listen();
+
+	uint8_t data[8] = {0x01,0x02,0xFF,0x34,0x45};
+
+	int err = can.send(CAN_ADDR_RASPBERRY, AVANCE, data, 5, true, 5) ;
+	if(err < 0){
+		cout << "erreur dans l'envoie d'une trame. err n°" << dec << err << "\t\t c.f. #define" << endl;
+	}
 	while(true){
-		cout << endl;
-		cout << can.send(CAN_ADDR_BASE_ROULANTE, AVANCE, data, 5) << endl;
+		//cout << endl;
+		
 		//can.listen();
 		wait(1000);
 
