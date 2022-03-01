@@ -6,7 +6,6 @@
     \date    03/02/2022
  */
 #include "xbeelib.h"
-#include <iterator>
 
 using namespace std;
 
@@ -45,9 +44,9 @@ XBee::~XBee(){ }
  */
 int XBee::openSerialConnection(){
     serial.flushReceiver();
-    char errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
+    int errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
 
-    return (int) errorOpening;
+    return errorOpening;
 }
 
 /*!
@@ -135,7 +134,7 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::readATResponse(const char *value){
-    string reponse = readBuffer();
+    string reponse = readString();
 
     if(reponse == value) return true;
     else return false;
@@ -208,7 +207,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     \param taille : la taille de la trame
     \return la valeur entière du crc calculée sur 16 bits
  */
-int XBee::crc16(uint8_t trame[], uint8_t taille){
+int XBee::crc16(int trame[], uint8_t taille){
     int crc = 0xFFFF, count = 0;
     int octet_a_traiter;
     const int POLYNOME = 0xA001;
@@ -247,6 +246,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
 
     uint8_t length_trame = strlen(data)+9;
     uint8_t trame[length_trame];
+    int trame_int[length_trame];
     trame[0] = XB_V_START;
     trame[1] = XB_ADR_CURRENT_ROBOT;
     trame[2] = ad_dest;
@@ -257,8 +257,12 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     for(size_t i = 0; i < strlen(data); i++){
         trame[i+6] = data[i]; 
     }
-
-    int crc = crc16(trame, strlen(data)+5);
+    
+    
+    for(int i=0; i < length_trame; i++){
+    	trame_int[i] = int(trame[i]);
+    }
+    int crc = crc16(trame_int, strlen(data)+5);
     uint8_t crc_low = crc & 0xFF;
     uint8_t crc_high = (crc >> 8) & 0xFF;
 
@@ -281,7 +285,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
  *  \return {XB_TRAME_E_EXP} adresse de l'expéditeur incorrecte ou inconnue
  *  \return {XB_TRAME_E_DEST} addresse du destinataire incorrecte ou inconnue
  */
-int XBee::processTrame(vector<uint8_t> trame_recue){
+int XBee::processTrame(vector<int> trame_recue){
     
     if(!isTrameSizeCorrect(trame_recue))
         return XB_TRAME_E_SIZE;
@@ -291,14 +295,14 @@ int XBee::processTrame(vector<uint8_t> trame_recue){
         .adr_emetteur = trame_recue[1],
         .adr_dest = trame_recue[2],
         .id_trame = trame_recue[3],
-        .nb_octets_msg = trame_recue[4],
+        .nb_octets_msg = trame_recue[4]-3,
         .code_fct = trame_recue[5],
-        .crc_low = trame_recue[3+trame_recue[4]],
-        .crc_high = trame_recue[4+trame_recue[4]],
-        .end_seq = trame_recue[5+trame_recue[4]]
+        .crc_low = trame_recue[2+trame_recue[4]],
+        .crc_high = trame_recue[3+trame_recue[4]],
+        .end_seq = trame_recue[4+trame_recue[4]]
     };
 
-    vector<uint8_t> data {};
+    vector<int> data {};
     
     for(uint8_t i = 0; i < trame.nb_octets_msg; i++){
        data.push_back(trame_recue[6+i]); 
@@ -308,7 +312,7 @@ int XBee::processTrame(vector<uint8_t> trame_recue){
 
     afficherTrameRecue(trame);
 
-    uint8_t decoupe_trame[trame_recue[4]+5];
+    int decoupe_trame[trame_recue[4]+5];
 
     for(uint8_t i = 0; i < trame_recue[4]+3; i++){
         decoupe_trame[i] = trame_recue[i];
@@ -330,7 +334,7 @@ int XBee::processTrame(vector<uint8_t> trame_recue){
         return XB_TRAME_E_DEST;
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
-
+	
     return XB_TRAME_E_SUCCESS;
 }
 
@@ -340,7 +344,7 @@ int XBee::processTrame(vector<uint8_t> trame_recue){
  *  \return {XB_FCT_E_NOT_FOUND} code erreur incorrect
  *  \return {XB_FCT_E_NONE_REACHABLE} code erreur existant mais ne déclenchant aucune action  
  */
-int XBee::processCodeFct(uint8_t code_fct, uint8_t exp){
+int XBee::processCodeFct(int code_fct, int exp){
     if(!isCodeFctCorrect(code_fct))
         return XB_FCT_E_NOT_FOUND;
 
@@ -351,7 +355,7 @@ int XBee::processCodeFct(uint8_t code_fct, uint8_t exp){
            sendTrame(exp, XB_FCT_TEST_ALIVE, msg);
            break;
 
-       default : 
+       default :
            return XB_FCT_E_NONE_REACHABLE;
     }
 
@@ -364,8 +368,8 @@ int XBee::processCodeFct(uint8_t code_fct, uint8_t exp){
  *  \return true : le code fonction est correct
  *  \return false : le code fonction est incorrect/n'existe pas
  */
-bool XBee::isCodeFctCorrect(uint8_t code_fct){
-    uint8_t size_list_code_fct = sizeof(XB_LIST_CODE_FCT)/sizeof(XB_LIST_CODE_FCT[0]), i = 0;
+bool XBee::isCodeFctCorrect(int code_fct){
+    int size_list_code_fct = sizeof(XB_LIST_CODE_FCT)/sizeof(XB_LIST_CODE_FCT[0]), i = 0;
 
     while(i < size_list_code_fct){
         if(XB_LIST_CODE_FCT[i] == code_fct)
@@ -382,8 +386,8 @@ bool XBee::isCodeFctCorrect(uint8_t code_fct){
  *  \return true : la taille de la trame semble cohérente
  *  \return false : la taille de la trame est incorrecte, trop petite ou non cohérente
  */
-bool XBee::isTrameSizeCorrect(vector<uint8_t> trame){
-    if(trame.size() > 9 && trame.size() == trame[4]+6)
+bool XBee::isTrameSizeCorrect(vector<int> trame){
+    if(trame.size() > 9 && trame.size() == trame[4]+5)
         return true;
 
     return false;
@@ -395,8 +399,8 @@ bool XBee::isTrameSizeCorrect(vector<uint8_t> trame){
  *  \return true : l'adresse est correcte
  *  \return false : l'adresse est incorrecte
  */
-bool XBee::isExpCorrect(uint8_t exp){
-    uint8_t size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
+bool XBee::isExpCorrect(int exp){
+    int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
     while(i < size_list_addr){
         if(XB_LIST_ADR[i] == exp)
@@ -414,8 +418,8 @@ bool XBee::isExpCorrect(uint8_t exp){
  *  \return true : l'adresse est correcte
  *  \return false : l'adresse est incorrecte
  */
-bool XBee::isDestCorrect(uint8_t dest){
-    uint8_t size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
+bool XBee::isDestCorrect(int dest){
+    int size_list_addr = sizeof(XB_LIST_ADR)/sizeof(XB_LIST_ADR[0]), i = 0;
 
     while(i < size_list_addr){
         if(XB_LIST_ADR[i] == dest)
@@ -433,7 +437,7 @@ bool XBee::isDestCorrect(uint8_t dest){
  *  \return true : le caratère est bien celui attendu
  *  \return false : le caractère est incorrect
  */
-bool XBee::isStartSeqCorrect(uint8_t value){
+bool XBee::isStartSeqCorrect(int value){
     if(value == XB_V_START)
         return true;
 
@@ -446,7 +450,7 @@ bool XBee::isStartSeqCorrect(uint8_t value){
  *  \return true : le caratère est bien celui attendu
  *  \return false : le caractère est incorrect
  */
-bool XBee::isEndSeqCorrect(uint8_t value){
+bool XBee::isEndSeqCorrect(int value){
     if(value == XB_V_END)
         return true;
 
@@ -462,7 +466,7 @@ bool XBee::isEndSeqCorrect(uint8_t value){
  *  \return true : la valeur du CRC reçue est bien celle calculée à partir du reste de la trame
  *  \return false : la valeur du CRC est incohérente ou non calculable
  */
-bool XBee::isCRCCorrect(uint8_t crc_low, uint8_t crc_high, uint8_t trame[], uint8_t trame_size){
+bool XBee::isCRCCorrect(uint8_t crc_low, uint8_t crc_high, int trame[], int trame_size){
     int crc = crc16(trame, trame_size);
 
     uint8_t newcrc_low = crc & 0xFF;
@@ -475,20 +479,20 @@ bool XBee::isCRCCorrect(uint8_t crc_low, uint8_t crc_high, uint8_t trame[], uint
 }
 
 /*!
- *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
- *  \return rep : la valeur du buffer concaténée sous forme d'une chaine de caractère
+ *  \brief Permet de lire l'intégralité du buffer Rx de la RaspberryPi
+ *  \return rep : la valeur du buffer sous forme d'un vecteur d'entiers signés sur 32 bits
  */
-string XBee::readBuffer(){
+vector<int> XBee::readBuffer(){
     char *reponse(0);
     unsigned int timeout = 100;
     reponse = new char;
-    string rep = "";
+    vector<int> rep;
     delay(1);
     int i = 0;
     while(serial.available() > 0){
         i++;
         serial.readChar(reponse, timeout);
-        rep += *reponse;
+        rep.push_back(*reponse);
     }
     delete reponse;
     reponse = 0;
@@ -496,32 +500,36 @@ string XBee::readBuffer(){
     return rep;
 }
 
+
 /*!
- *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
- *  \return rep : la valeur du buffer concaténée sous forme d'un vecteur d'entiers
+ *   \brief Permet de lire l'intégralité du contenu du buffer Rx de la RaspberryPi et de le renvoyer sous forme d'objet string
+ *   \return rep : la valeur du buffer concaténée sous forme d'objet string
  */
-vector<uint8_t> XBee::readBytes(){
-    int *rep(0);
-    vector<uint8_t> rep_vector;
-    delay(1);
-    BUFFER_SIZE = serial.available();
+string XBee::readString() {
+     char *reponse(0);
+     unsigned int timeout = 100;
+     reponse = new char;
+     string rep;
+     delay(1);
+     int i = 0;
 
-    serial.readBytes(rep, BUFFER_SIZE);
-   
-    for(uint8_t i = 0; i < BUFFER_SIZE; i++){
-        rep_vector.push_back(rep[i]);
-    }
-    delete rep;
-    rep = 0;
+     while(serial.available() > 0){
+	i++;
+	serial.readChar(reponse, timeout);
+	rep += *reponse;
+     }
 
-    return rep_vector;
+      delete reponse;
+      reponse = 0;
+      return rep;
+
 }
 
 /*!
  *  \brief Permet l'attente et la vérification régulée d'une trame en entrée dans le buffer du port Rx de la RaspberryPi et d'appeler la fonction de découpe des trames.
  */
 void XBee::waitForATrame(){
-   vector<uint8_t> rep;
+   vector<int> rep;
    
    while(true){
      rep.clear();
@@ -529,7 +537,7 @@ void XBee::waitForATrame(){
      delay(1/100);
      
      if(serial.available() > 0){
-       rep = readBytes();
+       rep = readBuffer();
        subTrame(rep);
      }
    }
@@ -545,13 +553,14 @@ void XBee::waitForATrame(){
  *  \return {XB_SUB_TRAME_E_DECOUPAGE} la position des trames dans le message reçu est incorrecte : des caractères inconnus sont placés entre deux trames
  *  \return {XB_SUB_TRAME_E_START} le premier caractère lu dans le buffer n'est pas celui d'un début de trame
  *  \return {XB_SUB_TRAME_E_END} le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame
+ *  \return {XB_SUB_TRAME_E_NULL} aucun caractère de début et/ou de fin n'est présent dans le message reçu
  */
-int XBee::subTrame(vector<uint8_t> msg_recu){
+int XBee::subTrame(vector<int> msg_recu){
 
-    vector<uint8_t> list_start_seq {};
-    vector<uint8_t> list_end_seq {};
-    vector<uint8_t> decoupe {};
-    uint8_t decoupe_retour;
+    vector<int> list_start_seq {};
+    vector<int> list_end_seq {};
+    vector<int> decoupe {};
+    int decoupe_retour;
 
     for(uint8_t i = 0; i < msg_recu.size(); i++){
         if(msg_recu[i] == XB_V_START)
@@ -560,6 +569,9 @@ int XBee::subTrame(vector<uint8_t> msg_recu){
         if(msg_recu[i] == XB_V_END)
             list_end_seq.push_back(i);
     }
+
+    if(list_start_seq.size() == 0 || list_end_seq.size() == 0)
+	return XB_SUB_TRAME_E_NULL;
 
     if(list_start_seq.size() != list_end_seq.size())
         return XB_SUB_TRAME_E_SIZE;
@@ -574,6 +586,7 @@ int XBee::subTrame(vector<uint8_t> msg_recu){
         }
     }
 
+
     if(list_start_seq[0] != 0)
         return XB_SUB_TRAME_E_START;
     
@@ -584,10 +597,6 @@ int XBee::subTrame(vector<uint8_t> msg_recu){
        decoupe.clear();
        decoupe = slice(msg_recu, list_start_seq[i], list_end_seq[i]); 
        decoupe_retour = processTrame(decoupe);
-
-       if(decoupe_retour != XB_TRAME_E_SUCCESS){
-            cout << "code erreur : " << dec << decoupe_retour << endl;
-       }
     }   
 
     return XB_SUB_TRAME_E_SUCCESS;  
@@ -597,9 +606,11 @@ int XBee::subTrame(vector<uint8_t> msg_recu){
  *  \brief Permet d'envoyer des demandes de battements de coeur au second robot afin de savoir s'il est toujours opérationnel
  */
 void XBee::sendHeartbeat(){
-   while(true){
-      delay(1/100);
-      sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE);
+   char* msg;
+    msg[0] = XB_V_ACK;
+    while(true){
+      delay(3);
+      sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, msg);
    } 
 }
 
@@ -653,9 +664,9 @@ void XBee::afficherTrameRecue(Trame_t trame){
  *  \brief Fonction d'affichage des valeurs contenues dans un vecteur d'entiers
  *  \param v : le vecteur dont on souhaite afficher le contenu
  */
-void XBee::print(const vector<uint8_t> &v){
+void XBee::print(const vector<int> &v){
     copy(v.begin(), v.end(),
-            ostream_iterator<uint8_t>(cout, " "));
+            ostream_iterator<int>(cout << hex, " "));
     cout << endl;
 }
 
@@ -666,10 +677,10 @@ void XBee::print(const vector<uint8_t> &v){
  *  \param b : l'indice de la dernière valeur à découper
  *  \return vec : le sous-vecteur d'entiers découpé
  */
-vector<uint8_t> XBee::slice(const vector<uint8_t> &v, uint8_t a, uint8_t b){
+vector<int> XBee::slice(const vector<int> &v, int a, int b){
     auto first = v.cbegin() + a;
     auto last = v.cbegin() + b + 1;
 
-    vector<uint8_t> vec(first, last);
+    vector<int> vec(first, last);
     return vec;
 }
