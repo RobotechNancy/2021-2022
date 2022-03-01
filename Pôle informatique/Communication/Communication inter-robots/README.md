@@ -9,8 +9,8 @@
 
 |Début de trame|Adr_emetteur|Adr_destinataire|Id_trame|Nb octets msg|Code_fonction|Paramètres|CRC16 Modbus|Fin de trame|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|*1 octet*|*1 octet*|*1 octet*|*1 octet*|*1 octet*|*1 octet*|*<255 octets*|*2 octets*|*1 octet*|
-|STX|0xXX|0xXX|0xXX|0xXX 0xXX|0xXX|DATA|0xXX|EOT|
+|*1 octet*|*1 octet*|*1 octet*|*1 octet*|*2 octets*|*1 octet*|*<255 octets*|*2 octets*|*1 octet*|
+|STX|0xXX|0xXX|0xXX|0xXX 0xXX|0xXX|DATA|0xXX 0xXX|EOT|
 
 > *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#define.h**
 
