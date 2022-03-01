@@ -1,4 +1,5 @@
 /*! 
+ * 	\file canClass.h
  *  \brief     classe de gestion d'un bus can
  *  \details   Cette classe permet d'envoyer et de recevoir des messages via un bus can
  *  \author    Theo RUSINOWITCH <theo.rusinowitch1@etu.univ-lorraine.fr>
@@ -27,12 +28,12 @@ struct CanResponse_t{
 	bool isRep;	/* vrai si c'est une reponse a une requete, faux sinon */
 	uint RepId;	/* nb de rep atendu si requete, num de la rep si reponse */
 	uint dataLen;	/* frame payload length in byte (0 .. 8) */
-	char data[8];
+	uint8_t data[8];
 }; 
 
 
 /*!
- *	\class CAN
+ *	\class Can
  *  \brief classe qui gère l'envoie et la réception de msg via un bus can
  *  \param s idantifiant du gestionnaire du bus
  *  \param threadListen objet du thread d'écoute du bus can
