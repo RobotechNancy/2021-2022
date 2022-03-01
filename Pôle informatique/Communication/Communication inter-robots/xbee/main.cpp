@@ -21,13 +21,13 @@ int main(int argc, char *argv[]){
       //  cout << "Configuration AT non réussie | [Code erreur : " << error_configuration << "]" << endl;
        
 
-    char msg[] = {'c', 'o', 'u', 'c', 'o', 'u'};
+    //char msg[] = {'c', 'o', 'u', 'c', 'o', 'u'};
 
-    xbee.sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, msg);
+    //xbee.sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, msg);
 
     //string test = "21213191E63";
 
-    //vector<uint8_t> test = {0x02, 0x12, 0X13, 0X1, 0X9, 0x1E, 0x63, 0x6F, 0x75, 0x63, 0x6F, 0x75, 0x8F, 0x5B, 0x03};
+    //vector<int> test = {0x02, 0x12, 0X13, 0X1, 0XA, 0x1E, 0x63, 0x6F, 0x75, 0x63, 0x6F, 0x75, 0x9B, 0x56, 0x03};
 
     //int result = xbee.subTrame(test);
 
@@ -39,9 +39,10 @@ int main(int argc, char *argv[]){
     //string trame_totale = "";
 
     //xbee.subTrame(trame_totale);
-
-    //thread t(&XBee::waitForATrame, xbee);
-    //while(true){}
+    
+    thread heartbeat(&XBee::sendHeartbeat, xbee);
+    thread t(&XBee::waitForATrame, xbee);
+    while(true){}
 
     //t.join();
 

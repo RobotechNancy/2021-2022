@@ -60,6 +60,7 @@
 #define XB_SUB_TRAME_E_DECOUPAGE -303
 #define XB_SUB_TRAME_E_START -304
 #define XB_SUB_TRAME_E_END -305
+#define XB_SUB_TRAME_E_NULL -306
 
 // Codes d'erreurs AT
 #define XB_AT_E_SUCCESS 400
