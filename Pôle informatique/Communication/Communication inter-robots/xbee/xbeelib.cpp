@@ -6,7 +6,6 @@
     \date    03/02/2022
  */
 #include "xbeelib.h"
-#include <iterator>
 
 using namespace std;
 
@@ -45,9 +44,9 @@ XBee::~XBee(){ }
  */
 int XBee::openSerialConnection(){
     serial.flushReceiver();
-    char errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
+    int errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
 
-    return (int) errorOpening;
+    return errorOpening;
 }
 
 /*!
