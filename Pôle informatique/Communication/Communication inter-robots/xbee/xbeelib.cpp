@@ -290,7 +290,6 @@ int XBee::processTrame(vector<int> trame_recue){
     if(!isTrameSizeCorrect(trame_recue))
         return XB_TRAME_E_SIZE;
 
-    print(trame_recue);
     Trame_t trame = {
         .start_seq = trame_recue[0],
         .adr_emetteur = trame_recue[1],
@@ -554,6 +553,7 @@ void XBee::waitForATrame(){
  *  \return {XB_SUB_TRAME_E_DECOUPAGE} la position des trames dans le message reçu est incorrecte : des caractères inconnus sont placés entre deux trames
  *  \return {XB_SUB_TRAME_E_START} le premier caractère lu dans le buffer n'est pas celui d'un début de trame
  *  \return {XB_SUB_TRAME_E_END} le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame
+ *  \return {XB_SUB_TRAME_E_NULL} aucun caractère de début et/ou de fin n'est présent dans le message reçu
  */
 int XBee::subTrame(vector<int> msg_recu){
 
@@ -586,8 +586,6 @@ int XBee::subTrame(vector<int> msg_recu){
         }
     }
 
-    cout << "debut : " << list_start_seq[0] << endl; 
-    cout << "fin : " << list_end_seq[0] << endl;
 
     if(list_start_seq[0] != 0)
         return XB_SUB_TRAME_E_START;
@@ -599,12 +597,6 @@ int XBee::subTrame(vector<int> msg_recu){
        decoupe.clear();
        decoupe = slice(msg_recu, list_start_seq[i], list_end_seq[i]); 
        decoupe_retour = processTrame(decoupe);
-
-       print(decoupe);
-
-       if(decoupe_retour != XB_TRAME_E_SUCCESS){
-            cout << "code erreur : " << dec << decoupe_retour << endl;
-       }
     }   
 
     return XB_SUB_TRAME_E_SUCCESS;  
