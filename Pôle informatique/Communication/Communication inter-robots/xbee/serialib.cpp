@@ -125,7 +125,7 @@ serialib::~serialib()
      \return -8 Stopbits not recognized
      \return -9 Parity not recognized
   */
-char serialib::openDevice(const char *Device, const unsigned int Bauds,
+int serialib::openDevice(const char *Device, const unsigned int Bauds,
                           SerialDataBits Databits,
                           SerialParity Parity,
                           SerialStopBits Stopbits) {

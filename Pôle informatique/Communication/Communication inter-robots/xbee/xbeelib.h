@@ -5,7 +5,6 @@
  \version 3.0
  \date    28/02/2022
  */
-
 #ifndef XBEE_H
 #define XBEE_H
 
@@ -40,12 +39,6 @@ public:
 
     // Fermeture de la connexion série
     void closeSerialConnection();
-    
-    // Entrée dans le mode de configuration AT
-    bool enterATMode();
-
-    // Sortie du mode de configuration AT
-    bool exitATMode();
 
     // Vérification et correction de la configuration AT du module
     int checkATConfig();
@@ -61,69 +54,100 @@ public:
 
     // Création et envoi de la trame de message structurée
     int sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data = 0x00);
-
-    int processTrame(std::vector<int> trame);
     
+    // Envoi d'un objet string quelconque
     void sendMsg(std::string msg);
 
+    // Attente de trames dans le buffer Rx et appel des fonctions de traitement
     void waitForATrame();
 
-    std::vector<int> readBuffer();
+    // Envoi de la demande de battement de coeur
+    void sendHeartbeat();
 
-    std::string readString();
-
-    int subTrame(std::vector<int> msg_recu);
-
+    // Conversion char* en string
     std::string charToString(char* message);
 
-    bool isExpCorrect(int exp);
-
-    bool isDestCorrect(int dest);
-
-    bool isCodeFctCorrect(int code_fct);
-
-    bool isTrameSizeCorrect(std::vector<int> trame);
-
-    int processCodeFct(int code_fct, int exp);
-
-    void sendHeartbeat();
+    // Conversion string en char*
+    char* stringToChar(std::string chaine);
+    
+    // Affichage du contenu d'un vecteur d'entiers
+    void print(const std::vector<int> &v);
 
 private:
 
+    /*!
+     * \typedef Trame_t
+     * \brief Format des trames reçues en fonction des paramètres de la trame
+     */  
     typedef struct{
-      int start_seq;
-      int adr_emetteur;
-      int adr_dest;
-      int id_trame;
-      int nb_octets_msg;
-      int code_fct;
-      std::vector<int> param;
-      int crc_low;
-      int crc_high;
-      int end_seq;
+      int start_seq; /*!< Caractère de début de trame */
+      int adr_emetteur; /*!< Adresse de l'émetteur de la trame */
+      int adr_dest; /*!< Adresse du destinataire de la trame */
+      int id_trame; /*!< ID de la trame */
+      int nb_octets_msg; /*!< Nombre d'octets du champ data + code fonction */
+      int code_fct; /*!< Code fonction de la trame */
+      std::vector<int> param; /*!< Data de la trame */
+      int crc_low; /*!< Bits de poids faible du CRC */
+      int crc_high; /*!< Bits de poids fort du CRC */
+      int end_seq; /*!< Caractère de fin de trame */
 
     } Trame_t;
 
+    // Entrée dans le mode de configuration AT
+    bool enterATMode();
+
+    // Sortie du mode de configuration AT
+    bool exitATMode();
+
+    // Vérifie si l'adresse de l'expéditeur existe 
+    bool isExpCorrect(int exp);
+
+    // Vérifie si l'adresse de destination existe 
+    bool isDestCorrect(int dest);
+
+    // Vérifie si le code fonction existe 
+    bool isCodeFctCorrect(int code_fct);
+
+    // Vérifie si la taille de la trame est cohérente 
+    bool isTrameSizeCorrect(std::vector<int> trame);
+
+    // Découpe un ensemble de trames en trames uniques
+    int subTrame(std::vector<int> msg_recu);
+
+    // Interprète le code fonction et exécute les fonctions associées
+    int processCodeFct(int code_fct, int exp);
+
+    // Affichage des différents paramètres d'une structure Trame_t 
     void afficherTrameRecue(Trame_t trame);
 
-    char* stringToChar(std::string chaine);
+    // Interprète et contrôle l'intégrité d'une trame reçue
+    int processTrame(std::vector<int> trame);
 
-    void print(const std::vector<int> &v);
+    // Lis le contenu du buffer Rx de la RaspberryPi
+    std::vector<int> readBuffer();
+
+    // Lis le contenu du buffer Rx de la RaspberryPi
+    std::string readString();
 
     // Calcul du CRC16 Modbus de la trame
     int crc16(int trame[], uint8_t taille);
     
+    // Vérifie si le caractère de début de trame est correct
     bool isStartSeqCorrect(int value);
 
+    // Vérifie si le caractère de fin de trame est correct
     bool isEndSeqCorrect(int value);
 
+    // Vérifie si le CRC de la trame est correct
     bool isCRCCorrect(uint8_t crc_low, uint8_t crc_high, int trame[], int trame_size);
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);
 
+    // Découpe un vecteur d'entiers en un sous vecteur 
     std::vector<int> slice(const std::vector<int> &v, int a, int b);
 
+    // Variable calculant l'ID de la trame
     int ID_TRAME = 0x00;
 };
 
