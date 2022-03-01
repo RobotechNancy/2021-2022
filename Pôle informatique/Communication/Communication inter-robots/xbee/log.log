@@ -1,0 +1,57 @@
+[16:48:48 - xbee] entrée en mode AT
+[16:48:49 - xbee] réponse du Xbee : OK
+[16:48:49 - xbee] envoi de la commande AT : ATAP=0
+[16:48:50 - xbee] réponse du Xbee : OK
+[16:48:50 - xbee] envoi de la commande AT : ATBD=3
+[16:48:51 - xbee] réponse du Xbee : OK
+[16:48:52 - xbee] envoi de la commande AT : ATEE=1
+[16:48:53 - xbee] réponse du Xbee : OK
+[16:48:53 - xbee] envoi de la commande AT : ATKY=32303032
+[16:48:54 - xbee] réponse du Xbee : OK
+[16:48:54 - xbee] envoi de la commande AT : ATCH=C
+[16:48:55 - xbee] réponse du Xbee : OK
+[16:48:55 - xbee] envoi de la commande AT : ATID=3332
+[16:48:56 - xbee] réponse du Xbee : OK
+[16:48:56 - xbee] envoi de la commande AT : ATCE=0
+[16:48:57 - xbee] réponse du Xbee : OK
+[16:48:57 - xbee] envoi de la commande AT : ATNB=0
+[16:48:58 - xbee] réponse du Xbee : OK
+[16:48:58 - xbee] envoi de la commande AT : ATMY=1
+[16:48:59 - xbee] réponse du Xbee : OK
+[16:48:59 - xbee] envoi de la commande AT : ATDL=2
+[16:49:0 - xbee] réponse du Xbee : OK
+[16:49:0 - xbee] écriture des paramètres AT dans la mémoire
+[16:49:1 - xbee] réponse du Xbee : OK
+[16:49:1 - xbee] sortie du mode AT
+[16:49:2 - xbee] réponse du Xbee : OK
+[16:49:5 - xbee] envoi de la trame n°7 effectué ave succès
+[16:49:8 - xbee] envoi de la trame n°8 effectué ave succès
+[16:49:11 - xbee] envoi de la trame n°9 effectué ave succès
+[16:49:14 - xbee] envoi de la trame n°10 effectué ave succès
+[16:49:17 - xbee] envoi de la trame n°11 effectué ave succès
+[16:49:20 - xbee] envoi de la trame n°12 effectué ave succès
+[16:49:23 - xbee] envoi de la trame n°13 effectué ave succès
+[16:49:26 - xbee] envoi de la trame n°14 effectué ave succès
+[16:49:29 - xbee] envoi de la trame n°15 effectué ave succès
+[16:49:32 - xbee] envoi de la trame n°16 effectué ave succès
+[16:49:35 - xbee] envoi de la trame n°17 effectué ave succès
+[16:49:38 - xbee] envoi de la trame n°18 effectué ave succès
+[16:49:41 - xbee] envoi de la trame n°19 effectué ave succès
+[16:49:44 - xbee] envoi de la trame n°20 effectué ave succès
+[16:49:47 - xbee] envoi de la trame n°21 effectué ave succès
+[16:49:50 - xbee] envoi de la trame n°22 effectué ave succès
+[16:49:53 - xbee] envoi de la trame n°23 effectué ave succès
+[16:49:56 - xbee] envoi de la trame n°24 effectué ave succès
+[16:49:59 - xbee] envoi de la trame n°25 effectué ave succès
+[16:50:2 - xbee] envoi de la trame n°26 effectué ave succès
+[16:50:5 - xbee] envoi de la trame n°27 effectué ave succès
+[16:50:8 - xbee] envoi de la trame n°28 effectué ave succès
+[16:50:11 - xbee] envoi de la trame n°29 effectué ave succès
+[16:50:14 - xbee] envoi de la trame n°30 effectué ave succès
+[16:50:17 - xbee] envoi de la trame n°31 effectué ave succès
+[16:50:20 - xbee] envoi de la trame n°32 effectué ave succès
+[16:50:23 - xbee] envoi de la trame n°33 effectué ave succès
+[16:50:26 - xbee] envoi de la trame n°34 effectué ave succès
+[16:50:29 - xbee] envoi de la trame n°35 effectué ave succès
+[16:50:32 - xbee] envoi de la trame n°36 effectué ave succès
+[16:50:35 - xbee] envoi de la trame n°37 effectué ave succès

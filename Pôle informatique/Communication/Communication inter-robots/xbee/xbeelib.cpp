@@ -280,7 +280,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     trame[strlen(data)+9] = XB_V_END;
 
     serial.writeBytes(trame, length_trame);
-    logXbee << "envoi de la trame : " << trame << mendl; 
+    logXbee << "envoi de la trame n°" << id_trame_low+id_trame_high  << " effectué ave succès" << mendl; 
 
     return XB_TRAME_E_SUCCESS;
 }
