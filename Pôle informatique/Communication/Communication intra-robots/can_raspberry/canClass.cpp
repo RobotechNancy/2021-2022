@@ -1,4 +1,5 @@
 /*! 
+ * 	\file canClass.cpp
  *  \brief     classe de gestion d'un bus can
  *  \details   Cette classe permet d'envoyer et de recevoir des messages via un bus can
  *  \author    Theo RUSINOWITCH <theo.rusinowitch1@etu.univ-lorraine.fr>
@@ -247,7 +248,9 @@ void Can::listen(){
         cout << "   isRep : " << reponse.isRep;
         cout << "   RepId : " << hex << reponse.RepId;
         cout << "       Data : ["<< (int)reponse.dataLen <<"] ";
-        for (int i = 0; i < frame.can_dlc; i++) printf("%02X ",reponse.data[i]);
+        for (int i = 0; i < frame.can_dlc; i++){
+            cout << reponse.data[i];
+        } 
         printf("\r\n");
 
         thread test(&Can::traitement,this, reponse);

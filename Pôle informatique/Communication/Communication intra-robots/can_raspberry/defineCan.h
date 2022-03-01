@@ -34,7 +34,7 @@
 #define CAN_ADDR_BASE_ROULANTE 2
 
 
-#define CAN_LIST_ADDR (int[]){CAN_ADDR_RASPBERRY, CAN_ADDR_BASE_ROULANTE}
+#define CAN_LIST_ADDR (uint[]){CAN_ADDR_RASPBERRY, CAN_ADDR_BASE_ROULANTE}
 
 //definition des codes fonctions
 #define AVANCE 0x01
@@ -45,7 +45,7 @@
 #define REP_AVANCE 0x81
 
 
-#define CAN_LIST_CODE_FCT (int[]){AVANCE, REP_AVANCE}
+#define CAN_LIST_CODE_FCT (uint[]){AVANCE, REP_AVANCE}
 
 //definition des code erreur
 
