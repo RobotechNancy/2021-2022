@@ -39,6 +39,6 @@ int main(int argc, char *argv[]){
 
     //xbee.closeSerialConnection();
     
-    cout << ": Connexion fermée avec succès sur le port \"" << XB_SERIAL_PORT << "\".\n" << endl;
+    //cout << ": Connexion fermée avec succès sur le port \"" << XB_SERIAL_PORT << "\".\n" << endl;
     return EXIT_SUCCESS;
 }

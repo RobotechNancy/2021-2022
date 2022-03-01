@@ -16,10 +16,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-#include <algorithm>
-#include <sstream>
 #include <iterator>
-#include <bitset>
 
 /*!  \class     XBee
  *   \brief     Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plusieurs modules XBee.
