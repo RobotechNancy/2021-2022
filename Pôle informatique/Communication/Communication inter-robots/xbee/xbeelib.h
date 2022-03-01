@@ -60,9 +60,9 @@ public:
     bool writeATConfig();
 
     // Création et envoi de la trame de message structurée
-    int sendTrame(int ad_dest, int code_fct, char* data = 0x00);
+    int sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data = 0x00);
 
-    int processTrame(std::vector<int> trame);
+    int processTrame(std::vector<uint8_t> trame);
     
     void sendMsg(std::string msg);
 
@@ -70,37 +70,37 @@ public:
 
     std::string readBuffer();
 
-    std::vector<int> readBytes();
+    std::vector<uint8_t> readBytes();
 
-    int subTrame(std::vector<int> msg_recu);
+    int subTrame(std::vector<uint8_t> msg_recu);
 
     std::string charToString(char* message);
 
-    bool isExpCorrect(int exp);
+    bool isExpCorrect(uint8_t exp);
 
-    bool isDestCorrect(int dest);
+    bool isDestCorrect(uint8_t dest);
 
-    bool isCodeFctCorrect(int code_fct);
+    bool isCodeFctCorrect(uint8_t code_fct);
 
-    bool isTrameSizeCorrect(std::vector<int> trame);
+    bool isTrameSizeCorrect(std::vector<uint8_t> trame);
 
-    int processCodeFct(int code_fct, int exp);
+    int processCodeFct(uint8_t code_fct, uint8_t exp);
 
     void sendHeartbeat();
 
 private:
 
     typedef struct{
-      int start_seq;
-      int adr_emetteur;
-      int adr_dest;
-      int id_trame;
-      int nb_octets_msg;
-      int code_fct;
-      std::vector<int> param;
-      int crc_low;
-      int crc_high;
-      int end_seq;
+      uint8_t start_seq;
+      uint8_t adr_emetteur;
+      uint8_t adr_dest;
+      uint8_t id_trame;
+      uint8_t nb_octets_msg;
+      uint8_t code_fct;
+      std::vector<uint8_t> param;
+      uint8_t crc_low;
+      uint8_t crc_high;
+      uint8_t end_seq;
 
     } Trame_t;
 
@@ -108,21 +108,21 @@ private:
 
     char* stringToChar(std::string chaine);
 
-    void print(const std::vector<int> &v);
+    void print(const std::vector<uint8_t> &v);
 
     // Calcul du CRC16 Modbus de la trame
-    int crc16(int trame[], int taille);
+    int crc16(uint8_t trame[], uint8_t taille);
     
-    bool isStartSeqCorrect(int value);
+    bool isStartSeqCorrect(uint8_t value);
 
-    bool isEndSeqCorrect(int value);
+    bool isEndSeqCorrect(uint8_t value);
 
-    bool isCRCCorrect(int crc_low, int crc_high, int trame[], int trame_size);
+    bool isCRCCorrect(uint8_t crc_low, uint8_t crc_high, uint8_t trame[], uint8_t trame_size);
 
     // Retard de temporisation dans l'exécution du code
     void delay(unsigned int time);
 
-    std::vector<int> slice(const std::vector<int> &v, int a, int b);
+    std::vector<uint8_t> slice(const std::vector<uint8_t> &v, uint8_t a, uint8_t b);
 
     int ID_TRAME = 0x00;
     int BUFFER_SIZE = 0;
