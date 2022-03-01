@@ -1,0 +1,141 @@
+\hypertarget{struct_can_response__t}{}\doxysection{Référence de la structure Can\+Response\+\_\+t}
+\label{struct_can_response__t}\index{CanResponse\_t@{CanResponse\_t}}
+
+
+classe de gestion d\textquotesingle{}un bus can  
+
+
+
+
+{\ttfamily \#include $<$can\+Class.\+h$>$}
+
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{struct_can_response__t_a453ff84b77410a4ae3624d05cea8f3dd}{addr}}
+\item 
+uint \mbox{\hyperlink{struct_can_response__t_aa9f95aad100040074ffba8c502680e7e}{emetteur}}
+\item 
+uint \mbox{\hyperlink{struct_can_response__t_a6934a75268c9d93b17e35c715a8fb464}{code\+Fct}}
+\item 
+bool \mbox{\hyperlink{struct_can_response__t_aa51075910c54851cc8daf19ec6367469}{is\+Rep}}
+\item 
+uint \mbox{\hyperlink{struct_can_response__t_aa6158dd306c9806f5f86c6ac9bca9f96}{Rep\+Id}}
+\item 
+uint \mbox{\hyperlink{struct_can_response__t_a744927d9f0dcb9cfd21dabdf6a221259}{data\+Len}}
+\item 
+char \mbox{\hyperlink{struct_can_response__t_ac167ce09dbe42c5a5497bd7331f8f22d}{data}} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe de gestion d\textquotesingle{}un bus can 
+
+Cette classe permet d\textquotesingle{}envoyer et de recevoir des messages via un bus can \begin{DoxyAuthor}{Auteur}
+Theo RUSINOWITCH \href{mailto:theo.rusinowitch1@etu.univ-lorraine.fr}{\texttt{ theo.\+rusinowitch1@etu.\+univ-\/lorraine.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+1a 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/2022
+\end{DoxyDate}
+contient un message décoder venant du bus can 
+\begin{DoxyParams}{Paramètres}
+{\em addr} & addresse du destinataire du message \\
+\hline
+{\em emetteur} & adresse de l\textquotesingle{}émeteur du message \\
+\hline
+{\em code\+Fct} & code fonction du message \\
+\hline
+{\em is\+Rep} & vrai si c\textquotesingle{}est une reponse a une requete, faux sinon \\
+\hline
+{\em Rep\+Id} & indique le nombre de reponse atendu pour une requete et le num de la reponse pour une reponse \\
+\hline
+{\em data\+Len} & frame payload length in byte (0 .. 8) aka data length code \\
+\hline
+{\em data} & \mbox{\hyperlink{class_c_a_n}{CAN}} frame payload (up to 8 byte) \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00023}{23}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{struct_can_response__t_a453ff84b77410a4ae3624d05cea8f3dd}\label{struct_can_response__t_a453ff84b77410a4ae3624d05cea8f3dd}} 
+\index{CanResponse\_t@{CanResponse\_t}!addr@{addr}}
+\index{addr@{addr}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{addr}{addr}}
+{\footnotesize\ttfamily uint Can\+Response\+\_\+t\+::addr}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00024}{24}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_a6934a75268c9d93b17e35c715a8fb464}\label{struct_can_response__t_a6934a75268c9d93b17e35c715a8fb464}} 
+\index{CanResponse\_t@{CanResponse\_t}!codeFct@{codeFct}}
+\index{codeFct@{codeFct}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{codeFct}{codeFct}}
+{\footnotesize\ttfamily uint Can\+Response\+\_\+t\+::code\+Fct}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00026}{26}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_ac167ce09dbe42c5a5497bd7331f8f22d}\label{struct_can_response__t_ac167ce09dbe42c5a5497bd7331f8f22d}} 
+\index{CanResponse\_t@{CanResponse\_t}!data@{data}}
+\index{data@{data}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily char Can\+Response\+\_\+t\+::data\mbox{[}8\mbox{]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00030}{30}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_a744927d9f0dcb9cfd21dabdf6a221259}\label{struct_can_response__t_a744927d9f0dcb9cfd21dabdf6a221259}} 
+\index{CanResponse\_t@{CanResponse\_t}!dataLen@{dataLen}}
+\index{dataLen@{dataLen}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{dataLen}{dataLen}}
+{\footnotesize\ttfamily uint Can\+Response\+\_\+t\+::data\+Len}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00029}{29}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_aa9f95aad100040074ffba8c502680e7e}\label{struct_can_response__t_aa9f95aad100040074ffba8c502680e7e}} 
+\index{CanResponse\_t@{CanResponse\_t}!emetteur@{emetteur}}
+\index{emetteur@{emetteur}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{emetteur}{emetteur}}
+{\footnotesize\ttfamily uint Can\+Response\+\_\+t\+::emetteur}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00025}{25}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_aa51075910c54851cc8daf19ec6367469}\label{struct_can_response__t_aa51075910c54851cc8daf19ec6367469}} 
+\index{CanResponse\_t@{CanResponse\_t}!isRep@{isRep}}
+\index{isRep@{isRep}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{isRep}{isRep}}
+{\footnotesize\ttfamily bool Can\+Response\+\_\+t\+::is\+Rep}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00027}{27}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+\mbox{\Hypertarget{struct_can_response__t_aa6158dd306c9806f5f86c6ac9bca9f96}\label{struct_can_response__t_aa6158dd306c9806f5f86c6ac9bca9f96}} 
+\index{CanResponse\_t@{CanResponse\_t}!RepId@{RepId}}
+\index{RepId@{RepId}!CanResponse\_t@{CanResponse\_t}}
+\doxysubsubsection{\texorpdfstring{RepId}{RepId}}
+{\footnotesize\ttfamily uint Can\+Response\+\_\+t\+::\+Rep\+Id}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00028}{28}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{can_class_8h}{can\+Class.\+h}}\end{DoxyCompactItemize}
