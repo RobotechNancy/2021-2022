@@ -3,7 +3,7 @@
 - la communication inter-robots via XBee (envoi/réception de trames)
 - le paramétrage des modules XBee en UART via le port GPIO de la RaspberryPi 
 
-> *Remarque :* Tout les codes sont écrits en style **C/C++**
+> *Remarque :* Tous les codes sont écrits en style **C/C++**
 
 # Format de la trame des messages envoyés et reçus :
 
