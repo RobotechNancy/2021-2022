@@ -10,6 +10,7 @@
 
 #include "define.h"
 #include "serialib.h"
+#include "loglib.h"
 #include <string>
 #include <vector>
 #include <iomanip>

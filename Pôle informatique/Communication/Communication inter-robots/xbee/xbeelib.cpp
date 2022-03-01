@@ -10,7 +10,7 @@
 using namespace std;
 
 serialib serial;
-
+Log logXbee("xbee");
 
 //_____________________________________
 // ::: Constructeurs et destructeurs :::
@@ -135,7 +135,7 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
  */
 bool XBee::readATResponse(const char *value){
     string reponse = readString();
-
+    logXbee << "réponse du Xbee : " << reponse << mendl;
     if(reponse == value) return true;
     else return false;
 }
@@ -150,6 +150,7 @@ bool XBee::enterATMode(){
     //cout << "* Entrée en mode AT..." << endl;
     delay(2);
     serial.writeString(XB_AT_V_END_LINE);
+    logXbee << "entrée en mode AT" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -162,6 +163,7 @@ bool XBee::exitATMode(){
     serial.writeString(XB_AT_CMD_EXIT);
     serial.writeString(XB_AT_V_END_LINE);
     //cout << "* Sortie du mode AT..." << endl;
+    logXbee << "sortie du mode AT" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -174,6 +176,7 @@ bool XBee::writeATConfig(){
     serial.writeString(XB_AT_CMD_WRITE_CONFIG);
     serial.writeString(XB_AT_V_END_LINE);
     //cout << "* Ecriture de la configuration AT..." << endl;
+    logXbee << "écriture des paramètres AT dans la mémoire" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -189,6 +192,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     serial.writeString(command);
     serial.writeString(value);
     serial.writeString(XB_AT_V_END_LINE);
+    logXbee << "envoi de la commande AT : " << command << "=" << value << mendl;
     if(mode == XB_AT_M_GET){
         //cout << "* Envoi de la commande " << command << "...\n";
         return readATResponse(value);
@@ -276,6 +280,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     trame[strlen(data)+9] = XB_V_END;
 
     serial.writeBytes(trame, length_trame);
+    logXbee << "envoi de la trame : " << trame << mendl; 
 
     return XB_TRAME_E_SUCCESS;
 }
@@ -288,13 +293,14 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
  *  \return {XB_TRAME_E_END} dernier caractère de la trame incorrect
  *  \return {XB_TRAME_E_CRC} valeur du CRC incorrecte
  *  \return {XB_TRAME_E_EXP} adresse de l'expéditeur incorrecte ou inconnue
- *  \return {XB_TRAME_E_DEST} addresse du destinataire incorrecte ou inconnue
+ *  \return {XB_TRAME_E_DEST} adresse du destinataire incorrecte ou inconnue
  */
 int XBee::processTrame(vector<int> trame_recue){
     
-    if(!isTrameSizeCorrect(trame_recue))
+    if(!isTrameSizeCorrect(trame_recue)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_SIZE << " : taille de la trame incorrecte ou non concordante " << mendl;
         return XB_TRAME_E_SIZE;
-
+    }
     Trame_t trame = {
         .start_seq = trame_recue[0],
         .adr_emetteur = trame_recue[1],
@@ -324,22 +330,34 @@ int XBee::processTrame(vector<int> trame_recue){
         decoupe_trame[i] = trame_recue[i];
     }
 
-    if(!isStartSeqCorrect(trame.start_seq))
+    if(!isStartSeqCorrect(trame.start_seq)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_START << " : premier caractère de la trame incorrect " << mendl;
         return XB_TRAME_E_START;
+    }
 
-    if(!isEndSeqCorrect(trame.end_seq))
+    if(!isEndSeqCorrect(trame.end_seq)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_END << " : dernier caractère de la trame incorrect " << mendl;
         return XB_TRAME_E_END;
+    }
 
-    if(!isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2))
+    if(!isCRCCorrect(trame.crc_low, trame.crc_high, decoupe_trame, trame_recue[4]+2)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_CRC << " : valeur du CRC incorrecte " << mendl;
         return XB_TRAME_E_CRC;
+    }
 
-    if(!isExpCorrect(trame.adr_emetteur))
+    if(!isExpCorrect(trame.adr_emetteur)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_EXP << " : adresse de l'expéditeur incorrecte ou inconnue " << mendl;
         return XB_TRAME_E_EXP;
+    }
 
-    if(!isDestCorrect(trame.adr_dest))
+    if(!isDestCorrect(trame.adr_dest)){
+        logXbee << "/!\\ (process trame) erreur " << XB_TRAME_E_DEST << " : adresse du destinataire incorrecte ou inconnue " << mendl;
         return XB_TRAME_E_DEST;
+    }
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
+
+    logXbee << "trame n°" << trame.id_trame_high+trame.id_trame_low << "a été traitée avec succès " << mendl;
 	
     return XB_TRAME_E_SUCCESS;
 }
@@ -347,13 +365,14 @@ int XBee::processTrame(vector<int> trame_recue){
 /*!
  *  \brief Interprète le code fonction issu d'une trame reçue
  *  \return {XB_FCT_E_SUCCESS} succès
- *  \return {XB_FCT_E_NOT_FOUND} code erreur incorrect
- *  \return {XB_FCT_E_NONE_REACHABLE} code erreur existant mais ne déclenchant aucune action  
+ *  \return {XB_FCT_E_NOT_FOUND} code fonction incorrect
+ *  \return {XB_FCT_E_NONE_REACHABLE} code fonction existant mais ne déclenchant aucune action  
  */
 int XBee::processCodeFct(int code_fct, int exp){
-    if(!isCodeFctCorrect(code_fct))
+    if(!isCodeFctCorrect(code_fct)){
+        logXbee << "/!\\ (process code fonction) erreur " << XB_FCT_E_NOT_FOUND << " : code fonction incorrect " << mendl;
         return XB_FCT_E_NOT_FOUND;
-
+    }
     char msg[1];
     switch(code_fct){
        case XB_FCT_TEST_ALIVE :
@@ -362,9 +381,11 @@ int XBee::processCodeFct(int code_fct, int exp){
            break;
 
        default :
+           logXbee << "/!\\ (process code fonction) erreur " << XB_FCT_E_NONE_REACHABLE << " : code fonction existant mais ne déclenchant aucune action  " << mendl;
            return XB_FCT_E_NONE_REACHABLE;
     }
 
+    logXbee << "code fonction n°" << code_fct << " traité avec succès" << mendl;
     return XB_FCT_E_SUCCESS;
 }
 
@@ -576,28 +597,40 @@ int XBee::subTrame(vector<int> msg_recu){
             list_end_seq.push_back(i);
     }
 
-    if(list_start_seq.size() == 0 || list_end_seq.size() == 0)
-	return XB_SUB_TRAME_E_NULL;
+    if(list_start_seq.size() == 0 || list_end_seq.size() == 0){
+        logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_NULL << " : aucun caractère de début et/ou de fin n'est présent dans le message reçu " << mendl;
+	    return XB_SUB_TRAME_E_NULL;
+    }
 
-    if(list_start_seq.size() != list_end_seq.size())
+    if(list_start_seq.size() != list_end_seq.size()){
+        logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_SIZE << " : les caractères de début et de fin de trame ne sont pas au même nombre " << mendl;
         return XB_SUB_TRAME_E_SIZE;
+    }
 
     for(uint8_t i = 0; i < list_start_seq.size(); i++){
-        if(list_start_seq[i] > list_end_seq[i])
+        if(list_start_seq[i] > list_end_seq[i]){
+            logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_REPARTITION << " : certains caractères de début de trame sont placés après des caractères de fin de trame " << mendl;
             return XB_SUB_TRAME_E_REPARTITION;
+        }
 
         if(i != 0){
-            if(list_start_seq[i] != list_end_seq[i-1]-1)
+            if(list_start_seq[i] != list_end_seq[i-1]-1){
+                logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_DECOUPAGE << " : des caractères inconnus sont placés entre deux trames " << mendl;
                 return XB_SUB_TRAME_E_DECOUPAGE;
+            }
         }
     }
 
 
-    if(list_start_seq[0] != 0)
+    if(list_start_seq[0] != 0){
+        logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_START << " : le premier caractère lu dans le buffer n'est pas celui d'un début de trame " << mendl;
         return XB_SUB_TRAME_E_START;
+    }
     
-    if(list_end_seq[list_end_seq.size()-1] != msg_recu.size()-1)
+    if(list_end_seq[list_end_seq.size()-1] != msg_recu.size()-1){
+        logXbee << "/!\\ (découpe trame) erreur " << XB_SUB_TRAME_E_END << " : le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame " << mendl;
         return XB_SUB_TRAME_E_END;
+    }
     
     for(uint8_t i = 0; i < list_start_seq.size(); i++){
        decoupe.clear();
@@ -605,6 +638,7 @@ int XBee::subTrame(vector<int> msg_recu){
        decoupe_retour = processTrame(decoupe);
     }   
 
+    logXbee << "découpage des trames effectué avec succès" << mendl;
     return XB_SUB_TRAME_E_SUCCESS;  
 }
 
