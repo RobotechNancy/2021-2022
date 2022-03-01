@@ -481,8 +481,8 @@ bool XBee::isCRCCorrect(uint8_t crc_low, uint8_t crc_high, int trame[], int tram
 }
 
 /*!
- *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
- *  \return rep : la valeur du buffer concaténée sous forme d'une chaine de caractère
+ *  \brief Permet de lire l'intégralité du buffer Rx de la RaspberryPi
+ *  \return rep : la valeur du buffer sous forme d'un vecteur d'entiers signés sur 32 bits
  */
 vector<int> XBee::readBuffer(){
     char *reponse(0);
@@ -502,6 +502,11 @@ vector<int> XBee::readBuffer(){
     return rep;
 }
 
+
+/*!
+ *   \brief Permet de lire l'intégralité du contenu du buffer Rx de la RaspberryPi et de le renvoyer sous forme d'objet string
+ *   \return rep : la valeur du buffer concaténée sous forme d'objet string
+ */
 string XBee::readString() {
      char *reponse(0);
      unsigned int timeout = 100;
@@ -520,27 +525,6 @@ string XBee::readString() {
       reponse = 0;
       return rep;
 
-}
-
-/*!
- *  \brief Permet de lire l'intégralité du buffer UART de réception de la RaspberryPi
- *  \return rep : la valeur du buffer concaténée sous forme d'un vecteur d'entiers
- */
-vector<int> XBee::readBytes(){
-    int *rep(0);
-    vector<int> rep_vector;
-    delay(1);
-    BUFFER_SIZE = serial.available();
-
-    serial.readBytes(rep, BUFFER_SIZE);
-   
-    for(uint8_t i = 0; i < BUFFER_SIZE; i++){
-        rep_vector.push_back(rep[i]);
-    }
-    delete rep;
-    rep = 0;
-
-    return rep_vector;
 }
 
 /*!

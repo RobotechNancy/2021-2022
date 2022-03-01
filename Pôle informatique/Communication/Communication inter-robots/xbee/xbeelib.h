@@ -23,8 +23,8 @@
 #include <bitset>
 
 /*!  \class     XBee
-     \brief     Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plusieurs modules XBee.
-*/
+ *   \brief     Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plusieurs modules XBee.
+ */
 class XBee{
 
 public:
@@ -69,8 +69,6 @@ public:
     void waitForATrame();
 
     std::vector<int> readBuffer();
-
-    std::vector<int> readBytes();
 
     std::string readString();
 
@@ -127,9 +125,6 @@ private:
     std::vector<int> slice(const std::vector<int> &v, int a, int b);
 
     int ID_TRAME = 0x00;
-    int BUFFER_SIZE = 0;
-
-    std::vector<std::string> trames {};
 };
 
 #endif // XBEE_H
