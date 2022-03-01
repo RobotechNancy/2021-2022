@@ -1,79 +1,117 @@
+/*!
+ *  \file define.h
+ *  \brief Fichier contenant l'ensemble des constantes utilisées dans la librairie XBee.
+ *  \author Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
+ *  \version 2.0
+ *  \date 28/02/2022
+ */
 #ifndef DEFINE_XBEE_H
 #define DEFINE_XBEE_H
 
 // Paramètres du port série
-#define SERIAL_PORT "/dev/ttyAMA0"
-#define BAUDRATE 9600
-#define DATABITS SERIAL_DATABITS_8
-#define PARITY SERIAL_PARITY_NONE
-#define STOPBITS SERIAL_STOPBITS_1
+#define XB_SERIAL_PORT "/dev/ttyAMA0"
+#define XB_BAUDRATE 9600
+#define XB_DATABITS SERIAL_DATABITS_8
+#define XB_PARITY SERIAL_PARITY_NONE
+#define XB_STOPBITS SERIAL_STOPBITS_1
+
+#define XB_V_ACK 0x06
+#define XB_V_NACK 0x15
 
 // Addresses des robots
-#define BROADCAST 0
-#define ROBOT_01 1
-#define ROBOT_02 2
+#define XB_ADR_BROADCAST 0x11
+#define XB_ADR_ROBOT_01 0x12
+#define XB_ADR_ROBOT_02 0x13
 
-#define CURRENT_ROBOT ROBOT_01
+#define XB_LIST_ADR (int[]){XB_ADR_BROADCAST, XB_ADR_ROBOT_01, XB_ADR_ROBOT_02}
+
+#define XB_ADR_CURRENT_ROBOT XB_ADR_ROBOT_01
 
 // Paramètres de la trame message
-#define START_SEQ 2
-#define END_SEQ 4
+#define XB_V_START 0x02
+#define XB_V_END 0x03
 
 // Codes fonctions
-#define TEST_ALIVE 1
+#define XB_FCT_TEST_ALIVE 0x1E
+
+#define XB_LIST_CODE_FCT (int[]){XB_FCT_TEST_ALIVE}
+
+// Code erreurs généraux
+#define XB_E_SUCCESS 000
+
+// Codes erreurs sur les codes fonctions
+#define XB_FCT_E_SUCCESS 100
+#define XB_FCT_E_NOT_FOUND -101
+#define XB_FCT_E_NONE_REACHABLE -102
+
+// Codes erreurs traitement de trame
+#define XB_TRAME_E_SUCCESS 200
+#define XB_TRAME_E_SIZE -201
+#define XB_TRAME_E_START -202
+#define XB_TRAME_E_END -203
+#define XB_TRAME_E_CRC -204
+#define XB_TRAME_E_EXP -205
+#define XB_TRAME_E_DEST -206
+
+// Codes erreurs découpage de trame
+#define XB_SUB_TRAME_E_SUCCESS 300
+#define XB_SUB_TRAME_E_SIZE -301
+#define XB_SUB_TRAME_E_REPARTITION -302
+#define XB_SUB_TRAME_E_DECOUPAGE -303
+#define XB_SUB_TRAME_E_START -304
+#define XB_SUB_TRAME_E_END -305
+
+// Codes d'erreurs AT
+#define XB_AT_E_SUCCESS 400
+#define XB_AT_E_ENTER -401
+#define XB_AT_E_API -402
+#define XB_AT_E_BAUDRATE -403
+#define XB_AT_E_AES -404
+#define XB_AT_E_AES_KEY -405
+#define XB_AT_E_CHANEL -406
+#define XB_AT_E_PAN_ID -407
+#define XB_AT_E_COORDINATOR -408
+#define XB_AT_E_PARITY -409
+#define XB_AT_E_16BIT_SOURCE_ADDR -410
+#define XB_AT_E_LOW_DEST_ADDR -411
+#define XB_AT_E_EXIT -412
+#define XB_AT_E_WRITE_CONFIG -413
+
 
 // Commandes AT
-#define AT_ENTER "+++"
-#define AT_EXIT "ATCN"
-#define AT_END_LINE "\r"
-#define AT_WRITE_CONFIG "ATWR"
+#define XB_AT_CMD_ENTER "+++"
+#define XB_AT_CMD_EXIT "ATCN"
+#define XB_AT_CMD_WRITE_CONFIG "ATWR"
+#define XB_AT_CMD_API "ATAP"
+#define XB_AT_CMD_BAUDRATE "ATBD"
+#define XB_AT_CMD_AES "ATEE"
+#define XB_AT_CMD_AES_KEY "ATKY"
+#define XB_AT_CMD_CHANEL "ATCH"
+#define XB_AT_CMD_PAN_ID "ATID"
+#define XB_AT_CMD_COORDINATOR "ATCE"
+#define XB_AT_CMD_PARITY "ATNB"
+#define XB_AT_CMD_16BIT_SOURCE_ADDR "ATMY"
+#define XB_AT_CMD_LOW_DEST_ADDR "ATDL"
 
-#define AT_GET_API "ATAP"
-#define AT_GET_BAUDRATE "ATBD"
-#define AT_GET_AES "ATEE"
-#define AT_GET_AES_KEY "ATKY"
-#define AT_GET_CHANEL "ATCH"
-#define AT_GET_PAN_ID "ATID"
-#define AT_GET_COORDINATOR "ATCE"
-#define AT_GET_PARITY "ATNB"
-#define AT_GET_16BIT_SOURCE_ADDR "ATMY"
-#define AT_GET_LOW_DEST_ADDR "ATDL"
+// Valeurs AT
+#define XB_AT_V_END_LINE "\r"
+#define XB_AT_V_API "0"
+#define XB_AT_V_BAUDRATE "3"
+#define XB_AT_V_AES "1"
+#define XB_AT_V_AES_KEY "32303032"
+#define XB_AT_V_CHANEL "C"
+#define XB_AT_V_PAN_ID "3332"
+#define XB_AT_V_COORDINATOR "0"
+#define XB_AT_V_PARITY "0"
+#define XB_AT_V_16BIT_SOURCE_ADDR "1"
+#define XB_AT_V_LOW_DEST_ADDR "2"
 
-#define AT_VALUE_API "0"
-#define AT_VALUE_BAUDRATE "3"
-#define AT_VALUE_AES "1"
-#define AT_VALUE_AES_KEY "32303032"
-#define AT_VALUE_CHANEL "C"
-#define AT_VALUE_PAN_ID "3332"
-#define AT_VALUE_COORDINATOR "0"
-#define AT_VALUE_PARITY "0"
-#define AT_VALUE_16BIT_SOURCE_ADDR "1"
-#define AT_VALUE_LOW_DEST_ADDR "2"
+// Réponses AT
+#define XB_AT_R_EMPTY ""
+#define XB_AT_R_SUCCESS "OK\r"
+#define XB_AT_R_ERROR "ERROR\r"
 
-#define AT_EMPTY_VALUE ""
-#define AT_SUCCESS_VALUE "OK\r"
-#define AT_ERROR_VALUE "ERROR\r"
-
-#define AT_MODE_GET 1
-#define AT_MODE_SET 2
-
-// Codes d'erreurs en mode AT
-#define AT_ERROR_ENTER -1
-#define AT_ERROR_API -2
-#define AT_ERROR_BAUDRATE -3
-#define AT_ERROR_AES -4
-#define AT_ERROR_AES_KEY -13
-#define AT_ERROR_CHANEL -5
-#define AT_ERROR_PAN_ID -6
-#define AT_ERROR_COORDINATOR -7
-#define AT_ERROR_PARITY -8
-#define AT_ERROR_16BIT_SOURCE_ADDR -9
-#define AT_ERROR_LOW_DEST_ADDR -10
-#define AT_ERROR_EXIT -11
-#define AT_ERROR_WRITE_CONFIG -12
-#define AT_ERROR_SUCCESS 0
-
-// Codes d'erreurs 
-#define XBEE_ERROR_SUCCESS 0
-
+// Mode AT
+#define XB_AT_M_GET 1
+#define XB_AT_M_SET 2
 #endif
