@@ -266,12 +266,6 @@ int XBee::sendTrame(int ad_dest, int code_fct, char* data){
     trame[strlen(data)+7] = crc_high;
     trame[strlen(data)+8] = XB_V_END;
 
-    for(int i = 0; i < length_trame+1; i++){
-        cout << trame[i] << " ";
-    }
-
-    cout << endl;
-
     serial.writeBytes(trame, length_trame);
 
     return XB_TRAME_E_SUCCESS;
@@ -355,7 +349,6 @@ int XBee::processCodeFct(int code_fct, int exp){
        case XB_FCT_TEST_ALIVE :
            msg[0] = {XB_V_ACK};
            sendTrame(exp, XB_FCT_TEST_ALIVE, msg);
-           cout << "trame de réponse envoyée !" << endl;
            break;
 
        default : 
@@ -590,7 +583,6 @@ int XBee::subTrame(vector<int> msg_recu){
     for(int i = 0; i < list_start_seq.size(); i++){
        decoupe.clear();
        decoupe = slice(msg_recu, list_start_seq[i], list_end_seq[i]); 
-       print(decoupe);
        decoupe_retour = processTrame(decoupe);
 
        if(decoupe_retour != XB_TRAME_E_SUCCESS){
