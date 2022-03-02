@@ -1,0 +1,224 @@
+\hypertarget{class_can}{}\doxysection{Référence de la classe Can}
+\label{class_can}\index{Can@{Can}}
+
+
+{\ttfamily \#include $<$can\+Class.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_can_a99db0c143e5c870ae419a138a81f23e9}{Can}} ()
+\item 
+int \mbox{\hyperlink{class_can_a269e2c1f9af10b970b55277fefd26a2f}{init}} (uint my\+Addr)
+\begin{DoxyCompactList}\small\item\em initialise le bus can \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_can_a84329bf906b93154c074cd30a13d58c9}{is\+\_\+valid\+\_\+addr}} (uint addr)
+\begin{DoxyCompactList}\small\item\em regarde si l\textquotesingle{}adresse est connue \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_can_a218864c4615d1324178520b155752c3c}{is\+\_\+valid\+\_\+code\+\_\+fct}} (uint code\+Fct)
+\begin{DoxyCompactList}\small\item\em regarde si le code fct est connue \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_can_aa005c63a0c208e7a4863eb176ada1c4b}{send}} (uint addr, uint code\+Fct, uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, uint data\+\_\+len, bool is\+Rep, uint rep\+Lenght)
+\begin{DoxyCompactList}\small\item\em envoie un message sur le bus can \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_can_ae2cd8392b0a4dc6f5dd91c558ef492a8}{traitement}} (\mbox{\hyperlink{struct_can_response__t}{Can\+Response\+\_\+t}} msg)
+\begin{DoxyCompactList}\small\item\em traite le message décodé dans un nouveau thread \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_can_a7f61af281f70ed5b377f15c803f1f63a}{start\+\_\+listen}} ()
+\begin{DoxyCompactList}\small\item\em démarre le thread d\textquotesingle{}écoute du bus can \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8h_source_l00040}{40}} du fichier \mbox{\hyperlink{can_class_8h_source}{can\+Class.\+h}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_can_a99db0c143e5c870ae419a138a81f23e9}\label{class_can_a99db0c143e5c870ae419a138a81f23e9}} 
+\index{Can@{Can}!Can@{Can}}
+\index{Can@{Can}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{Can()}{Can()}}
+{\footnotesize\ttfamily Can\+::\+Can (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00033}{33}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_can_a269e2c1f9af10b970b55277fefd26a2f}\label{class_can_a269e2c1f9af10b970b55277fefd26a2f}} 
+\index{Can@{Can}!init@{init}}
+\index{init@{init}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Can\+::init (\begin{DoxyParamCaption}\item[{uint}]{my\+Addr }\end{DoxyParamCaption})}
+
+
+
+initialise le bus can 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em my\+Addr} & adresse sur le bus can \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valeurs retournées}
+{\em 0} & \+: succes \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+SOCKET\+\_\+\+ERROR\}} & \+: erreur dans l\textquotesingle{}ouverture du socket \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+BIND\+\_\+\+ERROR\}} & \+: erreur dans le bind du bus \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+OOB\+\_\+\+ADDR\}} & \+: adresse en dehors des bornes \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+UNKNOW\+\_\+\+ADDR\}} & \+: l\textquotesingle{}adresse n\textquotesingle{}est pas dans le \#define \\
+\hline
+\end{DoxyRetVals}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00048}{48}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+\mbox{\Hypertarget{class_can_a84329bf906b93154c074cd30a13d58c9}\label{class_can_a84329bf906b93154c074cd30a13d58c9}} 
+\index{Can@{Can}!is\_valid\_addr@{is\_valid\_addr}}
+\index{is\_valid\_addr@{is\_valid\_addr}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_addr()}{is\_valid\_addr()}}
+{\footnotesize\ttfamily bool Can\+::is\+\_\+valid\+\_\+addr (\begin{DoxyParamCaption}\item[{uint}]{addr }\end{DoxyParamCaption})}
+
+
+
+regarde si l\textquotesingle{}adresse est connue 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em my\+Addr} & addresse à verifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valeurs retournées}
+{\em true} & \+: l\textquotesingle{}adresse est connue \\
+\hline
+{\em false} & \+: l\textquotesingle{}adresse n\textquotesingle{}est pas connue \\
+\hline
+\end{DoxyRetVals}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00092}{92}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+\mbox{\Hypertarget{class_can_a218864c4615d1324178520b155752c3c}\label{class_can_a218864c4615d1324178520b155752c3c}} 
+\index{Can@{Can}!is\_valid\_code\_fct@{is\_valid\_code\_fct}}
+\index{is\_valid\_code\_fct@{is\_valid\_code\_fct}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_code\_fct()}{is\_valid\_code\_fct()}}
+{\footnotesize\ttfamily bool Can\+::is\+\_\+valid\+\_\+code\+\_\+fct (\begin{DoxyParamCaption}\item[{uint}]{code\+Fct }\end{DoxyParamCaption})}
+
+
+
+regarde si le code fct est connue 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em code\+Fct} & code fct à verifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valeurs retournées}
+{\em true} & \+: le code fct est connue \\
+\hline
+{\em false} & \+: le code fct n\textquotesingle{}est pas connue \\
+\hline
+\end{DoxyRetVals}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00107}{107}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+\mbox{\Hypertarget{class_can_aa005c63a0c208e7a4863eb176ada1c4b}\label{class_can_aa005c63a0c208e7a4863eb176ada1c4b}} 
+\index{Can@{Can}!send@{send}}
+\index{send@{send}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily int Can\+::send (\begin{DoxyParamCaption}\item[{uint}]{addr,  }\item[{uint}]{code\+Fct,  }\item[{uint8\+\_\+t}]{data\mbox{[}$\,$\mbox{]},  }\item[{uint}]{data\+\_\+len,  }\item[{bool}]{is\+Rep,  }\item[{uint}]{rep\+Lenght }\end{DoxyParamCaption})}
+
+
+
+envoie un message sur le bus can 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em addr} & addresse du destinataire \\
+\hline
+{\em code\+Fct} & code fct du message \\
+\hline
+{\em data} & tableau d\textquotesingle{}octet d\textquotesingle{}une taille 0 ... 8 \\
+\hline
+{\em data\+\_\+len} & nombre d\textquotesingle{}octet de data, compris entre 0 et 8 \\
+\hline
+{\em is\+Rep} & true si le message est une réponse à une requete, false sinon \\
+\hline
+{\em rep\+Lenght} & is\+Rep = true \+: id du msg dans la réponse. is\+Rep = false \+: nbr de reponse atendu \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valeurs retournées}
+{\em 0} & \+: le message a bien etait envoyé \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+DATA\+\_\+\+SIZE\+\_\+\+TOO\+\_\+\+LONG\}} & \+: data\+\_\+len n\textquotesingle{}est pas compris entre 0 et 8 inclu \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+OOB\+\_\+\+ADDR\}} & \+: l\textquotesingle{}adresse n\textquotesingle{}est pas dans les valeurs possible (0 -\/ \{CAN\+\_\+\+MAX\+\_\+\+VALUE\+\_\+\+ADDR\}) \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+OOB\+\_\+\+CODE\+\_\+\+FCT\}} & \+: le code fct n\textquotesingle{}est pas dans les valeurs possible (0 -\/ \{CAN\+\_\+\+MAX\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+FCT\}) \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+OOB\+\_\+\+REP\+\_\+\+NBR\}} & \+: le rep nbr n\textquotesingle{}est pas dans les valeurs possible (0 -\/ \{CAN\+\_\+\+MAX\+\_\+\+VALUE\+\_\+\+REP\+\_\+\+NBR\}) \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+OOB\+\_\+\+DATA\}} & \+: au moins une des donnés n\textquotesingle{}est pas dans les valeurs possible (0 -\/ 255) \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+UNKNOW\+\_\+\+ADDR\}} & \+: l\textquotesingle{}adresse n\textquotesingle{}est pas dans le \#define \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+UNKNOW\+\_\+\+CODE\+\_\+\+FCT\}} & \+: le code fonction n\textquotesingle{}est pas dans le \#define \\
+\hline
+{\em \{\+CAN\+\_\+\+E\+\_\+\+WRITE\+\_\+\+ERROR\}} & \+: une erreur à eu lieu lors de l\textquotesingle{}envoie du message \\
+\hline
+\end{DoxyRetVals}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00134}{134}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+\mbox{\Hypertarget{class_can_a7f61af281f70ed5b377f15c803f1f63a}\label{class_can_a7f61af281f70ed5b377f15c803f1f63a}} 
+\index{Can@{Can}!start\_listen@{start\_listen}}
+\index{start\_listen@{start\_listen}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{start\_listen()}{start\_listen()}}
+{\footnotesize\ttfamily int Can\+::start\+\_\+listen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+démarre le thread d\textquotesingle{}écoute du bus can 
+
+
+\begin{DoxyRetVals}{Valeurs retournées}
+{\em 0} & \+: le thread a bien etait lancer \\
+\hline
+\end{DoxyRetVals}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00291}{291}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+\mbox{\Hypertarget{class_can_ae2cd8392b0a4dc6f5dd91c558ef492a8}\label{class_can_ae2cd8392b0a4dc6f5dd91c558ef492a8}} 
+\index{Can@{Can}!traitement@{traitement}}
+\index{traitement@{traitement}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{traitement()}{traitement()}}
+{\footnotesize\ttfamily void Can\+::traitement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_can_response__t}{Can\+Response\+\_\+t}}}]{msg }\end{DoxyParamCaption})}
+
+
+
+traite le message décodé dans un nouveau thread 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em msg} & structure contenant le message decoder \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{can_class_8cpp_source_l00263}{263}} du fichier \mbox{\hyperlink{can_class_8cpp_source}{can\+Class.\+cpp}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{can_class_8h}{can\+Class.\+h}}\item 
+\mbox{\hyperlink{can_class_8cpp}{can\+Class.\+cpp}}\end{DoxyCompactItemize}
