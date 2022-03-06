@@ -82,7 +82,7 @@ sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo g
 
 - Câblage RaspberryPi 3B + Xbee S1 :
 
-<img alt="Câblage RaspberryPi 3B + Xbee S2C" src='./images/cablage_raspberry_xbee.png' width='450px'>
+<img alt="Câblage RaspberryPi 3B + Xbee S1" src='./images/cablage_raspberry_xbee.png' width='450px'>
 
 - GPIO Pinout Xbee S1 :
 
@@ -116,6 +116,10 @@ sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo g
 <img alt='GPIO Pinout RaspberryPi' src='./images/gpio_pinout_raspberry_pi.png' width='600px'>
 
 > Les pins dessinés en noir non légendés représentent la masse commune de la Raspberry
+
+- Cablâge ArduinoUno + XBee S1 :
+
+<img alt='Cablâge ArduinoUno + XBee S1' src='./images/cablage_arduino_xbee.png' width='450px'>
 
 # Documentation du code :
 
