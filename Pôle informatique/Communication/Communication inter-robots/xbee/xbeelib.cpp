@@ -60,6 +60,27 @@ void XBee::closeSerialConnection(){
     serial.closeDevice();
 }
 
+/*!
+    \brief Fermeture de la connexion UART entre la RaspberryPi et le module XBee et réouverture de celle-ci
+    \return 1 succès
+    \return -1 port série non trouvé
+    \return -2 erreur lors de l'ouverture du port série
+    \return -3 erreur lors de la récupération des informations du port série
+    \return -4 baudrate non reconnu
+    \return -5 erreur lors de l'écriture de la configuration du port série
+    \return -6 erreur lors de l'écriture du timeout
+    \return -7 databits non reconnus
+    \return -8 stopbits non reconnus
+    \return -9 parité non reconnue
+ */
+int XBee::reopenSerialConnection(){
+    serial.flushReceiver();
+    serial.closeDevice();
+    int errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
+    
+    return errorOpening;
+}
+
 //_________________________________________
 // ::: Configuration en mode AT :::
 
@@ -147,6 +168,9 @@ int XBee::checkATConfig(){
     }
 
     logXbee << "configuration AT réalisée avec succès" << mendl;
+
+    reopenSerialConnection();
+
     return XB_AT_E_SUCCESS;
 }
 
