@@ -18,7 +18,7 @@
 
 |Nom de la communication|Vitesse de transfert|Portée|Type de communication|Caractéristiques de transmission utilisés (série)|Bande(s) de fréquence
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|Module XBee type S2C|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data - chiffrement AES|2,4 GHz avec étalement de spectre|
+|Module XBee type S1|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data - chiffrement AES|2,4 GHz avec étalement de spectre|
 |Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data|/|
 
 
@@ -80,19 +80,46 @@ sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo g
 
 ### Schéma de câblage :
 
-- Câblage RaspberryPi 3B + Xbee S2C :
+- Câblage RaspberryPi 3B + Xbee S1 :
 
-<img alt="Câblage RaspberryPi 3B + Xbee S2C" src='./images/cablage_raspberry_xbee.png' width='450px'>
+<img alt="Câblage RaspberryPi 3B + Xbee S1" src='./images/cablage_raspberry_xbee.png' width='450px'>
 
-- GPIO Pinout Xbee S2C :
+- GPIO Pinout Xbee S1 :
 
 <img alt='GPIO Pinout Xbee' src='./images/gpio_pinout_xbee.jpg' width='250px'>
+
+|**PIN**|**DESCRIPTION**|
+|:---:|:---:|
+|1|Alimentation (3,3V)|
+|2|UART Tx|
+|3|UART Rx|
+|4|Digital output 8|
+|5|Module RESET (pulse reset min. 200ns)|
+|6|PWM sortie 0|
+|7|PWM sortie 1|
+|8|Ne pas connecter|
+|9|STR / Digital input 8|
+|10|Masse (GRD)|
+|11|Analog input 4 / Digital I/O 4|
+|12|Clear-to-Send Flow control / Digital I/O 7|
+|13|Indicateur d'état du module|
+|14|Tension de référence pour les entrées A/D|
+|15|Associated Indicator / Analog Input 5 / Digital I/O 5|
+|16|Request-to-Send Flow Control / Analog Input 6 / Digital I/O 6|
+|17|Analog Input 3 or Digital I/O 3|
+|18|Analog Input 2 or Digital I/O 2|
+|19|Analog Input 1 or Digital I/O 1|
+|20|Analog Input 0 or Digital I/O 0|
 
 - GPIO Pinout RaspberryPi 3B :
 
 <img alt='GPIO Pinout RaspberryPi' src='./images/gpio_pinout_raspberry_pi.png' width='600px'>
 
 > Les pins dessinés en noir non légendés représentent la masse commune de la Raspberry
+
+- Cablâge ArduinoUno + XBee S1 :
+
+<img alt='Cablâge ArduinoUno + XBee S1' src='./images/cablage_arduino_xbee.png' width='450px'>
 
 # Documentation du code :
 

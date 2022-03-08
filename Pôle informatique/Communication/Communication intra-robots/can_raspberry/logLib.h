@@ -17,10 +17,9 @@ char* stringToChar(std::string chaine);
 
 
 class Log : public  std::ostream{
-    private:
+    public:
         std::stringstream ss;
 
-    public:
         std::string name;
         Log(std::string nom);
         int save(int data);

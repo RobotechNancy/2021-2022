@@ -5,14 +5,13 @@
 
 using namespace std;
 
-char* stringToChar(std::string chaine){
+char* stringToChar(string chaine){
     char* message = strcpy(new char[chaine.size() + 1], chaine.c_str());
     return message;
 }
 
-
-Log::Log(nom){
-    this.name = nom;
+Log::Log(string nom){
+    name = nom;
     stringstream ss;
 }
 
