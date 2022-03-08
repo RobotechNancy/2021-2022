@@ -55,3 +55,83 @@
 [16:50:29 - xbee] envoi de la trame n°35 effectué ave succès
 [16:50:32 - xbee] envoi de la trame n°36 effectué ave succès
 [16:50:35 - xbee] envoi de la trame n°37 effectué ave succès
+[16:59:55 - xbee] entrée en mode AT
+[16:59:56 - xbee] réponse du Xbee : 
+[16:59:56 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:59:59 - xbee] envoi de la trame n°7 effectué ave succès
+[17:0:2 - xbee] envoi de la trame n°8 effectué ave succès
+[17:1:26 - xbee] entrée en mode AT
+[17:1:27 - xbee] réponse du Xbee : OK
+[17:1:27 - xbee] envoi de la commande AT : ATAP=0
+[17:1:28 - xbee] réponse du Xbee : OK
+[17:1:28 - xbee] envoi de la commande AT : ATBD=3
+[17:1:29 - xbee] réponse du Xbee : OK
+[17:1:29 - xbee] envoi de la commande AT : ATEE=1
+[17:1:30 - xbee] réponse du Xbee : OK
+[17:1:30 - xbee] envoi de la commande AT : ATKY=32303032
+[17:1:31 - xbee] réponse du Xbee : OK
+[17:1:31 - xbee] envoi de la commande AT : ATCH=C
+[17:1:32 - xbee] réponse du Xbee : OK
+[17:1:32 - xbee] envoi de la commande AT : ATID=3332
+[17:1:33 - xbee] réponse du Xbee : OK
+[17:1:33 - xbee] envoi de la commande AT : ATCE=0
+[17:1:34 - xbee] réponse du Xbee : OK
+[17:1:34 - xbee] envoi de la commande AT : ATNB=0
+[17:1:35 - xbee] réponse du Xbee : OK
+[17:1:35 - xbee] envoi de la commande AT : ATMY=1
+[17:1:36 - xbee] réponse du Xbee : OK
+[17:1:36 - xbee] envoi de la commande AT : ATDL=2
+[17:1:37 - xbee] réponse du Xbee : OK
+[17:1:37 - xbee] écriture des paramètres AT dans la mémoire
+[17:1:38 - xbee] réponse du Xbee : OK
+[17:1:38 - xbee] sortie du mode AT
+[17:1:39 - xbee] réponse du Xbee : OK
+[17:1:39 - xbee] configuration AT réalisée avec succès
+[17:1:42 - xbee] envoi de la trame n°7 effectué ave succès
+[17:1:45 - xbee] envoi de la trame n°8 effectué ave succès
+[17:1:48 - xbee] envoi de la trame n°9 effectué ave succès
+[17:1:51 - xbee] envoi de la trame n°10 effectué ave succès
+[17:1:54 - xbee] envoi de la trame n°11 effectué ave succès
+[17:1:57 - xbee] envoi de la trame n°12 effectué ave succès
+[16:19:44 - xbee] entrée en mode AT
+[16:19:45 - xbee] réponse du Xbee : 
+[16:19:45 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:19:48 - xbee] envoi de la trame n°7 effectué ave succès
+[16:19:51 - xbee] envoi de la trame n°8 effectué ave succès
+[16:19:54 - xbee] envoi de la trame n°9 effectué ave succès
+[16:19:57 - xbee] envoi de la trame n°10 effectué ave succès
+[16:20:0 - xbee] envoi de la trame n°11 effectué ave succès
+[16:20:3 - xbee] envoi de la trame n°12 effectué ave succès
+[16:20:6 - xbee] envoi de la trame n°13 effectué ave succès
+[16:20:9 - xbee] envoi de la trame n°14 effectué ave succès
+[16:20:14 - xbee] entrée en mode AT
+[16:20:15 - xbee] réponse du Xbee : OK
+[16:20:15 - xbee] envoi de la commande AT : ATAP=0
+[16:20:16 - xbee] réponse du Xbee : OK
+[16:20:16 - xbee] envoi de la commande AT : ATBD=3
+[16:20:17 - xbee] réponse du Xbee : OK
+[16:20:17 - xbee] envoi de la commande AT : ATEE=1
+[16:20:18 - xbee] réponse du Xbee : OK
+[16:20:18 - xbee] envoi de la commande AT : ATKY=32303032
+[16:20:19 - xbee] réponse du Xbee : OK
+[16:20:19 - xbee] envoi de la commande AT : ATCH=C
+[16:20:20 - xbee] réponse du Xbee : OK
+[16:20:20 - xbee] envoi de la commande AT : ATID=3332
+[16:20:21 - xbee] réponse du Xbee : OK
+[16:20:21 - xbee] envoi de la commande AT : ATCE=0
+[16:20:22 - xbee] réponse du Xbee : OK
+[16:20:22 - xbee] envoi de la commande AT : ATNB=0
+[16:20:23 - xbee] réponse du Xbee : OK
+[16:20:23 - xbee] envoi de la commande AT : ATMY=1
+[16:20:24 - xbee] réponse du Xbee : OK
+[16:20:24 - xbee] envoi de la commande AT : ATDL=2
+[16:20:25 - xbee] réponse du Xbee : OK
+[16:20:25 - xbee] écriture des paramètres AT dans la mémoire
+[16:20:26 - xbee] réponse du Xbee : OK
+[16:20:26 - xbee] sortie du mode AT
+[16:20:27 - xbee] réponse du Xbee : OK
+[16:20:27 - xbee] configuration AT réalisée avec succès
+[16:20:30 - xbee] envoi de la trame n°7 effectué ave succès
+[16:20:33 - xbee] envoi de la trame n°8 effectué ave succès
+[16:20:36 - xbee] envoi de la trame n°9 effectué ave succès
+[16:20:39 - xbee] envoi de la trame n°10 effectué ave succès
