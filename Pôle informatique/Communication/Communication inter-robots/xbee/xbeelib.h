@@ -10,6 +10,7 @@
 
 #include "define.h"
 #include "serialib.h"
+#include "loglib.h"
 #include <string>
 #include <vector>
 #include <iomanip>
@@ -80,7 +81,8 @@ private:
       int start_seq; /*!< Caractère de début de trame */
       int adr_emetteur; /*!< Adresse de l'émetteur de la trame */
       int adr_dest; /*!< Adresse du destinataire de la trame */
-      int id_trame; /*!< ID de la trame */
+      int id_trame_low; /*!< Bits de poids faible de l'ID de la trame */
+      int id_trame_high; /*!< Bits de poids fort de l'ID de la trame */
       int nb_octets_msg; /*!< Nombre d'octets du champ data + code fonction */
       int code_fct; /*!< Code fonction de la trame */
       std::vector<int> param; /*!< Data de la trame */
@@ -145,7 +147,7 @@ private:
     std::vector<int> slice(const std::vector<int> &v, int a, int b);
 
     // Variable calculant l'ID de la trame
-    int ID_TRAME = 0x00;
+    int ID_TRAME = 0;
 };
 
 #endif // XBEE_H
