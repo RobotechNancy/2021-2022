@@ -9,9 +9,9 @@ int main(int argc, char *argv[]){
     int error_open_connection = xbee.openSerialConnection();
 
     if(error_open_connection != 1)
-        cout << ": Erreur de connexion à " << XB_SERIAL_PORT << " [Code erreur : " << error_open_connection << "]." << endl;
+        cout << ": Erreur de connexion à " << XB_SERIAL_PORT_PRIMARY << " [Code erreur : " << error_open_connection << "]." << endl;
     else
-        cout << ": Connexion ouverte avec succès sur le port \"" << XB_SERIAL_PORT << "\".\n" << endl;
+        cout << ": Connexion ouverte avec succès sur le port \"" << XB_SERIAL_PORT_PRIMARY << "\".\n" << endl;
 
     int error_configuration = xbee.checkATConfig();
     
@@ -26,6 +26,6 @@ int main(int argc, char *argv[]){
 
     xbee.closeSerialConnection();
     
-    cout << ": Connexion fermée avec succès sur le port \"" << XB_SERIAL_PORT << "\".\n" << endl;
+    cout << ": Connexion fermée avec succès sur le port \"" << XB_SERIAL_PORT_PRIMARY << "\".\n" << endl;
     return EXIT_SUCCESS;
 }

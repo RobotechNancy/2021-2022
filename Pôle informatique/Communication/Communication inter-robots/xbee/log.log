@@ -166,3 +166,16 @@
 [16:24:27 - xbee] envoi de la trame n°8 effectué avec succès
 [16:24:30 - xbee] envoi de la trame n°9 effectué avec succès
 [16:24:33 - xbee] envoi de la trame n°10 effectué avec succès
+[16:38:42 - xbee] entrée en mode AT
+[16:38:43 - xbee] réponse du Xbee : 
+[16:38:43 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:38:46 - xbee] envoi de la trame n°7 effectué avec succès
+[16:38:49 - xbee] envoi de la trame n°8 effectué avec succès
+[16:38:52 - xbee] envoi de la trame n°9 effectué avec succès
+[16:38:55 - xbee] envoi de la trame n°10 effectué avec succès
+[16:38:58 - xbee] envoi de la trame n°11 effectué avec succès
+[16:39:1 - xbee] envoi de la trame n°12 effectué avec succès
+[16:39:5 - xbee] entrée en mode AT
+[16:39:6 - xbee] réponse du Xbee : 
+[16:39:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:39:9 - xbee] envoi de la trame n°7 effectué avec succès
