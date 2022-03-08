@@ -44,8 +44,11 @@ XBee::~XBee(){ }
  */
 int XBee::openSerialConnection(){
     serial.flushReceiver();
-    int errorOpening = serial.openDevice(XB_SERIAL_PORT, XB_BAUDRATE, XB_DATABITS, XB_PARITY, XB_STOPBITS);
-
+    int errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
+    
+    if(errorOpening != 1){
+    	errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);
+    }
     return errorOpening;
 }
 
@@ -307,7 +310,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     trame[strlen(data)+9] = XB_V_END;
 
     serial.writeBytes(trame, length_trame);
-    logXbee << "envoi de la trame n°" << id_trame_low+id_trame_high  << " effectué ave succès" << mendl; 
+    logXbee << "envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
 
     return XB_TRAME_E_SUCCESS;
 }
