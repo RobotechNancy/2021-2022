@@ -39,7 +39,7 @@ public:
     void closeSerialConnection();
 
     // Fermeture puis réouverture de la connexion série
-    int reopenSerialConnection();
+    int reopenSerialConnection(int sens);
 
     // Vérification et correction de la configuration AT du module
     int checkATConfig();

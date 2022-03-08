@@ -62,6 +62,7 @@ void XBee::closeSerialConnection(){
 
 /*!
     \brief Fermeture de la connexion UART entre la RaspberryPi et le module XBee et réouverture de celle-ci
+    \param sens permet de connaitre la configuration à utiliser lors de la réouverture
     \return 1 succès
     \return -1 port série non trouvé
     \return -2 erreur lors de l'ouverture du port série
@@ -73,11 +74,17 @@ void XBee::closeSerialConnection(){
     \return -8 stopbits non reconnus
     \return -9 parité non reconnue
  */
-int XBee::reopenSerialConnection(){
+int XBee::reopenSerialConnection(int sens){
     serial.flushReceiver();
     serial.closeDevice();
-    int errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
-    
+    int errorOpening;
+    if(sens == 1){
+        errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
+    }else if(sens == 2){
+    	errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
+        checkATConfig();
+    }
+
     return errorOpening;
 }
 
@@ -103,6 +110,7 @@ int XBee::reopenSerialConnection(){
  */
 int XBee::checkATConfig(){
     if(!enterATMode()){
+        reopenSerialConnection(2);
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
         return XB_AT_E_ENTER;
     }
@@ -169,7 +177,7 @@ int XBee::checkATConfig(){
 
     logXbee << "configuration AT réalisée avec succès" << mendl;
 
-    reopenSerialConnection();
+    reopenSerialConnection(1);
 
     return XB_AT_E_SUCCESS;
 }
