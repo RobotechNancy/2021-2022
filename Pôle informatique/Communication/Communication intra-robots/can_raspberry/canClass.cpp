@@ -1,9 +1,9 @@
 /*! 
- * 	\file canClass.cpp
+ * 	\file      canClass.cpp
  *  \brief     classe de gestion d'un bus can
  *  \details   Cette classe permet d'envoyer et de recevoir des messages via un bus can
  *  \author    Theo RUSINOWITCH <theo.rusinowitch1@etu.univ-lorraine.fr>
- *  \version   4.1a
+ *  \version   1.0
  *  \date      2021-2022
  */
 
@@ -20,6 +20,7 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include <string>
 
 #include <unistd.h>
 
@@ -31,20 +32,16 @@
 #include "defineCan.h"
 using namespace std;
 
-Can::Can(){
-    
-    return;
-}
 
 
 /*!
  *  \brief initialise le bus can
  *  \param myAddr adresse sur le bus can
- *  \retval 0 : succes
- *  \retval {CAN_E_SOCKET_ERROR} : erreur dans l'ouverture du socket
- *  \retval {CAN_E_BIND_ERROR} : erreur dans le bind du bus
- *  \retval {CAN_E_OOB_ADDR} : adresse en dehors des bornes
- *  \retval {CAN_E_UNKNOW_ADDR} : l'adresse n'est pas dans le #define
+ *  \retval 0 succes
+ *  \retval {CAN_E_SOCKET_ERROR} erreur dans l'ouverture du socket
+ *  \retval {CAN_E_BIND_ERROR} erreur dans le bind du bus
+ *  \retval {CAN_E_OOB_ADDR} adresse en dehors des bornes
+ *  \retval {CAN_E_UNKNOW_ADDR} l'adresse n'est pas dans le #define
 */
 int Can::init(uint myAddr){
     int i; 
@@ -81,14 +78,15 @@ int Can::init(uint myAddr){
 
     setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
 
+    logC << "bus can initialiser" << mendl;
     return 0;
 }
 
 /*!
  *  \brief regarde si l'adresse est connue
  *  \param myAddr addresse à verifier
- *  \retval true : l'adresse est connue
- *  \retval false : l'adresse n'est pas connue
+ *  \retval true l'adresse est connue
+ *  \retval false l'adresse n'est pas connue
 */
 bool Can::is_valid_addr(uint addr){
     int size = sizeof(CAN_LIST_ADDR)/sizeof(CAN_LIST_ADDR[0]);
@@ -102,8 +100,8 @@ bool Can::is_valid_addr(uint addr){
 /*!
  *  \brief regarde si le code fct est connue
  *  \param codeFct code fct à verifier
- *  \retval true : le code fct est connue
- *  \retval false : le code fct n'est pas connue
+ *  \retval true le code fct est connue
+ *  \retval false le code fct n'est pas connue
 */
 bool Can::is_valid_code_fct(uint codeFct){
     int size = sizeof(CAN_LIST_CODE_FCT)/sizeof(CAN_LIST_CODE_FCT[0]);
@@ -122,19 +120,19 @@ bool Can::is_valid_code_fct(uint codeFct){
  *  \param data_len nombre d'octet de data, compris entre 0 et 8
  *  \param isRep true si le message est une réponse à une requete, false sinon
  *  \param repLenght isRep = true : id du msg dans la réponse. isRep = false : nbr de reponse atendu
- *  \retval 0 : le message a bien etait envoyé
- *  \retval {CAN_E_DATA_SIZE_TOO_LONG} : data_len n'est pas compris entre 0 et 8 inclu
- *  \retval {CAN_E_OOB_ADDR} : l'adresse n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_ADDR})
- *  \retval {CAN_E_OOB_CODE_FCT} : le code fct n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_CODE_FCT})
- *  \retval {CAN_E_OOB_REP_NBR} : le rep nbr n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_REP_NBR})
- *  \retval {CAN_E_OOB_DATA} : au moins une des donnés n'est pas dans les valeurs possible (0 - 255)
- *  \retval {CAN_E_UNKNOW_ADDR} : l'adresse n'est pas dans le #define
- *  \retval {CAN_E_UNKNOW_CODE_FCT} : le code fonction n'est pas dans le #define
- *  \retval {CAN_E_WRITE_ERROR} : une erreur à eu lieu lors de l'envoie du message
+ *  \retval 0 le message a bien etait envoyé
+ *  \retval {CAN_E_DATA_SIZE_TOO_LONG} data_len n'est pas compris entre 0 et 8 inclu
+ *  \retval {CAN_E_OOB_ADDR} l'adresse n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_ADDR})
+ *  \retval {CAN_E_OOB_CODE_FCT} le code fct n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_CODE_FCT})
+ *  \retval {CAN_E_OOB_REP_NBR} le rep nbr n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_REP_NBR})
+ *  \retval {CAN_E_OOB_DATA} au moins une des donnés n'est pas dans les valeurs possible (0 - 255)
+ *  \retval {CAN_E_UNKNOW_ADDR} l'adresse n'est pas dans le #define
+ *  \retval {CAN_E_UNKNOW_CODE_FCT} le code fonction n'est pas dans le #define
+ *  \retval {CAN_E_WRITE_ERROR} une erreur à eu lieu lors de l'envoie du message
 */
-int Can::send(uint addr, uint codeFct , uint8_t data[], uint data_len, bool isRep, uint repLenght){
-    if (data_len >8){
-        cout << "vous ne pouvez envoyer que 8 octet de data" << endl;
+int Can::send(uint addr, uint codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght){
+    if (dataLen >8){
+        logC << "vous ne pouvez envoyer que 8 octet de data" << mendl;
         return CAN_E_DATA_SIZE_TOO_LONG;   
     }
 
@@ -158,16 +156,23 @@ int Can::send(uint addr, uint codeFct , uint8_t data[], uint data_len, bool isRe
         )| CAN_EFF_FLAG;
 
     cout << hex << frame.can_id << endl;
-    frame.can_dlc = data_len;
+    frame.can_dlc = dataLen;
 
-    printf("send : 0x%03X [%d] ",frame.can_id, frame.can_dlc);
-    for (int i = 0; i < data_len; i++)
+    logC << "send : ";
+    logC << "   addr : " << dec << addr ;
+    logC << "   emetteur : " << CAN_ADDR_RASPBERRY;
+    logC << "   codeFct : " << codeFct;
+    logC << "   isRep : " << isRep;
+    logC << "   RepId : " << repLenght;
+    logC << "       Data : ["<< dataLen <<"] ";
+
+    for (int i = 0; i < dataLen; i++)
     {
         if(data[i] <0 || data[i] > 255) return CAN_E_OOB_DATA;
         frame.data[i] = data[i];
-        printf("%02X ",frame.data[i]);
+        logC << hex << showbase << (int) data[i] << " ";
     }
-    printf("\r\n");	
+    logC << mendl;
 
     if (write(s, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) { //on verifie que le nombre de byte envoyer est corecte
         perror("Write");
@@ -181,14 +186,14 @@ int Can::send(uint addr, uint codeFct , uint8_t data[], uint data_len, bool isRe
  *  \brief extrait d'une trame reçu les différentes informations
  *  \param[out] rep pointeur d'une structure dans le quel la trame décoder est stocker
  *  \param frame structure contenant la trame à décoder
- *  \retval 0 : la trame à bien etait décodé
- *  \retval {CAN_E_OOB_ADDR} : l'adresse n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_ADDR})
- *  \retval {CAN_E_OOB_CODE_FCT} : le code fct n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_CODE_FCT})
- *  \retval {CAN_E_OOB_REP_NBR} : le rep nbr n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_REP_NBR})
- *  \retval {CAN_E_OOB_DATA} : au moins une des donnés n'est pas dans les valeurs possible (0 - 255)
- *  \retval {CAN_E_UNKNOW_ADDR} : l'adresse n'est pas dans le #define
- *  \retval {CAN_E_UNKNOW_CODE_FCT} : le code fonction n'est pas dans le #define
- *  \retval {CAN_E_READ_ERROR} : erreur dans la lecture de la trame depuis le buffer
+ *  \retval 0 la trame à bien etait décodé
+ *  \retval {CAN_E_OOB_ADDR} l'adresse n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_ADDR})
+ *  \retval {CAN_E_OOB_CODE_FCT} le code fct n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_CODE_FCT})
+ *  \retval {CAN_E_OOB_REP_NBR} le rep nbr n'est pas dans les valeurs possible (0 - {CAN_MAX_VALUE_REP_NBR})
+ *  \retval {CAN_E_OOB_DATA} au moins une des donnés n'est pas dans les valeurs possible (0 - 255)
+ *  \retval {CAN_E_UNKNOW_ADDR} l'adresse n'est pas dans le #define
+ *  \retval {CAN_E_UNKNOW_CODE_FCT} le code fonction n'est pas dans le #define
+ *  \retval {CAN_E_READ_ERROR} erreur dans la lecture de la trame depuis le buffer
 */
 int Can::traitement_trame(CanResponse_t &rep, can_frame frame){
 
@@ -227,7 +232,7 @@ int Can::traitement_trame(CanResponse_t &rep, can_frame frame){
 }
 
 /*!
- *  \brief fonction à lancer en thread qui ecoute le buffer et deocde les trames
+ *  \brief fonction à lancer en thread qui ecoute le buffer et decode les trames
  */
 
 void Can::listen(){
@@ -237,24 +242,25 @@ void Can::listen(){
         
         int err =traitement_trame(reponse, frame);
         if(err < 0){
-            cout << "erreur dans le décodage d'une trame. err n°" << dec << err << "\t\t c.f. #define" << endl;
+            logC << "erreur dans le décodage d'une trame. err n°" << err << "\t\t c.f. #define" << mendl;
             continue;
         }
 
+        logC << "get : ";
+        logC << "addr : " << dec << reponse.addr ;
+        logC << "   emetteur : " << reponse.emetteur;
+        logC << "   codeFct : " << reponse.codeFct;
+        logC << "   isRep : " << reponse.isRep;
+        logC << "   RepId : " << reponse.RepId;
+        logC << "       Data : ["<< reponse.dataLen <<"] ";
+        //logC << reponse.data;
+        for (int i = 0; i < reponse.dataLen ; i++){
+            logC << hex << showbase << (int) reponse.data[i] << " ";
+        }
+        logC << mendl;
 
-        cout << "addr : " << hex << reponse.addr ;
-        cout << "   emetteur : " << hex << reponse.emetteur;
-        cout << "   codeFct : " << hex << reponse.codeFct;
-        cout << "   isRep : " << reponse.isRep;
-        cout << "   RepId : " << hex << reponse.RepId;
-        cout << "       Data : ["<< (int)reponse.dataLen <<"] ";
-        for (int i = 0; i < frame.can_dlc; i++){
-            cout << reponse.data[i];
-        } 
-        printf("\r\n");
-
-        thread test(&Can::traitement,this, reponse);
-        test.detach();
+        thread th(&Can::traitement,this, reponse);
+        th.detach();
         
 	}
 }
@@ -289,12 +295,13 @@ void Can::traitement(CanResponse_t msg){
 
 /*!
  *  \brief démarre le thread d'écoute du bus can
- *  \retval 0 : le thread a bien etait lancer 
+ *  \retval 0 le thread a bien etait lancer 
 */
 int Can::start_listen(){
     thread tListen(&Can::listen, this);
 	tListen.detach();
     threadListen = &tListen;
+    logC << "lancement de l'ecoute du bus can" << mendl;
     return 0;
 }
 

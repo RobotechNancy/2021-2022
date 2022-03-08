@@ -1,2 +1,16 @@
-[16:4:19 - can] eaz323
-[16:4:19 - can] e323
+[8:43:44 - systeme] 
+[8:43:44 - systeme] 
+[8:43:44 - systeme] Début du programme
+[8:43:44 - can] bus can initialiser
+[8:43:44 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[8:44:0 - can] get : addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [2] 0x32 0x43 
+[13:34:39 - systeme] 
+[13:34:39 - systeme] 
+[13:34:39 - systeme] Début du programme
+[22:40:33 - systeme] 
+[22:40:33 - systeme] 
+[22:40:33 - systeme] Début du programme
+[22:40:48 - systeme] 
+[22:40:48 - systeme] 
+[22:40:48 - systeme] Début du programme
+[22:40:48 - can] erreur dans l'init du bus can. err n°-504		 c.f. #define

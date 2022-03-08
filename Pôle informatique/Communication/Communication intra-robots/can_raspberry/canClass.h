@@ -10,6 +10,7 @@
 #define CANCLASS_H
 #include <thread>
 #include <linux/can.h>
+#include "logLib.h"
 /*!
  * \struct CanResponse_t
  * \brief contient un message décoder venant du bus can
@@ -28,8 +29,10 @@ struct CanResponse_t{
 	bool isRep;	/* vrai si c'est une reponse a une requete, faux sinon */
 	uint RepId;	/* nb de rep atendu si requete, num de la rep si reponse */
 	uint dataLen;	/* frame payload length in byte (0 .. 8) */
-	uint8_t data[8];
+	unsigned char data[8];
 }; 
+
+
 
 
 /*!
@@ -46,7 +49,8 @@ class Can{
 	int traitement_trame(CanResponse_t &rep, can_frame frame);
   public:
 
-	Can();
+	Can() : logC("can") {};
+	Log logC;
 	int init(uint myAddr);
 	bool is_valid_addr(uint addr);
 	bool is_valid_code_fct(uint codeFct);
@@ -56,6 +60,4 @@ class Can{
 };
 
     
-    
-
 #endif
