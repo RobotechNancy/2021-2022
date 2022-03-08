@@ -110,8 +110,8 @@ int XBee::reopenSerialConnection(int sens){
  */
 int XBee::checkATConfig(){
     if(!enterATMode()){
-        reopenSerialConnection(2);
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
+        reopenSerialConnection(2);
         return XB_AT_E_ENTER;
     }
 
