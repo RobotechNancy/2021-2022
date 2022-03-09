@@ -31,6 +31,7 @@ XBee::~XBee(){ }
 
 /*!
     \brief Nettoyage du buffer et ouverture de la connexion UART entre la RaspberryPi et le module XBee
+    \param mode permet de définir la configuration de port à utiliser
     \return 1 succès
     \return -1 port série non trouvé
     \return -2 erreur lors de l'ouverture du port série
@@ -42,13 +43,15 @@ XBee::~XBee(){ }
     \return -8 stopbits non reconnus
     \return -9 parité non reconnue
  */
-int XBee::openSerialConnection(){
+int XBee::openSerialConnection(int mode){
     serial.flushReceiver();
-    int errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
+    int errorOpening;
+    if(mode == 0)
+        errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
     
-    if(errorOpening != 1){
-    	errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);
-    }
+    else if(mode == 1)
+        errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);      
+
     return errorOpening;
 }
 
@@ -60,39 +63,11 @@ void XBee::closeSerialConnection(){
     serial.closeDevice();
 }
 
-/*!
-    \brief Fermeture de la connexion UART entre la RaspberryPi et le module XBee et réouverture de celle-ci
-    \param sens permet de connaitre la configuration à utiliser lors de la réouverture
-    \return 1 succès
-    \return -1 port série non trouvé
-    \return -2 erreur lors de l'ouverture du port série
-    \return -3 erreur lors de la récupération des informations du port série
-    \return -4 baudrate non reconnu
-    \return -5 erreur lors de l'écriture de la configuration du port série
-    \return -6 erreur lors de l'écriture du timeout
-    \return -7 databits non reconnus
-    \return -8 stopbits non reconnus
-    \return -9 parité non reconnue
- */
-int XBee::reopenSerialConnection(int sens){
-    serial.flushReceiver();
-    serial.closeDevice();
-    int errorOpening;
-    if(sens == 1){
-        errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);
-    }else if(sens == 2){
-    	errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
-        checkATConfig();
-    }
-
-    return errorOpening;
-}
-
 //_________________________________________
 // ::: Configuration en mode AT :::
 
 /*!
-    \brief Vérification et paramétrage de la bonne configuration pour le module XBee
+    \brief Vérification et paramétrage de la configuration par défaut pour le module XBee
     \return {XB_AT_E_SUCCESS} succès
     \return {XB_AT_E_ENTER} impossible d'entrer dans le mode AT
     \return {XB_AT_E_API} impossible de configurer le mode API
@@ -111,74 +86,116 @@ int XBee::reopenSerialConnection(int sens){
 int XBee::checkATConfig(){
     if(!enterATMode()){
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
-        reopenSerialConnection(2);
         return XB_AT_E_ENTER;
     }
+    else logXbee << "(config AT) entrée dans le mode AT" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_API << " : impossible de configurer le mode API" << mendl;
-	    return XB_AT_E_API;
+    if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_BAUDRATE << " : impossible de configurer le baudrate" << mendl;
+	        return XB_AT_E_BAUDRATE;
+        }
+        logXbee << "(config AT) baudrate configuré avec succès" << mendl;
     }
+    else logXbee << "(config AT) baudrate vérifié avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_BAUDRATE, XB_AT_V_BAUDRATE)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_BAUDRATE << " : impossible de configurer le baudrate" << mendl;
-	    return XB_AT_E_BAUDRATE;
-    }
+    if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PARITY << " : impossible de configurer le nombre de bits de parité" << mendl;
+	        return XB_AT_E_PARITY;
+        }
+        logXbee << "(config AT) nombre de bits de parité configuré avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES << " : impossible de configurer le paramètre de chiffrement AES" << mendl;
-	    return XB_AT_E_AES;
+        if(!writeATConfig()){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_WRITE_CONFIG << " : impossible d'écrire les paramètres dans la mémoire flash" << mendl;
+	        return XB_AT_E_WRITE_CONFIG;
+        }
+
+        closeSerialConnection();
+        openSerialConnection(1);
     }
+    else logXbee << "(config AT) nombre de bits de parité vérifié avec succès" << mendl;
+
+    if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_API, XB_AT_V_API)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_API << " : impossible de configurer le mode API" << mendl;
+	        return XB_AT_E_API;
+        }
+        logXbee << "(config AT) mode API configuré avec succès" << mendl;
+    }
+    else logXbee << "(config AT) mode API vérifié avec succès" << mendl;
+
+    if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_AES, XB_AT_V_AES)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES << " : impossible de configurer le paramètre de chiffrement AES" << mendl;
+	        return XB_AT_E_AES;
+        }
+        logXbee << "(config AT) chiffrement AES configuré avec succès" << mendl;
+    }
+    else logXbee << "(config AT) chiffrement AES vérifié avec succès" << mendl;
 
     if(!sendATCommand(XB_AT_CMD_AES_KEY, XB_AT_V_AES_KEY)){
         logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES_KEY << " : impossible de configurer la clé de chiffrement AES" << mendl;
 	    return XB_AT_E_AES_KEY;
     }
 
-    if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_CHANEL << " : impossible de configurer le canal de découverte réseau" << mendl;
-	    return XB_AT_E_CHANEL;
+    if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_CHANEL << " : impossible de configurer le canal de découverte réseau" << mendl;
+	        return XB_AT_E_CHANEL;
+        }
+        logXbee << "(config AT) canal de découverte réseau configuré avec succès" << mendl;
     }
+    else logXbee << "(config AT) canal de découverte réseau vérifié avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PAN_ID << " : impossible de configurer l'ID du réseau" << mendl;
-	    return XB_AT_E_PAN_ID;
+    if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_PAN_ID, XB_AT_V_PAN_ID)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PAN_ID << " : impossible de configurer l'ID du réseau" << mendl;
+	        return XB_AT_E_PAN_ID;
+        }
+        logXbee << "(config AT) ID du réseau configuré avec succès" << mendl;
     }
+    else logXbee << "(config AT) ID du réseau vérifié avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_COORDINATOR << " : impossible de configurer le mode coordinateur" << mendl;
-	    return XB_AT_E_COORDINATOR;
+    if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_COORDINATOR, XB_AT_V_COORDINATOR)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_COORDINATOR << " : impossible de configurer le mode coordinateur" << mendl;
+	        return XB_AT_E_COORDINATOR;
+        }
+        logXbee << "(config AT) mode coordinateur configuré avec succès" << mendl;
     }
+    else logXbee << "(config AT) mode coordinateur vérifié avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_PARITY, XB_AT_V_PARITY)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_PARITY << " : impossible de configurer le nombre de bits de parité" << mendl;
-	    return XB_AT_E_PARITY;
+    if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_16BIT_SOURCE_ADDR << " : impossible de configurer l'adresse source 16bits" << mendl;
+	        return XB_AT_E_16BIT_SOURCE_ADDR;
+        }
+        logXbee << "(config AT) adresse source 16bits configurée avec succès" << mendl;
     }
+    else logXbee << "(config AT) adresse source 16bits vérifiée avec succès" << mendl;
 
-    if(!sendATCommand(XB_AT_CMD_16BIT_SOURCE_ADDR, XB_AT_V_16BIT_SOURCE_ADDR)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_16BIT_SOURCE_ADDR << " : impossible de configurer l'adresse source 16bits" << mendl;
-	    return XB_AT_E_16BIT_SOURCE_ADDR;
+    if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR, XB_AT_M_GET)){
+        if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR)){
+            logXbee << "/!\\ (config AT) erreur " << XB_AT_E_LOW_DEST_ADDR << " : impossible de configurer l'adresse de destination" << mendl;
+	        return XB_AT_E_LOW_DEST_ADDR;
+        }
+        logXbee << "(config AT) adresse de destination configurée avec succès" << mendl;
     }
-
-    if(!sendATCommand(XB_AT_CMD_LOW_DEST_ADDR, XB_AT_V_LOW_DEST_ADDR)){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_LOW_DEST_ADDR << " : impossible de configuer l'adresse de destination" << mendl;
-	    return XB_AT_E_LOW_DEST_ADDR;
-    }
+    else logXbee << "(config AT) adresse de destination vérifiée avec succès" << mendl;
 
     if(!writeATConfig()){
         logXbee << "/!\\ (config AT) erreur " << XB_AT_E_WRITE_CONFIG << " : impossible d'écrire les paramètres dans la mémoire flash" << mendl;
 	    return XB_AT_E_WRITE_CONFIG;
     }
+    else logXbee << "(config AT) configuration AT enregistrée dans la mémoire du module" << mendl;
 
     if(!exitATMode()){
         logXbee << "/!\\ (config AT) erreur " << XB_AT_E_EXIT << " : impossible de sortir du mode AT" << mendl;
 	    return XB_AT_E_EXIT;
     }
 
-    logXbee << "configuration AT réalisée avec succès" << mendl;
-
-    reopenSerialConnection(1);
-
+    logXbee << "(config AT) configuration AT réalisée avec succès" << mendl;
     return XB_AT_E_SUCCESS;
 }
 
@@ -254,12 +271,11 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     serial.writeString(command);
     serial.writeString(value);
     serial.writeString(XB_AT_V_END_LINE);
-    logXbee << "envoi de la commande AT : " << command << "=" << value << mendl;
     if(mode == XB_AT_M_GET){
-        //cout << "* Envoi de la commande " << command << "...\n";
+        logXbee << "(AT) envoi de la commande AT : " << command << mendl;
         return readATResponse(value);
-    }else{
-        //cout << "* Envoi de la commande " << command << "=" << value << "...\n";
+    }else{    
+        logXbee << "(AT) envoi de la commande AT : " << command << "=" << value << mendl;
         return readATResponse(XB_AT_R_SUCCESS);
     }
 }

@@ -33,15 +33,12 @@ public:
     ~XBee();
     
     // Ouverture de la connexion série
-    int openSerialConnection();
+    int openSerialConnection(int mode = 0);
 
     // Fermeture de la connexion série
     void closeSerialConnection();
 
-    // Fermeture puis réouverture de la connexion série
-    int reopenSerialConnection(int sens);
-
-    // Vérification et correction de la configuration AT du module
+    // Vérfication et paramétrage de la configuration AT par défaut du module
     int checkATConfig();
 
     // Lecture de la réponse du module à une commande AT
