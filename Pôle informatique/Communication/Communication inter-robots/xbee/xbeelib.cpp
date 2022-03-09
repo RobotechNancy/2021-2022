@@ -44,13 +44,23 @@ XBee::~XBee(){ }
     \return -9 parité non reconnue
  */
 int XBee::openSerialConnection(int mode){
-    serial.flushReceiver();
     int errorOpening;
-    if(mode == 0)
+    if(mode == 0){
         errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
+
+        if (errorOpening != 1)
+            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_DEFAULT  << "- baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
+        else
+            logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_DEFAULT << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
     
-    else if(mode == 1)
+    } else if(mode == 1) {
         errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);      
+        
+        if (errorOpening != 1)
+            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_PRIMARY  << "- baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
+        else
+            logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_PRIMARY << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
+    }
 
     return errorOpening;
 }
@@ -60,7 +70,10 @@ int XBee::openSerialConnection(int mode){
  */
 void XBee::closeSerialConnection(){
     serial.flushReceiver();
+    logXbee << "(serial) buffer Rx nettoyé avec succès" << mendl;
+    
     serial.closeDevice();
+    logXbee << "(serial) connexion série fermée avec succès" << mendl;
 }
 
 //_________________________________________
@@ -222,7 +235,7 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
  */
 bool XBee::readATResponse(const char *value){
     string reponse = readString();
-    logXbee << "réponse du Xbee : " << reponse << mendl;
+    logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
     if(reponse == value) return true;
     else return false;
 }
@@ -290,10 +303,10 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
     serial.writeString(value);
     serial.writeString(XB_AT_V_END_LINE);
     if(mode == XB_AT_M_GET){
-        logXbee << "(AT) envoi de la commande AT : " << command << mendl;
+        logXbee << "(config AT) envoi de la commande AT : " << command << mendl;
         return readATResponse(value);
     }else{    
-        logXbee << "(AT) envoi de la commande AT : " << command << "=" << value << mendl;
+        logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
         return readATResponse(XB_AT_R_SUCCESS);
     }
 }
@@ -376,7 +389,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     trame[strlen(data)+9] = XB_V_END;
 
     serial.writeBytes(trame, length_trame);
-    logXbee << "envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
+    logXbee << "(sendTrame) envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
 
     return XB_TRAME_E_SUCCESS;
 }
@@ -453,7 +466,7 @@ int XBee::processTrame(vector<int> trame_recue){
 
     processCodeFct(trame.code_fct, trame.adr_emetteur);
 
-    logXbee << "trame n°" << trame.id_trame_high+trame.id_trame_low << "a été traitée avec succès " << mendl;
+    logXbee << "(process trame) trame n°" << trame.id_trame_high+trame.id_trame_low << "a été traitée avec succès " << mendl;
 	
     return XB_TRAME_E_SUCCESS;
 }
@@ -481,7 +494,7 @@ int XBee::processCodeFct(int code_fct, int exp){
            return XB_FCT_E_NONE_REACHABLE;
     }
 
-    logXbee << "code fonction n°" << code_fct << " traité avec succès" << mendl;
+    logXbee << "(process code fonction) code fonction n°" << code_fct << " traité avec succès" << mendl;
     return XB_FCT_E_SUCCESS;
 }
 
@@ -734,7 +747,7 @@ int XBee::subTrame(vector<int> msg_recu){
        decoupe_retour = processTrame(decoupe);
     }   
 
-    logXbee << "découpage des trames effectué avec succès" << mendl;
+    logXbee << "(découpe trame) découpage des trames effectué avec succès" << mendl;
     return XB_SUB_TRAME_E_SUCCESS;  
 }
 
