@@ -98,6 +98,9 @@ private:
     // Sortie du mode de configuration AT
     bool exitATMode();
 
+    // Lance une découverte réseau des modules Xbee
+    bool discoverXbeeNetwork();
+
     // Vérifie si l'adresse de l'expéditeur existe 
     bool isExpCorrect(int exp);
 

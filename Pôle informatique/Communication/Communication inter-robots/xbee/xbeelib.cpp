@@ -86,6 +86,8 @@ void XBee::closeSerialConnection(){
 int XBee::checkATConfig(){
     if(!enterATMode()){
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
+        closeSerialConnection();
+        openSerialConnection(1);
         return XB_AT_E_ENTER;
     }
     else logXbee << "(config AT) entrée dans le mode AT" << mendl;
@@ -190,6 +192,12 @@ int XBee::checkATConfig(){
     }
     else logXbee << "(config AT) configuration AT enregistrée dans la mémoire du module" << mendl;
 
+    if(!discoverXbeeNetwork()){
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_WRITE_CONFIG << " : impossible d'établir une connexion avec le module XBee distant" << mendl;
+	    return XB_AT_E_WRITE_CONFIG;
+    }
+    else logXbee << "(config AT) connexion XBee établie avec succès avec le module distant" << mendl;
+
     if(!exitATMode()){
         logXbee << "/!\\ (config AT) erreur " << XB_AT_E_EXIT << " : impossible de sortir du mode AT" << mendl;
 	    return XB_AT_E_EXIT;
@@ -226,7 +234,6 @@ bool XBee::readATResponse(const char *value){
  */
 bool XBee::enterATMode(){
     serial.writeString(XB_AT_CMD_ENTER);
-    //cout << "* Entrée en mode AT..." << endl;
     delay(2);
     serial.writeString(XB_AT_V_END_LINE);
     logXbee << "entrée en mode AT" << mendl;
@@ -241,9 +248,20 @@ bool XBee::enterATMode(){
 bool XBee::exitATMode(){
     serial.writeString(XB_AT_CMD_EXIT);
     serial.writeString(XB_AT_V_END_LINE);
-    //cout << "* Sortie du mode AT..." << endl;
     logXbee << "sortie du mode AT" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
+}
+
+/*!
+    \brief Recherche du module XBee distant de l'autre robot
+    \return true le bon module XBee est détecté
+    \return false aucun module XBee détecté ou module XBee incorrect détecté
+ */
+bool XBee::discoverXbeeNetwork(){
+    serial.writeString(XB_AT_CMD_DISCOVER_NETWORK);
+    serial.writeString(XB_AT_V_END_LINE);
+    logXbee << "lancement de la découverte réseau XBee" << mendl;
+    return readATResponse(XB_AT_V_DISCOVER_NETWORK);
 }
 
 /*!
