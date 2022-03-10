@@ -33,12 +33,12 @@ public:
     ~XBee();
     
     // Ouverture de la connexion série
-    int openSerialConnection();
+    int openSerialConnection(int mode = 0);
 
     // Fermeture de la connexion série
     void closeSerialConnection();
 
-    // Vérification et correction de la configuration AT du module
+    // Vérfication et paramétrage de la configuration AT par défaut du module
     int checkATConfig();
 
     // Lecture de la réponse du module à une commande AT
@@ -97,6 +97,9 @@ private:
 
     // Sortie du mode de configuration AT
     bool exitATMode();
+
+    // Lance une découverte réseau des modules Xbee
+    bool discoverXbeeNetwork();
 
     // Vérifie si l'adresse de l'expéditeur existe 
     bool isExpCorrect(int exp);

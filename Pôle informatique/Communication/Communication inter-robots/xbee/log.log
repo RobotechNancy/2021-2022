@@ -1,0 +1,357 @@
+[16:48:48 - xbee] entrée en mode AT
+[16:48:49 - xbee] réponse du Xbee : OK
+[16:48:49 - xbee] envoi de la commande AT : ATAP=0
+[16:48:50 - xbee] réponse du Xbee : OK
+[16:48:50 - xbee] envoi de la commande AT : ATBD=3
+[16:48:51 - xbee] réponse du Xbee : OK
+[16:48:52 - xbee] envoi de la commande AT : ATEE=1
+[16:48:53 - xbee] réponse du Xbee : OK
+[16:48:53 - xbee] envoi de la commande AT : ATKY=32303032
+[16:48:54 - xbee] réponse du Xbee : OK
+[16:48:54 - xbee] envoi de la commande AT : ATCH=C
+[16:48:55 - xbee] réponse du Xbee : OK
+[16:48:55 - xbee] envoi de la commande AT : ATID=3332
+[16:48:56 - xbee] réponse du Xbee : OK
+[16:48:56 - xbee] envoi de la commande AT : ATCE=0
+[16:48:57 - xbee] réponse du Xbee : OK
+[16:48:57 - xbee] envoi de la commande AT : ATNB=0
+[16:48:58 - xbee] réponse du Xbee : OK
+[16:48:58 - xbee] envoi de la commande AT : ATMY=1
+[16:48:59 - xbee] réponse du Xbee : OK
+[16:48:59 - xbee] envoi de la commande AT : ATDL=2
+[16:49:0 - xbee] réponse du Xbee : OK
+[16:49:0 - xbee] écriture des paramètres AT dans la mémoire
+[16:49:1 - xbee] réponse du Xbee : OK
+[16:49:1 - xbee] sortie du mode AT
+[16:49:2 - xbee] réponse du Xbee : OK
+[16:49:5 - xbee] envoi de la trame n°7 effectué ave succès
+[16:49:8 - xbee] envoi de la trame n°8 effectué ave succès
+[16:49:11 - xbee] envoi de la trame n°9 effectué ave succès
+[16:49:14 - xbee] envoi de la trame n°10 effectué ave succès
+[16:49:17 - xbee] envoi de la trame n°11 effectué ave succès
+[16:49:20 - xbee] envoi de la trame n°12 effectué ave succès
+[16:49:23 - xbee] envoi de la trame n°13 effectué ave succès
+[16:49:26 - xbee] envoi de la trame n°14 effectué ave succès
+[16:49:29 - xbee] envoi de la trame n°15 effectué ave succès
+[16:49:32 - xbee] envoi de la trame n°16 effectué ave succès
+[16:49:35 - xbee] envoi de la trame n°17 effectué ave succès
+[16:49:38 - xbee] envoi de la trame n°18 effectué ave succès
+[16:49:41 - xbee] envoi de la trame n°19 effectué ave succès
+[16:49:44 - xbee] envoi de la trame n°20 effectué ave succès
+[16:49:47 - xbee] envoi de la trame n°21 effectué ave succès
+[16:49:50 - xbee] envoi de la trame n°22 effectué ave succès
+[16:49:53 - xbee] envoi de la trame n°23 effectué ave succès
+[16:49:56 - xbee] envoi de la trame n°24 effectué ave succès
+[16:49:59 - xbee] envoi de la trame n°25 effectué ave succès
+[16:50:2 - xbee] envoi de la trame n°26 effectué ave succès
+[16:50:5 - xbee] envoi de la trame n°27 effectué ave succès
+[16:50:8 - xbee] envoi de la trame n°28 effectué ave succès
+[16:50:11 - xbee] envoi de la trame n°29 effectué ave succès
+[16:50:14 - xbee] envoi de la trame n°30 effectué ave succès
+[16:50:17 - xbee] envoi de la trame n°31 effectué ave succès
+[16:50:20 - xbee] envoi de la trame n°32 effectué ave succès
+[16:50:23 - xbee] envoi de la trame n°33 effectué ave succès
+[16:50:26 - xbee] envoi de la trame n°34 effectué ave succès
+[16:50:29 - xbee] envoi de la trame n°35 effectué ave succès
+[16:50:32 - xbee] envoi de la trame n°36 effectué ave succès
+[16:50:35 - xbee] envoi de la trame n°37 effectué ave succès
+[16:59:55 - xbee] entrée en mode AT
+[16:59:56 - xbee] réponse du Xbee : 
+[16:59:56 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:59:59 - xbee] envoi de la trame n°7 effectué ave succès
+[17:0:2 - xbee] envoi de la trame n°8 effectué ave succès
+[17:1:26 - xbee] entrée en mode AT
+[17:1:27 - xbee] réponse du Xbee : OK
+[17:1:27 - xbee] envoi de la commande AT : ATAP=0
+[17:1:28 - xbee] réponse du Xbee : OK
+[17:1:28 - xbee] envoi de la commande AT : ATBD=3
+[17:1:29 - xbee] réponse du Xbee : OK
+[17:1:29 - xbee] envoi de la commande AT : ATEE=1
+[17:1:30 - xbee] réponse du Xbee : OK
+[17:1:30 - xbee] envoi de la commande AT : ATKY=32303032
+[17:1:31 - xbee] réponse du Xbee : OK
+[17:1:31 - xbee] envoi de la commande AT : ATCH=C
+[17:1:32 - xbee] réponse du Xbee : OK
+[17:1:32 - xbee] envoi de la commande AT : ATID=3332
+[17:1:33 - xbee] réponse du Xbee : OK
+[17:1:33 - xbee] envoi de la commande AT : ATCE=0
+[17:1:34 - xbee] réponse du Xbee : OK
+[17:1:34 - xbee] envoi de la commande AT : ATNB=0
+[17:1:35 - xbee] réponse du Xbee : OK
+[17:1:35 - xbee] envoi de la commande AT : ATMY=1
+[17:1:36 - xbee] réponse du Xbee : OK
+[17:1:36 - xbee] envoi de la commande AT : ATDL=2
+[17:1:37 - xbee] réponse du Xbee : OK
+[17:1:37 - xbee] écriture des paramètres AT dans la mémoire
+[17:1:38 - xbee] réponse du Xbee : OK
+[17:1:38 - xbee] sortie du mode AT
+[17:1:39 - xbee] réponse du Xbee : OK
+[17:1:39 - xbee] configuration AT réalisée avec succès
+[17:1:42 - xbee] envoi de la trame n°7 effectué ave succès
+[17:1:45 - xbee] envoi de la trame n°8 effectué ave succès
+[17:1:48 - xbee] envoi de la trame n°9 effectué ave succès
+[17:1:51 - xbee] envoi de la trame n°10 effectué ave succès
+[17:1:54 - xbee] envoi de la trame n°11 effectué ave succès
+[17:1:57 - xbee] envoi de la trame n°12 effectué ave succès
+[16:19:44 - xbee] entrée en mode AT
+[16:19:45 - xbee] réponse du Xbee : 
+[16:19:45 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:19:48 - xbee] envoi de la trame n°7 effectué ave succès
+[16:19:51 - xbee] envoi de la trame n°8 effectué ave succès
+[16:19:54 - xbee] envoi de la trame n°9 effectué ave succès
+[16:19:57 - xbee] envoi de la trame n°10 effectué ave succès
+[16:20:0 - xbee] envoi de la trame n°11 effectué ave succès
+[16:20:3 - xbee] envoi de la trame n°12 effectué ave succès
+[16:20:6 - xbee] envoi de la trame n°13 effectué ave succès
+[16:20:9 - xbee] envoi de la trame n°14 effectué ave succès
+[16:20:14 - xbee] entrée en mode AT
+[16:20:15 - xbee] réponse du Xbee : OK
+[16:20:15 - xbee] envoi de la commande AT : ATAP=0
+[16:20:16 - xbee] réponse du Xbee : OK
+[16:20:16 - xbee] envoi de la commande AT : ATBD=3
+[16:20:17 - xbee] réponse du Xbee : OK
+[16:20:17 - xbee] envoi de la commande AT : ATEE=1
+[16:20:18 - xbee] réponse du Xbee : OK
+[16:20:18 - xbee] envoi de la commande AT : ATKY=32303032
+[16:20:19 - xbee] réponse du Xbee : OK
+[16:20:19 - xbee] envoi de la commande AT : ATCH=C
+[16:20:20 - xbee] réponse du Xbee : OK
+[16:20:20 - xbee] envoi de la commande AT : ATID=3332
+[16:20:21 - xbee] réponse du Xbee : OK
+[16:20:21 - xbee] envoi de la commande AT : ATCE=0
+[16:20:22 - xbee] réponse du Xbee : OK
+[16:20:22 - xbee] envoi de la commande AT : ATNB=0
+[16:20:23 - xbee] réponse du Xbee : OK
+[16:20:23 - xbee] envoi de la commande AT : ATMY=1
+[16:20:24 - xbee] réponse du Xbee : OK
+[16:20:24 - xbee] envoi de la commande AT : ATDL=2
+[16:20:25 - xbee] réponse du Xbee : OK
+[16:20:25 - xbee] écriture des paramètres AT dans la mémoire
+[16:20:26 - xbee] réponse du Xbee : OK
+[16:20:26 - xbee] sortie du mode AT
+[16:20:27 - xbee] réponse du Xbee : OK
+[16:20:27 - xbee] configuration AT réalisée avec succès
+[16:20:30 - xbee] envoi de la trame n°7 effectué ave succès
+[16:20:33 - xbee] envoi de la trame n°8 effectué ave succès
+[16:20:36 - xbee] envoi de la trame n°9 effectué ave succès
+[16:20:39 - xbee] envoi de la trame n°10 effectué ave succès
+[16:24:8 - xbee] entrée en mode AT
+[16:24:9 - xbee] réponse du Xbee : OK
+[16:24:9 - xbee] envoi de la commande AT : ATAP=0
+[16:24:10 - xbee] réponse du Xbee : OK
+[16:24:10 - xbee] envoi de la commande AT : ATBD=3
+[16:24:11 - xbee] réponse du Xbee : OK
+[16:24:11 - xbee] envoi de la commande AT : ATEE=1
+[16:24:12 - xbee] réponse du Xbee : OK
+[16:24:12 - xbee] envoi de la commande AT : ATKY=32303032
+[16:24:13 - xbee] réponse du Xbee : OK
+[16:24:13 - xbee] envoi de la commande AT : ATCH=C
+[16:24:14 - xbee] réponse du Xbee : OK
+[16:24:14 - xbee] envoi de la commande AT : ATID=3332
+[16:24:15 - xbee] réponse du Xbee : OK
+[16:24:15 - xbee] envoi de la commande AT : ATCE=0
+[16:24:16 - xbee] réponse du Xbee : OK
+[16:24:16 - xbee] envoi de la commande AT : ATNB=0
+[16:24:17 - xbee] réponse du Xbee : OK
+[16:24:17 - xbee] envoi de la commande AT : ATMY=1
+[16:24:18 - xbee] réponse du Xbee : OK
+[16:24:18 - xbee] envoi de la commande AT : ATDL=2
+[16:24:19 - xbee] réponse du Xbee : OK
+[16:24:19 - xbee] écriture des paramètres AT dans la mémoire
+[16:24:20 - xbee] réponse du Xbee : OK
+[16:24:20 - xbee] sortie du mode AT
+[16:24:21 - xbee] réponse du Xbee : OK
+[16:24:21 - xbee] configuration AT réalisée avec succès
+[16:24:24 - xbee] envoi de la trame n°7 effectué avec succès
+[16:24:27 - xbee] envoi de la trame n°8 effectué avec succès
+[16:24:30 - xbee] envoi de la trame n°9 effectué avec succès
+[16:24:33 - xbee] envoi de la trame n°10 effectué avec succès
+[16:38:42 - xbee] entrée en mode AT
+[16:38:43 - xbee] réponse du Xbee : 
+[16:38:43 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:38:46 - xbee] envoi de la trame n°7 effectué avec succès
+[16:38:49 - xbee] envoi de la trame n°8 effectué avec succès
+[16:38:52 - xbee] envoi de la trame n°9 effectué avec succès
+[16:38:55 - xbee] envoi de la trame n°10 effectué avec succès
+[16:38:58 - xbee] envoi de la trame n°11 effectué avec succès
+[16:39:1 - xbee] envoi de la trame n°12 effectué avec succès
+[16:39:5 - xbee] entrée en mode AT
+[16:39:6 - xbee] réponse du Xbee : 
+[16:39:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:39:9 - xbee] envoi de la trame n°7 effectué avec succès
+[16:46:40 - xbee] entrée en mode AT
+[16:46:41 - xbee] réponse du Xbee : 
+[16:46:43 - xbee] entrée en mode AT
+[16:46:44 - xbee] réponse du Xbee : 
+[16:46:46 - xbee] entrée en mode AT
+[16:46:47 - xbee] réponse du Xbee : 
+[16:46:49 - xbee] entrée en mode AT
+[16:46:50 - xbee] réponse du Xbee : 
+[16:46:52 - xbee] entrée en mode AT
+[16:46:53 - xbee] réponse du Xbee : 
+[16:46:55 - xbee] entrée en mode AT
+[16:46:56 - xbee] réponse du Xbee : 
+[16:46:58 - xbee] entrée en mode AT
+[16:46:59 - xbee] réponse du Xbee : 
+[16:47:1 - xbee] entrée en mode AT
+[16:47:2 - xbee] réponse du Xbee : 
+[16:47:4 - xbee] entrée en mode AT
+[16:47:5 - xbee] réponse du Xbee : 
+[16:47:7 - xbee] entrée en mode AT
+[16:47:8 - xbee] réponse du Xbee : 
+[16:48:59 - xbee] entrée en mode AT
+[16:49:0 - xbee] réponse du Xbee : 
+[16:49:0 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:49:2 - xbee] entrée en mode AT
+[16:49:3 - xbee] réponse du Xbee : 
+[16:49:3 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:49:5 - xbee] entrée en mode AT
+[16:49:6 - xbee] réponse du Xbee : 
+[16:49:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:49:8 - xbee] entrée en mode AT
+[16:49:9 - xbee] réponse du Xbee : 
+[16:49:9 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:49:11 - xbee] entrée en mode AT
+[16:49:12 - xbee] réponse du Xbee : 
+[16:49:12 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:51:19 - xbee] entrée en mode AT
+[16:51:20 - xbee] réponse du Xbee : 
+[16:51:20 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:51:22 - xbee] entrée en mode AT
+[16:51:23 - xbee] réponse du Xbee : 
+[16:51:23 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:51:25 - xbee] entrée en mode AT
+[16:51:26 - xbee] réponse du Xbee : OK
+[16:51:26 - xbee] envoi de la commande AT : ATAP=0
+[16:51:27 - xbee] réponse du Xbee : OK
+[16:51:27 - xbee] envoi de la commande AT : ATBD=3
+[16:51:28 - xbee] réponse du Xbee : OK
+[16:51:28 - xbee] envoi de la commande AT : ATEE=1
+[16:51:29 - xbee] réponse du Xbee : OK
+[16:51:29 - xbee] envoi de la commande AT : ATKY=32303032
+[16:51:30 - xbee] réponse du Xbee : OK
+[16:51:30 - xbee] envoi de la commande AT : ATCH=C
+[16:51:31 - xbee] réponse du Xbee : OK
+[16:51:31 - xbee] envoi de la commande AT : ATID=3332
+[16:51:32 - xbee] réponse du Xbee : OK
+[16:51:32 - xbee] envoi de la commande AT : ATCE=0
+[16:51:33 - xbee] réponse du Xbee : OK
+[16:51:33 - xbee] envoi de la commande AT : ATNB=0
+[16:51:34 - xbee] réponse du Xbee : OK
+[16:51:34 - xbee] envoi de la commande AT : ATMY=1
+[16:51:35 - xbee] réponse du Xbee : OK
+[16:51:35 - xbee] envoi de la commande AT : ATDL=2
+[16:51:36 - xbee] réponse du Xbee : OK
+[16:51:36 - xbee] écriture des paramètres AT dans la mémoire
+[16:51:37 - xbee] réponse du Xbee : OK
+[16:51:37 - xbee] sortie du mode AT
+[16:51:38 - xbee] réponse du Xbee : OK
+[16:51:38 - xbee] configuration AT réalisée avec succès
+[16:51:41 - xbee] envoi de la trame n°7 effectué avec succès
+[16:55:13 - xbee] entrée en mode AT
+[16:55:14 - xbee] réponse du Xbee : 
+[16:55:14 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:55:16 - xbee] entrée en mode AT
+[16:55:17 - xbee] réponse du Xbee : 
+[16:55:17 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:55:19 - xbee] entrée en mode AT
+[16:55:20 - xbee] réponse du Xbee : 
+[16:55:20 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:55:22 - xbee] entrée en mode AT
+[16:55:23 - xbee] réponse du Xbee : 
+[16:55:23 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:55:25 - xbee] entrée en mode AT
+[16:55:26 - xbee] réponse du Xbee : 
+[16:55:26 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:55:28 - xbee] entrée en mode AT
+[16:55:29 - xbee] réponse du Xbee : 
+[16:55:29 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:11 - xbee] entrée en mode AT
+[16:57:12 - xbee] réponse du Xbee : 
+[16:57:12 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:14 - xbee] entrée en mode AT
+[16:57:15 - xbee] réponse du Xbee : 
+[16:57:15 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:17 - xbee] entrée en mode AT
+[16:57:18 - xbee] réponse du Xbee : 
+[16:57:18 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:20 - xbee] entrée en mode AT
+[16:57:21 - xbee] réponse du Xbee : 
+[16:57:21 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:23 - xbee] entrée en mode AT
+[16:57:24 - xbee] réponse du Xbee : 
+[16:57:24 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:26 - xbee] entrée en mode AT
+[16:57:27 - xbee] réponse du Xbee : 
+[16:57:27 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[16:57:29 - xbee] entrée en mode AT
+[16:57:30 - xbee] réponse du Xbee : 
+[16:57:30 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[17:0:13 - xbee] entrée en mode AT
+[17:0:14 - xbee] réponse du Xbee : 
+[17:0:14 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[17:0:16 - xbee] entrée en mode AT
+[17:0:17 - xbee] réponse du Xbee : 
+[17:0:17 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[17:0:19 - xbee] entrée en mode AT
+[17:0:20 - xbee] réponse du Xbee : 
+[17:0:20 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[17:0:22 - xbee] entrée en mode AT
+[7:34:31 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:34:34 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[7:34:37 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[7:34:40 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[7:36:59 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:37:1 - xbee] entrée en mode AT
+[7:37:2 - xbee] (config AT) réponse du Xbee : 
+[7:37:2 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:37:2 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:37:2 - xbee] (serial) connexion série fermée avec succès
+[7:37:2 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:37:5 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[7:37:8 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[7:37:11 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[7:39:44 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:39:46 - xbee] entrée en mode AT
+[7:39:47 - xbee] (config AT) réponse du Xbee : 
+[7:39:47 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:39:47 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:39:47 - xbee] (serial) connexion série fermée avec succès
+[7:39:47 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:39:49 - xbee] entrée en mode AT
+[7:39:50 - xbee] (config AT) réponse du Xbee : 
+[7:39:50 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:39:50 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:39:50 - xbee] (serial) connexion série fermée avec succès
+[7:39:50 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:39:52 - xbee] entrée en mode AT
+[7:39:53 - xbee] (config AT) réponse du Xbee : 
+[7:39:53 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:39:53 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:39:53 - xbee] (serial) connexion série fermée avec succès
+[7:39:53 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:39:55 - xbee] entrée en mode AT
+[7:39:56 - xbee] (config AT) réponse du Xbee : 
+[7:39:57 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:39:57 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:39:57 - xbee] (serial) connexion série fermée avec succès
+[7:39:57 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:39:59 - xbee] entrée en mode AT
+[7:40:0 - xbee] (config AT) réponse du Xbee : 
+[7:40:0 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:40:0 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:40:0 - xbee] (serial) connexion série fermée avec succès
+[7:40:0 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:40:2 - xbee] entrée en mode AT
+[7:40:3 - xbee] (config AT) réponse du Xbee : 
+[7:40:3 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:40:3 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:40:3 - xbee] (serial) connexion série fermée avec succès
+[7:40:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:40:5 - xbee] entrée en mode AT
+[7:40:6 - xbee] (config AT) réponse du Xbee : 
+[7:40:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:40:6 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:40:6 - xbee] (serial) connexion série fermée avec succès
+[7:40:6 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:40:8 - xbee] entrée en mode AT
