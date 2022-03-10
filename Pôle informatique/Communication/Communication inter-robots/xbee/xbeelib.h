@@ -42,7 +42,7 @@ public:
     int checkATConfig();
 
     // Lecture de la réponse du module à une commande AT
-    bool readATResponse(const char *value = XB_AT_R_EMPTY);
+    bool readATResponse(const char *value = XB_AT_R_EMPTY, int mode = 0);
 
     // Envoi d'une commande AT 
     bool sendATCommand(const char *command, const char *value, unsigned int mode = XB_AT_M_SET);

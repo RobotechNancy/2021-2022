@@ -246,15 +246,21 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
 /*!
     \brief Fonction permettant de lire la réponse à un envoi de commande AT au module XBee
     \param value : la valeur de réponse attendue pour la commande envoyée
+    \param mode : le mode de lecture à utiliser
     \return true la réponse du module XBee est celle attendue
     \return false la réponse du module XBee n'est pas celle attendue
  */
-bool XBee::readATResponse(const char *value){
+bool XBee::readATResponse(const char *value, int mode){
     string reponse = readString();
     logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
 
-    if(reponse == value) return true;
-    else return false;
+    if(mode == 0)
+        if(reponse == value) return true;
+
+    else if(mode == 1)     
+        if(reponse != value) return true;
+    
+    return false;
 }
 
 /*!
@@ -325,7 +331,10 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         serial.writeString(command);
         serial.writeString(value);    
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
-        return readATResponse(XB_AT_R_SUCCESS);
+        if(command == XB_AT_CMD_DISCOVER_NETWORK)
+            return readATResponse(XB_AT_R_SUCCESS);
+        else
+            return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
     }
 }
 
