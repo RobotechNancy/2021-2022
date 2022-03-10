@@ -151,6 +151,9 @@ private:
 
     // Variable calculant l'ID de la trame
     int ID_TRAME = 0;
+
+    // Variable permettant de définir la configuration série à utiliser
+    int MODE = 0;
 };
 
 #endif // XBEE_H

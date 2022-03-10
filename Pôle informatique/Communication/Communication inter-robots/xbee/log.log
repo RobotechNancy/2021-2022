@@ -355,3 +355,738 @@
 [7:40:6 - xbee] (serial) connexion série fermée avec succès
 [7:40:6 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
 [7:40:8 - xbee] entrée en mode AT
+[7:45:30 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:45:32 - xbee] entrée en mode AT
+[7:45:33 - xbee] (config AT) réponse du Xbee : 
+[7:45:33 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:45:33 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:33 - xbee] (serial) connexion série fermée avec succès
+[7:45:33 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:36 - xbee] entrée en mode AT
+[7:45:37 - xbee] (config AT) réponse du Xbee : 
+[7:45:37 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:45:37 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:37 - xbee] (serial) connexion série fermée avec succès
+[7:45:37 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:39 - xbee] entrée en mode AT
+[7:45:40 - xbee] (config AT) réponse du Xbee : 
+[7:45:40 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:45:40 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:40 - xbee] (serial) connexion série fermée avec succès
+[7:45:40 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:43 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:45:45 - xbee] entrée en mode AT
+[7:45:46 - xbee] (config AT) réponse du Xbee : OK
+[7:45:46 - xbee] (config AT) entrée dans le mode AT
+[7:45:46 - xbee] (config AT) envoi de la commande AT : ATBD
+[7:45:47 - xbee] (config AT) réponse du Xbee : OK
+[7:45:47 - xbee] (config AT) envoi de la commande AT : ATBD=7
+[7:45:48 - xbee] (config AT) réponse du Xbee : OK
+[7:45:48 - xbee] (config AT) baudrate configuré avec succès
+[7:45:48 - xbee] (config AT) envoi de la commande AT : ATNB
+[7:45:49 - xbee] (config AT) réponse du Xbee : OK
+[7:45:49 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[7:45:50 - xbee] (config AT) réponse du Xbee : OK
+[7:45:50 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[7:45:50 - xbee] écriture des paramètres AT dans la mémoire
+[7:45:51 - xbee] (config AT) réponse du Xbee : OK
+[7:45:51 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:51 - xbee] (serial) connexion série fermée avec succès
+[7:45:51 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:53 - xbee] entrée en mode AT
+[7:45:54 - xbee] (config AT) réponse du Xbee : 
+[7:45:54 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:45:54 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:54 - xbee] (serial) connexion série fermée avec succès
+[7:45:54 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:56 - xbee] entrée en mode AT
+[7:45:57 - xbee] (config AT) réponse du Xbee : 
+[7:45:57 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:45:57 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:45:57 - xbee] (serial) connexion série fermée avec succès
+[7:45:57 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:45:59 - xbee] entrée en mode AT
+[7:46:0 - xbee] (config AT) réponse du Xbee : 
+[7:46:0 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:46:0 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:46:0 - xbee] (serial) connexion série fermée avec succès
+[7:46:0 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:46:2 - xbee] entrée en mode AT
+[7:46:3 - xbee] (config AT) réponse du Xbee : 
+[7:46:3 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:46:3 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:46:3 - xbee] (serial) connexion série fermée avec succès
+[7:46:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:1 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:48:3 - xbee] entrée en mode AT
+[7:48:4 - xbee] (config AT) réponse du Xbee : 
+[7:48:4 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:4 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:4 - xbee] (serial) connexion série fermée avec succès
+[7:48:4 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:6 - xbee] entrée en mode AT
+[7:48:7 - xbee] (config AT) réponse du Xbee : 
+[7:48:7 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:7 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:7 - xbee] (serial) connexion série fermée avec succès
+[7:48:7 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:9 - xbee] entrée en mode AT
+[7:48:10 - xbee] (config AT) réponse du Xbee : 
+[7:48:10 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:10 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:10 - xbee] (serial) connexion série fermée avec succès
+[7:48:10 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:34 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:48:36 - xbee] entrée en mode AT
+[7:48:37 - xbee] (config AT) réponse du Xbee : 
+[7:48:37 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:37 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:37 - xbee] (serial) connexion série fermée avec succès
+[7:48:37 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:39 - xbee] entrée en mode AT
+[7:48:40 - xbee] (config AT) réponse du Xbee : 
+[7:48:40 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:40 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:40 - xbee] (serial) connexion série fermée avec succès
+[7:48:40 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:42 - xbee] entrée en mode AT
+[7:48:43 - xbee] (config AT) réponse du Xbee : 
+[7:48:43 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:43 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:43 - xbee] (serial) connexion série fermée avec succès
+[7:48:43 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:45 - xbee] entrée en mode AT
+[7:48:46 - xbee] (config AT) réponse du Xbee : 
+[7:48:46 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:46 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:46 - xbee] (serial) connexion série fermée avec succès
+[7:48:46 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:48:48 - xbee] entrée en mode AT
+[7:48:56 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:48:58 - xbee] entrée en mode AT
+[7:48:59 - xbee] (config AT) réponse du Xbee : 
+[7:48:59 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:48:59 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:48:59 - xbee] (serial) connexion série fermée avec succès
+[7:48:59 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:49:1 - xbee] entrée en mode AT
+[7:49:2 - xbee] (config AT) réponse du Xbee : 
+[7:49:2 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:49:2 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:49:2 - xbee] (serial) connexion série fermée avec succès
+[7:49:2 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:51:48 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:51:50 - xbee] entrée en mode AT
+[7:51:51 - xbee] (config AT) réponse du Xbee : 
+[7:51:51 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:51:51 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:51:51 - xbee] (serial) connexion série fermée avec succès
+[7:51:51 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:51:53 - xbee] entrée en mode AT
+[7:51:54 - xbee] (config AT) réponse du Xbee : OK
+[7:51:54 - xbee] (config AT) entrée dans le mode AT
+[7:51:54 - xbee] (config AT) envoi de la commande AT : ATBD
+[7:51:55 - xbee] (config AT) réponse du Xbee : OK
+[7:51:55 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[7:51:56 - xbee] (config AT) réponse du Xbee : OK
+[7:51:56 - xbee] (config AT) baudrate configuré avec succès
+[7:51:56 - xbee] (config AT) envoi de la commande AT : ATNB
+[7:51:57 - xbee] (config AT) réponse du Xbee : OK
+[7:51:57 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[7:51:58 - xbee] (config AT) réponse du Xbee : OK
+[7:51:58 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[7:51:58 - xbee] écriture des paramètres AT dans la mémoire
+[7:51:59 - xbee] (config AT) réponse du Xbee : OK
+[7:51:59 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:51:59 - xbee] (serial) connexion série fermée avec succès
+[7:51:59 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:52:1 - xbee] entrée en mode AT
+[7:52:2 - xbee] (config AT) réponse du Xbee : 
+[7:52:2 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:52:2 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:52:2 - xbee] (serial) connexion série fermée avec succès
+[7:52:2 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:52:4 - xbee] entrée en mode AT
+[7:52:5 - xbee] (config AT) réponse du Xbee : 
+[7:52:5 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:52:5 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:52:5 - xbee] (serial) connexion série fermée avec succès
+[7:52:5 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:52:7 - xbee] entrée en mode AT
+[7:52:8 - xbee] (config AT) réponse du Xbee : 
+[7:52:8 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:52:8 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:52:8 - xbee] (serial) connexion série fermée avec succès
+[7:52:8 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:52:9 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:52:11 - xbee] entrée en mode AT
+[7:52:12 - xbee] (config AT) réponse du Xbee : 
+[7:52:12 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:52:12 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:52:12 - xbee] (serial) connexion série fermée avec succès
+[7:52:12 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 115200 - parité : 1
+[7:52:14 - xbee] entrée en mode AT
+[7:53:4 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:53:6 - xbee] entrée en mode AT
+[7:53:7 - xbee] (config AT) réponse du Xbee : 
+[7:53:7 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:53:7 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:7 - xbee] (serial) connexion série fermée avec succès
+[7:53:7 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:9 - xbee] entrée en mode AT
+[7:53:10 - xbee] (config AT) réponse du Xbee : OK
+[7:53:10 - xbee] (config AT) entrée dans le mode AT
+[7:53:10 - xbee] (config AT) envoi de la commande AT : ATBD
+[7:53:11 - xbee] (config AT) réponse du Xbee : OK
+[7:53:11 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[7:53:12 - xbee] (config AT) réponse du Xbee : OK
+[7:53:12 - xbee] (config AT) baudrate configuré avec succès
+[7:53:12 - xbee] (config AT) envoi de la commande AT : ATNB
+[7:53:13 - xbee] (config AT) réponse du Xbee : OK
+[7:53:13 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[7:53:14 - xbee] (config AT) réponse du Xbee : OK
+[7:53:14 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[7:53:14 - xbee] écriture des paramètres AT dans la mémoire
+[7:53:16 - xbee] (config AT) réponse du Xbee : OK
+[7:53:16 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:16 - xbee] (serial) connexion série fermée avec succès
+[7:53:16 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:18 - xbee] entrée en mode AT
+[7:53:19 - xbee] (config AT) réponse du Xbee : 
+[7:53:19 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:53:19 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:19 - xbee] (serial) connexion série fermée avec succès
+[7:53:19 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:21 - xbee] entrée en mode AT
+[7:53:22 - xbee] (config AT) réponse du Xbee : 
+[7:53:22 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:53:22 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:22 - xbee] (serial) connexion série fermée avec succès
+[7:53:22 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:24 - xbee] entrée en mode AT
+[7:53:25 - xbee] (config AT) réponse du Xbee : 
+[7:53:25 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:53:25 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:25 - xbee] (serial) connexion série fermée avec succès
+[7:53:25 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:27 - xbee] entrée en mode AT
+[7:53:28 - xbee] (config AT) réponse du Xbee : OK
+[7:53:28 - xbee] (config AT) entrée dans le mode AT
+[7:53:28 - xbee] (config AT) envoi de la commande AT : ATBD
+[7:53:29 - xbee] (config AT) réponse du Xbee : OK
+[7:53:29 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[7:53:30 - xbee] (config AT) réponse du Xbee : OK
+[7:53:30 - xbee] (config AT) baudrate configuré avec succès
+[7:53:30 - xbee] (config AT) envoi de la commande AT : ATNB
+[7:53:31 - xbee] (config AT) réponse du Xbee : OK
+[7:53:31 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[7:53:32 - xbee] (config AT) réponse du Xbee : OK
+[7:53:32 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[7:53:32 - xbee] écriture des paramètres AT dans la mémoire
+[7:53:33 - xbee] (config AT) réponse du Xbee : OK
+[7:53:33 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:33 - xbee] (serial) connexion série fermée avec succès
+[7:53:33 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:35 - xbee] entrée en mode AT
+[7:53:36 - xbee] (config AT) réponse du Xbee : 
+[7:53:36 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:53:36 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:53:36 - xbee] (serial) connexion série fermée avec succès
+[7:53:36 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:53:38 - xbee] entrée en mode AT
+[7:56:0 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[7:56:2 - xbee] entrée en mode AT
+[7:56:3 - xbee] (config AT) réponse du Xbee : 
+[7:56:3 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:56:3 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:56:3 - xbee] (serial) connexion série fermée avec succès
+[7:56:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:56:5 - xbee] entrée en mode AT
+[7:56:6 - xbee] (config AT) réponse du Xbee : 
+[7:56:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[7:56:6 - xbee] (serial) buffer Rx nettoyé avec succès
+[7:56:6 - xbee] (serial) connexion série fermée avec succès
+[7:56:6 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[7:56:9 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[7:56:12 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[7:56:15 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[8:1:20 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:1:22 - xbee] entrée en mode AT
+[8:1:23 - xbee] (config AT) réponse du Xbee : OK
+[8:1:23 - xbee] (config AT) entrée dans le mode AT
+[8:1:23 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:1:24 - xbee] (config AT) réponse du Xbee : OK
+[8:1:24 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:1:25 - xbee] (config AT) réponse du Xbee : OK
+[8:1:25 - xbee] (config AT) baudrate configuré avec succès
+[8:1:25 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:1:26 - xbee] (config AT) réponse du Xbee : OK
+[8:1:26 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:1:27 - xbee] (config AT) réponse du Xbee : OK
+[8:1:27 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[8:1:27 - xbee] écriture des paramètres AT dans la mémoire
+[8:1:28 - xbee] (config AT) réponse du Xbee : OK
+[8:1:28 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:1:28 - xbee] (serial) connexion série fermée avec succès
+[8:1:28 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:1:30 - xbee] entrée en mode AT
+[8:1:32 - xbee] (config AT) réponse du Xbee : 
+[8:1:32 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:1:32 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:1:32 - xbee] (serial) connexion série fermée avec succès
+[8:1:32 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:1:34 - xbee] entrée en mode AT
+[8:1:35 - xbee] (config AT) réponse du Xbee : 
+[8:1:35 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:1:35 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:1:35 - xbee] (serial) connexion série fermée avec succès
+[8:1:35 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:6:16 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:6:18 - xbee] entrée en mode AT
+[8:6:19 - xbee] (config AT) réponse du Xbee : OK
+[8:6:19 - xbee] (config AT) entrée dans le mode AT
+[8:6:19 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:6:20 - xbee] (config AT) réponse du Xbee : OK
+[8:6:20 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:6:21 - xbee] (config AT) réponse du Xbee : OK
+[8:6:21 - xbee] (config AT) baudrate configuré avec succès
+[8:6:21 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:6:22 - xbee] (config AT) réponse du Xbee : OK
+[8:6:22 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:7:54 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:7:56 - xbee] entrée en mode AT
+[8:7:57 - xbee] (config AT) réponse du Xbee : 
+[8:7:57 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:7:57 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:7:57 - xbee] (serial) connexion série fermée avec succès
+[8:7:57 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:7:59 - xbee] entrée en mode AT
+[8:8:0 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:8:2 - xbee] entrée en mode AT
+[8:8:3 - xbee] (config AT) réponse du Xbee : OK
+[8:8:3 - xbee] (config AT) entrée dans le mode AT
+[8:8:3 - xbee] (config AT) envoi de la commande AT : ATAP
+[8:8:4 - xbee] (config AT) réponse du Xbee : OK
+[8:8:4 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:8:5 - xbee] (config AT) réponse du Xbee : OK
+[8:8:5 - xbee] (config AT) baudrate configuré avec succès
+[8:8:5 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:8:6 - xbee] (config AT) réponse du Xbee : OK
+[8:8:6 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:8:7 - xbee] (config AT) réponse du Xbee : OK
+[8:8:7 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[8:8:7 - xbee] écriture des paramètres AT dans la mémoire
+[8:8:8 - xbee] (config AT) réponse du Xbee : OK
+[8:8:8 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:8:8 - xbee] (serial) connexion série fermée avec succès
+[8:8:8 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:8:10 - xbee] entrée en mode AT
+[8:8:11 - xbee] (config AT) réponse du Xbee : 
+[8:8:11 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:8:11 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:8:11 - xbee] (serial) connexion série fermée avec succès
+[8:8:11 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:15:24 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:15:26 - xbee] entrée en mode AT
+[8:15:27 - xbee] (config AT) réponse du Xbee : 
+[8:15:27 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:15:27 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:15:27 - xbee] (serial) connexion série fermée avec succès
+[8:15:27 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:15:29 - xbee] entrée en mode AT
+[8:15:30 - xbee] (config AT) réponse du Xbee : 
+[8:15:30 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:15:30 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:15:30 - xbee] (serial) connexion série fermée avec succès
+[8:15:30 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:15:32 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:15:34 - xbee] entrée en mode AT
+[8:15:35 - xbee] (config AT) réponse du Xbee : OK
+[8:15:35 - xbee] (config AT) entrée dans le mode AT
+[8:15:35 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:15:36 - xbee] (config AT) réponse du Xbee : 3
+[8:15:36 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:15:37 - xbee] (config AT) réponse du Xbee : OK
+[8:15:37 - xbee] (config AT) baudrate configuré avec succès
+[8:15:37 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:15:38 - xbee] (config AT) réponse du Xbee : 1
+[8:15:38 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:15:39 - xbee] (config AT) réponse du Xbee : OK
+[8:15:39 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[8:15:39 - xbee] écriture des paramètres AT dans la mémoire
+[8:15:40 - xbee] (config AT) réponse du Xbee : OK
+[8:15:40 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:15:40 - xbee] (serial) connexion série fermée avec succès
+[8:15:40 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:15:42 - xbee] entrée en mode AT
+[8:15:43 - xbee] (config AT) réponse du Xbee : 
+[8:15:43 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:15:43 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:15:43 - xbee] (serial) connexion série fermée avec succès
+[8:15:43 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:15:45 - xbee] entrée en mode AT
+[8:15:46 - xbee] (config AT) réponse du Xbee : 
+[8:15:46 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:15:46 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:15:46 - xbee] (serial) connexion série fermée avec succès
+[8:15:46 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:24:38 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:24:40 - xbee] entrée en mode AT
+[8:24:41 - xbee] (config AT) réponse du Xbee : OK
+[8:24:41 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:24:41 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:24:41 - xbee] (serial) connexion série fermée avec succès
+[8:24:41 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:24:43 - xbee] entrée en mode AT
+[8:24:44 - xbee] (config AT) réponse du Xbee : 
+[8:24:44 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:24:44 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:24:44 - xbee] (serial) connexion série fermée avec succès
+[8:24:44 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:24:46 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:24:48 - xbee] entrée en mode AT
+[8:24:49 - xbee] (config AT) réponse du Xbee : 
+[8:24:49 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:24:49 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:24:49 - xbee] (serial) connexion série fermée avec succès
+[8:24:49 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:24:51 - xbee] entrée en mode AT
+[8:24:52 - xbee] (config AT) réponse du Xbee : 
+[8:24:52 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:24:52 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:24:52 - xbee] (serial) connexion série fermée avec succès
+[8:24:52 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:24:55 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:24:57 - xbee] entrée en mode AT
+[8:24:58 - xbee] (config AT) réponse du Xbee : OK
+[8:24:58 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:24:58 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:24:58 - xbee] (serial) connexion série fermée avec succès
+[8:24:58 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:0 - xbee] entrée en mode AT
+[8:25:1 - xbee] (config AT) réponse du Xbee : 
+[8:25:1 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:25:1 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:25:1 - xbee] (serial) connexion série fermée avec succès
+[8:25:1 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:3 - xbee] entrée en mode AT
+[8:25:4 - xbee] (config AT) réponse du Xbee : 
+[8:25:4 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:25:4 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:25:4 - xbee] (serial) connexion série fermée avec succès
+[8:25:4 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:6 - xbee] entrée en mode AT
+[8:25:7 - xbee] (config AT) réponse du Xbee : 
+[8:25:7 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:25:7 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:25:7 - xbee] (serial) connexion série fermée avec succès
+[8:25:7 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:9 - xbee] entrée en mode AT
+[8:25:13 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:25:15 - xbee] entrée en mode AT
+[8:25:16 - xbee] (config AT) réponse du Xbee : OK
+[8:25:16 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:25:16 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:25:16 - xbee] (serial) connexion série fermée avec succès
+[8:25:16 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:18 - xbee] entrée en mode AT
+[8:25:19 - xbee] (config AT) réponse du Xbee : 
+[8:25:19 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:25:19 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:25:19 - xbee] (serial) connexion série fermée avec succès
+[8:25:19 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:25:21 - xbee] entrée en mode AT
+[8:30:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:30:5 - xbee] entrée en mode AT
+[8:30:6 - xbee] (config AT) réponse du Xbee : OK
+[8:30:6 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:6 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:6 - xbee] (serial) connexion série fermée avec succès
+[8:30:6 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:8 - xbee] entrée en mode AT
+[8:30:9 - xbee] (config AT) réponse du Xbee : 
+[8:30:9 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:9 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:9 - xbee] (serial) connexion série fermée avec succès
+[8:30:9 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:11 - xbee] entrée en mode AT
+[8:30:12 - xbee] (config AT) réponse du Xbee : 
+[8:30:12 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:12 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:12 - xbee] (serial) connexion série fermée avec succès
+[8:30:12 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:14 - xbee] entrée en mode AT
+[8:30:15 - xbee] (config AT) réponse du Xbee : 
+[8:30:15 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:15 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:15 - xbee] (serial) connexion série fermée avec succès
+[8:30:15 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:17 - xbee] entrée en mode AT
+[8:30:18 - xbee] (config AT) réponse du Xbee : 
+[8:30:18 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:18 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:18 - xbee] (serial) connexion série fermée avec succès
+[8:30:18 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:20 - xbee] entrée en mode AT
+[8:30:21 - xbee] (config AT) réponse du Xbee : 
+[8:30:21 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:30:21 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:30:21 - xbee] (serial) connexion série fermée avec succès
+[8:30:21 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:30:23 - xbee] entrée en mode AT
+[8:31:30 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:31:32 - xbee] entrée en mode AT
+[8:31:33 - xbee] (config AT) réponse du Xbee : OK
+[8:31:33 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:33 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:33 - xbee] (serial) connexion série fermée avec succès
+[8:31:33 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:31:35 - xbee] entrée en mode AT
+[8:31:36 - xbee] (config AT) réponse du Xbee : 
+[8:31:36 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:36 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:36 - xbee] (serial) connexion série fermée avec succès
+[8:31:36 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:31:38 - xbee] entrée en mode AT
+[8:31:39 - xbee] (config AT) réponse du Xbee : 
+[8:31:39 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:39 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:39 - xbee] (serial) connexion série fermée avec succès
+[8:31:39 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:31:41 - xbee] entrée en mode AT
+[8:31:42 - xbee] (config AT) réponse du Xbee : 
+[8:31:42 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:42 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:42 - xbee] (serial) connexion série fermée avec succès
+[8:31:42 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:31:53 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:31:55 - xbee] entrée en mode AT
+[8:31:56 - xbee] (config AT) réponse du Xbee : OK
+[8:31:56 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:56 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:56 - xbee] (serial) connexion série fermée avec succès
+[8:31:56 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:31:58 - xbee] entrée en mode AT
+[8:31:59 - xbee] (config AT) réponse du Xbee : 
+[8:31:59 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:31:59 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:31:59 - xbee] (serial) connexion série fermée avec succès
+[8:31:59 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:32:1 - xbee] entrée en mode AT
+[8:32:2 - xbee] (config AT) réponse du Xbee : 
+[8:32:2 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:32:2 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:32:2 - xbee] (serial) connexion série fermée avec succès
+[8:32:2 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:32:4 - xbee] entrée en mode AT
+[8:33:39 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:33:41 - xbee] entrée en mode AT
+[8:33:42 - xbee] (config AT) réponse du Xbee : OK
+[8:33:42 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:33:42 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:33:42 - xbee] (serial) connexion série fermée avec succès
+[8:33:42 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:33:44 - xbee] entrée en mode AT
+[8:33:45 - xbee] (config AT) réponse du Xbee : 
+[8:33:45 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:33:45 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:33:45 - xbee] (serial) connexion série fermée avec succès
+[8:33:45 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:33:47 - xbee] entrée en mode AT
+[8:33:48 - xbee] (config AT) réponse du Xbee : 
+[8:33:48 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:33:48 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:33:48 - xbee] (serial) connexion série fermée avec succès
+[8:33:48 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:33:50 - xbee] entrée en mode AT
+[8:37:5 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:37:7 - xbee] entrée en mode AT
+[8:37:8 - xbee] (config AT) réponse du Xbee : OK
+[8:37:8 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:37:8 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:37:8 - xbee] (serial) connexion série fermée avec succès
+[8:37:8 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:37:10 - xbee] entrée en mode AT
+[8:37:11 - xbee] (config AT) réponse du Xbee : 
+[8:37:11 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:37:11 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:37:11 - xbee] (serial) connexion série fermée avec succès
+[8:37:11 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:37:13 - xbee] entrée en mode AT
+[8:37:14 - xbee] (config AT) réponse du Xbee : 
+[8:37:14 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:37:14 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:37:14 - xbee] (serial) connexion série fermée avec succès
+[8:37:14 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:37:16 - xbee] entrée en mode AT
+[8:37:17 - xbee] (config AT) réponse du Xbee : 
+[8:37:17 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:37:17 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:37:17 - xbee] (serial) connexion série fermée avec succès
+[8:37:17 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:39:11 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:39:13 - xbee] entrée en mode AT
+[8:39:14 - xbee] (config AT) réponse du Xbee : 
+[8:39:14 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:39:14 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:39:14 - xbee] (serial) connexion série fermée avec succès
+[8:39:14 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:39:16 - xbee] entrée en mode AT
+[8:39:17 - xbee] (config AT) réponse du Xbee : OK
+[8:39:17 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:39:18 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:39:18 - xbee] (serial) connexion série fermée avec succès
+[8:39:18 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:39:20 - xbee] entrée en mode AT
+[8:39:21 - xbee] (config AT) réponse du Xbee : 
+[8:39:21 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:39:21 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:39:21 - xbee] (serial) connexion série fermée avec succès
+[8:39:21 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:39:23 - xbee] entrée en mode AT
+[8:39:24 - xbee] (config AT) réponse du Xbee : 
+[8:39:24 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:39:24 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:39:24 - xbee] (serial) connexion série fermée avec succès
+[8:39:24 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:39:26 - xbee] entrée en mode AT
+[8:40:36 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:40:39 - xbee] entrée en mode AT
+[8:40:40 - xbee] (config AT) réponse du Xbee : 
+[8:40:40 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:40:40 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:40:40 - xbee] (serial) connexion série fermée avec succès
+[8:40:40 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:40:43 - xbee] entrée en mode AT
+[8:40:44 - xbee] (config AT) réponse du Xbee : OK
+[8:40:44 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:40:44 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:40:44 - xbee] (serial) connexion série fermée avec succès
+[8:40:44 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:40:47 - xbee] entrée en mode AT
+[8:40:48 - xbee] (config AT) réponse du Xbee : 
+[8:40:48 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:40:48 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:40:48 - xbee] (serial) connexion série fermée avec succès
+[8:40:48 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:42:31 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:42:34 - xbee] entrée en mode AT
+[8:42:35 - xbee] (config AT) réponse du Xbee : 
+[8:42:35 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:42:35 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:42:35 - xbee] (serial) connexion série fermée avec succès
+[8:42:35 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:42:38 - xbee] entrée en mode AT
+[8:42:39 - xbee] (config AT) réponse du Xbee : OK
+[8:42:39 - xbee] (config AT) entrée dans le mode AT
+[8:42:39 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:42:40 - xbee] (config AT) réponse du Xbee : 3
+[8:42:40 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:42:41 - xbee] (config AT) réponse du Xbee : OK
+[8:42:41 - xbee] (config AT) baudrate configuré avec succès
+[8:42:41 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:42:42 - xbee] (config AT) réponse du Xbee : 0
+[8:42:42 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:42:43 - xbee] (config AT) réponse du Xbee : OK
+[8:42:43 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[8:42:43 - xbee] écriture des paramètres AT dans la mémoire
+[8:42:44 - xbee] (config AT) réponse du Xbee : OK
+[8:42:44 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:42:44 - xbee] (serial) connexion série fermée avec succès
+[8:42:44 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:42:47 - xbee] entrée en mode AT
+[8:42:48 - xbee] (config AT) réponse du Xbee : 
+[8:42:48 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:42:48 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:42:48 - xbee] (serial) connexion série fermée avec succès
+[8:42:48 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:42:51 - xbee] entrée en mode AT
+[8:42:52 - xbee] (config AT) réponse du Xbee : 
+[8:42:52 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:42:52 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:42:52 - xbee] (serial) connexion série fermée avec succès
+[8:42:52 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:42:55 - xbee] entrée en mode AT
+[8:42:56 - xbee] (config AT) réponse du Xbee : 
+[8:42:56 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:42:56 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:42:56 - xbee] (serial) connexion série fermée avec succès
+[8:42:56 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:42:59 - xbee] entrée en mode AT
+[8:43:0 - xbee] (config AT) réponse du Xbee : 
+[8:43:0 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:43:0 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:43:0 - xbee] (serial) connexion série fermée avec succès
+[8:43:0 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:43:3 - xbee] entrée en mode AT
+[8:43:4 - xbee] (config AT) réponse du Xbee : OK
+[8:43:4 - xbee] (config AT) entrée dans le mode AT
+[8:43:4 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:43:5 - xbee] (config AT) réponse du Xbee : 3
+[8:43:5 - xbee] (config AT) envoi de la commande AT : ATBD=3
+[8:43:6 - xbee] (config AT) réponse du Xbee : OK
+[8:43:6 - xbee] (config AT) baudrate configuré avec succès
+[8:43:6 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:43:7 - xbee] (config AT) réponse du Xbee : 1
+[8:43:7 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[8:43:8 - xbee] (config AT) réponse du Xbee : OK
+[8:43:8 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[8:43:8 - xbee] écriture des paramètres AT dans la mémoire
+[8:43:9 - xbee] (config AT) réponse du Xbee : OK
+[8:43:9 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:43:9 - xbee] (serial) connexion série fermée avec succès
+[8:43:9 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:52:7 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:52:10 - xbee] entrée en mode AT
+[8:52:11 - xbee] (config AT) réponse du Xbee : OK
+[8:52:11 - xbee] (config AT) entrée dans le mode AT
+[8:52:11 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:52:12 - xbee] (config AT) réponse du Xbee : 3
+[8:52:12 - xbee] (config AT) baudrate vérifié avec succès
+[8:52:12 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:52:13 - xbee] (config AT) réponse du Xbee : 1
+[8:52:13 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[8:52:13 - xbee] (config AT) envoi de la commande AT : ATAP
+[8:52:14 - xbee] (config AT) réponse du Xbee : 0
+[8:52:14 - xbee] (config AT) mode API vérifié avec succès
+[8:52:14 - xbee] (config AT) envoi de la commande AT : ATEE
+[8:52:15 - xbee] (config AT) réponse du Xbee : 1
+[8:52:15 - xbee] (config AT) chiffrement AES vérifié avec succès
+[8:52:15 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[8:52:16 - xbee] (config AT) réponse du Xbee : OK
+[8:52:16 - xbee] (config AT) envoi de la commande AT : ATCH
+[8:52:17 - xbee] (config AT) réponse du Xbee : C
+[8:52:17 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[8:52:17 - xbee] (config AT) envoi de la commande AT : ATID
+[8:52:18 - xbee] (config AT) réponse du Xbee : 3332
+[8:52:18 - xbee] (config AT) ID du réseau vérifié avec succès
+[8:52:18 - xbee] (config AT) envoi de la commande AT : ATCE
+[8:52:19 - xbee] (config AT) réponse du Xbee : 0
+[8:52:19 - xbee] (config AT) mode coordinateur vérifié avec succès
+[8:52:19 - xbee] (config AT) envoi de la commande AT : ATMY
+[8:52:20 - xbee] (config AT) réponse du Xbee : 1
+[8:52:20 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[8:52:20 - xbee] (config AT) envoi de la commande AT : ATDL
+[8:52:22 - xbee] (config AT) réponse du Xbee : 2
+[8:52:22 - xbee] (config AT) adresse de destination vérifiée avec succès
+[8:52:22 - xbee] écriture des paramètres AT dans la mémoire
+[8:52:23 - xbee] (config AT) réponse du Xbee : OK
+[8:52:23 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[8:52:23 - xbee] lancement de la découverte réseau XBee
+[8:52:24 - xbee] (config AT) réponse du Xbee : 
+[8:52:24 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[8:52:24 - xbee] sortie du mode AT
+[8:52:25 - xbee] (config AT) réponse du Xbee : 
+[8:52:25 - xbee] /!\ (config AT) erreur -412 : impossible de sortir du mode AT
+[8:52:28 - xbee] entrée en mode AT
+[8:52:29 - xbee] (config AT) réponse du Xbee : OKOK
+[8:52:29 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:52:29 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:52:29 - xbee] (serial) connexion série fermée avec succès
+[8:52:29 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[8:52:32 - xbee] entrée en mode AT
+[8:52:33 - xbee] (config AT) réponse du Xbee : 
+[8:52:33 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[8:52:33 - xbee] (serial) buffer Rx nettoyé avec succès
+[8:52:33 - xbee] (serial) connexion série fermée avec succès
+[8:52:33 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1

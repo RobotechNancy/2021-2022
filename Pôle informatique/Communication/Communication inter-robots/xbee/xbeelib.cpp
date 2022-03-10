@@ -45,19 +45,20 @@ XBee::~XBee(){ }
  */
 int XBee::openSerialConnection(int mode){
     int errorOpening;
-    if(mode == 0){
+    if(mode == 1){
         errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
 
         if (errorOpening != 1)
-            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_DEFAULT  << "- baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
-        else
+            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_DEFAULT  << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
+        else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_DEFAULT << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
-    
-    } else if(mode == 1) {
+	    checkATConfig();
+	}    
+    } else if(mode == 0) {
         errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);      
         
         if (errorOpening != 1)
-            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_PRIMARY  << "- baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
+            logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_PRIMARY  << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parités : " << XB_PARITY_PRIMARY << mendl;
         
 	else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_PRIMARY << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
@@ -103,7 +104,13 @@ int XBee::checkATConfig(){
     if(!enterATMode()){
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
         closeSerialConnection();
-        openSerialConnection(1);
+        if(MODE == 0){
+                MODE = 1;
+        	openSerialConnection(1);
+        }else{
+                MODE = 0;
+		openSerialConnection();
+        }
         return XB_AT_E_ENTER;
     }
     else logXbee << "(config AT) entrée dans le mode AT" << mendl;
@@ -130,7 +137,13 @@ int XBee::checkATConfig(){
         }
 
         closeSerialConnection();
-        openSerialConnection(1);
+        if(MODE == 0){
+                MODE = 1;
+                openSerialConnection(1);
+        }else{
+                MODE = 0;
+                openSerialConnection();
+        }
     }
     else logXbee << "(config AT) nombre de bits de parité vérifié avec succès" << mendl;
 
@@ -239,6 +252,7 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
 bool XBee::readATResponse(const char *value){
     string reponse = readString();
     logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
+
     if(reponse == value) return true;
     else return false;
 }
@@ -250,7 +264,7 @@ bool XBee::readATResponse(const char *value){
  */
 bool XBee::enterATMode(){
     serial.writeString(XB_AT_CMD_ENTER);
-    delay(2);
+    delay(3);
     serial.writeString(XB_AT_V_END_LINE);
     logXbee << "entrée en mode AT" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
@@ -302,13 +316,14 @@ bool XBee::writeATConfig(){
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::sendATCommand(const char *command, const char *value, unsigned int mode){
-    serial.writeString(command);
-    serial.writeString(value);
-    serial.writeString(XB_AT_V_END_LINE);
     if(mode == XB_AT_M_GET){
+        serial.writeString(command);
+        serial.writeString(XB_AT_V_END_LINE);
         logXbee << "(config AT) envoi de la commande AT : " << command << mendl;
         return readATResponse(value);
-    }else{    
+    }else{
+        serial.writeString(command);
+        serial.writeString(value);    
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
         return readATResponse(XB_AT_R_SUCCESS);
     }

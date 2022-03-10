@@ -103,16 +103,16 @@
 
 // Valeurs AT
 #define XB_AT_V_END_LINE "\r"
-#define XB_AT_V_API "0"
-#define XB_AT_V_BAUDRATE "7"
-#define XB_AT_V_AES "1"
-#define XB_AT_V_AES_KEY "32303032"
-#define XB_AT_V_CHANEL "C"
-#define XB_AT_V_PAN_ID "3332"
-#define XB_AT_V_COORDINATOR "0"
-#define XB_AT_V_PARITY "1"
-#define XB_AT_V_16BIT_SOURCE_ADDR "1"
-#define XB_AT_V_LOW_DEST_ADDR "2"
+#define XB_AT_V_API "0\r"
+#define XB_AT_V_BAUDRATE "3\r"
+#define XB_AT_V_AES "1\r"
+#define XB_AT_V_AES_KEY "32303032\r"
+#define XB_AT_V_CHANEL "C\r"
+#define XB_AT_V_PAN_ID "3332\r"
+#define XB_AT_V_COORDINATOR "0\r"
+#define XB_AT_V_PARITY "1\r"
+#define XB_AT_V_16BIT_SOURCE_ADDR "1\r"
+#define XB_AT_V_LOW_DEST_ADDR "2\r"
 #define XB_AT_V_DISCOVER_NETWORK ""
 
 // Réponses AT
