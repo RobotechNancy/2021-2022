@@ -58,8 +58,11 @@ int XBee::openSerialConnection(int mode){
         
         if (errorOpening != 1)
             logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_PRIMARY  << "- baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
-        else
+        
+	else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_PRIMARY << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
+    	    checkATConfig();
+        }
     }
 
     return errorOpening;

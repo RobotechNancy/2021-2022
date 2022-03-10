@@ -13,9 +13,9 @@ int main(int argc, char *argv[]){
     else
         cout << ": Connexion ouverte avec succès sur le port \"" << XB_SERIAL_PORT_PRIMARY << "\".\n" << endl;
 
-    int error_configuration = xbee.checkATConfig();
+    */int error_configuration = xbee.checkATConfig();
     
-    if(error_configuration == XB_AT_E_SUCCESS)
+    /*if(error_configuration == XB_AT_E_SUCCESS)
        cout << "Configuration AT réussie." << endl;
     else
        cout << "Configuration AT non réussie | [Code erreur : " << error_configuration << "]" << endl;
