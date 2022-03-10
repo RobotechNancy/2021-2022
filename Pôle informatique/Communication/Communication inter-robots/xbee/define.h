@@ -2,19 +2,22 @@
  *  \file define.h
  *  \brief Fichier contenant l'ensemble des constantes utilisées dans la librairie XBee.
  *  \author Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
- *  \version 2.0
- *  \date 28/02/2022
+ *  \version 3.0
+ *  \date 10/03/2022
  */
 #ifndef DEFINE_XBEE_H
 #define DEFINE_XBEE_H
 
 // Paramètres du port série
+// Configuration des modules XBee pour la compétition
 #define XB_SERIAL_PORT_PRIMARY "/dev/ttyAMA0"
 #define XB_BAUDRATE_PRIMARY 9600
 #define XB_DATABITS_PRIMARY SERIAL_DATABITS_8
 #define XB_PARITY_PRIMARY SERIAL_PARITY_EVEN
 #define XB_STOPBITS_PRIMARY SERIAL_STOPBITS_1
 
+
+// Configuration d'usine par défaut des modules XBee neufs
 #define XB_SERIAL_PORT_DEFAULT "/dev/ttyAMA0"
 #define XB_BAUDRATE_DEFAULT 9600
 #define XB_DATABITS_DEFAULT SERIAL_DATABITS_8
