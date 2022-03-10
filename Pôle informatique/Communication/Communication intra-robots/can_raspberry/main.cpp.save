@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		return err;
 	}
 	
-//	can.start_listen();
+	can.start_listen();
 
 	uint8_t data[8] = {0x01,0x02,0xFF,0x34,0x45};
 
@@ -54,28 +54,28 @@ int main(int argc, char **argv)
 	}
 	while(true){
 		//cout << endl;
-	uint adr;
-	uint cdFct;
-	uint64_t i;
-	cout << "adr : ";
+	int adr;
+	cout << endl << "adresse du recepteur : ";
 	cin >> adr;
-	cout << "codeFct : ";
+	cout << "code fonction : ";
 	cin >> cdFct;
-	cout << "data en hexa : ";
-	cin >> hex >> i;
-	// 32 bit system
-	uint8_t data [8] = 
+	
+	// 32 bit system  
+	uint8_t bytes [sizeof(int)] = 
 	{
-	  ((uint64_t)i >> 0) & 0xFF,
-	  ((uint64_t)i >> 8) & 0xFF,
-	  ((uint64_t)i >> 16) & 0xFF,
-	  ((uint64_t)i >> 24) & 0xFF,
-	  ((uint64_t)i >> 32) & 0xFF,
-	  ((uint64_t)i >> 40) & 0xFF,
-	  ((uint64_t)i >> 48) & 0xFF,
-	  ((uint64_t)i >> 56) & 0xFF,
-	};
-	can.send(adr, cdFct, data, 8, true, 5);
+	  ((uint32_t)i >>  0) & 0xFF,
+	  ((uint32_t)i >>  8) & 0xFF,
+	  ((uint32_t)i >> 16) & 0xFF,
+	  ((uint32_t)i >> 24) & 0xFF,
+	  // 32 bit system  
+uint8_t bytes [sizeof(int)] = 
+{
+  ((uint32_t)i >>  0) & 0xFF,
+  ((uint32_t)i >>  8) & 0xFF,
+  ((uint32_t)i >> 16) & 0xFF,
+  ((uint32_t)i >> 24) & 0xFF,
+};
+	}; 
 		//can.listen();
 		wait(1000);
 
