@@ -38,7 +38,7 @@ cd 2021-2022/Pôle\ informatique/Communication/Communication\ inter-robots/xbee/
 
 sudo g++ *.cpp -std=c++17 -pthread -o output
 
-./output
+sudo ./output
 ```
 
 # Publication d'une nouvelle version du code (sous Linux x86-64) :
