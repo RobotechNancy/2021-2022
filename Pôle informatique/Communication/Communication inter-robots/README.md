@@ -36,15 +36,15 @@ sudo git clone https://github.com/RobotechNancy/2021-2022.git
 ```bash
 cd 2021-2022/Pôle\ informatique/Communication/Communication\ inter-robots/xbee/  
 
-sudo g++ *.cpp -std=c++17 -pthread -o output
+g++ *.cpp -std=c++17 -pthread -o output
 
-sudo ./output
+./output
 ```
 
 # Publication d'une nouvelle version du code (sous Linux x86-64) :
 
 ```bash
-sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo git push
+git pull && git add * && git commit -m "Version XX.XXR" && git push
 ```
 
 [**Username** : votre nom d'utilisateur GitHub] 
