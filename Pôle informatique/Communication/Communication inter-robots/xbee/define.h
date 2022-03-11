@@ -86,6 +86,7 @@
 #define XB_AT_E_LOW_DEST_ADDR -411
 #define XB_AT_E_EXIT -412
 #define XB_AT_E_WRITE_CONFIG -413
+#define XB_AT_E_DISCOVER_NETWORK -414
 
 
 // Commandes AT

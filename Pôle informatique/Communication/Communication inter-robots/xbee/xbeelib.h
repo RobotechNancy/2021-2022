@@ -62,6 +62,9 @@ public:
     // Envoi de la demande de battement de coeur
     void sendHeartbeat();
 
+    // Permet de vérifier si un message envoyé a reçu une réponse
+    int XBee::isXbeeResponding();
+
     // Conversion char* en string
     std::string charToString(char* message);
 
@@ -154,6 +157,9 @@ private:
 
     // Variable permettant de définir la configuration série à utiliser
     int MODE = 0;
+
+    //vecteur contenant la liste des trames envoyées classées par destinataire et code fonction
+    std::vector<int> trames_envoyees = {};
 };
 
 #endif // XBEE_H
