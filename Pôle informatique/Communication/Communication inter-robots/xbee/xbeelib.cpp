@@ -32,16 +32,16 @@ XBee::~XBee(){ }
 /*!
     \brief Nettoyage du buffer et ouverture de la connexion UART entre la RaspberryPi et le module XBee
     \param mode permet de définir la configuration de port à utiliser
-    \return 1 succès
-    \return -1 port série non trouvé
-    \return -2 erreur lors de l'ouverture du port série
-    \return -3 erreur lors de la récupération des informations du port série
-    \return -4 baudrate non reconnu
-    \return -5 erreur lors de l'écriture de la configuration du port série
-    \return -6 erreur lors de l'écriture du timeout
-    \return -7 databits non reconnus
-    \return -8 stopbits non reconnus
-    \return -9 parité non reconnue
+    \return 500 succès
+    \return -501 port série non trouvé
+    \return -502 erreur lors de l'ouverture du port série
+    \return -503 erreur lors de la récupération des informations du port série
+    \return -504 baudrate non reconnu
+    \return -505 erreur lors de l'écriture de la configuration du port série
+    \return -506 erreur lors de l'écriture du timeout
+    \return -507 databits non reconnus
+    \return -508 stopbits non reconnus
+    \return -509 parité non reconnue
  */
 int XBee::openSerialConnection(int mode){
     int errorOpening;
