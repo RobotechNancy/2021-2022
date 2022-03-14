@@ -106,11 +106,11 @@ int XBee::checkATConfig(){
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
         closeSerialConnection();
         if(MODE == 0){
-                MODE = 1;
+            MODE = 1;
         	openSerialConnection(1);
         }else{
-                MODE = 0;
-		openSerialConnection();
+            MODE = 0;
+		    openSerialConnection();
         }
         return XB_AT_E_ENTER;
     }
@@ -139,11 +139,11 @@ int XBee::checkATConfig(){
 
         closeSerialConnection();
         if(MODE == 0){
-                MODE = 1;
-                openSerialConnection(1);
+            MODE = 1;
+            openSerialConnection(1);
         }else{
-                MODE = 0;
-                openSerialConnection();
+            MODE = 0;
+            openSerialConnection();
         }
     }
     else logXbee << "(config AT) nombre de bits de parité vérifié avec succès" << mendl;
