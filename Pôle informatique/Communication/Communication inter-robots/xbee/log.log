@@ -1093,3 +1093,4 @@
 [16:19:9 - xbee] (serial) /!\ erreur -2 : impossible d'ouvrir le port /dev/ttyAMA0 - baudrate : 9600 - parités : 1
 [16:19:12 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
 [16:23:56 - xbee] (serial) /!\ erreur -2 : impossible d'ouvrir le port /dev/ttyAMA0 - baudrate : 9600 - parités : 1
+[16:31:31 - xbee] (serial) /!\ erreur -2 : impossible d'ouvrir le port /dev/ttyAMA0 - baudrate : 9600 - parités : 1
