@@ -63,7 +63,7 @@ public:
     void sendHeartbeat();
 
     // Permet de vérifier si un message envoyé a reçu une réponse
-    int XBee::isXbeeResponding();
+    int isXbeeResponding();
 
     // Conversion char* en string
     std::string charToString(char* message);

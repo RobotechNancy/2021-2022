@@ -5,7 +5,10 @@ using namespace std;
 int main(int argc, char *argv[]){
     
     XBee xbee;
-    xbee.openSerialConnection();
+    int status = xbee.openSerialConnection();
+
+    if(status != 1)
+        return 0;
 
     thread heartbeat(&XBee::sendHeartbeat, xbee);
     thread t(&XBee::waitForATrame, xbee);
