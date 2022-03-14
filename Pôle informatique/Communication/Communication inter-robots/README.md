@@ -125,7 +125,8 @@ git pull && git add * && git commit -m "Version XX.XXR" && git push
 
 - toute la documentation a été générée grâce à l'outil [Doxygen](https://www.doxygen.nl/index.html)
 - le fichier de configuration de Doxygen se trouve dans le dossie **xbee** (fichier *Doxyfile*)
-- pour consulter la documentation, ouvrer le PDF **refman.pdf** dans le dossier `doc -> latex -> refman.pdf`
+- pour consulter la documentation en PDF, ouvrer le fichier **refman.pdf** situé dans le dossier `doc -> latex -> refman.pdf`
+- pour consulter la documentation en HTML, ouvrer le fichier **index.html** situé dans le dossier `doc -> html -> index.html`
 
 ***
 En cas de besoin, contactez moi sur Discord `@heatsink.ru#1183` ou par mail samueldittedestree@protonmail.com
