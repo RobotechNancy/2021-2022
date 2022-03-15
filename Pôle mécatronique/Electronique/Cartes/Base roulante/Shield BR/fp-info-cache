@@ -1,0 +1,246 @@
+57412563934681
+Sensor_Current
+AKM_CQ_7
+AKM Current Sensor, 7 pin, THT (http://www.akm.com/akm/en/file/datasheet/CQ-236B.pdf)
+akm current sensor tht
+0
+39
+7
+Sensor_Current
+AKM_CQ_7S
+AKM Current Sensor, 7 pin, SMD (http://www.akm.com/akm/en/file/datasheet/CQ-236B.pdf)
+akm current sensor smd
+0
+19
+7
+Sensor_Current
+AKM_CQ_VSOP-24_5.6x7.9mm_P0.65mm
+AKM VSOP-24 current sensor, 5.6x7.9mm body, 0.65mm pitch (http://www.akm.com/akm/en/file/datasheet/CQ-330J.pdf)
+akm vsop 24
+0
+10
+10
+Sensor_Current
+AKM_CZ_SSOP-10_6.5x8.1mm_P0.95mm
+AKM CZ-381x current sensor, 6.5x8.1mm body, 0.95mm pitch (http://www.akm.com/akm/en/product/detail/0009/)
+akm cz-381x 10
+0
+10
+10
+Sensor_Current
+Allegro_CB_PFF
+Allegro MicroSystems, CB-PFF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx) !PADS 4-5 DO NOT MATCH DATASHEET!
+Allegro CB-PFF
+0
+37
+5
+Sensor_Current
+Allegro_CB_PSF
+Allegro MicroSystems, CB-PSF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx)
+Allegro CB-PSF
+0
+5
+5
+Sensor_Current
+Allegro_CB_PSS
+Allegro MicroSystems, CB-PSS Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx)
+Allegro CB-PSS
+0
+5
+5
+Sensor_Current
+Allegro_PSOF-7_4.8x6.4mm_P1.60mm
+Allegro Microsystems PSOF-7, 4.8x6.4mm Body, 1.60mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/ACS780-Datasheet.ashx)
+Allegro PSOF-7
+0
+7
+7
+Sensor_Current
+Allegro_QFN-12-10-1EP_3x3mm_P0.5mm
+Allegro Microsystems 12-Lead (10-Lead Populated) Quad Flat Pack, 3x3mm Body, 0.5mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/ACS711-Datasheet.ashx)
+Allegro QFN 0.5
+0
+14
+10
+Sensor_Current
+Allegro_QSOP-24_3.9x8.7mm_P0.635mm
+Allegro Microsystems 24-Lead Plastic Shrink Small Outline Narrow Body Body [QSOP] (http://www.allegromicro.com/~/media/Files/Datasheets/ACS726-Datasheet.ashx?la=en)
+Allegro QSOP 0.635
+0
+24
+24
+Sensor_Current
+Allegro_SIP-3
+Allegro Microsystems SIP-3, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1369-Datasheet.ashx)
+Allegro SIP-3
+0
+3
+3
+Sensor_Current
+Allegro_SIP-4
+Allegro Microsystems SIP-4, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx)
+Allegro SIP-4
+0
+4
+4
+Sensor_Current
+Diodes_SIP-3_4.1x1.5mm_P1.27mm
+Diodes SIP-3 Bulk Pack, 1.27mm Pitch (https://www.diodes.com/assets/Package-Files/SIP-3-Bulk-Pack.pdf)
+Diodes SIP-3 Bulk Pack
+0
+3
+3
+Sensor_Current
+Diodes_SIP-3_4.1x1.5mm_P2.65mm
+Diodes SIP-3 Ammo Pack, 2.65mm Pitch (https://www.diodes.com/assets/Package-Files/SIP-3-Ammo-Pack.pdf)
+Diodes SIP-3 Ammo Pack
+0
+3
+3
+Sensor_Current
+Honeywell_CSLW
+https://sensing.honeywell.com/honeywell-sensing-cslw-series-product-sheet-005861-1-en.pdf
+Miniature Wired Open-Loop Current Sensor
+0
+5
+5
+Sensor_Current
+LEM_CKSR
+LEM CKSR 6/15/25/50/75-NP Current Transducer, https://www.lem.com/sites/default/files/products_datasheets/cksr_75-np.pdf
+current transducer LEM
+0
+14
+14
+Sensor_Current
+LEM_HO8-NP
+LEM HO 8/15/25-NP Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-np-0000_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HO8-NSM
+LEM HO 8/15/25-NSM Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-nsm-0000_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HO40-NP
+LEM HO 40/60/120/150-NP Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-np_0100__1100_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HTFS
+LEM HTFS x00-P current transducer (https://www.lem.com/sites/default/files/products_datasheets/htfs_200_800-p.pdf)
+HTFS current transducer
+0
+4
+4
+Sensor_Current
+LEM_HX02-P
+LEM HX02-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX03-P-SP2
+LEM HX03-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX04-P
+LEM HX04-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX05-NP
+LEM HX05-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
+0
+8
+8
+Sensor_Current
+LEM_HX05-P-SP2
+LEM HX05-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX06-P
+LEM HX06-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX10-NP
+LEM HX10-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
+0
+8
+8
+Sensor_Current
+LEM_HX10-P-SP2
+LEM HX10-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX15-NP
+LEM HX15-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
+0
+8
+8
+Sensor_Current
+LEM_HX15-P-SP2
+LEM HX15-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX20-P-SP2
+LEM HX20-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX25-P-SP2
+LEM HX25-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_HX50-P-SP2
+LEM HX50-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
+0
+6
+6
+Sensor_Current
+LEM_LA25-P
+LEM Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/la_25-p.pdf)
+current transducer
+0
+3
+3
+Sensor_Current
+LEM_LTSR-NP
+LEM current transducer LEM_LTSR-NP 5V supply voltage series https://www.lem.com/sites/default/files/products_datasheets/ltsr_6-np.pdf
+Current transducer
+0
+10
+10
