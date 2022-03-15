@@ -52,7 +52,7 @@ int XBee::openSerialConnection(int mode){
             logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_DEFAULT  << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
         else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_DEFAULT << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
-	    checkATConfig();
+	    if (MODE != 2) checkATConfig();
 	}    
     } else if(mode == 0) {
         errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);      
@@ -62,7 +62,7 @@ int XBee::openSerialConnection(int mode){
         
 	else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_PRIMARY << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parité : " << XB_PARITY_PRIMARY << mendl;
-    	    checkATConfig();
+    	    if(MODE != 2) checkATConfig();
         }
     }
 
@@ -233,6 +233,7 @@ int XBee::checkATConfig(){
     }
 
     logXbee << "(config AT) configuration AT réalisée avec succès" << mendl;
+    MODE = 2;
     return XB_AT_E_SUCCESS;
 }
 
