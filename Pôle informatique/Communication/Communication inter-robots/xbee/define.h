@@ -41,7 +41,7 @@
 #define XB_V_END 0x03
 
 // Codes fonctions
-#define XB_FCT_TEST_ALIVE 0x1E
+#define XB_FCT_TEST_ALIVE 0x07
 
 #define XB_LIST_CODE_FCT (int[]){XB_FCT_TEST_ALIVE}
 

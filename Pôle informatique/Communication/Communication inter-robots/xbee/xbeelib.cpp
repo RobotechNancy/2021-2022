@@ -254,6 +254,10 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::readATResponse(const char *value, int mode){
+
+    if(value == XB_AT_V_DISCOVER_NETWORK)
+        delay(5);
+        
     string reponse = readString();
     
     if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE)
@@ -338,7 +342,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         if(command != XB_AT_CMD_DISCOVER_NETWORK)
             return readATResponse(XB_AT_R_SUCCESS);
         else{
-	    delay(4);	
+	        delay(4);	
             return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
     	}
     }
@@ -424,7 +428,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     serial.writeBytes(trame, length_trame);
     logXbee << "(sendTrame) envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
 
-    //trames_envoyees[code_fct] = trames_envoyees[code_fct]+1;
+    trames_envoyees[code_fct] = trames_envoyees[code_fct]+1;
 
     return XB_TRAME_E_SUCCESS;
 }
@@ -529,7 +533,7 @@ int XBee::processCodeFct(int code_fct, int exp){
            return XB_FCT_E_NONE_REACHABLE;
     }
 
-    //trames_envoyees[code_fct] = trames_envoyees[code_fct]-1;
+    trames_envoyees[code_fct] = trames_envoyees[code_fct]-1;
     logXbee << "(process code fonction) code fonction n°" << code_fct << " traité avec succès" << mendl;
     return XB_FCT_E_SUCCESS;
 }

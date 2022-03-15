@@ -159,7 +159,7 @@ private:
     int MODE = 0;
 
     //vecteur contenant la liste des trames envoyées classées par destinataire et code fonction
-    std::vector<int> trames_envoyees = {};
+    int trames_envoyees[100];
 };
 
 #endif // XBEE_H
