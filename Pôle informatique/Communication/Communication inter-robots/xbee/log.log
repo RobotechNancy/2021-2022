@@ -1494,3 +1494,1184 @@
 [8:43:34 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
 [8:43:37 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
 [8:43:40 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[8:54:37 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:54:40 - xbee] (config AT) entrée en mode AT en cours...
+[8:54:41 - xbee] (config AT) réponse du Xbee : OK
+[8:54:41 - xbee] (config AT) entrée dans le mode AT
+[8:54:41 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:54:42 - xbee] (config AT) réponse du Xbee : 3
+[8:54:42 - xbee] (config AT) baudrate vérifié avec succès
+[8:54:42 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:54:43 - xbee] (config AT) réponse du Xbee : 1
+[8:54:43 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[8:54:43 - xbee] (config AT) envoi de la commande AT : ATAP
+[8:54:44 - xbee] (config AT) réponse du Xbee : 0
+[8:54:44 - xbee] (config AT) mode API vérifié avec succès
+[8:54:44 - xbee] (config AT) envoi de la commande AT : ATEE
+[8:54:45 - xbee] (config AT) réponse du Xbee : 1
+[8:54:45 - xbee] (config AT) chiffrement AES vérifié avec succès
+[8:54:45 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[8:54:46 - xbee] (config AT) réponse du Xbee : OK
+[8:54:46 - xbee] (config AT) clé de chiffrement configurée avec succès
+[8:54:46 - xbee] (config AT) envoi de la commande AT : ATCH
+[8:54:47 - xbee] (config AT) réponse du Xbee : C
+[8:54:47 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[8:54:47 - xbee] (config AT) envoi de la commande AT : ATID
+[8:54:48 - xbee] (config AT) réponse du Xbee : 3332
+[8:54:48 - xbee] (config AT) ID du réseau vérifié avec succès
+[8:54:48 - xbee] (config AT) envoi de la commande AT : ATCE
+[8:54:49 - xbee] (config AT) réponse du Xbee : 0
+[8:54:49 - xbee] (config AT) mode coordinateur vérifié avec succès
+[8:54:49 - xbee] (config AT) envoi de la commande AT : ATMY
+[8:54:50 - xbee] (config AT) réponse du Xbee : 1
+[8:54:50 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[8:54:50 - xbee] (config AT) envoi de la commande AT : ATDL
+[8:54:51 - xbee] (config AT) réponse du Xbee : 2
+[8:54:51 - xbee] (config AT) adresse de destination vérifiée avec succès
+[8:54:51 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[8:54:52 - xbee] (config AT) réponse du Xbee : OK
+[8:54:52 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[8:54:52 - xbee] (config AT) lancement de la découverte réseau XBee
+[8:54:58 - xbee] (config AT) réponse du Xbee : 013A2004167D2F122 
+[8:54:58 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[8:55:1 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[8:55:4 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[8:57:37 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[8:57:40 - xbee] (config AT) entrée en mode AT en cours...
+[8:57:41 - xbee] (config AT) réponse du Xbee : OK
+[8:57:41 - xbee] (config AT) entrée dans le mode AT
+[8:57:41 - xbee] (config AT) envoi de la commande AT : ATBD
+[8:57:42 - xbee] (config AT) réponse du Xbee : 3
+[8:57:42 - xbee] (config AT) baudrate vérifié avec succès
+[8:57:42 - xbee] (config AT) envoi de la commande AT : ATNB
+[8:57:43 - xbee] (config AT) réponse du Xbee : 1
+[8:57:43 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[8:57:43 - xbee] (config AT) envoi de la commande AT : ATAP
+[8:57:44 - xbee] (config AT) réponse du Xbee : 0
+[8:57:44 - xbee] (config AT) mode API vérifié avec succès
+[8:57:44 - xbee] (config AT) envoi de la commande AT : ATEE
+[8:57:45 - xbee] (config AT) réponse du Xbee : 1
+[8:57:45 - xbee] (config AT) chiffrement AES vérifié avec succès
+[8:57:45 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[8:57:46 - xbee] (config AT) réponse du Xbee : OK
+[8:57:46 - xbee] (config AT) clé de chiffrement configurée avec succès
+[8:57:46 - xbee] (config AT) envoi de la commande AT : ATCH
+[8:57:47 - xbee] (config AT) réponse du Xbee : C
+[8:57:47 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[8:57:47 - xbee] (config AT) envoi de la commande AT : ATID
+[8:57:48 - xbee] (config AT) réponse du Xbee : 3332
+[8:57:48 - xbee] (config AT) ID du réseau vérifié avec succès
+[8:57:48 - xbee] (config AT) envoi de la commande AT : ATCE
+[8:57:49 - xbee] (config AT) réponse du Xbee : 0
+[8:57:49 - xbee] (config AT) mode coordinateur vérifié avec succès
+[8:57:49 - xbee] (config AT) envoi de la commande AT : ATMY
+[8:57:50 - xbee] (config AT) réponse du Xbee : 1
+[8:57:50 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[8:57:50 - xbee] (config AT) envoi de la commande AT : ATDL
+[8:57:51 - xbee] (config AT) réponse du Xbee : 2
+[8:57:51 - xbee] (config AT) adresse de destination vérifiée avec succès
+[8:57:51 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[8:57:52 - xbee] (config AT) réponse du Xbee : OK
+[8:57:52 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[8:57:52 - xbee] (config AT) lancement de la découverte réseau XBee
+[8:57:58 - xbee] (config AT) réponse du Xbee : 013A2004167D2F121 
+[8:57:58 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[8:58:1 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:5:58 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:6:1 - xbee] (config AT) entrée en mode AT en cours...
+[9:6:2 - xbee] (config AT) réponse du Xbee : OK
+[9:6:2 - xbee] (config AT) entrée dans le mode AT
+[9:6:2 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:6:3 - xbee] (config AT) réponse du Xbee : 3
+[9:6:3 - xbee] (config AT) baudrate vérifié avec succès
+[9:6:3 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:6:4 - xbee] (config AT) réponse du Xbee : 1
+[9:6:4 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:6:4 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:6:5 - xbee] (config AT) réponse du Xbee : 0
+[9:6:5 - xbee] (config AT) mode API vérifié avec succès
+[9:6:5 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:6:6 - xbee] (config AT) réponse du Xbee : 1
+[9:6:6 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:6:6 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:6:7 - xbee] (config AT) réponse du Xbee : OK
+[9:6:7 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:6:7 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:6:8 - xbee] (config AT) réponse du Xbee : C
+[9:6:8 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:6:8 - xbee] (config AT) envoi de la commande AT : ATID
+[9:6:9 - xbee] (config AT) réponse du Xbee : 3332
+[9:6:9 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:6:9 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:6:10 - xbee] (config AT) réponse du Xbee : 0
+[9:6:10 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:6:10 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:6:11 - xbee] (config AT) réponse du Xbee : 1
+[9:6:11 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:6:11 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:6:12 - xbee] (config AT) réponse du Xbee : 2
+[9:6:12 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:6:12 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:6:13 - xbee] (config AT) réponse du Xbee : OK
+[9:6:13 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:6:13 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:6:19 - xbee] (config AT) réponse du Xbee : 013A2004167D2F121 
+[9:6:19 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:6:22 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:6:25 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:6:28 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:6:31 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[9:6:34 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[9:6:37 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[9:6:40 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[9:6:43 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[9:6:46 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[9:6:49 - xbee] (sendTrame) envoi de la trame n°16 effectué avec succès
+[9:6:52 - xbee] (sendTrame) envoi de la trame n°17 effectué avec succès
+[9:6:55 - xbee] (sendTrame) envoi de la trame n°18 effectué avec succès
+[9:6:58 - xbee] (sendTrame) envoi de la trame n°19 effectué avec succès
+[9:7:1 - xbee] (sendTrame) envoi de la trame n°20 effectué avec succès
+[9:7:4 - xbee] (sendTrame) envoi de la trame n°21 effectué avec succès
+[9:7:7 - xbee] (sendTrame) envoi de la trame n°22 effectué avec succès
+[9:7:10 - xbee] (sendTrame) envoi de la trame n°23 effectué avec succès
+[9:7:13 - xbee] (sendTrame) envoi de la trame n°24 effectué avec succès
+[9:7:16 - xbee] (sendTrame) envoi de la trame n°25 effectué avec succès
+[9:7:19 - xbee] (sendTrame) envoi de la trame n°26 effectué avec succès
+[9:7:22 - xbee] (sendTrame) envoi de la trame n°27 effectué avec succès
+[9:7:25 - xbee] (sendTrame) envoi de la trame n°28 effectué avec succès
+[9:7:28 - xbee] (sendTrame) envoi de la trame n°29 effectué avec succès
+[9:7:31 - xbee] (sendTrame) envoi de la trame n°30 effectué avec succès
+[9:7:34 - xbee] (sendTrame) envoi de la trame n°31 effectué avec succès
+[9:7:37 - xbee] (sendTrame) envoi de la trame n°32 effectué avec succès
+[9:7:40 - xbee] (sendTrame) envoi de la trame n°33 effectué avec succès
+[9:7:43 - xbee] (sendTrame) envoi de la trame n°34 effectué avec succès
+[9:7:46 - xbee] (sendTrame) envoi de la trame n°35 effectué avec succès
+[9:7:49 - xbee] (sendTrame) envoi de la trame n°36 effectué avec succès
+[9:7:52 - xbee] (sendTrame) envoi de la trame n°37 effectué avec succès
+[9:7:55 - xbee] (sendTrame) envoi de la trame n°38 effectué avec succès
+[9:7:58 - xbee] (sendTrame) envoi de la trame n°39 effectué avec succès
+[9:8:1 - xbee] (sendTrame) envoi de la trame n°40 effectué avec succès
+[9:8:4 - xbee] (sendTrame) envoi de la trame n°41 effectué avec succès
+[9:8:7 - xbee] (sendTrame) envoi de la trame n°42 effectué avec succès
+[9:8:10 - xbee] (sendTrame) envoi de la trame n°43 effectué avec succès
+[9:8:13 - xbee] (sendTrame) envoi de la trame n°44 effectué avec succès
+[9:8:16 - xbee] (sendTrame) envoi de la trame n°45 effectué avec succès
+[9:8:19 - xbee] (sendTrame) envoi de la trame n°46 effectué avec succès
+[9:8:22 - xbee] (sendTrame) envoi de la trame n°47 effectué avec succès
+[9:8:25 - xbee] (sendTrame) envoi de la trame n°48 effectué avec succès
+[9:8:28 - xbee] (sendTrame) envoi de la trame n°49 effectué avec succès
+[9:8:31 - xbee] (sendTrame) envoi de la trame n°50 effectué avec succès
+[9:8:34 - xbee] (sendTrame) envoi de la trame n°51 effectué avec succès
+[9:8:37 - xbee] (sendTrame) envoi de la trame n°52 effectué avec succès
+[9:8:40 - xbee] (sendTrame) envoi de la trame n°53 effectué avec succès
+[9:8:43 - xbee] (sendTrame) envoi de la trame n°54 effectué avec succès
+[9:9:36 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:9:39 - xbee] (config AT) entrée en mode AT en cours...
+[9:9:40 - xbee] (config AT) réponse du Xbee : OK
+[9:9:40 - xbee] (config AT) entrée dans le mode AT
+[9:9:40 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:9:41 - xbee] (config AT) réponse du Xbee : 3
+[9:9:41 - xbee] (config AT) baudrate vérifié avec succès
+[9:9:41 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:9:42 - xbee] (config AT) réponse du Xbee : 1
+[9:9:42 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:9:42 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:9:43 - xbee] (config AT) réponse du Xbee : 0
+[9:9:43 - xbee] (config AT) mode API vérifié avec succès
+[9:9:43 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:9:44 - xbee] (config AT) réponse du Xbee : 1
+[9:9:44 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:9:44 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:9:45 - xbee] (config AT) réponse du Xbee : OK
+[9:9:45 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:9:45 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:9:46 - xbee] (config AT) réponse du Xbee : C
+[9:9:46 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:9:46 - xbee] (config AT) envoi de la commande AT : ATID
+[9:9:47 - xbee] (config AT) réponse du Xbee : 3332
+[9:9:47 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:9:47 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:9:48 - xbee] (config AT) réponse du Xbee : 0
+[9:9:48 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:9:48 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:9:49 - xbee] (config AT) réponse du Xbee : 1
+[9:9:49 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:9:49 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:9:50 - xbee] (config AT) réponse du Xbee : 2
+[9:9:50 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:9:50 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:9:51 - xbee] (config AT) réponse du Xbee : OK
+[9:9:51 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:9:51 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:10:2 - xbee] (config AT) réponse du Xbee : 013A2004167D2F122 
+[9:10:2 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:10:5 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:10:8 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:10:11 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:10:14 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[9:10:17 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[9:10:20 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[9:10:23 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[9:10:26 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[9:10:29 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[9:12:26 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:12:29 - xbee] (config AT) entrée en mode AT en cours...
+[9:12:30 - xbee] (config AT) réponse du Xbee : OK
+[9:12:30 - xbee] (config AT) entrée dans le mode AT
+[9:12:30 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:12:31 - xbee] (config AT) réponse du Xbee : 3
+[9:12:31 - xbee] (config AT) baudrate vérifié avec succès
+[9:12:31 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:12:32 - xbee] (config AT) réponse du Xbee : 1
+[9:12:32 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:12:32 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:12:33 - xbee] (config AT) réponse du Xbee : 0
+[9:12:33 - xbee] (config AT) mode API vérifié avec succès
+[9:12:33 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:12:34 - xbee] (config AT) réponse du Xbee : 1
+[9:12:34 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:12:34 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:12:35 - xbee] (config AT) réponse du Xbee : OK
+[9:12:35 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:12:35 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:12:36 - xbee] (config AT) réponse du Xbee : C
+[9:12:36 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:12:36 - xbee] (config AT) envoi de la commande AT : ATID
+[9:12:37 - xbee] (config AT) réponse du Xbee : 3332
+[9:12:37 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:12:37 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:12:38 - xbee] (config AT) réponse du Xbee : 0
+[9:12:38 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:12:38 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:12:39 - xbee] (config AT) réponse du Xbee : 1
+[9:12:39 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:12:39 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:12:40 - xbee] (config AT) réponse du Xbee : 2
+[9:12:40 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:12:40 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:12:41 - xbee] (config AT) réponse du Xbee : OK
+[9:12:41 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:12:41 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:12:52 - xbee] (config AT) réponse du Xbee : 013A2004167D2F120 
+[9:12:52 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:12:55 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:12:58 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:13:1 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:13:4 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[9:13:7 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[9:13:10 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[9:13:13 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[9:13:16 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[9:13:19 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[9:13:22 - xbee] (sendTrame) envoi de la trame n°16 effectué avec succès
+[9:13:25 - xbee] (sendTrame) envoi de la trame n°17 effectué avec succès
+[9:13:28 - xbee] (sendTrame) envoi de la trame n°18 effectué avec succès
+[9:13:31 - xbee] (sendTrame) envoi de la trame n°19 effectué avec succès
+[9:13:34 - xbee] (sendTrame) envoi de la trame n°20 effectué avec succès
+[9:13:37 - xbee] (sendTrame) envoi de la trame n°21 effectué avec succès
+[9:13:40 - xbee] (sendTrame) envoi de la trame n°22 effectué avec succès
+[9:15:52 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:15:55 - xbee] (config AT) entrée en mode AT en cours...
+[9:15:56 - xbee] (config AT) réponse du Xbee : OK
+[9:15:56 - xbee] (config AT) entrée dans le mode AT
+[9:15:56 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:15:57 - xbee] (config AT) réponse du Xbee : 3
+[9:15:57 - xbee] (config AT) baudrate vérifié avec succès
+[9:15:57 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:15:58 - xbee] (config AT) réponse du Xbee : 1
+[9:15:58 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:15:58 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:15:59 - xbee] (config AT) réponse du Xbee : 0
+[9:15:59 - xbee] (config AT) mode API vérifié avec succès
+[9:15:59 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:16:0 - xbee] (config AT) réponse du Xbee : 1
+[9:16:0 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:16:0 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:16:1 - xbee] (config AT) réponse du Xbee : OK
+[9:16:1 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:16:1 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:16:2 - xbee] (config AT) réponse du Xbee : C
+[9:16:2 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:16:2 - xbee] (config AT) envoi de la commande AT : ATID
+[9:16:3 - xbee] (config AT) réponse du Xbee : 3332
+[9:16:3 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:16:3 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:16:4 - xbee] (config AT) réponse du Xbee : 0
+[9:16:4 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:16:4 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:16:5 - xbee] (config AT) réponse du Xbee : 1
+[9:16:5 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:16:5 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:16:6 - xbee] (config AT) réponse du Xbee : 2
+[9:16:6 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:16:6 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:16:7 - xbee] (config AT) réponse du Xbee : OK
+[9:16:7 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:16:7 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:16:18 - xbee] (config AT) réponse du Xbee : 013A2004167D2F121 
+[9:16:18 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:16:21 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:16:24 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:16:27 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:16:30 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[9:16:33 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[9:16:36 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[9:16:39 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[9:16:42 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[9:16:45 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[9:16:48 - xbee] (sendTrame) envoi de la trame n°16 effectué avec succès
+[9:16:51 - xbee] (sendTrame) envoi de la trame n°17 effectué avec succès
+[9:16:54 - xbee] (sendTrame) envoi de la trame n°18 effectué avec succès
+[9:16:57 - xbee] (sendTrame) envoi de la trame n°19 effectué avec succès
+[9:17:1 - xbee] (sendTrame) envoi de la trame n°20 effectué avec succès
+[9:17:4 - xbee] (sendTrame) envoi de la trame n°21 effectué avec succès
+[9:17:7 - xbee] (sendTrame) envoi de la trame n°22 effectué avec succès
+[9:17:10 - xbee] (sendTrame) envoi de la trame n°23 effectué avec succès
+[9:17:13 - xbee] (sendTrame) envoi de la trame n°24 effectué avec succès
+[9:17:16 - xbee] (sendTrame) envoi de la trame n°25 effectué avec succès
+[9:17:19 - xbee] (sendTrame) envoi de la trame n°26 effectué avec succès
+[9:17:22 - xbee] (sendTrame) envoi de la trame n°27 effectué avec succès
+[9:17:25 - xbee] (sendTrame) envoi de la trame n°28 effectué avec succès
+[9:17:28 - xbee] (sendTrame) envoi de la trame n°29 effectué avec succès
+[9:17:31 - xbee] (sendTrame) envoi de la trame n°30 effectué avec succès
+[9:17:34 - xbee] (sendTrame) envoi de la trame n°31 effectué avec succès
+[9:17:37 - xbee] (sendTrame) envoi de la trame n°32 effectué avec succès
+[9:17:40 - xbee] (sendTrame) envoi de la trame n°33 effectué avec succès
+[9:17:43 - xbee] (sendTrame) envoi de la trame n°34 effectué avec succès
+[9:17:46 - xbee] (sendTrame) envoi de la trame n°35 effectué avec succès
+[9:17:49 - xbee] (sendTrame) envoi de la trame n°36 effectué avec succès
+[9:17:52 - xbee] (sendTrame) envoi de la trame n°37 effectué avec succès
+[9:17:55 - xbee] (sendTrame) envoi de la trame n°38 effectué avec succès
+[9:17:58 - xbee] (sendTrame) envoi de la trame n°39 effectué avec succès
+[9:18:1 - xbee] (sendTrame) envoi de la trame n°40 effectué avec succès
+[9:18:34 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:18:37 - xbee] (config AT) entrée en mode AT en cours...
+[9:18:38 - xbee] (config AT) réponse du Xbee : OK
+[9:18:38 - xbee] (config AT) entrée dans le mode AT
+[9:18:38 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:18:39 - xbee] (config AT) réponse du Xbee : 3
+[9:18:39 - xbee] (config AT) baudrate vérifié avec succès
+[9:18:39 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:18:40 - xbee] (config AT) réponse du Xbee : 1
+[9:18:40 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:18:40 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:18:41 - xbee] (config AT) réponse du Xbee : 0
+[9:18:41 - xbee] (config AT) mode API vérifié avec succès
+[9:18:41 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:18:42 - xbee] (config AT) réponse du Xbee : 1
+[9:18:42 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:18:42 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:18:43 - xbee] (config AT) réponse du Xbee : OK
+[9:18:43 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:18:43 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:18:44 - xbee] (config AT) réponse du Xbee : C
+[9:18:44 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:18:44 - xbee] (config AT) envoi de la commande AT : ATID
+[9:18:45 - xbee] (config AT) réponse du Xbee : 3332
+[9:18:45 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:18:45 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:18:46 - xbee] (config AT) réponse du Xbee : 0
+[9:18:46 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:18:46 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:18:47 - xbee] (config AT) réponse du Xbee : 1
+[9:18:47 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:18:47 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:18:48 - xbee] (config AT) réponse du Xbee : 2
+[9:18:48 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:18:48 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:18:49 - xbee] (config AT) réponse du Xbee : OK
+[9:18:49 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:18:49 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:19:0 - xbee] (config AT) réponse du Xbee : 013A2004167D2F120 
+[9:19:0 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:19:3 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:19:6 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:19:9 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:24:46 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:24:49 - xbee] (config AT) entrée en mode AT en cours...
+[9:24:50 - xbee] (config AT) réponse du Xbee : OK
+[9:24:50 - xbee] (config AT) entrée dans le mode AT
+[9:24:50 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:24:51 - xbee] (config AT) réponse du Xbee : 3
+[9:24:51 - xbee] (config AT) baudrate vérifié avec succès
+[9:24:51 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:24:52 - xbee] (config AT) réponse du Xbee : 1
+[9:24:52 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:24:52 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:24:55 - xbee] (config AT) réponse du Xbee : 2167D2F1
+[9:24:55 - xbee] (config AT) mode API vérifié avec succès
+[9:24:55 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:24:56 - xbee] (config AT) réponse du Xbee : 1
+[9:24:56 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:24:56 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:24:57 - xbee] (config AT) réponse du Xbee : OK
+[9:24:57 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:24:57 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:24:58 - xbee] (config AT) réponse du Xbee : C
+[9:24:58 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:24:58 - xbee] (config AT) envoi de la commande AT : ATID
+[9:24:59 - xbee] (config AT) réponse du Xbee : 3332
+[9:24:59 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:24:59 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:25:2 - xbee] (config AT) réponse du Xbee : 2167D2F1
+[9:25:2 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:25:2 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:25:3 - xbee] (config AT) réponse du Xbee : 1
+[9:25:3 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:25:3 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:25:4 - xbee] (config AT) réponse du Xbee : 2
+[9:25:4 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:25:4 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:25:5 - xbee] (config AT) réponse du Xbee : OK
+[9:25:5 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:25:5 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:25:8 - xbee] (config AT) réponse du Xbee : 2167D2F1
+[9:25:8 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:25:8 - xbee] (config AT) sortie du mode AT
+[9:25:9 - xbee] (config AT) réponse du Xbee : OK
+[9:25:9 - xbee] (config AT) configuration AT réalisée avec succès
+[9:25:12 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:25:15 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:25:18 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:27:38 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:27:41 - xbee] (config AT) entrée en mode AT en cours...
+[9:27:42 - xbee] (config AT) réponse du Xbee : OK
+[9:27:42 - xbee] (config AT) entrée dans le mode AT
+[9:27:42 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:27:43 - xbee] (config AT) réponse du Xbee : 3
+[9:27:43 - xbee] (config AT) baudrate vérifié avec succès
+[9:27:43 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:27:44 - xbee] (config AT) réponse du Xbee : 1
+[9:27:44 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:27:44 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:27:45 - xbee] (config AT) réponse du Xbee : 0
+[9:27:45 - xbee] (config AT) mode API vérifié avec succès
+[9:27:45 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:27:46 - xbee] (config AT) réponse du Xbee : 1
+[9:27:46 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:27:46 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:27:47 - xbee] (config AT) réponse du Xbee : OK
+[9:27:47 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:27:47 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:27:48 - xbee] (config AT) réponse du Xbee : C
+[9:27:48 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:27:48 - xbee] (config AT) envoi de la commande AT : ATID
+[9:27:49 - xbee] (config AT) réponse du Xbee : 3332
+[9:27:49 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:27:49 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:27:50 - xbee] (config AT) réponse du Xbee : 0
+[9:27:50 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:27:50 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:27:51 - xbee] (config AT) réponse du Xbee : 1
+[9:27:51 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:27:51 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:27:52 - xbee] (config AT) réponse du Xbee : 2
+[9:27:52 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:27:52 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:27:53 - xbee] (config AT) réponse du Xbee : OK
+[9:27:53 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:27:53 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:27:54 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:27:55 - xbee] /!\ (découpe trame) erreur -306 : aucun caractère de début et/ou de fin n'est présent dans le message reçu 
+[9:27:57 - xbee] /!\ (découpe trame) erreur -306 : aucun caractère de début et/ou de fin n'est présent dans le message reçu 
+[9:27:57 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:28:0 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:28:3 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:35:16 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:35:49 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:35:52 - xbee] (config AT) entrée en mode AT en cours...
+[9:35:53 - xbee] (config AT) réponse du Xbee : OK
+[9:35:53 - xbee] (config AT) entrée dans le mode AT
+[9:35:53 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:35:54 - xbee] (config AT) réponse du Xbee : 3
+[9:35:54 - xbee] (config AT) baudrate vérifié avec succès
+[9:35:54 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:35:55 - xbee] (config AT) réponse du Xbee : 1
+[9:35:55 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:35:55 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:35:56 - xbee] (config AT) réponse du Xbee : 0
+[9:35:56 - xbee] (config AT) mode API vérifié avec succès
+[9:35:56 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:35:57 - xbee] (config AT) réponse du Xbee : 1
+[9:35:57 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:35:57 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:35:58 - xbee] (config AT) réponse du Xbee : OK
+[9:35:58 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:35:58 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:35:59 - xbee] (config AT) réponse du Xbee : C
+[9:35:59 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:35:59 - xbee] (config AT) envoi de la commande AT : ATID
+[9:36:0 - xbee] (config AT) réponse du Xbee : 3332
+[9:36:0 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:36:0 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:36:1 - xbee] (config AT) réponse du Xbee : 0
+[9:36:1 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:36:1 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:36:2 - xbee] (config AT) réponse du Xbee : 1
+[9:36:2 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:36:2 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:36:3 - xbee] (config AT) réponse du Xbee : 2
+[9:36:3 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:36:3 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:36:4 - xbee] (config AT) réponse du Xbee : OK
+[9:36:4 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:36:4 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:36:8 - xbee] (config AT) réponse du Xbee : 2167D2F1
+[9:36:8 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:36:8 - xbee] (config AT) sortie du mode AT
+[9:36:9 - xbee] (config AT) réponse du Xbee : OK
+[9:36:9 - xbee] (config AT) configuration AT réalisée avec succès
+[9:36:12 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:36:15 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:36:19 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:38:41 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:38:44 - xbee] (config AT) entrée en mode AT en cours...
+[9:38:45 - xbee] (config AT) réponse du Xbee : OK
+[9:38:45 - xbee] (config AT) entrée dans le mode AT
+[9:38:45 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:38:46 - xbee] (config AT) réponse du Xbee : 3
+[9:38:46 - xbee] (config AT) baudrate vérifié avec succès
+[9:38:46 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:38:47 - xbee] (config AT) réponse du Xbee : 1
+[9:38:47 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:38:47 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:38:48 - xbee] (config AT) réponse du Xbee : 0
+[9:38:48 - xbee] (config AT) mode API vérifié avec succès
+[9:38:48 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:38:49 - xbee] (config AT) réponse du Xbee : 1
+[9:38:49 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:38:49 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:38:50 - xbee] (config AT) réponse du Xbee : OK
+[9:38:50 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:38:50 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:38:51 - xbee] (config AT) réponse du Xbee : C
+[9:38:51 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:38:51 - xbee] (config AT) envoi de la commande AT : ATID
+[9:38:52 - xbee] (config AT) réponse du Xbee : 3332
+[9:38:52 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:38:52 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:38:53 - xbee] (config AT) réponse du Xbee : 0
+[9:38:53 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:38:53 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:38:54 - xbee] (config AT) réponse du Xbee : 1
+[9:38:54 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:38:54 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:38:55 - xbee] (config AT) réponse du Xbee : 2
+[9:38:55 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:38:55 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:38:56 - xbee] (config AT) réponse du Xbee : OK
+[9:38:56 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:38:56 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:39:0 - xbee] (config AT) réponse du Xbee : 013A2004167D2F122 
+[9:39:0 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:39:0 - xbee] (config AT) sortie du mode AT
+[9:39:1 - xbee] (config AT) réponse du Xbee : OK
+[9:39:1 - xbee] (config AT) configuration AT réalisée avec succès
+[9:39:4 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:39:7 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:39:10 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:39:13 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[9:39:16 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[9:41:35 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:41:38 - xbee] (config AT) entrée en mode AT en cours...
+[9:41:39 - xbee] (config AT) réponse du Xbee : OK
+[9:41:39 - xbee] (config AT) entrée dans le mode AT
+[9:41:39 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:41:40 - xbee] (config AT) réponse du Xbee : 3
+[9:41:40 - xbee] (config AT) baudrate vérifié avec succès
+[9:41:41 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:41:42 - xbee] (config AT) réponse du Xbee : 1
+[9:41:42 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:41:42 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:41:43 - xbee] (config AT) réponse du Xbee : 0
+[9:41:43 - xbee] (config AT) mode API vérifié avec succès
+[9:41:43 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:41:44 - xbee] (config AT) réponse du Xbee : 1
+[9:41:44 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:41:44 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:41:45 - xbee] (config AT) réponse du Xbee : OK
+[9:41:45 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:41:45 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:41:46 - xbee] (config AT) réponse du Xbee : C
+[9:41:46 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:41:46 - xbee] (config AT) envoi de la commande AT : ATID
+[9:41:47 - xbee] (config AT) réponse du Xbee : 3332
+[9:41:47 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:41:47 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:41:48 - xbee] (config AT) réponse du Xbee : 0
+[9:41:48 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:41:48 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:41:49 - xbee] (config AT) réponse du Xbee : 1
+[9:41:49 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:41:49 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:41:50 - xbee] (config AT) réponse du Xbee : 2
+[9:41:50 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:41:50 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:41:51 - xbee] (config AT) réponse du Xbee : OK
+[9:41:51 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:41:51 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:41:55 - xbee] (config AT) réponse du Xbee : 
+[9:41:55 - xbee] 013A2004167D2F122 
+[9:41:55 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:41:55 - xbee] (config AT) sortie du mode AT
+[9:41:56 - xbee] (config AT) réponse du Xbee : OK
+[9:41:56 - xbee] (config AT) configuration AT réalisée avec succès
+[9:41:59 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:42:2 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:47:31 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:47:34 - xbee] (config AT) entrée en mode AT en cours...
+[9:47:35 - xbee] (config AT) réponse du Xbee : OK
+[9:47:35 - xbee] (config AT) entrée dans le mode AT
+[9:47:35 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:47:36 - xbee] (config AT) réponse du Xbee : 3
+[9:47:36 - xbee] (config AT) baudrate vérifié avec succès
+[9:47:36 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:47:37 - xbee] (config AT) réponse du Xbee : 1
+[9:47:37 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:47:37 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:47:38 - xbee] (config AT) réponse du Xbee : 0
+[9:47:38 - xbee] (config AT) mode API vérifié avec succès
+[9:47:38 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:47:39 - xbee] (config AT) réponse du Xbee : 1
+[9:47:39 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:47:39 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:47:40 - xbee] (config AT) réponse du Xbee : OK
+[9:47:40 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:47:40 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:47:41 - xbee] (config AT) réponse du Xbee : C
+[9:47:41 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:47:41 - xbee] (config AT) envoi de la commande AT : ATID
+[9:47:42 - xbee] (config AT) réponse du Xbee : 3332
+[9:47:42 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:47:42 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:47:43 - xbee] (config AT) réponse du Xbee : 0
+[9:47:43 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:47:43 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:47:44 - xbee] (config AT) réponse du Xbee : 1
+[9:47:44 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:47:44 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:47:45 - xbee] (config AT) réponse du Xbee : 2
+[9:47:45 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:47:45 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:47:46 - xbee] (config AT) réponse du Xbee : OK
+[9:47:46 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:47:46 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:47:50 - xbee] (config AT) réponse du Xbee : 013A2004167D2F121 
+[9:47:50 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:47:50 - xbee] (config AT) sortie du mode AT
+[9:47:51 - xbee] (config AT) réponse du Xbee : OK
+[9:47:51 - xbee] (config AT) configuration AT réalisée avec succès
+[9:47:54 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:47:57 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:49:35 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:49:38 - xbee] (config AT) entrée en mode AT en cours...
+[9:49:39 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[9:49:39 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:49:39 - xbee] (serial) connexion série fermée avec succès
+[9:49:39 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[9:49:42 - xbee] (config AT) entrée en mode AT en cours...
+[9:49:43 - xbee] (config AT) réponse du Xbee : OK
+[9:49:43 - xbee] (config AT) entrée dans le mode AT
+[9:49:43 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:49:44 - xbee] (config AT) réponse du Xbee : 3
+[9:49:44 - xbee] (config AT) baudrate vérifié avec succès
+[9:49:44 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:49:45 - xbee] (config AT) réponse du Xbee : 0
+[9:49:45 - xbee] (config AT) envoi de la commande AT : ATNB=1
+[9:49:46 - xbee] (config AT) réponse du Xbee : OK
+[9:49:46 - xbee] (config AT) nombre de bits de parité configuré avec succès
+[9:49:46 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:49:47 - xbee] (config AT) réponse du Xbee : OK
+[9:49:47 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:49:47 - xbee] (serial) connexion série fermée avec succès
+[9:49:47 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:49:50 - xbee] (config AT) entrée en mode AT en cours...
+[9:49:51 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[9:49:51 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:49:51 - xbee] (serial) connexion série fermée avec succès
+[9:49:51 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[9:49:54 - xbee] (config AT) entrée en mode AT en cours...
+[9:49:55 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[9:49:55 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:49:55 - xbee] (serial) connexion série fermée avec succès
+[9:49:55 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:49:58 - xbee] (config AT) entrée en mode AT en cours...
+[9:49:59 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[9:49:59 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:49:59 - xbee] (serial) connexion série fermée avec succès
+[9:49:59 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 0
+[9:50:2 - xbee] (config AT) entrée en mode AT en cours...
+[9:50:3 - xbee] /!\ (config AT) erreur -401 : impossible d'entrer dans le mode AT
+[9:50:3 - xbee] (serial) buffer Rx nettoyé avec succès
+[9:50:3 - xbee] (serial) connexion série fermée avec succès
+[9:50:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:50:6 - xbee] (config AT) entrée en mode AT en cours...
+[9:50:7 - xbee] (config AT) réponse du Xbee : OK
+[9:50:7 - xbee] (config AT) entrée dans le mode AT
+[9:50:7 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:50:8 - xbee] (config AT) réponse du Xbee : 3
+[9:50:8 - xbee] (config AT) baudrate vérifié avec succès
+[9:50:8 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:50:9 - xbee] (config AT) réponse du Xbee : 1
+[9:50:9 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:50:9 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:50:10 - xbee] (config AT) réponse du Xbee : 0
+[9:50:10 - xbee] (config AT) mode API vérifié avec succès
+[9:50:10 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:50:11 - xbee] (config AT) réponse du Xbee : 0
+[9:50:11 - xbee] (config AT) envoi de la commande AT : ATEE=1
+[9:50:12 - xbee] (config AT) réponse du Xbee : OK
+[9:50:12 - xbee] (config AT) chiffrement AES configuré avec succès
+[9:50:12 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:50:13 - xbee] (config AT) réponse du Xbee : OK
+[9:50:13 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:50:13 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:50:14 - xbee] (config AT) réponse du Xbee : C
+[9:50:14 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:50:14 - xbee] (config AT) envoi de la commande AT : ATID
+[9:50:15 - xbee] (config AT) réponse du Xbee : 3332
+[9:50:15 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:50:15 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:50:16 - xbee] (config AT) réponse du Xbee : 1
+[9:50:16 - xbee] (config AT) envoi de la commande AT : ATCE=0
+[9:50:17 - xbee] (config AT) réponse du Xbee : OK
+[9:50:17 - xbee] (config AT) mode coordinateur configuré avec succès
+[9:50:17 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:50:18 - xbee] (config AT) réponse du Xbee : 0
+[9:50:18 - xbee] (config AT) envoi de la commande AT : ATMY=1
+[9:50:19 - xbee] (config AT) réponse du Xbee : OK
+[9:50:19 - xbee] (config AT) adresse source 16bits configurée avec succès
+[9:50:19 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:50:20 - xbee] (config AT) réponse du Xbee : 0
+[9:50:20 - xbee] (config AT) envoi de la commande AT : ATDL=2
+[9:50:21 - xbee] (config AT) réponse du Xbee : OK
+[9:50:21 - xbee] (config AT) adresse de destination configurée avec succès
+[9:50:21 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:50:23 - xbee] (config AT) réponse du Xbee : OK
+[9:50:23 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:50:23 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:50:27 - xbee] (config AT) réponse du Xbee : 
+[9:50:27 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[9:50:27 - xbee] (config AT) sortie du mode AT
+[9:50:28 - xbee] (config AT) réponse du Xbee : OK
+[9:50:28 - xbee] (config AT) configuration AT réalisée avec succès
+[9:50:28 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:50:29 - xbee] (config AT) envoi de la commande AT : ATAP=0
+[9:50:30 - xbee] /!\ (config AT) erreur -402 : impossible de configurer le mode API
+[9:50:33 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:50:36 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:50:39 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:52:23 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:52:26 - xbee] (config AT) entrée en mode AT en cours...
+[9:52:27 - xbee] (config AT) réponse du Xbee : OK
+[9:52:27 - xbee] (config AT) entrée dans le mode AT
+[9:52:27 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:52:28 - xbee] (config AT) réponse du Xbee : 3
+[9:52:28 - xbee] (config AT) baudrate vérifié avec succès
+[9:52:28 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:52:29 - xbee] (config AT) réponse du Xbee : 1
+[9:52:29 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:52:29 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:52:30 - xbee] (config AT) réponse du Xbee : 0
+[9:52:30 - xbee] (config AT) mode API vérifié avec succès
+[9:52:30 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:52:31 - xbee] (config AT) réponse du Xbee : 1
+[9:52:31 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:52:31 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:52:32 - xbee] (config AT) réponse du Xbee : OK
+[9:52:32 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:52:32 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:52:33 - xbee] (config AT) réponse du Xbee : C
+[9:52:33 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:52:33 - xbee] (config AT) envoi de la commande AT : ATID
+[9:52:34 - xbee] (config AT) réponse du Xbee : 3332
+[9:52:34 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:52:34 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:52:35 - xbee] (config AT) réponse du Xbee : 0
+[9:52:35 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:52:36 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:52:37 - xbee] (config AT) réponse du Xbee : 1
+[9:52:37 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:52:37 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:52:38 - xbee] (config AT) réponse du Xbee : 2
+[9:52:38 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:52:38 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:52:39 - xbee] (config AT) réponse du Xbee : OK
+[9:52:39 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:52:39 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:52:43 - xbee] (config AT) réponse du Xbee : 
+[9:52:43 - xbee] 013A2004167D2F117 
+[9:52:43 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:52:46 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:52:49 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:52:52 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:55:3 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[9:55:6 - xbee] (config AT) entrée en mode AT en cours...
+[9:55:7 - xbee] (config AT) réponse du Xbee : OK
+[9:55:7 - xbee] (config AT) entrée dans le mode AT
+[9:55:7 - xbee] (config AT) envoi de la commande AT : ATBD
+[9:55:8 - xbee] (config AT) réponse du Xbee : 3
+[9:55:8 - xbee] (config AT) baudrate vérifié avec succès
+[9:55:8 - xbee] (config AT) envoi de la commande AT : ATNB
+[9:55:9 - xbee] (config AT) réponse du Xbee : 1
+[9:55:9 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[9:55:9 - xbee] (config AT) envoi de la commande AT : ATAP
+[9:55:10 - xbee] (config AT) réponse du Xbee : 0
+[9:55:10 - xbee] (config AT) mode API vérifié avec succès
+[9:55:10 - xbee] (config AT) envoi de la commande AT : ATEE
+[9:55:11 - xbee] (config AT) réponse du Xbee : 1
+[9:55:11 - xbee] (config AT) chiffrement AES vérifié avec succès
+[9:55:11 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[9:55:12 - xbee] (config AT) réponse du Xbee : OK
+[9:55:12 - xbee] (config AT) clé de chiffrement configurée avec succès
+[9:55:12 - xbee] (config AT) envoi de la commande AT : ATCH
+[9:55:13 - xbee] (config AT) réponse du Xbee : C
+[9:55:13 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[9:55:13 - xbee] (config AT) envoi de la commande AT : ATID
+[9:55:14 - xbee] (config AT) réponse du Xbee : 3332
+[9:55:14 - xbee] (config AT) ID du réseau vérifié avec succès
+[9:55:14 - xbee] (config AT) envoi de la commande AT : ATCE
+[9:55:15 - xbee] (config AT) réponse du Xbee : 0
+[9:55:15 - xbee] (config AT) mode coordinateur vérifié avec succès
+[9:55:15 - xbee] (config AT) envoi de la commande AT : ATMY
+[9:55:16 - xbee] (config AT) réponse du Xbee : 1
+[9:55:16 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[9:55:16 - xbee] (config AT) envoi de la commande AT : ATDL
+[9:55:17 - xbee] (config AT) réponse du Xbee : 2
+[9:55:17 - xbee] (config AT) adresse de destination vérifiée avec succès
+[9:55:17 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[9:55:18 - xbee] (config AT) réponse du Xbee : OK
+[9:55:18 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[9:55:18 - xbee] (config AT) lancement de la découverte réseau XBee
+[9:55:22 - xbee] (config AT) réponse du Xbee : 
+[9:55:22 - xbee] 013A2004167D2F117 
+[9:55:22 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[9:55:25 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[9:55:28 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[9:55:31 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[9:55:34 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[10:2:19 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[10:2:22 - xbee] (config AT) entrée en mode AT en cours...
+[10:2:23 - xbee] (config AT) réponse du Xbee : OK
+[10:2:23 - xbee] (config AT) entrée dans le mode AT
+[10:2:23 - xbee] (config AT) envoi de la commande AT : ATBD
+[10:2:24 - xbee] (config AT) réponse du Xbee : 3
+[10:2:24 - xbee] (config AT) baudrate vérifié avec succès
+[10:2:24 - xbee] (config AT) envoi de la commande AT : ATNB
+[10:2:25 - xbee] (config AT) réponse du Xbee : 1
+[10:2:25 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[10:2:25 - xbee] (config AT) envoi de la commande AT : ATAP
+[10:2:26 - xbee] (config AT) réponse du Xbee : 0
+[10:2:26 - xbee] (config AT) mode API vérifié avec succès
+[10:2:26 - xbee] (config AT) envoi de la commande AT : ATEE
+[10:2:27 - xbee] (config AT) réponse du Xbee : 1
+[10:2:27 - xbee] (config AT) chiffrement AES vérifié avec succès
+[10:2:27 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[10:2:28 - xbee] (config AT) réponse du Xbee : OK
+[10:2:28 - xbee] (config AT) clé de chiffrement configurée avec succès
+[10:2:28 - xbee] (config AT) envoi de la commande AT : ATCH
+[10:2:29 - xbee] (config AT) réponse du Xbee : C
+[10:2:29 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[10:2:29 - xbee] (config AT) envoi de la commande AT : ATID
+[10:2:30 - xbee] (config AT) réponse du Xbee : 3332
+[10:2:30 - xbee] (config AT) ID du réseau vérifié avec succès
+[10:2:30 - xbee] (config AT) envoi de la commande AT : ATCE
+[10:2:31 - xbee] (config AT) réponse du Xbee : 0
+[10:2:31 - xbee] (config AT) mode coordinateur vérifié avec succès
+[10:2:31 - xbee] (config AT) envoi de la commande AT : ATMY
+[10:2:32 - xbee] (config AT) réponse du Xbee : 1
+[10:2:32 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[10:2:32 - xbee] (config AT) envoi de la commande AT : ATDL
+[10:2:33 - xbee] (config AT) réponse du Xbee : 2
+[10:2:33 - xbee] (config AT) adresse de destination vérifiée avec succès
+[10:2:33 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[10:2:34 - xbee] (config AT) réponse du Xbee : OK
+[10:2:34 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[10:2:34 - xbee] (config AT) lancement de la découverte réseau XBee
+[10:2:38 - xbee] (config AT) réponse du Xbee : 
+[10:2:38 - xbee] 013A2004167D2F117 
+[10:2:38 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[10:2:41 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[10:2:44 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[10:2:47 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[10:2:50 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[10:2:53 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[10:2:57 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[10:3:57 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[10:4:0 - xbee] (config AT) entrée en mode AT en cours...
+[10:4:1 - xbee] (config AT) réponse du Xbee : OK
+[10:4:1 - xbee] (config AT) entrée dans le mode AT
+[10:4:1 - xbee] (config AT) envoi de la commande AT : ATBD
+[10:4:2 - xbee] (config AT) réponse du Xbee : 3
+[10:4:2 - xbee] (config AT) baudrate vérifié avec succès
+[10:4:2 - xbee] (config AT) envoi de la commande AT : ATNB
+[10:4:3 - xbee] (config AT) réponse du Xbee : 1
+[10:4:3 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[10:4:3 - xbee] (config AT) envoi de la commande AT : ATAP
+[10:4:4 - xbee] (config AT) réponse du Xbee : 0
+[10:4:4 - xbee] (config AT) mode API vérifié avec succès
+[10:4:4 - xbee] (config AT) envoi de la commande AT : ATEE
+[10:4:5 - xbee] (config AT) réponse du Xbee : 1
+[10:4:5 - xbee] (config AT) chiffrement AES vérifié avec succès
+[10:4:5 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[10:4:6 - xbee] (config AT) réponse du Xbee : OK
+[10:4:6 - xbee] (config AT) clé de chiffrement configurée avec succès
+[10:4:6 - xbee] (config AT) envoi de la commande AT : ATCH
+[10:4:7 - xbee] (config AT) réponse du Xbee : C
+[10:4:7 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[10:4:7 - xbee] (config AT) envoi de la commande AT : ATID
+[10:4:8 - xbee] (config AT) réponse du Xbee : 3332
+[10:4:8 - xbee] (config AT) ID du réseau vérifié avec succès
+[10:4:8 - xbee] (config AT) envoi de la commande AT : ATCE
+[10:4:9 - xbee] (config AT) réponse du Xbee : 0
+[10:4:9 - xbee] (config AT) mode coordinateur vérifié avec succès
+[10:4:9 - xbee] (config AT) envoi de la commande AT : ATMY
+[10:4:10 - xbee] (config AT) réponse du Xbee : 1
+[10:4:10 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[10:4:10 - xbee] (config AT) envoi de la commande AT : ATDL
+[10:4:11 - xbee] (config AT) réponse du Xbee : 2
+[10:4:11 - xbee] (config AT) adresse de destination vérifiée avec succès
+[10:4:11 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[10:4:12 - xbee] (config AT) réponse du Xbee : OK
+[10:4:12 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[10:4:12 - xbee] (config AT) lancement de la découverte réseau XBee
+[10:4:16 - xbee] (config AT) réponse du Xbee : 
+[10:4:16 - xbee] 013A2004167D2F117 
+[10:4:16 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[10:4:19 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[10:4:22 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[10:6:44 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[10:6:47 - xbee] (config AT) entrée en mode AT en cours...
+[10:6:48 - xbee] (config AT) réponse du Xbee : OK
+[10:6:48 - xbee] (config AT) entrée dans le mode AT
+[10:6:48 - xbee] (config AT) envoi de la commande AT : ATBD
+[10:6:49 - xbee] (config AT) réponse du Xbee : 3
+[10:6:49 - xbee] (config AT) baudrate vérifié avec succès
+[10:6:49 - xbee] (config AT) envoi de la commande AT : ATNB
+[10:6:50 - xbee] (config AT) réponse du Xbee : 1
+[10:6:50 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[10:6:50 - xbee] (config AT) envoi de la commande AT : ATAP
+[10:6:51 - xbee] (config AT) réponse du Xbee : 0
+[10:6:51 - xbee] (config AT) mode API vérifié avec succès
+[10:6:51 - xbee] (config AT) envoi de la commande AT : ATEE
+[10:6:52 - xbee] (config AT) réponse du Xbee : 1
+[10:6:52 - xbee] (config AT) chiffrement AES vérifié avec succès
+[10:6:52 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[10:6:53 - xbee] (config AT) réponse du Xbee : OK
+[10:6:53 - xbee] (config AT) clé de chiffrement configurée avec succès
+[10:6:53 - xbee] (config AT) envoi de la commande AT : ATCH
+[10:6:54 - xbee] (config AT) réponse du Xbee : C
+[10:6:54 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[10:6:55 - xbee] (config AT) envoi de la commande AT : ATID
+[10:6:56 - xbee] (config AT) réponse du Xbee : 3332
+[10:6:56 - xbee] (config AT) ID du réseau vérifié avec succès
+[10:6:56 - xbee] (config AT) envoi de la commande AT : ATCE
+[10:6:57 - xbee] (config AT) réponse du Xbee : 0
+[10:6:57 - xbee] (config AT) mode coordinateur vérifié avec succès
+[10:6:57 - xbee] (config AT) envoi de la commande AT : ATMY
+[10:6:58 - xbee] (config AT) réponse du Xbee : 1
+[10:6:58 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[10:6:58 - xbee] (config AT) envoi de la commande AT : ATDL
+[10:6:59 - xbee] (config AT) réponse du Xbee : 2
+[10:6:59 - xbee] (config AT) adresse de destination vérifiée avec succès
+[10:6:59 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[10:7:0 - xbee] (config AT) réponse du Xbee : OK
+[10:7:0 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[10:7:0 - xbee] (config AT) lancement de la découverte réseau XBee
+[10:7:4 - xbee] (config AT) réponse du Xbee : 
+[10:7:4 - xbee] 013A2004167D2F117 
+[10:7:4 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[10:7:4 - xbee] (config AT) sortie du mode AT
+[10:7:5 - xbee] (config AT) réponse du Xbee : OK
+[10:7:5 - xbee] (config AT) configuration AT réalisée avec succès
+[10:7:8 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[10:7:11 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[10:7:14 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[10:7:17 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[10:7:20 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[10:7:23 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[10:7:26 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[10:7:29 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[10:7:32 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[10:7:35 - xbee] (sendTrame) envoi de la trame n°16 effectué avec succès
+[10:7:38 - xbee] (sendTrame) envoi de la trame n°17 effectué avec succès
+[10:7:41 - xbee] (sendTrame) envoi de la trame n°18 effectué avec succès
+[10:7:44 - xbee] (sendTrame) envoi de la trame n°19 effectué avec succès
+[10:7:47 - xbee] (sendTrame) envoi de la trame n°20 effectué avec succès
+[10:7:50 - xbee] (sendTrame) envoi de la trame n°21 effectué avec succès
+[10:7:53 - xbee] (sendTrame) envoi de la trame n°22 effectué avec succès
+[10:7:56 - xbee] (sendTrame) envoi de la trame n°23 effectué avec succès
+[10:7:59 - xbee] (sendTrame) envoi de la trame n°24 effectué avec succès
+[10:8:2 - xbee] (sendTrame) envoi de la trame n°25 effectué avec succès
+[10:8:5 - xbee] (sendTrame) envoi de la trame n°26 effectué avec succès
+[10:8:8 - xbee] (sendTrame) envoi de la trame n°27 effectué avec succès
+[10:8:11 - xbee] (sendTrame) envoi de la trame n°28 effectué avec succès
+[10:8:14 - xbee] (sendTrame) envoi de la trame n°29 effectué avec succès
+[10:8:17 - xbee] (sendTrame) envoi de la trame n°30 effectué avec succès
+[10:8:20 - xbee] (sendTrame) envoi de la trame n°31 effectué avec succès
+[10:8:23 - xbee] (sendTrame) envoi de la trame n°32 effectué avec succès
+[10:8:26 - xbee] (sendTrame) envoi de la trame n°33 effectué avec succès
+[10:8:29 - xbee] (sendTrame) envoi de la trame n°34 effectué avec succès
+[10:8:32 - xbee] (sendTrame) envoi de la trame n°35 effectué avec succès
+[10:8:35 - xbee] (sendTrame) envoi de la trame n°36 effectué avec succès
+[10:9:19 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[10:9:22 - xbee] (config AT) entrée en mode AT en cours...
+[10:9:23 - xbee] (config AT) réponse du Xbee : OK
+[10:9:23 - xbee] (config AT) entrée dans le mode AT
+[10:9:23 - xbee] (config AT) envoi de la commande AT : ATBD
+[10:9:24 - xbee] (config AT) réponse du Xbee : 3
+[10:9:24 - xbee] (config AT) baudrate vérifié avec succès
+[10:9:24 - xbee] (config AT) envoi de la commande AT : ATNB
+[10:9:25 - xbee] (config AT) réponse du Xbee : 1
+[10:9:25 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[10:9:25 - xbee] (config AT) envoi de la commande AT : ATAP
+[10:9:26 - xbee] (config AT) réponse du Xbee : 0
+[10:9:26 - xbee] (config AT) mode API vérifié avec succès
+[10:9:26 - xbee] (config AT) envoi de la commande AT : ATEE
+[10:9:27 - xbee] (config AT) réponse du Xbee : 1
+[10:9:27 - xbee] (config AT) chiffrement AES vérifié avec succès
+[10:9:27 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[10:9:28 - xbee] (config AT) réponse du Xbee : OK
+[10:9:28 - xbee] (config AT) clé de chiffrement configurée avec succès
+[10:9:28 - xbee] (config AT) envoi de la commande AT : ATCH
+[10:9:29 - xbee] (config AT) réponse du Xbee : C
+[10:9:29 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[10:9:29 - xbee] (config AT) envoi de la commande AT : ATID
+[10:9:30 - xbee] (config AT) réponse du Xbee : 3332
+[10:9:30 - xbee] (config AT) ID du réseau vérifié avec succès
+[10:9:30 - xbee] (config AT) envoi de la commande AT : ATCE
+[10:9:31 - xbee] (config AT) réponse du Xbee : 0
+[10:9:31 - xbee] (config AT) mode coordinateur vérifié avec succès
+[10:9:31 - xbee] (config AT) envoi de la commande AT : ATMY
+[10:9:32 - xbee] (config AT) réponse du Xbee : 1
+[10:9:32 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[10:9:32 - xbee] (config AT) envoi de la commande AT : ATDL
+[10:9:33 - xbee] (config AT) réponse du Xbee : 0
+[10:9:33 - xbee] (config AT) envoi de la commande AT : ATDL=2
+[10:9:34 - xbee] (config AT) réponse du Xbee : OK
+[10:9:34 - xbee] (config AT) adresse de destination configurée avec succès
+[10:9:34 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[10:9:35 - xbee] (config AT) réponse du Xbee : OK
+[10:9:35 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[10:9:35 - xbee] (config AT) lancement de la découverte réseau XBee
+[10:9:39 - xbee] (config AT) réponse du Xbee : 
+[10:9:39 - xbee] 
+[10:9:39 - xbee] /!\ (config AT) erreur -414 : impossible d'établir une connexion avec le module XBee distant
+[10:9:42 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[10:9:45 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[10:9:48 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[10:9:51 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[10:9:54 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[10:9:57 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[10:10:0 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[10:10:3 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[10:10:45 - xbee] (serial) connexion ouverte avec succès sur le port /dev/ttyAMA0 - baudrate : 9600 - parité : 1
+[10:10:48 - xbee] (config AT) entrée en mode AT en cours...
+[10:10:49 - xbee] (config AT) réponse du Xbee : OK
+[10:10:49 - xbee] (config AT) entrée dans le mode AT
+[10:10:49 - xbee] (config AT) envoi de la commande AT : ATBD
+[10:10:50 - xbee] (config AT) réponse du Xbee : 3
+[10:10:50 - xbee] (config AT) baudrate vérifié avec succès
+[10:10:50 - xbee] (config AT) envoi de la commande AT : ATNB
+[10:10:51 - xbee] (config AT) réponse du Xbee : 1
+[10:10:51 - xbee] (config AT) nombre de bits de parité vérifié avec succès
+[10:10:51 - xbee] (config AT) envoi de la commande AT : ATAP
+[10:10:52 - xbee] (config AT) réponse du Xbee : 0
+[10:10:52 - xbee] (config AT) mode API vérifié avec succès
+[10:10:52 - xbee] (config AT) envoi de la commande AT : ATEE
+[10:10:53 - xbee] (config AT) réponse du Xbee : 1
+[10:10:53 - xbee] (config AT) chiffrement AES vérifié avec succès
+[10:10:53 - xbee] (config AT) envoi de la commande AT : ATKY=32303032
+[10:10:54 - xbee] (config AT) réponse du Xbee : OK
+[10:10:54 - xbee] (config AT) clé de chiffrement configurée avec succès
+[10:10:54 - xbee] (config AT) envoi de la commande AT : ATCH
+[10:10:55 - xbee] (config AT) réponse du Xbee : C
+[10:10:55 - xbee] (config AT) canal de découverte réseau vérifié avec succès
+[10:10:55 - xbee] (config AT) envoi de la commande AT : ATID
+[10:10:56 - xbee] (config AT) réponse du Xbee : 3332
+[10:10:56 - xbee] (config AT) ID du réseau vérifié avec succès
+[10:10:56 - xbee] (config AT) envoi de la commande AT : ATCE
+[10:10:57 - xbee] (config AT) réponse du Xbee : 0
+[10:10:57 - xbee] (config AT) mode coordinateur vérifié avec succès
+[10:10:57 - xbee] (config AT) envoi de la commande AT : ATMY
+[10:10:58 - xbee] (config AT) réponse du Xbee : 1
+[10:10:58 - xbee] (config AT) adresse source 16bits vérifiée avec succès
+[10:10:58 - xbee] (config AT) envoi de la commande AT : ATDL
+[10:10:59 - xbee] (config AT) réponse du Xbee : 2
+[10:10:59 - xbee] (config AT) adresse de destination vérifiée avec succès
+[10:10:59 - xbee] (config AT) écriture des paramètres AT dans la mémoire
+[10:11:0 - xbee] (config AT) réponse du Xbee : OK
+[10:11:0 - xbee] (config AT) configuration AT enregistrée dans la mémoire du module
+[10:11:0 - xbee] (config AT) lancement de la découverte réseau XBee
+[10:11:4 - xbee] (config AT) réponse du Xbee : 
+[10:11:4 - xbee] 213A2004167D2F117 
+[10:11:5 - xbee] (config AT) connexion XBee établie avec succès avec le module distant
+[10:11:5 - xbee] (config AT) sortie du mode AT
+[10:11:6 - xbee] (config AT) réponse du Xbee : OK
+[10:11:6 - xbee] (config AT) configuration AT réalisée avec succès
+[10:11:9 - xbee] (sendTrame) envoi de la trame n°7 effectué avec succès
+[10:11:12 - xbee] (sendTrame) envoi de la trame n°8 effectué avec succès
+[10:11:15 - xbee] (sendTrame) envoi de la trame n°9 effectué avec succès
+[10:11:18 - xbee] (sendTrame) envoi de la trame n°10 effectué avec succès
+[10:11:21 - xbee] (sendTrame) envoi de la trame n°11 effectué avec succès
+[10:11:24 - xbee] (sendTrame) envoi de la trame n°12 effectué avec succès
+[10:11:27 - xbee] (sendTrame) envoi de la trame n°13 effectué avec succès
+[10:11:30 - xbee] (sendTrame) envoi de la trame n°14 effectué avec succès
+[10:11:33 - xbee] (sendTrame) envoi de la trame n°15 effectué avec succès
+[10:11:36 - xbee] (sendTrame) envoi de la trame n°16 effectué avec succès
+[10:11:39 - xbee] (sendTrame) envoi de la trame n°17 effectué avec succès
+[10:11:42 - xbee] (sendTrame) envoi de la trame n°18 effectué avec succès
+[10:11:45 - xbee] (sendTrame) envoi de la trame n°19 effectué avec succès
+[10:11:48 - xbee] (sendTrame) envoi de la trame n°20 effectué avec succès
+[10:11:51 - xbee] (sendTrame) envoi de la trame n°21 effectué avec succès
+[10:11:54 - xbee] (sendTrame) envoi de la trame n°22 effectué avec succès
+[10:11:57 - xbee] (sendTrame) envoi de la trame n°23 effectué avec succès
+[10:12:0 - xbee] (sendTrame) envoi de la trame n°24 effectué avec succès
+[10:12:3 - xbee] (sendTrame) envoi de la trame n°25 effectué avec succès
+[10:12:6 - xbee] (sendTrame) envoi de la trame n°26 effectué avec succès
+[10:12:9 - xbee] (sendTrame) envoi de la trame n°27 effectué avec succès
+[10:12:12 - xbee] (sendTrame) envoi de la trame n°28 effectué avec succès
+[10:12:15 - xbee] (sendTrame) envoi de la trame n°29 effectué avec succès
+[10:12:18 - xbee] (sendTrame) envoi de la trame n°30 effectué avec succès
+[10:12:21 - xbee] (sendTrame) envoi de la trame n°31 effectué avec succès
+[10:12:24 - xbee] (sendTrame) envoi de la trame n°32 effectué avec succès
+[10:12:27 - xbee] (sendTrame) envoi de la trame n°33 effectué avec succès
+[10:12:30 - xbee] (sendTrame) envoi de la trame n°34 effectué avec succès
+[10:12:33 - xbee] (sendTrame) envoi de la trame n°35 effectué avec succès
+[10:12:36 - xbee] (sendTrame) envoi de la trame n°36 effectué avec succès
+[10:12:39 - xbee] (sendTrame) envoi de la trame n°37 effectué avec succès
+[10:12:42 - xbee] (sendTrame) envoi de la trame n°38 effectué avec succès
+[10:12:45 - xbee] (sendTrame) envoi de la trame n°39 effectué avec succès
+[10:12:48 - xbee] (sendTrame) envoi de la trame n°40 effectué avec succès
+[10:12:51 - xbee] (sendTrame) envoi de la trame n°41 effectué avec succès
+[10:12:54 - xbee] (sendTrame) envoi de la trame n°42 effectué avec succès
+[10:12:57 - xbee] (sendTrame) envoi de la trame n°43 effectué avec succès
+[10:13:0 - xbee] (sendTrame) envoi de la trame n°44 effectué avec succès
+[10:13:3 - xbee] (sendTrame) envoi de la trame n°45 effectué avec succès
+[10:13:6 - xbee] (sendTrame) envoi de la trame n°46 effectué avec succès
+[10:13:9 - xbee] (sendTrame) envoi de la trame n°47 effectué avec succès
+[10:13:12 - xbee] (sendTrame) envoi de la trame n°48 effectué avec succès
+[10:13:15 - xbee] (sendTrame) envoi de la trame n°49 effectué avec succès
+[10:13:18 - xbee] (sendTrame) envoi de la trame n°50 effectué avec succès
+[10:13:21 - xbee] (sendTrame) envoi de la trame n°51 effectué avec succès
+[10:13:24 - xbee] (sendTrame) envoi de la trame n°52 effectué avec succès
+[10:13:27 - xbee] (sendTrame) envoi de la trame n°53 effectué avec succès
+[10:13:30 - xbee] (sendTrame) envoi de la trame n°54 effectué avec succès
+[10:13:33 - xbee] (sendTrame) envoi de la trame n°55 effectué avec succès
+[10:13:36 - xbee] (sendTrame) envoi de la trame n°56 effectué avec succès
+[10:13:39 - xbee] (sendTrame) envoi de la trame n°57 effectué avec succès
+[10:13:42 - xbee] (sendTrame) envoi de la trame n°58 effectué avec succès
+[10:13:45 - xbee] (sendTrame) envoi de la trame n°59 effectué avec succès
+[10:13:48 - xbee] (sendTrame) envoi de la trame n°60 effectué avec succès
+[10:13:51 - xbee] (sendTrame) envoi de la trame n°61 effectué avec succès
+[10:13:54 - xbee] (sendTrame) envoi de la trame n°62 effectué avec succès
+[10:13:57 - xbee] (sendTrame) envoi de la trame n°63 effectué avec succès
+[10:14:0 - xbee] (sendTrame) envoi de la trame n°64 effectué avec succès
+[10:14:3 - xbee] (sendTrame) envoi de la trame n°65 effectué avec succès
+[10:14:6 - xbee] (sendTrame) envoi de la trame n°66 effectué avec succès
+[10:14:9 - xbee] (sendTrame) envoi de la trame n°67 effectué avec succès
+[10:14:12 - xbee] (sendTrame) envoi de la trame n°68 effectué avec succès
+[10:14:15 - xbee] (sendTrame) envoi de la trame n°69 effectué avec succès
+[10:14:18 - xbee] (sendTrame) envoi de la trame n°70 effectué avec succès
+[10:14:21 - xbee] (sendTrame) envoi de la trame n°71 effectué avec succès
+[10:14:24 - xbee] (sendTrame) envoi de la trame n°72 effectué avec succès

@@ -264,7 +264,7 @@ bool XBee::readATResponse(const char *value, int mode){
         logXbee << "(config AT) réponse du Xbee : " << mendl;
         logXbee << reponse << mendl;
 
-        if(reponse == value) return true;
+        if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE) return true;
         return false;
     }
 
