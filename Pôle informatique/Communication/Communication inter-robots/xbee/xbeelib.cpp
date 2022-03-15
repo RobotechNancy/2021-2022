@@ -266,8 +266,9 @@ bool XBee::readATResponse(const char *value, int mode){
     if(mode == 0)
         if(reponse == value) return true;
 
-    else if(mode == 1)     
-        if(reponse != value) return true;
+    else if(mode == 1){
+        if(reponse != XB_AT_V_END_LINE) return true;
+    }    
     
     return false;
 }
@@ -343,7 +344,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
             return readATResponse(XB_AT_R_SUCCESS);
         else{
 	        delay(4);	
-            return readATResponse(XB_AT_V_DISCOVER_NETWORK);
+            return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
     	}
     }
 }
