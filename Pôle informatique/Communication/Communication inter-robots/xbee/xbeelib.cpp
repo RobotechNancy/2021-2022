@@ -259,6 +259,9 @@ bool XBee::readATResponse(const char *value, int mode){
         delay(5);
 
     string reponse = readString();
+
+    if(value == XB_AT_V_DISCOVER_NETWORK)
+        delay(5);
     
     if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE)
     	logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
@@ -692,7 +695,6 @@ string XBee::readString() {
      while(serial.available() > 0){
         i++;
         serial.readChar(reponse, timeout);
-        cout << rep << endl;
         rep += *reponse;
      }
 
