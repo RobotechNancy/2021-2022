@@ -261,7 +261,7 @@ bool XBee::readATResponse(const char *value, int mode){
         delay(3);
         reponse = readString();
         serial.flushReceiver();
-        logXbee << "(config AT) réponse du Xbee : " << mendl;
+        logXbee << "(config AT) réponse du Xbee : ";
         logXbee << reponse << mendl;
 
         if(reponse == value) return true;
