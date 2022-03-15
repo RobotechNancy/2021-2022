@@ -11,7 +11,8 @@ int main(int argc, char *argv[]){
         return 0;
 
     thread heartbeat(&XBee::sendHeartbeat, xbee);
-    thread t(&XBee::waitForATrame, xbee);
+    thread waitingtrame(&XBee::waitForATrame, xbee);
+    thread reponse(&XBee::isXbeeResponding, xbee); 
     while(true){}
 
     xbee.closeSerialConnection();
