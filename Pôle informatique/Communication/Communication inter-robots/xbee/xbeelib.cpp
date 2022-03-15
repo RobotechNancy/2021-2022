@@ -260,8 +260,11 @@ bool XBee::readATResponse(const char *value, int mode){
 
     string reponse = readString();
 
-    if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE)
-    	logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
+    if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE){
+        logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
+        if(value == XB_AT_V_DISCOVER_NETWORK)
+            return true;
+    }
 
     if(mode == 0)
         if(reponse == value) return true;
@@ -342,8 +345,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
         if(command != XB_AT_CMD_DISCOVER_NETWORK)
             return readATResponse(XB_AT_R_SUCCESS);
-        else{
-	        delay(4);	
+        else{	
             return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
     	}
     }
