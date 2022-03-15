@@ -257,7 +257,7 @@ bool XBee::readATResponse(const char *value, int mode){
 
     if(value == XB_AT_V_DISCOVER_NETWORK)
         delay(5);
-        
+
     string reponse = readString();
     
     if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE)
@@ -690,9 +690,10 @@ string XBee::readString() {
      int i = 0;
 
      while(serial.available() > 0){
-	i++;
-	serial.readChar(reponse, timeout);
-	rep += *reponse;
+        i++;
+        serial.readChar(reponse, timeout);
+        cout << rep << endl;
+        rep += *reponse;
      }
 
       delete reponse;
