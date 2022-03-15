@@ -1,0 +1,60 @@
+\hypertarget{loglib_8cpp}{}\doxysection{Référence du fichier loglib.\+cpp}
+\label{loglib_8cpp}\index{loglib.cpp@{loglib.cpp}}
+{\ttfamily \#include \char`\"{}loglib.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{loglib_8cpp_a39c7d4346ef6a955b2c373e348ef2c28}{string\+To\+Char}} (std\+::string chaine)
+\item 
+\mbox{\hyperlink{class_log}{Log}} \& \mbox{\hyperlink{loglib_8cpp_a442a925139fbcd56ad88fedcf63ab379}{operator$<$$<$}} (\mbox{\hyperlink{class_log}{Log}} \&log, \mbox{\hyperlink{struct_mendl}{Mendl}} const \&data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{loglib_8cpp_a442a925139fbcd56ad88fedcf63ab379}\label{loglib_8cpp_a442a925139fbcd56ad88fedcf63ab379}} 
+\index{loglib.cpp@{loglib.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!loglib.cpp@{loglib.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_log}{Log}} \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_log}{Log}} \&}]{log,  }\item[{\mbox{\hyperlink{struct_mendl}{Mendl}} const \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{loglib_8cpp_source_l00020}{20}} du fichier \mbox{\hyperlink{loglib_8cpp_source}{loglib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                             \{}
+\DoxyCodeLine{00021     time\_t now = time(0);}
+\DoxyCodeLine{00022     tm *ltm = localtime(\&now);}
+\DoxyCodeLine{00023     cout << endl;}
+\DoxyCodeLine{00024     stringstream cmd;}
+\DoxyCodeLine{00025     cmd << \textcolor{stringliteral}{"{}echo \(\backslash\)"{}"{}} << \textcolor{stringliteral}{"{}["{}}<<ltm-\/>tm\_hour << \textcolor{stringliteral}{"{}:"{}} << ltm-\/>tm\_min << \textcolor{stringliteral}{"{}:"{}} << ltm-\/>tm\_sec << \textcolor{stringliteral}{"{} -\/ "{}}<< log.\mbox{\hyperlink{class_log_a5d8c89b4d368a5876c404a7b30a3aa34}{name}} <<\textcolor{stringliteral}{"{}] "{}} <<log.\mbox{\hyperlink{class_log_aaab9fa68bc117fd146e477bd5c5f2342}{ss}}.str()<<\textcolor{stringliteral}{"{}\(\backslash\)"{} >> log.log"{}};}
+\DoxyCodeLine{00026     log.\mbox{\hyperlink{class_log_aaab9fa68bc117fd146e477bd5c5f2342}{ss}}.str(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00027     system(\mbox{\hyperlink{loglib_8cpp_a39c7d4346ef6a955b2c373e348ef2c28}{stringToChar}}(cmd.str()));}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{keywordflow}{return} log; }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{loglib_8cpp_a39c7d4346ef6a955b2c373e348ef2c28}\label{loglib_8cpp_a39c7d4346ef6a955b2c373e348ef2c28}} 
+\index{loglib.cpp@{loglib.cpp}!stringToChar@{stringToChar}}
+\index{stringToChar@{stringToChar}!loglib.cpp@{loglib.cpp}}
+\doxysubsubsection{\texorpdfstring{stringToChar()}{stringToChar()}}
+{\footnotesize\ttfamily char $\ast$ string\+To\+Char (\begin{DoxyParamCaption}\item[{std\+::string}]{chaine }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{loglib_8cpp_source_l00008}{8}} du fichier \mbox{\hyperlink{loglib_8cpp_source}{loglib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                     \{}
+\DoxyCodeLine{00009     \textcolor{keywordtype}{char}* message = strcpy(\textcolor{keyword}{new} \textcolor{keywordtype}{char}[chaine.size() + 1], chaine.c\_str());}
+\DoxyCodeLine{00010     \textcolor{keywordflow}{return} message;}
+\DoxyCodeLine{00011 \}}
+
+\end{DoxyCode}

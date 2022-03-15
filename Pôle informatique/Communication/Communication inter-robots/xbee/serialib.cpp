@@ -16,6 +16,7 @@ This is a licence-free software, it can be used by anyone who try to build a bet
  */
 
 #include "serialib.h"
+#include "define.h"
 
 
 
@@ -114,16 +115,16 @@ serialib::~serialib()
                 - SERIAL_STOPBITS_1_5 (1.5) (not supported on Unix)
                 - SERIAL_STOPBITS_2 (2)
 
-     \return 1 success
-     \return -1 device not found
-     \return -2 error while opening the device
-     \return -3 error while getting port parameters
-     \return -4 Speed (Bauds) not recognized
-     \return -5 error while writing port parameters
-     \return -6 error while writing timeout parameters
-     \return -7 Databits not recognized
-     \return -8 Stopbits not recognized
-     \return -9 Parity not recognized
+     \return 500 success
+     \return -501 device not found
+     \return -502 error while opening the device
+     \return -503 error while getting port parameters
+     \return -504 Speed (Bauds) not recognized
+     \return -505 error while writing port parameters
+     \return -506 error while writing timeout parameters
+     \return -507 Databits not recognized
+     \return -508 Stopbits not recognized
+     \return -509 Parity not recognized
   */
 int serialib::openDevice(const char *Device, const unsigned int Bauds,
                           SerialDataBits Databits,
@@ -134,10 +135,10 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     hSerial = CreateFileA(Device,GENERIC_READ | GENERIC_WRITE,0,0,OPEN_EXISTING,/*FILE_ATTRIBUTE_NORMAL*/0,0);
     if(hSerial==INVALID_HANDLE_VALUE) {
         if(GetLastError()==ERROR_FILE_NOT_FOUND)
-            return -1; // Device not found
+            return XB_SER_E_NOT_FOUND; // Device not found
 
         // Error while opening the device
-        return -2;
+        return XB_SER_E_OPEN;
     }
 
     // Set parameters
@@ -147,7 +148,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     dcbSerialParams.DCBlength=sizeof(dcbSerialParams);
 
     // Get the port parameters
-    if (!GetCommState(hSerial, &dcbSerialParams)) return -3;
+    if (!GetCommState(hSerial, &dcbSerialParams)) return XB_SER_E_PARAM;
 
     // Set the speed (Bauds)
     switch (Bauds)
@@ -167,7 +168,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     case 115200 :   dcbSerialParams.BaudRate=CBR_115200; break;
     case 128000 :   dcbSerialParams.BaudRate=CBR_128000; break;
     case 256000 :   dcbSerialParams.BaudRate=CBR_256000; break;
-    default : return -4;
+    default : return XB_SER_E_UKN_BAUDRATE;
     }
     //select data size
     BYTE bytesize = 0;
@@ -177,14 +178,14 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
         case SERIAL_DATABITS_7: bytesize = 7; break;
         case SERIAL_DATABITS_8: bytesize = 8; break;
         case SERIAL_DATABITS_16: bytesize = 16; break;
-        default: return -7;
+        default: return XB_SER_E_UKN_DATABITS;
     }
     BYTE stopBits = 0;
     switch(Stopbits) {
         case SERIAL_STOPBITS_1: stopBits = ONESTOPBIT; break;
         case SERIAL_STOPBITS_1_5: stopBits = ONE5STOPBITS; break;
         case SERIAL_STOPBITS_2: stopBits = TWOSTOPBITS; break;
-        default: return -8;
+        default: return XB_SER_E_UKN_STOPBITS;
     }
     BYTE parity = 0;
     switch(Parity) {
@@ -193,7 +194,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
         case SERIAL_PARITY_ODD: parity = ODDPARITY; break;
         case SERIAL_PARITY_MARK: parity = MARKPARITY; break;
         case SERIAL_PARITY_SPACE: parity = SPACEPARITY; break;
-        default: return -9;
+        default: return XB_SER_E_UKN_PARITY;
     }
     // configure byte size
     dcbSerialParams.ByteSize = bytesize;
@@ -203,7 +204,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     dcbSerialParams.Parity = parity;
 
     // Write the parameters
-    if(!SetCommState(hSerial, &dcbSerialParams)) return -5;
+    if(!SetCommState(hSerial, &dcbSerialParams)) return XB_SER_E_CONFIG;
 
     // Set TimeOut
 
@@ -216,7 +217,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     timeouts.WriteTotalTimeoutMultiplier=0;
 
     // Write the parameters
-    if(!SetCommTimeouts(hSerial, &timeouts)) return -6;
+    if(!SetCommTimeouts(hSerial, &timeouts)) return XB_SER_E_TIMOUT;
 
     // Opening successfull
     return 1;
@@ -229,7 +230,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     // Open device
     fd = open(Device, O_RDWR | O_NOCTTY | O_NDELAY);
     // If the device is not open, return -1
-    if (fd == -1) return -2;
+    if (fd == -1) return XB_SER_E_OPEN;
     // Open the device in nonblocking mode
     fcntl(fd, F_SETFL, FNDELAY);
 
@@ -254,7 +255,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     case 38400 :    Speed=B38400; break;
     case 57600 :    Speed=B57600; break;
     case 115200 :   Speed=B115200; break;
-    default : return -4;
+    default : return XB_SER_E_UKN_BAUDRATE;
     }
     int databits_flag = 0;
     switch(Databits) {
@@ -263,14 +264,14 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
         case SERIAL_DATABITS_7: databits_flag = CS7; break;
         case SERIAL_DATABITS_8: databits_flag = CS8; break;
         //16 bits and everything else not supported
-        default: return -7;
+        default: return XB_SER_E_UKN_DATABITS;
     }
     int stopbits_flag = 0;
     switch(Stopbits) {
         case SERIAL_STOPBITS_1: stopbits_flag = 0; break;
         case SERIAL_STOPBITS_2: stopbits_flag = CSTOPB; break;
         //1.5 stopbits and everything else not supported
-        default: return -8;
+        default: return XB_SER_E_UKN_STOPBITS;
     }
     int parity_flag = 0;
     switch(Parity) {
@@ -278,7 +279,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
         case SERIAL_PARITY_EVEN: parity_flag = PARENB; break;
         case SERIAL_PARITY_ODD: parity_flag = (PARENB | PARODD); break;
         //mark and space parity not supported
-        default: return -9;
+        default: return XB_SER_E_UKN_PARITY;
     }
 
     // Set the baud rate
@@ -295,7 +296,7 @@ int serialib::openDevice(const char *Device, const unsigned int Bauds,
     // Activate the settings
     tcsetattr(fd, TCSANOW, &options);
     // Success
-    return (1);
+    return (XB_SER_E_SUCCESS);
 #endif
 
 }
