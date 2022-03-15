@@ -256,7 +256,8 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
 bool XBee::readATResponse(const char *value, int mode){
 
     if(value == XB_AT_V_DISCOVER_NETWORK){
-        delay(5);
+        delay(3);
+        serial.flushReceiver();
         logXbee << "(config AT) réponse du Xbee : 2167D2F1" << mendl;
         return true;
     }
