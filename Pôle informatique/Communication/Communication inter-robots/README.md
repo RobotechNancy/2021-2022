@@ -26,7 +26,7 @@
 # Installation du code (sous Linux x86-64) :
 
 ```bash
-sudo git clone https://github.com/RobotechNancy/2021-2022.git
+git clone https://github.com/RobotechNancy/2021-2022.git
 ```
 
 [**Username** : votre nom d'utilisateur GitHub] 
@@ -68,7 +68,7 @@ git pull && git add * && git commit -m "Version XX.XXR" && git push
 > les modules XBee s'alimentent en 3,3V
 
 - La compatibilité entre les modules XBee :
-> 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee et XBee Pro ne sont pas compatibles entre eux)
+> 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee S1 et XBee S2C ne sont pas compatibles entre eux)
 
 - En cas d'impossibilité d'accès au module XBee et pour vérifier s'il n'est pas endommagé :
 > utiliser le logiciel propriétaire [XCTU](https://hub.digi.com/dp/path=/support/asset/xctu-v-658-windows-x86x64/) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
