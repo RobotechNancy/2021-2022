@@ -265,7 +265,7 @@ bool XBee::readATResponse(const char *value, int mode){
         logXbee << reponse << mendl;
 
         if(reponse == value) return true;
-        return true;
+        return false;
     }
 
     reponse = readString();
