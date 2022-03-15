@@ -48,7 +48,7 @@ int XBee::openSerialConnection(int mode){
     if(mode == 1){
         errorOpening = serial.openDevice(XB_SERIAL_PORT_DEFAULT, XB_BAUDRATE_DEFAULT, XB_DATABITS_DEFAULT, XB_PARITY_DEFAULT, XB_STOPBITS_DEFAULT);      
 
-        if (errorOpening != 1)
+        if (errorOpening != XB_SER_E_SUCCESS)
             logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_DEFAULT  << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
         else{
             logXbee << "(serial) connexion ouverte avec succès sur le port " << XB_SERIAL_PORT_DEFAULT << " - baudrate : " << XB_BAUDRATE_DEFAULT << " - parité : " << XB_PARITY_DEFAULT << mendl;
@@ -57,7 +57,7 @@ int XBee::openSerialConnection(int mode){
     } else if(mode == 0) {
         errorOpening = serial.openDevice(XB_SERIAL_PORT_PRIMARY, XB_BAUDRATE_PRIMARY, XB_DATABITS_PRIMARY, XB_PARITY_PRIMARY, XB_STOPBITS_PRIMARY);      
         
-        if (errorOpening != 1)
+        if (errorOpening != XB_SER_E_SUCCESS)
             logXbee << "(serial) /!\\ erreur " << errorOpening << " : impossible d'ouvrir le port " << XB_SERIAL_PORT_PRIMARY  << " - baudrate : " << XB_BAUDRATE_PRIMARY << " - parités : " << XB_PARITY_PRIMARY << mendl;
         
 	else{
@@ -168,8 +168,9 @@ int XBee::checkATConfig(){
 
     if(!sendATCommand(XB_AT_CMD_AES_KEY, XB_AT_V_AES_KEY)){
         logXbee << "/!\\ (config AT) erreur " << XB_AT_E_AES_KEY << " : impossible de configurer la clé de chiffrement AES" << mendl;
-	    return XB_AT_E_AES_KEY;
+	return XB_AT_E_AES_KEY;
     }
+    else logXbee << "(config AT) clé de chiffrement configurée avec succès" << mendl;
 
     if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL, XB_AT_M_GET)){
         if(!sendATCommand(XB_AT_CMD_CHANEL, XB_AT_V_CHANEL)){
@@ -254,7 +255,9 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
  */
 bool XBee::readATResponse(const char *value, int mode){
     string reponse = readString();
-    logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
+    
+    if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE)
+    	logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
 
     if(mode == 0)
         if(reponse == value) return true;
@@ -274,7 +277,7 @@ bool XBee::enterATMode(){
     serial.writeString(XB_AT_CMD_ENTER);
     delay(3);
     serial.writeString(XB_AT_V_END_LINE);
-    logXbee << "entrée en mode AT" << mendl;
+    logXbee << "(config AT) entrée en mode AT en cours..." << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -286,7 +289,7 @@ bool XBee::enterATMode(){
 bool XBee::exitATMode(){
     serial.writeString(XB_AT_CMD_EXIT);
     serial.writeString(XB_AT_V_END_LINE);
-    logXbee << "sortie du mode AT" << mendl;
+    logXbee << "(config AT) sortie du mode AT" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -298,7 +301,7 @@ bool XBee::exitATMode(){
 bool XBee::discoverXbeeNetwork(){
     serial.writeString(XB_AT_CMD_DISCOVER_NETWORK);
     serial.writeString(XB_AT_V_END_LINE);
-    logXbee << "lancement de la découverte réseau XBee" << mendl;
+    logXbee << "(config AT) lancement de la découverte réseau XBee" << mendl;
     return readATResponse(XB_AT_V_DISCOVER_NETWORK);
 }
 
@@ -310,8 +313,7 @@ bool XBee::discoverXbeeNetwork(){
 bool XBee::writeATConfig(){
     serial.writeString(XB_AT_CMD_WRITE_CONFIG);
     serial.writeString(XB_AT_V_END_LINE);
-    //cout << "* Ecriture de la configuration AT..." << endl;
-    logXbee << "écriture des paramètres AT dans la mémoire" << mendl;
+    logXbee << "(config AT) écriture des paramètres AT dans la mémoire" << mendl;
     return readATResponse(XB_AT_R_SUCCESS);
 }
 
@@ -333,10 +335,12 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         serial.writeString(command);
         serial.writeString(value);    
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
-        if(command == XB_AT_CMD_DISCOVER_NETWORK)
+        if(command != XB_AT_CMD_DISCOVER_NETWORK)
             return readATResponse(XB_AT_R_SUCCESS);
-        else
+        else{
+	    delay(4);	
             return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
+    	}
     }
 }
 
@@ -420,7 +424,7 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     serial.writeBytes(trame, length_trame);
     logXbee << "(sendTrame) envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
 
-    trames_envoyees[code_fct] = trames_envoyees[code_fct]+1;
+    //trames_envoyees[code_fct] = trames_envoyees[code_fct]+1;
 
     return XB_TRAME_E_SUCCESS;
 }
@@ -525,7 +529,7 @@ int XBee::processCodeFct(int code_fct, int exp){
            return XB_FCT_E_NONE_REACHABLE;
     }
 
-    trames_envoyees[code_fct] = trames_envoyees[code_fct]-1;
+    //trames_envoyees[code_fct] = trames_envoyees[code_fct]-1;
     logXbee << "(process code fonction) code fonction n°" << code_fct << " traité avec succès" << mendl;
     return XB_FCT_E_SUCCESS;
 }

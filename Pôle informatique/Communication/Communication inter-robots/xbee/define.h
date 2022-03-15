@@ -128,7 +128,7 @@
 #define XB_AT_V_PARITY "1\r"
 #define XB_AT_V_16BIT_SOURCE_ADDR "1\r"
 #define XB_AT_V_LOW_DEST_ADDR "2\r"
-#define XB_AT_V_DISCOVER_NETWORK ""
+#define XB_AT_V_DISCOVER_NETWORK "\r"
 
 // Réponses AT
 #define XB_AT_R_EMPTY ""
