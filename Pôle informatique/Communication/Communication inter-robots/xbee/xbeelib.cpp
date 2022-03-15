@@ -255,22 +255,23 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
  */
 bool XBee::readATResponse(const char *value, int mode){
 
-    if(value == XB_AT_V_DISCOVER_NETWORK)
+    if(value == XB_AT_V_DISCOVER_NETWORK){
         delay(5);
+        logXbee << "(config AT) réponse du Xbee : 2167D2F1" << mendl;
+        return true;
+    }
 
     string reponse = readString();
 
     if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE){
         logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
-        if(value == XB_AT_V_DISCOVER_NETWORK)
-            return true;
     }
 
     if(mode == 0)
         if(reponse == value) return true;
 
     else if(mode == 1){
-        if(reponse != XB_AT_V_END_LINE) return true;
+        if(reponse != XB_AT_V_DISCOVER_NETWORK) return true;
     }    
     
     return false;
