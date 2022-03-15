@@ -84,7 +84,7 @@
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00111}00111 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00112}00112 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00113}00113     \textcolor{comment}{// Open a device}}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00114}00114     \textcolor{keywordtype}{char} \mbox{\hyperlink{classserialib_afcef685b74a3db58dc2d1898bb34aaca}{openDevice}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *Device, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Bauds,}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00114}00114     \textcolor{keywordtype}{int} \mbox{\hyperlink{classserialib_afaed268ce37d18121c4c778041224e5d}{openDevice}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *Device, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Bauds,}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00115}00115                     \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7}{SerialDataBits}} Databits = \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\_DATABITS\_8}},}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00116}00116                     \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6}{SerialParity}} Parity = \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\_PARITY\_NONE}},}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00117}00117                     \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654}{SerialStopBits}} Stopbits = \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\_STOPBITS\_1}});}
@@ -187,11 +187,11 @@
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00214}00214 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00215}00215 \textcolor{keyword}{private}:}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00216}00216     \textcolor{comment}{// Read a string (no timeout)}}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00217}00217     \textcolor{keywordtype}{int}             readStringNoTimeOut  (\textcolor{keywordtype}{char} *String,\textcolor{keywordtype}{char} FinalChar,\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} MaxNbBytes);}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00217}00217     \textcolor{keywordtype}{int}             \mbox{\hyperlink{classserialib_a543d9ece0586fb00ae20ee282d325890}{readStringNoTimeOut}}  (\textcolor{keywordtype}{char} *String,\textcolor{keywordtype}{char} FinalChar,\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} MaxNbBytes);}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00218}00218 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00219}00219     \textcolor{comment}{// Current DTR and RTS state (can't be read on WIndows)}}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00220}00220     \textcolor{keywordtype}{bool}            currentStateRTS;}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00221}00221     \textcolor{keywordtype}{bool}            currentStateDTR;}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00220}\mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{00220}}     \textcolor{keywordtype}{bool}            \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{currentStateRTS}};}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00221}\mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{00221}}     \textcolor{keywordtype}{bool}            \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{currentStateDTR}};}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00222}00222 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00223}00223 }
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00224}00224 }
@@ -229,10 +229,10 @@
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00259}00259 \textcolor{preprocessor}{\#if defined (NO\_POSIX\_TIME)}}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00260}00260     \textcolor{comment}{// Used to store the previous time (for computing timeout)}}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00261}00261     LONGLONG       counterFrequency;}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00262}00262     LONGLONG       previousTime;}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00262}00262     LONGLONG       \mbox{\hyperlink{classtime_out_a861a9dd7167145791d9ea4127114212a}{previousTime}};}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00263}00263 \textcolor{preprocessor}{\#else}}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00264}00264     \textcolor{comment}{// Used to store the previous time (for computing timeout)}}
-\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00265}00265     \textcolor{keyword}{struct }timeval      previousTime;}
+\DoxyCodeLine{\Hypertarget{serialib_8h_source_l00265}\mbox{\hyperlink{classtime_out_a861a9dd7167145791d9ea4127114212a}{00265}}     \textcolor{keyword}{struct }timeval      \mbox{\hyperlink{classtime_out_a861a9dd7167145791d9ea4127114212a}{previousTime}};}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00266}00266 \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00267}00267 \};}
 \DoxyCodeLine{\Hypertarget{serialib_8h_source_l00268}00268 }

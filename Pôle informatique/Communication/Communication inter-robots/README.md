@@ -18,8 +18,8 @@
 
 |Nom de la communication|Vitesse de transfert|Portée|Type de communication|Caractéristiques de transmission utilisés (série)|Bande(s) de fréquence
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|Module XBee type S1|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data - chiffrement AES|2,4 GHz avec étalement de spectre|
-|Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Sans bit de parité - 1 bits de stop - 8 bits de data|/|
+|Module XBee type S1|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data - chiffrement AES|2,4 GHz avec étalement de spectre|
+|Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data|/|
 
 
 
@@ -36,7 +36,7 @@ sudo git clone https://github.com/RobotechNancy/2021-2022.git
 ```bash
 cd 2021-2022/Pôle\ informatique/Communication/Communication\ inter-robots/xbee/  
 
-sudo g++ *.cpp -std=c++17 -pthread -o output
+g++ *.cpp -std=c++17 -pthread -o output
 
 ./output
 ```
@@ -44,7 +44,7 @@ sudo g++ *.cpp -std=c++17 -pthread -o output
 # Publication d'une nouvelle version du code (sous Linux x86-64) :
 
 ```bash
-sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo git push
+git pull && git add * && git commit -m "Version XX.XXR" && git push
 ```
 
 [**Username** : votre nom d'utilisateur GitHub] 
@@ -125,7 +125,8 @@ sudo git pull && sudo git add * && sudo git commit -m "Version XX.XXR" && sudo g
 
 - toute la documentation a été générée grâce à l'outil [Doxygen](https://www.doxygen.nl/index.html)
 - le fichier de configuration de Doxygen se trouve dans le dossie **xbee** (fichier *Doxyfile*)
-- pour consulter la documentation, ouvrer le PDF **refman.pdf** dans le dossier `doc -> latex -> refman.pdf`
+- pour consulter la documentation en PDF, ouvrer le fichier **refman.pdf** situé dans le dossier `doc -> latex -> refman.pdf`
+- pour consulter la documentation en HTML, ouvrer le fichier **index.html** situé dans le dossier `doc -> html -> index.html`
 
 ***
 En cas de besoin, contactez moi sur Discord `@heatsink.ru#1183` ou par mail samueldittedestree@protonmail.com

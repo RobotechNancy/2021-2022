@@ -3,7 +3,7 @@
  \brief   Fichier d'en-tête de la classe XBee. Cette classe est utilisée afin de programmer les modules XBee en UART et de mettre en place des communications entre différents modules XBee.
  \author  Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
  \version 3.0
- \date    28/02/2022
+ \date    10/03/2022
  */
 #ifndef XBEE_H
 #define XBEE_H
@@ -42,7 +42,7 @@ public:
     int checkATConfig();
 
     // Lecture de la réponse du module à une commande AT
-    bool readATResponse(const char *value = XB_AT_R_EMPTY);
+    bool readATResponse(const char *value = XB_AT_R_EMPTY, int mode = 0);
 
     // Envoi d'une commande AT 
     bool sendATCommand(const char *command, const char *value, unsigned int mode = XB_AT_M_SET);
@@ -61,6 +61,9 @@ public:
 
     // Envoi de la demande de battement de coeur
     void sendHeartbeat();
+
+    // Permet de vérifier si un message envoyé a reçu une réponse
+    int isXbeeResponding();
 
     // Conversion char* en string
     std::string charToString(char* message);
@@ -154,6 +157,9 @@ private:
 
     // Variable permettant de définir la configuration série à utiliser
     int MODE = 0;
+
+    //vecteur contenant la liste des trames envoyées classées par destinataire et code fonction
+    std::vector<int> trames_envoyees = {};
 };
 
 #endif // XBEE_H

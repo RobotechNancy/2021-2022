@@ -2,8 +2,8 @@
     \file    xbeelib.cpp
     \brief   Fichier source de la classe XBee. Cette classe est utilisée afin de programmer les modules XBee en UART et de mettre en place des communications entre différents modules XBee.
     \author  Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
-    \version 1.0
-    \date    03/02/2022
+    \version 3.0
+    \date    10/03/2022
  */
 #include "xbeelib.h"
 
@@ -32,16 +32,16 @@ XBee::~XBee(){ }
 /*!
     \brief Nettoyage du buffer et ouverture de la connexion UART entre la RaspberryPi et le module XBee
     \param mode permet de définir la configuration de port à utiliser
-    \return 1 succès
-    \return -1 port série non trouvé
-    \return -2 erreur lors de l'ouverture du port série
-    \return -3 erreur lors de la récupération des informations du port série
-    \return -4 baudrate non reconnu
-    \return -5 erreur lors de l'écriture de la configuration du port série
-    \return -6 erreur lors de l'écriture du timeout
-    \return -7 databits non reconnus
-    \return -8 stopbits non reconnus
-    \return -9 parité non reconnue
+    \return 500 succès
+    \return -501 port série non trouvé
+    \return -502 erreur lors de l'ouverture du port série
+    \return -503 erreur lors de la récupération des informations du port série
+    \return -504 baudrate non reconnu
+    \return -505 erreur lors de l'écriture de la configuration du port série
+    \return -506 erreur lors de l'écriture du timeout
+    \return -507 databits non reconnus
+    \return -508 stopbits non reconnus
+    \return -509 parité non reconnue
  */
 int XBee::openSerialConnection(int mode){
     int errorOpening;
@@ -85,31 +85,32 @@ void XBee::closeSerialConnection(){
 
 /*!
     \brief Vérification et paramétrage de la configuration par défaut pour le module XBee
-    \return {XB_AT_E_SUCCESS} succès
-    \return {XB_AT_E_ENTER} impossible d'entrer dans le mode AT
-    \return {XB_AT_E_API} impossible de configurer le mode API
-    \return {XB_AT_E_BAUDRATE} impossible de configurer le baudrate
-    \return {XB_AT_E_AES} impossible de configurer le paramètre de chiffrement AES
-    \return {XB_AT_E_AES_KEY} impossible de configurer la clé de chiffrement AES 
-    \return {XB_AT_E_CHANEL} impossible de configurer le canal de découverte réseau
-    \return {XB_AT_E_PAN_ID} impossible de configurer l'ID du réseau
-    \return {XB_AT_E_COORDINATOR} impossible de configurer le mode coordinateur
-    \return {XB_AT_E_PARITY} impossible de configurer le nombre de bits de parité
-    \return {XB_AT_E_16BIT_SOURCE_ADDR} impossible de configurer l'adresse source 16bits
-    \return {XB_AD_E_LOW_DEST_ADDR} impossible de configuer l'adresse de destination
-    \return {XB_AT_E_WRITE_CONFIG} impossible d'écrire les paramètres dans la mémoire flash
-    \return {XB_AT_E_EXIT} impossible de sortir du mode AT
+    \return 400 succès
+    \return -401 impossible d'entrer dans le mode AT
+    \return -402 impossible de configurer le mode API
+    \return -403 impossible de configurer le baudrate
+    \return -404 impossible de configurer le paramètre de chiffrement AES
+    \return -405 impossible de configurer la clé de chiffrement AES 
+    \return -406 impossible de configurer le canal de découverte réseau
+    \return -407 impossible de configurer l'ID du réseau
+    \return -408 impossible de configurer le mode coordinateur
+    \return -409 impossible de configurer le nombre de bits de parité
+    \return -410 impossible de configurer l'adresse source 16bits
+    \return -411 impossible de configuer l'adresse de destination
+    \return -412 impossible de sortir du mode AT
+    \return -413 impossible d'écrire les paramètres dans la mémoire flash
+    \return -414 impossible d'établir une connexion avec le module XBee distant
  */
 int XBee::checkATConfig(){
     if(!enterATMode()){
 	    logXbee << "/!\\ (config AT) erreur " << XB_AT_E_ENTER << " : impossible d'entrer dans le mode AT" << mendl;
         closeSerialConnection();
         if(MODE == 0){
-                MODE = 1;
+            MODE = 1;
         	openSerialConnection(1);
         }else{
-                MODE = 0;
-		openSerialConnection();
+            MODE = 0;
+		    openSerialConnection();
         }
         return XB_AT_E_ENTER;
     }
@@ -138,11 +139,11 @@ int XBee::checkATConfig(){
 
         closeSerialConnection();
         if(MODE == 0){
-                MODE = 1;
-                openSerialConnection(1);
+            MODE = 1;
+            openSerialConnection(1);
         }else{
-                MODE = 0;
-                openSerialConnection();
+            MODE = 0;
+            openSerialConnection();
         }
     }
     else logXbee << "(config AT) nombre de bits de parité vérifié avec succès" << mendl;
@@ -222,8 +223,8 @@ int XBee::checkATConfig(){
     else logXbee << "(config AT) configuration AT enregistrée dans la mémoire du module" << mendl;
 
     if(!discoverXbeeNetwork()){
-        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_WRITE_CONFIG << " : impossible d'établir une connexion avec le module XBee distant" << mendl;
-	    return XB_AT_E_WRITE_CONFIG;
+        logXbee << "/!\\ (config AT) erreur " << XB_AT_E_DISCOVER_NETWORK << " : impossible d'établir une connexion avec le module XBee distant" << mendl;
+	    return XB_AT_E_DISCOVER_NETWORK;
     }
     else logXbee << "(config AT) connexion XBee établie avec succès avec le module distant" << mendl;
 
@@ -247,15 +248,21 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
 /*!
     \brief Fonction permettant de lire la réponse à un envoi de commande AT au module XBee
     \param value : la valeur de réponse attendue pour la commande envoyée
+    \param mode : le mode de lecture à utiliser
     \return true la réponse du module XBee est celle attendue
     \return false la réponse du module XBee n'est pas celle attendue
  */
-bool XBee::readATResponse(const char *value){
+bool XBee::readATResponse(const char *value, int mode){
     string reponse = readString();
     logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
 
-    if(reponse == value) return true;
-    else return false;
+    if(mode == 0)
+        if(reponse == value) return true;
+
+    else if(mode == 1)     
+        if(reponse != value) return true;
+    
+    return false;
 }
 
 /*!
@@ -326,7 +333,10 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         serial.writeString(command);
         serial.writeString(value);    
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
-        return readATResponse(XB_AT_R_SUCCESS);
+        if(command == XB_AT_CMD_DISCOVER_NETWORK)
+            return readATResponse(XB_AT_R_SUCCESS);
+        else
+            return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
     }
 }
 
@@ -410,18 +420,20 @@ int XBee::sendTrame(uint8_t ad_dest, uint8_t code_fct, char* data){
     serial.writeBytes(trame, length_trame);
     logXbee << "(sendTrame) envoi de la trame n°" << dec << id_trame_low+id_trame_high  << " effectué avec succès" << mendl; 
 
+    trames_envoyees[code_fct] = trames_envoyees[code_fct]+1;
+
     return XB_TRAME_E_SUCCESS;
 }
 
 /*!
  *  \brief Découpe une trame reçue en fonction de ses paramètres et interprete son code fonction
- *  \return {XB_TRAME_E_SUCCESS} succès
- *  \return {XB_TRAME_E_SIZE} taille de la trame incorrecte ou non concordante
- *  \return {XB_TRAME_E_START} premier caractère de la trame incorrect
- *  \return {XB_TRAME_E_END} dernier caractère de la trame incorrect
- *  \return {XB_TRAME_E_CRC} valeur du CRC incorrecte
- *  \return {XB_TRAME_E_EXP} adresse de l'expéditeur incorrecte ou inconnue
- *  \return {XB_TRAME_E_DEST} adresse du destinataire incorrecte ou inconnue
+ *  \return 200 succès
+ *  \return -201 taille de la trame incorrecte ou non concordante
+ *  \return -202 premier caractère de la trame incorrect
+ *  \return -203 dernier caractère de la trame incorrect
+ *  \return -204 valeur du CRC incorrecte
+ *  \return -205 adresse de l'expéditeur incorrecte ou inconnue
+ *  \return -206 adresse du destinataire incorrecte ou inconnue
  */
 int XBee::processTrame(vector<int> trame_recue){
     
@@ -492,9 +504,9 @@ int XBee::processTrame(vector<int> trame_recue){
 
 /*!
  *  \brief Interprète le code fonction issu d'une trame reçue
- *  \return {XB_FCT_E_SUCCESS} succès
- *  \return {XB_FCT_E_NOT_FOUND} code fonction incorrect
- *  \return {XB_FCT_E_NONE_REACHABLE} code fonction existant mais ne déclenchant aucune action  
+ *  \return 100 succès
+ *  \return -101 code fonction incorrect
+ *  \return -102 code fonction existant mais ne déclenchant aucune action  
  */
 int XBee::processCodeFct(int code_fct, int exp){
     if(!isCodeFctCorrect(code_fct)){
@@ -513,6 +525,7 @@ int XBee::processCodeFct(int code_fct, int exp){
            return XB_FCT_E_NONE_REACHABLE;
     }
 
+    trames_envoyees[code_fct] = trames_envoyees[code_fct]-1;
     logXbee << "(process code fonction) code fonction n°" << code_fct << " traité avec succès" << mendl;
     return XB_FCT_E_SUCCESS;
 }
@@ -702,13 +715,13 @@ void XBee::waitForATrame(){
  *  \brief Découpe le résultat de la lecture du buffer en différentes trames avant le traitement 
  *
  *  \param msg_recu : le résultat de la lecture du buffer
- *  \return {XB_SUB_TRAME_E_SUCCESS} succès
- *  \return {XB_SUB_TRAME_E_SIZE} la position des trames dans le message reçu est incorrecte : les caractères de début et de fin de trame ne sont pas au même nombre
- *  \return {XB_SUB_TRAME_E_REPARTITION} la position des trames dans le message reçu est incorrecte : certains caractères de début de trame sont placés après des caractères de fin de trame
- *  \return {XB_SUB_TRAME_E_DECOUPAGE} la position des trames dans le message reçu est incorrecte : des caractères inconnus sont placés entre deux trames
- *  \return {XB_SUB_TRAME_E_START} le premier caractère lu dans le buffer n'est pas celui d'un début de trame
- *  \return {XB_SUB_TRAME_E_END} le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame
- *  \return {XB_SUB_TRAME_E_NULL} aucun caractère de début et/ou de fin n'est présent dans le message reçu
+ *  \return 300 succès
+ *  \return -301 la position des trames dans le message reçu est incorrecte : les caractères de début et de fin de trame ne sont pas au même nombre
+ *  \return -302 la position des trames dans le message reçu est incorrecte : certains caractères de début de trame sont placés après des caractères de fin de trame
+ *  \return -303 la position des trames dans le message reçu est incorrecte : des caractères inconnus sont placés entre deux trames
+ *  \return -304 le premier caractère lu dans le buffer n'est pas celui d'un début de trame
+ *  \return -305 le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame
+ *  \return -306 aucun caractère de début et/ou de fin n'est présent dans le message reçu
  */
 int XBee::subTrame(vector<int> msg_recu){
 
@@ -774,11 +787,29 @@ int XBee::subTrame(vector<int> msg_recu){
  *  \brief Permet d'envoyer des demandes de battements de coeur au second robot afin de savoir s'il est toujours opérationnel
  */
 void XBee::sendHeartbeat(){
-   char* msg;
+    char* msg;
     msg[0] = XB_V_ACK;
+
     while(true){
       delay(3);
       sendTrame(XB_ADR_ROBOT_02, XB_FCT_TEST_ALIVE, msg);
+   } 
+}
+
+/*!
+ *  \brief Permet de vérifier si un message envoyé a reçu une réponse
+ */
+int XBee::isXbeeResponding(){
+    int size_list_code_fct = sizeof(XB_LIST_CODE_FCT)/sizeof(XB_LIST_CODE_FCT[0]);
+    while(true){
+      delay(3);  
+      for(int i = 0; i < size_list_code_fct; i++){
+          if(trames_envoyees[XB_LIST_CODE_FCT[i]] == 0){
+              logXbee << "(verif reponse) les trames envoyées portant le code fonction " << XB_LIST_CODE_FCT[i] << " ont toutes reçues une réponse" << mendl;
+          }else{
+              logXbee << "(verif reponse) /!\\ les trames envoyées portant le code fonction " << XB_LIST_CODE_FCT[i] << " n'ont pas toutes reçues une réponse" << mendl;
+          }
+      }
    } 
 }
 
@@ -788,7 +819,7 @@ void XBee::sendHeartbeat(){
  */
 void XBee::sendMsg(string msg){
     serial.writeString(stringToChar(msg));
-    //cout << "Message envoyé avec succès !" << endl;
+    logXbee << "(envoi message) message : " << msg << " envoyé avec succès" << mendl;
 }
 
 /*!

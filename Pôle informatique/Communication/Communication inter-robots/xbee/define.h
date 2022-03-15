@@ -2,19 +2,22 @@
  *  \file define.h
  *  \brief Fichier contenant l'ensemble des constantes utilisées dans la librairie XBee.
  *  \author Samuel-Charles DITTE-DESTREE (samueldittedestree@protonmail.com)
- *  \version 2.0
- *  \date 28/02/2022
+ *  \version 3.0
+ *  \date 10/03/2022
  */
 #ifndef DEFINE_XBEE_H
 #define DEFINE_XBEE_H
 
 // Paramètres du port série
+// Configuration des modules XBee pour la compétition
 #define XB_SERIAL_PORT_PRIMARY "/dev/ttyAMA0"
 #define XB_BAUDRATE_PRIMARY 9600
 #define XB_DATABITS_PRIMARY SERIAL_DATABITS_8
 #define XB_PARITY_PRIMARY SERIAL_PARITY_EVEN
 #define XB_STOPBITS_PRIMARY SERIAL_STOPBITS_1
 
+
+// Configuration d'usine par défaut des modules XBee neufs
 #define XB_SERIAL_PORT_DEFAULT "/dev/ttyAMA0"
 #define XB_BAUDRATE_DEFAULT 9600
 #define XB_DATABITS_DEFAULT SERIAL_DATABITS_8
@@ -45,7 +48,7 @@
 // Code erreurs généraux
 #define XB_E_SUCCESS 000
 
-// Codes erreurs sur les codes fonctions
+// Codes erreurs des codes fonctions
 #define XB_FCT_E_SUCCESS 100
 #define XB_FCT_E_NOT_FOUND -101
 #define XB_FCT_E_NONE_REACHABLE -102
@@ -83,7 +86,19 @@
 #define XB_AT_E_LOW_DEST_ADDR -411
 #define XB_AT_E_EXIT -412
 #define XB_AT_E_WRITE_CONFIG -413
+#define XB_AT_E_DISCOVER_NETWORK -414
 
+// Codes d'erreurs ouverture connexion série
+#define XB_SER_E_SUCCESS 500
+#define XB_SER_E_NOT_FOUND -501
+#define XB_SER_E_OPEN -502
+#define XB_SER_E_PARAM -503
+#define XB_SER_E_UKN_BAUDRATE -504
+#define XB_SER_E_CONFIG -505
+#define XB_SER_E_TIMOUT -506
+#define XB_SER_E_UKN_DATABITS -507
+#define XB_SER_E_UKN_STOPBITS -508
+#define XB_SER_E_UKN_PARITY -509
 
 // Commandes AT
 #define XB_AT_CMD_ENTER "+++"
