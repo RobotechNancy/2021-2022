@@ -254,15 +254,19 @@ void XBee::delay(unsigned int time){ std::this_thread::sleep_for(std::chrono::mi
     \return false la réponse du module XBee n'est pas celle attendue
  */
 bool XBee::readATResponse(const char *value, int mode){
+    
+    string reponse;
 
-    if(mode == 1){
+    if(value == XB_AT_V_DISCOVER_NETWORK){
         delay(3);
+        reponse = readString();
+        cout << reponse << endl;
         serial.flushReceiver();
         logXbee << "(config AT) réponse du Xbee : 2167D2F1" << mendl;
         return true;
     }
 
-    string reponse = readString();
+    reponse = readString();
 
     if(reponse != XB_AT_R_EMPTY && reponse != XB_AT_V_END_LINE){
         logXbee << "(config AT) réponse du Xbee : " << reponse << mendl;
@@ -308,7 +312,7 @@ bool XBee::discoverXbeeNetwork(){
     serial.writeString(XB_AT_CMD_DISCOVER_NETWORK);
     serial.writeString(XB_AT_V_END_LINE);
     logXbee << "(config AT) lancement de la découverte réseau XBee" << mendl;
-    return readATResponse(XB_AT_V_DISCOVER_NETWORK);
+    return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
 }
 
 /*!
@@ -341,11 +345,7 @@ bool XBee::sendATCommand(const char *command, const char *value, unsigned int mo
         serial.writeString(command);
         serial.writeString(value);    
         logXbee << "(config AT) envoi de la commande AT : " << command << "=" << value << mendl;
-        if(command != XB_AT_CMD_DISCOVER_NETWORK)
-            return readATResponse(XB_AT_R_SUCCESS);
-        else{	
-            return readATResponse(XB_AT_V_DISCOVER_NETWORK, 1);
-    	}
+        return readATResponse(XB_AT_R_SUCCESS);
     }
 }
 
