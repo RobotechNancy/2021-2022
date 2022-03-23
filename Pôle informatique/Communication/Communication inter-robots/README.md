@@ -90,16 +90,16 @@ git pull && git add * && git commit -m "Version XX.XXR" && git push
 
 |**PIN**|**DESCRIPTION**|
 |:---:|:---:|
-|1|Alimentation (3,3V)|
-|2|UART Tx|
-|3|UART Rx|
+|1|**Alimentation (3,3V)**|
+|2|**UART Tx**|
+|3|**UART Rx**|
 |4|Digital output 8|
 |5|Module RESET (pulse reset min. 200ns)|
 |6|PWM sortie 0|
 |7|PWM sortie 1|
-|8|Ne pas connecter|
+|8|*Ne pas connecter*|
 |9|STR / Digital input 8|
-|10|Masse (GRD)|
+|10|**Masse (GND)**|
 |11|Analog input 4 / Digital I/O 4|
 |12|Clear-to-Send Flow control / Digital I/O 7|
 |13|Indicateur d'état du module|
