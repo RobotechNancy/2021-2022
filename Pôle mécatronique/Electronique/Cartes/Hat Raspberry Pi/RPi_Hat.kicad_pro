@@ -388,7 +388,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../../../Desktop/RPi_Hat.step",
       "vrml": ""
     },
     "page_layout_descr_file": "C:/xesscorp/KiCad/page_layouts/title_block_only.kicad_wks"

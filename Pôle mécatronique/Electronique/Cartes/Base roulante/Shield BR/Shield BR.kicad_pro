@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.8,
+          "height": 1.6,
+          "width": 1.6
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -48,7 +48,13 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -137,8 +143,8 @@
           "drill": 0.4
         },
         {
-          "diameter": 1.2,
-          "drill": 0.8
+          "diameter": 1.6,
+          "drill": 1.0
         }
       ],
       "zones_allow_external_fillets": false,
@@ -394,7 +400,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../../../../Desktop/Shield BR.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -439,7 +445,7 @@
   },
   "sheets": [
     [
-      "0ff508fd-18da-4ab7-9844-3c8a28c2587e",
+      "c30b6f51-5bc9-4a76-8a03-fc4a35281769",
       ""
     ]
   ],
