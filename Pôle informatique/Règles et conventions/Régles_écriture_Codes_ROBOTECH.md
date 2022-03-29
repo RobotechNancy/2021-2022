@@ -1,4 +1,4 @@
-# règle écriture des codes du projet ROBOTECH en langage C++ (CPP)
+# Règles d'écriture des codes du projet ROBOTECH en langage C++ (CPP)
 # Auteur : Jean Luc Noizette
 # Date   : 1er novembre 2021
 
@@ -12,6 +12,8 @@
 **Variable name   :** Camel case only (ex: variableName)
 
 **Constant :** all in uppercase with underscores (ex: CONSTANT_NAME)
+
+**Global variable name   :** begin with a big G and an underscore (ex: G_variableName)
 
 ### B - Function return values : 
 
