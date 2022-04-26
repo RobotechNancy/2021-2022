@@ -111,7 +111,7 @@ public:
 
 
     // Open a device
-    char openDevice(const char *Device, const unsigned int Bauds,
+    int openDevice(const char *Device, const unsigned int Bauds,
                     SerialDataBits Databits = SERIAL_DATABITS_8,
                     SerialParity Parity = SERIAL_PARITY_NONE,
                     SerialStopBits Stopbits = SERIAL_STOPBITS_1);

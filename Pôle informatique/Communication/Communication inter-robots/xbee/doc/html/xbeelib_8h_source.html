@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robotech 2021 - XBee:  Fichier source de xbeelib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Robotech 2021 - XBee<span id="projectnumber">&#160;5.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('xbeelib_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">xbeelib.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="xbeelib_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef XBEE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define XBEE_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="define_8h.html">define.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="serialib_8h.html">serialib.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="loglib_8h.html">loglib.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_x_bee.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_x_bee.html">XBee</a>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Constructeur de la classe</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="class_x_bee.html#ab6317a15b3d646d1ef5907d649f875bc">XBee</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Desctructeur de la classe</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_x_bee.html#aea9d624ec7f2cfd524d5748937e916d9">~XBee</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Ouverture de la connexion série</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#ac1fc413c3dbf1d3a312ce65df3f3c01b">openSerialConnection</a>(<span class="keywordtype">int</span> mode = 0);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// Fermeture de la connexion série</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a892c7ebab279263c3c10583c3587d5df">closeSerialConnection</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Vérfication et paramétrage de la configuration AT par défaut du module</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#a63484ca5a9b6b76dbe78de964802e231">checkATConfig</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Lecture de la réponse du module à une commande AT</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a94553844c27b72bd375fcaf08a0a7e65">readATResponse</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *value = <a class="code hl_define" href="define_8h.html#a6a043234984ffa2388420c2c302a8c58">XB_AT_R_EMPTY</a>, <span class="keywordtype">int</span> mode = 0);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Envoi d&#39;une commande AT </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a383001e0126e2636e10d9cc4c18c3156">sendATCommand</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *command, <span class="keyword">const</span> <span class="keywordtype">char</span> *value, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode = <a class="code hl_define" href="define_8h.html#a7b84802b6b28bad27a64e09b8705fd45">XB_AT_M_SET</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Ecriture de la configuration AT dans la mémoire flash du module</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#ad85b6117daf5d6e48f8be690822d0d7a">writeATConfig</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Création et envoi de la trame de message structurée</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#a133ba657a1c58d9b65c4ee060d5f9ffb">sendTrame</a>(uint8_t ad_dest, uint8_t code_fct, <span class="keywordtype">char</span>* data = 0x00);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Envoi d&#39;un objet string quelconque</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a4b097076ff43bf157bdfcddaca4feec7">sendMsg</a>(std::string msg);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Attente de trames dans le buffer Rx et appel des fonctions de traitement</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a9f89263f38e334b88d6505641b1a0335">waitForATrame</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Envoi de la demande de battement de coeur</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a6b7eecc0b20a691f510abadd71ab5525">sendHeartbeat</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Permet de vérifier si un message envoyé a reçu une réponse</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#aed8a183be2a0e7cf1605a5c8c8fd1f1c">isXbeeResponding</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Conversion char* en string</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::string <a class="code hl_function" href="class_x_bee.html#ac691ee030df7e8555bb69aa167e5a9ee">charToString</a>(<span class="keywordtype">char</span>* message);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// Conversion string en char*</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">char</span>* <a class="code hl_function" href="class_x_bee.html#ac7eb2f0badf73d2aaa3a2de57f1357c6">stringToChar</a>(std::string chaine);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Affichage du contenu d&#39;un vecteur d&#39;entiers</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a805172daefa3df6c69fc1c63eefb842e">print</a>(<span class="keyword">const</span> std::vector&lt;int&gt; &amp;v);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html">   83</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a279fe78ed8a81b80ca7682cbe6018324">   84</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a279fe78ed8a81b80ca7682cbe6018324">start_seq</a>; </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a063cd9299dafa2da43a3b827de66a067">   85</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a063cd9299dafa2da43a3b827de66a067">adr_emetteur</a>; </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a63291c0a16baf268b9887a6f69c7b377">   86</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a63291c0a16baf268b9887a6f69c7b377">adr_dest</a>; </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a1268091a325c97d6f426b3e345100923">   87</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a1268091a325c97d6f426b3e345100923">id_trame_low</a>; </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a4afc2c0ec85e9ee50bcb905849cc82eb">   88</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a4afc2c0ec85e9ee50bcb905849cc82eb">id_trame_high</a>; </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a332a02967af0153d9262d4aa4bc18d66">   89</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a332a02967af0153d9262d4aa4bc18d66">nb_octets_msg</a>; </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a68071b3cc56fd247f117ace6285483f6">   90</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a68071b3cc56fd247f117ace6285483f6">code_fct</a>; </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a31f3fb705d18a381ea97c5b828cc53b6">   91</a></span>      std::vector&lt;int&gt; <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a31f3fb705d18a381ea97c5b828cc53b6">param</a>; </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a3f3f6b7c1a1688794cc774cae539ec9b">   92</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a3f3f6b7c1a1688794cc774cae539ec9b">crc_low</a>; </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#ad1ae6316ea5d7862ac08629be63f6397">   93</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#ad1ae6316ea5d7862ac08629be63f6397">crc_high</a>; </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="struct_x_bee_1_1_trame__t.html#a2d1e4b8530a927546271202028f787ba">   94</a></span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_x_bee_1_1_trame__t.html#a2d1e4b8530a927546271202028f787ba">end_seq</a>; </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    } <a class="code hl_struct" href="struct_x_bee_1_1_trame__t.html">Trame_t</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// Entrée dans le mode de configuration AT</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a686a09b14a21f8cf5192f1be1ffdfc01">enterATMode</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// Sortie du mode de configuration AT</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a1c6dedbd3106d6f08e581d566e82705c">exitATMode</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// Lance une découverte réseau des modules Xbee</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a92c1170006b2692364b1077562f922e6">discoverXbeeNetwork</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// Vérifie si l&#39;adresse de l&#39;expéditeur existe </span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a359c4e1fd3271cdb7c46b0efeb329279">isExpCorrect</a>(<span class="keywordtype">int</span> exp);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// Vérifie si l&#39;adresse de destination existe </span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a1264cd9491907bc93d925fa196726aba">isDestCorrect</a>(<span class="keywordtype">int</span> dest);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// Vérifie si le code fonction existe </span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#aa3bcf5ddb1814f835e7524590f2127d9">isCodeFctCorrect</a>(<span class="keywordtype">int</span> code_fct);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// Vérifie si la taille de la trame est cohérente </span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#ade80327f2a3c022ef4eaa733d7c71c92">isTrameSizeCorrect</a>(std::vector&lt;int&gt; trame);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// Découpe un ensemble de trames en trames uniques</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#a491d66fa4bdf5c7c6d8c65fd33db36f9">subTrame</a>(std::vector&lt;int&gt; msg_recu);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// Interprète le code fonction et exécute les fonctions associées</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#aaac7e9a9ffe4ddd2108bde9923f46f68">processCodeFct</a>(<span class="keywordtype">int</span> code_fct, <span class="keywordtype">int</span> exp);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">// Affichage des différents paramètres d&#39;une structure Trame_t </span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a86d18a9f5d714880fa3ae96d5883452e">afficherTrameRecue</a>(<a class="code hl_struct" href="struct_x_bee_1_1_trame__t.html">Trame_t</a> trame);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Interprète et contrôle l&#39;intégrité d&#39;une trame reçue</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#ad588451b2ade68dedc9450ad3ed71acf">processTrame</a>(std::vector&lt;int&gt; trame);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// Lis le contenu du buffer Rx de la RaspberryPi</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    std::vector&lt;int&gt; <a class="code hl_function" href="class_x_bee.html#aebae7367c381376f968401cefab2996a">readBuffer</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="comment">// Lis le contenu du buffer Rx de la RaspberryPi</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    std::string <a class="code hl_function" href="class_x_bee.html#a57a921012a68f18ad9d63df92382f35a">readString</a>();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="comment">// Calcul du CRC16 Modbus de la trame</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_x_bee.html#a32e22b437a2a47f53698d90f8416effa">crc16</a>(<span class="keywordtype">int</span> trame[], uint8_t taille);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment">// Vérifie si le caractère de début de trame est correct</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a235c84172b8419b81a5ae91d11dd0e96">isStartSeqCorrect</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="comment">// Vérifie si le caractère de fin de trame est correct</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#a3d8a5cec177d309aae76f3b6de8a728b">isEndSeqCorrect</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// Vérifie si le CRC de la trame est correct</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_x_bee.html#ab656920e323e42654f3763e717dfe0f4">isCRCCorrect</a>(uint8_t crc_low, uint8_t crc_high, <span class="keywordtype">int</span> trame[], <span class="keywordtype">int</span> trame_size);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// Retard de temporisation dans l&#39;exécution du code</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_x_bee.html#a6e71129bbccf1e71335a6dfd5fcd1b82">delay</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> time);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">// Découpe un vecteur d&#39;entiers en un sous vecteur </span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::vector&lt;int&gt; <a class="code hl_function" href="class_x_bee.html#ad103b320d8d88a1eed931a46eeb29ccb">slice</a>(<span class="keyword">const</span> std::vector&lt;int&gt; &amp;v, <span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// Variable calculant l&#39;ID de la trame</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_x_bee.html#ae4fc3bb11cca90a207fea1b8832b1a03">  156</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_x_bee.html#ae4fc3bb11cca90a207fea1b8832b1a03">ID_TRAME</a> = 0;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">// Variable permettant de définir la configuration série à utiliser</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_x_bee.html#a06a219ceff3be5e7a6efb4ae21f6e7a0">  159</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_x_bee.html#a06a219ceff3be5e7a6efb4ae21f6e7a0">MODE</a> = 0;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">//vecteur contenant la liste des trames envoyées classées par destinataire et code fonction</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="class_x_bee.html#a77f72e489852e03bbd7fb08af86ac2f8">  162</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="class_x_bee.html#a77f72e489852e03bbd7fb08af86ac2f8">trames_envoyees</a> = {};</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>};</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif </span><span class="comment">// XBEE_H</span></div>
+<div class="ttc" id="aclass_x_bee_html"><div class="ttname"><a href="class_x_bee.html">XBee</a></div><div class="ttdoc">Cette classe est utilisée pour la communication entre un module XBee et une RaspberryPi et entre plus...</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00025">xbeelib.h:25</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a06a219ceff3be5e7a6efb4ae21f6e7a0"><div class="ttname"><a href="class_x_bee.html#a06a219ceff3be5e7a6efb4ae21f6e7a0">XBee::MODE</a></div><div class="ttdeci">int MODE</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00159">xbeelib.h:159</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a1264cd9491907bc93d925fa196726aba"><div class="ttname"><a href="class_x_bee.html#a1264cd9491907bc93d925fa196726aba">XBee::isDestCorrect</a></div><div class="ttdeci">bool isDestCorrect(int dest)</div><div class="ttdoc">Vérifie si une adresse de destination est correcte.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00588">xbeelib.cpp:588</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a133ba657a1c58d9b65c4ee060d5f9ffb"><div class="ttname"><a href="class_x_bee.html#a133ba657a1c58d9b65c4ee060d5f9ffb">XBee::sendTrame</a></div><div class="ttdeci">int sendTrame(uint8_t ad_dest, uint8_t code_fct, char *data=0x00)</div><div class="ttdoc">Fonction permettant d'envoyer une trame de message structurée via UART en XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00384">xbeelib.cpp:384</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a1c6dedbd3106d6f08e581d566e82705c"><div class="ttname"><a href="class_x_bee.html#a1c6dedbd3106d6f08e581d566e82705c">XBee::exitATMode</a></div><div class="ttdeci">bool exitATMode()</div><div class="ttdoc">Fonction permettant de sortir du mode AT.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00285">xbeelib.cpp:285</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a235c84172b8419b81a5ae91d11dd0e96"><div class="ttname"><a href="class_x_bee.html#a235c84172b8419b81a5ae91d11dd0e96">XBee::isStartSeqCorrect</a></div><div class="ttdeci">bool isStartSeqCorrect(int value)</div><div class="ttdoc">Vérifie si le caractère de début de la trame correpond à celui attendu.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00607">xbeelib.cpp:607</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a32e22b437a2a47f53698d90f8416effa"><div class="ttname"><a href="class_x_bee.html#a32e22b437a2a47f53698d90f8416effa">XBee::crc16</a></div><div class="ttdeci">int crc16(int trame[], uint8_t taille)</div><div class="ttdoc">Fonction permettant de calculer le CRC16 Modbus de la trame XBee envoyée.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00351">xbeelib.cpp:351</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a359c4e1fd3271cdb7c46b0efeb329279"><div class="ttname"><a href="class_x_bee.html#a359c4e1fd3271cdb7c46b0efeb329279">XBee::isExpCorrect</a></div><div class="ttdeci">bool isExpCorrect(int exp)</div><div class="ttdoc">Vérifie si une adresse d'expéditeur est correcte.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00569">xbeelib.cpp:569</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a383001e0126e2636e10d9cc4c18c3156"><div class="ttname"><a href="class_x_bee.html#a383001e0126e2636e10d9cc4c18c3156">XBee::sendATCommand</a></div><div class="ttdeci">bool sendATCommand(const char *command, const char *value, unsigned int mode=XB_AT_M_SET)</div><div class="ttdoc">Fonction permettant d'envoyer en UART via le port série une commmande AT.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00325">xbeelib.cpp:325</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a3d8a5cec177d309aae76f3b6de8a728b"><div class="ttname"><a href="class_x_bee.html#a3d8a5cec177d309aae76f3b6de8a728b">XBee::isEndSeqCorrect</a></div><div class="ttdeci">bool isEndSeqCorrect(int value)</div><div class="ttdoc">Vérifie si le caractère de fin de la trame correpond à celui attendu.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00620">xbeelib.cpp:620</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a491d66fa4bdf5c7c6d8c65fd33db36f9"><div class="ttname"><a href="class_x_bee.html#a491d66fa4bdf5c7c6d8c65fd33db36f9">XBee::subTrame</a></div><div class="ttdeci">int subTrame(std::vector&lt; int &gt; msg_recu)</div><div class="ttdoc">Découpe le résultat de la lecture du buffer en différentes trames avant le traitement.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00725">xbeelib.cpp:725</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a4b097076ff43bf157bdfcddaca4feec7"><div class="ttname"><a href="class_x_bee.html#a4b097076ff43bf157bdfcddaca4feec7">XBee::sendMsg</a></div><div class="ttdeci">void sendMsg(std::string msg)</div><div class="ttdoc">Permet d'envoyer un mesage ASCII sans format particulier via XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00819">xbeelib.cpp:819</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a57a921012a68f18ad9d63df92382f35a"><div class="ttname"><a href="class_x_bee.html#a57a921012a68f18ad9d63df92382f35a">XBee::readString</a></div><div class="ttdeci">std::string readString()</div><div class="ttdoc">Permet de lire l'intégralité du contenu du buffer Rx de la RaspberryPi et de le renvoyer sous forme d...</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00675">xbeelib.cpp:675</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a63484ca5a9b6b76dbe78de964802e231"><div class="ttname"><a href="class_x_bee.html#a63484ca5a9b6b76dbe78de964802e231">XBee::checkATConfig</a></div><div class="ttdeci">int checkATConfig()</div><div class="ttdoc">Vérification et paramétrage de la configuration par défaut pour le module XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00104">xbeelib.cpp:104</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a686a09b14a21f8cf5192f1be1ffdfc01"><div class="ttname"><a href="class_x_bee.html#a686a09b14a21f8cf5192f1be1ffdfc01">XBee::enterATMode</a></div><div class="ttdeci">bool enterATMode()</div><div class="ttdoc">Fonction permettant d'entrer dans le mode AT.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00272">xbeelib.cpp:272</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a6b7eecc0b20a691f510abadd71ab5525"><div class="ttname"><a href="class_x_bee.html#a6b7eecc0b20a691f510abadd71ab5525">XBee::sendHeartbeat</a></div><div class="ttdeci">void sendHeartbeat()</div><div class="ttdoc">Permet d'envoyer des demandes de battements de coeur au second robot afin de savoir s'il est toujours...</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00788">xbeelib.cpp:788</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a6e71129bbccf1e71335a6dfd5fcd1b82"><div class="ttname"><a href="class_x_bee.html#a6e71129bbccf1e71335a6dfd5fcd1b82">XBee::delay</a></div><div class="ttdeci">void delay(unsigned int time)</div><div class="ttdoc">Fonction permettant de retarder l'exécution du code.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00244">xbeelib.cpp:244</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a77f72e489852e03bbd7fb08af86ac2f8"><div class="ttname"><a href="class_x_bee.html#a77f72e489852e03bbd7fb08af86ac2f8">XBee::trames_envoyees</a></div><div class="ttdeci">std::vector&lt; int &gt; trames_envoyees</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00162">xbeelib.h:162</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a805172daefa3df6c69fc1c63eefb842e"><div class="ttname"><a href="class_x_bee.html#a805172daefa3df6c69fc1c63eefb842e">XBee::print</a></div><div class="ttdeci">void print(const std::vector&lt; int &gt; &amp;v)</div><div class="ttdoc">Fonction d'affichage des valeurs contenues dans un vecteur d'entiers.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00865">xbeelib.cpp:865</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a86d18a9f5d714880fa3ae96d5883452e"><div class="ttname"><a href="class_x_bee.html#a86d18a9f5d714880fa3ae96d5883452e">XBee::afficherTrameRecue</a></div><div class="ttdeci">void afficherTrameRecue(Trame_t trame)</div><div class="ttdoc">Fonction d'affichage des données découpées d'une structure de type Trame.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00847">xbeelib.cpp:847</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a892c7ebab279263c3c10583c3587d5df"><div class="ttname"><a href="class_x_bee.html#a892c7ebab279263c3c10583c3587d5df">XBee::closeSerialConnection</a></div><div class="ttdeci">void closeSerialConnection()</div><div class="ttdoc">Nettoyage du buffer et fermeture de la connexion UART entre la RaspberryPi et le module XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00075">xbeelib.cpp:75</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a92c1170006b2692364b1077562f922e6"><div class="ttname"><a href="class_x_bee.html#a92c1170006b2692364b1077562f922e6">XBee::discoverXbeeNetwork</a></div><div class="ttdeci">bool discoverXbeeNetwork()</div><div class="ttdoc">Recherche du module XBee distant de l'autre robot.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00297">xbeelib.cpp:297</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a94553844c27b72bd375fcaf08a0a7e65"><div class="ttname"><a href="class_x_bee.html#a94553844c27b72bd375fcaf08a0a7e65">XBee::readATResponse</a></div><div class="ttdeci">bool readATResponse(const char *value=XB_AT_R_EMPTY, int mode=0)</div><div class="ttdoc">Fonction permettant de lire la réponse à un envoi de commande AT au module XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00254">xbeelib.cpp:254</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_a9f89263f38e334b88d6505641b1a0335"><div class="ttname"><a href="class_x_bee.html#a9f89263f38e334b88d6505641b1a0335">XBee::waitForATrame</a></div><div class="ttdeci">void waitForATrame()</div><div class="ttdoc">Permet l'attente et la vérification régulée d'une trame en entrée dans le buffer du port Rx de la Ras...</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00698">xbeelib.cpp:698</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_aa3bcf5ddb1814f835e7524590f2127d9"><div class="ttname"><a href="class_x_bee.html#aa3bcf5ddb1814f835e7524590f2127d9">XBee::isCodeFctCorrect</a></div><div class="ttdeci">bool isCodeFctCorrect(int code_fct)</div><div class="ttdoc">Vérifie si le code fonction donné est présent dans le fichier define.h.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00538">xbeelib.cpp:538</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_aaac7e9a9ffe4ddd2108bde9923f46f68"><div class="ttname"><a href="class_x_bee.html#aaac7e9a9ffe4ddd2108bde9923f46f68">XBee::processCodeFct</a></div><div class="ttdeci">int processCodeFct(int code_fct, int exp)</div><div class="ttdoc">Interprète le code fonction issu d'une trame reçue.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00510">xbeelib.cpp:510</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ab6317a15b3d646d1ef5907d649f875bc"><div class="ttname"><a href="class_x_bee.html#ab6317a15b3d646d1ef5907d649f875bc">XBee::XBee</a></div><div class="ttdeci">XBee()</div><div class="ttdoc">Constructeur de la classe xbee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00021">xbeelib.cpp:21</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ab656920e323e42654f3763e717dfe0f4"><div class="ttname"><a href="class_x_bee.html#ab656920e323e42654f3763e717dfe0f4">XBee::isCRCCorrect</a></div><div class="ttdeci">bool isCRCCorrect(uint8_t crc_low, uint8_t crc_high, int trame[], int trame_size)</div><div class="ttdoc">Vérifie si le CRC reçu est cohérent avec la trame reçue.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00636">xbeelib.cpp:636</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ac1fc413c3dbf1d3a312ce65df3f3c01b"><div class="ttname"><a href="class_x_bee.html#ac1fc413c3dbf1d3a312ce65df3f3c01b">XBee::openSerialConnection</a></div><div class="ttdeci">int openSerialConnection(int mode=0)</div><div class="ttdoc">Nettoyage du buffer et ouverture de la connexion UART entre la RaspberryPi et le module XBee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00046">xbeelib.cpp:46</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ac691ee030df7e8555bb69aa167e5a9ee"><div class="ttname"><a href="class_x_bee.html#ac691ee030df7e8555bb69aa167e5a9ee">XBee::charToString</a></div><div class="ttdeci">std::string charToString(char *message)</div><div class="ttdoc">Permet de convertir une chaine de caractère standard C en objet de type string.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00839">xbeelib.cpp:839</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ac7eb2f0badf73d2aaa3a2de57f1357c6"><div class="ttname"><a href="class_x_bee.html#ac7eb2f0badf73d2aaa3a2de57f1357c6">XBee::stringToChar</a></div><div class="ttdeci">char * stringToChar(std::string chaine)</div><div class="ttdoc">Permet de convertir un objet de type string en chaine de caractère standard C.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00829">xbeelib.cpp:829</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ad103b320d8d88a1eed931a46eeb29ccb"><div class="ttname"><a href="class_x_bee.html#ad103b320d8d88a1eed931a46eeb29ccb">XBee::slice</a></div><div class="ttdeci">std::vector&lt; int &gt; slice(const std::vector&lt; int &gt; &amp;v, int a, int b)</div><div class="ttdoc">Fonction de traitement permettant d'extraire un sous-vecteur d'entiers d'un vecteur d'entiers.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00878">xbeelib.cpp:878</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ad588451b2ade68dedc9450ad3ed71acf"><div class="ttname"><a href="class_x_bee.html#ad588451b2ade68dedc9450ad3ed71acf">XBee::processTrame</a></div><div class="ttdeci">int processTrame(std::vector&lt; int &gt; trame)</div><div class="ttdoc">Découpe une trame reçue en fonction de ses paramètres et interprete son code fonction.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00437">xbeelib.cpp:437</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ad85b6117daf5d6e48f8be690822d0d7a"><div class="ttname"><a href="class_x_bee.html#ad85b6117daf5d6e48f8be690822d0d7a">XBee::writeATConfig</a></div><div class="ttdeci">bool writeATConfig()</div><div class="ttdoc">Fonction permettant d'écrire dans la mémoire flash du module XBee, les paramètres AT définis.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00309">xbeelib.cpp:309</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ade80327f2a3c022ef4eaa733d7c71c92"><div class="ttname"><a href="class_x_bee.html#ade80327f2a3c022ef4eaa733d7c71c92">XBee::isTrameSizeCorrect</a></div><div class="ttdeci">bool isTrameSizeCorrect(std::vector&lt; int &gt; trame)</div><div class="ttdoc">Vérifie si la taille de la trame est cohérente.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00556">xbeelib.cpp:556</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_ae4fc3bb11cca90a207fea1b8832b1a03"><div class="ttname"><a href="class_x_bee.html#ae4fc3bb11cca90a207fea1b8832b1a03">XBee::ID_TRAME</a></div><div class="ttdeci">int ID_TRAME</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00156">xbeelib.h:156</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_aea9d624ec7f2cfd524d5748937e916d9"><div class="ttname"><a href="class_x_bee.html#aea9d624ec7f2cfd524d5748937e916d9">XBee::~XBee</a></div><div class="ttdeci">~XBee()</div><div class="ttdoc">Destructeur de la classe xbee.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00026">xbeelib.cpp:26</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_aebae7367c381376f968401cefab2996a"><div class="ttname"><a href="class_x_bee.html#aebae7367c381376f968401cefab2996a">XBee::readBuffer</a></div><div class="ttdeci">std::vector&lt; int &gt; readBuffer()</div><div class="ttdoc">Permet de lire l'intégralité du buffer Rx de la RaspberryPi.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00652">xbeelib.cpp:652</a></div></div>
+<div class="ttc" id="aclass_x_bee_html_aed8a183be2a0e7cf1605a5c8c8fd1f1c"><div class="ttname"><a href="class_x_bee.html#aed8a183be2a0e7cf1605a5c8c8fd1f1c">XBee::isXbeeResponding</a></div><div class="ttdeci">int isXbeeResponding()</div><div class="ttdoc">Permet de vérifier si un message envoyé a reçu une réponse.</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8cpp_source.html#l00801">xbeelib.cpp:801</a></div></div>
+<div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="define_8h.html">define.h</a></div><div class="ttdoc">Fichier contenant l'ensemble des constantes utilisées dans la librairie XBee.</div></div>
+<div class="ttc" id="adefine_8h_html_a6a043234984ffa2388420c2c302a8c58"><div class="ttname"><a href="define_8h.html#a6a043234984ffa2388420c2c302a8c58">XB_AT_R_EMPTY</a></div><div class="ttdeci">#define XB_AT_R_EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="define_8h_source.html#l00134">define.h:134</a></div></div>
+<div class="ttc" id="adefine_8h_html_a7b84802b6b28bad27a64e09b8705fd45"><div class="ttname"><a href="define_8h.html#a7b84802b6b28bad27a64e09b8705fd45">XB_AT_M_SET</a></div><div class="ttdeci">#define XB_AT_M_SET</div><div class="ttdef"><b>Definition:</b> <a href="define_8h_source.html#l00140">define.h:140</a></div></div>
+<div class="ttc" id="aloglib_8h_html"><div class="ttname"><a href="loglib_8h.html">loglib.h</a></div></div>
+<div class="ttc" id="aserialib_8h_html"><div class="ttname"><a href="serialib_8h.html">serialib.h</a></div><div class="ttdoc">Header file of the class serialib. This class is used for communication over a serial device.</div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html">XBee::Trame_t</a></div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00083">xbeelib.h:83</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a063cd9299dafa2da43a3b827de66a067"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a063cd9299dafa2da43a3b827de66a067">XBee::Trame_t::adr_emetteur</a></div><div class="ttdeci">int adr_emetteur</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00085">xbeelib.h:85</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a1268091a325c97d6f426b3e345100923"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a1268091a325c97d6f426b3e345100923">XBee::Trame_t::id_trame_low</a></div><div class="ttdeci">int id_trame_low</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00087">xbeelib.h:87</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a279fe78ed8a81b80ca7682cbe6018324"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a279fe78ed8a81b80ca7682cbe6018324">XBee::Trame_t::start_seq</a></div><div class="ttdeci">int start_seq</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00084">xbeelib.h:84</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a2d1e4b8530a927546271202028f787ba"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a2d1e4b8530a927546271202028f787ba">XBee::Trame_t::end_seq</a></div><div class="ttdeci">int end_seq</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00094">xbeelib.h:94</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a31f3fb705d18a381ea97c5b828cc53b6"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a31f3fb705d18a381ea97c5b828cc53b6">XBee::Trame_t::param</a></div><div class="ttdeci">std::vector&lt; int &gt; param</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00091">xbeelib.h:91</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a332a02967af0153d9262d4aa4bc18d66"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a332a02967af0153d9262d4aa4bc18d66">XBee::Trame_t::nb_octets_msg</a></div><div class="ttdeci">int nb_octets_msg</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00089">xbeelib.h:89</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a3f3f6b7c1a1688794cc774cae539ec9b"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a3f3f6b7c1a1688794cc774cae539ec9b">XBee::Trame_t::crc_low</a></div><div class="ttdeci">int crc_low</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00092">xbeelib.h:92</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a4afc2c0ec85e9ee50bcb905849cc82eb"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a4afc2c0ec85e9ee50bcb905849cc82eb">XBee::Trame_t::id_trame_high</a></div><div class="ttdeci">int id_trame_high</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00088">xbeelib.h:88</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a63291c0a16baf268b9887a6f69c7b377"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a63291c0a16baf268b9887a6f69c7b377">XBee::Trame_t::adr_dest</a></div><div class="ttdeci">int adr_dest</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00086">xbeelib.h:86</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_a68071b3cc56fd247f117ace6285483f6"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#a68071b3cc56fd247f117ace6285483f6">XBee::Trame_t::code_fct</a></div><div class="ttdeci">int code_fct</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00090">xbeelib.h:90</a></div></div>
+<div class="ttc" id="astruct_x_bee_1_1_trame__t_html_ad1ae6316ea5d7862ac08629be63f6397"><div class="ttname"><a href="struct_x_bee_1_1_trame__t.html#ad1ae6316ea5d7862ac08629be63f6397">XBee::Trame_t::crc_high</a></div><div class="ttdeci">int crc_high</div><div class="ttdef"><b>Definition:</b> <a href="xbeelib_8h_source.html#l00093">xbeelib.h:93</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="xbeelib_8h.html">xbeelib.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

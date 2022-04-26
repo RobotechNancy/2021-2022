@@ -1,0 +1,213 @@
+[8:43:44 - systeme] 
+[8:43:44 - systeme] 
+[8:43:44 - systeme] Début du programme
+[8:43:44 - can] bus can initialiser
+[8:43:44 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[8:44:0 - can] get : addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [2] 0x32 0x43 
+[13:34:39 - systeme] 
+[13:34:39 - systeme] 
+[13:34:39 - systeme] Début du programme
+[22:40:33 - systeme] 
+[22:40:33 - systeme] 
+[22:40:33 - systeme] Début du programme
+[22:40:48 - systeme] 
+[22:40:48 - systeme] 
+[22:40:48 - systeme] Début du programme
+[22:40:48 - can] erreur dans l'init du bus can. err n°-504		 c.f. #define
+[11:22:7 - systeme] 
+[11:22:7 - systeme] 
+[11:22:7 - systeme] Début du programme
+[11:22:7 - can] bus can initialiser
+[11:22:7 - can] lancement de l'ecoute du bus can
+[11:22:7 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:22:7 - can] erreur dans l'envoie d'une trame. err n°-501		 c.f. #define
+[11:22:47 - systeme] 
+[11:22:47 - systeme] 
+[11:22:47 - systeme] Début du programme
+[11:22:47 - can] bus can initialiser
+[11:22:47 - can] lancement de l'ecoute du bus can
+[11:22:47 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:23:24 - can] get : addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:25:28 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:26:48 - systeme] 
+[11:26:48 - systeme] 
+[11:26:48 - systeme] Début du programme
+[11:26:48 - can] bus can initialiser
+[11:26:48 - can] lancement de l'ecoute du bus can
+[11:26:48 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:28:18 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:28:24 - systeme] 
+[11:28:24 - systeme] 
+[11:28:24 - systeme] Début du programme
+[11:28:24 - can] bus can initialiser
+[11:28:24 - can] lancement de l'ecoute du bus can
+[11:28:24 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:29:30 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:29:33 - systeme] 
+[11:29:33 - systeme] 
+[11:29:33 - systeme] Début du programme
+[11:29:33 - can] bus can initialiser
+[11:29:33 - can] lancement de l'ecoute du bus can
+[11:29:33 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:29:42 - systeme] 
+[11:29:42 - systeme] 
+[11:29:42 - systeme] Début du programme
+[11:29:42 - can] bus can initialiser
+[11:29:42 - can] lancement de l'ecoute du bus can
+[11:29:42 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:29:44 - systeme] 
+[11:29:44 - systeme] 
+[11:29:44 - systeme] Début du programme
+[11:29:44 - can] bus can initialiser
+[11:29:44 - can] lancement de l'ecoute du bus can
+[11:29:44 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:31:42 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:32:14 - systeme] 
+[11:32:14 - systeme] 
+[11:32:14 - systeme] Début du programme
+[11:32:14 - can] bus can initialiser
+[11:32:14 - can] lancement de l'ecoute du bus can
+[11:32:14 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[11:33:52 - systeme] 
+[11:33:52 - systeme] 
+[11:33:52 - systeme] Début du programme
+[11:33:52 - can] bus can initialiser
+[11:33:52 - can] lancement de l'ecoute du bus can
+[11:33:52 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[13:38:51 - systeme] 
+[13:38:51 - systeme] 
+[13:38:51 - systeme] Début du programme
+[13:38:51 - can] bus can initialiser
+[13:38:51 - can] lancement de l'ecoute du bus can
+[13:38:51 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[13:38:58 - systeme] 
+[13:38:58 - systeme] 
+[13:38:58 - systeme] Début du programme
+[13:38:58 - can] bus can initialiser
+[13:38:58 - can] lancement de l'ecoute du bus can
+[13:38:58 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:30:54 - systeme] 
+[14:30:54 - systeme] 
+[14:30:54 - systeme] Début du programme
+[14:30:54 - can] bus can initialiser
+[14:30:54 - can] lancement de l'ecoute du bus can
+[14:30:54 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:30:59 - systeme] 
+[14:30:59 - systeme] 
+[14:30:59 - systeme] Début du programme
+[14:30:59 - can] bus can initialiser
+[14:30:59 - can] lancement de l'ecoute du bus can
+[14:30:59 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:39:44 - systeme] 
+[14:39:44 - systeme] 
+[14:39:44 - systeme] Début du programme
+[14:39:44 - can] bus can initialiser
+[14:39:45 - can] lancement de l'ecoute du bus can
+[14:39:45 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:45:39 - systeme] 
+[14:45:39 - systeme] 
+[14:45:39 - systeme] Début du programme
+[14:45:39 - can] bus can initialiser
+[14:45:39 - can] lancement de l'ecoute du bus can
+[14:45:39 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:45:46 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:45:55 - systeme] 
+[14:45:55 - systeme] 
+[14:45:55 - systeme] Début du programme
+[14:45:55 - can] bus can initialiser
+[14:45:55 - can] lancement de l'ecoute du bus can
+[14:45:55 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:45:59 - systeme] 
+[14:45:59 - systeme] 
+[14:45:59 - systeme] Début du programme
+[14:45:59 - can] bus can initialiser
+[14:45:59 - can] lancement de l'ecoute du bus can
+[14:45:59 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:47:17 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[14:47:24 - systeme] 
+[14:47:24 - systeme] 
+[14:47:24 - systeme] Début du programme
+[14:47:24 - can] bus can initialiser
+[14:47:24 - can] lancement de l'ecoute du bus can
+[14:47:24 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:7:57 - systeme] 
+[15:7:57 - systeme] 
+[15:7:57 - systeme] Début du programme
+[15:7:57 - can] bus can initialiser
+[15:7:57 - can] lancement de l'ecoute du bus can
+[15:7:57 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:9:9 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:9:24 - systeme] 
+[15:9:24 - systeme] 
+[15:9:24 - systeme] Début du programme
+[15:9:24 - can] bus can initialiser
+[15:9:24 - can] lancement de l'ecoute du bus can
+[15:9:24 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:9:45 - systeme] 
+[15:9:45 - systeme] 
+[15:9:45 - systeme] Début du programme
+[15:9:45 - can] bus can initialiser
+[15:9:45 - can] lancement de l'ecoute du bus can
+[15:9:45 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:12:28 - systeme] 
+[15:12:28 - systeme] 
+[15:12:28 - systeme] Début du programme
+[15:12:28 - can] bus can initialiser
+[15:12:28 - can] lancement de l'ecoute du bus can
+[15:12:28 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:12:35 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:12:50 - systeme] 
+[15:12:50 - systeme] 
+[15:12:50 - systeme] Début du programme
+[15:12:50 - can] bus can initialiser
+[15:12:50 - can] lancement de l'ecoute du bus can
+[15:12:50 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:12:55 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:35:8 - systeme] 
+[15:35:8 - systeme] 
+[15:35:8 - systeme] Début du programme
+[15:35:8 - can] bus can initialiser
+[15:35:8 - can] lancement de l'ecoute du bus can
+[15:35:8 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:35:8 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:35:39 - systeme] 
+[15:35:39 - systeme] 
+[15:35:39 - systeme] Début du programme
+[15:35:39 - can] bus can initialiser
+[15:35:39 - can] lancement de l'ecoute du bus can
+[15:35:39 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:35:39 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:35:46 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0 0 0 0 0 0x1 0x14 0xf8 
+[15:35:46 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:37:5 - systeme] 
+[15:37:5 - systeme] 
+[15:37:5 - systeme] Début du programme
+[15:37:5 - can] bus can initialiser
+[15:37:5 - can] lancement de l'ecoute du bus can
+[15:37:5 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:37:5 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:37:26 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0 0 0 0 0 0x1 0x14 0xf8 
+[15:38:20 - systeme] 
+[15:38:20 - systeme] 
+[15:38:20 - systeme] Début du programme
+[15:38:20 - can] bus can initialiser
+[15:38:20 - can] lancement de l'ecoute du bus can
+[15:38:20 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:38:20 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:38:41 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0 0x3 0xfc 0xc1 0xda 0x8c 0x9c 0x4c 
+[15:39:45 - systeme] 
+[15:39:45 - systeme] 
+[15:39:45 - systeme] Début du programme
+[15:39:45 - can] bus can initialiser
+[15:39:45 - can] lancement de l'ecoute du bus can
+[15:39:45 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:39:45 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:39:55 - can] send :    addr : 1   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0x11 0x22 0x33 0x44 0x55 0x66 0x77 0x88 
+[15:40:10 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0 0 0 0 0 0 0 0x11 
+[15:40:10 - can] get : addr : 1   emetteur : 2   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:41:40 - systeme] 
+[15:41:40 - systeme] 
+[15:41:40 - systeme] Début du programme
+[15:41:40 - can] bus can initialiser
+[15:41:40 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [5] 0x1 0x2 0xff 0x34 0x45 
+[15:41:47 - can] send :    addr : 2   emetteur : 1   codeFct : 1   isRep : 1   RepId : 5       Data : [8] 0x11 0 0 0 0 0 0 0 

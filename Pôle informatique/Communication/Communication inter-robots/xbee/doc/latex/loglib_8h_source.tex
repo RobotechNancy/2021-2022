@@ -1,0 +1,46 @@
+\hypertarget{loglib_8h_source}{}\doxysection{loglib.\+h}
+\mbox{\hyperlink{loglib_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef LOGLIB\_H}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00002}00002 \textcolor{preprocessor}{\#define LOGLIB\_H}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00010}\mbox{\hyperlink{struct_mendl}{00010}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_mendl}{Mendl}}\{}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00011}00011 \};}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00013}\mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{00013}} \textcolor{keyword}{const} \mbox{\hyperlink{struct_mendl}{Mendl}} \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00015}00015 \textcolor{keywordtype}{char}* \mbox{\hyperlink{loglib_8h_a39c7d4346ef6a955b2c373e348ef2c28}{stringToChar}}(std::string chaine);}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00018}\mbox{\hyperlink{class_log}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{class_log}{Log}} : \textcolor{keyword}{public} std::ostream\{}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00019}00019     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00020}\mbox{\hyperlink{class_log_aaab9fa68bc117fd146e477bd5c5f2342}{00020}}         std::stringstream \mbox{\hyperlink{class_log_aaab9fa68bc117fd146e477bd5c5f2342}{ss}};}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00022}00022     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00023}\mbox{\hyperlink{class_log_a5d8c89b4d368a5876c404a7b30a3aa34}{00023}}         std::string \mbox{\hyperlink{class_log_a5d8c89b4d368a5876c404a7b30a3aa34}{name}};}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00024}00024         \mbox{\hyperlink{class_log_a7583ffc1b272b3d64a5eb1e78ab960da}{Log}}(std::string nom);}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00025}\mbox{\hyperlink{class_log_a9a84843ec011cc730bbc204fc7b413fe}{00025}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_log_a9a84843ec011cc730bbc204fc7b413fe}{save}}(\textcolor{keywordtype}{int} data);}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00026}00026         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00027}00027         \textcolor{keyword}{friend} \mbox{\hyperlink{class_log}{Log}}\& \mbox{\hyperlink{class_log_a2ad5dcce8ce6123183dda4d9bf9ca419}{operator<<}}(\mbox{\hyperlink{class_log}{Log}}\& log, \textcolor{keyword}{const} T \&classObj);}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00028}00028         \textcolor{keyword}{friend} \mbox{\hyperlink{class_log}{Log}}\& \mbox{\hyperlink{class_log_a2ad5dcce8ce6123183dda4d9bf9ca419}{operator<<}}(\mbox{\hyperlink{class_log}{Log}}\& log, \textcolor{keyword}{const} \mbox{\hyperlink{struct_mendl}{Mendl}}\& data);}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00033}00033 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00034}\mbox{\hyperlink{class_log_a2ad5dcce8ce6123183dda4d9bf9ca419}{00034}} \mbox{\hyperlink{class_log}{Log}}\& \mbox{\hyperlink{loglib_8h_a304c664b3bff9e803a023499cebdcc48}{operator<<}}(\mbox{\hyperlink{class_log}{Log}} \&log, T \textcolor{keyword}{const} \&data)}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00036}00036     log.\mbox{\hyperlink{class_log_aaab9fa68bc117fd146e477bd5c5f2342}{ss}} << data;}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00037}00037     std::cout << data;}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00038}00038     \textcolor{keywordflow}{return} log;}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{loglib_8h_source_l00041}00041 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

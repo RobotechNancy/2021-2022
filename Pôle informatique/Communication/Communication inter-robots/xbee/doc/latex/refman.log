@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.6)  4 FEB 2022 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.6)  14 MAR 2022 16:55
 entering extended mode
 **./refman.tex
 (refman.tex
@@ -948,11 +948,20 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 17
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 175.
+(Font)              scaled to size 7.19995pt on input line 175.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 17
+5.
+
+(C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 175.
- [1] [2]
-[3]
+ [1]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 175.
+ [2]
+[3] [4] [5]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
 75.
  (C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
@@ -960,7 +969,10 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 175.
- [4]
+
+[6] [7] [8
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 178.
 
 Chapitre 1.
@@ -976,234 +988,377 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 22.39185pt on input line 180.
-(annotated.tex
+(hierarchy.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
-
 
 ] [2
 
 ]
 Chapitre 2.
-(files.tex) [3] [4
+(annotated.tex) [3] [4
 
 ]
 Chapitre 3.
-(classserialib.tex
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
-.
+(files.tex) [5] [6
 
-(C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+]
+Chapitre 4.
+(class_log.tex
+
+pdfTeX warning: pdflatex (file ./class_log.pdf): PDF inclusion: found PDF versi
+on <1.7>, but at most version <1.5> allowed
+ <./class_log.pdf>
+<class_log.pdf, id=1414, 501.875pt x 467.7475pt>
+File: class_log.pdf Graphic file (type pdf)
+<use class_log.pdf>
+Package pdftex.def Info: class_log.pdf  used on input line 10.
+(pdftex.def)             Requested size: 61.05711pt x 56.9055pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 12.
+(Font)              scaled to size 10.79993pt on input line 13.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 51.
+ [7]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 80.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 108.
+ [8]) (struct_mendl.tex) (classserialib.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 16.
+ [9]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 42.
- [5]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 54.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 54.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 79.
- [6]
+ [10]
+[11]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 116.
-
-Underfull \hbox (badness 10000) detected at line 116
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
+(Font)              scaled to size 8.99994pt on input line 150.
 
 Underfull \hbox (badness 10000) detected at line 150
 [][][]
  []
 
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 175.
-[7]
-Underfull \hbox (badness 10000) detected at line 186
-[][][]
- []
 
-
-Underfull \hbox (badness 10000) detected at line 203
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 220
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 237
-[][][]
- []
-
-[8]
-Underfull \hbox (badness 10000) detected at line 266
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 283
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 300
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 317
-[][][]
- []
-
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 328.
-[9] [10]
-Underfull \hbox (badness 10000) detected at line 396
-[][][]
- []
-
-
-Overfull \vbox (47.57523pt too high) has occurred while \output is active []
-
-
-[11]
-Underfull \hbox (badness 10000) detected at line 442
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 470
+Underfull \hbox (badness 10000) detected at line 190
 [][][]
  []
 
 [12]
-Underfull \hbox (badness 10000) detected at line 504
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 534
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 553
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 570
+Underfull \hbox (badness 10000) detected at line 226
 [][][]
  []
 
 [13]
-Underfull \hbox (badness 10000) detected at line 594
+Underfull \hbox (badness 10000) detected at line 295
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 618
+Underfull \hbox (badness 10000) detected at line 324
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 356
 [][][]
  []
 
 [14]
+Underfull \hbox (badness 10000) detected at line 390
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 448
+[][][]
+ []
+
+[15]
+Underfull \hbox (badness 10000) detected at line 482
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 514
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 548
+[][][]
+ []
+
+[16]
+Overfull \vbox (17.69743pt too high) has occurred while \output is active []
+
+
+[17]
 Underfull \hbox (badness 10000) detected at line 642
 [][][]
  []
 
-) (classtime_out.tex [15]
-Underfull \hbox (badness 10000) detected at line 58
-[][][]
- []
-
-) (struct_trame.tex [16] [17]) (classxbee.tex [18]
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
-
-[19]
-Underfull \hbox (badness 10000) detected at line 143
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 162
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 181
+[18] [19]
+Underfull \hbox (badness 10000) detected at line 863
 [][][]
  []
 
 [20]
-Underfull \hbox (badness 10000) detected at line 221
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 249
+Underfull \hbox (badness 10000) detected at line 948
 [][][]
  []
 
 [21]
-Underfull \hbox (badness 10000) detected at line 291
+Underfull \hbox (badness 10000) detected at line 1023
 [][][]
  []
 
-) [22]
-Chapitre 4.
-(define_8h.tex [23
+[22]
+Underfull \hbox (badness 10000) detected at line 1119
+[][][]
+ []
 
-] [24] [25] [26] [27] [28] [29] [30] [31] [32])
-(define_8h_source.tex [33]) (main_8cpp.tex
+[23]
+Underfull \hbox (badness 10000) detected at line 1185
+[][][]
+ []
+
+[24]
+Underfull \hbox (badness 10000) detected at line 1216
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1252
+[][][]
+ []
+
+[25]
+Underfull \hbox (badness 10000) detected at line 1295
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1341
+[][][]
+ []
+
+[26]
+Underfull \hbox (badness 10000) detected at line 1387
+[][][]
+ []
+
+) (classtime_out.tex [27] [28]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+[29]) (struct_x_bee_1_1_trame__t.tex [30] [31]) (class_x_bee.tex [32] [33]
+[34] [35]
+Underfull \hbox (badness 10000) detected at line 199
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 224
+[][][]
+ []
+
+[36] [37] [38]
+Underfull \hbox (badness 10000) detected at line 440
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 510
+[][][]
+ []
+
+[39]
+Underfull \hbox (badness 10000) detected at line 539
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 569
+[][][]
+ []
+
+[40]
+Underfull \hbox (badness 10000) detected at line 603
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 648
+[][][]
+ []
+
+[41]
+Underfull \hbox (badness 10000) detected at line 687
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 727
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 761
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 801
+[][][]
+ []
+
+[43]
+Underfull \hbox (badness 10000) detected at line 835
+[][][]
+ []
+
+[44]
+Underfull \hbox (badness 10000) detected at line 900
+[][][]
+ []
+
+[45]
+Underfull \hbox (badness 10000) detected at line 992
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
+024.
+(C:\Users\scdit\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+Underfull \hbox (badness 10000) detected at line 1039
+[][][]
+ []
+
+[46] [47]
+Underfull \hbox (badness 10000) detected at line 1145
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1180
+[][][]
+ []
+
+[48]
+Underfull \hbox (badness 10000) detected at line 1218
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1267
+[][][]
+ []
+
+[49] [50]
+Underfull \hbox (badness 10000) detected at line 1369
+[][][]
+ []
+
+
+Overfull \vbox (30.31276pt too high) has occurred while \output is active []
+
+
+[51]
+Underfull \hbox (badness 10000) detected at line 1441
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1474
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1504
+[][][]
+ []
+
+[52] [53]
+Underfull \hbox (badness 10000) detected at line 1628
+[][][]
+ []
+
+) [54]
+Chapitre 5.
+(define_8h.tex [55
+
+]
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+[56]
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 212
+[][][]
+ []
+
+[57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71])
+(define_8h_source.tex [72] [73]) (loglib_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
+
+ []
+
+[74]) (loglib_8cpp_source.tex [75]) (loglib_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+[76]) (loglib_8h_source.tex [77]) (main_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (main_8cpp_source.tex [34]) (serialib_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+[78]) (main_8cpp_source.tex) (serialib_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 14
+Underfull \hbox (badness 10000) detected at line 15
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 17
+Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 20
+Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
 
-[35]) (serialib_8cpp_source.tex [36] [37] [38] [39] [40] [41] [42] [43]
-[44]) (serialib_8h.tex [45]
+[79]) (serialib_8cpp_source.tex [80] [81] [82] [83] [84] [85] [86] [87]
+[88]) (serialib_8h.tex [89]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
@@ -1218,80 +1373,83 @@ Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
+[90]
 LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 81.
-[46] [47]) (serialib_8h_source.tex [48] [49] [50]) (xbee_8cpp.tex
+ [91]) (serialib_8h_source.tex [92] [93] [94]) (xbeelib_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
-
+[95]
 Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
+) (xbeelib_8cpp_source.tex [96] [97] [98] [99] [100] [101] [102] [103])
+(xbeelib_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
 
+ []
+
+[104]
 Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-) (xbee_8cpp_source.tex [51] [52] [53]) (xbee_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
- []
-
-[54]
-Underfull \hbox (badness 10000) detected at line 24
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 27
+Underfull \hbox (badness 10000) detected at line 36
 [][][]
  []
 
+) (xbeelib_8h_source.tex [105] [106]) [107] [108
 
-Underfull \hbox (badness 10000) detected at line 30
-[][][]
- []
-
-) (xbee_8h_source.tex [55]) [56] (refman.ind [57
+] (refman.ind [109
 
 
-
-] [58] [59] [60
-
-]) (refman.aux)
+] [110]
+[111] [112] [113] [114]) (refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 00FF7E20FCCEA2E903ACB76B41FB28C0;29130.
+(rerunfilecheck)             Checksum: B9C1343EA78E1F7A6E21D30C56A59CCD;52705.
  ) 
 Here is how much of TeX's memory you used:
- 20716 strings out of 478927
- 339276 string characters out of 2862392
- 689646 words of memory out of 3000000
- 36362 multiletter control sequences out of 15000+600000
- 461705 words of font info for 98 fonts, out of 8000000 for 9000
+ 21953 strings out of 478927
+ 372451 string characters out of 2862392
+ 753408 words of memory out of 3000000
+ 36630 multiletter control sequences out of 15000+600000
+ 465406 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,999b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,16n,117p,998b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
-TeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
-/courier/ucrro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.p
-fb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (66 pages, 808031 bytes).
+TeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
+/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrro8a.pf
+b><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program File
+s/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/u
+hvro8a.pfb>
+Output written on refman.pdf (124 pages, 1474484 bytes).
 PDF statistics:
- 4134 PDF objects out of 4296 (max. 8388607)
- 1821 named destinations out of 2073 (max. 500000)
- 1201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7578 PDF objects out of 8907 (max. 8388607)
+ 2768 named destinations out of 2984 (max. 500000)
+ 2070 words of extra memory for PDF output out of 10000 (max. 10000000)
 

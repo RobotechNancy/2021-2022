@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.65,
-          "width": 1.2
+          "drill": 0.0,
+          "height": 1.8,
+          "width": 1.15
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -122,12 +122,17 @@
         0.4,
         0.45,
         0.5,
-        0.6
+        0.6,
+        1.0
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 2.0,
+          "drill": 0.8
         }
       ],
       "zones_allow_external_fillets": false,
@@ -383,7 +388,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../../../Desktop/RPi_Hat.step",
       "vrml": ""
     },
     "page_layout_descr_file": "C:/xesscorp/KiCad/page_layouts/title_block_only.kicad_wks"

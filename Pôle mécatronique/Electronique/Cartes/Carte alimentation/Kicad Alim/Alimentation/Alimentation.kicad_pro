@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 1.0,
+          "height": 2.0,
+          "width": 2.0
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -106,7 +106,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.3,
         "min_copper_edge_clearance": 0.024999999999999998,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -114,7 +114,7 @@
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.0,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.19999999999999998,
+        "min_track_width": 0.5,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.39999999999999997,
         "use_height_for_length_calcs": true
@@ -124,12 +124,17 @@
         0.3,
         0.5,
         0.6,
+        1.0,
         1.5
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 2.0,
+          "drill": 1.0
         }
       ],
       "zones_allow_external_fillets": false,
@@ -385,7 +390,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../../../../../Desktop/Alimentation.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
