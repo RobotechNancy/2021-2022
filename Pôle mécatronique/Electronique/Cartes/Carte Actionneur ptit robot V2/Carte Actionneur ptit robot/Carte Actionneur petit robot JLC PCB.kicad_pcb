@@ -129,7 +129,7 @@
   (net 39 "unconnected-(STM32FM303K8-Pad4.1)")
   (net 40 "unconnected-(U1-Pad5)")
   (net 41 "Net-(Q1-Pad1)")
-  (net 42 "Net-(R3-Pad1)")
+  (net 42 "Net-(Q1-Pad2)")
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 61F0106D) (tstamp 01f11925-5c53-40b6-9074-7693d7e38bb4)
@@ -241,7 +241,7 @@
     (property "Sheetname" "")
     (path "/6a1b1b3a-c86c-418d-8b46-56f6a0b7b240")
     (attr through_hole)
-    (fp_text reference "Pompe_a_Vide1" (at 0.535 -2.905 90) (layer "F.SilkS")
+    (fp_text reference "Electroaimant1" (at 0.535 -2.905 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp e8f24e2d-f358-4b5e-9e05-6a9790877c38)
     )
@@ -2396,7 +2396,7 @@
     (fp_line (start 1.93 1.25) (end 8.23 1.25) (layer "F.Fab") (width 0.1) (tstamp 67fc1a79-ebbe-4f91-a1ac-721372ab9e50))
     (fp_line (start 8.23 -1.25) (end 1.93 -1.25) (layer "F.Fab") (width 0.1) (tstamp ff68f064-b003-4c2a-b55f-e7f826c08a14))
     (pad "1" thru_hole circle locked (at 0 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
-      (net 42 "Net-(R3-Pad1)") (pintype "passive") (tstamp 51f3d9d7-479c-459d-8df1-2e59f12da1f0))
+      (net 42 "Net-(Q1-Pad2)") (pintype "passive") (tstamp 51f3d9d7-479c-459d-8df1-2e59f12da1f0))
     (pad "2" thru_hole oval locked (at 10.16 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 5 "+5V") (pintype "passive") (tstamp fe7a54f0-16c5-4831-a0a4-9812c5c0c12d))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
@@ -2559,7 +2559,7 @@
     (pad "1" thru_hole rect locked (at 0 0 270) (size 1.05 1.5) (drill 0.75) (layers *.Cu *.Mask)
       (net 41 "Net-(Q1-Pad1)") (pinfunction "C") (pintype "passive") (tstamp 01ac9b4d-f91a-4df0-a3d2-d17461e07f90))
     (pad "2" thru_hole oval locked (at 1.27 0 270) (size 1.05 1.5) (drill 0.75) (layers *.Cu *.Mask)
-      (net 42 "Net-(R3-Pad1)") (pinfunction "B") (pintype "input") (tstamp 745421e4-91e7-4f8a-86bd-bd91dcb5751d))
+      (net 42 "Net-(Q1-Pad2)") (pinfunction "B") (pintype "input") (tstamp 745421e4-91e7-4f8a-86bd-bd91dcb5751d))
     (pad "3" thru_hole oval locked (at 2.54 0 270) (size 1.05 1.5) (drill 0.75) (layers *.Cu *.Mask)
       (net 5 "+5V") (pinfunction "E") (pintype "passive") (tstamp c23a1581-5f6b-4571-b6f4-1a3c3eda2fa4))
     (model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92_Inline.wrl"
@@ -2630,7 +2630,7 @@
     (fp_line (start 1.93 -1.25) (end 1.93 1.25) (layer "F.Fab") (width 0.1) (tstamp bad86c5b-550c-459d-ae24-5ea963bd342c))
     (fp_line (start 8.23 -1.25) (end 1.93 -1.25) (layer "F.Fab") (width 0.1) (tstamp f930fa91-6adf-4e04-b42b-e0932fc06543))
     (pad "1" thru_hole circle locked (at 0 0 90) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
-      (net 42 "Net-(R3-Pad1)") (pintype "passive") (tstamp 7f093f1d-323b-4b4e-b33a-3f6815b22768))
+      (net 42 "Net-(Q1-Pad2)") (pintype "passive") (tstamp 7f093f1d-323b-4b4e-b33a-3f6815b22768))
     (pad "2" thru_hole oval locked (at 10.16 0 90) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 36 "AIMANT") (pintype "passive") (tstamp 73cb09ad-e380-49f3-bc9d-038b1104bc93))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
@@ -3599,7 +3599,7 @@
     (fp_circle (center 0 0) (end 0 -1.2) (layer "B.SilkS") (width 0.12) (fill none) (tstamp 78b35dca-7100-4c3d-8c4e-5785a02cc363))
     (fp_circle (center 0 0) (end 1.5 0) (layer "B.CrtYd") (width 0.05) (fill none) (tstamp d5d32a32-b3bf-455c-a349-308eaf785aff))
     (pad "1" smd circle locked (at 0 0 180) (size 2 2) (layers "B.Cu" "B.Mask")
-      (net 42 "Net-(R3-Pad1)") (pinfunction "1") (pintype "passive") (tstamp d5780134-bdad-40cd-a675-367e7ae2f401))
+      (net 42 "Net-(Q1-Pad2)") (pinfunction "1") (pintype "passive") (tstamp d5780134-bdad-40cd-a675-367e7ae2f401))
   )
 
   (footprint "TestPoint:TestPoint_Pad_D2.0mm" (layer "B.Cu")
