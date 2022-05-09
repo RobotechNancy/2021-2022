@@ -34,8 +34,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.8,
-          "height": 2.0,
-          "width": 2.0
+          "height": 1.9,
+          "width": 1.9
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -55,7 +55,9 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|186206001|111980001|4f5c185a-e11b-4d82-a8bc-b9689c9c633b|8cab142e-2c4e-4f55-a31f-17e37e0a8c81"
+      ],
       "meta": {
         "version": 2
       },
@@ -388,7 +390,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "../../../../Downloads/Carte Bras petit Robot.dsn",
-      "step": "Carte Bras petit Robot V2couche.step",
+      "step": "../../../../../../../../../Downloads/Carte Bras petit Robot V2couche.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
