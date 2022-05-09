@@ -1,0 +1,18 @@
+"Id";"Référence";"Boîtier";"Quantité";"Désignation";"Fournisseur et réf";
+1;",,,,";"";5;"";;;
+2;"BUS_CAN1";"JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical";1;"Conn_01x05";;;
+3;"STM32FM303K8";"MODULE_NUCLEO-F303K8";1;"NUCLEO-F303K8";;;
+4;"R1";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";1;"1k";;;
+5;"Q1";"TO-92_Inline";1;"BC557";;;
+6;"D1";"D_A-405_P12.70mm_Horizontal";1;"D";;;
+7;"R4";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";1;"180";;;
+8;"SERVO2,SERVO1";"JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical";2;"Conn_01x03";;;
+9;"R2";"R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal";1;"R";;;
+10;"G***";"logoRobotechNancy10x10";1;"LOGO";;;
+11;"TP1,TP4,TP8,TP7,TP2,TP6,TP5,TP3";"TestPoint_Pad_D2.0mm";8;"TestPoint";;;
+12;"PompeAVide1";"JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical";1;"Conn_01x02";;;
+13;"R3";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";1;"10k";;;
+14;"U2";"TO-220-3_Horizontal_TabDown";1;"IRFZ44NPBF";;;
+15;"U1";"DIP-8_W7.62mm";1;"MCP2551-I-P";;;
+16;"JS1";"Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal";1;"Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal";;;
+17;"C2,C4,C3,C1";"C_1206_3216Metric";4;"C";;;
