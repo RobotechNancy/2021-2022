@@ -3522,7 +3522,7 @@
   )
 
   (footprint "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" (layer "F.Cu")
-    (tedit 5B7745C2) (tstamp 4e50f9bc-3e87-4c13-870e-8a8fad85b563)
+    (tedit 6278B989) (tstamp 4e50f9bc-3e87-4c13-870e-8a8fad85b563)
     (at 124.6715 73.771 90)
     (descr "JST PH series connector, B2B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
@@ -3577,9 +3577,9 @@
     (fp_line (start -2.36 -2.11) (end -2.36 -0.86) (layer "F.Fab") (width 0.1) (tstamp 7e3af848-7686-498c-bed7-8bb3de86f2e0))
     (fp_line (start 3.95 -1.7) (end -1.95 -1.7) (layer "F.Fab") (width 0.1) (tstamp 9219cc84-d089-41a3-9884-86d63783fe1b))
     (fp_line (start 3.95 2.8) (end 3.95 -1.7) (layer "F.Fab") (width 0.1) (tstamp b0c5b296-e613-4e59-9f47-5ee9f52730e9))
-    (pad "1" thru_hole roundrect locked (at 0 0 90) (size 1.2 1.75) (drill 0.75) (layers *.Cu *.Mask) (roundrect_rratio 0.2083333333)
+    (pad "1" thru_hole roundrect locked (at 0 0 90) (size 1.2 1.75) (drill 0.8) (layers *.Cu *.Mask) (roundrect_rratio 0.2083333333)
       (net 62 "Net-(J5-CAN1-Pad1)") (pinfunction "Pin_1") (pintype "passive") (tstamp cf81a8d6-b162-4b49-b351-4b76e65b25ec))
-    (pad "2" thru_hole oval locked (at 2 0 90) (size 1.2 1.75) (drill 0.75) (layers *.Cu *.Mask)
+    (pad "2" thru_hole oval locked (at 2 0 90) (size 1.2 1.75) (drill 0.8) (layers *.Cu *.Mask)
       (net 63 "Net-(J5-CAN1-Pad2)") (pinfunction "Pin_2") (pintype "passive") (tstamp c3f298a1-f22c-4d8c-a17a-8a0ae31cd9ae))
     (model "${KICAD6_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical.wrl"
       (offset (xyz 0 0 0))
