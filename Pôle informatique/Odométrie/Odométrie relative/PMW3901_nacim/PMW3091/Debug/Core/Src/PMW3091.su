@@ -1,0 +1,7 @@
+PMW3091.c:35:6:PMW3901_Log	24	static
+PMW3091.c:41:18:PMW3901_RegWrite	24	static
+PMW3091.c:59:18:PMW3901_RegRead	24	static
+PMW3091.c:82:18:PMW3901_Init	24	static
+PMW3091.c:106:18:PMW3901_Read_Variation	24	static
+PMW3091.c:131:18:setLed	16	static
+PMW3091.c:145:18:Pmw3091_Init	16	static
