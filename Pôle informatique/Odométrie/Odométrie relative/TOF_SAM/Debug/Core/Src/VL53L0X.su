@@ -1,3 +1,0 @@
-../Core/Src/VL53L0X.c:15:9:VL53L0X_GetRegister	72	static
-../Core/Src/VL53L0X.c:40:6:VL53L0X_SetRegister	32	static
-../Core/Src/VL53L0X.c:50:6:VL53L0X_Init	16	static

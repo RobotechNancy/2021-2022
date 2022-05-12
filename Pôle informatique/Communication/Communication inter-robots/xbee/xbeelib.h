@@ -8,7 +8,7 @@
 #ifndef XBEE_H
 #define XBEE_H
 
-#include "define.h"
+#include "xbee_define.h"
 #include "serialib.h"
 #include "loglib.h"
 #include <string>
