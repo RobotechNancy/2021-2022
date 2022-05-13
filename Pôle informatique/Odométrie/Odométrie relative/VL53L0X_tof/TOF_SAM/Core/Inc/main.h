@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define MCO_GPIO_Port GPIOA
 #define VCP_TX_Pin GPIO_PIN_2
 #define VCP_TX_GPIO_Port GPIOA
+#define TOF1_XSHUT_Pin GPIO_PIN_5
+#define TOF1_XSHUT_GPIO_Port GPIOA
 #define TOF0_XSHUT_Pin GPIO_PIN_6
 #define TOF0_XSHUT_GPIO_Port GPIOA
 #define SWDIO_Pin GPIO_PIN_13

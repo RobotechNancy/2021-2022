@@ -27,6 +27,7 @@
 // Names are completely free
 typedef enum {
 	TOF_UNIT_0 = 0,
+	TOF_UNIT_1 = 1,
 
 	TOF_UNIT_COUNT // Let this enum value !!!! Mandatory for the driver operations
 } TOF_Units_t;

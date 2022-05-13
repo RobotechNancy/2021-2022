@@ -12,12 +12,18 @@
 extern I2C_HandleTypeDef hi2c1;
 
 VL53L0X_Dev_t TOF_Devices[] = {
-		{
-				.Id = TOF_UNIT_0,
-				.I2cHandle = &hi2c1,
-				.XSHUT_Port = TOF0_XSHUT_GPIO_Port,
-				.XSHUT_Pin = TOF0_XSHUT_Pin
-		}
+	{
+		.Id = TOF_UNIT_0,
+		.I2cHandle = &hi2c1,
+		.XSHUT_Port = TOF0_XSHUT_GPIO_Port,
+		.XSHUT_Pin = TOF0_XSHUT_Pin
+	},
+	{
+		.Id = TOF_UNIT_1,
+		.I2cHandle = &hi2c1,
+		.XSHUT_Port = TOF1_XSHUT_GPIO_Port,
+		.XSHUT_Pin = TOF1_XSHUT_Pin
+	}
 };
 
 

@@ -69,7 +69,8 @@ static void MX_I2C1_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	TOF_Units_t montof = TOF_UNIT_0;
+	TOF_Units_t montof_0 = TOF_UNIT_0;
+	TOF_Units_t montof_1 = TOF_UNIT_1;
 	uint16_t tentatives_max = 100;
 	uint16_t range_milimeters;
 	uint8_t range_status;
@@ -109,11 +110,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		TOF_Get_Range(montof, tentatives_max, &range_milimeters, &range_status);
-		sprintf((char*)buf, "Value : %u mm | Status : %u\r\n", ((uint16_t)range_milimeters), ((uint8_t)range_status));
+	TOF_Get_Range(montof_0, tentatives_max, &range_milimeters, &range_status);
+	sprintf((char*)buf, "TOF n°0 | Value : %u mm | Status : %u\r\n", ((uint16_t)range_milimeters), ((uint8_t)range_status));
 
-		HAL_UART_Transmit(&huart2, buf, strlen((char*)buf), HAL_MAX_DELAY);
-		HAL_Delay(100);
+	HAL_UART_Transmit(&huart2, buf, strlen((char*)buf), HAL_MAX_DELAY);
+
+	TOF_Get_Range(montof_1, tentatives_max, &range_milimeters, &range_status);
+	sprintf((char*)buf, "TOF n°1 | Value : %u mm | Status : %u\r\n", ((uint16_t)range_milimeters), ((uint8_t)range_status));
+
+	HAL_UART_Transmit(&huart2, buf, strlen((char*)buf), HAL_MAX_DELAY);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -279,17 +284,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(TOF0_XSHUT_GPIO_Port, TOF0_XSHUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, TOF1_XSHUT_Pin|TOF0_XSHUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : TOF0_XSHUT_Pin */
-  GPIO_InitStruct.Pin = TOF0_XSHUT_Pin;
+  /*Configure GPIO pins : TOF1_XSHUT_Pin TOF0_XSHUT_Pin */
+  GPIO_InitStruct.Pin = TOF1_XSHUT_Pin|TOF0_XSHUT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(TOF0_XSHUT_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LD3_Pin */
   GPIO_InitStruct.Pin = LD3_Pin;

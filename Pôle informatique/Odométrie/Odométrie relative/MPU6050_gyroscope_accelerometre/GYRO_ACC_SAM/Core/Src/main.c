@@ -169,7 +169,7 @@ int main(void)
 	  if(HAL_GetTick()%100==0){
 		  data = MPU6050_GetData_CF();
 		  sprintf((char*)buffer, "%d\n\r", data);
-		  //HAL_UART_Transmit(&huart2, buffer, strlen((char*)buffer), HAL_MAX_DELAY);
+		  HAL_UART_Transmit(&huart2, buffer, strlen((char*)buffer), HAL_MAX_DELAY);
 
 		  if(Gyro_isReady())
 			  GZ_Data = Gyro_GetRot();
@@ -177,7 +177,7 @@ int main(void)
 		  	  GZ_Data = Gyro_GetCalibrationAdvancement();
 
 		  sprintf((char*)txbuffer, "%f\n\r", GZ_Data);
-		  HAL_UART_Transmit(&huart2, txbuffer, strlen((char*)txbuffer), HAL_MAX_DELAY);
+		  //HAL_UART_Transmit(&huart2, txbuffer, strlen((char*)txbuffer), HAL_MAX_DELAY);
 
 	  }
 

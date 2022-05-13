@@ -1,8 +1,8 @@
 /*
  * Gyro.h
  *
- *  Created on: Nov 9, 2021
- *      Author: François SULER
+ *  Created on: May 7, 2022
+ *      Author: Samuel
  */
 
 #ifndef GYRO_H_
