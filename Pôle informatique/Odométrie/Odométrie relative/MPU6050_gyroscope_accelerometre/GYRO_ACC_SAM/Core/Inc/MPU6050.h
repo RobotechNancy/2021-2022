@@ -1,8 +1,8 @@
 /*
  * MPU6050.h
  *
- *  Created on: Nov 6, 2021
- *      Author: François SULER
+ *  Created on: May 7, 2022
+ *      Author: Samuel
  */
 
 #ifndef MPU6050_H_
