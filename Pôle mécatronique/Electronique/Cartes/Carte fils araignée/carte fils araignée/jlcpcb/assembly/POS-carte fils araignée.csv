@@ -1,0 +1,14 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,129.5325,-104.06,90.0,top
+J2,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,129.54,-120.65,90.0,top
+J3,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,129.54,-137.0,90.0,top
+J4,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,129.54,-153.67,90.0,top
+J5,X3,JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical,135.255,-105.41,-90.0,top
+J6,X1,JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical,145.0,-126.96,90.0,top
+J7,Conn_01x05,JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical,134.874,-161.29,0.0,top
+J8,X2,JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical,145.415,-110.49,90.0,top
+J9,Conn_01x04,JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical,137.16,-87.884,0.0,top
+J10,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,151.13,-93.98,-90.0,top
+J11,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,151.13,-110.49,-90.0,top
+J12,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,151.13,-127.0,-90.0,top
+J13,Conn_01x05,JST_EH_S5B-EH_1x05_P2.50mm_Horizontal,151.13,-143.51,-90.0,top

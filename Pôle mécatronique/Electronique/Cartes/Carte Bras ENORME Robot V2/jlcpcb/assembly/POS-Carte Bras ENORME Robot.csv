@@ -1,0 +1,19 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+BUS_CAN1,Conn_01x05,JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical,159.0,-47.5144,180.0,top
+C1,C,C_1206_3216Metric,164.0,-62.0,0.0,bottom
+C2,C,C_1206_3216Metric,164.0,-59.0,0.0,bottom
+C3,C,C_1206_3216Metric,179.91,-64.175,0.0,bottom
+C4,C,C_1206_3216Metric,179.91,-66.675,0.0,bottom
+D1,D,D_A-405_P12.70mm_Horizontal,151.13,-70.485,-90.0,top
+JS1,Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal,Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal,173.736,-45.245,0.0,top
+PompeAVide1,Conn_01x02,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,147.574,-71.12,180.0,top
+Q1,BC557,TO-92_Inline,152.47,-98.425,180.0,top
+R1,1k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,167.005,-99.695,0.0,top
+R2,R,R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal,163.068,-40.005,180.0,top
+R3,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,156.845,-73.66,-90.0,top
+R4,180,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,161.29,-73.66,-90.0,top
+SERVO1,Conn_01x03,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,167.64,-38.5,-90.0,top
+SERVO2,Conn_01x03,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,158.0,-98.425,0.0,top
+STM32FM303K8,NUCLEO-F303K8,MODULE_NUCLEO-F303K8,176.5,-72.5,0.0,top
+U1,MCP2551-I-P,DIP-8_W7.62mm,151.35,-66.6,90.0,top
+U2,IRFZ44NPBF,TO-220-3_Horizontal_TabDown,163.0,-92.71,90.0,top

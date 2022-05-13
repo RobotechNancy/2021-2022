@@ -2889,7 +2889,7 @@
       (tstamp 70e2f01d-898a-4329-9286-f39d53528112)
     )
     (pad "1" smd circle locked (at 0 0 180) (size 2 2) (layers "B.Cu" "B.Mask")
-      (net 1 "GND") (pinfunction "1") (pintype "passive") (tstamp adeb3ef4-5b2b-4ddf-9a9c-03c229894bbf))
+      (net 1 "GND") (pinfunction "1") (pintype "passive") (tstamp 2c488362-c230-4f6d-82f9-a229b1171a23))
   )
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "B.Cu")
