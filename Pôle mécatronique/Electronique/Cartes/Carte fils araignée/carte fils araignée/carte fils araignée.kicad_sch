@@ -1702,7 +1702,7 @@
     (property "Reference" "J8" (id 0) (at 110.49 30.48 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "X2" (id 1) (at 109.22 35.56 90)
+    (property "Value" "X2" (id 1) (at 110.49 36.83 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" (id 2) (at 111.76 40.64 0)
