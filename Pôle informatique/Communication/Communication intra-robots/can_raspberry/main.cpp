@@ -54,28 +54,28 @@ int main(int argc, char **argv)
 	}
 	while(true){
 		//cout << endl;
-	uint adr;
-	uint cdFct;
-	uint64_t i;
-	cout << "adr : ";
-	cin >> adr;
-	cout << "codeFct : ";
-	cin >> cdFct;
-	cout << "data en hexa : ";
-	cin >> hex >> i;
-	// 32 bit system
-	uint8_t data [8] = 
-	{
-	  ((uint64_t)i >> 0) & 0xFF,
-	  ((uint64_t)i >> 8) & 0xFF,
-	  ((uint64_t)i >> 16) & 0xFF,
-	  ((uint64_t)i >> 24) & 0xFF,
-	  ((uint64_t)i >> 32) & 0xFF,
-	  ((uint64_t)i >> 40) & 0xFF,
-	  ((uint64_t)i >> 48) & 0xFF,
-	  ((uint64_t)i >> 56) & 0xFF,
-	};
-	can.send(adr, cdFct, data, 8, true, 5);
+		uint adr;
+		uint cdFct;
+		uint64_t i;
+		cout << "adr : ";
+		cin >> adr;
+		cout << "codeFct : ";
+		cin >> cdFct;
+		cout << "data en hexa : ";
+		cin >> hex >> i;
+		// 32 bit system
+		uint8_t data [8] = 
+		{
+		((uint64_t)i >> 0) & 0xFF,
+		((uint64_t)i >> 8) & 0xFF,
+		((uint64_t)i >> 16) & 0xFF,
+		((uint64_t)i >> 24) & 0xFF,
+		((uint64_t)i >> 32) & 0xFF,
+		((uint64_t)i >> 40) & 0xFF,
+		((uint64_t)i >> 48) & 0xFF,
+		((uint64_t)i >> 56) & 0xFF,
+		};
+		can.send(adr, cdFct, data, 8, true, 5);
 		//can.listen();
 		wait(1000);
 

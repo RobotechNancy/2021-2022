@@ -2,7 +2,7 @@
 #define DEFINE_CAN_H
 
 
-#define CAN_BUS_NAME "can0"
+#define CAN_BUS_NAME "vcan0"
 
 
 //                                  0b000000000000000000000000000000

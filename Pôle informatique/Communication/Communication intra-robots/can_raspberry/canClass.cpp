@@ -273,7 +273,7 @@ void Can::traitement(CanResponse_t msg){
     switch (msg.emetteur){
     case CAN_ADDR_BASE_ROULANTE:
         switch (msg.codeFct){
-        case AVANCE:
+        case REP_AVANCE:
 
 
         break;
