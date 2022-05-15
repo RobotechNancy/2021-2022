@@ -888,6 +888,11 @@
     (uuid ff82c637-b7fd-4a39-956e-2f084fbf3e81)
   )
 
+  (text "Top" (at 185.42 172.72 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid f35cc254-ccce-4ef4-8c55-221f4e25693d)
+  )
+
   (global_label "I2C_SCL" (shape input) (at 144.78 74.93 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 0bc364ab-c5b3-44f8-bec5-4094e38768f3)
