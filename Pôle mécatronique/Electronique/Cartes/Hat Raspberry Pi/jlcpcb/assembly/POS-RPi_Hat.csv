@@ -1,0 +1,16 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,100 nF,C_Disc_D5.1mm_W3.2mm_P5.00mm,73.065,-58.42,0.0,top
+C2,100 nF,C_Disc_D5.1mm_W3.2mm_P5.00mm,88.305,-58.42,0.0,top
+C3,22 pF,C_Disc_D5.1mm_W3.2mm_P5.00mm,73.025,-83.225,-90.0,top
+C4,22 pF,C_Disc_D5.1mm_W3.2mm_P5.00mm,90.17,-83.225,-90.0,top
+J1,Arrêt d'urgence,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,66.548,-61.976,90.0,top
+J2,RPi_GPIO,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,80.391,-48.26,180.0,top
+J3,Goupille,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,66.76,-80.756,90.0,top
+J4,Tension I2C,PinHeader_2x02_P2.54mm_Vertical,69.85,-46.736,-90.0,top
+J5,I2C,Hirose_DF11-6DP-2DSA_2x03_P2.00mm_Vertical,68.326,-67.564,-90.0,top
+J6,Vcc I2C,Pin_Header_Straight_2x20,92.71,-41.6,90.0,top
+R1,R,R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,75.946,-66.548,90.0,top
+R2,5k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,92.71,-64.516,-90.0,top
+U1,XBee,XBEE-20_THT,107.315,-59.944,-90.0,top
+U2,MCP25625-x-SS,SSOP-28_5.3x10.2mm_P0.65mm,83.82,-67.31,0.0,top
+Y1,8MHz,Crystal_HC50_Horizontal,79.175,-76.835,0.0,top

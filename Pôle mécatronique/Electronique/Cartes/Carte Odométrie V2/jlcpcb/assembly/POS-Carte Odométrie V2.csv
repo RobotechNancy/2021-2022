@@ -1,0 +1,18 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+A1,NUCLEO-F303K8,MODULE_NUCLEO-F303K8,168.71272,-101.6,0.0,top
+Accéleromètre1,Conn_01x08,PinSocket_1x08_P2.54mm_Vertical,140.96,-142.8,90.0,top
+BUS_CAN1,Conn_01x04,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,189.6,-83.8,180.0,top
+C1,100pF,C_1206_3216Metric,199.8,-95.125,0.0,bottom
+C2,100nF,C_1206_3216Metric,199.775,-97.925,0.0,bottom
+C3,100nF,C_1206_3216Metric,182.0,-90.0,-90.0,bottom
+C4,100pF,C_1206_3216Metric,179.5,-90.0,-90.0,bottom
+Capt_Optiq1,Conn_01x07,JST_PH_B7B-PH-K_1x07_P2.00mm_Vertical,193.0842,-112.617,-90.0,top
+Giroscope1,Conn_01x07,PinSocket_1x07_P2.54mm_Vertical,137.62272,-107.335,0.0,top
+J1,X2,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,186.986,-130.08,-90.0,top
+J2,X1,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,186.925,-139.15,-90.0,top
+J3,X3,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,171.704,-141.224,90.0,top
+LIDAR1,Conn_01x05,JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical,145.21772,-87.535,-90.0,top
+R3,R,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,192.08,-72.9,180.0,top
+TOF1,Conn_01x04,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,154.525,-79.575,90.0,top
+TP1,INT,TestPoint_Loop_D2.50mm_Drill1.0mm,158.75,-139.7,0.0,top
+U1,MCP2551-I-P,DIP-8_W7.62mm,188.2,-100.8,90.0,top
