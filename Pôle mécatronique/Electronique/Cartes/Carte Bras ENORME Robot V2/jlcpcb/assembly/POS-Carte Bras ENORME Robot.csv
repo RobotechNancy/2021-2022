@@ -4,10 +4,10 @@ C1,C,C_1206_3216Metric,164.0,-62.0,0.0,bottom
 C2,C,C_1206_3216Metric,164.0,-59.0,0.0,bottom
 C3,C,C_1206_3216Metric,179.91,-64.175,0.0,bottom
 C4,C,C_1206_3216Metric,179.91,-66.675,0.0,bottom
-D1,D,D_A-405_P12.70mm_Horizontal,151.13,-70.485,-90.0,top
+D1,D,D_A-405_P12.70mm_Horizontal,151.384,-71.12,-90.0,top
 JS1,Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal,Molex_Micro-Fit_3.0_43650-0300_1x03_P3.00mm_Horizontal,173.736,-45.245,0.0,top
 PompeAVide1,Conn_01x02,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,147.574,-71.12,180.0,top
-Q1,BC557,TO-92_Inline,152.47,-98.425,180.0,top
+Q1,BC557,TO-92_Inline,152.908,-98.425,180.0,top
 R1,1k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,167.005,-99.695,0.0,top
 R2,R,R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal,163.068,-40.005,180.0,top
 R3,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,156.845,-73.66,-90.0,top

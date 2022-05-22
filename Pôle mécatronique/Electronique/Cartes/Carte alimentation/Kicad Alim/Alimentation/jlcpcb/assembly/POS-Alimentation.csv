@@ -1,0 +1,24 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,22uF,CP_Radial_D5.0mm_P2.00mm,115.001113,-100.584,180.0,top
+D1,D,D_DO-15_P12.70mm_Horizontal,108.712,-69.723,180.0,top
+F1,500mA,Fuse_Littelfuse_372_D8.50mm,138.547,-100.584,0.0,top
+F2,500mA,Fuse_Littelfuse_372_D8.50mm,134.112,-100.584,180.0,top
+F3,500mA,Fuse_Littelfuse_372_D8.50mm,118.862,-100.584,0.0,top
+J1,Conn_01x04,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,143.002,-46.228,-90.0,top
+J2,Conn_01x04,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,134.112,-46.228,-90.0,top
+J3,Conn_01x04,JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,125.222,-46.228,-90.0,top
+J4,Conn_01x05,JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical,114.554,-46.228,-90.0,top
+J5,Conn_01x05,JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical,106.553,-46.228,-90.0,top
+J6,Conn_02x03_Odd_Even,Hirose_DF11-6DP-2DSA_2x03_P2.00mm_Vertical,97.282,-48.133,-90.0,top
+J7,Conn_02x10_Odd_Even,PinSocket_2x10_P2.54mm_Vertical,117.602,-72.898,90.0,top
+J8,24V in,AMASS_XT30PW-M_1x02_P2.50mm_Horizontal,130.556,-110.448,180.0,top
+J9,24V out,AMASS_XT30PW-M_1x02_P2.50mm_Horizontal,104.452,-110.448,180.0,top
+J10,CAN BR,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,146.05,-60.452,-90.0,top
+K1,G5LE-1,Relay_SPDT_Omron-G5LE-1,103.632,-75.438,0.0,top
+Q1,BD135,TO-126-3_Vertical,93.472,-65.653,0.0,top
+R1,5k6,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,104.267,-60.833,180.0,top
+R2,330,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,140.716,-68.072,90.0,top
+SW1,SW_DPDT_x2,Switch_3_Pin,103.378,-100.838,0.0,top
+U1,TSR_2-2450,Converter_DCDC_TRACO_TSR-1_THT,140.462,-91.948,90.0,top
+U2,TSR_2-2450,Converter_DCDC_TRACO_TSR-1_THT,129.667,-91.948,90.0,top
+U3,TSR_2-24120,Converter_DCDC_TRACO_TSR-1_THT,118.237,-91.948,90.0,top
