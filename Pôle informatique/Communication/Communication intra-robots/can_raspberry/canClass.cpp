@@ -282,6 +282,7 @@ void Can::traitement(CanResponse_t msg){
             return false;               
         }
     }
+    
     CanResponse_t Can::get_message(uint id){
         CanResponse_t rep;
         rep = messages[id];
