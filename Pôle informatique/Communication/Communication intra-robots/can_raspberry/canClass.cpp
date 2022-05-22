@@ -43,7 +43,7 @@ using namespace std;
  *  \retval {CAN_E_OOB_ADDR} adresse en dehors des bornes
  *  \retval {CAN_E_UNKNOW_ADDR} l'adresse n'est pas dans le #define
 */
-int Can::init(uint myAddr){
+int Can::init(CAN_EMIT_ADDR myAddr){
     int i; 
     int nbytes;
     struct sockaddr_can addr;
@@ -67,50 +67,21 @@ int Can::init(uint myAddr){
     }
 
     // si l'address est incorect on ne setup juste pas de filtre
-    if(myAddr <0 || myAddr > CAN_MAX_VALUE_ADDR) return CAN_E_OOB_ADDR;
-    if(!is_valid_addr(myAddr)) return CAN_E_UNKNOW_ADDR;
+    //if(myAddr <0 || myAddr > CAN_MAX_VALUE_ADDR) return CAN_E_OOB_ADDR;
+    //if(!is_valid_addr(myAddr)) return CAN_E_UNKNOW_ADDR;
     
     //  Initialisation de l'adresse
     struct can_filter rfilter[1];
-    rfilter[0].can_id   = myAddr << CAN_DECALAGE_ADDR_RECEPTEUR;
+    rfilter[0].can_id   = myAddr ;
     rfilter[0].can_mask = CAN_FILTER_ADDR_RECEPTEUR;
 
 
-    setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
+    //setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
 
     logC << "bus can initialiser" << mendl;
     return 0;
 }
 
-/*!
- *  \brief regarde si l'adresse est connue
- *  \param myAddr addresse à verifier
- *  \retval true l'adresse est connue
- *  \retval false l'adresse n'est pas connue
-*/
-bool Can::is_valid_addr(uint addr){
-    int size = sizeof(CAN_LIST_ADDR)/sizeof(CAN_LIST_ADDR[0]);
-    for (int i = 0; i < size; i++)
-    {
-        if(addr == CAN_LIST_ADDR[i]) return true;
-    }
-    return false;
-}
-
-/*!
- *  \brief regarde si le code fct est connue
- *  \param codeFct code fct à verifier
- *  \retval true le code fct est connue
- *  \retval false le code fct n'est pas connue
-*/
-bool Can::is_valid_code_fct(uint codeFct){
-    int size = sizeof(CAN_LIST_CODE_FCT)/sizeof(CAN_LIST_CODE_FCT[0]);
-    for (int i = 0; i < size; i++)
-    {
-        if(codeFct == CAN_LIST_CODE_FCT[i]) return true;
-    }
-    return false;
-}
 
 /*!
  *  \brief envoie un message sur le bus can
@@ -130,42 +101,26 @@ bool Can::is_valid_code_fct(uint codeFct){
  *  \retval {CAN_E_UNKNOW_CODE_FCT} le code fonction n'est pas dans le #define
  *  \retval {CAN_E_WRITE_ERROR} une erreur à eu lieu lors de l'envoie du message
 */
-int Can::send(uint addr, uint codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght){
+int Can::send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght, uint idmessage){
     if (dataLen >8){
         logC << "vous ne pouvez envoyer que 8 octet de data" << mendl;
         return CAN_E_DATA_SIZE_TOO_LONG;   
     }
 
-    if(addr < 0 || addr > CAN_MAX_VALUE_ADDR) return CAN_E_OOB_ADDR;
-    if(codeFct < 0 || codeFct > CAN_MAX_VALUE_CODE_FCT) return CAN_E_OOB_CODE_FCT;
-    if(repLenght < 0 || repLenght > CAN_MAX_VALUE_REP_NBR) return CAN_E_OOB_REP_NBR;
+   struct can_frame frame;
+     frame.can_id = addr | CAN_ADDR_RASPBERRY_E | codeFct | repLenght | idmessage << CAN_DECALAGE_ID_MSG | isRep << CAN_DECALAGE_IS_REP 
+                    | CAN_EFF_FLAG;
 
-    if(!is_valid_addr(addr)) return CAN_E_UNKNOW_ADDR;
-    if(!is_valid_code_fct(codeFct)) return CAN_E_UNKNOW_CODE_FCT;
-
-
-
-
-    struct can_frame frame;
-    frame.can_id = (
-          (addr << CAN_DECALAGE_ADDR_RECEPTEUR) 
-        + (CAN_ADDR_RASPBERRY << CAN_DECALAGE_ADDR_EMETTEUR) 
-        + (codeFct << CAN_DECALAGE_CODE_FCT) 
-        + (isRep << CAN_DECALAGE_IS_REP) 
-        + (repLenght << CAN_DECALAGE_REP_NBR)
-        )| CAN_EFF_FLAG;
-
-    cout << hex << frame.can_id << endl;
     frame.can_dlc = dataLen;
 
     logC << "send : ";
-    logC << "   addr : " << dec << addr ;
-    logC << "   emetteur : " << CAN_ADDR_RASPBERRY;
+    logC << "   addr : " << hex << showbase << addr ;
+    logC << "   emetteur : " << CAN_ADDR_RASPBERRY_E; 
     logC << "   codeFct : " << codeFct;
+    logC << "   id msg : " << idmessage;
     logC << "   isRep : " << isRep;
     logC << "   RepId : " << repLenght;
     logC << "       Data : ["<< dataLen <<"] ";
-
     for (int i = 0; i < dataLen; i++)
     {
         if(data[i] <0 || data[i] > 255) return CAN_E_OOB_DATA;
@@ -173,7 +128,6 @@ int Can::send(uint addr, uint codeFct , uint8_t data[], uint dataLen, bool isRep
         logC << hex << showbase << (int) data[i] << " ";
     }
     logC << mendl;
-
     if (write(s, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) { //on verifie que le nombre de byte envoyer est corecte
         perror("Write");
         return CAN_E_WRITE_ERROR;
@@ -203,22 +157,17 @@ int Can::traitement_trame(CanResponse_t &rep, can_frame frame){
 			perror("Read");
             return CAN_E_READ_ERROR;
 		}
+        cout << "ExtId : " << hex << frame.can_id << endl;
 
-        rep.addr = (frame.can_id & CAN_FILTER_ADDR_RECEPTEUR ) >> CAN_DECALAGE_ADDR_RECEPTEUR ;
-        rep.emetteur = (frame.can_id & CAN_FILTER_ADDR_EMETTEUR) >> CAN_DECALAGE_ADDR_EMETTEUR;
-        rep.codeFct = (frame.can_id & CAN_FILTER_CODE_FCT) >> CAN_DECALAGE_CODE_FCT;
+        rep.addr = (frame.can_id & CAN_FILTER_ADDR_EMETTEUR )  ;
+        rep.emetteur = (frame.can_id &  CAN_FILTER_ADDR_RECEPTEUR) ;
+        rep.codeFct = (frame.can_id & CAN_FILTER_CODE_FCT);
         rep.isRep = (frame.can_id & CAN_FILTER_IS_REP) >> CAN_DECALAGE_IS_REP;
-        rep.RepId = (frame.can_id & CAN_FILTER_REP_NBR) >> CAN_DECALAGE_REP_NBR;
+        rep.RepId = (frame.can_id & CAN_FILTER_REP_NBR) ;
+        
 
+        if (frame.can_dlc >8)  return CAN_E_DATA_SIZE_TOO_LONG;
 
-        if(rep.addr <0 || rep.addr > CAN_MAX_VALUE_ADDR) return CAN_E_OOB_ADDR;
-        if(rep.codeFct <0 || rep.codeFct > CAN_MAX_VALUE_CODE_FCT) return CAN_E_OOB_CODE_FCT;
-        if(rep.RepId <0 || rep.RepId > CAN_MAX_VALUE_REP_NBR) return CAN_E_OOB_REP_NBR;
-
-        if(!is_valid_addr(rep.addr)) return CAN_E_UNKNOW_ADDR;
-        if(!is_valid_addr(rep.emetteur)) return CAN_E_UNKNOW_ADDR;
-        if(!is_valid_code_fct(rep.codeFct)) return CAN_E_UNKNOW_CODE_FCT;
-        if (frame.can_dlc >8)  return CAN_E_DATA_SIZE_TOO_LONG;   
         rep.dataLen = frame.can_dlc;
         
 
@@ -242,12 +191,11 @@ void Can::listen(){
         
         int err =traitement_trame(reponse, frame);
         if(err < 0){
-            logC << "erreur dans le décodage d'une trame. err n°" << err << "\t\t c.f. #define" << mendl;
+            logC << "erreur dans le décodage d'une trame. err n°" << dec << err << "\t\t c.f. #define" << mendl;
             continue;
         }
-
         logC << "get : ";
-        logC << "addr : " << dec << reponse.addr ;
+        logC << "addr : " << hex <<  reponse.addr ;
         logC << "   emetteur : " << reponse.emetteur;
         logC << "   codeFct : " << reponse.codeFct;
         logC << "   isRep : " << reponse.isRep;
@@ -259,32 +207,65 @@ void Can::listen(){
         }
         logC << mendl;
 
-        thread th(&Can::traitement,this, reponse);
-        th.detach();
+        traitement(reponse);
         
 	}
 }
+
 
 /*!
  *  \brief traite le message décodé dans un nouveau thread
  *  \param msg structure contenant le message decoder
 */    
 void Can::traitement(CanResponse_t msg){
-    switch (msg.emetteur){
-    case CAN_ADDR_BASE_ROULANTE:
+    
+    if(msg.isRep){
+        messages.insert( pair<int,CanResponse_t>(msg.idMessage,msg));
+    }
+   
+
+
+    switch (msg.emetteur){     
+    case CAN_ADDR_BASE_ROULANTE_E:
         switch (msg.codeFct){
         case REP_AVANCE:
-
+            
 
         break;
         default:
             cout << "code fonction inconu" << endl;
         break;
         }
-
-
     break;
-    case CAN_ADDR_RASPBERRY:
+    case CAN_ADDR_ODOMETRIE_E:
+
+        switch (msg.codeFct){
+        case DETECTION_TOF :
+            Tramme_Deetection_TOF_t detection;
+            for(int i = 0; i< 3; i++){
+                detection.raw_data[i] = msg.data[i];
+            }
+            cout << "TOF :" << dec << detection.fields.TofId << "       dist : " << detection.fields.Dictance << endl;
+
+        break;
+        case VARIATION_XY:
+            Tramme_Variation_position_t variation;
+
+            for(int i = 0; i< 5; i++){
+                variation.raw_data[i] = msg.data[i];
+            }
+            int16_t dx;
+            int16_t dy;
+            dx = variation.fields.signeX ? variation.fields.dx : variation.fields.dx * (-1);
+            dy = variation.fields.signeY ? variation.fields.dy : variation.fields.dy * (-1);
+
+        break;
+        default:
+            cout << "code fonction inconu" << endl;
+        break;
+        }
+    break;
+    case CAN_ADDR_RASPBERRY_E:
         cout << "self emeteur" << endl;
     break;
     default:
@@ -292,6 +273,21 @@ void Can::traitement(CanResponse_t msg){
     break;
     }
 }
+
+    bool Can::is_message(uint id){
+        if(messages.find(id) != messages.end()){
+			return true;
+			
+		}else{
+            return false;               
+        }
+    }
+    CanResponse_t Can::get_message(uint id){
+        CanResponse_t rep;
+        rep = messages[id];
+        messages.erase(id);
+    }
+
 
 /*!
  *  \brief démarre le thread d'écoute du bus can

@@ -34,7 +34,7 @@ template <typename T>
 Log& operator<<(Log &log, T const &data)
 {
     log.ss << data;
-   // std::cout << data;
+    std::cout << data;
     return log;
 }
 
