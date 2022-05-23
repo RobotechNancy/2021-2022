@@ -27,11 +27,18 @@ void deplacement_servo_resistance(int angle) {
 	TIM3-> CCR4=ANGLE_RESISTANCE_REFERENCE+angle*PAS_SERVO_RESISTANCE;
 	attendre(TEMPS_ACTION_RESISTANCE);
 	servo3Stop();
+
 }
 
+typedef enum {
+    JAUNE = 0,
+    VIOLET = 1,
+    INTERDIT = 2,
+    ERREUR = 3
 
+}RESITANCE_VALEUR;
 
-int test_resistance() {
+RESISTANCE_VALEUR test_resistance() {
 
 	deplacement_servo_resistance(90);
 
@@ -43,16 +50,16 @@ int test_resistance() {
 	float resistance_a_tester = vin*RESISTANCE_REF/(RESISTANCE_MAX-vin); // calcul la valeur de la résistance testée grâce à un pont diviseur de tension
 
 	if (resistance_a_tester > 300 && resistance_a_tester < 640){   // en fonction de la valeur obtenue, renvoie différente valeur
-		return 0;
+		return JAUNE;
 	}
 	else if (resistance_a_tester > 640 && resistance_a_tester < 1360) {
-		return 1;
+		return VIOLET;
 	}
 	else if (resistance_a_tester >3000 && resistance_a_tester < 6400){
-		return 2;
+		return INTERDIT;
 	}
 	else {
-		return -1;
+		return ERREUR;
 	}
 
 }
