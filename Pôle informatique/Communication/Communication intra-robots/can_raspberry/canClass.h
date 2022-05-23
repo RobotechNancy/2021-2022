@@ -80,6 +80,14 @@ typedef union {
     uint8_t raw_data[3];
 } Tramme_Deetection_TOF_t;
 
+typedef enum{
+    NEUTRE = 0,
+    STATUETTE = 1,
+    AIMANT = 2,
+    INCONNUE = 3
+} POSITION_GLICIERE_STATUE;
+
+
 
 
 

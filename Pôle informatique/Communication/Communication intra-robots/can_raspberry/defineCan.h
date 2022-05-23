@@ -36,6 +36,15 @@ typedef enum {
     CAN_ADDR_ACTIONNEUR =       0x4000000
 }CAN_ADDR;
 
+typedef enum {
+	JAUNE = 0,
+	VIOLET = 1,
+	INTERDIT = 2,
+	ERREUR = 3
+
+}RESITANCE_VALEUR;
+
+
 
 //                                   0x0F00000  (cinq 0)
 //                                   0b00000 1111 0000 0000 0000 0000 0000
@@ -53,7 +62,7 @@ typedef enum {
 
 
 //      0xFF000  (trois 0)
-//      0b00000 0000 1111 1111 0000 0000 0000 
+//      0b00000 0000 1111 1111 0000 0000 0000
 
 typedef enum {
 
@@ -65,17 +74,23 @@ typedef enum {
     AVANCE6 =                       0x06000,
     REP_AVANCE =                    0x81000,
 
-    
+
 
 	DEPLACEMENT_BRAS_RESISTANCE =   0x61000,
 	DEPLACEMENT_COURROIE =          0x62000,
 	DEPLACEMENT_BRAS_POMPE =        0x63000,
-	POMPE =                         0x64000,
-	AIMANT =                        0x65000,
+	ACTION_POMPE =                  0x64000,
+	ACTION_AIMANT =                 0x65000,
+    TEST_RESISTANCE =               0x66000,
+	VALEUR_RESISTANCE = 			0xE6000,
+
+    BRAS_GLICIERE_STATUE =          0x67000,
 
     DETECTION_TOF =                 0x31000,
     GET_VARIATION_XY =              0x32000,
     VARIATION_XY =                  0xB1000,
+
+	ACCUSER_RECPETION =				0xff000,
 
 }CAN_CODE_FCT;
 
