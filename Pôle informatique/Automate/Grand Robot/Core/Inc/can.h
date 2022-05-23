@@ -15,20 +15,6 @@
 
 typedef unsigned int uint;
 
-typedef union {
-    struct {
-    	 uint8_t unused : 3;
-    	 uint8_t idRep : 3;
-    	 bool isRep : 1;
-    	 uint8_t idMsg : 8;
-    	 uint8_t codeFct : 8;
-    	 uint8_t recepteur : 4;
-    	 uint8_t emeteur : 4;
-    	 bool msgUrgent : 1;
-    } f;
-    uint32_t champId;
-} Tramme_Can_extID_t;
-
 
 typedef union {
     struct {
@@ -51,6 +37,7 @@ struct CanResponse_t{
 	uint addr;	/* addresse du destinataire du message */
 	uint emetteur;	/* adresse de l'éméteur */
 	uint codeFct;	/* code fonction du msg */
+	uint idMessage;
 	bool isRep;	/* vrai si c'est une reponse a une requete, faux sinon */
 	uint RepId;	/* nb de rep atendu si requete, num de la rep si reponse */
 	//Tramme_Can_extID_t ExtID;
@@ -58,13 +45,13 @@ struct CanResponse_t{
 	unsigned char data[8];
 };
 
-extern CAN_HandleTypeDef hcan_p;
-extern uint8_t CanAdresse;
+CAN_HandleTypeDef hcan_p;
+uint8_t CanAdresse;
 
 
 struct CanResponse_t traitement_trame( CAN_RxHeaderTypeDef frame, uint8_t data[]);
 void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse);
-int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint data_len, bool isRep, uint repLenght);
+int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint data_len, bool isRep, uint repLenght, uint idMessage =0);
 int start_listen();
 
 

@@ -30,8 +30,7 @@
 //definition des addresses d'émmission sur le bus can (de type 0xX00)
 typedef enum {
     CAN_ADDR_RASPBERRY = 0x1000000,
-    CAN_ADDR_BASE_ROULANTE = 0x2000000,
-	CAN_ADDR_ACTIONNEUR = 0x4000000
+    CAN_ADDR_BASE_ROULANTE = 0x2000000
 }CAN_ADDR;
 
 
@@ -40,8 +39,7 @@ typedef enum {
 //definition des addresses de réception sur le bus can (de type 0xX00)
 typedef enum {
     CAN_ADDR_RASPBERRY_E = 0x100000,
-    CAN_ADDR_BASE_ROULANTE_E = 0x200000,
-	CAN_ADDR_ACTIONNEUR_E = 0x400000
+    CAN_ADDR_BASE_ROULANTE_E = 0x200000
 }CAN_EMIT_ADDR;
 
 
@@ -49,18 +47,33 @@ typedef enum {
 //      0xFF000  (trois 0)
 //      0b00000 0000 1111 1111 0000 0000 0000
 typedef enum {
-    AVANCE = 0x01000,
-    AVANCE2 = 0x02000,
-    AVANCE3 = 0x03000,
-    AVANCE4 = 0x04000,
-    AVANCE5 = 0x05000,
-    AVANCE6 = 0x06000,
-    REP_AVANCE = 0x81000,
-	DEPLACEMENT_BRAS_RESISTANCE = 0x61000,
-	DEPLACEMENT_COURROIE = 0x62000,
-	DEPLACEMENT_BRAS_POMPE = 0x63000,
-	POMPE = 0x64000,
-	AIMANT = 0x65000,
+
+    AVANCE =                        0x01000,
+    AVANCE2 =                       0x02000,
+    AVANCE3 =                       0x03000,
+    AVANCE4 =                       0x04000,
+    AVANCE5 =                       0x05000,
+    AVANCE6 =                       0x06000,
+    REP_AVANCE =                    0x81000,
+
+
+
+    DEPLACEMENT_BRAS_RESISTANCE =   0x61000,
+    DEPLACEMENT_COURROIE =          0x62000,
+    DEPLACEMENT_BRAS_POMPE =        0x63000,
+    ACTION_POMPE =                  0x64000,
+    ACTION_AIMANT =                 0x65000,
+    TEST_RESISTANCE =               0x66000,
+    VALEUR_RESISTANCE =             0xE6000,
+
+    BRAS_GLICIERE_STATUE =          0x67000,
+
+    DETECTION_TOF =                 0x31000,
+    GET_VARIATION_XY =              0x32000,
+    VARIATION_XY =                  0xB1000,
+
+    ACCUSER_RECPETION =                0xff000,
+
 }CAN_CODE_FCT;
 
 

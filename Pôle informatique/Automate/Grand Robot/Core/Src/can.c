@@ -9,8 +9,6 @@
 #include "can.h"
 #include "defineCan.h"
 #include "stm32f3xx_hal.h"
-#include "servo.h"
-#include "actionneurs_define.h"
 
 struct CanMsg{
 	int addr;
@@ -19,11 +17,6 @@ struct CanMsg{
 	int dataLen;
 	char data[];
 };
-
-
-extern int angle ;
-extern int flag;
-
 
 
 /*!
@@ -48,14 +41,23 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	msg = traitement_trame( RxHeader, RxData);
 	/////////////////////////////////////////////////////////////////////////
 	switch(msg.codeFct){
-	case DEPLACEMENT_BRAS_POMPE :;
-		//msg.data[0];
-		//msg.data[1]*255+msg.data[2];
-		angle = msg.data[0];
-		flag=1;
+	case ACTION_POMPE:;
+		uint8_t CR=pompe(msg.data[0]);
+		uint8_t data[1] = {CR};
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+		break;
+	case DEPLACEMENT_COURROIE:;
+		uint8_t CR=deplacement_servo_courroie(msg.data[0]);
+		uint8_t data[1] = {CR};
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+		break;
+	case DEPLACEMENT_BRAS_POMPE:;
+		uint8_t CR=deplacement_servo_ventouse(msg.data[0]);
+		uint8_t data[1] = {CR};
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+		break;
 
 
-	break;
 	default :
 
 	break;
@@ -92,7 +94,7 @@ void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse) {
 	sFilterConfig.FilterBank = 0;
 	sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK; //Mode de filtrage choisit (avec maqsque ou liste d'adresses)
 	sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; //1 filtre de 32 bits ou 1 de 16 bits
-	sFilterConfig.FilterIdHigh = 0b010000000000000; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort
+	sFilterConfig.FilterIdHigh = 0b000100000000000; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort
 	sFilterConfig.FilterIdLow = 0; //
 	sFilterConfig.FilterMaskIdHigh = 0b111100000000000; //Masque utilisé (FFF pour une adresse unique) sur les bits de poids fort
 	sFilterConfig.FilterMaskIdLow = 0;
@@ -128,7 +130,7 @@ void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse) {
  *  \retval {CAN_E_UNKNOW_CODE_FCT} le code fonction n'est pas dans le #define
  *  \retval {CAN_E_WRITE_ERROR} une erreur à eu lieu lors de l'envoie du message
 */
-int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght){
+int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght, uint idMessage){
 
 	if (dataLen >8){
 		return CAN_E_DATA_SIZE_TOO_LONG;
@@ -147,7 +149,7 @@ int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, boo
 
 	//adresse à mettre en en-tête du message (adresse de l'émetteur), qui servira pour l'arbitrage
 
-	txHeader.ExtId = addr | CAN_ADDR_BASE_ROULANTE_E | codeFct | repLenght | 1 << CAN_DECALAGE_ID_MSG | isRep << CAN_DECALAGE_IS_REP | repLenght;
+	txHeader.ExtId = addr | CAN_ADDR_BASE_ROULANTE_E | codeFct | repLenght | idMessage << CAN_DECALAGE_ID_MSG | isRep << CAN_DECALAGE_IS_REP | repLenght;
 	//txHeader.ExtId = 0b11101100100100000010000011111;
 	//1 111 0001 0000 10010000 00000000 1 001
 	//1011 0001 00001001 00000000 0000 1 001000000011001
@@ -186,6 +188,7 @@ struct CanResponse_t traitement_trame(CAN_RxHeaderTypeDef frame, uint8_t data[])
 		rep.codeFct = (frame.ExtId & CAN_FILTER_CODE_FCT);
 		rep.isRep = (frame.ExtId & CAN_FILTER_IS_REP) >> CAN_DECALAGE_IS_REP;
 		rep.RepId = (frame.ExtId & CAN_FILTER_REP_NBR) ;
+		rep.idMessage = (frame.ExtId & CAN_FILTER_IDE_MSG) >> CAN_DECALAGE_ID_MSG;
 
         /*if(rep.addr <0 || rep.addr > CAN_MAX_VALUE_ADDR) return CAN_E_OOB_ADDR;
         if(rep.codeFct <0 || rep.codeFct > CAN_MAX_VALUE_CODE_FCT) return CAN_E_OOB_CODE_FCT;
