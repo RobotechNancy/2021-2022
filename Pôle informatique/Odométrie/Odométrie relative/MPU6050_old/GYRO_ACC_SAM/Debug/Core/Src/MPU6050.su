@@ -1,0 +1,12 @@
+../Core/Src/MPU6050.c:175:19:MPU6050_Read_Reg	32	static
+../Core/Src/MPU6050.c:180:19:MPU6050_Write_Reg	32	static
+../Core/Src/MPU6050.c:185:19:MPU6050_Read_Gyro	24	static
+../Core/Src/MPU6050.c:190:19:MPU6050_Configure	16	static
+../Core/Src/MPU6050.c:233:6:MPU6050_FSM	16	static
+../Core/Src/MPU6050.c:293:6:MPU6050_Init	16	static
+../Core/Src/MPU6050.c:303:6:MPU6050_Process	8	static
+../Core/Src/MPU6050.c:308:6:MPU6050_Interrupt_Routine	4	static
+../Core/Src/MPU6050.c:313:7:MPU6050_NewData	4	static
+../Core/Src/MPU6050.c:318:9:MPU6050_GetData	4	static
+../Core/Src/MPU6050.c:323:9:MPU6050_GetData_CF	4	static
+../Core/Src/MPU6050.c:329:7:MPU6050_GetSampleRate	16	static
