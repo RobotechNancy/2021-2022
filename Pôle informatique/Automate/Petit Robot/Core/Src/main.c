@@ -165,6 +165,10 @@ int main(void)
 	}
   /* USER CODE END 2 */
 
+//	Initialiation Moteur PAP
+	motor_en(RESET);
+	motor_micro_step(SET, RESET);
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
