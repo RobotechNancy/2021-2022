@@ -1,3 +1,5 @@
+"./Core/Src/can.o"
+"./Core/Src/deplacement.o"
 "./Core/Src/deplacementActionneur.o"
 "./Core/Src/main.o"
 "./Core/Src/motorActionneur.o"
@@ -12,6 +14,7 @@
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o"
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_adc.o"
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_adc_ex.o"
+"./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_can.o"
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o"
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o"
 "./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.o"
