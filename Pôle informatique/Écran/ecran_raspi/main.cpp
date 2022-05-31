@@ -6,11 +6,20 @@ int main(int argc, char *argv[]){
     
     Ecran ecran;
     int status = ecran.openSerialConnection();
-    if(status != 500)
+    if(status != EC_SER_E_SUCCESS)
         return 0;
 
     uint8_t data[] = {'2', '3', '1'};
-    ecran.sendMsg(EC_MODE_COMPETITION, EC_CAT_SCORE, EC_SOUS_CAT_SCORE_TOTAL, data);
+
+    Trame_t trame;
+    
+    trame.taille = (sizeof(data)/sizeof(data[0]))+5;
+    trame.mode = EC_MODE_COMPETITION;
+    trame.categorie = EC_CAT_SCORE;
+    trame.sous_categorie = EC_SOUS_CAT_SCORE_TOTAL;
+    trame.valeur = data;
+
+    ecran.sendTrame(trame);
 
     ecran.closeSerialConnection();
     return 0;
