@@ -1,0 +1,1485 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Accueil",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TiledImage",
+            "Name": "filigramme",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "FileName": "logo_simplifie_robotech.png",
+            "Alpha": 30
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonCompetition",
+            "X": 52,
+            "Y": 231,
+            "Width": 169,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 169,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 247,
+                  "Green": 159,
+                  "Blue": 31
+                },
+                "ColorPressed": {
+                  "Red": 247,
+                  "Green": 159,
+                  "Blue": 31
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonMaintenance",
+            "X": 52,
+            "Y": 159,
+            "Width": 169,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 169,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 18,
+                  "Green": 203,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 18,
+                  "Green": 203,
+                  "Blue": 196
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Box",
+            "Name": "fondTitreSecondaire",
+            "X": 31,
+            "Y": 330,
+            "Width": 216,
+            "Height": 35,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titreSecondaire",
+            "X": 40,
+            "Y": 337,
+            "Width": 198,
+            "Height": 21,
+            "TextId": "__SingleUse_PVC0",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titrePrincipal",
+            "X": 52,
+            "Y": 412,
+            "Width": 179,
+            "Height": 28,
+            "TextId": "__SingleUse_9MUY",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titrePrincipal_1",
+            "X": 102,
+            "Y": 440,
+            "Width": 74,
+            "Height": 28,
+            "TextId": "__SingleUse_NWJN",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titreSecondaire_1",
+            "X": 88,
+            "Y": 246,
+            "Width": 96,
+            "Height": 21,
+            "TextId": "__SingleUse_VVYF",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titreSecondaire_1_1",
+            "X": 85,
+            "Y": 174,
+            "Width": 103,
+            "Height": 21,
+            "TextId": "__SingleUse_TLB2",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "Width": 272,
+            "Height": 97,
+            "Filename": "signature_robotech_competition.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage2",
+            "X": 5,
+            "Y": 410,
+            "Width": 42,
+            "Height": 66,
+            "Filename": "logos_equipe_robotech.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "affichageEcranCompetition",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonCompetition"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Competition"
+            }
+          },
+          {
+            "InteractionName": "affichageEcranMaintenance",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonMaintenance"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Accueil"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Competition",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TiledImage",
+            "Name": "filigramme",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "FileName": "logo_simplifie_robotech.png",
+            "Alpha": 30
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonAccueil",
+            "X": 228,
+            "Width": 43,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 8,
+                "IconReleased": "home.png",
+                "IconPressed": "home.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonRetour",
+            "Width": 43,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 9,
+                "IconReleased": "right-arrow.png",
+                "IconPressed": "right-arrow.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorPressed": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie",
+            "X": 8,
+            "Y": 421,
+            "Width": 132,
+            "Height": 44,
+            "Color": {
+              "Red": 255,
+              "Green": 195,
+              "Blue": 18
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie",
+            "X": 26,
+            "Y": 433,
+            "Width": 96,
+            "Height": 21,
+            "TextId": "__SingleUse_4HJ4",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie_1",
+            "X": 31,
+            "Y": 324,
+            "Width": 210,
+            "Height": 44,
+            "Color": {
+              "Red": 238,
+              "Green": 90,
+              "Blue": 36
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie_1",
+            "X": 67,
+            "Y": 336,
+            "Width": 138,
+            "Height": 21,
+            "TextId": "__SingleUse_X5SR",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie_2",
+            "X": 153,
+            "Y": 421,
+            "Width": 114,
+            "Height": 44,
+            "Color": {
+              "Red": 18,
+              "Green": 203,
+              "Blue": 196
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie_2",
+            "X": 165,
+            "Y": 433,
+            "Width": 90,
+            "Height": 21,
+            "TextId": "__SingleUse_K1R8",
+            "TextRotation": "180",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondBoutonEquipe",
+            "X": 46,
+            "Y": 196,
+            "Width": 188,
+            "Height": 88,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "validationChoixEquipe",
+            "X": 87,
+            "Y": 118,
+            "Width": 99,
+            "Height": 36,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 99,
+                "Height": 36,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 3,
+                "ColorReleased": {
+                  "Red": 29,
+                  "Green": 209,
+                  "Blue": 161
+                },
+                "ColorPressed": {
+                  "Red": 29,
+                  "Green": 209,
+                  "Blue": 161
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "boutonChoixEquipe",
+            "X": 52,
+            "Y": 202,
+            "Width": 176,
+            "Height": 76,
+            "Pressed": "bouton_violet.png",
+            "Released": "bouton_jaune.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie_1_1",
+            "X": 109,
+            "Y": 125,
+            "Width": 55,
+            "Height": 21,
+            "TextId": "__SingleUse_JVJT",
+            "TextRotation": "180",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ecranInitialisation",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "validationChoixEquipe"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "AffichageScore"
+            }
+          },
+          {
+            "InteractionName": "retourEcranPrecedent",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonRetour"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Accueil"
+            }
+          },
+          {
+            "InteractionName": "retourAccueil",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonAccueil"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Accueil"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "AffichageScore",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TiledImage",
+            "Name": "filigramme",
+            "Width": 272,
+            "Height": 480,
+            "LockPosition": true,
+            "FileName": "logo_simplifie_robotech.png",
+            "Alpha": 30
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonAccueil",
+            "X": 229,
+            "Width": 43,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 8,
+                "IconReleased": "home.png",
+                "IconPressed": "home.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonRetour",
+            "Width": 43,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 9,
+                "IconReleased": "right-arrow.png",
+                "IconPressed": "right-arrow.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorPressed": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 27,
+            "Y": 88,
+            "Width": 219,
+            "Height": 94,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 238,
+              "Blue": 84
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "Box",
+            "Name": "fondScoreGrandRobot",
+            "X": 99,
+            "Y": 222,
+            "Width": 160,
+            "Height": 37,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
+          },
+          {
+            "Type": "Box",
+            "Name": "fondScorePetitRobot_1_1",
+            "X": 99,
+            "Y": 183,
+            "Width": 160,
+            "Height": 39,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
+          },
+          {
+            "Type": "Box",
+            "Name": "fondScorePetitRobot",
+            "X": 99,
+            "Y": 337,
+            "Width": 160,
+            "Height": 39,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreTotal",
+            "X": 36,
+            "Y": 104,
+            "Width": 201,
+            "Height": 27,
+            "TextId": "__SingleUse_KN2V",
+            "TextRotation": "180",
+            "Wildcard1": {
+              "TextId": "__SingleUse_H5F1",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreGrandRobot",
+            "X": 107,
+            "Y": 191,
+            "Width": 145,
+            "Height": 22,
+            "TextId": "__SingleUse_5ICM",
+            "TextRotation": "180",
+            "Alpha": 0,
+            "Wildcard1": {
+              "TextId": "__SingleUse_5492",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imageGrandRobot",
+            "X": 15,
+            "Y": 183,
+            "Width": 73,
+            "Height": 93,
+            "Filename": "grand_robot.png",
+            "Alpha": 0,
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagePetitRobot",
+            "X": 71,
+            "Y": 205,
+            "Width": 131,
+            "Height": 171,
+            "Filename": "petit_robot.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreTotal_1",
+            "X": 36,
+            "Y": 137,
+            "Width": 201,
+            "Height": 27,
+            "TextId": "__SingleUse_XYBT",
+            "TextRotation": "180"
+          },
+          {
+            "Type": "Box",
+            "Name": "fondScorePetitRobot_1",
+            "X": 99,
+            "Y": 298,
+            "Width": 160,
+            "Height": 39,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scorePetitRobot_1",
+            "X": 107,
+            "Y": 345,
+            "Width": 144,
+            "Height": 22,
+            "TextId": "__SingleUse_FXX9",
+            "TextRotation": "180",
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scorePetitRobot_1_1",
+            "X": 107,
+            "Y": 229,
+            "Width": 144,
+            "Height": 22,
+            "TextId": "__SingleUse_85XP",
+            "TextRotation": "180",
+            "Alpha": 0
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie_1",
+            "X": 31,
+            "Y": 420,
+            "Width": 210,
+            "Height": 44,
+            "Color": {
+              "Green": 138,
+              "Blue": 150
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie_1",
+            "X": 62,
+            "Y": 432,
+            "Width": 149,
+            "Height": 21,
+            "TextId": "__SingleUse_FM8E",
+            "TextRotation": "180",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scorePetitRobot",
+            "X": 107,
+            "Y": 306,
+            "Width": 144,
+            "Height": 22,
+            "TextId": "__SingleUse_U9JP",
+            "TextRotation": "180",
+            "Alpha": 0,
+            "Wildcard1": {
+              "TextId": "__SingleUse_N2V1",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "retourEcranPrecedent",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonRetour"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Competition"
+            }
+          },
+          {
+            "InteractionName": "retourAccueil",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonAccueil"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Accueil"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "CompetitionInitialilsation",
+        "CanvasBufferSize": 4080,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TiledImage",
+            "Name": "filigramme",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "FileName": "logo_simplifie_robotech.png",
+            "Alpha": 30
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonAccueil",
+            "X": 56,
+            "Y": 229,
+            "Width": 43,
+            "Height": 43,
+            "LockPosition": true,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 8,
+                "IconReleased": "home.png",
+                "IconPressed": "home.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonRetour",
+            "Y": 229,
+            "Width": 43,
+            "Height": 43,
+            "LockPosition": true,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 9,
+                "Y": 9,
+                "IconReleased": "left-arrow.png",
+                "IconPressed": "left-arrow.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 43,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorPressed": {
+                  "Green": 98,
+                  "Blue": 102
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie_1",
+            "X": 146,
+            "Y": 8,
+            "Width": 210,
+            "Height": 44,
+            "Color": {
+              "Red": 238,
+              "Green": 90,
+              "Blue": 36
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie_1",
+            "X": 204,
+            "Y": 20,
+            "Width": 94,
+            "Height": 21,
+            "TextId": "__SingleUse_ZFCS",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "boutonGo",
+            "X": 356,
+            "Y": 229,
+            "Width": 124,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 10,
+                "TextId": "__SingleUse_NKNC",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 124,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 232,
+                  "Green": 232,
+                  "Blue": 232
+                },
+                "ColorPressed": {
+                  "Red": 232,
+                  "Green": 232,
+                  "Blue": 232
+                },
+                "ColorBorderReleased": {
+                  "Red": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 119,
+                  "Green": 140,
+                  "Blue": 163
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondCategorie",
+            "X": 7,
+            "Y": 8,
+            "Width": 132,
+            "Height": 44,
+            "Color": {
+              "Red": 255,
+              "Green": 195,
+              "Blue": 18
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteCategorie",
+            "X": 25,
+            "Y": 20,
+            "Width": 96,
+            "Height": 21,
+            "TextId": "__SingleUse_5NPH",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondVersion",
+            "X": 361,
+            "Y": 8,
+            "Width": 114,
+            "Height": 44,
+            "Color": {
+              "Red": 18,
+              "Green": 203,
+              "Blue": 196
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteVersion",
+            "X": 373,
+            "Y": 20,
+            "Width": 90,
+            "Height": 21,
+            "TextId": "__SingleUse_P1M2",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondTitreColonne2",
+            "X": 199,
+            "Y": 61,
+            "Width": 261,
+            "Height": 33,
+            "Color": {
+              "Red": 29,
+              "Green": 209,
+              "Blue": 161
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteColonne2",
+            "X": 248,
+            "Y": 67,
+            "Width": 162,
+            "Height": 21,
+            "TextId": "__SingleUse_1L9M",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondTitreColonne1",
+            "X": 21,
+            "Y": 61,
+            "Width": 184,
+            "Height": 33,
+            "Color": {
+              "Red": 247,
+              "Green": 159,
+              "Blue": 31
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteColonne1",
+            "X": 33,
+            "Y": 67,
+            "Width": 161,
+            "Height": 21,
+            "TextId": "__SingleUse_XMM8",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondLigne1",
+            "X": 21,
+            "Y": 89,
+            "Width": 439,
+            "Height": 33,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondLigne2",
+            "X": 21,
+            "Y": 118,
+            "Width": 439,
+            "Height": 33,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondLigne3",
+            "X": 21,
+            "Y": 147,
+            "Width": 439,
+            "Height": 33,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "fondLigne4",
+            "X": 21,
+            "Y": 177,
+            "Width": 439,
+            "Height": 33,
+            "Color": {
+              "Red": 232,
+              "Green": 232,
+              "Blue": 232
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteLigne1",
+            "X": 33,
+            "Y": 95,
+            "Width": 161,
+            "Height": 21,
+            "TextId": "__SingleUse_SH5Q",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteLigne2",
+            "X": 33,
+            "Y": 124,
+            "Width": 161,
+            "Height": 21,
+            "TextId": "__SingleUse_YR2N",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteLigne3",
+            "X": 33,
+            "Y": 154,
+            "Width": 161,
+            "Height": 21,
+            "TextId": "__SingleUse_UMH8",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "texteLigne4",
+            "X": 27,
+            "Y": 183,
+            "Width": 173,
+            "Height": 21,
+            "TextId": "__SingleUse_AEH6",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Line",
+            "Name": "ligneSeparationTableau",
+            "X": 198,
+            "Y": 86,
+            "Width": 100,
+            "Height": 134,
+            "StartX": 5,
+            "StartY": 5,
+            "EndX": 5,
+            "EndY": 121,
+            "LineWidth": 3,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "etatInit1",
+            "X": 221,
+            "Y": 95,
+            "Width": 217,
+            "Height": 21,
+            "TextId": "__SingleUse_66HG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CYA7",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "etatInit2",
+            "X": 221,
+            "Y": 124,
+            "Width": 217,
+            "Height": 21,
+            "TextId": "__SingleUse_2D3A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2J9N",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "etatInit3",
+            "X": 221,
+            "Y": 153,
+            "Width": 217,
+            "Height": 21,
+            "TextId": "__SingleUse_3GYG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_TLQ8",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "etatInit4",
+            "X": 221,
+            "Y": 183,
+            "Width": 217,
+            "Height": 21,
+            "TextId": "__SingleUse_G1RP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8JGW",
+              "UseBuffer": true,
+              "BufferSize": 17
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "retourEcranPrecedent",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonRetour"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Competition"
+            }
+          },
+          {
+            "InteractionName": "retourAccueil",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonAccueil"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Accueil"
+            }
+          },
+          {
+            "InteractionName": "ecranScore",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "boutonGo"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "AffichageScore"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyProject",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "Accueil",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      24
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD24bpp": {
+        "Id": "LCD24bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F7",
+    "Platform": "m7",
+    "ProjectFile": "../MyProject.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": []
+  },
+  "Version": "4.19.0"
+}
