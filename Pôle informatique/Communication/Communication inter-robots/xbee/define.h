@@ -16,7 +16,6 @@
 #define XB_PARITY_PRIMARY SERIAL_PARITY_EVEN
 #define XB_STOPBITS_PRIMARY SERIAL_STOPBITS_1
 
-
 // Configuration d'usine par défaut des modules XBee neufs
 #define XB_SERIAL_PORT_DEFAULT "/dev/ttyAMA0"
 #define XB_BAUDRATE_DEFAULT 9600

@@ -1,0 +1,31 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+\mbox{\hyperlink{main_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ecranlib_8h}{ecranlib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}\mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00005}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006     }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007     \mbox{\hyperlink{class_ecran}{Ecran}} ecran;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008     \textcolor{keywordtype}{int} status = ecran.\mbox{\hyperlink{class_ecran_a883ff9e63313cf711749d418df9f0c02}{openSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009     \textcolor{keywordflow}{if}(status != \mbox{\hyperlink{ecran__define_8h_a14e080035b40cd7eebb19b61e91047a5}{EC\_SER\_E\_SUCCESS}})}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012     uint8\_t data[] = \{\textcolor{charliteral}{'2'}, \textcolor{charliteral}{'3'}, \textcolor{charliteral}{'1'}\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014     \mbox{\hyperlink{struct_trame__t}{Trame\_t}} trame;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015     }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016     trame.\mbox{\hyperlink{struct_trame__t_a24bba0c76c928a314ca2d34f488a03be}{taille}} = (\textcolor{keyword}{sizeof}(data)/\textcolor{keyword}{sizeof}(data[0]))+5;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017     trame.\mbox{\hyperlink{struct_trame__t_a4426f3bf120ad4fa2c19c4adf8eda7c7}{mode}} = \mbox{\hyperlink{ecran__define_8h_a21e9b9915f9a3af1d347bc55ed11fc2aa4305a6f2e67e251ad5833f4c85fb3b2c}{EC\_MODE\_COMPETITION}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018     trame.\mbox{\hyperlink{struct_trame__t_af1744dff908a0818d8616e176a2c7203}{categorie}} = \mbox{\hyperlink{ecran__define_8h_a502f50ef07430d5a02d57f7444b5b2c3a83b0cf7e4b4a52176d95fa1e17d93661}{EC\_CAT\_SCORE}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019     trame.\mbox{\hyperlink{struct_trame__t_a0491af8d19228af4efe5bf8a7e334e9f}{sous\_categorie}} = \mbox{\hyperlink{ecran__define_8h_a1ab2f8c752f5a51db37b83da9e37d1f7a0c07a57336091aacb4bba84cc3ca599a}{EC\_SOUS\_CAT\_SCORE\_TOTAL}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020     trame.\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{valeur}} = data;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022     ecran.\mbox{\hyperlink{class_ecran_a7d189da49f33ecf5ede14f5701f32b50}{sendTrame}}(trame);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024     ecran.\mbox{\hyperlink{class_ecran_a9f6f5d42e7c1362edb7f9b152db6b50f}{closeSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026 \}}
+
+\end{DoxyCode}

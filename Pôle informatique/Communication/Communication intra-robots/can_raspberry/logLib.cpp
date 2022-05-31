@@ -19,7 +19,7 @@ Log::Log(string nom){
 Log& operator<<(Log &log, Mendl const& data){
     time_t now = time(0);
     tm *ltm = localtime(&now);
-    //cout << endl;
+    cout << endl;
     stringstream cmd;
     cmd << "echo \"" << "["<<ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << " - "<< log.name <<"] " <<log.ss.str()<<"\" >> log.log";
     log.ss.str("");

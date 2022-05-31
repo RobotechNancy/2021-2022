@@ -1714,6 +1714,24 @@
     (pin "8" (uuid f9570ec9-4338-4208-aee7-369a45a284f8))
   )
 
+  (symbol (lib_id "power:+5V") (at 228.6 111.76 90) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 11ccd497-2713-4d03-8a7a-1dbd53fbc1f7)
+    (property "Reference" "#PWR?" (id 0) (at 232.41 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (id 1) (at 225.4251 112.239 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (id 2) (at 228.6 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 228.6 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 328b655f-3682-4d72-b986-09747092cdfb))
+  )
+
   (symbol (lib_id "Connector:TestPoint") (at 218.44 144.78 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 213021cb-292f-48f5-9f6b-b7b3e646eb67)
@@ -1990,24 +2008,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 21032a08-d984-47e8-95d9-5a8cc11b0a71))
-  )
-
-  (symbol (lib_id "power:+12V") (at 228.6 111.76 90) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid 77482be5-b12a-41cb-b345-89c6c297fbe1)
-    (property "Reference" "#PWR0101" (id 0) (at 232.41 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+12V" (id 1) (at 229.235 112.239 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (id 2) (at 228.6 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (id 3) (at 228.6 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0a7da8e8-4a29-4619-8c2a-45042f49f661))
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 77.47 78.74 270) (unit 1)
@@ -2524,9 +2524,6 @@
   )
 
   (symbol_instances
-    (path "/77482be5-b12a-41cb-b345-89c6c297fbe1"
-      (reference "#PWR0101") (unit 1) (value "+12V") (footprint "")
-    )
     (path "/0072c40f-f7fc-4400-8484-f252a5e88685"
       (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
     )
@@ -2580,6 +2577,9 @@
     )
     (path "/fab405cf-f70f-4690-9813-95b24512f89a"
       (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/11ccd497-2713-4d03-8a7a-1dbd53fbc1f7"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/ff965ae9-0de4-48fa-a1a6-d1580e191547"
       (reference "BUS_CAN1") (unit 1) (value "Conn_01x05") (footprint "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical")

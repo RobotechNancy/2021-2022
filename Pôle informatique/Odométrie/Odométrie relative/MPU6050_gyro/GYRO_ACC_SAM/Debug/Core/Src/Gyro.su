@@ -1,0 +1,15 @@
+../Core/Src/Gyro.c:51:6:Gyro_Modulo	8	static
+../Core/Src/Gyro.c:61:6:Gyro_GetData	8	static
+../Core/Src/Gyro.c:66:16:Gyro_NewData	8	static
+../Core/Src/Gyro.c:71:6:Gyro_ResetAccumulator	4	static
+../Core/Src/Gyro.c:77:6:Gyro_Accumulate	8	static
+../Core/Src/Gyro.c:87:6:Gyro_SetOffset	16	static
+../Core/Src/Gyro.c:92:6:Gyro_Estimate	16	static
+../Core/Src/Gyro.c:101:6:Gyro_FSM	8	static
+../Core/Src/Gyro.c:166:6:Gyro_Init	16	static
+../Core/Src/Gyro.c:175:6:Gyro_Process	8	static
+../Core/Src/Gyro.c:180:6:Gyro_Calibrate	8	static
+../Core/Src/Gyro.c:185:6:Gyro_isReady	4	static
+../Core/Src/Gyro.c:190:7:Gyro_GetRot	8	static
+../Core/Src/Gyro.c:195:6:Gyro_SetRot	16	static
+../Core/Src/Gyro.c:200:7:Gyro_GetCalibrationAdvancement	4	static

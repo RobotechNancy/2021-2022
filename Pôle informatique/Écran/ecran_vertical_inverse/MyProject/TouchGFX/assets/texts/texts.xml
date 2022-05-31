@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.19.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_JVJT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Valider</Translation>
+      </Text>
+      <Text Id="__SingleUse_TLB2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Maintenance</Translation>
+      </Text>
+      <Text Id="__SingleUse_VVYF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Compétition</Translation>
+      </Text>
+      <Text Id="__SingleUse_NWJN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Equipe</Translation>
+      </Text>
+      <Text Id="__SingleUse_FM8E" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Affichage du score</Translation>
+      </Text>
+      <Text Id="__SingleUse_85XP" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Grand robot :</Translation>
+      </Text>
+      <Text Id="__SingleUse_FXX9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Petit robot :</Translation>
+      </Text>
+      <Text Id="__SingleUse_XYBT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Score total :</Translation>
+      </Text>
+      <Text Id="__SingleUse_8JGW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pas de communication</Translation>
+      </Text>
+      <Text Id="__SingleUse_TLQ8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pas de communication</Translation>
+      </Text>
+      <Text Id="__SingleUse_2J9N" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pas de communication</Translation>
+      </Text>
+      <Text Id="__SingleUse_CYA7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pas de communication</Translation>
+      </Text>
+      <Text Id="__SingleUse_G1RP" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3GYG" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2D3A" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_66HG" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AEH6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Communication CAN</Translation>
+      </Text>
+      <Text Id="__SingleUse_UMH8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Communication HF</Translation>
+      </Text>
+      <Text Id="__SingleUse_YR2N" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Base roulante</Translation>
+      </Text>
+      <Text Id="__SingleUse_SH5Q" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Odométrie</Translation>
+      </Text>
+      <Text Id="__SingleUse_XMM8" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Service concerné</Translation>
+      </Text>
+      <Text Id="__SingleUse_1L9M" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Etat de l'initialisation</Translation>
+      </Text>
+      <Text Id="__SingleUse_P1M2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Version 1.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_5NPH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Compétition</Translation>
+      </Text>
+      <Text Id="__SingleUse_NKNC" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">C'est parti !</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZFCS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Initialisation</Translation>
+      </Text>
+      <Text Id="__SingleUse_K1R8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Version 1.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_X5SR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Choix de l'équipe</Translation>
+      </Text>
+      <Text Id="__SingleUse_4HJ4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Compétition</Translation>
+      </Text>
+      <Text Id="__SingleUse_H5F1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_N2V1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_5492" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_PVC0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Mode de fonctionnement</Translation>
+      </Text>
+      <Text Id="__SingleUse_9MUY" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Robotech Nancy</Translation>
+      </Text>
+      <Text Id="__SingleUse_VTN5" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">écran score</Translation>
+      </Text>
+      <Text Id="__SingleUse_8FS3" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">init odometrie</Translation>
+      </Text>
+      <Text Id="__SingleUse_KN2V" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt; point(s)</Translation>
+      </Text>
+      <Text Id="__SingleUse_U9JP" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; point(s)</Translation>
+      </Text>
+      <Text Id="__SingleUse_5ICM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt; point(s)</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="ariblk.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x0A-0xFF" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x0A-0xFF" />
+    <Typography Id="Small" Font="arial.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x0A-0xFF" />
+  </Typographies>
+</TextDatabase>
