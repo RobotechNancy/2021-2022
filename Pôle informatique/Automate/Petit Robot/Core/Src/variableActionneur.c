@@ -137,14 +137,23 @@ uint32_t rArr[] = {
         980, 985, 989, 993, 998
 };
 
+bool fin = 1;
+
 uint32_t length = LENGTH_ARR_MAX;
 uint32_t target = 0;
 uint32_t steps = 0;
 uint32_t stepsLeft = 0;
 Deplacement_State_t deplacementState = ARRET;
-Position_t position = NEUTRE;
+Position_t position = AIMANT;
 Position_t nextPosition;
 
+bool get_fin(void){
+    return fin;
+}
+
+void set_fin(bool f){
+    fin = f;
+}
 
 uint32_t get_length(void){
 	return length;

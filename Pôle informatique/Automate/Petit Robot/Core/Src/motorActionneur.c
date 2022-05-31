@@ -44,7 +44,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		    motor.cnt = 0;
 			set_deplacement_state(ARRET);
 			set_position(get_next_position());
-		}
+			set_fin(1);
+			}
 		else if(get_target() < get_length() * 2)
 		{
 			if(get_steps() == get_steps_left())
@@ -95,6 +96,7 @@ void emergency_stop(void){
     motor.cnt = 0;
 	set_deplacement_state(ARRET);
 	set_position(INCONNUE);
+	set_fin(1);
 }
 
 int avance(Motor_t *motor){

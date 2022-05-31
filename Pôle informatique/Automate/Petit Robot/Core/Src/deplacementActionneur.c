@@ -23,59 +23,24 @@ void go_position(Position_t pos){
 		if (get_position() != pos){
 			reset_steps();
 			switch(get_position()){
-			case NEUTRE:;
-				switch(pos){
-				case STATUETTE:;
-					motor.pinDirState = 1;
-					motor_dir(&motor);
-					set_target(NB_STEPS_STATUETTE);
+			case STATUETTE:
+				motor.pinDirState = 0;
+				motor_dir(&motor);
+				set_target(NB_STEPS);
+				set_fin(0);
 				break;
-				case AIMANT:;
-					motor.pinDirState = 0;
-					motor_dir(&motor);
-					set_target(NB_STEPS_AIMANT);
+			case AIMANT:
+				motor.pinDirState = 1;
+				motor_dir(&motor);
+				set_target(NB_STEPS);
+				set_fin(0);
 				break;
-				}
-			break;
-			case STATUETTE:;
-				switch(pos){
-				case NEUTRE:;
-					motor.pinDirState = 0;
-					motor_dir(&motor);
-					set_target(NB_STEPS_STATUETTE);
-				break;
-				case AIMANT:;
-					motor.pinDirState = 0;
-					motor_dir(&motor);
-					uint32_t nbSteps = NB_STEPS_AIMANT + NB_STEPS_STATUETTE;
-					set_target(nbSteps);
-				break;
-				}
-			break;
-			case AIMANT:;
-				switch(pos){
-				case NEUTRE:;
-					motor.pinDirState = 1;
-					motor_dir(&motor);
-					set_target(NB_STEPS_AIMANT);
-				break;
-				case STATUETTE:;
-					motor.pinDirState = 1;
-					motor_dir(&motor);
-					uint32_t nbSteps = NB_STEPS_AIMANT + NB_STEPS_STATUETTE;
-					set_target(nbSteps);
-				break;
-				}
-			break;
-			default:;
+			default:
 			break;
 			}
 		}
 		set_next_position(pos);
-////////////////////////////////////////////////
-//		PENSER A DECOMMENTER
-////////////////////////////////////////////////
-//		motor.diviseur = 100;
+		motor.diviseur = 40;
 
 	}
 }
