@@ -2619,7 +2619,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 879dcbdf-30dc-4f81-b637-1fd4000b50f1)
     (property "Reference" "R4" (id 0) (at 30.48 44.5475 90))
-    (property "Value" "180" (id 1) (at 30.48 47.3226 90))
+    (property "Value" "1,6k" (id 1) (at 30.48 47.3226 90))
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (id 2) (at 30.48 47.752 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2636,7 +2636,7 @@
     (property "Reference" "R1" (id 0) (at 51.308 62.5915 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "1k" (id 1) (at 51.308 65.3666 0)
+    (property "Value" "10k" (id 1) (at 51.308 65.3666 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (id 2) (at 51.308 63.5 90)
@@ -3334,7 +3334,7 @@
       (reference "Q1") (unit 1) (value "BC557") (footprint "Package_TO_SOT_THT:TO-92_Inline")
     )
     (path "/89fa9ce2-7528-4b6a-a78d-dd8cd30e03ee"
-      (reference "R1") (unit 1) (value "1k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
+      (reference "R1") (unit 1) (value "10k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/691f95b2-ce79-4def-a5f3-4493e3636464"
       (reference "R2") (unit 1) (value "R") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
@@ -3343,7 +3343,7 @@
       (reference "R3") (unit 1) (value "10k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/879dcbdf-30dc-4f81-b637-1fd4000b50f1"
-      (reference "R4") (unit 1) (value "180") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
+      (reference "R4") (unit 1) (value "1,6k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/d5685ba3-4617-4a5f-8d6a-9a35fa4e9c1e"
       (reference "RESISTANCE1") (unit 1) (value "1000 Ohms") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
