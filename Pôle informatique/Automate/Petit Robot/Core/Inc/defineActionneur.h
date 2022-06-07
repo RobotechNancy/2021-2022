@@ -11,10 +11,9 @@
 #define CLK 16000000
 #define PRESCALER 16
 
-//distance NEUTRE-STATUETTE = +- 62mm = -+16258pas
-//distance NEUTRE-AIMANT = +- 13mm = -+3409pas
-#define NB_STEPS_STATUETTE 16258
-#define NB_STEPS_AIMANT 3409
+//distance NEUTRE-STATUETTE = +- 62mm = -+130000pas
+//distance NEUTRE-AIMANT = +- 13mm = -+13000pas
+#define NB_STEPS 23000
 
 #define LENGTH_ARR_MAX 1105
 

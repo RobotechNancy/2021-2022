@@ -1,8 +1,9 @@
-../Core/Src/servo.c:17:6:servo3Start	8	static
-../Core/Src/servo.c:20:6:servo3Stop	8	static
-../Core/Src/servo.c:24:6:deplacement_servo_resistance	24	static
-../Core/Src/servo.c:34:5:test_resistance	32	static
-../Core/Src/servo.c:61:6:attendre	24	static
-../Core/Src/servo.c:68:5:aimant_on	8	static
-../Core/Src/servo.c:73:5:aimant_off	8	static
-../Core/Src/servo.c:78:6:aimant	16	static
+../Core/Src/servo.c:18:6:servo3Start	8	static
+../Core/Src/servo.c:21:6:servo3Stop	8	static
+../Core/Src/servo.c:25:5:deplacementTest	16	static
+../Core/Src/servo.c:33:9:deplacement_servo_resistance	24	static
+../Core/Src/servo.c:44:19:test_resistance	32	static
+../Core/Src/servo.c:71:6:attendre	24	static
+../Core/Src/servo.c:81:5:aimant_off	8	static
+../Core/Src/servo.c:86:5:aimant_on	8	static
+../Core/Src/servo.c:91:9:aimant	16	static

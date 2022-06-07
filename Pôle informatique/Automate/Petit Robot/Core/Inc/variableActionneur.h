@@ -19,10 +19,9 @@ typedef enum {
 } Deplacement_State_t;
 
 typedef enum{
-	NEUTRE = 0,
+	INCONNUE = 0,
 	STATUETTE = 1,
-	AIMANT = 2,
-	INCONNUE = 3
+	AIMANT = 2
 } Position_t;
 
 typedef struct{
@@ -61,6 +60,8 @@ uint32_t get_steps(void);
 uint32_t get_steps_left(void);
 uint32_t get_freq(void);
 float time_left(void);
+void set_fin(bool f);
+bool get_fin(void);
 
 
 #endif /* INC_VARIABLEACTIONNEUR_H_ */

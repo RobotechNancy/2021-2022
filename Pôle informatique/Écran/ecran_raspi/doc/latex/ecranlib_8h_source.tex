@@ -1,0 +1,54 @@
+\hypertarget{ecranlib_8h_source}{}\doxysection{ecranlib.\+h}
+\mbox{\hyperlink{ecranlib_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00008}00008 \textcolor{preprocessor}{\#ifndef ECRAN\_H}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00009}00009 \textcolor{preprocessor}{\#define ECRAN\_H}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ecran__define_8h}{ecran\_define.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{serialib_8h}{serialib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{loglib_8h}{loglib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <iterator>}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00025}\mbox{\hyperlink{struct_trame__t}{00025}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00026}\mbox{\hyperlink{struct_trame__t_a4426f3bf120ad4fa2c19c4adf8eda7c7}{00026}}   \mbox{\hyperlink{ecran__define_8h_a21e9b9915f9a3af1d347bc55ed11fc2a}{Mode\_Ecran\_t}} \mbox{\hyperlink{struct_trame__t_a4426f3bf120ad4fa2c19c4adf8eda7c7}{mode}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00027}\mbox{\hyperlink{struct_trame__t_af1744dff908a0818d8616e176a2c7203}{00027}}   \mbox{\hyperlink{ecran__define_8h_a502f50ef07430d5a02d57f7444b5b2c3}{Categorie\_Ecran\_t}} \mbox{\hyperlink{struct_trame__t_af1744dff908a0818d8616e176a2c7203}{categorie}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00028}\mbox{\hyperlink{struct_trame__t_a0491af8d19228af4efe5bf8a7e334e9f}{00028}}   \mbox{\hyperlink{ecran__define_8h_a1ab2f8c752f5a51db37b83da9e37d1f7}{Sous\_Categorie\_Ecran\_t}} \mbox{\hyperlink{struct_trame__t_a0491af8d19228af4efe5bf8a7e334e9f}{sous\_categorie}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00029}\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{00029}}   uint8\_t *\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{valeur}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00030}\mbox{\hyperlink{struct_trame__t_a24bba0c76c928a314ca2d34f488a03be}{00030}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame__t_a24bba0c76c928a314ca2d34f488a03be}{taille}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00031}00031 \} \mbox{\hyperlink{struct_trame__t}{Trame\_t}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00036}\mbox{\hyperlink{class_ecran}{00036}} \textcolor{keyword}{class }\mbox{\hyperlink{class_ecran}{Ecran}}\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00038}00038 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00040}00040     \textcolor{comment}{// Constructeur de la classe écran}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00041}00041     \mbox{\hyperlink{class_ecran_a15869bafa18dfc89f64876cd4f7ddb90}{Ecran}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00043}00043     \textcolor{comment}{// Desctructeur de la classe écran}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00044}00044     \mbox{\hyperlink{class_ecran_a4405b236df3f818ec12d3bff0df63856}{\string~Ecran}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00045}00045     }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00046}00046     \textcolor{comment}{// Ouverture de la connexion série}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00047}00047     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ecran_a883ff9e63313cf711749d418df9f0c02}{openSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00049}00049     \textcolor{comment}{// Fermeture de la connexion série}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00050}00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ecran_a9f6f5d42e7c1362edb7f9b152db6b50f}{closeSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00052}00052     \textcolor{comment}{// Envoi d'une trame en UART à l'écran}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00053}00053     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ecran_a7d189da49f33ecf5ede14f5701f32b50}{sendTrame}}(\mbox{\hyperlink{struct_trame__t}{Trame\_t}} trame);}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00055}00055 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00057}00057     \textcolor{comment}{// Retard de temporisation dans l'exécution du code}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00058}00058     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ecran_a7cec3e3dc54a050ab9461e7a534b4828}{delay}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00060}00060 \};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8h_source_l00062}00062 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// XBEE\_H}}
+
+\end{DoxyCode}

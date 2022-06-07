@@ -33,6 +33,7 @@ typedef union {
 
 
 
+
 struct CanResponse_t{
 	uint addr;	/* addresse du destinataire du message */
 	uint emetteur;	/* adresse de l'éméteur */
@@ -45,13 +46,10 @@ struct CanResponse_t{
 	unsigned char data[8];
 };
 
-CAN_HandleTypeDef hcan_p;
-uint8_t CanAdresse;
-
 
 struct CanResponse_t traitement_trame( CAN_RxHeaderTypeDef frame, uint8_t data[]);
 void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse);
-int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint data_len, bool isRep, uint repLenght, uint idMessage =0);
+int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint data_len, bool isRep, uint repLenght, uint idMessage);
 int start_listen();
 
 

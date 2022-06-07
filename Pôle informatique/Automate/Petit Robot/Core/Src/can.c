@@ -9,6 +9,9 @@
 #include "can.h"
 #include "defineCan.h"
 #include "stm32f3xx_hal.h"
+#include "servo.h"
+#include <stdbool.h>
+#include "variableActionneur.h"
 
 struct CanMsg{
 	int addr;
@@ -17,6 +20,9 @@ struct CanMsg{
 	int dataLen;
 	char data[];
 };
+
+extern CAN_HandleTypeDef hcan_p;
+extern uint8_t CanAdresse;
 
 
 /*!
@@ -41,25 +47,35 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	msg = traitement_trame( RxHeader, RxData);
 	/////////////////////////////////////////////////////////////////////////
 	switch(msg.codeFct){
-	case DEPLACEMENT_BRAS_RESISTANCE:;
-		uint8_t CR=deplacement_servo_resistance(msg.data[0]);
-		uint8_t data[1] = {CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+	uint8_t CR;
+	uint8_t data[1];
+	case DEPLACEMENT_BRAS_RESISTANCE:
+        CR=deplacement_servo_resistance(msg.data[0]);
+        data[0] = CR;
+        while (get_fin()!=1) {
+        }
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
 		break;
-	case BRAS_GLICIERE_STATUE:;
-		uint8_t CR=go_position(msg.data[0]);
-		uint8_t data[1]={CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+	case BRAS_GLICIERE_STATUE:
+		go_position(msg.data[0]);
+		start_generate();
+		data[0]= 0;
+//		 while (get_fin()!=1) {
+//		        }
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
 		break;
-	case ACTION_AIMANT:;
-		uint8_t CR=aimant(msg.data[0]);
-		uint8_t data[1]={CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
+	case ACTION_AIMANT:
+		CR=aimant(msg.data[0]);
+		data[0]=CR;
+
+		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
 		break;
-	case TEST_RESISTANCE:;
-		uint8_t CR=test_resistance();
-		uint8_t data[1]={CR};
-		send(CAN_ADDR_RASPBERRY,VALEUR_RESISTANCE,CR,1,true,1,msg.idMessage);
+	case TEST_RESISTANCE:
+		CR=test_resistance();
+		data[0]=CR;
+		 while (get_fin()!=1) {
+		        }
+		send(CAN_ADDR_RASPBERRY,VALEUR_RESISTANCE,data,1,true,1,msg.idMessage);
 		break;
 	default :
 

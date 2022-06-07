@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robotech 2021 - Ecran: Référence de la classe timeOut</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Robotech 2021 - Ecran<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="classtime_out-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la classe timeOut</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class can manage a timer which is used as a timeout.  
+ <a href="classtime_out.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="serialib_8h_source.html">serialib.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a2cffa89f7b90e4501e07e8cb7ccb3117"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtime_out.html#a2cffa89f7b90e4501e07e8cb7ccb3117">timeOut</a> ()</td></tr>
+<tr class="memdesc:a2cffa89f7b90e4501e07e8cb7ccb3117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the class <a class="el" href="classtime_out.html" title="This class can manage a timer which is used as a timeout.">timeOut</a>.  <a href="classtime_out.html#a2cffa89f7b90e4501e07e8cb7ccb3117">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2cffa89f7b90e4501e07e8cb7ccb3117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b4caef4ce7bfc42b73a61589c098e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtime_out.html#a88b4caef4ce7bfc42b73a61589c098e8">initTimer</a> ()</td></tr>
+<tr class="memdesc:a88b4caef4ce7bfc42b73a61589c098e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the timer. It writes the current time of the day in the structure PreviousTime.  <a href="classtime_out.html#a88b4caef4ce7bfc42b73a61589c098e8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88b4caef4ce7bfc42b73a61589c098e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5db5b5f0db4f6ada19187ef8f214214"><td class="memItemLeft" align="right" valign="top">unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtime_out.html#af5db5b5f0db4f6ada19187ef8f214214">elapsedTime_ms</a> ()</td></tr>
+<tr class="memdesc:af5db5b5f0db4f6ada19187ef8f214214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time elapsed since initialization. It write the current time of the day in the structure CurrentTime. Then it returns the difference between CurrentTime and PreviousTime.  <a href="classtime_out.html#af5db5b5f0db4f6ada19187ef8f214214">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af5db5b5f0db4f6ada19187ef8f214214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a861a9dd7167145791d9ea4127114212a"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a></td></tr>
+<tr class="separator:a861a9dd7167145791d9ea4127114212a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >This class can manage a timer which is used as a timeout. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="serialib_8h_source.html#l00245">245</a> du fichier <a class="el" href="serialib_8h_source.html">serialib.h</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a2cffa89f7b90e4501e07e8cb7ccb3117" name="a2cffa89f7b90e4501e07e8cb7ccb3117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cffa89f7b90e4501e07e8cb7ccb3117">&#9670;&nbsp;</a></span>timeOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">timeOut::timeOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of the class <a class="el" href="classtime_out.html" title="This class can manage a timer which is used as a timeout.">timeOut</a>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="serialib_8cpp_source.html#l01011">1011</a> du fichier <a class="el" href="serialib_8cpp_source.html">serialib.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1012</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="af5db5b5f0db4f6ada19187ef8f214214" name="af5db5b5f0db4f6ada19187ef8f214214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5db5b5f0db4f6ada19187ef8f214214">&#9670;&nbsp;</a></span>elapsedTime_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long int timeOut::elapsedTime_ms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the time elapsed since initialization. It write the current time of the day in the structure CurrentTime. Then it returns the difference between CurrentTime and PreviousTime. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The number of microseconds elapsed since the functions InitTimer was called. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="serialib_8cpp_source.html#l01039">1039</a> du fichier <a class="el" href="serialib_8cpp_source.html">serialib.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1040</span>{</div>
+<div class="line"><span class="lineno"> 1041</span><span class="preprocessor">#if defined (NO_POSIX_TIME)</span></div>
+<div class="line"><span class="lineno"> 1042</span>    <span class="comment">// Current time</span></div>
+<div class="line"><span class="lineno"> 1043</span>    LARGE_INTEGER CurrentTime;</div>
+<div class="line"><span class="lineno"> 1044</span>    <span class="comment">// Number of ticks since last call</span></div>
+<div class="line"><span class="lineno"> 1045</span>    <span class="keywordtype">int</span> sec;</div>
+<div class="line"><span class="lineno"> 1046</span> </div>
+<div class="line"><span class="lineno"> 1047</span>    <span class="comment">// Get current time</span></div>
+<div class="line"><span class="lineno"> 1048</span>    QueryPerformanceCounter(&amp;CurrentTime);</div>
+<div class="line"><span class="lineno"> 1049</span> </div>
+<div class="line"><span class="lineno"> 1050</span>    <span class="comment">// Compute the number of ticks elapsed since last call</span></div>
+<div class="line"><span class="lineno"> 1051</span>    sec=CurrentTime.QuadPart-<a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a>;</div>
+<div class="line"><span class="lineno"> 1052</span> </div>
+<div class="line"><span class="lineno"> 1053</span>    <span class="comment">// Return the elapsed time in milliseconds</span></div>
+<div class="line"><span class="lineno"> 1054</span>    <span class="keywordflow">return</span> sec/(counterFrequency/1000);</div>
+<div class="line"><span class="lineno"> 1055</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno"> 1056</span>    <span class="comment">// Current time</span></div>
+<div class="line"><span class="lineno"> 1057</span>    <span class="keyword">struct </span>timeval CurrentTime;</div>
+<div class="line"><span class="lineno"> 1058</span>    <span class="comment">// Number of seconds and microseconds since last call</span></div>
+<div class="line"><span class="lineno"> 1059</span>    <span class="keywordtype">int</span> sec,usec;</div>
+<div class="line"><span class="lineno"> 1060</span> </div>
+<div class="line"><span class="lineno"> 1061</span>    <span class="comment">// Get current time</span></div>
+<div class="line"><span class="lineno"> 1062</span>    gettimeofday(&amp;CurrentTime, NULL);</div>
+<div class="line"><span class="lineno"> 1063</span> </div>
+<div class="line"><span class="lineno"> 1064</span>    <span class="comment">// Compute the number of seconds and microseconds elapsed since last call</span></div>
+<div class="line"><span class="lineno"> 1065</span>    sec=CurrentTime.tv_sec-<a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a>.tv_sec;</div>
+<div class="line"><span class="lineno"> 1066</span>    usec=CurrentTime.tv_usec-<a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a>.tv_usec;</div>
+<div class="line"><span class="lineno"> 1067</span> </div>
+<div class="line"><span class="lineno"> 1068</span>    <span class="comment">// If the previous usec is higher than the current one</span></div>
+<div class="line"><span class="lineno"> 1069</span>    <span class="keywordflow">if</span> (usec&lt;0)</div>
+<div class="line"><span class="lineno"> 1070</span>    {</div>
+<div class="line"><span class="lineno"> 1071</span>        <span class="comment">// Recompute the microseonds and substract one second</span></div>
+<div class="line"><span class="lineno"> 1072</span>        usec=1000000-<a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a>.tv_usec+CurrentTime.tv_usec;</div>
+<div class="line"><span class="lineno"> 1073</span>        sec--;</div>
+<div class="line"><span class="lineno"> 1074</span>    }</div>
+<div class="line"><span class="lineno"> 1075</span> </div>
+<div class="line"><span class="lineno"> 1076</span>    <span class="comment">// Return the elapsed time in milliseconds</span></div>
+<div class="line"><span class="lineno"> 1077</span>    <span class="keywordflow">return</span> sec*1000+usec/1000;</div>
+<div class="line"><span class="lineno"> 1078</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1079</span>}</div>
+<div class="ttc" id="aclasstime_out_html_a861a9dd7167145791d9ea4127114212a"><div class="ttname"><a href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">timeOut::previousTime</a></div><div class="ttdeci">struct timeval previousTime</div><div class="ttdef"><b>Definition:</b> <a href="serialib_8h_source.html#l00265">serialib.h:265</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a88b4caef4ce7bfc42b73a61589c098e8" name="a88b4caef4ce7bfc42b73a61589c098e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b4caef4ce7bfc42b73a61589c098e8">&#9670;&nbsp;</a></span>initTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timeOut::initTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise the timer. It writes the current time of the day in the structure PreviousTime. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="serialib_8cpp_source.html#l01019">1019</a> du fichier <a class="el" href="serialib_8cpp_source.html">serialib.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1020</span>{</div>
+<div class="line"><span class="lineno"> 1021</span><span class="preprocessor">#if defined (NO_POSIX_TIME)</span></div>
+<div class="line"><span class="lineno"> 1022</span>    LARGE_INTEGER tmp;</div>
+<div class="line"><span class="lineno"> 1023</span>    QueryPerformanceFrequency(&amp;tmp);</div>
+<div class="line"><span class="lineno"> 1024</span>    counterFrequency = tmp.QuadPart;</div>
+<div class="line"><span class="lineno"> 1025</span>    <span class="comment">// Used to store the previous time (for computing timeout)</span></div>
+<div class="line"><span class="lineno"> 1026</span>    QueryPerformanceCounter(&amp;tmp);</div>
+<div class="line"><span class="lineno"> 1027</span>    <a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a> = tmp.QuadPart;</div>
+<div class="line"><span class="lineno"> 1028</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno"> 1029</span>    gettimeofday(&amp;<a class="code hl_variable" href="classtime_out.html#a861a9dd7167145791d9ea4127114212a">previousTime</a>, NULL);</div>
+<div class="line"><span class="lineno"> 1030</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1031</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="a861a9dd7167145791d9ea4127114212a" name="a861a9dd7167145791d9ea4127114212a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861a9dd7167145791d9ea4127114212a">&#9670;&nbsp;</a></span>previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct timeval timeOut::previousTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="serialib_8h_source.html#l00265">265</a> du fichier <a class="el" href="serialib_8h_source.html">serialib.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="serialib_8h_source.html">serialib.h</a></li>
+<li><a class="el" href="serialib_8cpp_source.html">serialib.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
