@@ -41,16 +41,39 @@ Au début du fichier, on trouve :
   Enfin, on trouve les prototypes des fonctions qui permettent d'initialiser le capteur, et de récupérer la vitesse angulaire fournie par le capteur. Cette vitesse sera ensuite utilisée et traitée par le fichier **Gyro.c**.
   
 - le fichier "*Gyro.h*" contient les prototypes des fonctions permettant de gérer la calibration du capteur ainsi que la conversion et le traitement des valeurs de vitesse angulaire afin de fournir la rotation en degrés.  
-  
+
+
+-> Dossier **Core/Src** :
+
+- le fichier "*MPU6050.c*" contient les fonctions qui permettent d'initialiser le capteur, et de récupérer la vitesse angulaire fournie par le capteur.  
+
+- le fichier "*Gyro.c*" contient les fonctions permettant de gérer la calibration du capteur ainsi que la conversion et le traitement des valeurs de vitesse angulaire afin de fournir la rotation en degrés. Ce fichier est une extension des fonctions contenues dans "*MPU6050.c*", d'où l'inclusion du fichier dans la classe *Gyro*.
+
+Afin d'asssurer le fonctionnement de la librairie, il est nécessaire de modifier légèrement le fichier "*Core/Src/stm32l4xx_it.c*", afin d'ajouter dans la liste des include la libairie `#include "MPU6050.h"`. Il faut également appeler la fonction "*MPU6050_Interrupt_Routine()*" dans la fonction d'interruption système (située à la fin du fichier), pour obtenir un résultat comme ceci :
+
+```c
+/**
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+  MPU6050_Interrupt_Routine();
+  /* USER CODE END EXTI9_5_IRQn 1 */
+}
+```
+> *Remarque :* Les numéros des fonctions par défaut dépendant de la carte utilisée et de la configuration mise en place, et sont donc susceptibles de changer
 
 # Câblage des modules et pinout configuration
 
-Voici le câblage utilisé pour le projet, utilisant 2 capteurs TOF et une carte STM32L432KCU3 :
+Voici le câblage utilisé pour le projet, utilisant 1 capteur MPU6050 et une carte STM32L432KCU3 :
 
-| VL53L0X n°1        | STM32L432KCU3                |
+| MPU6050            | STM32L432KCU3                |
 | ------------------ | ---------------------------- |
-| XSHUT              | PA6                          |
-| /                  | PA5                          |
 | GND (masse)        | GND (pin CN4-2 ou pin CN3-4) |
 | SCL (serial clock) | PA9                          |
 | SDA (serial data)  | PA10                         |
@@ -59,9 +82,11 @@ Voici le câblage utilisé pour le projet, utilisant 2 capteurs TOF et une carte
 *Les pins situés sur la même ligne sont reliés entre eux*
 
 
-> Pour configurer le bus I2C sur la carte STM32, il faut penser à changer les réglages de la vitesse, dans le fichier **IOC du projet STM32**, dans le menu **Connectivity>I2C1>Parameter Settings** et régler la valeur de **I2C Speed Frequency (KHz)** à 10 (au lieu de 100 par défaut). Il faut ensuite se rendre dans le menu **System Core>GPIO>I2C** et de modifier les 2 lignes du bus I2C en réglant la valeur de **GPIO Pull-Up/Pull-down** sur **Pull-up** (il suffit de double cliquer sur chacune des deux lignes pour faire apparaitre le menu).
+> Pour configurer le bus I2C sur la carte STM32, il faut penser à activer les réglages de l'interruption du bus, dans le fichier **IOC du projet STM32**, dans le menu **Connectivity>I2C1>NVIC Settings** et cocher l'activation des interruptions **I2C1 event interrupt** et **I2C1 error interrupt** . Il faut ensuite se rendre dans le menu **System Core>GPIO>I2C** et de modifier les 2 lignes du bus I2C en réglant la valeur de **GPIO Pull-Up/Pull-down** sur **Pull-up** (il suffit de double cliquer sur chacune des deux lignes pour faire apparaitre le menu).
 >
 > Cela permet de ne pas mettre de résistances de Pull-up aux extrémités du bus I2C puisqu'elles sont en réalité internes dans la carte STM32.
+> Le mode de l'I2C à utiliser est *I2C*
+> Il faut ensuite utiliser une Pin non utilisée (PA6 sur l'IOC dans notre projet) et la régler sur "*GPIO_EXTI6*" afin de l'utiliser par la suite comme Pin d'interruption
 
 
 Pinout configuration de la carte STM32 NUCLEO-L432KCU3 :
