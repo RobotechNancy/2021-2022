@@ -14,9 +14,9 @@
 > Un servomoteur à angle à besoin en plus du signal d'être (en général) relié à la masse et au 5V (vérifier sur datasheet si la STM suffit pour l'alimenter ou si il faut rajouter une alimentation externe)
 3. Regler ensuite les timers pour bien les calibrer (adapter les valeurs des timers en fonction de la valeur de la clock de l'année)
 4. Une fois ces 3 actions effectuer, pour faire fonctionner le servomoteur il faut :
-  1. Activer la pin configurée précédemment
-  2. Régler la valeur du CCR associé au timer en fonctione de l'angle que l'on veut (faire des tests pour trouver la bonne valeur)
-  3. Désactiver la pin une fois l'action du servomoteur effectuée
+    1. Activer la pin configurée précédemment
+    2. Régler la valeur du CCR associé au timer en fonctione de l'angle que l'on veut (faire des tests pour trouver la bonne valeur)
+    3. Désactiver la pin une fois l'action du servomoteur effectuée
 > Attention une fois une commande d'angle lancée, ne pas bloquer et/ou pousser le servomoteur dans le sens inverse cela risque de le casser/dérégler
 > Si il y à besoin d'une fonction d'attente, regarder la fonction faite  à la main dans le projet STM et ne pas utiliser la fonction HAL_DELAY de STM, pendant son utilisation, plus rien d'autre ne se passe.
 
