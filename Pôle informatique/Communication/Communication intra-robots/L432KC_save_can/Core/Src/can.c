@@ -39,7 +39,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 	struct CanResponse_t msg;
 	msg = traitement_trame( RxHeader, RxData);
+	// PAS TOUCHE
 	/////////////////////////////////////////////////////////////////////////
+	//	le message et ses info sont dans la variable msg
+	//	écrire le code ICI
+
 	switch(msg.codeFct){
 	case AVANCE:;
 		Tramme_Moteur_t trammeMotor;
@@ -56,9 +60,9 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 
 
-	//	le message et ses info sont dans la variable msg
 
-	//	écrire le code ICI
+
+
 
 
 	//renvoi un msg sur le bus can
