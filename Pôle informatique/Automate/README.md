@@ -1,4 +1,4 @@
-# Ce code permet :
+# Ce code permet de :
 
 - Commander un actionneur type servomoteur à angle
 - Commander un actionneur type TOR (electroaimant,pompe,etc)
