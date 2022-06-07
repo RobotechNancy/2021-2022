@@ -102,10 +102,64 @@ sudo reboot
 
 ##### Connexion au point d'accès :
 
-- Connexion au wifi généré par la RaspberryPi [mot de passe : Robotech2022@]
+- Connexion au wifi généré par la RaspberryPi **[mot de passe : Robotech2022@]**
 - Connexion en ssh
 ```
 ssh pi@192.168.50.10 
 ```
-[mot de passe : robotech2022]
+**[mot de passe : robotech2022]**
 
+
+##### Désactivation du point d'accès :
+
+```bash
+sudo nano /etc/dhcpcd.conf
+```
+
+Commenter les lignes suivantes (à la fin du fichier) :
+
+```bash
+#interface wlan0
+#nohook wpa_supplicant
+#static ip_address=192.168.50.10/24
+#static routers=192.168.50.1
+```
+
+On désactive les services réseaux :
+
+```bash
+sudo systemctl disable dnsmasq hostapd
+```
+
+On redémarre la RaspberryPi :
+
+```bash
+sudo reboot
+```
+
+##### Réactivation du point d'accès :
+
+```bash
+sudo nano /etc/dhcpcd.conf
+```
+
+Décommenter les lignes suivantes (à la fin du fichier) :
+
+```bash
+interface wlan0
+nohook wpa_supplicant
+static ip_address=192.168.50.10/24
+static routers=192.168.50.1
+```
+
+On réactive les services réseaux :
+
+```bash
+sudo systemctl enable dnsmasq hostapd
+```
+
+On redémarre la RaspberryPi :
+
+```bash
+sudo reboot
+```
