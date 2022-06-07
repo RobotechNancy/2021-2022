@@ -25,7 +25,7 @@
 
 1. Créer le projet STM sur LA BONNE VERSION de la carte !!
 2. Commencer par configurer les pins de la carte sur le .ioc (pin d'envoie de signal et autres si besoin)
-> Pour un actionneur TOR, il faut configurer dans GPIO output le GPIO mode en Push Pull sans pull-up ni pull-down (voir avec le pole electronique si la carte alimente l'actionneur en push/pull ou en open-drain
+> Pour un actionneur TOR, il faut configurer dans GPIO output le GPIO mode en Push Pull sans pull-up ni pull-down (voir avec le pole electronique si la carte alimente l'actionneur en push/pull ou en open-drain)
 3. Une fois cela configuré, il suffit d'écrire sur la PIN 1 ou 0 (SET ou RESET) pour activer/désactiver l'actionneur (si en open drain, les commandes sont inversées)
 
 
