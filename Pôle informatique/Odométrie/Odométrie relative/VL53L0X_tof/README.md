@@ -93,7 +93,7 @@ L'ensemble de cette librairie est utilisée dans le fichier **Core/Src/main.c** 
 
 Voici le câblage utilisé pour le projet, utilisant 2 capteurs TOF et une carte STM32L432KCU3 :
 
-| VL53L0X n°1       | VL53L0X n°2 | STM32L432KCU3                |
+| VL53L0X n°1        | VL53L0X n°2  | STM32L432KCU3                |
 | ------------------ | ------------ | ---------------------------- |
 | XSHUT              | /            | PA6                          |
 | /                  | XSHUT        | PA5                          |
