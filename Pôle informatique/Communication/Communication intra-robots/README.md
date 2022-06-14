@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # definition de la trame du bus can
 
 ## Champ d'identification en version étendu (29 bit)
@@ -168,6 +167,7 @@ Dans le .ioc :
 	- **Time Quanta in Bit Segment 2**
 de tel sorte d'obtenir le **Baud Rate** voulu (identique autre carte connecter au bus can. 181818 bit/s par example).
 Sur une carte en confguration par default :
+| PARAMETRE | VALEUR |
 | ----------- | ----------- |
 | **Prescaler (for Time Quantum)** | 16 |
 | **Time Quanta in Bit Segment 1** | 8 Times | 
@@ -175,10 +175,10 @@ Sur une carte en confguration par default :
 
 - dans **NVIC Settings** tous cocher !!! (4 cases ou 1 en fonction de la carte)
 - verifier que les pin sont bien ascossier comme cela :
+| PIN  | DESCRIPTION |
 | ---- | ------- |
 | PA12 | CAN1_TX |
 | PA11 | CAN1_RX | 
-| ---- | ------- |
 - Inclure les fichiers : can.c, can.h, defineCan.h
 - dans le main :
 	- include `#include "defineCan.h"` et `#include "can.h"`
@@ -203,19 +203,3 @@ librairie orienté objet en c++ : voir le dossier **can_raspberry**
 ## Sur une STM32
 les messages reçu déclanche une intéruption en appelant la fonction `void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)`
 pour envoyer un message il faut utiliser `int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght, uint idMessage)`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> f7aabaffd0e78efc24e60f3c7b49f27c709245d7
