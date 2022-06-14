@@ -2,7 +2,8 @@
 #define DEFINE_CAN_H
 
 
-#define CAN_BUS_NAME "vcan0"
+#define CAN_BUS_NAME "can0"
+
 
 
 //                                  0b00000000000000000000000000000
@@ -29,8 +30,10 @@
 //                                   0b01111 0000 0000 0000 0000 0000 0000
 //definition des addresses d'émmission sur le bus can (de type 0xX00)
 typedef enum {
-    CAN_ADDR_RASPBERRY = 0x1000000,
-    CAN_ADDR_BASE_ROULANTE = 0x2000000
+    CAN_ADDR_RASPBERRY =        0x1000000,
+    CAN_ADDR_BASE_ROULANTE =    0x2000000,
+    CAN_ADDR_ODOMETRIE =        0x3000000,
+    CAN_ADDR_ACTIONNEUR =       0x4000000
 }CAN_ADDR;
 
 
@@ -38,14 +41,20 @@ typedef enum {
 //                                   0b00000 1111 0000 0000 0000 0000 0000
 //definition des addresses de réception sur le bus can (de type 0xX00)
 typedef enum {
-    CAN_ADDR_RASPBERRY_E = 0x100000,
-    CAN_ADDR_BASE_ROULANTE_E = 0x200000
+    CAN_ADDR_RASPBERRY_E =      0x100000,
+    CAN_ADDR_BASE_ROULANTE_E =  0x200000,
+    CAN_ADDR_ODOMETRIE_E =      0x300000,
+    CAN_ADDR_ACTIONNEUR_E =     0x400000
 }CAN_EMIT_ADDR;
+
+
+
 
 
 
 //      0xFF000  (trois 0)
 //      0b00000 0000 1111 1111 0000 0000 0000
+
 typedef enum {
 
     AVANCE =                        0x01000,
@@ -76,8 +85,6 @@ typedef enum {
 
 }CAN_CODE_FCT;
 
-
-#define CAN_LIST_CODE_FCT (uint[]){AVANCE, REP_AVANCE}
 
 //definition des code erreur
 
