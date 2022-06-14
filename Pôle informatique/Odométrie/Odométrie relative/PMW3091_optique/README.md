@@ -37,3 +37,6 @@
  De plus, il permet ensuite de calculer la position relative du capteur : c'est à dire que si le robot bouge il va garder en position initiale l'endroit où il était au démarrage du code et ensuite on le déplacant, on observera sur putty en mm les longueurs qu'il aura parcouru. En le remettant à la position initiale il va redonner posX = 0 et posY = 0 avec un taux d'erreur de lordre du mm.
  
  Le code fonctionne pour les 2 robots que ce soit pour le capteur du petit robot tout comme celui du grand robot.
+ 
+ Lien vers la DATASHEET : 
+[Datasheet_CapteurOptique_PMW3901 (2).pdf](https://github.com/RobotechNancy/2021-2022/files/8897904/Datasheet_CapteurOptique_PMW3901.2.pdf)
