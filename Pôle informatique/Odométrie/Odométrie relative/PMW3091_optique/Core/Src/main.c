@@ -26,8 +26,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define COEF_CAPTEUR_BLEU_X  0.4762
-#define COEF_CAPTEUR_BLEU_Y	 0.303
+
+#define COEF_CAPTEUR_Petit_Robot_X  0.25 // permet de convertir en mm les valeurs de Variations du capteur du petit robot
+#define COEF_CAPTEUR_Petit_Robot_Y	0.25
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,21 +53,22 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
-char buffer[1024];
+char buffer[1024]; // Initialisation d'une variable de stockage
 uint16_t Tx_len;
 PMW3901_Status_t status;
-int16_t var_x,var_y;
+int16_t var_x,var_y; // Initialisation de la variation
 
-float posX = 0;
+float posX = 0; // Initialisation des variables de position
 float posY = 0;
-float dx = 0;
+
+float dx = 0; // Initialisation des variables de déplacement
 float dy = 0;
 
 PMW3901_Descriptor_t PMW3901_Descriptor = {
 		.hspi = &hspi1,
 		.CS_Port = SPI1_CS_GPIO_Port,
 		.CS_Pin = SPI1_CS_Pin
-};
+}; // Initialise le port SPI
 
 /* USER CODE END PV */
 
@@ -110,16 +113,20 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_SPI1_Init();
-  /* USER CODE BEGIN 2 */
-  Tx_len = sprintf (buffer, "init\r\n");
-  HAL_UART_Transmit(&huart2,(uint8_t*) buffer, Tx_len, 100);
 
-  status = PMW3901_Init(&PMW3901_Descriptor);
-  Tx_len = sprintf (buffer, "init status = %d\r\n",status);
-  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, Tx_len, 100);
+  /* USER CODE BEGIN 2 */
+
+  Tx_len = sprintf (buffer, "init\r\n"); // Début initialisation + écriture de "init"
+  HAL_UART_Transmit(&huart2,(uint8_t*) buffer, Tx_len, 100); // Permet d'écrire en uart le tx_len : Va écrire dans le terminal ; "init"
+
+  status = PMW3901_Init(&PMW3901_Descriptor); // Permet d'initialiser le capteur optique
+
+  Tx_len = sprintf (buffer, "init status = %d\r\n",status); // Permet d'afficher status qui s'il est égal à 0 veut dire que tout fonctionne
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, Tx_len, 100); // Permet d'écrire dans le terminal : "init status = " avec le status qui doit être à 0 indiquant que tout fonctionne
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,13 +136,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  status = PMW3901_Read_Variation(&var_x, &var_y);
 
-	  dx = COEF_CAPTEUR_BLEU_X * var_x;
-	  posX = posX + dx;
+	  status = PMW3901_Read_Variation(&var_x, &var_y); // Permet de lire les valeurs de var_x et var_y
 
-	  dy = COEF_CAPTEUR_BLEU_Y * var_y;
-	  posY = posY + dy;
+	  dx = COEF_CAPTEUR_Petit_Robot_X * var_x;
+	  posX = posX + dx; // Permet de déterminer la position du robot grâce au capteur optique en X
+
+	  dy = COEF_CAPTEUR_Petit_Robot_Y * var_y;
+	  posY = posY + dy; // Permet de déterminer la position du robot grâce au capteur optique en Y
+
+	  Tx_len = sprintf (buffer, "Position x = %f\tPosition y = %f\tStatus = %d\r\n",posX,posY,status);
+	  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, Tx_len, 100); // Permet d'afficher en uart dans le terminal le posX, posY, status
+
+	  HAL_Delay(10); // Permet de mettre un délai de 10 ms
   }
   /* USER CODE END 3 */
 }
