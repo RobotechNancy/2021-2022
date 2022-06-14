@@ -69,7 +69,11 @@ Sur une carte en confguration par default :
 - Inclure les fichiers : can.c, can.h, defineCan.h
 - dans le main :
 	- include `#include "defineCan.h"` et `#include "can.h"`
-	- dans user code 2  mettre `CAN_Config(hcan1, CAN_ADDR_BASE_ROULANTE_E);` avec hcan1 la variable de type `CAN_HandleTypeDef` instantier dans private variable, et **CAN_ADDR_BASE_ROULANTE_E** une valeur de l'enum **CAN_EMIT_ADDR**
+	- dans le user code 2 du main mettre 
+```c
+CAN_Config(hcan1, CAN_ADDR_BASE_ROULANTE_E);
+``` 
+avec hcan1 la variable de type `CAN_HandleTypeDef` instantier dans private variable, et **CAN_ADDR_BASE_ROULANTE_E** une valeur de l'enum **CAN_EMIT_ADDR**
 
 
 # Utilisation du bus can
