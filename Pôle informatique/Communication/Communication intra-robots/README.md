@@ -26,9 +26,9 @@ installer le packet can-utils :
 sudo apt install can-utils
 ```
 
-ajouter :
+ajouter le fichier `/boot/config.txt :
 ```bash
-dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000` cette ligne dans le fichier `sudo nano /boot/config.txt
+dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000
 ```
 12000000 dépend du quartz utiliser (souvent 12000000 ou 8000000)
 
