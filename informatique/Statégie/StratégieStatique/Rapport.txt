@@ -1,0 +1,104 @@
+FAITS :
+- voir ce qu'il faut faire dans le mode auto_test
+
+- CAN :
+-> send(uint addr, uint codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght)
+-----)send(CAN_ADDR_BASE_ROULANTE, AVANCE, data, 5, true, 5)
+
+A FAIRE 
+
+- CAN :
+-> Voir comment fonctionne le listen avec le can
+
+
+
+- Imaginer l'algo du mode compétition
+- Que faire dans le mode Arrêt d'urgence ? Proposer la possibilité de revenir sur l'étape précédente ? Gérer l'appui sur le bouton AU.
+-> Faire une fonction utilisée dans le mode arrêt d'urgence qui permet le retour à l'étape cancel.
+
+- Faire un gros header qui permet d'appeler un code fonction pour une carte donnée
+
+- Faire un algo pour déduire le déplacement à faire pour rejoindre zone x
+Procédé :
+-> Demander la position (send, listen, analyser)
+-> Appeler une fonction qui va retourner le déplacement (paramètres : position, lieu destination /!\ Faire des structures ?)
+-> Envoyer les instructions de déplacement à la BR (faire les codes fonctions [vitesse, direction, distance], gérer les paramètres)
+-> 
+
+- Dans le cas où les 2 robots fonctionnent faire sur chaques cartes les fonctions R1 et R2
+-> Dans le cas où au moins 1 robot lache faire R1 ou R2 pour l'autre et stratégieNOrobot sur l'autres / les autres
+
+- Changer la fonction qui donne la disposition des 2 points et prendre en compte le scas où c'est égal
+- Voir pour le décalage de 6° dans les calculs pour les déplacement hauts gauche et droite
+
+V-  Ne pas mettre de réajustement mais faire une fonction oriente qui s'oriente bien pour finir
+-> angles depart, arrivee 
+-> 180 90
+
+- Trame : Vitesse: 1 octet -> 
+	  Direction : 1 octet -> 4 bits (voir 3 si on ne considère pas le 00000000)
+	  Distance : 1 angle -> 2 octets -> 0 to 360
+		     1 distance -> 2 octets (1?) -> 0 to x mm
+- Trame Pompe : pas besoin de données
+-> Lier les trames pour la pompe et le moteur pas à pas (PAS DE PARAMETRES) := 
+
+Trames qui se débrouillent :
+	trame Saisir_statuette(déplacement position droite moteur pàp + activer electroaimant) -> CAN_AUTOMATE_SAISIE_STATUETTE
+	trame Lâcher_statuette(désactiver electroaimant + déplacement position milieu moteur pàp) -> CAN_AUTOMATE_LACHER_STATUETTE
+	trame Lâcher_réplique(déplacement position droite moteur pàp) -> CAN_AUTOMATE_LACHER_REPLIQUE
+
+Trames avec retours :
+	trame Lire_résistance(moteur qui va baisser le bras pour lire)
+	-> retour d'une valeur 
+	-> Faire une trame qui permet d'avancer le robot 
+	-> Faire une autre trame / fonction qui permet de gérer le décalage au prochain banc de test résistance
+
+
+-----------------------------------------
+- Tester de lire des données via le scan sortant des capteurs de N et Odométrie
+- Faire code 2ème robot
+-> Faire les fonctions pour grab, micro déplacement (=ajustement position)
+-> 
+- Faudrait que l'accéléromètre soit dans l'axe d'un déplacement pour pouvoir facilement faire le calcul
+
+STRATEGIES
+  Prévoir :
+  -> Stratégie 0 robots
+  -> Stratégies 1 robot (R1 ou R2)
+  R1:
+      Déplacement en bas du piédestal
+      Saisir la statuette
+      Demi-tour
+      Poser la réplique
+      Se placer en face de la permière plaque à résistance
+      Test et poussée des résistances
+      Abri de chantier pousser les pièces
+      Retour au campement
+  R2:
+      Délacement site de fouille
+      Récupération des 3 jetons présents
+      Déplacement distributeur
+      Récupérer échantillon
+      Déplacement distributeur mid
+      Récupérer 3 échantillons
+      Déplacement vers galerie
+      Déposer les jetons sur la galerie
+      Retour au campement
+
+  -> Stratégie 2 robots
+
+  Déterminer la position du robot sur le plateau
+  Plaquette résistance
+  -> Déplacement vers la première plaquette résistance
+  -> Déterminer la position de celle-ci
+  -> Fonction pour gérer la plaque (lire, analyser, pousser)
+  -> Se décaler contre la prochaine plaque
+
+  Statuette
+  -> Se déplacer vers la statuette
+  -> Attraper la statuette
+  -> Se déplacer vers la vitrine
+
+  Fontions générales
+  -> position ?
+  ->

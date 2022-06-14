@@ -1,0 +1,140 @@
+\hypertarget{define_8h_source}{}\doxysection{define.\+h}
+\mbox{\hyperlink{define_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00008}00008 \textcolor{preprocessor}{\#ifndef DEFINE\_XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00009}00009 \textcolor{preprocessor}{\#define DEFINE\_XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00011}00011 \textcolor{comment}{// Paramètres du port série}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00012}00012 \textcolor{comment}{// Configuration des modules XBee pour la compétition}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00013}\mbox{\hyperlink{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}{00013}} \textcolor{preprocessor}{\#define XB\_SERIAL\_PORT\_PRIMARY "{}/dev/ttyAMA0"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00014}\mbox{\hyperlink{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}{00014}} \textcolor{preprocessor}{\#define XB\_BAUDRATE\_PRIMARY 9600}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00015}\mbox{\hyperlink{define_8h_a017a7b9bdf79e3aceafb5111c49bcc2b}{00015}} \textcolor{preprocessor}{\#define XB\_DATABITS\_PRIMARY SERIAL\_DATABITS\_8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00016}\mbox{\hyperlink{define_8h_acc61b40fe509d72640422289f4ca3fad}{00016}} \textcolor{preprocessor}{\#define XB\_PARITY\_PRIMARY SERIAL\_PARITY\_EVEN}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00017}\mbox{\hyperlink{define_8h_a2527277ea7bfc48f384222ad9c2460bc}{00017}} \textcolor{preprocessor}{\#define XB\_STOPBITS\_PRIMARY SERIAL\_STOPBITS\_1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00020}00020 \textcolor{comment}{// Configuration d'usine par défaut des modules XBee neufs}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00021}\mbox{\hyperlink{define_8h_a9c64f25548c02d153acc044a16e610f6}{00021}} \textcolor{preprocessor}{\#define XB\_SERIAL\_PORT\_DEFAULT "{}/dev/ttyAMA0"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00022}\mbox{\hyperlink{define_8h_a089dfd8cab0a6711a782a984dfd30c29}{00022}} \textcolor{preprocessor}{\#define XB\_BAUDRATE\_DEFAULT 9600}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00023}\mbox{\hyperlink{define_8h_a3e8c543722f50daa8c6e454b15efbe97}{00023}} \textcolor{preprocessor}{\#define XB\_DATABITS\_DEFAULT SERIAL\_DATABITS\_8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00024}\mbox{\hyperlink{define_8h_a58dd8396f0b9386153d145b907e84553}{00024}} \textcolor{preprocessor}{\#define XB\_PARITY\_DEFAULT SERIAL\_PARITY\_NONE}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00025}\mbox{\hyperlink{define_8h_ad1e4503c41f73a1e2796f8303d81d7b4}{00025}} \textcolor{preprocessor}{\#define XB\_STOPBITS\_DEFAULT SERIAL\_STOPBITS\_1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00027}\mbox{\hyperlink{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}{00027}} \textcolor{preprocessor}{\#define XB\_V\_ACK 0x06}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00028}\mbox{\hyperlink{define_8h_aeb765eb40bd0f847f6a83413de2244d9}{00028}} \textcolor{preprocessor}{\#define XB\_V\_NACK 0x15}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00030}00030 \textcolor{comment}{// Addresses des robots}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00031}\mbox{\hyperlink{define_8h_ad350453416fcfa7702bc52cf7957a2a0}{00031}} \textcolor{preprocessor}{\#define XB\_ADR\_BROADCAST 0x11}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00032}\mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{00032}} \textcolor{preprocessor}{\#define XB\_ADR\_ROBOT\_01 0x12}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00033}\mbox{\hyperlink{define_8h_afb1db7f28458f5c87f93cf2076ce167f}{00033}} \textcolor{preprocessor}{\#define XB\_ADR\_ROBOT\_02 0x13}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00035}\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{00035}} \textcolor{preprocessor}{\#define XB\_LIST\_ADR (int[])\{XB\_ADR\_BROADCAST, XB\_ADR\_ROBOT\_01, XB\_ADR\_ROBOT\_02\}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00037}\mbox{\hyperlink{define_8h_ab156591ecc1c724d973004e6a2f89fa4}{00037}} \textcolor{preprocessor}{\#define XB\_ADR\_CURRENT\_ROBOT XB\_ADR\_ROBOT\_01}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00039}00039 \textcolor{comment}{// Paramètres de la trame message}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00040}\mbox{\hyperlink{define_8h_acca99b796bf305986693d2949c07f1b4}{00040}} \textcolor{preprocessor}{\#define XB\_V\_START 0x02}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00041}\mbox{\hyperlink{define_8h_aed2f6788341df71e4b25f91c925ef34f}{00041}} \textcolor{preprocessor}{\#define XB\_V\_END 0x03}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00043}00043 \textcolor{comment}{// Codes fonctions}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00044}\mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{00044}} \textcolor{preprocessor}{\#define XB\_FCT\_TEST\_ALIVE 0x1E}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00046}\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{00046}} \textcolor{preprocessor}{\#define XB\_LIST\_CODE\_FCT (int[])\{XB\_FCT\_TEST\_ALIVE\}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00048}00048 \textcolor{comment}{// Code erreurs généraux}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00049}\mbox{\hyperlink{define_8h_a6a7985c14914aa1ed68abb1749c0267e}{00049}} \textcolor{preprocessor}{\#define XB\_E\_SUCCESS 000}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00051}00051 \textcolor{comment}{// Codes erreurs des codes fonctions}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00052}\mbox{\hyperlink{define_8h_aaebf92484330442fd3a89ca55c6501b2}{00052}} \textcolor{preprocessor}{\#define XB\_FCT\_E\_SUCCESS 100}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00053}\mbox{\hyperlink{define_8h_af13758a628d8c1927c1c68cf2a53f989}{00053}} \textcolor{preprocessor}{\#define XB\_FCT\_E\_NOT\_FOUND -\/101}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00054}\mbox{\hyperlink{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}{00054}} \textcolor{preprocessor}{\#define XB\_FCT\_E\_NONE\_REACHABLE -\/102}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00056}00056 \textcolor{comment}{// Codes erreurs traitement de trame}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00057}\mbox{\hyperlink{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}{00057}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_SUCCESS 200}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00058}\mbox{\hyperlink{define_8h_ac21719e85ef616655914aebe4ac00b18}{00058}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_SIZE -\/201}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00059}\mbox{\hyperlink{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}{00059}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_START -\/202}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00060}\mbox{\hyperlink{define_8h_ad3aab90769e29ca037e8454be70403fe}{00060}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_END -\/203}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00061}\mbox{\hyperlink{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}{00061}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_CRC -\/204}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00062}\mbox{\hyperlink{define_8h_a2b2e42001647159fd6dcc632ce8b5349}{00062}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_EXP -\/205}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00063}\mbox{\hyperlink{define_8h_a23f90681a267a6205f9db6170811be90}{00063}} \textcolor{preprocessor}{\#define XB\_TRAME\_E\_DEST -\/206}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00065}00065 \textcolor{comment}{// Codes erreurs découpage de trame}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00066}\mbox{\hyperlink{define_8h_a1fc787b2cf4ce558b24eb81eb460f56e}{00066}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_SUCCESS 300}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00067}\mbox{\hyperlink{define_8h_ad021b44108c67217ff3e4c1c707df76e}{00067}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_SIZE -\/301}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00068}\mbox{\hyperlink{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}{00068}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_REPARTITION -\/302}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00069}\mbox{\hyperlink{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}{00069}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_DECOUPAGE -\/303}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00070}\mbox{\hyperlink{define_8h_a2fa21a437940dc3ef543bb735716fd00}{00070}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_START -\/304}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00071}\mbox{\hyperlink{define_8h_a31c302e2f3434bf6c9beabef3e20453d}{00071}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_END -\/305}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00072}\mbox{\hyperlink{define_8h_a296ef6d14e0861ec8105cabf13a80daa}{00072}} \textcolor{preprocessor}{\#define XB\_SUB\_TRAME\_E\_NULL -\/306}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00074}00074 \textcolor{comment}{// Codes d'erreurs AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00075}\mbox{\hyperlink{define_8h_a3edeea69d3c78179e0da20806902d3fe}{00075}} \textcolor{preprocessor}{\#define XB\_AT\_E\_SUCCESS 400}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00076}\mbox{\hyperlink{define_8h_a083f61bee699b3275dbbda55954415fb}{00076}} \textcolor{preprocessor}{\#define XB\_AT\_E\_ENTER -\/401}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00077}\mbox{\hyperlink{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}{00077}} \textcolor{preprocessor}{\#define XB\_AT\_E\_API -\/402}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00078}\mbox{\hyperlink{define_8h_abfa37909b5a742da8d93c522aa8b9633}{00078}} \textcolor{preprocessor}{\#define XB\_AT\_E\_BAUDRATE -\/403}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00079}\mbox{\hyperlink{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}{00079}} \textcolor{preprocessor}{\#define XB\_AT\_E\_AES -\/404}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00080}\mbox{\hyperlink{define_8h_a2677e8896184a29d46e1da04964fbb4a}{00080}} \textcolor{preprocessor}{\#define XB\_AT\_E\_AES\_KEY -\/405}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00081}\mbox{\hyperlink{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}{00081}} \textcolor{preprocessor}{\#define XB\_AT\_E\_CHANEL -\/406}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00082}\mbox{\hyperlink{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}{00082}} \textcolor{preprocessor}{\#define XB\_AT\_E\_PAN\_ID -\/407}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00083}\mbox{\hyperlink{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}{00083}} \textcolor{preprocessor}{\#define XB\_AT\_E\_COORDINATOR -\/408}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00084}\mbox{\hyperlink{define_8h_a7687c3af3271b3f6d38e8775717a2812}{00084}} \textcolor{preprocessor}{\#define XB\_AT\_E\_PARITY -\/409}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00085}\mbox{\hyperlink{define_8h_a968211659ef5051c26387205d14cc37a}{00085}} \textcolor{preprocessor}{\#define XB\_AT\_E\_16BIT\_SOURCE\_ADDR -\/410}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00086}\mbox{\hyperlink{define_8h_a57155d7b3b633e064179045bb0030b77}{00086}} \textcolor{preprocessor}{\#define XB\_AT\_E\_LOW\_DEST\_ADDR -\/411}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00087}\mbox{\hyperlink{define_8h_ae523b84be56370ff0dc180071aad63ce}{00087}} \textcolor{preprocessor}{\#define XB\_AT\_E\_EXIT -\/412}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00088}\mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{00088}} \textcolor{preprocessor}{\#define XB\_AT\_E\_WRITE\_CONFIG -\/413}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00089}\mbox{\hyperlink{define_8h_a43ca3cb0e3d954d8408698a9534c976a}{00089}} \textcolor{preprocessor}{\#define XB\_AT\_E\_DISCOVER\_NETWORK -\/414}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00091}00091 \textcolor{comment}{// Codes d'erreurs ouverture connexion série}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00092}\mbox{\hyperlink{define_8h_ad714240053187073c3aba97b6bd6dd14}{00092}} \textcolor{preprocessor}{\#define XB\_SER\_E\_SUCCESS 500}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00093}\mbox{\hyperlink{define_8h_a3f6b2252b366941608c932bb60cc2533}{00093}} \textcolor{preprocessor}{\#define XB\_SER\_E\_NOT\_FOUND -\/501}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00094}\mbox{\hyperlink{define_8h_a2bcf7c0b869d6aba0d5c24a8263fcbe5}{00094}} \textcolor{preprocessor}{\#define XB\_SER\_E\_OPEN -\/502}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00095}\mbox{\hyperlink{define_8h_a3e91e6b1bd1e4db324ffc81fa47bbfea}{00095}} \textcolor{preprocessor}{\#define XB\_SER\_E\_PARAM -\/503}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00096}\mbox{\hyperlink{define_8h_a196cae4b47cd2f6337b6219ede2d3faf}{00096}} \textcolor{preprocessor}{\#define XB\_SER\_E\_UKN\_BAUDRATE -\/504}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00097}\mbox{\hyperlink{define_8h_ad2e5a6966c804c86a1fc6c8cba5c3861}{00097}} \textcolor{preprocessor}{\#define XB\_SER\_E\_CONFIG -\/505}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00098}\mbox{\hyperlink{define_8h_a38da71d6292df1ba4a44719a56932bc9}{00098}} \textcolor{preprocessor}{\#define XB\_SER\_E\_TIMOUT -\/506}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00099}\mbox{\hyperlink{define_8h_acdb61ab3558e4f29256d651d7b5ae7ab}{00099}} \textcolor{preprocessor}{\#define XB\_SER\_E\_UKN\_DATABITS -\/507}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00100}\mbox{\hyperlink{define_8h_a493164032fd737e8aa203f682a4cb965}{00100}} \textcolor{preprocessor}{\#define XB\_SER\_E\_UKN\_STOPBITS -\/508}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00101}\mbox{\hyperlink{define_8h_a863e10f0088a7ed1b77ac6af0ea61bce}{00101}} \textcolor{preprocessor}{\#define XB\_SER\_E\_UKN\_PARITY -\/509}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00103}00103 \textcolor{comment}{// Commandes AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00104}\mbox{\hyperlink{define_8h_a664b6971f3591a0f66f31149e35b9c56}{00104}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_ENTER "{}+++"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00105}\mbox{\hyperlink{define_8h_a53ed99e52f001423faa30aad3720563c}{00105}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_EXIT "{}ATCN"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00106}\mbox{\hyperlink{define_8h_a636bc983828acdcbe6d667988128e983}{00106}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_WRITE\_CONFIG "{}ATWR"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00107}\mbox{\hyperlink{define_8h_a72b88df88cc335e341b177c42d51ecdb}{00107}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_API "{}ATAP"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00108}\mbox{\hyperlink{define_8h_aa42fb724c2b257b73690ba89a39e3180}{00108}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_BAUDRATE "{}ATBD"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00109}\mbox{\hyperlink{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}{00109}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_AES "{}ATEE"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00110}\mbox{\hyperlink{define_8h_ab9c3cef265780bb8e8d9be4b64638724}{00110}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_AES\_KEY "{}ATKY"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00111}\mbox{\hyperlink{define_8h_a4e114f9e4885fd743bc8a59a490225e5}{00111}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_CHANEL "{}ATCH"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00112}\mbox{\hyperlink{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}{00112}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_PAN\_ID "{}ATID"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00113}\mbox{\hyperlink{define_8h_a5e51fdd63a8850cb938f64bb46e68842}{00113}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_COORDINATOR "{}ATCE"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00114}\mbox{\hyperlink{define_8h_a5cbd8a87563f81f4089f5818c800f12f}{00114}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_PARITY "{}ATNB"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00115}\mbox{\hyperlink{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}{00115}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR "{}ATMY"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00116}\mbox{\hyperlink{define_8h_ac34d47f1830632881303005e95d0f878}{00116}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_LOW\_DEST\_ADDR "{}ATDL"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00117}\mbox{\hyperlink{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}{00117}} \textcolor{preprocessor}{\#define XB\_AT\_CMD\_DISCOVER\_NETWORK "{}ATND"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00119}00119 \textcolor{comment}{// Valeurs AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00120}\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{00120}} \textcolor{preprocessor}{\#define XB\_AT\_V\_END\_LINE "{}\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00121}\mbox{\hyperlink{define_8h_af09a3f126545cee473b5d79ff00a7a4c}{00121}} \textcolor{preprocessor}{\#define XB\_AT\_V\_API "{}0\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00122}\mbox{\hyperlink{define_8h_adcf202e2f760a754355de356690b8fc5}{00122}} \textcolor{preprocessor}{\#define XB\_AT\_V\_BAUDRATE "{}3\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00123}\mbox{\hyperlink{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}{00123}} \textcolor{preprocessor}{\#define XB\_AT\_V\_AES "{}1\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00124}\mbox{\hyperlink{define_8h_aab4ce4f5c4de8e0acf20340bf7eb2efb}{00124}} \textcolor{preprocessor}{\#define XB\_AT\_V\_AES\_KEY "{}32303032\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00125}\mbox{\hyperlink{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}{00125}} \textcolor{preprocessor}{\#define XB\_AT\_V\_CHANEL "{}C\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00126}\mbox{\hyperlink{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}{00126}} \textcolor{preprocessor}{\#define XB\_AT\_V\_PAN\_ID "{}3332\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00127}\mbox{\hyperlink{define_8h_a094072d0ce80311fadab5f4a3dca3e60}{00127}} \textcolor{preprocessor}{\#define XB\_AT\_V\_COORDINATOR "{}0\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00128}\mbox{\hyperlink{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}{00128}} \textcolor{preprocessor}{\#define XB\_AT\_V\_PARITY "{}1\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00129}\mbox{\hyperlink{define_8h_adb59642e28ddcb875a0e35226b04c9f8}{00129}} \textcolor{preprocessor}{\#define XB\_AT\_V\_16BIT\_SOURCE\_ADDR "{}1\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00130}\mbox{\hyperlink{define_8h_a491946f4f455db82c1aa9862a5772f47}{00130}} \textcolor{preprocessor}{\#define XB\_AT\_V\_LOW\_DEST\_ADDR "{}2\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00131}\mbox{\hyperlink{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}{00131}} \textcolor{preprocessor}{\#define XB\_AT\_V\_DISCOVER\_NETWORK "{}"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00133}00133 \textcolor{comment}{// Réponses AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00134}\mbox{\hyperlink{define_8h_a6a043234984ffa2388420c2c302a8c58}{00134}} \textcolor{preprocessor}{\#define XB\_AT\_R\_EMPTY "{}"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00135}\mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{00135}} \textcolor{preprocessor}{\#define XB\_AT\_R\_SUCCESS "{}OK\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00136}\mbox{\hyperlink{define_8h_a2628e05f63c709feebfc19ca0f1beabc}{00136}} \textcolor{preprocessor}{\#define XB\_AT\_R\_ERROR "{}ERROR\(\backslash\)r"{}}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00138}00138 \textcolor{comment}{// Mode AT}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00139}\mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{00139}} \textcolor{preprocessor}{\#define XB\_AT\_M\_GET 1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00140}\mbox{\hyperlink{define_8h_a7b84802b6b28bad27a64e09b8705fd45}{00140}} \textcolor{preprocessor}{\#define XB\_AT\_M\_SET 2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00141}00141 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

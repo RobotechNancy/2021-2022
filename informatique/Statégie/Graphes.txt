@@ -1,0 +1,8 @@
+newEtat g1e1(1,"ModeAutoTest")
+newEtat g1e2(2,"InitialisationOdometrie")
+newEtat g1e3(3,"ModeArretUrgence")
+
+Transition trans1(1, "robotOpérationnel")
+Transition trans1(1, "robotOpérationnel")
+Transition trans2(2, "BoutonAR")
+Transition trans3(3, "AnnulationAR")

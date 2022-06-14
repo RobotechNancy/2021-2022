@@ -1,0 +1,73 @@
+\hypertarget{ecranlib_8cpp_source}{}\doxysection{ecranlib.\+cpp}
+\mbox{\hyperlink{ecranlib_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ecranlib_8h}{ecranlib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00010}00010 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00012}\mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{00012}} \mbox{\hyperlink{classserialib}{serialib}} \mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00013}\mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{00013}} \mbox{\hyperlink{class_log}{Log}} \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}}(\textcolor{stringliteral}{"{}ecran"{}});}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00015}00015 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00016}00016 \textcolor{comment}{// ::: Constructeurs et destructeurs :::}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00021}\mbox{\hyperlink{class_ecran_a15869bafa18dfc89f64876cd4f7ddb90}{00021}} \mbox{\hyperlink{class_ecran_a15869bafa18dfc89f64876cd4f7ddb90}{Ecran::Ecran}}()\{ \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00026}\mbox{\hyperlink{class_ecran_a4405b236df3f818ec12d3bff0df63856}{00026}} \mbox{\hyperlink{class_ecran_a4405b236df3f818ec12d3bff0df63856}{Ecran::\string~Ecran}}()\{ \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00029}00029 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00030}00030 \textcolor{comment}{// ::: Configuration and initialisation :::}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00045}\mbox{\hyperlink{class_ecran_a883ff9e63313cf711749d418df9f0c02}{00045}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ecran_a883ff9e63313cf711749d418df9f0c02}{Ecran::openSerialConnection}}()\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00046}00046     \textcolor{keywordtype}{int} errorOpening;}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00047}00047     errorOpening = \mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_afaed268ce37d18121c4c778041224e5d}{openDevice}}(\mbox{\hyperlink{ecran__define_8h_a7af0d9197e4e5f8fb364e6a3567aeb04}{EC\_SERIAL\_PORT\_DEFAULT}}, \mbox{\hyperlink{ecran__define_8h_a96c7adedda71c4a1eda8033ede594786}{EC\_BAUDRATE\_DEFAULT}}, \mbox{\hyperlink{ecran__define_8h_af7265fb47757823f9161670f4d97580f}{EC\_DATABITS\_DEFAULT}}, \mbox{\hyperlink{ecran__define_8h_ac40f5fd60224d8d45ca0e1e96a2a0ad4}{EC\_PARITY\_DEFAULT}}, \mbox{\hyperlink{ecran__define_8h_aff3346b6d96b58c369aac28f77419ff8}{EC\_STOPBITS\_DEFAULT}});      }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00049}00049     \textcolor{keywordflow}{if} (errorOpening != \mbox{\hyperlink{ecran__define_8h_a14e080035b40cd7eebb19b61e91047a5}{EC\_SER\_E\_SUCCESS}})}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00050}00050         \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}} << \textcolor{stringliteral}{"{}(serial) /!\(\backslash\)\(\backslash\) erreur "{}} << errorOpening << \textcolor{stringliteral}{"{} : impossible d'ouvrir le port "{}} << \mbox{\hyperlink{ecran__define_8h_a7af0d9197e4e5f8fb364e6a3567aeb04}{EC\_SERIAL\_PORT\_DEFAULT}}  << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{ecran__define_8h_a96c7adedda71c4a1eda8033ede594786}{EC\_BAUDRATE\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ parité : "{}} << \mbox{\hyperlink{ecran__define_8h_ac40f5fd60224d8d45ca0e1e96a2a0ad4}{EC\_PARITY\_DEFAULT}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00051}00051     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00052}00052         \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}} << \textcolor{stringliteral}{"{}(serial) connexion ouverte avec succès sur le port "{}} << \mbox{\hyperlink{ecran__define_8h_a7af0d9197e4e5f8fb364e6a3567aeb04}{EC\_SERIAL\_PORT\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{ecran__define_8h_a96c7adedda71c4a1eda8033ede594786}{EC\_BAUDRATE\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ parité : "{}} << \mbox{\hyperlink{ecran__define_8h_ac40f5fd60224d8d45ca0e1e96a2a0ad4}{EC\_PARITY\_DEFAULT}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00053}00053     \}    }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00055}00055     \textcolor{keywordflow}{return} errorOpening;}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00061}\mbox{\hyperlink{class_ecran_a9f6f5d42e7c1362edb7f9b152db6b50f}{00061}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ecran_a9f6f5d42e7c1362edb7f9b152db6b50f}{Ecran::closeSerialConnection}}()\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00062}00062     \mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a572dd8d208511ec81d848de72cb05c7a}{flushReceiver}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00063}00063     \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}} << \textcolor{stringliteral}{"{}(serial) buffer Rx nettoyé avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00064}00064     }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00065}00065     \mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a8a1c8803c8df1a19222d6006328534b8}{closeDevice}}();}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00066}00066     \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}} << \textcolor{stringliteral}{"{}(serial) connexion série fermée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00067}00067 \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00083}\mbox{\hyperlink{class_ecran_a7d189da49f33ecf5ede14f5701f32b50}{00083}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ecran_a7d189da49f33ecf5ede14f5701f32b50}{Ecran::sendTrame}}(\mbox{\hyperlink{struct_trame__t}{Trame\_t}} trame\_recue)\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00084}00084     \textcolor{keywordtype}{int} length\_trame = 0;}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00086}00086     \textcolor{keywordflow}{if}(trame\_recue.\mbox{\hyperlink{struct_trame__t_a24bba0c76c928a314ca2d34f488a03be}{taille}} >= 5)}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00087}00087         length\_trame = trame\_recue.\mbox{\hyperlink{struct_trame__t_a24bba0c76c928a314ca2d34f488a03be}{taille}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00088}00088     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00089}00089         \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a6aef43d0e0f1d24a4fc8ba30cb07860f}{EC\_TRAME\_E\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00091}00091     uint8\_t trame[length\_trame];}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00093}00093     trame[0] = trame\_recue.\mbox{\hyperlink{struct_trame__t_a4426f3bf120ad4fa2c19c4adf8eda7c7}{mode}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00094}00094     trame[1] = trame\_recue.\mbox{\hyperlink{struct_trame__t_af1744dff908a0818d8616e176a2c7203}{categorie}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00095}00095     trame[2] = trame\_recue.\mbox{\hyperlink{struct_trame__t_a0491af8d19228af4efe5bf8a7e334e9f}{sous\_categorie}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00097}00097     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \textcolor{keyword}{sizeof}(trame\_recue.\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{valeur}})/\textcolor{keyword}{sizeof}(trame\_recue.\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{valeur}}[0]); i++)\{}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00098}00098         trame[i+3] = trame\_recue.\mbox{\hyperlink{struct_trame__t_adbbdc9b59e16b9e9370860bf77cd6d82}{valeur}}[i]; }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00101}00101     trame[length\_trame-\/2] = \mbox{\hyperlink{ecran__define_8h_a0524117e30f9869f79abe7637e81e0d5}{EC\_FIN\_TRAME\_1}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00102}00102     trame[length\_trame-\/1] = \mbox{\hyperlink{ecran__define_8h_a1f9ef4d749dde472cddce460efab32b2}{EC\_FIN\_TRAME\_2}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00104}00104     \mbox{\hyperlink{ecranlib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_aa14196b6f422584bf5eebc4ddb71d483}{writeBytes}}(trame, length\_trame);}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00106}00106     \mbox{\hyperlink{ecranlib_8cpp_ae689d4297d6b1eb1756f3e4020d949b8}{logEcran}} << \textcolor{stringliteral}{"{}(sendMsg) envoi de la trame effectué avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}}; }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00107}00107     \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_adff06d8a1fb350c6cb8f976301d3d46f}{EC\_TRAME\_E\_SUCCESS}};}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00108}00108 \}}
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{ecranlib_8cpp_source_l00114}\mbox{\hyperlink{class_ecran_a7cec3e3dc54a050ab9461e7a534b4828}{00114}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ecran_a7cec3e3dc54a050ab9461e7a534b4828}{Ecran::delay}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time)\{ std::this\_thread::sleep\_for(std::chrono::milliseconds(time*1000)); \}}
+
+\end{DoxyCode}

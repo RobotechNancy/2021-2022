@@ -1,0 +1,28 @@
+\hypertarget{functions_8h_source}{}\doxysection{functions.\+h}
+\mbox{\hyperlink{functions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{define_8h}{define.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{serialib_8h}{serialib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00008}00008 \textcolor{comment}{//char* configTrame(char* ad\_exp, char* ad\_dest, char* code\_fct, char* data);}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00009}00009 \textcolor{comment}{//void envoyerTrame(char* trame, serialib port);}}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00011}00011 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_aa3c650f044cd2bbf7321c5874e71ed01}{openSerialConnection}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00012}00012 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_aca2912daa2f733f3698b7b36004d511f}{closeSerialConnection}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00013}00013 \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_a0d36c536cd1daed943113aa5a7ef176b}{checkATConfig}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00014}00014 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_ab6ca595a1e8a369a8208778cb23dfcf2}{delay}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00015}00015 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functions_8h_ae0815dfadb30ad89f6651c11bf02a50b}{readATResponse}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value = \mbox{\hyperlink{define_8h_a8896c61fb2850aef354c5fad462cafa5}{AT\_EMPTY\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00016}00016 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functions_8h_ab3e6cf7d208b52d6c67ce1fd8aea2333}{enterATMode}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00017}00017 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functions_8h_acebb2c20ef170cdfdde2bbe5273186ef}{exitATMode}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00018}00018 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functions_8h_a1e69dd4f775f6a65184c3ca0098dd71b}{sendATCommand}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *command, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00019}00019 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functions_8h_a8c8f4c4aeda7cb339461ffa5f06f4353}{writeATConfig}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00020}00020 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_af4a1c312d9b6b09ca228f7b4fc57de50}{sendTrame}}(\mbox{\hyperlink{classserialib}{serialib}}\& serial, \textcolor{keywordtype}{char} ad\_dest, \textcolor{keywordtype}{char} code\_fct, \textcolor{keywordtype}{char} data[]);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00021}\mbox{\hyperlink{functions_8h_aab1491b50a438b6960b0e1a5df5e9e02}{00021}} \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_aab1491b50a438b6960b0e1a5df5e9e02}{crc16}}(std::vector<char> trame);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00022}00022 \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_a0c29b50dcabcb2a8d5314c2f4d22dfa1}{convertIntToBinary}}(\textcolor{keywordtype}{int} nb);}
+\DoxyCodeLine{\Hypertarget{functions_8h_source_l00023}00023 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_a91ebe9687912945a42867d77f78596bf}{processTrame}}(\textcolor{keywordtype}{char} *trame);}
+
+\end{DoxyCode}

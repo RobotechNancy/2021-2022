@@ -1,0 +1,221 @@
+\hypertarget{xbee_8cpp_source}{}\doxysection{xbee.\+cpp}
+\mbox{\hyperlink{xbee_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{xbee_8h}{xbee.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00010}00010 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00012}\mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{00012}} \mbox{\hyperlink{classserialib}{serialib}} \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00018}\mbox{\hyperlink{struct_trame}{00018}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_trame}{Trame}}\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00019}\mbox{\hyperlink{struct_trame_a9585126c9f7e6773446ecc9edcdbc36e}{00019}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame_a9585126c9f7e6773446ecc9edcdbc36e}{id\_exp}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00020}\mbox{\hyperlink{struct_trame_ac017e39f9c43cda8b77c6d35e20e6f04}{00020}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame_ac017e39f9c43cda8b77c6d35e20e6f04}{id\_dest}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00021}\mbox{\hyperlink{struct_trame_ad4c2bbabb411bbdbbc3f8be1afc562ef}{00021}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame_ad4c2bbabb411bbdbbc3f8be1afc562ef}{code\_fct}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00022}\mbox{\hyperlink{struct_trame_a4b0d523489f2d5fde73791bf9adc59bd}{00022}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame_a4b0d523489f2d5fde73791bf9adc59bd}{id\_trame}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00023}\mbox{\hyperlink{struct_trame_a984c17d83502600d192a2549785806c3}{00023}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_trame_a984c17d83502600d192a2549785806c3}{size}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00024}\mbox{\hyperlink{struct_trame_a022a46114f7cf338a4122d3536d66213}{00024}}     vector<char> \mbox{\hyperlink{struct_trame_a022a46114f7cf338a4122d3536d66213}{data}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00025}00025 \};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00027}00027 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00028}00028 \textcolor{comment}{// ::: Constructeurs et destructeurs :::}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00033}\mbox{\hyperlink{classxbee_a524440833ff50c0e1752a405b8fbd1f6}{00033}} \mbox{\hyperlink{classxbee_a524440833ff50c0e1752a405b8fbd1f6}{xbee::xbee}}()\{ \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00038}\mbox{\hyperlink{classxbee_a933410b267b5dc30acb860344f975fff}{00038}} \mbox{\hyperlink{classxbee_a933410b267b5dc30acb860344f975fff}{xbee::\string~xbee}}()\{ \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00041}00041 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00042}00042 \textcolor{comment}{// ::: Configuration and initialisation :::}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00057}\mbox{\hyperlink{classxbee_abf99767e4b2ece4d1a157e077c9a227d}{00057}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classxbee_abf99767e4b2ece4d1a157e077c9a227d}{xbee::openSerialConnection}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00058}00058     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a572dd8d208511ec81d848de72cb05c7a}{flushReceiver}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00059}00059     \textcolor{keywordtype}{char} errorOpening = \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_afcef685b74a3db58dc2d1898bb34aaca}{openDevice}}(\mbox{\hyperlink{define_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\_PORT}}, \mbox{\hyperlink{define_8h_a734bbab06e1a9fd2e5522db0221ff6e3}{BAUDRATE}}, \mbox{\hyperlink{define_8h_a155a9a6160c909e29d95e7c75b79612a}{DATABITS}}, \mbox{\hyperlink{define_8h_af6996d12e71a534569c41a25de7d6d52}{PARITY}}, \mbox{\hyperlink{define_8h_aa5d0b84610803adad91c781c7a51be82}{STOPBITS}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00061}00061     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) errorOpening;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00062}00062 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00067}\mbox{\hyperlink{classxbee_a528a578228c9e0af3a6d58d5e57c6a61}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classxbee_a528a578228c9e0af3a6d58d5e57c6a61}{xbee::closeSerialConnection}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00068}00068     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a572dd8d208511ec81d848de72cb05c7a}{flushReceiver}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00069}00069     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a8a1c8803c8df1a19222d6006328534b8}{closeDevice}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00072}00072 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00073}00073 \textcolor{comment}{// ::: Configuration en mode AT :::}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00091}\mbox{\hyperlink{classxbee_abb6a4d026ff839bdab7d8d7303c6360c}{00091}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classxbee_abb6a4d026ff839bdab7d8d7303c6360c}{xbee::checkATConfig}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00092}00092     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aefc556d89894a691d7f1386bc24e1ebe}{enterATMode}}())}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00093}00093     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a5fce1600fad75d878f7821abc8cd7f52}{AT\_ERROR\_ENTER}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00095}00095     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_aea36c3379f32afdd963e32ec2370bf33}{AT\_GET\_API}}, \mbox{\hyperlink{define_8h_aceff2fb52059a54c76a590d4b8afa940}{AT\_VALUE\_API}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00096}00096     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a079e94036cff33efe0c2394e1f3541da}{AT\_ERROR\_API}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00098}00098     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_ac884f687cf71e0e685fc939f2e5d696a}{AT\_GET\_BAUDRATE}}, \mbox{\hyperlink{define_8h_a58a8c11ecb99ed82353cbb3c49820b6f}{AT\_VALUE\_BAUDRATE}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00099}00099     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ad58278928f8bd196a9c8057342ebae30}{AT\_ERROR\_BAUDRATE}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00101}00101     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a2cde23733657b26ae62d1b498bebfbd4}{AT\_GET\_AES}}, \mbox{\hyperlink{define_8h_a978cc3852dcc6fcb81c1a4c79186f267}{AT\_VALUE\_AES}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00102}00102     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a961b3c4f8bc70fd3b52d0e4e57d12260}{AT\_ERROR\_AES}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00104}00104     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_acf384ffa36cab76a718bbc7ce46f1918}{AT\_GET\_AES\_KEY}}, \mbox{\hyperlink{define_8h_ac9faa7cc8de2d84e7c0039ff02a50c17}{AT\_VALUE\_AES\_KEY}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00105}00105     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a37e412e41dd1e3be55dda1a81c8a306b}{AT\_ERROR\_AES\_KEY}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00107}00107     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a42cd58b55e7168ee73dd1c72b51dc4a1}{AT\_GET\_CHANEL}}, \mbox{\hyperlink{define_8h_a8c0c3bfb65674ad89571ed13237379a6}{AT\_VALUE\_CHANEL}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00108}00108     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_add053e10f5dec6dd56a49f0dbf55f4bf}{AT\_ERROR\_CHANEL}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00110}00110     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_ae67ad54e429f9e3546cb4685c157bf21}{AT\_GET\_PAN\_ID}}, \mbox{\hyperlink{define_8h_aa1e0466468dde0e14dd4dab98a7ca05e}{AT\_VALUE\_PAN\_ID}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00111}00111     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a67108555ff3e9e856900dcc008a2c481}{AT\_ERROR\_PAN\_ID}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00113}00113     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a7fee70e58e53228c101e2a17a6a8b3af}{AT\_GET\_COORDINATOR}}, \mbox{\hyperlink{define_8h_ae9f9ce38c321d34fb4b09e61af51af0d}{AT\_VALUE\_COORDINATOR}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00114}00114     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ad187f68f35e7961e22bdeba7ab5aadf6}{AT\_ERROR\_COORDINATOR}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00116}00116     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a3f605473a624eea2a915bf26521f5d37}{AT\_GET\_PARITY}}, \mbox{\hyperlink{define_8h_a9c3f9ada6ad1d178af8f253e77019c75}{AT\_VALUE\_PARITY}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00117}00117     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a11be7418ffe44fb6f61be22668775627}{AT\_ERROR\_PARITY}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00119}00119     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a333f2a10e7bb9e8c2fada878a224c034}{AT\_GET\_16BIT\_SOURCE\_ADDR}}, \mbox{\hyperlink{define_8h_ac7b37239121f83efb6101cebec2cc817}{AT\_VALUE\_16BIT\_SOURCE\_ADDR}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00120}00120     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a55011a072a8a5ae37de4cbeb44aa6707}{AT\_ERROR\_16BIT\_SOURCE\_ADDR}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00122}00122     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\mbox{\hyperlink{define_8h_a8611eee6d261ccc752846f2f05a386de}{AT\_GET\_LOW\_DEST\_ADDR}}, \mbox{\hyperlink{define_8h_a6253146cf2e04f71bc36e6bbbce9e91b}{AT\_VALUE\_LOW\_DEST\_ADDR}}, \mbox{\hyperlink{define_8h_a5728ab89baa09b3d7e27f65b40abf4a4}{AT\_MODE\_SET}}))}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00123}00123     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ac94fc7d8f8a82f1e15f8524ebeb9434f}{AT\_ERROR\_LOW\_DEST\_ADDR}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00125}00125     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_a9cc6332e514615b39489e45233f98563}{writeATConfig}}())}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00126}00126     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a89ef9b0e12073b135b547f94760bf1d9}{AT\_ERROR\_WRITE\_CONFIG}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00128}00128     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}{exitATMode}}())}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00129}00129     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a0cd49664318538c86f243e65f32d9a9f}{AT\_ERROR\_EXIT}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00131}00131     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a7be76275e7e91ee7bae2aca5851d70e6}{AT\_ERROR\_SUCCESS}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00132}00132 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00138}00138 \textcolor{keywordtype}{void} xbee::delay(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time)\{ usleep(time*1000000); \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00147}\mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{00147}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{xbee::readATResponse}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value)\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00148}00148     \textcolor{keywordtype}{char} *reponse(0);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00149}00149     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timeout = 100;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00150}00150     reponse = \textcolor{keyword}{new} char;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00151}00151     delay(1);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00152}00152     \textcolor{keywordtype}{string} rep = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00153}00153     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00154}00154     \textcolor{keywordflow}{while}(\mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a50c91bf8cab23afdfdf05ca58392456f}{available}}() > 0)\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00155}00155         i++;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00156}00156         \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{readChar}}(reponse, timeout);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00157}00157         rep += *reponse;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00158}00158     \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00159}00159     \textcolor{keyword}{delete} reponse;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00160}00160     reponse = 0;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00162}00162     \textcolor{keywordflow}{if}(rep == value)}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00163}00163         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00164}00164     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00165}00165         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00166}00166 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00173}\mbox{\hyperlink{classxbee_aefc556d89894a691d7f1386bc24e1ebe}{00173}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_aefc556d89894a691d7f1386bc24e1ebe}{xbee::enterATMode}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00174}00174     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a880429b947d286a3b7179849c95022bd}{AT\_ENTER}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00175}00175     \textcolor{comment}{//cout << "{}* Entrée en mode AT..."{} << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00176}00176     delay(2);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00177}00177     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a39e484d972db2487689437d8b83f8b08}{AT\_END\_LINE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00178}00178     \textcolor{keywordflow}{return} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(\mbox{\hyperlink{define_8h_acdddd25b1e31cbeed9084ce3faefdb6b}{AT\_SUCCESS\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00179}00179 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00186}\mbox{\hyperlink{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}{00186}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}{xbee::exitATMode}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00187}00187     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_aea81ecd876c4b133a8e5f244f2c2610b}{AT\_EXIT}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00188}00188     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a39e484d972db2487689437d8b83f8b08}{AT\_END\_LINE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00189}00189     \textcolor{comment}{//cout << "{}* Sortie du mode AT..."{} << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00190}00190     \textcolor{keywordflow}{return} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(\mbox{\hyperlink{define_8h_acdddd25b1e31cbeed9084ce3faefdb6b}{AT\_SUCCESS\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00191}00191 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00198}\mbox{\hyperlink{classxbee_a9cc6332e514615b39489e45233f98563}{00198}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_a9cc6332e514615b39489e45233f98563}{xbee::writeATConfig}}()\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00199}00199     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a2cb6162831ce287de2d3665cc20fd5d6}{AT\_WRITE\_CONFIG}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00200}00200     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a39e484d972db2487689437d8b83f8b08}{AT\_END\_LINE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00201}00201     \textcolor{comment}{//cout << "{}* Ecriture de la configuration AT..."{} << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00202}00202     \textcolor{keywordflow}{return} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(\mbox{\hyperlink{define_8h_acdddd25b1e31cbeed9084ce3faefdb6b}{AT\_SUCCESS\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00203}00203 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00213}\mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{00213}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{xbee::sendATCommand}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *command, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mode)\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00214}00214     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(command);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00215}00215     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(value);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00216}00216     \mbox{\hyperlink{xbee_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a39e484d972db2487689437d8b83f8b08}{AT\_END\_LINE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00217}00217     \textcolor{keywordflow}{if}(mode == \mbox{\hyperlink{define_8h_a70d542b9018624d368916860d15c0527}{AT\_MODE\_GET}})\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00218}00218         \textcolor{comment}{//cout << "{}* Envoi de la commande "{} << command << "{}...\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00219}00219         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(value);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00220}00220     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00221}00221         \textcolor{comment}{//cout << "{}* Envoi de la commande "{} << command << "{}="{} << value << "{}...\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00222}00222         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(\mbox{\hyperlink{define_8h_acdddd25b1e31cbeed9084ce3faefdb6b}{AT\_SUCCESS\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00223}00223     \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00224}00224 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00225}00225 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00226}00226 \textcolor{comment}{//\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00227}00227 \textcolor{comment}{// ::: Envoi/Réception/Traitement des trames de messages :::}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00234}00234 \textcolor{keywordtype}{int} xbee::crc16(vector<char> trame)\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00235}00235     \textcolor{keywordtype}{int} crc = 0xFFFF, count = 0;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00236}00236     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} octet\_a\_traiter;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00237}00237     \textcolor{keyword}{const} \textcolor{keywordtype}{int} POLYNOME = 0xA001;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00239}00239     octet\_a\_traiter = trame[0];}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00241}00241     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00242}00242         crc \string^= octet\_a\_traiter;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00243}00243         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00245}00245             \textcolor{keywordflow}{if}((crc\%2)!=0)}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00246}00246             crc = (crc >> 1) \string^ POLYNOME;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00248}00248             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00249}00249                 crc = (crc >> 1);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00251}00251         \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00252}00252         count++;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00253}00253         octet\_a\_traiter = trame[count];}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00255}00255     \}\textcolor{keywordflow}{while}(count < trame.size());}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00256}00256 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00257}00257     \textcolor{keywordflow}{return} crc;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00258}00258 \}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00266}\mbox{\hyperlink{classxbee_a422aef48ffa5a946bdb477dc4731e95f}{00266}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classxbee_a422aef48ffa5a946bdb477dc4731e95f}{xbee::sendTrame}}(\textcolor{keywordtype}{char} ad\_dest, \textcolor{keywordtype}{char} code\_fct, \textcolor{keywordtype}{char} data[])\{}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00267}00267     vector<char> trame;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00268}00268     \textcolor{keywordtype}{string} convert\_data = data;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00269}00269     uint8\_t taille\_message = (uint8\_t) code\_fct + (convert\_data.size()) + 0x05;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00271}00271     uint8\_t high = (taille\_message >> 8) \& 0xFF;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00272}00272     uint8\_t low = taille\_message \& 0xFF; }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00274}00274     \textcolor{comment}{//cout << taille\_message << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00275}00275     \textcolor{comment}{//cout << (int) high << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00276}00276     \textcolor{comment}{//cout << (int) low << endl;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00278}00278     \textcolor{comment}{//char taille\_message\_h = (char) high;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00279}00279     \textcolor{comment}{//char taille\_message\_l = (char) low;}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00281}00281     trame.push\_back(\mbox{\hyperlink{define_8h_a0e263175c08c00143ac9a19616a6169e}{START\_SEQ}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00283}00283     trame.push\_back(\mbox{\hyperlink{define_8h_ac2ccd874ca0e49787957ba22a9d0a45a}{CURRENT\_ROBOT}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00284}00284     trame.push\_back(ad\_dest);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00285}00285     trame.push\_back(++ID\_TRAME);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00286}00286     trame.push\_back((\textcolor{keywordtype}{char})taille\_message);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00287}00287     \textcolor{comment}{//trame.push\_back(taille\_message\_l);}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00288}00288     }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00289}00289     trame.push\_back(code\_fct);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00291}00291     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i < convert\_data.size(); i++)}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00292}00292         trame.push\_back(convert\_data[i]);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00293}00293     }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00294}00294     \textcolor{keywordtype}{int} crc = crc16(trame);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00295}00295 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00296}00296     trame.push\_back((\textcolor{keywordtype}{char}) crc);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00298}00298     trame.push\_back(\mbox{\hyperlink{define_8h_a9abe269665f7749735989fe11d5cb7f8}{END\_SEQ}});}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00299}00299     }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00300}00300     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i < trame.size(); i++)}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00301}00301         cout << hex << showbase << setw(4) << \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(trame[i]);}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00302}00302 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00303}00303     cout << endl;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00305}00305     \textcolor{keywordtype}{char}* message = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(trame.data());;}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00306}00306     \textcolor{comment}{//serial.writeString(message);}}
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00307}00307     }
+\DoxyCodeLine{\Hypertarget{xbee_8cpp_source_l00308}00308 \}}
+
+\end{DoxyCode}

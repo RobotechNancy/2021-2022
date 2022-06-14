@@ -1,0 +1,1686 @@
+\hypertarget{class_x_bee}{}\doxysection{Référence de la classe XBee}
+\label{class_x_bee}\index{XBee@{XBee}}
+
+
+Cette classe est utilisée pour la communication entre un module \mbox{\hyperlink{class_x_bee}{XBee}} et une Raspberry\+Pi et entre plusieurs modules \mbox{\hyperlink{class_x_bee}{XBee}}.  
+
+
+
+
+{\ttfamily \#include $<$xbeelib.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_bee_1_1_trame__t}{Trame\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_x_bee_ab6317a15b3d646d1ef5907d649f875bc}{XBee}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe xbee. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_x_bee_aea9d624ec7f2cfd524d5748937e916d9}{$\sim$\+XBee}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe xbee. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}{open\+Serial\+Connection}} (int mode=0)
+\begin{DoxyCompactList}\small\item\em Nettoyage du buffer et ouverture de la connexion UART entre la Raspberry\+Pi et le module \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a892c7ebab279263c3c10583c3587d5df}{close\+Serial\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Nettoyage du buffer et fermeture de la connexion UART entre la Raspberry\+Pi et le module \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_a63484ca5a9b6b76dbe78de964802e231}{check\+ATConfig}} ()
+\begin{DoxyCompactList}\small\item\em Vérification et paramétrage de la configuration par défaut pour le module \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{read\+ATResponse}} (const char $\ast$value=\mbox{\hyperlink{define_8h_a6a043234984ffa2388420c2c302a8c58}{XB\+\_\+\+AT\+\_\+\+R\+\_\+\+EMPTY}}, int mode=0)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de lire la réponse à un envoi de commande AT au module \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{send\+ATCommand}} (const char $\ast$command, const char $\ast$value, unsigned int mode=\mbox{\hyperlink{define_8h_a7b84802b6b28bad27a64e09b8705fd45}{XB\+\_\+\+AT\+\_\+\+M\+\_\+\+SET}})
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}envoyer en UART via le port série une commmande AT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_ad85b6117daf5d6e48f8be690822d0d7a}{write\+ATConfig}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}écrire dans la mémoire flash du module \mbox{\hyperlink{class_x_bee}{XBee}}, les paramètres AT définis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_a133ba657a1c58d9b65c4ee060d5f9ffb}{send\+Trame}} (uint8\+\_\+t ad\+\_\+dest, uint8\+\_\+t code\+\_\+fct, char $\ast$data=0x00)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}envoyer une trame de message structurée via UART en \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a4b097076ff43bf157bdfcddaca4feec7}{send\+Msg}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}envoyer un mesage ASCII sans format particulier via \mbox{\hyperlink{class_x_bee}{XBee}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a9f89263f38e334b88d6505641b1a0335}{wait\+For\+ATrame}} ()
+\begin{DoxyCompactList}\small\item\em Permet l\textquotesingle{}attente et la vérification régulée d\textquotesingle{}une trame en entrée dans le buffer du port Rx de la Raspberry\+Pi et d\textquotesingle{}appeler la fonction de découpe des trames. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a6b7eecc0b20a691f510abadd71ab5525}{send\+Heartbeat}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}envoyer des demandes de battements de coeur au second robot afin de savoir s\textquotesingle{}il est toujours opérationnel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_aed8a183be2a0e7cf1605a5c8c8fd1f1c}{is\+Xbee\+Responding}} ()
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si un message envoyé a reçu une réponse. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_x_bee_ac691ee030df7e8555bb69aa167e5a9ee}{char\+To\+String}} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Permet de convertir une chaine de caractère standard C en objet de type string. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_x_bee_ac7eb2f0badf73d2aaa3a2de57f1357c6}{string\+To\+Char}} (std\+::string chaine)
+\begin{DoxyCompactList}\small\item\em Permet de convertir un objet de type string en chaine de caractère standard C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a805172daefa3df6c69fc1c63eefb842e}{print}} (const std\+::vector$<$ int $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage des valeurs contenues dans un vecteur d\textquotesingle{}entiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_x_bee_a686a09b14a21f8cf5192f1be1ffdfc01}{enter\+ATMode}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}entrer dans le mode AT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a1c6dedbd3106d6f08e581d566e82705c}{exit\+ATMode}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant de sortir du mode AT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a92c1170006b2692364b1077562f922e6}{discover\+Xbee\+Network}} ()
+\begin{DoxyCompactList}\small\item\em Recherche du module \mbox{\hyperlink{class_x_bee}{XBee}} distant de l\textquotesingle{}autre robot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a359c4e1fd3271cdb7c46b0efeb329279}{is\+Exp\+Correct}} (int exp)
+\begin{DoxyCompactList}\small\item\em Vérifie si une adresse d\textquotesingle{}expéditeur est correcte. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a1264cd9491907bc93d925fa196726aba}{is\+Dest\+Correct}} (int dest)
+\begin{DoxyCompactList}\small\item\em Vérifie si une adresse de destination est correcte. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_aa3bcf5ddb1814f835e7524590f2127d9}{is\+Code\+Fct\+Correct}} (int code\+\_\+fct)
+\begin{DoxyCompactList}\small\item\em Vérifie si le code fonction donné est présent dans le fichier \mbox{\hyperlink{define_8h}{define.\+h}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_ade80327f2a3c022ef4eaa733d7c71c92}{is\+Trame\+Size\+Correct}} (std\+::vector$<$ int $>$ trame)
+\begin{DoxyCompactList}\small\item\em Vérifie si la taille de la trame est cohérente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_a491d66fa4bdf5c7c6d8c65fd33db36f9}{sub\+Trame}} (std\+::vector$<$ int $>$ msg\+\_\+recu)
+\begin{DoxyCompactList}\small\item\em Découpe le résultat de la lecture du buffer en différentes trames avant le traitement. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_aaac7e9a9ffe4ddd2108bde9923f46f68}{process\+Code\+Fct}} (int code\+\_\+fct, int exp)
+\begin{DoxyCompactList}\small\item\em Interprète le code fonction issu d\textquotesingle{}une trame reçue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a86d18a9f5d714880fa3ae96d5883452e}{afficher\+Trame\+Recue}} (\mbox{\hyperlink{struct_x_bee_1_1_trame__t}{Trame\+\_\+t}} trame)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage des données découpées d\textquotesingle{}une structure de type Trame. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_ad588451b2ade68dedc9450ad3ed71acf}{process\+Trame}} (std\+::vector$<$ int $>$ trame)
+\begin{DoxyCompactList}\small\item\em Découpe une trame reçue en fonction de ses paramètres et interprete son code fonction. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_x_bee_aebae7367c381376f968401cefab2996a}{read\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Permet de lire l\textquotesingle{}intégralité du buffer Rx de la Raspberry\+Pi. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_x_bee_a57a921012a68f18ad9d63df92382f35a}{read\+String}} ()
+\begin{DoxyCompactList}\small\item\em Permet de lire l\textquotesingle{}intégralité du contenu du buffer Rx de la Raspberry\+Pi et de le renvoyer sous forme d\textquotesingle{}objet string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_x_bee_a32e22b437a2a47f53698d90f8416effa}{crc16}} (int trame\mbox{[}$\,$\mbox{]}, uint8\+\_\+t taille)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de calculer le CRC16 Modbus de la trame \mbox{\hyperlink{class_x_bee}{XBee}} envoyée. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a235c84172b8419b81a5ae91d11dd0e96}{is\+Start\+Seq\+Correct}} (int value)
+\begin{DoxyCompactList}\small\item\em Vérifie si le caractère de début de la trame correpond à celui attendu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_a3d8a5cec177d309aae76f3b6de8a728b}{is\+End\+Seq\+Correct}} (int value)
+\begin{DoxyCompactList}\small\item\em Vérifie si le caractère de fin de la trame correpond à celui attendu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_x_bee_ab656920e323e42654f3763e717dfe0f4}{is\+CRCCorrect}} (uint8\+\_\+t crc\+\_\+low, uint8\+\_\+t crc\+\_\+high, int trame\mbox{[}$\,$\mbox{]}, int trame\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Vérifie si le CRC reçu est cohérent avec la trame reçue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}} (unsigned int time)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de retarder l\textquotesingle{}exécution du code. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_x_bee_ad103b320d8d88a1eed931a46eeb29ccb}{slice}} (const std\+::vector$<$ int $>$ \&v, int a, int b)
+\begin{DoxyCompactList}\small\item\em Fonction de traitement permettant d\textquotesingle{}extraire un sous-\/vecteur d\textquotesingle{}entiers d\textquotesingle{}un vecteur d\textquotesingle{}entiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_x_bee_ae4fc3bb11cca90a207fea1b8832b1a03}{ID\+\_\+\+TRAME}} = 0
+\item 
+int \mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} = 0
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\+\_\+envoyees}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cette classe est utilisée pour la communication entre un module \mbox{\hyperlink{class_x_bee}{XBee}} et une Raspberry\+Pi et entre plusieurs modules \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8h_source_l00025}{25}} du fichier \mbox{\hyperlink{xbeelib_8h_source}{xbeelib.\+h}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_x_bee_ab6317a15b3d646d1ef5907d649f875bc}\label{class_x_bee_ab6317a15b3d646d1ef5907d649f875bc}} 
+\index{XBee@{XBee}!XBee@{XBee}}
+\index{XBee@{XBee}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{XBee()}{XBee()}}
+{\footnotesize\ttfamily XBee\+::\+XBee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe xbee. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00021}{21}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_aea9d624ec7f2cfd524d5748937e916d9}\label{class_x_bee_aea9d624ec7f2cfd524d5748937e916d9}} 
+\index{XBee@{XBee}!````~XBee@{$\sim$XBee}}
+\index{````~XBee@{$\sim$XBee}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{$\sim$XBee()}{~XBee()}}
+{\footnotesize\ttfamily XBee\+::$\sim$\+XBee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe xbee. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00026}{26}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026 \{ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_x_bee_a86d18a9f5d714880fa3ae96d5883452e}\label{class_x_bee_a86d18a9f5d714880fa3ae96d5883452e}} 
+\index{XBee@{XBee}!afficherTrameRecue@{afficherTrameRecue}}
+\index{afficherTrameRecue@{afficherTrameRecue}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{afficherTrameRecue()}{afficherTrameRecue()}}
+{\footnotesize\ttfamily void XBee\+::afficher\+Trame\+Recue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_x_bee_1_1_trame__t}{Trame\+\_\+t}}}]{trame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction d\textquotesingle{}affichage des données découpées d\textquotesingle{}une structure de type Trame. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00847}{847}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00847                                           \{}
+\DoxyCodeLine{00848     cout << hex << showbase;}
+\DoxyCodeLine{00849     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Start seq : "{}} << trame.start\_seq << endl;}
+\DoxyCodeLine{00850     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Emetteur : "{}} << trame.adr\_emetteur << endl;}
+\DoxyCodeLine{00851     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Destinataire : "{}} << trame.adr\_dest << endl;}
+\DoxyCodeLine{00852     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Id trame  : "{}} << trame.id\_trame\_low << \textcolor{stringliteral}{"{} "{}} << trame.crc\_high << endl;}
+\DoxyCodeLine{00853     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Taille msg : "{}} << trame.nb\_octets\_msg -\/ 3 << endl;}
+\DoxyCodeLine{00854     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Code fct : "{}} << trame.code\_fct << endl;}
+\DoxyCodeLine{00855     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> Data : "{}};}
+\DoxyCodeLine{00856     \mbox{\hyperlink{class_x_bee_a805172daefa3df6c69fc1c63eefb842e}{print}}(trame.param);}
+\DoxyCodeLine{00857     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> CRC : "{}} << trame.crc\_low << \textcolor{stringliteral}{"{} "{}} << trame.crc\_high << endl;}
+\DoxyCodeLine{00858     cout << \textcolor{stringliteral}{"{}\(\backslash\)t-\/> End seq : "{}} << trame.end\_seq << endl;}
+\DoxyCodeLine{00859 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ac691ee030df7e8555bb69aa167e5a9ee}\label{class_x_bee_ac691ee030df7e8555bb69aa167e5a9ee}} 
+\index{XBee@{XBee}!charToString@{charToString}}
+\index{charToString@{charToString}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{charToString()}{charToString()}}
+{\footnotesize\ttfamily string XBee\+::char\+To\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Permet de convertir une chaine de caractère standard C en objet de type string. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em message} & \+: la chaine de caractère à convertir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+chaine \+: l\textquotesingle{}objet de type string converti 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00839}{839}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00839                                       \{}
+\DoxyCodeLine{00840     \textcolor{keywordtype}{string} chaine = string(message);}
+\DoxyCodeLine{00841     \textcolor{keywordflow}{return} chaine;}
+\DoxyCodeLine{00842 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a63484ca5a9b6b76dbe78de964802e231}\label{class_x_bee_a63484ca5a9b6b76dbe78de964802e231}} 
+\index{XBee@{XBee}!checkATConfig@{checkATConfig}}
+\index{checkATConfig@{checkATConfig}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{checkATConfig()}{checkATConfig()}}
+{\footnotesize\ttfamily int XBee\+::check\+ATConfig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérification et paramétrage de la configuration par défaut pour le module \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+\begin{DoxyReturn}{Renvoie}
+400 succès 
+
+-\/401 impossible d\textquotesingle{}entrer dans le mode AT 
+
+-\/402 impossible de configurer le mode API 
+
+-\/403 impossible de configurer le baudrate 
+
+-\/404 impossible de configurer le paramètre de chiffrement AES 
+
+-\/405 impossible de configurer la clé de chiffrement AES 
+
+-\/406 impossible de configurer le canal de découverte réseau 
+
+-\/407 impossible de configurer l\textquotesingle{}ID du réseau 
+
+-\/408 impossible de configurer le mode coordinateur 
+
+-\/409 impossible de configurer le nombre de bits de parité 
+
+-\/410 impossible de configurer l\textquotesingle{}adresse source 16bits 
+
+-\/411 impossible de configuer l\textquotesingle{}adresse de destination 
+
+-\/412 impossible de sortir du mode AT 
+
+-\/413 impossible d\textquotesingle{}écrire les paramètres dans la mémoire flash 
+
+-\/414 impossible d\textquotesingle{}établir une connexion avec le module \mbox{\hyperlink{class_x_bee}{XBee}} distant 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00104}{104}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104                        \{}
+\DoxyCodeLine{00105     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a686a09b14a21f8cf5192f1be1ffdfc01}{enterATMode}}())\{}
+\DoxyCodeLine{00106         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a083f61bee699b3275dbbda55954415fb}{XB\_AT\_E\_ENTER}} << \textcolor{stringliteral}{"{} : impossible d'entrer dans le mode AT"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00107         \mbox{\hyperlink{class_x_bee_a892c7ebab279263c3c10583c3587d5df}{closeSerialConnection}}();}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} == 0)\{}
+\DoxyCodeLine{00109             \mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} = 1;}
+\DoxyCodeLine{00110             \mbox{\hyperlink{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}{openSerialConnection}}(1);}
+\DoxyCodeLine{00111         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00112             \mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} = 0;}
+\DoxyCodeLine{00113             \mbox{\hyperlink{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}{openSerialConnection}}();}
+\DoxyCodeLine{00114         \}}
+\DoxyCodeLine{00115         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a083f61bee699b3275dbbda55954415fb}{XB\_AT\_E\_ENTER}};}
+\DoxyCodeLine{00116     \}}
+\DoxyCodeLine{00117     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) entrée dans le mode AT"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_aa42fb724c2b257b73690ba89a39e3180}{XB\_AT\_CMD\_BAUDRATE}}, \mbox{\hyperlink{define_8h_adcf202e2f760a754355de356690b8fc5}{XB\_AT\_V\_BAUDRATE}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_aa42fb724c2b257b73690ba89a39e3180}{XB\_AT\_CMD\_BAUDRATE}}, \mbox{\hyperlink{define_8h_adcf202e2f760a754355de356690b8fc5}{XB\_AT\_V\_BAUDRATE}}))\{}
+\DoxyCodeLine{00121             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_abfa37909b5a742da8d93c522aa8b9633}{XB\_AT\_E\_BAUDRATE}} << \textcolor{stringliteral}{"{} : impossible de configurer le baudrate"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00122             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_abfa37909b5a742da8d93c522aa8b9633}{XB\_AT\_E\_BAUDRATE}};}
+\DoxyCodeLine{00123         \}}
+\DoxyCodeLine{00124         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) baudrate configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00125     \}}
+\DoxyCodeLine{00126     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) baudrate vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a5cbd8a87563f81f4089f5818c800f12f}{XB\_AT\_CMD\_PARITY}}, \mbox{\hyperlink{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}{XB\_AT\_V\_PARITY}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a5cbd8a87563f81f4089f5818c800f12f}{XB\_AT\_CMD\_PARITY}}, \mbox{\hyperlink{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}{XB\_AT\_V\_PARITY}}))\{}
+\DoxyCodeLine{00130             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a7687c3af3271b3f6d38e8775717a2812}{XB\_AT\_E\_PARITY}} << \textcolor{stringliteral}{"{} : impossible de configurer le nombre de bits de parité"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00131             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a7687c3af3271b3f6d38e8775717a2812}{XB\_AT\_E\_PARITY}};}
+\DoxyCodeLine{00132         \}}
+\DoxyCodeLine{00133         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) nombre de bits de parité configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_ad85b6117daf5d6e48f8be690822d0d7a}{writeATConfig}}())\{}
+\DoxyCodeLine{00136             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{XB\_AT\_E\_WRITE\_CONFIG}} << \textcolor{stringliteral}{"{} : impossible d'écrire les paramètres dans la mémoire flash"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00137             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{XB\_AT\_E\_WRITE\_CONFIG}};}
+\DoxyCodeLine{00138         \}}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140         \mbox{\hyperlink{class_x_bee_a892c7ebab279263c3c10583c3587d5df}{closeSerialConnection}}();}
+\DoxyCodeLine{00141         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} == 0)\{}
+\DoxyCodeLine{00142             \mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} = 1;}
+\DoxyCodeLine{00143             \mbox{\hyperlink{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}{openSerialConnection}}(1);}
+\DoxyCodeLine{00144         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00145             \mbox{\hyperlink{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}{MODE}} = 0;}
+\DoxyCodeLine{00146             \mbox{\hyperlink{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}{openSerialConnection}}();}
+\DoxyCodeLine{00147         \}}
+\DoxyCodeLine{00148     \}}
+\DoxyCodeLine{00149     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) nombre de bits de parité vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a72b88df88cc335e341b177c42d51ecdb}{XB\_AT\_CMD\_API}}, \mbox{\hyperlink{define_8h_af09a3f126545cee473b5d79ff00a7a4c}{XB\_AT\_V\_API}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a72b88df88cc335e341b177c42d51ecdb}{XB\_AT\_CMD\_API}}, \mbox{\hyperlink{define_8h_af09a3f126545cee473b5d79ff00a7a4c}{XB\_AT\_V\_API}}))\{}
+\DoxyCodeLine{00153             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}{XB\_AT\_E\_API}} << \textcolor{stringliteral}{"{} : impossible de configurer le mode API"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00154             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}{XB\_AT\_E\_API}};}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) mode API configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00157     \}}
+\DoxyCodeLine{00158     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) mode API vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}{XB\_AT\_CMD\_AES}}, \mbox{\hyperlink{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}{XB\_AT\_V\_AES}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00161         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}{XB\_AT\_CMD\_AES}}, \mbox{\hyperlink{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}{XB\_AT\_V\_AES}}))\{}
+\DoxyCodeLine{00162             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}{XB\_AT\_E\_AES}} << \textcolor{stringliteral}{"{} : impossible de configurer le paramètre de chiffrement AES"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00163             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}{XB\_AT\_E\_AES}};}
+\DoxyCodeLine{00164         \}}
+\DoxyCodeLine{00165         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) chiffrement AES configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00166     \}}
+\DoxyCodeLine{00167     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) chiffrement AES vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ab9c3cef265780bb8e8d9be4b64638724}{XB\_AT\_CMD\_AES\_KEY}}, \mbox{\hyperlink{define_8h_aab4ce4f5c4de8e0acf20340bf7eb2efb}{XB\_AT\_V\_AES\_KEY}}))\{}
+\DoxyCodeLine{00170         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a2677e8896184a29d46e1da04964fbb4a}{XB\_AT\_E\_AES\_KEY}} << \textcolor{stringliteral}{"{} : impossible de configurer la clé de chiffrement AES"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00171         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a2677e8896184a29d46e1da04964fbb4a}{XB\_AT\_E\_AES\_KEY}};}
+\DoxyCodeLine{00172     \}}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a4e114f9e4885fd743bc8a59a490225e5}{XB\_AT\_CMD\_CHANEL}}, \mbox{\hyperlink{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}{XB\_AT\_V\_CHANEL}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00175         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a4e114f9e4885fd743bc8a59a490225e5}{XB\_AT\_CMD\_CHANEL}}, \mbox{\hyperlink{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}{XB\_AT\_V\_CHANEL}}))\{}
+\DoxyCodeLine{00176             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}{XB\_AT\_E\_CHANEL}} << \textcolor{stringliteral}{"{} : impossible de configurer le canal de découverte réseau"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00177             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}{XB\_AT\_E\_CHANEL}};}
+\DoxyCodeLine{00178         \}}
+\DoxyCodeLine{00179         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) canal de découverte réseau configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00180     \}}
+\DoxyCodeLine{00181     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) canal de découverte réseau vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}{XB\_AT\_CMD\_PAN\_ID}}, \mbox{\hyperlink{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}{XB\_AT\_V\_PAN\_ID}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00184         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}{XB\_AT\_CMD\_PAN\_ID}}, \mbox{\hyperlink{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}{XB\_AT\_V\_PAN\_ID}}))\{}
+\DoxyCodeLine{00185             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}{XB\_AT\_E\_PAN\_ID}} << \textcolor{stringliteral}{"{} : impossible de configurer l'ID du réseau"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00186             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}{XB\_AT\_E\_PAN\_ID}};}
+\DoxyCodeLine{00187         \}}
+\DoxyCodeLine{00188         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) ID du réseau configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00189     \}}
+\DoxyCodeLine{00190     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) ID du réseau vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a5e51fdd63a8850cb938f64bb46e68842}{XB\_AT\_CMD\_COORDINATOR}}, \mbox{\hyperlink{define_8h_a094072d0ce80311fadab5f4a3dca3e60}{XB\_AT\_V\_COORDINATOR}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_a5e51fdd63a8850cb938f64bb46e68842}{XB\_AT\_CMD\_COORDINATOR}}, \mbox{\hyperlink{define_8h_a094072d0ce80311fadab5f4a3dca3e60}{XB\_AT\_V\_COORDINATOR}}))\{}
+\DoxyCodeLine{00194             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}{XB\_AT\_E\_COORDINATOR}} << \textcolor{stringliteral}{"{} : impossible de configurer le mode coordinateur"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00195             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}{XB\_AT\_E\_COORDINATOR}};}
+\DoxyCodeLine{00196         \}}
+\DoxyCodeLine{00197         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) mode coordinateur configuré avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00199     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) mode coordinateur vérifié avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}}, \mbox{\hyperlink{define_8h_adb59642e28ddcb875a0e35226b04c9f8}{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00202         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}}, \mbox{\hyperlink{define_8h_adb59642e28ddcb875a0e35226b04c9f8}{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}}))\{}
+\DoxyCodeLine{00203             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a968211659ef5051c26387205d14cc37a}{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}} << \textcolor{stringliteral}{"{} : impossible de configurer l'adresse source 16bits"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00204             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a968211659ef5051c26387205d14cc37a}{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}};}
+\DoxyCodeLine{00205         \}}
+\DoxyCodeLine{00206         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) adresse source 16bits configurée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00207     \}}
+\DoxyCodeLine{00208     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) adresse source 16bits vérifiée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ac34d47f1830632881303005e95d0f878}{XB\_AT\_CMD\_LOW\_DEST\_ADDR}}, \mbox{\hyperlink{define_8h_a491946f4f455db82c1aa9862a5772f47}{XB\_AT\_V\_LOW\_DEST\_ADDR}}, \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}}))\{}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}{sendATCommand}}(\mbox{\hyperlink{define_8h_ac34d47f1830632881303005e95d0f878}{XB\_AT\_CMD\_LOW\_DEST\_ADDR}}, \mbox{\hyperlink{define_8h_a491946f4f455db82c1aa9862a5772f47}{XB\_AT\_V\_LOW\_DEST\_ADDR}}))\{}
+\DoxyCodeLine{00212             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a57155d7b3b633e064179045bb0030b77}{XB\_AT\_E\_LOW\_DEST\_ADDR}} << \textcolor{stringliteral}{"{} : impossible de configurer l'adresse de destination"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00213             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a57155d7b3b633e064179045bb0030b77}{XB\_AT\_E\_LOW\_DEST\_ADDR}};}
+\DoxyCodeLine{00214         \}}
+\DoxyCodeLine{00215         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) adresse de destination configurée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00216     \}}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) adresse de destination vérifiée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_ad85b6117daf5d6e48f8be690822d0d7a}{writeATConfig}}())\{}
+\DoxyCodeLine{00220         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{XB\_AT\_E\_WRITE\_CONFIG}} << \textcolor{stringliteral}{"{} : impossible d'écrire les paramètres dans la mémoire flash"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00221         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{XB\_AT\_E\_WRITE\_CONFIG}};}
+\DoxyCodeLine{00222     \}}
+\DoxyCodeLine{00223     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) configuration AT enregistrée dans la mémoire du module"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a92c1170006b2692364b1077562f922e6}{discoverXbeeNetwork}}())\{}
+\DoxyCodeLine{00226         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_a43ca3cb0e3d954d8408698a9534c976a}{XB\_AT\_E\_DISCOVER\_NETWORK}} << \textcolor{stringliteral}{"{} : impossible d'établir une connexion avec le module XBee distant"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00227         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a43ca3cb0e3d954d8408698a9534c976a}{XB\_AT\_E\_DISCOVER\_NETWORK}};}
+\DoxyCodeLine{00228     \}}
+\DoxyCodeLine{00229     \textcolor{keywordflow}{else} \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) connexion XBee établie avec succès avec le module distant"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a1c6dedbd3106d6f08e581d566e82705c}{exitATMode}}())\{}
+\DoxyCodeLine{00232         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (config AT) erreur "{}} << \mbox{\hyperlink{define_8h_ae523b84be56370ff0dc180071aad63ce}{XB\_AT\_E\_EXIT}} << \textcolor{stringliteral}{"{} : impossible de sortir du mode AT"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00233         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ae523b84be56370ff0dc180071aad63ce}{XB\_AT\_E\_EXIT}};}
+\DoxyCodeLine{00234     \}}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00236     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) configuration AT réalisée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00237     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a3edeea69d3c78179e0da20806902d3fe}{XB\_AT\_E\_SUCCESS}};}
+\DoxyCodeLine{00238 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a892c7ebab279263c3c10583c3587d5df}\label{class_x_bee_a892c7ebab279263c3c10583c3587d5df}} 
+\index{XBee@{XBee}!closeSerialConnection@{closeSerialConnection}}
+\index{closeSerialConnection@{closeSerialConnection}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{closeSerialConnection()}{closeSerialConnection()}}
+{\footnotesize\ttfamily void XBee\+::close\+Serial\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nettoyage du buffer et fermeture de la connexion UART entre la Raspberry\+Pi et le module \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00075}{75}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075                                 \{}
+\DoxyCodeLine{00076     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a572dd8d208511ec81d848de72cb05c7a}{flushReceiver}}();}
+\DoxyCodeLine{00077     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) buffer Rx nettoyé avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00078     }
+\DoxyCodeLine{00079     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a8a1c8803c8df1a19222d6006328534b8}{closeDevice}}();}
+\DoxyCodeLine{00080     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) connexion série fermée avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00081 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a32e22b437a2a47f53698d90f8416effa}\label{class_x_bee_a32e22b437a2a47f53698d90f8416effa}} 
+\index{XBee@{XBee}!crc16@{crc16}}
+\index{crc16@{crc16}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{crc16()}{crc16()}}
+{\footnotesize\ttfamily int XBee\+::crc16 (\begin{DoxyParamCaption}\item[{int}]{trame\mbox{[}$\,$\mbox{]},  }\item[{uint8\+\_\+t}]{taille }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction permettant de calculer le CRC16 Modbus de la trame \mbox{\hyperlink{class_x_bee}{XBee}} envoyée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trame} & \+: la trame \mbox{\hyperlink{class_x_bee}{XBee}} complète sauf le CRC et le caractère de fin de trame \\
+\hline
+{\em taille} & \+: la taille de la trame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la valeur entière du crc calculée sur 16 bits 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00351}{351}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00351                                           \{}
+\DoxyCodeLine{00352     \textcolor{keywordtype}{int} crc = 0xFFFF, count = 0;}
+\DoxyCodeLine{00353     \textcolor{keywordtype}{int} octet\_a\_traiter;}
+\DoxyCodeLine{00354     \textcolor{keyword}{const} \textcolor{keywordtype}{int} POLYNOME = 0xA001;}
+\DoxyCodeLine{00355 }
+\DoxyCodeLine{00356     octet\_a\_traiter = trame[0];}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00359         crc \string^= octet\_a\_traiter;}
+\DoxyCodeLine{00360         \textcolor{keywordflow}{for}(uint8\_t i = 0; i < 8; i++)\{}
+\DoxyCodeLine{00361 }
+\DoxyCodeLine{00362             \textcolor{keywordflow}{if}((crc\%2)!=0)}
+\DoxyCodeLine{00363             crc = (crc >> 1) \string^ POLYNOME;}
+\DoxyCodeLine{00364 }
+\DoxyCodeLine{00365             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00366                 crc = (crc >> 1);}
+\DoxyCodeLine{00367 }
+\DoxyCodeLine{00368         \}}
+\DoxyCodeLine{00369         count++;}
+\DoxyCodeLine{00370         octet\_a\_traiter = trame[count];}
+\DoxyCodeLine{00371         }
+\DoxyCodeLine{00372     \}\textcolor{keywordflow}{while}(count < taille);}
+\DoxyCodeLine{00373 }
+\DoxyCodeLine{00374     \textcolor{keywordflow}{return} crc;}
+\DoxyCodeLine{00375 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}\label{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}} 
+\index{XBee@{XBee}!delay@{delay}}
+\index{delay@{delay}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void XBee\+::delay (\begin{DoxyParamCaption}\item[{unsigned int}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction permettant de retarder l\textquotesingle{}exécution du code. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em time} & \+: temps du retard en secondes \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00244}{244}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00244 \{ std::this\_thread::sleep\_for(std::chrono::milliseconds(time*1000)); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a92c1170006b2692364b1077562f922e6}\label{class_x_bee_a92c1170006b2692364b1077562f922e6}} 
+\index{XBee@{XBee}!discoverXbeeNetwork@{discoverXbeeNetwork}}
+\index{discoverXbeeNetwork@{discoverXbeeNetwork}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{discoverXbeeNetwork()}{discoverXbeeNetwork()}}
+{\footnotesize\ttfamily bool XBee\+::discover\+Xbee\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recherche du module \mbox{\hyperlink{class_x_bee}{XBee}} distant de l\textquotesingle{}autre robot. 
+
+\begin{DoxyReturn}{Renvoie}
+true le bon module \mbox{\hyperlink{class_x_bee}{XBee}} est détecté 
+
+false aucun module \mbox{\hyperlink{class_x_bee}{XBee}} détecté ou module \mbox{\hyperlink{class_x_bee}{XBee}} incorrect détecté 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00297}{297}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00297                               \{}
+\DoxyCodeLine{00298     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}{XB\_AT\_CMD\_DISCOVER\_NETWORK}});}
+\DoxyCodeLine{00299     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\_AT\_V\_END\_LINE}});}
+\DoxyCodeLine{00300     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}lancement de la découverte réseau XBee"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00301     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}{XB\_AT\_V\_DISCOVER\_NETWORK}});}
+\DoxyCodeLine{00302 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a686a09b14a21f8cf5192f1be1ffdfc01}\label{class_x_bee_a686a09b14a21f8cf5192f1be1ffdfc01}} 
+\index{XBee@{XBee}!enterATMode@{enterATMode}}
+\index{enterATMode@{enterATMode}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{enterATMode()}{enterATMode()}}
+{\footnotesize\ttfamily bool XBee\+::enter\+ATMode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction permettant d\textquotesingle{}entrer dans le mode AT. 
+
+\begin{DoxyReturn}{Renvoie}
+true la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} est celle attendue 
+
+false la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} n\textquotesingle{}est pas celle attendue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00272}{272}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00272                       \{}
+\DoxyCodeLine{00273     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a664b6971f3591a0f66f31149e35b9c56}{XB\_AT\_CMD\_ENTER}});}
+\DoxyCodeLine{00274     \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(3);}
+\DoxyCodeLine{00275     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\_AT\_V\_END\_LINE}});}
+\DoxyCodeLine{00276     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}entrée en mode AT"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00277     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{XB\_AT\_R\_SUCCESS}});}
+\DoxyCodeLine{00278 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a1c6dedbd3106d6f08e581d566e82705c}\label{class_x_bee_a1c6dedbd3106d6f08e581d566e82705c}} 
+\index{XBee@{XBee}!exitATMode@{exitATMode}}
+\index{exitATMode@{exitATMode}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{exitATMode()}{exitATMode()}}
+{\footnotesize\ttfamily bool XBee\+::exit\+ATMode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction permettant de sortir du mode AT. 
+
+\begin{DoxyReturn}{Renvoie}
+true la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} est celle attendue 
+
+false la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} n\textquotesingle{}est pas celle attendue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00285}{285}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00285                      \{}
+\DoxyCodeLine{00286     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a53ed99e52f001423faa30aad3720563c}{XB\_AT\_CMD\_EXIT}});}
+\DoxyCodeLine{00287     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\_AT\_V\_END\_LINE}});}
+\DoxyCodeLine{00288     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}sortie du mode AT"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00289     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{XB\_AT\_R\_SUCCESS}});}
+\DoxyCodeLine{00290 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_aa3bcf5ddb1814f835e7524590f2127d9}\label{class_x_bee_aa3bcf5ddb1814f835e7524590f2127d9}} 
+\index{XBee@{XBee}!isCodeFctCorrect@{isCodeFctCorrect}}
+\index{isCodeFctCorrect@{isCodeFctCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isCodeFctCorrect()}{isCodeFctCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+Code\+Fct\+Correct (\begin{DoxyParamCaption}\item[{int}]{code\+\_\+fct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si le code fonction donné est présent dans le fichier \mbox{\hyperlink{define_8h}{define.\+h}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em code\+\_\+fct} & \+: le code fonction à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: le code fonction est correct 
+
+false \+: le code fonction est incorrect/n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00538}{538}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00538                                        \{}
+\DoxyCodeLine{00539     \textcolor{keywordtype}{int} size\_list\_code\_fct = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}})/\textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[0]), i = 0;}
+\DoxyCodeLine{00540 }
+\DoxyCodeLine{00541     \textcolor{keywordflow}{while}(i < size\_list\_code\_fct)\{}
+\DoxyCodeLine{00542         \textcolor{keywordflow}{if}(\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[i] == code\_fct)}
+\DoxyCodeLine{00543             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00544         i++;}
+\DoxyCodeLine{00545     \}}
+\DoxyCodeLine{00546 }
+\DoxyCodeLine{00547     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00548 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ab656920e323e42654f3763e717dfe0f4}\label{class_x_bee_ab656920e323e42654f3763e717dfe0f4}} 
+\index{XBee@{XBee}!isCRCCorrect@{isCRCCorrect}}
+\index{isCRCCorrect@{isCRCCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isCRCCorrect()}{isCRCCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+CRCCorrect (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{crc\+\_\+low,  }\item[{uint8\+\_\+t}]{crc\+\_\+high,  }\item[{int}]{trame\mbox{[}$\,$\mbox{]},  }\item[{int}]{trame\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si le CRC reçu est cohérent avec la trame reçue. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em crc\+\_\+low} & \+: les bits de poids faible du CRC reçu \\
+\hline
+{\em crc\+\_\+high} & \+: les bits de poids forts du CRC reçu \\
+\hline
+{\em trame} & \+: la trame reçue (en enlevant le CRC et le caratère de fin de trame) \\
+\hline
+{\em trame\+\_\+size} & \+: la taille de le trame telle qu\textquotesingle{}entrée dans la fonction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: la valeur du CRC reçue est bien celle calculée à partir du reste de la trame 
+
+false \+: la valeur du CRC est incohérente ou non calculable 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00636}{636}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00636                                                                                      \{}
+\DoxyCodeLine{00637     \textcolor{keywordtype}{int} crc = \mbox{\hyperlink{class_x_bee_a32e22b437a2a47f53698d90f8416effa}{crc16}}(trame, trame\_size);}
+\DoxyCodeLine{00638 }
+\DoxyCodeLine{00639     uint8\_t newcrc\_low = crc \& 0xFF;}
+\DoxyCodeLine{00640     uint8\_t newcrc\_high = (crc >> 8) \& 0xFF;}
+\DoxyCodeLine{00641 }
+\DoxyCodeLine{00642     \textcolor{keywordflow}{if}(newcrc\_low == crc\_low \&\& newcrc\_high == crc\_high)}
+\DoxyCodeLine{00643         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00644 }
+\DoxyCodeLine{00645     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00646 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a1264cd9491907bc93d925fa196726aba}\label{class_x_bee_a1264cd9491907bc93d925fa196726aba}} 
+\index{XBee@{XBee}!isDestCorrect@{isDestCorrect}}
+\index{isDestCorrect@{isDestCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isDestCorrect()}{isDestCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+Dest\+Correct (\begin{DoxyParamCaption}\item[{int}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si une adresse de destination est correcte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em exp} & \+: l\textquotesingle{}adresse de destination à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: l\textquotesingle{}adresse est correcte 
+
+false \+: l\textquotesingle{}adresse est incorrecte 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00588}{588}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00588                                 \{}
+\DoxyCodeLine{00589     \textcolor{keywordtype}{int} size\_list\_addr = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}})/\textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}}[0]), i = 0;}
+\DoxyCodeLine{00590 }
+\DoxyCodeLine{00591     \textcolor{keywordflow}{while}(i < size\_list\_addr)\{}
+\DoxyCodeLine{00592         \textcolor{keywordflow}{if}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}}[i] == dest)}
+\DoxyCodeLine{00593             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00594 }
+\DoxyCodeLine{00595         i++;}
+\DoxyCodeLine{00596     \}}
+\DoxyCodeLine{00597 }
+\DoxyCodeLine{00598     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00599 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a3d8a5cec177d309aae76f3b6de8a728b}\label{class_x_bee_a3d8a5cec177d309aae76f3b6de8a728b}} 
+\index{XBee@{XBee}!isEndSeqCorrect@{isEndSeqCorrect}}
+\index{isEndSeqCorrect@{isEndSeqCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isEndSeqCorrect()}{isEndSeqCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+End\+Seq\+Correct (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si le caractère de fin de la trame correpond à celui attendu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & \+: le caractère à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: le caratère est bien celui attendu 
+
+false \+: le caractère est incorrect 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00620}{620}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00620                                    \{}
+\DoxyCodeLine{00621     \textcolor{keywordflow}{if}(value == \mbox{\hyperlink{define_8h_aed2f6788341df71e4b25f91c925ef34f}{XB\_V\_END}})}
+\DoxyCodeLine{00622         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00623 }
+\DoxyCodeLine{00624     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00625 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a359c4e1fd3271cdb7c46b0efeb329279}\label{class_x_bee_a359c4e1fd3271cdb7c46b0efeb329279}} 
+\index{XBee@{XBee}!isExpCorrect@{isExpCorrect}}
+\index{isExpCorrect@{isExpCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isExpCorrect()}{isExpCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+Exp\+Correct (\begin{DoxyParamCaption}\item[{int}]{exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si une adresse d\textquotesingle{}expéditeur est correcte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em exp} & \+: l\textquotesingle{}adresse de l\textquotesingle{}expéditeur à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: l\textquotesingle{}adresse est correcte 
+
+false \+: l\textquotesingle{}adresse est incorrecte 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00569}{569}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00569                               \{}
+\DoxyCodeLine{00570     \textcolor{keywordtype}{int} size\_list\_addr = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}})/\textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}}[0]), i = 0;}
+\DoxyCodeLine{00571 }
+\DoxyCodeLine{00572     \textcolor{keywordflow}{while}(i < size\_list\_addr)\{}
+\DoxyCodeLine{00573         \textcolor{keywordflow}{if}(\mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\_LIST\_ADR}}[i] == exp)}
+\DoxyCodeLine{00574             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00575 }
+\DoxyCodeLine{00576         i++;}
+\DoxyCodeLine{00577     \}}
+\DoxyCodeLine{00578 }
+\DoxyCodeLine{00579     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00580 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a235c84172b8419b81a5ae91d11dd0e96}\label{class_x_bee_a235c84172b8419b81a5ae91d11dd0e96}} 
+\index{XBee@{XBee}!isStartSeqCorrect@{isStartSeqCorrect}}
+\index{isStartSeqCorrect@{isStartSeqCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isStartSeqCorrect()}{isStartSeqCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+Start\+Seq\+Correct (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si le caractère de début de la trame correpond à celui attendu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & \+: le caractère à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: le caratère est bien celui attendu 
+
+false \+: le caractère est incorrect 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00607}{607}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00607                                      \{}
+\DoxyCodeLine{00608     \textcolor{keywordflow}{if}(value == \mbox{\hyperlink{define_8h_acca99b796bf305986693d2949c07f1b4}{XB\_V\_START}})}
+\DoxyCodeLine{00609         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00610 }
+\DoxyCodeLine{00611     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00612 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ade80327f2a3c022ef4eaa733d7c71c92}\label{class_x_bee_ade80327f2a3c022ef4eaa733d7c71c92}} 
+\index{XBee@{XBee}!isTrameSizeCorrect@{isTrameSizeCorrect}}
+\index{isTrameSizeCorrect@{isTrameSizeCorrect}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isTrameSizeCorrect()}{isTrameSizeCorrect()}}
+{\footnotesize\ttfamily bool XBee\+::is\+Trame\+Size\+Correct (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{trame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vérifie si la taille de la trame est cohérente. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trame} & \+: la trame à vérifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true \+: la taille de la trame semble cohérente 
+
+false \+: la taille de la trame est incorrecte, trop petite ou non cohérente 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00556}{556}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00556                                               \{}
+\DoxyCodeLine{00557     \textcolor{keywordflow}{if}(trame.size() > 10 \&\& trame.size() == trame[4]+5)}
+\DoxyCodeLine{00558         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00559 }
+\DoxyCodeLine{00560     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00561 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_aed8a183be2a0e7cf1605a5c8c8fd1f1c}\label{class_x_bee_aed8a183be2a0e7cf1605a5c8c8fd1f1c}} 
+\index{XBee@{XBee}!isXbeeResponding@{isXbeeResponding}}
+\index{isXbeeResponding@{isXbeeResponding}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{isXbeeResponding()}{isXbeeResponding()}}
+{\footnotesize\ttfamily int XBee\+::is\+Xbee\+Responding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de vérifier si un message envoyé a reçu une réponse. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00801}{801}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00801                           \{}
+\DoxyCodeLine{00802     \textcolor{keywordtype}{int} size\_list\_code\_fct = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}})/\textcolor{keyword}{sizeof}(\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[0]);}
+\DoxyCodeLine{00803     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00804       \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(3);  }
+\DoxyCodeLine{00805       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size\_list\_code\_fct; i++)\{}
+\DoxyCodeLine{00806           \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\_envoyees}}[\mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[i]] == 0)\{}
+\DoxyCodeLine{00807               \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(verif reponse) les trames envoyées portant le code fonction "{}} << \mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[i] << \textcolor{stringliteral}{"{} ont toutes reçues une réponse"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00808           \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00809               \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(verif reponse) /!\(\backslash\)\(\backslash\) les trames envoyées portant le code fonction "{}} << \mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\_LIST\_CODE\_FCT}}[i] << \textcolor{stringliteral}{"{} n'ont pas toutes reçues une réponse"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00810           \}}
+\DoxyCodeLine{00811       \}}
+\DoxyCodeLine{00812    \} }
+\DoxyCodeLine{00813 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}\label{class_x_bee_ac1fc413c3dbf1d3a312ce65df3f3c01b}} 
+\index{XBee@{XBee}!openSerialConnection@{openSerialConnection}}
+\index{openSerialConnection@{openSerialConnection}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{openSerialConnection()}{openSerialConnection()}}
+{\footnotesize\ttfamily int XBee\+::open\+Serial\+Connection (\begin{DoxyParamCaption}\item[{int}]{mode = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Nettoyage du buffer et ouverture de la connexion UART entre la Raspberry\+Pi et le module \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mode} & permet de définir la configuration de port à utiliser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+500 succès 
+
+-\/501 port série non trouvé 
+
+-\/502 erreur lors de l\textquotesingle{}ouverture du port série 
+
+-\/503 erreur lors de la récupération des informations du port série 
+
+-\/504 baudrate non reconnu 
+
+-\/505 erreur lors de l\textquotesingle{}écriture de la configuration du port série 
+
+-\/506 erreur lors de l\textquotesingle{}écriture du timeout 
+
+-\/507 databits non reconnus 
+
+-\/508 stopbits non reconnus 
+
+-\/509 parité non reconnue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00046}{46}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046                                       \{}
+\DoxyCodeLine{00047     \textcolor{keywordtype}{int} errorOpening;}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{if}(mode == 1)\{}
+\DoxyCodeLine{00049         errorOpening = \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_afaed268ce37d18121c4c778041224e5d}{openDevice}}(\mbox{\hyperlink{define_8h_a9c64f25548c02d153acc044a16e610f6}{XB\_SERIAL\_PORT\_DEFAULT}}, \mbox{\hyperlink{define_8h_a089dfd8cab0a6711a782a984dfd30c29}{XB\_BAUDRATE\_DEFAULT}}, \mbox{\hyperlink{define_8h_a3e8c543722f50daa8c6e454b15efbe97}{XB\_DATABITS\_DEFAULT}}, \mbox{\hyperlink{define_8h_a58dd8396f0b9386153d145b907e84553}{XB\_PARITY\_DEFAULT}}, \mbox{\hyperlink{define_8h_ad1e4503c41f73a1e2796f8303d81d7b4}{XB\_STOPBITS\_DEFAULT}});      }
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051         \textcolor{keywordflow}{if} (errorOpening != 1)}
+\DoxyCodeLine{00052             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) /!\(\backslash\)\(\backslash\) erreur "{}} << errorOpening << \textcolor{stringliteral}{"{} : impossible d'ouvrir le port "{}} << \mbox{\hyperlink{define_8h_a9c64f25548c02d153acc044a16e610f6}{XB\_SERIAL\_PORT\_DEFAULT}}  << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{define_8h_a089dfd8cab0a6711a782a984dfd30c29}{XB\_BAUDRATE\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ parité : "{}} << \mbox{\hyperlink{define_8h_a58dd8396f0b9386153d145b907e84553}{XB\_PARITY\_DEFAULT}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00054             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) connexion ouverte avec succès sur le port "{}} << \mbox{\hyperlink{define_8h_a9c64f25548c02d153acc044a16e610f6}{XB\_SERIAL\_PORT\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{define_8h_a089dfd8cab0a6711a782a984dfd30c29}{XB\_BAUDRATE\_DEFAULT}} << \textcolor{stringliteral}{"{} -\/ parité : "{}} << \mbox{\hyperlink{define_8h_a58dd8396f0b9386153d145b907e84553}{XB\_PARITY\_DEFAULT}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00055         \mbox{\hyperlink{class_x_bee_a63484ca5a9b6b76dbe78de964802e231}{checkATConfig}}();}
+\DoxyCodeLine{00056     \}    }
+\DoxyCodeLine{00057     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(mode == 0) \{}
+\DoxyCodeLine{00058         errorOpening = \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_afaed268ce37d18121c4c778041224e5d}{openDevice}}(\mbox{\hyperlink{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}{XB\_SERIAL\_PORT\_PRIMARY}}, \mbox{\hyperlink{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}{XB\_BAUDRATE\_PRIMARY}}, \mbox{\hyperlink{define_8h_a017a7b9bdf79e3aceafb5111c49bcc2b}{XB\_DATABITS\_PRIMARY}}, \mbox{\hyperlink{define_8h_acc61b40fe509d72640422289f4ca3fad}{XB\_PARITY\_PRIMARY}}, \mbox{\hyperlink{define_8h_a2527277ea7bfc48f384222ad9c2460bc}{XB\_STOPBITS\_PRIMARY}});      }
+\DoxyCodeLine{00059         }
+\DoxyCodeLine{00060         \textcolor{keywordflow}{if} (errorOpening != 1)}
+\DoxyCodeLine{00061             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) /!\(\backslash\)\(\backslash\) erreur "{}} << errorOpening << \textcolor{stringliteral}{"{} : impossible d'ouvrir le port "{}} << \mbox{\hyperlink{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}{XB\_SERIAL\_PORT\_PRIMARY}}  << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}{XB\_BAUDRATE\_PRIMARY}} << \textcolor{stringliteral}{"{} -\/ parités : "{}} << \mbox{\hyperlink{define_8h_acc61b40fe509d72640422289f4ca3fad}{XB\_PARITY\_PRIMARY}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00062         }
+\DoxyCodeLine{00063     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00064             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(serial) connexion ouverte avec succès sur le port "{}} << \mbox{\hyperlink{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}{XB\_SERIAL\_PORT\_PRIMARY}} << \textcolor{stringliteral}{"{} -\/ baudrate : "{}} << \mbox{\hyperlink{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}{XB\_BAUDRATE\_PRIMARY}} << \textcolor{stringliteral}{"{} -\/ parité : "{}} << \mbox{\hyperlink{define_8h_acc61b40fe509d72640422289f4ca3fad}{XB\_PARITY\_PRIMARY}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00065             \mbox{\hyperlink{class_x_bee_a63484ca5a9b6b76dbe78de964802e231}{checkATConfig}}();}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     \textcolor{keywordflow}{return} errorOpening;}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a805172daefa3df6c69fc1c63eefb842e}\label{class_x_bee_a805172daefa3df6c69fc1c63eefb842e}} 
+\index{XBee@{XBee}!print@{print}}
+\index{print@{print}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void XBee\+::print (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}affichage des valeurs contenues dans un vecteur d\textquotesingle{}entiers. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em v} & \+: le vecteur dont on souhaite afficher le contenu \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00865}{865}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00865                                     \{}
+\DoxyCodeLine{00866     copy(v.begin(), v.end(),}
+\DoxyCodeLine{00867             ostream\_iterator<int>(cout << hex, \textcolor{stringliteral}{"{} "{}}));}
+\DoxyCodeLine{00868     cout << endl;}
+\DoxyCodeLine{00869 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_aaac7e9a9ffe4ddd2108bde9923f46f68}\label{class_x_bee_aaac7e9a9ffe4ddd2108bde9923f46f68}} 
+\index{XBee@{XBee}!processCodeFct@{processCodeFct}}
+\index{processCodeFct@{processCodeFct}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{processCodeFct()}{processCodeFct()}}
+{\footnotesize\ttfamily int XBee\+::process\+Code\+Fct (\begin{DoxyParamCaption}\item[{int}]{code\+\_\+fct,  }\item[{int}]{exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interprète le code fonction issu d\textquotesingle{}une trame reçue. 
+
+\begin{DoxyReturn}{Renvoie}
+100 succès 
+
+-\/101 code fonction incorrect 
+
+-\/102 code fonction existant mais ne déclenchant aucune action ~\newline
+ 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00510}{510}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00510                                              \{}
+\DoxyCodeLine{00511     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_aa3bcf5ddb1814f835e7524590f2127d9}{isCodeFctCorrect}}(code\_fct))\{}
+\DoxyCodeLine{00512         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process code fonction) erreur "{}} << \mbox{\hyperlink{define_8h_af13758a628d8c1927c1c68cf2a53f989}{XB\_FCT\_E\_NOT\_FOUND}} << \textcolor{stringliteral}{"{} : code fonction incorrect "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00513         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_af13758a628d8c1927c1c68cf2a53f989}{XB\_FCT\_E\_NOT\_FOUND}};}
+\DoxyCodeLine{00514     \}}
+\DoxyCodeLine{00515     \textcolor{keywordtype}{char} msg[1];}
+\DoxyCodeLine{00516     \textcolor{keywordflow}{switch}(code\_fct)\{}
+\DoxyCodeLine{00517        \textcolor{keywordflow}{case} \mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\_FCT\_TEST\_ALIVE}} :}
+\DoxyCodeLine{00518            msg[0] = \{\mbox{\hyperlink{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}{XB\_V\_ACK}}\};}
+\DoxyCodeLine{00519            \mbox{\hyperlink{class_x_bee_a133ba657a1c58d9b65c4ee060d5f9ffb}{sendTrame}}(exp, \mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\_FCT\_TEST\_ALIVE}}, msg);}
+\DoxyCodeLine{00520            \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00521 }
+\DoxyCodeLine{00522        default :}
+\DoxyCodeLine{00523            \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process code fonction) erreur "{}} << \mbox{\hyperlink{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}{XB\_FCT\_E\_NONE\_REACHABLE}} << \textcolor{stringliteral}{"{} : code fonction existant mais ne déclenchant aucune action  "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00524            \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}{XB\_FCT\_E\_NONE\_REACHABLE}};}
+\DoxyCodeLine{00525     \}}
+\DoxyCodeLine{00526 }
+\DoxyCodeLine{00527     \mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\_envoyees}}[code\_fct] = \mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\_envoyees}}[code\_fct]-\/1;}
+\DoxyCodeLine{00528     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(process code fonction) code fonction n°"{}} << code\_fct << \textcolor{stringliteral}{"{} traité avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00529     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_aaebf92484330442fd3a89ca55c6501b2}{XB\_FCT\_E\_SUCCESS}};}
+\DoxyCodeLine{00530 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ad588451b2ade68dedc9450ad3ed71acf}\label{class_x_bee_ad588451b2ade68dedc9450ad3ed71acf}} 
+\index{XBee@{XBee}!processTrame@{processTrame}}
+\index{processTrame@{processTrame}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{processTrame()}{processTrame()}}
+{\footnotesize\ttfamily int XBee\+::process\+Trame (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{trame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Découpe une trame reçue en fonction de ses paramètres et interprete son code fonction. 
+
+\begin{DoxyReturn}{Renvoie}
+200 succès 
+
+-\/201 taille de la trame incorrecte ou non concordante 
+
+-\/202 premier caractère de la trame incorrect 
+
+-\/203 dernier caractère de la trame incorrect 
+
+-\/204 valeur du CRC incorrecte 
+
+-\/205 adresse de l\textquotesingle{}expéditeur incorrecte ou inconnue 
+
+-\/206 adresse du destinataire incorrecte ou inconnue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00437}{437}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00437                                              \{}
+\DoxyCodeLine{00438     }
+\DoxyCodeLine{00439     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_ade80327f2a3c022ef4eaa733d7c71c92}{isTrameSizeCorrect}}(trame\_recue))\{}
+\DoxyCodeLine{00440         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_ac21719e85ef616655914aebe4ac00b18}{XB\_TRAME\_E\_SIZE}} << \textcolor{stringliteral}{"{} : taille de la trame incorrecte ou non concordante "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00441         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ac21719e85ef616655914aebe4ac00b18}{XB\_TRAME\_E\_SIZE}};}
+\DoxyCodeLine{00442     \}}
+\DoxyCodeLine{00443     Trame\_t trame = \{}
+\DoxyCodeLine{00444         .start\_seq = trame\_recue[0],}
+\DoxyCodeLine{00445         .adr\_emetteur = trame\_recue[1],}
+\DoxyCodeLine{00446         .adr\_dest = trame\_recue[2],}
+\DoxyCodeLine{00447         .id\_trame\_low = trame\_recue[3]-\/4,}
+\DoxyCodeLine{00448         .id\_trame\_high = trame\_recue[4]-\/4,}
+\DoxyCodeLine{00449         .nb\_octets\_msg = trame\_recue[5]-\/4,}
+\DoxyCodeLine{00450         .code\_fct = trame\_recue[6],}
+\DoxyCodeLine{00451         .crc\_low = trame\_recue[3+trame\_recue[4]],}
+\DoxyCodeLine{00452         .crc\_high = trame\_recue[4+trame\_recue[4]],}
+\DoxyCodeLine{00453         .end\_seq = trame\_recue[5+trame\_recue[4]]}
+\DoxyCodeLine{00454     \};}
+\DoxyCodeLine{00455 }
+\DoxyCodeLine{00456     vector<int> data \{\};}
+\DoxyCodeLine{00457     }
+\DoxyCodeLine{00458     \textcolor{keywordflow}{for}(uint8\_t i = 0; i < trame.nb\_octets\_msg; i++)\{}
+\DoxyCodeLine{00459        data.push\_back(trame\_recue[7+i]); }
+\DoxyCodeLine{00460     \}}
+\DoxyCodeLine{00461 }
+\DoxyCodeLine{00462     trame.param = data;}
+\DoxyCodeLine{00463 }
+\DoxyCodeLine{00464     \mbox{\hyperlink{class_x_bee_a86d18a9f5d714880fa3ae96d5883452e}{afficherTrameRecue}}(trame);}
+\DoxyCodeLine{00465 }
+\DoxyCodeLine{00466     \textcolor{keywordtype}{int} decoupe\_trame[trame\_recue[4]+6];}
+\DoxyCodeLine{00467 }
+\DoxyCodeLine{00468     \textcolor{keywordflow}{for}(uint8\_t i = 0; i < trame\_recue[4]+3; i++)\{}
+\DoxyCodeLine{00469         decoupe\_trame[i] = trame\_recue[i];}
+\DoxyCodeLine{00470     \}}
+\DoxyCodeLine{00471 }
+\DoxyCodeLine{00472     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a235c84172b8419b81a5ae91d11dd0e96}{isStartSeqCorrect}}(trame.start\_seq))\{}
+\DoxyCodeLine{00473         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}{XB\_TRAME\_E\_START}} << \textcolor{stringliteral}{"{} : premier caractère de la trame incorrect "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00474         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}{XB\_TRAME\_E\_START}};}
+\DoxyCodeLine{00475     \}}
+\DoxyCodeLine{00476 }
+\DoxyCodeLine{00477     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a3d8a5cec177d309aae76f3b6de8a728b}{isEndSeqCorrect}}(trame.end\_seq))\{}
+\DoxyCodeLine{00478         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_ad3aab90769e29ca037e8454be70403fe}{XB\_TRAME\_E\_END}} << \textcolor{stringliteral}{"{} : dernier caractère de la trame incorrect "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00479         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ad3aab90769e29ca037e8454be70403fe}{XB\_TRAME\_E\_END}};}
+\DoxyCodeLine{00480     \}}
+\DoxyCodeLine{00481 }
+\DoxyCodeLine{00482     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_ab656920e323e42654f3763e717dfe0f4}{isCRCCorrect}}(trame.crc\_low, trame.crc\_high, decoupe\_trame, trame\_recue[4]+2))\{}
+\DoxyCodeLine{00483         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}{XB\_TRAME\_E\_CRC}} << \textcolor{stringliteral}{"{} : valeur du CRC incorrecte "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00484         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}{XB\_TRAME\_E\_CRC}};}
+\DoxyCodeLine{00485     \}}
+\DoxyCodeLine{00486 }
+\DoxyCodeLine{00487     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a359c4e1fd3271cdb7c46b0efeb329279}{isExpCorrect}}(trame.adr\_emetteur))\{}
+\DoxyCodeLine{00488         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_a2b2e42001647159fd6dcc632ce8b5349}{XB\_TRAME\_E\_EXP}} << \textcolor{stringliteral}{"{} : adresse de l'expéditeur incorrecte ou inconnue "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00489         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a2b2e42001647159fd6dcc632ce8b5349}{XB\_TRAME\_E\_EXP}};}
+\DoxyCodeLine{00490     \}}
+\DoxyCodeLine{00491 }
+\DoxyCodeLine{00492     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_x_bee_a1264cd9491907bc93d925fa196726aba}{isDestCorrect}}(trame.adr\_dest))\{}
+\DoxyCodeLine{00493         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (process trame) erreur "{}} << \mbox{\hyperlink{define_8h_a23f90681a267a6205f9db6170811be90}{XB\_TRAME\_E\_DEST}} << \textcolor{stringliteral}{"{} : adresse du destinataire incorrecte ou inconnue "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00494         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a23f90681a267a6205f9db6170811be90}{XB\_TRAME\_E\_DEST}};}
+\DoxyCodeLine{00495     \}}
+\DoxyCodeLine{00496 }
+\DoxyCodeLine{00497     \mbox{\hyperlink{class_x_bee_aaac7e9a9ffe4ddd2108bde9923f46f68}{processCodeFct}}(trame.code\_fct, trame.adr\_emetteur);}
+\DoxyCodeLine{00498 }
+\DoxyCodeLine{00499     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(process trame) trame n°"{}} << trame.id\_trame\_high+trame.id\_trame\_low << \textcolor{stringliteral}{"{}a été traitée avec succès "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00500     }
+\DoxyCodeLine{00501     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}{XB\_TRAME\_E\_SUCCESS}};}
+\DoxyCodeLine{00502 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}\label{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}} 
+\index{XBee@{XBee}!readATResponse@{readATResponse}}
+\index{readATResponse@{readATResponse}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{readATResponse()}{readATResponse()}}
+{\footnotesize\ttfamily bool XBee\+::read\+ATResponse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value = {\ttfamily \mbox{\hyperlink{define_8h_a6a043234984ffa2388420c2c302a8c58}{XB\+\_\+\+AT\+\_\+\+R\+\_\+\+EMPTY}}},  }\item[{int}]{mode = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de lire la réponse à un envoi de commande AT au module \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & \+: la valeur de réponse attendue pour la commande envoyée \\
+\hline
+{\em mode} & \+: le mode de lecture à utiliser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} est celle attendue 
+
+false la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} n\textquotesingle{}est pas celle attendue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00254}{254}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254                                                     \{}
+\DoxyCodeLine{00255     \textcolor{keywordtype}{string} reponse = \mbox{\hyperlink{class_x_bee_a57a921012a68f18ad9d63df92382f35a}{readString}}();}
+\DoxyCodeLine{00256     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) réponse du Xbee : "{}} << reponse << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258     \textcolor{keywordflow}{if}(mode == 0)}
+\DoxyCodeLine{00259         \textcolor{keywordflow}{if}(reponse == value) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(mode == 1)     }
+\DoxyCodeLine{00262         \textcolor{keywordflow}{if}(reponse != value) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00263     }
+\DoxyCodeLine{00264     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00265 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_aebae7367c381376f968401cefab2996a}\label{class_x_bee_aebae7367c381376f968401cefab2996a}} 
+\index{XBee@{XBee}!readBuffer@{readBuffer}}
+\index{readBuffer@{readBuffer}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{readBuffer()}{readBuffer()}}
+{\footnotesize\ttfamily vector$<$ int $>$ XBee\+::read\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Permet de lire l\textquotesingle{}intégralité du buffer Rx de la Raspberry\+Pi. 
+
+\begin{DoxyReturn}{Renvoie}
+rep \+: la valeur du buffer sous forme d\textquotesingle{}un vecteur d\textquotesingle{}entiers signés sur 32 bits 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00652}{652}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00652                             \{}
+\DoxyCodeLine{00653     \textcolor{keywordtype}{char} *reponse(0);}
+\DoxyCodeLine{00654     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timeout = 100;}
+\DoxyCodeLine{00655     reponse = \textcolor{keyword}{new} char;}
+\DoxyCodeLine{00656     vector<int> rep;}
+\DoxyCodeLine{00657     \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(1);}
+\DoxyCodeLine{00658     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00659     \textcolor{keywordflow}{while}(\mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a50c91bf8cab23afdfdf05ca58392456f}{available}}() > 0)\{}
+\DoxyCodeLine{00660         i++;}
+\DoxyCodeLine{00661         \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{readChar}}(reponse, timeout);}
+\DoxyCodeLine{00662         rep.push\_back(*reponse);}
+\DoxyCodeLine{00663     \}}
+\DoxyCodeLine{00664     \textcolor{keyword}{delete} reponse;}
+\DoxyCodeLine{00665     reponse = 0;}
+\DoxyCodeLine{00666 }
+\DoxyCodeLine{00667     \textcolor{keywordflow}{return} rep;}
+\DoxyCodeLine{00668 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a57a921012a68f18ad9d63df92382f35a}\label{class_x_bee_a57a921012a68f18ad9d63df92382f35a}} 
+\index{XBee@{XBee}!readString@{readString}}
+\index{readString@{readString}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}}
+{\footnotesize\ttfamily string XBee\+::read\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Permet de lire l\textquotesingle{}intégralité du contenu du buffer Rx de la Raspberry\+Pi et de le renvoyer sous forme d\textquotesingle{}objet string. 
+
+\begin{DoxyReturn}{Renvoie}
+rep \+: la valeur du buffer concaténée sous forme d\textquotesingle{}objet string 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00675}{675}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00675                         \{}
+\DoxyCodeLine{00676      \textcolor{keywordtype}{char} *reponse(0);}
+\DoxyCodeLine{00677      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timeout = 100;}
+\DoxyCodeLine{00678      reponse = \textcolor{keyword}{new} char;}
+\DoxyCodeLine{00679      \textcolor{keywordtype}{string} rep;}
+\DoxyCodeLine{00680      \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(1);}
+\DoxyCodeLine{00681      \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00682 }
+\DoxyCodeLine{00683      \textcolor{keywordflow}{while}(\mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a50c91bf8cab23afdfdf05ca58392456f}{available}}() > 0)\{}
+\DoxyCodeLine{00684     i++;}
+\DoxyCodeLine{00685     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{readChar}}(reponse, timeout);}
+\DoxyCodeLine{00686     rep += *reponse;}
+\DoxyCodeLine{00687      \}}
+\DoxyCodeLine{00688 }
+\DoxyCodeLine{00689       \textcolor{keyword}{delete} reponse;}
+\DoxyCodeLine{00690       reponse = 0;}
+\DoxyCodeLine{00691       \textcolor{keywordflow}{return} rep;}
+\DoxyCodeLine{00692 }
+\DoxyCodeLine{00693 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}\label{class_x_bee_a383001e0126e2636e10d9cc4c18c3156}} 
+\index{XBee@{XBee}!sendATCommand@{sendATCommand}}
+\index{sendATCommand@{sendATCommand}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendATCommand()}{sendATCommand()}}
+{\footnotesize\ttfamily bool XBee\+::send\+ATCommand (\begin{DoxyParamCaption}\item[{const char $\ast$}]{command,  }\item[{const char $\ast$}]{value,  }\item[{unsigned int}]{mode = {\ttfamily \mbox{\hyperlink{define_8h_a7b84802b6b28bad27a64e09b8705fd45}{XB\+\_\+\+AT\+\_\+\+M\+\_\+\+SET}}} }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}envoyer en UART via le port série une commmande AT. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em command} & \+: le paramètre AT a envoyer au module \\
+\hline
+{\em value} & \+: la valeur de réponse attendue \\
+\hline
+{\em mode} & \+: le mode de transmission de la commande AT (mode lecture ou écriture) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} est celle attendue 
+
+false la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} n\textquotesingle{}est pas celle attendue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00325}{325}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00325                                                                                  \{}
+\DoxyCodeLine{00326     \textcolor{keywordflow}{if}(mode == \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\_AT\_M\_GET}})\{}
+\DoxyCodeLine{00327         \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(command);}
+\DoxyCodeLine{00328         \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\_AT\_V\_END\_LINE}});}
+\DoxyCodeLine{00329         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) envoi de la commande AT : "{}} << command << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00330         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(value);}
+\DoxyCodeLine{00331     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00332         \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(command);}
+\DoxyCodeLine{00333         \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(value);    }
+\DoxyCodeLine{00334         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(config AT) envoi de la commande AT : "{}} << command << \textcolor{stringliteral}{"{}="{}} << value << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00335         \textcolor{keywordflow}{if}(command == \mbox{\hyperlink{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}{XB\_AT\_CMD\_DISCOVER\_NETWORK}})}
+\DoxyCodeLine{00336             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{XB\_AT\_R\_SUCCESS}});}
+\DoxyCodeLine{00337         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00338             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}{XB\_AT\_V\_DISCOVER\_NETWORK}}, 1);}
+\DoxyCodeLine{00339     \}}
+\DoxyCodeLine{00340 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a6b7eecc0b20a691f510abadd71ab5525}\label{class_x_bee_a6b7eecc0b20a691f510abadd71ab5525}} 
+\index{XBee@{XBee}!sendHeartbeat@{sendHeartbeat}}
+\index{sendHeartbeat@{sendHeartbeat}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendHeartbeat()}{sendHeartbeat()}}
+{\footnotesize\ttfamily void XBee\+::send\+Heartbeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}envoyer des demandes de battements de coeur au second robot afin de savoir s\textquotesingle{}il est toujours opérationnel. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00788}{788}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00788                         \{}
+\DoxyCodeLine{00789     \textcolor{keywordtype}{char}* msg;}
+\DoxyCodeLine{00790     msg[0] = \mbox{\hyperlink{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}{XB\_V\_ACK}};}
+\DoxyCodeLine{00791 }
+\DoxyCodeLine{00792     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00793       \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(3);}
+\DoxyCodeLine{00794       \mbox{\hyperlink{class_x_bee_a133ba657a1c58d9b65c4ee060d5f9ffb}{sendTrame}}(\mbox{\hyperlink{define_8h_afb1db7f28458f5c87f93cf2076ce167f}{XB\_ADR\_ROBOT\_02}}, \mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\_FCT\_TEST\_ALIVE}}, msg);}
+\DoxyCodeLine{00795    \} }
+\DoxyCodeLine{00796 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a4b097076ff43bf157bdfcddaca4feec7}\label{class_x_bee_a4b097076ff43bf157bdfcddaca4feec7}} 
+\index{XBee@{XBee}!sendMsg@{sendMsg}}
+\index{sendMsg@{sendMsg}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendMsg()}{sendMsg()}}
+{\footnotesize\ttfamily void XBee\+::send\+Msg (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}envoyer un mesage ASCII sans format particulier via \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em msg} & \+: le message à envoyer \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00819}{819}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00819                             \{}
+\DoxyCodeLine{00820     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{class_x_bee_ac7eb2f0badf73d2aaa3a2de57f1357c6}{stringToChar}}(msg));}
+\DoxyCodeLine{00821     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(envoi message) message : "{}} << msg << \textcolor{stringliteral}{"{} envoyé avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00822 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a133ba657a1c58d9b65c4ee060d5f9ffb}\label{class_x_bee_a133ba657a1c58d9b65c4ee060d5f9ffb}} 
+\index{XBee@{XBee}!sendTrame@{sendTrame}}
+\index{sendTrame@{sendTrame}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendTrame()}{sendTrame()}}
+{\footnotesize\ttfamily int XBee\+::send\+Trame (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ad\+\_\+dest,  }\item[{uint8\+\_\+t}]{code\+\_\+fct,  }\item[{char $\ast$}]{data = {\ttfamily 0x00} }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}envoyer une trame de message structurée via UART en \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ad\+\_\+dest} & \+: l\textquotesingle{}adresse du destinataire du message \\
+\hline
+{\em code\+\_\+fct} & \+: le code de la fonction concernée par le message \\
+\hline
+{\em data} & \+: les valeurs des paramètres demandées par le code fonction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SUCCESS\} succès 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00384}{384}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00384                                                                 \{}
+\DoxyCodeLine{00385    }
+\DoxyCodeLine{00386     cout << hex << showbase;}
+\DoxyCodeLine{00387 }
+\DoxyCodeLine{00388     uint8\_t length\_trame = strlen(data)+10;}
+\DoxyCodeLine{00389     uint8\_t trame[length\_trame];}
+\DoxyCodeLine{00390     \textcolor{keywordtype}{int} trame\_int[length\_trame];}
+\DoxyCodeLine{00391     \textcolor{keywordtype}{int} id\_trame = ++\mbox{\hyperlink{class_x_bee_ae4fc3bb11cca90a207fea1b8832b1a03}{ID\_TRAME}};}
+\DoxyCodeLine{00392     uint8\_t id\_trame\_low = id\_trame \& 0xFF;}
+\DoxyCodeLine{00393     uint8\_t id\_trame\_high = (id\_trame >> 8) \& 0xFF;}
+\DoxyCodeLine{00394 }
+\DoxyCodeLine{00395     trame[0] = \mbox{\hyperlink{define_8h_acca99b796bf305986693d2949c07f1b4}{XB\_V\_START}};}
+\DoxyCodeLine{00396     trame[1] = \mbox{\hyperlink{define_8h_ab156591ecc1c724d973004e6a2f89fa4}{XB\_ADR\_CURRENT\_ROBOT}};}
+\DoxyCodeLine{00397     trame[2] = ad\_dest;}
+\DoxyCodeLine{00398     trame[3] = id\_trame\_low+4;}
+\DoxyCodeLine{00399     trame[4] = id\_trame\_high+4;}
+\DoxyCodeLine{00400     trame[5] = strlen(data)+4;}
+\DoxyCodeLine{00401     trame[6] = code\_fct;}
+\DoxyCodeLine{00402  }
+\DoxyCodeLine{00403     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < strlen(data); i++)\{}
+\DoxyCodeLine{00404         trame[i+7] = data[i]; }
+\DoxyCodeLine{00405     \}}
+\DoxyCodeLine{00406     }
+\DoxyCodeLine{00407     }
+\DoxyCodeLine{00408     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i < length\_trame; i++)\{}
+\DoxyCodeLine{00409         trame\_int[i] = int(trame[i]);}
+\DoxyCodeLine{00410     \}}
+\DoxyCodeLine{00411     \textcolor{keywordtype}{int} crc = \mbox{\hyperlink{class_x_bee_a32e22b437a2a47f53698d90f8416effa}{crc16}}(trame\_int, strlen(data)+6);}
+\DoxyCodeLine{00412     uint8\_t crc\_low = crc \& 0xFF;}
+\DoxyCodeLine{00413     uint8\_t crc\_high = (crc >> 8) \& 0xFF;}
+\DoxyCodeLine{00414 }
+\DoxyCodeLine{00415     trame[strlen(data)+7] = crc\_low;}
+\DoxyCodeLine{00416     trame[strlen(data)+8] = crc\_high;}
+\DoxyCodeLine{00417     trame[strlen(data)+9] = \mbox{\hyperlink{define_8h_aed2f6788341df71e4b25f91c925ef34f}{XB\_V\_END}};}
+\DoxyCodeLine{00418 }
+\DoxyCodeLine{00419     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_aa14196b6f422584bf5eebc4ddb71d483}{writeBytes}}(trame, length\_trame);}
+\DoxyCodeLine{00420     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(sendTrame) envoi de la trame n°"{}} << dec << id\_trame\_low+id\_trame\_high  << \textcolor{stringliteral}{"{} effectué avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}}; }
+\DoxyCodeLine{00421 }
+\DoxyCodeLine{00422     \mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\_envoyees}}[code\_fct] = \mbox{\hyperlink{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}{trames\_envoyees}}[code\_fct]+1;}
+\DoxyCodeLine{00423 }
+\DoxyCodeLine{00424     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}{XB\_TRAME\_E\_SUCCESS}};}
+\DoxyCodeLine{00425 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ad103b320d8d88a1eed931a46eeb29ccb}\label{class_x_bee_ad103b320d8d88a1eed931a46eeb29ccb}} 
+\index{XBee@{XBee}!slice@{slice}}
+\index{slice@{slice}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{slice()}{slice()}}
+{\footnotesize\ttfamily vector$<$ int $>$ XBee\+::slice (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction de traitement permettant d\textquotesingle{}extraire un sous-\/vecteur d\textquotesingle{}entiers d\textquotesingle{}un vecteur d\textquotesingle{}entiers. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em v} & \+: le vecteur à découper \\
+\hline
+{\em a} & \+: l\textquotesingle{}indice de la première valeur à découper \\
+\hline
+{\em b} & \+: l\textquotesingle{}indice de la dernière valeur à découper \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vec \+: le sous-\/vecteur d\textquotesingle{}entiers découpé 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00878}{878}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00878                                                          \{}
+\DoxyCodeLine{00879     \textcolor{keyword}{auto} first = v.cbegin() + a;}
+\DoxyCodeLine{00880     \textcolor{keyword}{auto} last = v.cbegin() + b + 1;}
+\DoxyCodeLine{00881 }
+\DoxyCodeLine{00882     vector<int> vec(first, last);}
+\DoxyCodeLine{00883     \textcolor{keywordflow}{return} vec;}
+\DoxyCodeLine{00884 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ac7eb2f0badf73d2aaa3a2de57f1357c6}\label{class_x_bee_ac7eb2f0badf73d2aaa3a2de57f1357c6}} 
+\index{XBee@{XBee}!stringToChar@{stringToChar}}
+\index{stringToChar@{stringToChar}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{stringToChar()}{stringToChar()}}
+{\footnotesize\ttfamily char $\ast$ XBee\+::string\+To\+Char (\begin{DoxyParamCaption}\item[{std\+::string}]{chaine }\end{DoxyParamCaption})}
+
+
+
+Permet de convertir un objet de type string en chaine de caractère standard C. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chaine} & \+: l\textquotesingle{}objet string à convertir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+message \+: la chaine de caractère convertie 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00829}{829}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00829                                      \{}
+\DoxyCodeLine{00830     \textcolor{keywordtype}{char}* message = strcpy(\textcolor{keyword}{new} \textcolor{keywordtype}{char}[chaine.size() + 1], chaine.c\_str());}
+\DoxyCodeLine{00831     \textcolor{keywordflow}{return} message;}
+\DoxyCodeLine{00832 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a491d66fa4bdf5c7c6d8c65fd33db36f9}\label{class_x_bee_a491d66fa4bdf5c7c6d8c65fd33db36f9}} 
+\index{XBee@{XBee}!subTrame@{subTrame}}
+\index{subTrame@{subTrame}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{subTrame()}{subTrame()}}
+{\footnotesize\ttfamily int XBee\+::sub\+Trame (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{msg\+\_\+recu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Découpe le résultat de la lecture du buffer en différentes trames avant le traitement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em msg\+\_\+recu} & \+: le résultat de la lecture du buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+300 succès 
+
+-\/301 la position des trames dans le message reçu est incorrecte \+: les caractères de début et de fin de trame ne sont pas au même nombre 
+
+-\/302 la position des trames dans le message reçu est incorrecte \+: certains caractères de début de trame sont placés après des caractères de fin de trame 
+
+-\/303 la position des trames dans le message reçu est incorrecte \+: des caractères inconnus sont placés entre deux trames 
+
+-\/304 le premier caractère lu dans le buffer n\textquotesingle{}est pas celui d\textquotesingle{}un début de trame 
+
+-\/305 le dernier caractère lu dans le buffer n\textquotesingle{}est pas celui d\textquotesingle{}une fin de trame 
+
+-\/306 aucun caractère de début et/ou de fin n\textquotesingle{}est présent dans le message reçu 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00725}{725}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00725                                       \{}
+\DoxyCodeLine{00726 }
+\DoxyCodeLine{00727     vector<int> list\_start\_seq \{\};}
+\DoxyCodeLine{00728     vector<int> list\_end\_seq \{\};}
+\DoxyCodeLine{00729     vector<int> decoupe \{\};}
+\DoxyCodeLine{00730     \textcolor{keywordtype}{int} decoupe\_retour;}
+\DoxyCodeLine{00731 }
+\DoxyCodeLine{00732     \textcolor{keywordflow}{for}(uint8\_t i = 0; i < msg\_recu.size(); i++)\{}
+\DoxyCodeLine{00733         \textcolor{keywordflow}{if}(msg\_recu[i] == \mbox{\hyperlink{define_8h_acca99b796bf305986693d2949c07f1b4}{XB\_V\_START}})}
+\DoxyCodeLine{00734             list\_start\_seq.push\_back(i);}
+\DoxyCodeLine{00735 }
+\DoxyCodeLine{00736         \textcolor{keywordflow}{if}(msg\_recu[i] == \mbox{\hyperlink{define_8h_aed2f6788341df71e4b25f91c925ef34f}{XB\_V\_END}})}
+\DoxyCodeLine{00737             list\_end\_seq.push\_back(i);}
+\DoxyCodeLine{00738     \}}
+\DoxyCodeLine{00739 }
+\DoxyCodeLine{00740     \textcolor{keywordflow}{if}(list\_start\_seq.size() == 0 || list\_end\_seq.size() == 0)\{}
+\DoxyCodeLine{00741         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_a296ef6d14e0861ec8105cabf13a80daa}{XB\_SUB\_TRAME\_E\_NULL}} << \textcolor{stringliteral}{"{} : aucun caractère de début et/ou de fin n'est présent dans le message reçu "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00742         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a296ef6d14e0861ec8105cabf13a80daa}{XB\_SUB\_TRAME\_E\_NULL}};}
+\DoxyCodeLine{00743     \}}
+\DoxyCodeLine{00744 }
+\DoxyCodeLine{00745     \textcolor{keywordflow}{if}(list\_start\_seq.size() != list\_end\_seq.size())\{}
+\DoxyCodeLine{00746         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_ad021b44108c67217ff3e4c1c707df76e}{XB\_SUB\_TRAME\_E\_SIZE}} << \textcolor{stringliteral}{"{} : les caractères de début et de fin de trame ne sont pas au même nombre "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00747         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_ad021b44108c67217ff3e4c1c707df76e}{XB\_SUB\_TRAME\_E\_SIZE}};}
+\DoxyCodeLine{00748     \}}
+\DoxyCodeLine{00749 }
+\DoxyCodeLine{00750     \textcolor{keywordflow}{for}(uint8\_t i = 0; i < list\_start\_seq.size(); i++)\{}
+\DoxyCodeLine{00751         \textcolor{keywordflow}{if}(list\_start\_seq[i] > list\_end\_seq[i])\{}
+\DoxyCodeLine{00752             \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}{XB\_SUB\_TRAME\_E\_REPARTITION}} << \textcolor{stringliteral}{"{} : certains caractères de début de trame sont placés après des caractères de fin de trame "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00753             \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}{XB\_SUB\_TRAME\_E\_REPARTITION}};}
+\DoxyCodeLine{00754         \}}
+\DoxyCodeLine{00755 }
+\DoxyCodeLine{00756         \textcolor{keywordflow}{if}(i != 0)\{}
+\DoxyCodeLine{00757             \textcolor{keywordflow}{if}(list\_start\_seq[i] != list\_end\_seq[i-\/1]-\/1)\{}
+\DoxyCodeLine{00758                 \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}{XB\_SUB\_TRAME\_E\_DECOUPAGE}} << \textcolor{stringliteral}{"{} : des caractères inconnus sont placés entre deux trames "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00759                 \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}{XB\_SUB\_TRAME\_E\_DECOUPAGE}};}
+\DoxyCodeLine{00760             \}}
+\DoxyCodeLine{00761         \}}
+\DoxyCodeLine{00762     \}}
+\DoxyCodeLine{00763 }
+\DoxyCodeLine{00764 }
+\DoxyCodeLine{00765     \textcolor{keywordflow}{if}(list\_start\_seq[0] != 0)\{}
+\DoxyCodeLine{00766         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_a2fa21a437940dc3ef543bb735716fd00}{XB\_SUB\_TRAME\_E\_START}} << \textcolor{stringliteral}{"{} : le premier caractère lu dans le buffer n'est pas celui d'un début de trame "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00767         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a2fa21a437940dc3ef543bb735716fd00}{XB\_SUB\_TRAME\_E\_START}};}
+\DoxyCodeLine{00768     \}}
+\DoxyCodeLine{00769     }
+\DoxyCodeLine{00770     \textcolor{keywordflow}{if}(list\_end\_seq[list\_end\_seq.size()-\/1] != msg\_recu.size()-\/1)\{}
+\DoxyCodeLine{00771         \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}/!\(\backslash\)\(\backslash\) (découpe trame) erreur "{}} << \mbox{\hyperlink{define_8h_a31c302e2f3434bf6c9beabef3e20453d}{XB\_SUB\_TRAME\_E\_END}} << \textcolor{stringliteral}{"{} : le dernier caractère lu dans le buffer n'est pas celui d'une fin de trame "{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00772         \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a31c302e2f3434bf6c9beabef3e20453d}{XB\_SUB\_TRAME\_E\_END}};}
+\DoxyCodeLine{00773     \}}
+\DoxyCodeLine{00774     }
+\DoxyCodeLine{00775     \textcolor{keywordflow}{for}(uint8\_t i = 0; i < list\_start\_seq.size(); i++)\{}
+\DoxyCodeLine{00776        decoupe.clear();}
+\DoxyCodeLine{00777        decoupe = \mbox{\hyperlink{class_x_bee_ad103b320d8d88a1eed931a46eeb29ccb}{slice}}(msg\_recu, list\_start\_seq[i], list\_end\_seq[i]); }
+\DoxyCodeLine{00778        decoupe\_retour = \mbox{\hyperlink{class_x_bee_ad588451b2ade68dedc9450ad3ed71acf}{processTrame}}(decoupe);}
+\DoxyCodeLine{00779     \}   }
+\DoxyCodeLine{00780 }
+\DoxyCodeLine{00781     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}(découpe trame) découpage des trames effectué avec succès"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00782     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a1fc787b2cf4ce558b24eb81eb460f56e}{XB\_SUB\_TRAME\_E\_SUCCESS}};  }
+\DoxyCodeLine{00783 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_a9f89263f38e334b88d6505641b1a0335}\label{class_x_bee_a9f89263f38e334b88d6505641b1a0335}} 
+\index{XBee@{XBee}!waitForATrame@{waitForATrame}}
+\index{waitForATrame@{waitForATrame}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{waitForATrame()}{waitForATrame()}}
+{\footnotesize\ttfamily void XBee\+::wait\+For\+ATrame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet l\textquotesingle{}attente et la vérification régulée d\textquotesingle{}une trame en entrée dans le buffer du port Rx de la Raspberry\+Pi et d\textquotesingle{}appeler la fonction de découpe des trames. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00698}{698}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00698                         \{}
+\DoxyCodeLine{00699    vector<int> rep;}
+\DoxyCodeLine{00700    }
+\DoxyCodeLine{00701    \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00702      rep.clear();}
+\DoxyCodeLine{00703 }
+\DoxyCodeLine{00704      \mbox{\hyperlink{class_x_bee_a6e71129bbccf1e71335a6dfd5fcd1b82}{delay}}(1/100);}
+\DoxyCodeLine{00705      }
+\DoxyCodeLine{00706      \textcolor{keywordflow}{if}(\mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a50c91bf8cab23afdfdf05ca58392456f}{available}}() > 0)\{}
+\DoxyCodeLine{00707        rep = \mbox{\hyperlink{class_x_bee_aebae7367c381376f968401cefab2996a}{readBuffer}}();}
+\DoxyCodeLine{00708        \mbox{\hyperlink{class_x_bee_a491d66fa4bdf5c7c6d8c65fd33db36f9}{subTrame}}(rep);}
+\DoxyCodeLine{00709      \}}
+\DoxyCodeLine{00710    \}}
+\DoxyCodeLine{00711 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x_bee_ad85b6117daf5d6e48f8be690822d0d7a}\label{class_x_bee_ad85b6117daf5d6e48f8be690822d0d7a}} 
+\index{XBee@{XBee}!writeATConfig@{writeATConfig}}
+\index{writeATConfig@{writeATConfig}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{writeATConfig()}{writeATConfig()}}
+{\footnotesize\ttfamily bool XBee\+::write\+ATConfig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}écrire dans la mémoire flash du module \mbox{\hyperlink{class_x_bee}{XBee}}, les paramètres AT définis. 
+
+\begin{DoxyReturn}{Renvoie}
+true la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} est celle attendue 
+
+false la réponse du module \mbox{\hyperlink{class_x_bee}{XBee}} n\textquotesingle{}est pas celle attendue 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8cpp_source_l00309}{309}} du fichier \mbox{\hyperlink{xbeelib_8cpp_source}{xbeelib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00309                         \{}
+\DoxyCodeLine{00310     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a636bc983828acdcbe6d667988128e983}{XB\_AT\_CMD\_WRITE\_CONFIG}});}
+\DoxyCodeLine{00311     \mbox{\hyperlink{xbeelib_8cpp_abe56a1928948cbb62cb7654bd976adf9}{serial}}.\mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{writeString}}(\mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\_AT\_V\_END\_LINE}});}
+\DoxyCodeLine{00312     \textcolor{comment}{//cout << "{}* Ecriture de la configuration AT..."{} << endl;}}
+\DoxyCodeLine{00313     \mbox{\hyperlink{xbeelib_8cpp_a57424eedac13ae8f0ee63b24b79cf873}{logXbee}} << \textcolor{stringliteral}{"{}écriture des paramètres AT dans la mémoire"{}} << \mbox{\hyperlink{loglib_8h_a2d2463ee96be5d0057eb965f6db172f9}{mendl}};}
+\DoxyCodeLine{00314     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_x_bee_a94553844c27b72bd375fcaf08a0a7e65}{readATResponse}}(\mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{XB\_AT\_R\_SUCCESS}});}
+\DoxyCodeLine{00315 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_x_bee_ae4fc3bb11cca90a207fea1b8832b1a03}\label{class_x_bee_ae4fc3bb11cca90a207fea1b8832b1a03}} 
+\index{XBee@{XBee}!ID\_TRAME@{ID\_TRAME}}
+\index{ID\_TRAME@{ID\_TRAME}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{ID\_TRAME}{ID\_TRAME}}
+{\footnotesize\ttfamily int XBee\+::\+ID\+\_\+\+TRAME = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8h_source_l00156}{156}} du fichier \mbox{\hyperlink{xbeelib_8h_source}{xbeelib.\+h}}.
+
+\mbox{\Hypertarget{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}\label{class_x_bee_a06a219ceff3be5e7a6efb4ae21f6e7a0}} 
+\index{XBee@{XBee}!MODE@{MODE}}
+\index{MODE@{MODE}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{MODE}{MODE}}
+{\footnotesize\ttfamily int XBee\+::\+MODE = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8h_source_l00159}{159}} du fichier \mbox{\hyperlink{xbeelib_8h_source}{xbeelib.\+h}}.
+
+\mbox{\Hypertarget{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}\label{class_x_bee_a77f72e489852e03bbd7fb08af86ac2f8}} 
+\index{XBee@{XBee}!trames\_envoyees@{trames\_envoyees}}
+\index{trames\_envoyees@{trames\_envoyees}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{trames\_envoyees}{trames\_envoyees}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ XBee\+::trames\+\_\+envoyees = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{xbeelib_8h_source_l00162}{162}} du fichier \mbox{\hyperlink{xbeelib_8h_source}{xbeelib.\+h}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{xbeelib_8h}{xbeelib.\+h}}\item 
+\mbox{\hyperlink{xbeelib_8cpp}{xbeelib.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{xbee_8h_source}{}\doxysection{xbee.\+h}
+\mbox{\hyperlink{xbee_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00009}00009 \textcolor{preprocessor}{\#ifndef XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00010}00010 \textcolor{preprocessor}{\#define XBEE\_H}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{define_8h}{define.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{serialib_8h}{serialib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00022}\mbox{\hyperlink{classxbee}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{classxbee}{xbee}}\{}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00024}00024 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00026}00026     \textcolor{comment}{// Constructeur de la classe}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00027}00027     \mbox{\hyperlink{classxbee_a524440833ff50c0e1752a405b8fbd1f6}{xbee}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00029}00029     \textcolor{comment}{// Desctructeur de la classe}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00030}00030     \mbox{\hyperlink{classxbee_a933410b267b5dc30acb860344f975fff}{\string~xbee}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00031}00031     }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00032}00032     \textcolor{comment}{// Ouverture de la connexion série}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00033}00033     \textcolor{keywordtype}{int} \mbox{\hyperlink{classxbee_abf99767e4b2ece4d1a157e077c9a227d}{openSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00035}00035     \textcolor{comment}{// Fermeture de la connexion série}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00036}00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxbee_a528a578228c9e0af3a6d58d5e57c6a61}{closeSerialConnection}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00037}00037     }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00038}00038     \textcolor{comment}{// Entrée dans le mode de configuration AT}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00039}00039     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_aefc556d89894a691d7f1386bc24e1ebe}{enterATMode}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00041}00041     \textcolor{comment}{// Sortie du mode de configuration AT}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00042}00042     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_ae5d455cf53a3bd4f65eac9c72864771c}{exitATMode}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00044}00044     \textcolor{comment}{// Vérification et correction de la configuration AT du module}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00045}00045     \textcolor{keywordtype}{int} \mbox{\hyperlink{classxbee_abb6a4d026ff839bdab7d8d7303c6360c}{checkATConfig}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00047}00047     \textcolor{comment}{// Lecture de la réponse du module à une commande AT}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00048}00048     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_abf502314dfbecd8eb5ef2fda88c26e33}{readATResponse}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value = \mbox{\hyperlink{define_8h_a8896c61fb2850aef354c5fad462cafa5}{AT\_EMPTY\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00050}00050     \textcolor{comment}{// Envoi d'une commande AT }}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00051}00051     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_aa6c0a5e46aa5059cf477a427a1847db9}{sendATCommand}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *command, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00053}00053     \textcolor{comment}{// Ecriture de la configuration AT dans la mémoire flash du module}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00054}00054     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classxbee_a9cc6332e514615b39489e45233f98563}{writeATConfig}}();}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00056}00056     \textcolor{comment}{// Création et envoi de la trame de message structurée}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00057}00057     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxbee_a422aef48ffa5a946bdb477dc4731e95f}{sendTrame}}(\textcolor{keywordtype}{char} ad\_dest, \textcolor{keywordtype}{char} code\_fct, \textcolor{keywordtype}{char} data[]);}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00059}00059 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00061}00061     \textcolor{comment}{// Calcul du CRC16 Modbus de la trame}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00062}00062     \textcolor{keywordtype}{int} crc16(std::vector<char> trame);}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00064}00064     \textcolor{comment}{// Retard de temporisation dans l'exécution du code}}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00065}00065     \textcolor{keywordtype}{void} delay(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00066}00066 \};}
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{xbee_8h_source_l00068}00068 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

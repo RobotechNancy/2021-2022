@@ -1,0 +1,77 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}README}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Index des classes}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Liste des classes}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index des fichiers}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Liste des fichiers}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Documentation des classes}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Référence de la classe Can}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Description détaillée}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Documentation des constructeurs et destructeur}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Can()}{7}{subsubsection.4.1.2.1}%
+\contentsline {subsection}{\numberline {4.1.3}Documentation des fonctions membres}{8}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}init()}{8}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}is\_valid\_addr()}{8}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}is\_valid\_code\_fct()}{9}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}send()}{9}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}start\_listen()}{10}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}traitement()}{10}{subsubsection.4.1.3.6}%
+\contentsline {section}{\numberline {4.2}Référence de la classe CAN}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Description détaillée}{11}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Référence de la structure Can\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Response\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Description détaillée}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Documentation des données membres}{12}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}addr}{12}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}codeFct}{12}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}data}{12}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}dataLen}{12}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}emetteur}{13}{subsubsection.4.3.2.5}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}isRep}{13}{subsubsection.4.3.2.6}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}RepId}{13}{subsubsection.4.3.2.7}%
+\contentsline {chapter}{\numberline {5}Documentation des fichiers}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Référence du fichier can\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}can\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Référence du fichier can\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.5.3}%
+\contentsline {section}{\numberline {5.4}can\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Class.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Référence du fichier define\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Can.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Documentation des macros}{19}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}AVANCE}{19}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}CAN\_ADDR\_BASE\_ROULANTE}{20}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}CAN\_ADDR\_RASPBERRY}{20}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.4}CAN\_BUS\_NAME}{20}{subsubsection.5.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.5.1.5}CAN\_DECALAGE\_ADDR\_EMETTEUR}{20}{subsubsection.5.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.5.1.6}CAN\_DECALAGE\_ADDR\_RECEPTEUR}{20}{subsubsection.5.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.5.1.7}CAN\_DECALAGE\_CODE\_FCT}{20}{subsubsection.5.5.1.7}%
+\contentsline {subsubsection}{\numberline {5.5.1.8}CAN\_DECALAGE\_IS\_REP}{21}{subsubsection.5.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.5.1.9}CAN\_DECALAGE\_REP\_NBR}{21}{subsubsection.5.5.1.9}%
+\contentsline {subsubsection}{\numberline {5.5.1.10}CAN\_E\_BIND\_ERROR}{21}{subsubsection.5.5.1.10}%
+\contentsline {subsubsection}{\numberline {5.5.1.11}CAN\_E\_DATA\_SIZE\_TOO\_LONG}{21}{subsubsection.5.5.1.11}%
+\contentsline {subsubsection}{\numberline {5.5.1.12}CAN\_E\_OOB\_ADDR}{21}{subsubsection.5.5.1.12}%
+\contentsline {subsubsection}{\numberline {5.5.1.13}CAN\_E\_OOB\_CODE\_FCT}{21}{subsubsection.5.5.1.13}%
+\contentsline {subsubsection}{\numberline {5.5.1.14}CAN\_E\_OOB\_DATA}{22}{subsubsection.5.5.1.14}%
+\contentsline {subsubsection}{\numberline {5.5.1.15}CAN\_E\_OOB\_REP\_NBR}{22}{subsubsection.5.5.1.15}%
+\contentsline {subsubsection}{\numberline {5.5.1.16}CAN\_E\_READ\_ERROR}{22}{subsubsection.5.5.1.16}%
+\contentsline {subsubsection}{\numberline {5.5.1.17}CAN\_E\_SOCKET\_ERROR}{22}{subsubsection.5.5.1.17}%
+\contentsline {subsubsection}{\numberline {5.5.1.18}CAN\_E\_UNKNOW\_ADDR}{22}{subsubsection.5.5.1.18}%
+\contentsline {subsubsection}{\numberline {5.5.1.19}CAN\_E\_UNKNOW\_CODE\_FCT}{22}{subsubsection.5.5.1.19}%
+\contentsline {subsubsection}{\numberline {5.5.1.20}CAN\_E\_WRITE\_ERROR}{23}{subsubsection.5.5.1.20}%
+\contentsline {subsubsection}{\numberline {5.5.1.21}CAN\_FILTER\_ADDR\_EMETTEUR}{23}{subsubsection.5.5.1.21}%
+\contentsline {subsubsection}{\numberline {5.5.1.22}CAN\_FILTER\_ADDR\_RECEPTEUR}{23}{subsubsection.5.5.1.22}%
+\contentsline {subsubsection}{\numberline {5.5.1.23}CAN\_FILTER\_CODE\_FCT}{23}{subsubsection.5.5.1.23}%
+\contentsline {subsubsection}{\numberline {5.5.1.24}CAN\_FILTER\_IS\_REP}{23}{subsubsection.5.5.1.24}%
+\contentsline {subsubsection}{\numberline {5.5.1.25}CAN\_FILTER\_REP\_NBR}{23}{subsubsection.5.5.1.25}%
+\contentsline {subsubsection}{\numberline {5.5.1.26}CAN\_LIST\_ADDR}{24}{subsubsection.5.5.1.26}%
+\contentsline {subsubsection}{\numberline {5.5.1.27}CAN\_LIST\_CODE\_FCT}{24}{subsubsection.5.5.1.27}%
+\contentsline {subsubsection}{\numberline {5.5.1.28}CAN\_MAX\_VALUE\_ADDR}{24}{subsubsection.5.5.1.28}%
+\contentsline {subsubsection}{\numberline {5.5.1.29}CAN\_MAX\_VALUE\_CODE\_FCT}{24}{subsubsection.5.5.1.29}%
+\contentsline {subsubsection}{\numberline {5.5.1.30}CAN\_MAX\_VALUE\_REP\_NBR}{24}{subsubsection.5.5.1.30}%
+\contentsline {subsubsection}{\numberline {5.5.1.31}REP\_AVANCE}{24}{subsubsection.5.5.1.31}%
+\contentsline {section}{\numberline {5.6}define\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Can.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Référence du fichier main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{25}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Documentation des fonctions}{26}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}main()}{26}{subsubsection.5.7.1.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.2}wait()}{26}{subsubsection.5.7.1.2}%
+\contentsline {section}{\numberline {5.8}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{26}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Référence du fichier README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{27}{section.5.9}%
+\contentsline {chapter}{Index}{29}{section*.6}%

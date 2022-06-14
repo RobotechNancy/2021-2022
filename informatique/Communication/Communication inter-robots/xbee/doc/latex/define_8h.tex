@@ -1,0 +1,1171 @@
+\hypertarget{define_8h}{}\doxysection{Référence du fichier define.\+h}
+\label{define_8h}\index{define.h@{define.h}}
+
+
+Fichier contenant l\textquotesingle{}ensemble des constantes utilisées dans la librairie \mbox{\hyperlink{class_x_bee}{XBee}}.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}{XB\+\_\+\+SERIAL\+\_\+\+PORT\+\_\+\+PRIMARY}}~\char`\"{}/dev/tty\+AMA0\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}{XB\+\_\+\+BAUDRATE\+\_\+\+PRIMARY}}~9600
+\item 
+\#define \mbox{\hyperlink{define_8h_a017a7b9bdf79e3aceafb5111c49bcc2b}{XB\+\_\+\+DATABITS\+\_\+\+PRIMARY}}~\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}
+\item 
+\#define \mbox{\hyperlink{define_8h_acc61b40fe509d72640422289f4ca3fad}{XB\+\_\+\+PARITY\+\_\+\+PRIMARY}}~\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a0392c989829d4e47a2cc54a12cb6125a}{SERIAL\+\_\+\+PARITY\+\_\+\+EVEN}}
+\item 
+\#define \mbox{\hyperlink{define_8h_a2527277ea7bfc48f384222ad9c2460bc}{XB\+\_\+\+STOPBITS\+\_\+\+PRIMARY}}~\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{define_8h_a9c64f25548c02d153acc044a16e610f6}{XB\+\_\+\+SERIAL\+\_\+\+PORT\+\_\+\+DEFAULT}}~\char`\"{}/dev/tty\+AMA0\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a089dfd8cab0a6711a782a984dfd30c29}{XB\+\_\+\+BAUDRATE\+\_\+\+DEFAULT}}~9600
+\item 
+\#define \mbox{\hyperlink{define_8h_a3e8c543722f50daa8c6e454b15efbe97}{XB\+\_\+\+DATABITS\+\_\+\+DEFAULT}}~\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}
+\item 
+\#define \mbox{\hyperlink{define_8h_a58dd8396f0b9386153d145b907e84553}{XB\+\_\+\+PARITY\+\_\+\+DEFAULT}}~\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\+\_\+\+PARITY\+\_\+\+NONE}}
+\item 
+\#define \mbox{\hyperlink{define_8h_ad1e4503c41f73a1e2796f8303d81d7b4}{XB\+\_\+\+STOPBITS\+\_\+\+DEFAULT}}~\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}{XB\+\_\+\+V\+\_\+\+ACK}}~0x06
+\item 
+\#define \mbox{\hyperlink{define_8h_aeb765eb40bd0f847f6a83413de2244d9}{XB\+\_\+\+V\+\_\+\+NACK}}~0x15
+\item 
+\#define \mbox{\hyperlink{define_8h_ad350453416fcfa7702bc52cf7957a2a0}{XB\+\_\+\+ADR\+\_\+\+BROADCAST}}~0x11
+\item 
+\#define \mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01}}~0x12
+\item 
+\#define \mbox{\hyperlink{define_8h_afb1db7f28458f5c87f93cf2076ce167f}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+02}}~0x13
+\item 
+\#define \mbox{\hyperlink{define_8h_a4d618732374286dd4533da122857be41}{XB\+\_\+\+LIST\+\_\+\+ADR}}~(int\mbox{[}$\,$\mbox{]})\{\mbox{\hyperlink{define_8h_ad350453416fcfa7702bc52cf7957a2a0}{XB\+\_\+\+ADR\+\_\+\+BROADCAST}}, \mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01}}, \mbox{\hyperlink{define_8h_afb1db7f28458f5c87f93cf2076ce167f}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+02}}\}
+\item 
+\#define \mbox{\hyperlink{define_8h_ab156591ecc1c724d973004e6a2f89fa4}{XB\+\_\+\+ADR\+\_\+\+CURRENT\+\_\+\+ROBOT}}~\mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01}}
+\item 
+\#define \mbox{\hyperlink{define_8h_acca99b796bf305986693d2949c07f1b4}{XB\+\_\+\+V\+\_\+\+START}}~0x02
+\item 
+\#define \mbox{\hyperlink{define_8h_aed2f6788341df71e4b25f91c925ef34f}{XB\+\_\+\+V\+\_\+\+END}}~0x03
+\item 
+\#define \mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\+\_\+\+FCT\+\_\+\+TEST\+\_\+\+ALIVE}}~0x1E
+\item 
+\#define \mbox{\hyperlink{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}{XB\+\_\+\+LIST\+\_\+\+CODE\+\_\+\+FCT}}~(int\mbox{[}$\,$\mbox{]})\{\mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\+\_\+\+FCT\+\_\+\+TEST\+\_\+\+ALIVE}}\}
+\item 
+\#define \mbox{\hyperlink{define_8h_a6a7985c14914aa1ed68abb1749c0267e}{XB\+\_\+\+E\+\_\+\+SUCCESS}}~000
+\item 
+\#define \mbox{\hyperlink{define_8h_aaebf92484330442fd3a89ca55c6501b2}{XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+SUCCESS}}~100
+\item 
+\#define \mbox{\hyperlink{define_8h_af13758a628d8c1927c1c68cf2a53f989}{XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+NOT\+\_\+\+FOUND}}~-\/101
+\item 
+\#define \mbox{\hyperlink{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}{XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+NONE\+\_\+\+REACHABLE}}~-\/102
+\item 
+\#define \mbox{\hyperlink{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SUCCESS}}~200
+\item 
+\#define \mbox{\hyperlink{define_8h_ac21719e85ef616655914aebe4ac00b18}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SIZE}}~-\/201
+\item 
+\#define \mbox{\hyperlink{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+START}}~-\/202
+\item 
+\#define \mbox{\hyperlink{define_8h_ad3aab90769e29ca037e8454be70403fe}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+END}}~-\/203
+\item 
+\#define \mbox{\hyperlink{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+CRC}}~-\/204
+\item 
+\#define \mbox{\hyperlink{define_8h_a2b2e42001647159fd6dcc632ce8b5349}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+EXP}}~-\/205
+\item 
+\#define \mbox{\hyperlink{define_8h_a23f90681a267a6205f9db6170811be90}{XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+DEST}}~-\/206
+\item 
+\#define \mbox{\hyperlink{define_8h_a1fc787b2cf4ce558b24eb81eb460f56e}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SUCCESS}}~300
+\item 
+\#define \mbox{\hyperlink{define_8h_ad021b44108c67217ff3e4c1c707df76e}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SIZE}}~-\/301
+\item 
+\#define \mbox{\hyperlink{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+REPARTITION}}~-\/302
+\item 
+\#define \mbox{\hyperlink{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+DECOUPAGE}}~-\/303
+\item 
+\#define \mbox{\hyperlink{define_8h_a2fa21a437940dc3ef543bb735716fd00}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+START}}~-\/304
+\item 
+\#define \mbox{\hyperlink{define_8h_a31c302e2f3434bf6c9beabef3e20453d}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+END}}~-\/305
+\item 
+\#define \mbox{\hyperlink{define_8h_a296ef6d14e0861ec8105cabf13a80daa}{XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+NULL}}~-\/306
+\item 
+\#define \mbox{\hyperlink{define_8h_a3edeea69d3c78179e0da20806902d3fe}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+SUCCESS}}~400
+\item 
+\#define \mbox{\hyperlink{define_8h_a083f61bee699b3275dbbda55954415fb}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+ENTER}}~-\/401
+\item 
+\#define \mbox{\hyperlink{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+API}}~-\/402
+\item 
+\#define \mbox{\hyperlink{define_8h_abfa37909b5a742da8d93c522aa8b9633}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+BAUDRATE}}~-\/403
+\item 
+\#define \mbox{\hyperlink{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+AES}}~-\/404
+\item 
+\#define \mbox{\hyperlink{define_8h_a2677e8896184a29d46e1da04964fbb4a}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+AES\+\_\+\+KEY}}~-\/405
+\item 
+\#define \mbox{\hyperlink{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+CHANEL}}~-\/406
+\item 
+\#define \mbox{\hyperlink{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+PAN\+\_\+\+ID}}~-\/407
+\item 
+\#define \mbox{\hyperlink{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+COORDINATOR}}~-\/408
+\item 
+\#define \mbox{\hyperlink{define_8h_a7687c3af3271b3f6d38e8775717a2812}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+PARITY}}~-\/409
+\item 
+\#define \mbox{\hyperlink{define_8h_a968211659ef5051c26387205d14cc37a}{XB\+\_\+\+AT\+\_\+\+E\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR}}~-\/410
+\item 
+\#define \mbox{\hyperlink{define_8h_a57155d7b3b633e064179045bb0030b77}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR}}~-\/411
+\item 
+\#define \mbox{\hyperlink{define_8h_ae523b84be56370ff0dc180071aad63ce}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+EXIT}}~-\/412
+\item 
+\#define \mbox{\hyperlink{define_8h_aa9b32cf906751eadd719c735a84420c9}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+WRITE\+\_\+\+CONFIG}}~-\/413
+\item 
+\#define \mbox{\hyperlink{define_8h_a43ca3cb0e3d954d8408698a9534c976a}{XB\+\_\+\+AT\+\_\+\+E\+\_\+\+DISCOVER\+\_\+\+NETWORK}}~-\/414
+\item 
+\#define \mbox{\hyperlink{define_8h_ad714240053187073c3aba97b6bd6dd14}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+SUCCESS}}~500
+\item 
+\#define \mbox{\hyperlink{define_8h_a3f6b2252b366941608c932bb60cc2533}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+NOT\+\_\+\+FOUND}}~-\/501
+\item 
+\#define \mbox{\hyperlink{define_8h_a2bcf7c0b869d6aba0d5c24a8263fcbe5}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+OPEN}}~-\/502
+\item 
+\#define \mbox{\hyperlink{define_8h_a3e91e6b1bd1e4db324ffc81fa47bbfea}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+PARAM}}~-\/503
+\item 
+\#define \mbox{\hyperlink{define_8h_a196cae4b47cd2f6337b6219ede2d3faf}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+BAUDRATE}}~-\/504
+\item 
+\#define \mbox{\hyperlink{define_8h_ad2e5a6966c804c86a1fc6c8cba5c3861}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+CONFIG}}~-\/505
+\item 
+\#define \mbox{\hyperlink{define_8h_a38da71d6292df1ba4a44719a56932bc9}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+TIMOUT}}~-\/506
+\item 
+\#define \mbox{\hyperlink{define_8h_acdb61ab3558e4f29256d651d7b5ae7ab}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+DATABITS}}~-\/507
+\item 
+\#define \mbox{\hyperlink{define_8h_a493164032fd737e8aa203f682a4cb965}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+STOPBITS}}~-\/508
+\item 
+\#define \mbox{\hyperlink{define_8h_a863e10f0088a7ed1b77ac6af0ea61bce}{XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+PARITY}}~-\/509
+\item 
+\#define \mbox{\hyperlink{define_8h_a664b6971f3591a0f66f31149e35b9c56}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+ENTER}}~\char`\"{}+++\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a53ed99e52f001423faa30aad3720563c}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+EXIT}}~\char`\"{}ATCN\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a636bc983828acdcbe6d667988128e983}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+CONFIG}}~\char`\"{}ATWR\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a72b88df88cc335e341b177c42d51ecdb}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+API}}~\char`\"{}ATAP\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_aa42fb724c2b257b73690ba89a39e3180}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+BAUDRATE}}~\char`\"{}ATBD\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+AES}}~\char`\"{}ATEE\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ab9c3cef265780bb8e8d9be4b64638724}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+AES\+\_\+\+KEY}}~\char`\"{}ATKY\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a4e114f9e4885fd743bc8a59a490225e5}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+CHANEL}}~\char`\"{}ATCH\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+PAN\+\_\+\+ID}}~\char`\"{}ATID\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a5e51fdd63a8850cb938f64bb46e68842}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+COORDINATOR}}~\char`\"{}ATCE\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a5cbd8a87563f81f4089f5818c800f12f}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+PARITY}}~\char`\"{}ATNB\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR}}~\char`\"{}ATMY\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ac34d47f1830632881303005e95d0f878}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR}}~\char`\"{}ATDL\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}{XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+DISCOVER\+\_\+\+NETWORK}}~\char`\"{}ATND\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+END\+\_\+\+LINE}}~\char`\"{}\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_af09a3f126545cee473b5d79ff00a7a4c}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+API}}~\char`\"{}0\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_adcf202e2f760a754355de356690b8fc5}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+BAUDRATE}}~\char`\"{}3\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+AES}}~\char`\"{}1\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_aab4ce4f5c4de8e0acf20340bf7eb2efb}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+AES\+\_\+\+KEY}}~\char`\"{}32303032\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+CHANEL}}~\char`\"{}C\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+PAN\+\_\+\+ID}}~\char`\"{}3332\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a094072d0ce80311fadab5f4a3dca3e60}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+COORDINATOR}}~\char`\"{}0\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+PARITY}}~\char`\"{}1\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_adb59642e28ddcb875a0e35226b04c9f8}{XB\+\_\+\+AT\+\_\+\+V\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR}}~\char`\"{}1\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a491946f4f455db82c1aa9862a5772f47}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR}}~\char`\"{}2\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}{XB\+\_\+\+AT\+\_\+\+V\+\_\+\+DISCOVER\+\_\+\+NETWORK}}~\char`\"{}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a6a043234984ffa2388420c2c302a8c58}{XB\+\_\+\+AT\+\_\+\+R\+\_\+\+EMPTY}}~\char`\"{}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}{XB\+\_\+\+AT\+\_\+\+R\+\_\+\+SUCCESS}}~\char`\"{}OK\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a2628e05f63c709feebfc19ca0f1beabc}{XB\+\_\+\+AT\+\_\+\+R\+\_\+\+ERROR}}~\char`\"{}ERROR\textbackslash{}r\char`\"{}
+\item 
+\#define \mbox{\hyperlink{define_8h_a88b2a8e8be91eb9e117c744470bbf798}{XB\+\_\+\+AT\+\_\+\+M\+\_\+\+GET}}~1
+\item 
+\#define \mbox{\hyperlink{define_8h_a7b84802b6b28bad27a64e09b8705fd45}{XB\+\_\+\+AT\+\_\+\+M\+\_\+\+SET}}~2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier contenant l\textquotesingle{}ensemble des constantes utilisées dans la librairie \mbox{\hyperlink{class_x_bee}{XBee}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Samuel-\/\+Charles DITTE-\/\+DESTREE (\href{mailto:samueldittedestree@protonmail.com}{\texttt{ samueldittedestree@protonmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/03/2022 
+\end{DoxyDate}
+
+
+Définition dans le fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{define_8h_ad350453416fcfa7702bc52cf7957a2a0}\label{define_8h_ad350453416fcfa7702bc52cf7957a2a0}} 
+\index{define.h@{define.h}!XB\_ADR\_BROADCAST@{XB\_ADR\_BROADCAST}}
+\index{XB\_ADR\_BROADCAST@{XB\_ADR\_BROADCAST}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_ADR\_BROADCAST}{XB\_ADR\_BROADCAST}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+ADR\+\_\+\+BROADCAST~0x11}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00031}{31}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab156591ecc1c724d973004e6a2f89fa4}\label{define_8h_ab156591ecc1c724d973004e6a2f89fa4}} 
+\index{define.h@{define.h}!XB\_ADR\_CURRENT\_ROBOT@{XB\_ADR\_CURRENT\_ROBOT}}
+\index{XB\_ADR\_CURRENT\_ROBOT@{XB\_ADR\_CURRENT\_ROBOT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_ADR\_CURRENT\_ROBOT}{XB\_ADR\_CURRENT\_ROBOT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+ADR\+\_\+\+CURRENT\+\_\+\+ROBOT~\mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00037}{37}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af11f288f8d3a93e944244a351ee284a4}\label{define_8h_af11f288f8d3a93e944244a351ee284a4}} 
+\index{define.h@{define.h}!XB\_ADR\_ROBOT\_01@{XB\_ADR\_ROBOT\_01}}
+\index{XB\_ADR\_ROBOT\_01@{XB\_ADR\_ROBOT\_01}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_ADR\_ROBOT\_01}{XB\_ADR\_ROBOT\_01}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01~0x12}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00032}{32}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_afb1db7f28458f5c87f93cf2076ce167f}\label{define_8h_afb1db7f28458f5c87f93cf2076ce167f}} 
+\index{define.h@{define.h}!XB\_ADR\_ROBOT\_02@{XB\_ADR\_ROBOT\_02}}
+\index{XB\_ADR\_ROBOT\_02@{XB\_ADR\_ROBOT\_02}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_ADR\_ROBOT\_02}{XB\_ADR\_ROBOT\_02}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+02~0x13}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00033}{33}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}\label{define_8h_ae27de2bbfbd1e11bf955bd1b990e054d}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR@{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}}
+\index{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR@{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}{XB\_AT\_CMD\_16BIT\_SOURCE\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR~\char`\"{}ATMY\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00115}{115}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}\label{define_8h_ad6f25708687dbe6dda3ed61f3da9c367}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_AES@{XB\_AT\_CMD\_AES}}
+\index{XB\_AT\_CMD\_AES@{XB\_AT\_CMD\_AES}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_AES}{XB\_AT\_CMD\_AES}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+AES~\char`\"{}ATEE\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00109}{109}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab9c3cef265780bb8e8d9be4b64638724}\label{define_8h_ab9c3cef265780bb8e8d9be4b64638724}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_AES\_KEY@{XB\_AT\_CMD\_AES\_KEY}}
+\index{XB\_AT\_CMD\_AES\_KEY@{XB\_AT\_CMD\_AES\_KEY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_AES\_KEY}{XB\_AT\_CMD\_AES\_KEY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+AES\+\_\+\+KEY~\char`\"{}ATKY\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00110}{110}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a72b88df88cc335e341b177c42d51ecdb}\label{define_8h_a72b88df88cc335e341b177c42d51ecdb}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_API@{XB\_AT\_CMD\_API}}
+\index{XB\_AT\_CMD\_API@{XB\_AT\_CMD\_API}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_API}{XB\_AT\_CMD\_API}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+API~\char`\"{}ATAP\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00107}{107}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa42fb724c2b257b73690ba89a39e3180}\label{define_8h_aa42fb724c2b257b73690ba89a39e3180}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_BAUDRATE@{XB\_AT\_CMD\_BAUDRATE}}
+\index{XB\_AT\_CMD\_BAUDRATE@{XB\_AT\_CMD\_BAUDRATE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_BAUDRATE}{XB\_AT\_CMD\_BAUDRATE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+BAUDRATE~\char`\"{}ATBD\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00108}{108}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4e114f9e4885fd743bc8a59a490225e5}\label{define_8h_a4e114f9e4885fd743bc8a59a490225e5}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_CHANEL@{XB\_AT\_CMD\_CHANEL}}
+\index{XB\_AT\_CMD\_CHANEL@{XB\_AT\_CMD\_CHANEL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_CHANEL}{XB\_AT\_CMD\_CHANEL}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+CHANEL~\char`\"{}ATCH\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00111}{111}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a5e51fdd63a8850cb938f64bb46e68842}\label{define_8h_a5e51fdd63a8850cb938f64bb46e68842}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_COORDINATOR@{XB\_AT\_CMD\_COORDINATOR}}
+\index{XB\_AT\_CMD\_COORDINATOR@{XB\_AT\_CMD\_COORDINATOR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_COORDINATOR}{XB\_AT\_CMD\_COORDINATOR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+COORDINATOR~\char`\"{}ATCE\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00113}{113}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}\label{define_8h_ae5e3d2603a9562e97c32a3391aaa2982}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_DISCOVER\_NETWORK@{XB\_AT\_CMD\_DISCOVER\_NETWORK}}
+\index{XB\_AT\_CMD\_DISCOVER\_NETWORK@{XB\_AT\_CMD\_DISCOVER\_NETWORK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_DISCOVER\_NETWORK}{XB\_AT\_CMD\_DISCOVER\_NETWORK}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+DISCOVER\+\_\+\+NETWORK~\char`\"{}ATND\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00117}{117}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a664b6971f3591a0f66f31149e35b9c56}\label{define_8h_a664b6971f3591a0f66f31149e35b9c56}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_ENTER@{XB\_AT\_CMD\_ENTER}}
+\index{XB\_AT\_CMD\_ENTER@{XB\_AT\_CMD\_ENTER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_ENTER}{XB\_AT\_CMD\_ENTER}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+ENTER~\char`\"{}+++\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00104}{104}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a53ed99e52f001423faa30aad3720563c}\label{define_8h_a53ed99e52f001423faa30aad3720563c}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_EXIT@{XB\_AT\_CMD\_EXIT}}
+\index{XB\_AT\_CMD\_EXIT@{XB\_AT\_CMD\_EXIT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_EXIT}{XB\_AT\_CMD\_EXIT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+EXIT~\char`\"{}ATCN\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00105}{105}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ac34d47f1830632881303005e95d0f878}\label{define_8h_ac34d47f1830632881303005e95d0f878}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_LOW\_DEST\_ADDR@{XB\_AT\_CMD\_LOW\_DEST\_ADDR}}
+\index{XB\_AT\_CMD\_LOW\_DEST\_ADDR@{XB\_AT\_CMD\_LOW\_DEST\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_LOW\_DEST\_ADDR}{XB\_AT\_CMD\_LOW\_DEST\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR~\char`\"{}ATDL\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00116}{116}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}\label{define_8h_a72ff30a48db8dbe94a20b1cefd0ef195}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_PAN\_ID@{XB\_AT\_CMD\_PAN\_ID}}
+\index{XB\_AT\_CMD\_PAN\_ID@{XB\_AT\_CMD\_PAN\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_PAN\_ID}{XB\_AT\_CMD\_PAN\_ID}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+PAN\+\_\+\+ID~\char`\"{}ATID\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00112}{112}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a5cbd8a87563f81f4089f5818c800f12f}\label{define_8h_a5cbd8a87563f81f4089f5818c800f12f}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_PARITY@{XB\_AT\_CMD\_PARITY}}
+\index{XB\_AT\_CMD\_PARITY@{XB\_AT\_CMD\_PARITY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_PARITY}{XB\_AT\_CMD\_PARITY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+PARITY~\char`\"{}ATNB\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00114}{114}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a636bc983828acdcbe6d667988128e983}\label{define_8h_a636bc983828acdcbe6d667988128e983}} 
+\index{define.h@{define.h}!XB\_AT\_CMD\_WRITE\_CONFIG@{XB\_AT\_CMD\_WRITE\_CONFIG}}
+\index{XB\_AT\_CMD\_WRITE\_CONFIG@{XB\_AT\_CMD\_WRITE\_CONFIG}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_CMD\_WRITE\_CONFIG}{XB\_AT\_CMD\_WRITE\_CONFIG}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+CONFIG~\char`\"{}ATWR\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00106}{106}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a968211659ef5051c26387205d14cc37a}\label{define_8h_a968211659ef5051c26387205d14cc37a}} 
+\index{define.h@{define.h}!XB\_AT\_E\_16BIT\_SOURCE\_ADDR@{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}}
+\index{XB\_AT\_E\_16BIT\_SOURCE\_ADDR@{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}{XB\_AT\_E\_16BIT\_SOURCE\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR~-\/410}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00085}{85}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}\label{define_8h_a6f583f154da6c5d8a9858202dbd79ce9}} 
+\index{define.h@{define.h}!XB\_AT\_E\_AES@{XB\_AT\_E\_AES}}
+\index{XB\_AT\_E\_AES@{XB\_AT\_E\_AES}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_AES}{XB\_AT\_E\_AES}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+AES~-\/404}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00079}{79}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2677e8896184a29d46e1da04964fbb4a}\label{define_8h_a2677e8896184a29d46e1da04964fbb4a}} 
+\index{define.h@{define.h}!XB\_AT\_E\_AES\_KEY@{XB\_AT\_E\_AES\_KEY}}
+\index{XB\_AT\_E\_AES\_KEY@{XB\_AT\_E\_AES\_KEY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_AES\_KEY}{XB\_AT\_E\_AES\_KEY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+AES\+\_\+\+KEY~-\/405}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00080}{80}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}\label{define_8h_a1e4a445dc7630ae7ba958e67cf9e22e6}} 
+\index{define.h@{define.h}!XB\_AT\_E\_API@{XB\_AT\_E\_API}}
+\index{XB\_AT\_E\_API@{XB\_AT\_E\_API}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_API}{XB\_AT\_E\_API}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+API~-\/402}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00077}{77}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_abfa37909b5a742da8d93c522aa8b9633}\label{define_8h_abfa37909b5a742da8d93c522aa8b9633}} 
+\index{define.h@{define.h}!XB\_AT\_E\_BAUDRATE@{XB\_AT\_E\_BAUDRATE}}
+\index{XB\_AT\_E\_BAUDRATE@{XB\_AT\_E\_BAUDRATE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_BAUDRATE}{XB\_AT\_E\_BAUDRATE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+BAUDRATE~-\/403}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00078}{78}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}\label{define_8h_af8ad93a3ddda69b2edfcd576a9b4ce56}} 
+\index{define.h@{define.h}!XB\_AT\_E\_CHANEL@{XB\_AT\_E\_CHANEL}}
+\index{XB\_AT\_E\_CHANEL@{XB\_AT\_E\_CHANEL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_CHANEL}{XB\_AT\_E\_CHANEL}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+CHANEL~-\/406}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00081}{81}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}\label{define_8h_a93a2c1d82e288f50c0d7269bd8545c17}} 
+\index{define.h@{define.h}!XB\_AT\_E\_COORDINATOR@{XB\_AT\_E\_COORDINATOR}}
+\index{XB\_AT\_E\_COORDINATOR@{XB\_AT\_E\_COORDINATOR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_COORDINATOR}{XB\_AT\_E\_COORDINATOR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+COORDINATOR~-\/408}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00083}{83}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a43ca3cb0e3d954d8408698a9534c976a}\label{define_8h_a43ca3cb0e3d954d8408698a9534c976a}} 
+\index{define.h@{define.h}!XB\_AT\_E\_DISCOVER\_NETWORK@{XB\_AT\_E\_DISCOVER\_NETWORK}}
+\index{XB\_AT\_E\_DISCOVER\_NETWORK@{XB\_AT\_E\_DISCOVER\_NETWORK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_DISCOVER\_NETWORK}{XB\_AT\_E\_DISCOVER\_NETWORK}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+DISCOVER\+\_\+\+NETWORK~-\/414}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00089}{89}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a083f61bee699b3275dbbda55954415fb}\label{define_8h_a083f61bee699b3275dbbda55954415fb}} 
+\index{define.h@{define.h}!XB\_AT\_E\_ENTER@{XB\_AT\_E\_ENTER}}
+\index{XB\_AT\_E\_ENTER@{XB\_AT\_E\_ENTER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_ENTER}{XB\_AT\_E\_ENTER}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+ENTER~-\/401}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00076}{76}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ae523b84be56370ff0dc180071aad63ce}\label{define_8h_ae523b84be56370ff0dc180071aad63ce}} 
+\index{define.h@{define.h}!XB\_AT\_E\_EXIT@{XB\_AT\_E\_EXIT}}
+\index{XB\_AT\_E\_EXIT@{XB\_AT\_E\_EXIT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_EXIT}{XB\_AT\_E\_EXIT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+EXIT~-\/412}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00087}{87}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a57155d7b3b633e064179045bb0030b77}\label{define_8h_a57155d7b3b633e064179045bb0030b77}} 
+\index{define.h@{define.h}!XB\_AT\_E\_LOW\_DEST\_ADDR@{XB\_AT\_E\_LOW\_DEST\_ADDR}}
+\index{XB\_AT\_E\_LOW\_DEST\_ADDR@{XB\_AT\_E\_LOW\_DEST\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_LOW\_DEST\_ADDR}{XB\_AT\_E\_LOW\_DEST\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR~-\/411}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00086}{86}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}\label{define_8h_a5f3a541372c1eba31b6dcacf4ece36c5}} 
+\index{define.h@{define.h}!XB\_AT\_E\_PAN\_ID@{XB\_AT\_E\_PAN\_ID}}
+\index{XB\_AT\_E\_PAN\_ID@{XB\_AT\_E\_PAN\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_PAN\_ID}{XB\_AT\_E\_PAN\_ID}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+PAN\+\_\+\+ID~-\/407}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00082}{82}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7687c3af3271b3f6d38e8775717a2812}\label{define_8h_a7687c3af3271b3f6d38e8775717a2812}} 
+\index{define.h@{define.h}!XB\_AT\_E\_PARITY@{XB\_AT\_E\_PARITY}}
+\index{XB\_AT\_E\_PARITY@{XB\_AT\_E\_PARITY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_PARITY}{XB\_AT\_E\_PARITY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+PARITY~-\/409}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00084}{84}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3edeea69d3c78179e0da20806902d3fe}\label{define_8h_a3edeea69d3c78179e0da20806902d3fe}} 
+\index{define.h@{define.h}!XB\_AT\_E\_SUCCESS@{XB\_AT\_E\_SUCCESS}}
+\index{XB\_AT\_E\_SUCCESS@{XB\_AT\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_SUCCESS}{XB\_AT\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+SUCCESS~400}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00075}{75}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa9b32cf906751eadd719c735a84420c9}\label{define_8h_aa9b32cf906751eadd719c735a84420c9}} 
+\index{define.h@{define.h}!XB\_AT\_E\_WRITE\_CONFIG@{XB\_AT\_E\_WRITE\_CONFIG}}
+\index{XB\_AT\_E\_WRITE\_CONFIG@{XB\_AT\_E\_WRITE\_CONFIG}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_E\_WRITE\_CONFIG}{XB\_AT\_E\_WRITE\_CONFIG}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+E\+\_\+\+WRITE\+\_\+\+CONFIG~-\/413}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00088}{88}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a88b2a8e8be91eb9e117c744470bbf798}\label{define_8h_a88b2a8e8be91eb9e117c744470bbf798}} 
+\index{define.h@{define.h}!XB\_AT\_M\_GET@{XB\_AT\_M\_GET}}
+\index{XB\_AT\_M\_GET@{XB\_AT\_M\_GET}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_M\_GET}{XB\_AT\_M\_GET}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+M\+\_\+\+GET~1}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00139}{139}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7b84802b6b28bad27a64e09b8705fd45}\label{define_8h_a7b84802b6b28bad27a64e09b8705fd45}} 
+\index{define.h@{define.h}!XB\_AT\_M\_SET@{XB\_AT\_M\_SET}}
+\index{XB\_AT\_M\_SET@{XB\_AT\_M\_SET}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_M\_SET}{XB\_AT\_M\_SET}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+M\+\_\+\+SET~2}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00140}{140}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6a043234984ffa2388420c2c302a8c58}\label{define_8h_a6a043234984ffa2388420c2c302a8c58}} 
+\index{define.h@{define.h}!XB\_AT\_R\_EMPTY@{XB\_AT\_R\_EMPTY}}
+\index{XB\_AT\_R\_EMPTY@{XB\_AT\_R\_EMPTY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_R\_EMPTY}{XB\_AT\_R\_EMPTY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+R\+\_\+\+EMPTY~\char`\"{}\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00134}{134}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2628e05f63c709feebfc19ca0f1beabc}\label{define_8h_a2628e05f63c709feebfc19ca0f1beabc}} 
+\index{define.h@{define.h}!XB\_AT\_R\_ERROR@{XB\_AT\_R\_ERROR}}
+\index{XB\_AT\_R\_ERROR@{XB\_AT\_R\_ERROR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_R\_ERROR}{XB\_AT\_R\_ERROR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+R\+\_\+\+ERROR~\char`\"{}ERROR\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00136}{136}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}\label{define_8h_a3c9fc9a0e885d395ed2c852f5bba035b}} 
+\index{define.h@{define.h}!XB\_AT\_R\_SUCCESS@{XB\_AT\_R\_SUCCESS}}
+\index{XB\_AT\_R\_SUCCESS@{XB\_AT\_R\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_R\_SUCCESS}{XB\_AT\_R\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+R\+\_\+\+SUCCESS~\char`\"{}OK\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00135}{135}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_adb59642e28ddcb875a0e35226b04c9f8}\label{define_8h_adb59642e28ddcb875a0e35226b04c9f8}} 
+\index{define.h@{define.h}!XB\_AT\_V\_16BIT\_SOURCE\_ADDR@{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}}
+\index{XB\_AT\_V\_16BIT\_SOURCE\_ADDR@{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}{XB\_AT\_V\_16BIT\_SOURCE\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+16\+BIT\+\_\+\+SOURCE\+\_\+\+ADDR~\char`\"{}1\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00129}{129}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}\label{define_8h_a0e8effcbac8ed09e4ea9b0f94613ff23}} 
+\index{define.h@{define.h}!XB\_AT\_V\_AES@{XB\_AT\_V\_AES}}
+\index{XB\_AT\_V\_AES@{XB\_AT\_V\_AES}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_AES}{XB\_AT\_V\_AES}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+AES~\char`\"{}1\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00123}{123}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aab4ce4f5c4de8e0acf20340bf7eb2efb}\label{define_8h_aab4ce4f5c4de8e0acf20340bf7eb2efb}} 
+\index{define.h@{define.h}!XB\_AT\_V\_AES\_KEY@{XB\_AT\_V\_AES\_KEY}}
+\index{XB\_AT\_V\_AES\_KEY@{XB\_AT\_V\_AES\_KEY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_AES\_KEY}{XB\_AT\_V\_AES\_KEY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+AES\+\_\+\+KEY~\char`\"{}32303032\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00124}{124}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af09a3f126545cee473b5d79ff00a7a4c}\label{define_8h_af09a3f126545cee473b5d79ff00a7a4c}} 
+\index{define.h@{define.h}!XB\_AT\_V\_API@{XB\_AT\_V\_API}}
+\index{XB\_AT\_V\_API@{XB\_AT\_V\_API}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_API}{XB\_AT\_V\_API}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+API~\char`\"{}0\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00121}{121}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_adcf202e2f760a754355de356690b8fc5}\label{define_8h_adcf202e2f760a754355de356690b8fc5}} 
+\index{define.h@{define.h}!XB\_AT\_V\_BAUDRATE@{XB\_AT\_V\_BAUDRATE}}
+\index{XB\_AT\_V\_BAUDRATE@{XB\_AT\_V\_BAUDRATE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_BAUDRATE}{XB\_AT\_V\_BAUDRATE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+BAUDRATE~\char`\"{}3\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00122}{122}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}\label{define_8h_adb0c5492b1f5fc3ee4a0fd87200624ff}} 
+\index{define.h@{define.h}!XB\_AT\_V\_CHANEL@{XB\_AT\_V\_CHANEL}}
+\index{XB\_AT\_V\_CHANEL@{XB\_AT\_V\_CHANEL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_CHANEL}{XB\_AT\_V\_CHANEL}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+CHANEL~\char`\"{}C\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00125}{125}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a094072d0ce80311fadab5f4a3dca3e60}\label{define_8h_a094072d0ce80311fadab5f4a3dca3e60}} 
+\index{define.h@{define.h}!XB\_AT\_V\_COORDINATOR@{XB\_AT\_V\_COORDINATOR}}
+\index{XB\_AT\_V\_COORDINATOR@{XB\_AT\_V\_COORDINATOR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_COORDINATOR}{XB\_AT\_V\_COORDINATOR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+COORDINATOR~\char`\"{}0\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00127}{127}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}\label{define_8h_a27c4e9ab7accbdf13c46f5229547db4a}} 
+\index{define.h@{define.h}!XB\_AT\_V\_DISCOVER\_NETWORK@{XB\_AT\_V\_DISCOVER\_NETWORK}}
+\index{XB\_AT\_V\_DISCOVER\_NETWORK@{XB\_AT\_V\_DISCOVER\_NETWORK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_DISCOVER\_NETWORK}{XB\_AT\_V\_DISCOVER\_NETWORK}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+DISCOVER\+\_\+\+NETWORK~\char`\"{}\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00131}{131}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}\label{define_8h_a9e7a55deb4a71638dbae66a0469a90c4}} 
+\index{define.h@{define.h}!XB\_AT\_V\_END\_LINE@{XB\_AT\_V\_END\_LINE}}
+\index{XB\_AT\_V\_END\_LINE@{XB\_AT\_V\_END\_LINE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_END\_LINE}{XB\_AT\_V\_END\_LINE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+END\+\_\+\+LINE~\char`\"{}\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00120}{120}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a491946f4f455db82c1aa9862a5772f47}\label{define_8h_a491946f4f455db82c1aa9862a5772f47}} 
+\index{define.h@{define.h}!XB\_AT\_V\_LOW\_DEST\_ADDR@{XB\_AT\_V\_LOW\_DEST\_ADDR}}
+\index{XB\_AT\_V\_LOW\_DEST\_ADDR@{XB\_AT\_V\_LOW\_DEST\_ADDR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_LOW\_DEST\_ADDR}{XB\_AT\_V\_LOW\_DEST\_ADDR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+LOW\+\_\+\+DEST\+\_\+\+ADDR~\char`\"{}2\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00130}{130}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}\label{define_8h_a6c3fbb22970f7fcdb8f7e3ce13961c75}} 
+\index{define.h@{define.h}!XB\_AT\_V\_PAN\_ID@{XB\_AT\_V\_PAN\_ID}}
+\index{XB\_AT\_V\_PAN\_ID@{XB\_AT\_V\_PAN\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_PAN\_ID}{XB\_AT\_V\_PAN\_ID}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+PAN\+\_\+\+ID~\char`\"{}3332\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00126}{126}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}\label{define_8h_ac90146fc969b61b529ad1b9bb2d14dc1}} 
+\index{define.h@{define.h}!XB\_AT\_V\_PARITY@{XB\_AT\_V\_PARITY}}
+\index{XB\_AT\_V\_PARITY@{XB\_AT\_V\_PARITY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_AT\_V\_PARITY}{XB\_AT\_V\_PARITY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+AT\+\_\+\+V\+\_\+\+PARITY~\char`\"{}1\textbackslash{}r\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00128}{128}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a089dfd8cab0a6711a782a984dfd30c29}\label{define_8h_a089dfd8cab0a6711a782a984dfd30c29}} 
+\index{define.h@{define.h}!XB\_BAUDRATE\_DEFAULT@{XB\_BAUDRATE\_DEFAULT}}
+\index{XB\_BAUDRATE\_DEFAULT@{XB\_BAUDRATE\_DEFAULT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_BAUDRATE\_DEFAULT}{XB\_BAUDRATE\_DEFAULT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+BAUDRATE\+\_\+\+DEFAULT~9600}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00022}{22}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}\label{define_8h_a00b35b794ccd68d118b58b7b3ca3e762}} 
+\index{define.h@{define.h}!XB\_BAUDRATE\_PRIMARY@{XB\_BAUDRATE\_PRIMARY}}
+\index{XB\_BAUDRATE\_PRIMARY@{XB\_BAUDRATE\_PRIMARY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_BAUDRATE\_PRIMARY}{XB\_BAUDRATE\_PRIMARY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+BAUDRATE\+\_\+\+PRIMARY~9600}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00014}{14}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3e8c543722f50daa8c6e454b15efbe97}\label{define_8h_a3e8c543722f50daa8c6e454b15efbe97}} 
+\index{define.h@{define.h}!XB\_DATABITS\_DEFAULT@{XB\_DATABITS\_DEFAULT}}
+\index{XB\_DATABITS\_DEFAULT@{XB\_DATABITS\_DEFAULT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_DATABITS\_DEFAULT}{XB\_DATABITS\_DEFAULT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+DATABITS\+\_\+\+DEFAULT~\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00023}{23}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a017a7b9bdf79e3aceafb5111c49bcc2b}\label{define_8h_a017a7b9bdf79e3aceafb5111c49bcc2b}} 
+\index{define.h@{define.h}!XB\_DATABITS\_PRIMARY@{XB\_DATABITS\_PRIMARY}}
+\index{XB\_DATABITS\_PRIMARY@{XB\_DATABITS\_PRIMARY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_DATABITS\_PRIMARY}{XB\_DATABITS\_PRIMARY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+DATABITS\+\_\+\+PRIMARY~\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00015}{15}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6a7985c14914aa1ed68abb1749c0267e}\label{define_8h_a6a7985c14914aa1ed68abb1749c0267e}} 
+\index{define.h@{define.h}!XB\_E\_SUCCESS@{XB\_E\_SUCCESS}}
+\index{XB\_E\_SUCCESS@{XB\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_E\_SUCCESS}{XB\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+E\+\_\+\+SUCCESS~000}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00049}{49}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}\label{define_8h_a95d058f2659c7cdef84e8d7f3ce974ff}} 
+\index{define.h@{define.h}!XB\_FCT\_E\_NONE\_REACHABLE@{XB\_FCT\_E\_NONE\_REACHABLE}}
+\index{XB\_FCT\_E\_NONE\_REACHABLE@{XB\_FCT\_E\_NONE\_REACHABLE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_FCT\_E\_NONE\_REACHABLE}{XB\_FCT\_E\_NONE\_REACHABLE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+NONE\+\_\+\+REACHABLE~-\/102}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00054}{54}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af13758a628d8c1927c1c68cf2a53f989}\label{define_8h_af13758a628d8c1927c1c68cf2a53f989}} 
+\index{define.h@{define.h}!XB\_FCT\_E\_NOT\_FOUND@{XB\_FCT\_E\_NOT\_FOUND}}
+\index{XB\_FCT\_E\_NOT\_FOUND@{XB\_FCT\_E\_NOT\_FOUND}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_FCT\_E\_NOT\_FOUND}{XB\_FCT\_E\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+NOT\+\_\+\+FOUND~-\/101}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00053}{53}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aaebf92484330442fd3a89ca55c6501b2}\label{define_8h_aaebf92484330442fd3a89ca55c6501b2}} 
+\index{define.h@{define.h}!XB\_FCT\_E\_SUCCESS@{XB\_FCT\_E\_SUCCESS}}
+\index{XB\_FCT\_E\_SUCCESS@{XB\_FCT\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_FCT\_E\_SUCCESS}{XB\_FCT\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+FCT\+\_\+\+E\+\_\+\+SUCCESS~100}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00052}{52}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}\label{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}} 
+\index{define.h@{define.h}!XB\_FCT\_TEST\_ALIVE@{XB\_FCT\_TEST\_ALIVE}}
+\index{XB\_FCT\_TEST\_ALIVE@{XB\_FCT\_TEST\_ALIVE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_FCT\_TEST\_ALIVE}{XB\_FCT\_TEST\_ALIVE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+FCT\+\_\+\+TEST\+\_\+\+ALIVE~0x1E}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00044}{44}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4d618732374286dd4533da122857be41}\label{define_8h_a4d618732374286dd4533da122857be41}} 
+\index{define.h@{define.h}!XB\_LIST\_ADR@{XB\_LIST\_ADR}}
+\index{XB\_LIST\_ADR@{XB\_LIST\_ADR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_LIST\_ADR}{XB\_LIST\_ADR}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+LIST\+\_\+\+ADR~(int\mbox{[}$\,$\mbox{]})\{\mbox{\hyperlink{define_8h_ad350453416fcfa7702bc52cf7957a2a0}{XB\+\_\+\+ADR\+\_\+\+BROADCAST}}, \mbox{\hyperlink{define_8h_af11f288f8d3a93e944244a351ee284a4}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+01}}, \mbox{\hyperlink{define_8h_afb1db7f28458f5c87f93cf2076ce167f}{XB\+\_\+\+ADR\+\_\+\+ROBOT\+\_\+02}}\}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00035}{35}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}\label{define_8h_a91dcf5ab8009842d2c7c0a54e1c46d96}} 
+\index{define.h@{define.h}!XB\_LIST\_CODE\_FCT@{XB\_LIST\_CODE\_FCT}}
+\index{XB\_LIST\_CODE\_FCT@{XB\_LIST\_CODE\_FCT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_LIST\_CODE\_FCT}{XB\_LIST\_CODE\_FCT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+LIST\+\_\+\+CODE\+\_\+\+FCT~(int\mbox{[}$\,$\mbox{]})\{\mbox{\hyperlink{define_8h_a3c5bfb0990b03904a0af1ab0acb8a6eb}{XB\+\_\+\+FCT\+\_\+\+TEST\+\_\+\+ALIVE}}\}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00046}{46}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a58dd8396f0b9386153d145b907e84553}\label{define_8h_a58dd8396f0b9386153d145b907e84553}} 
+\index{define.h@{define.h}!XB\_PARITY\_DEFAULT@{XB\_PARITY\_DEFAULT}}
+\index{XB\_PARITY\_DEFAULT@{XB\_PARITY\_DEFAULT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_PARITY\_DEFAULT}{XB\_PARITY\_DEFAULT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+PARITY\+\_\+\+DEFAULT~\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\+\_\+\+PARITY\+\_\+\+NONE}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00024}{24}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acc61b40fe509d72640422289f4ca3fad}\label{define_8h_acc61b40fe509d72640422289f4ca3fad}} 
+\index{define.h@{define.h}!XB\_PARITY\_PRIMARY@{XB\_PARITY\_PRIMARY}}
+\index{XB\_PARITY\_PRIMARY@{XB\_PARITY\_PRIMARY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_PARITY\_PRIMARY}{XB\_PARITY\_PRIMARY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+PARITY\+\_\+\+PRIMARY~\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a0392c989829d4e47a2cc54a12cb6125a}{SERIAL\+\_\+\+PARITY\+\_\+\+EVEN}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00016}{16}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad2e5a6966c804c86a1fc6c8cba5c3861}\label{define_8h_ad2e5a6966c804c86a1fc6c8cba5c3861}} 
+\index{define.h@{define.h}!XB\_SER\_E\_CONFIG@{XB\_SER\_E\_CONFIG}}
+\index{XB\_SER\_E\_CONFIG@{XB\_SER\_E\_CONFIG}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_CONFIG}{XB\_SER\_E\_CONFIG}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+CONFIG~-\/505}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00097}{97}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3f6b2252b366941608c932bb60cc2533}\label{define_8h_a3f6b2252b366941608c932bb60cc2533}} 
+\index{define.h@{define.h}!XB\_SER\_E\_NOT\_FOUND@{XB\_SER\_E\_NOT\_FOUND}}
+\index{XB\_SER\_E\_NOT\_FOUND@{XB\_SER\_E\_NOT\_FOUND}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_NOT\_FOUND}{XB\_SER\_E\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+NOT\+\_\+\+FOUND~-\/501}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00093}{93}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2bcf7c0b869d6aba0d5c24a8263fcbe5}\label{define_8h_a2bcf7c0b869d6aba0d5c24a8263fcbe5}} 
+\index{define.h@{define.h}!XB\_SER\_E\_OPEN@{XB\_SER\_E\_OPEN}}
+\index{XB\_SER\_E\_OPEN@{XB\_SER\_E\_OPEN}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_OPEN}{XB\_SER\_E\_OPEN}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+OPEN~-\/502}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00094}{94}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3e91e6b1bd1e4db324ffc81fa47bbfea}\label{define_8h_a3e91e6b1bd1e4db324ffc81fa47bbfea}} 
+\index{define.h@{define.h}!XB\_SER\_E\_PARAM@{XB\_SER\_E\_PARAM}}
+\index{XB\_SER\_E\_PARAM@{XB\_SER\_E\_PARAM}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_PARAM}{XB\_SER\_E\_PARAM}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+PARAM~-\/503}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00095}{95}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad714240053187073c3aba97b6bd6dd14}\label{define_8h_ad714240053187073c3aba97b6bd6dd14}} 
+\index{define.h@{define.h}!XB\_SER\_E\_SUCCESS@{XB\_SER\_E\_SUCCESS}}
+\index{XB\_SER\_E\_SUCCESS@{XB\_SER\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_SUCCESS}{XB\_SER\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+SUCCESS~500}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00092}{92}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a38da71d6292df1ba4a44719a56932bc9}\label{define_8h_a38da71d6292df1ba4a44719a56932bc9}} 
+\index{define.h@{define.h}!XB\_SER\_E\_TIMOUT@{XB\_SER\_E\_TIMOUT}}
+\index{XB\_SER\_E\_TIMOUT@{XB\_SER\_E\_TIMOUT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_TIMOUT}{XB\_SER\_E\_TIMOUT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+TIMOUT~-\/506}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00098}{98}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a196cae4b47cd2f6337b6219ede2d3faf}\label{define_8h_a196cae4b47cd2f6337b6219ede2d3faf}} 
+\index{define.h@{define.h}!XB\_SER\_E\_UKN\_BAUDRATE@{XB\_SER\_E\_UKN\_BAUDRATE}}
+\index{XB\_SER\_E\_UKN\_BAUDRATE@{XB\_SER\_E\_UKN\_BAUDRATE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_UKN\_BAUDRATE}{XB\_SER\_E\_UKN\_BAUDRATE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+BAUDRATE~-\/504}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00096}{96}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acdb61ab3558e4f29256d651d7b5ae7ab}\label{define_8h_acdb61ab3558e4f29256d651d7b5ae7ab}} 
+\index{define.h@{define.h}!XB\_SER\_E\_UKN\_DATABITS@{XB\_SER\_E\_UKN\_DATABITS}}
+\index{XB\_SER\_E\_UKN\_DATABITS@{XB\_SER\_E\_UKN\_DATABITS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_UKN\_DATABITS}{XB\_SER\_E\_UKN\_DATABITS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+DATABITS~-\/507}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00099}{99}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a863e10f0088a7ed1b77ac6af0ea61bce}\label{define_8h_a863e10f0088a7ed1b77ac6af0ea61bce}} 
+\index{define.h@{define.h}!XB\_SER\_E\_UKN\_PARITY@{XB\_SER\_E\_UKN\_PARITY}}
+\index{XB\_SER\_E\_UKN\_PARITY@{XB\_SER\_E\_UKN\_PARITY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_UKN\_PARITY}{XB\_SER\_E\_UKN\_PARITY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+PARITY~-\/509}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00101}{101}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a493164032fd737e8aa203f682a4cb965}\label{define_8h_a493164032fd737e8aa203f682a4cb965}} 
+\index{define.h@{define.h}!XB\_SER\_E\_UKN\_STOPBITS@{XB\_SER\_E\_UKN\_STOPBITS}}
+\index{XB\_SER\_E\_UKN\_STOPBITS@{XB\_SER\_E\_UKN\_STOPBITS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SER\_E\_UKN\_STOPBITS}{XB\_SER\_E\_UKN\_STOPBITS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SER\+\_\+\+E\+\_\+\+UKN\+\_\+\+STOPBITS~-\/508}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00100}{100}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a9c64f25548c02d153acc044a16e610f6}\label{define_8h_a9c64f25548c02d153acc044a16e610f6}} 
+\index{define.h@{define.h}!XB\_SERIAL\_PORT\_DEFAULT@{XB\_SERIAL\_PORT\_DEFAULT}}
+\index{XB\_SERIAL\_PORT\_DEFAULT@{XB\_SERIAL\_PORT\_DEFAULT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SERIAL\_PORT\_DEFAULT}{XB\_SERIAL\_PORT\_DEFAULT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SERIAL\+\_\+\+PORT\+\_\+\+DEFAULT~\char`\"{}/dev/tty\+AMA0\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00021}{21}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}\label{define_8h_ab4b6881c0c02493c390b2f0c8bc52e70}} 
+\index{define.h@{define.h}!XB\_SERIAL\_PORT\_PRIMARY@{XB\_SERIAL\_PORT\_PRIMARY}}
+\index{XB\_SERIAL\_PORT\_PRIMARY@{XB\_SERIAL\_PORT\_PRIMARY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SERIAL\_PORT\_PRIMARY}{XB\_SERIAL\_PORT\_PRIMARY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SERIAL\+\_\+\+PORT\+\_\+\+PRIMARY~\char`\"{}/dev/tty\+AMA0\char`\"{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00013}{13}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad1e4503c41f73a1e2796f8303d81d7b4}\label{define_8h_ad1e4503c41f73a1e2796f8303d81d7b4}} 
+\index{define.h@{define.h}!XB\_STOPBITS\_DEFAULT@{XB\_STOPBITS\_DEFAULT}}
+\index{XB\_STOPBITS\_DEFAULT@{XB\_STOPBITS\_DEFAULT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_STOPBITS\_DEFAULT}{XB\_STOPBITS\_DEFAULT}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+STOPBITS\+\_\+\+DEFAULT~\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00025}{25}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2527277ea7bfc48f384222ad9c2460bc}\label{define_8h_a2527277ea7bfc48f384222ad9c2460bc}} 
+\index{define.h@{define.h}!XB\_STOPBITS\_PRIMARY@{XB\_STOPBITS\_PRIMARY}}
+\index{XB\_STOPBITS\_PRIMARY@{XB\_STOPBITS\_PRIMARY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_STOPBITS\_PRIMARY}{XB\_STOPBITS\_PRIMARY}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+STOPBITS\+\_\+\+PRIMARY~\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00017}{17}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}\label{define_8h_acdacd3ddf0f4a21835b895ed944e58a1}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_DECOUPAGE@{XB\_SUB\_TRAME\_E\_DECOUPAGE}}
+\index{XB\_SUB\_TRAME\_E\_DECOUPAGE@{XB\_SUB\_TRAME\_E\_DECOUPAGE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_DECOUPAGE}{XB\_SUB\_TRAME\_E\_DECOUPAGE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+DECOUPAGE~-\/303}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00069}{69}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a31c302e2f3434bf6c9beabef3e20453d}\label{define_8h_a31c302e2f3434bf6c9beabef3e20453d}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_END@{XB\_SUB\_TRAME\_E\_END}}
+\index{XB\_SUB\_TRAME\_E\_END@{XB\_SUB\_TRAME\_E\_END}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_END}{XB\_SUB\_TRAME\_E\_END}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+END~-\/305}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00071}{71}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a296ef6d14e0861ec8105cabf13a80daa}\label{define_8h_a296ef6d14e0861ec8105cabf13a80daa}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_NULL@{XB\_SUB\_TRAME\_E\_NULL}}
+\index{XB\_SUB\_TRAME\_E\_NULL@{XB\_SUB\_TRAME\_E\_NULL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_NULL}{XB\_SUB\_TRAME\_E\_NULL}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+NULL~-\/306}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00072}{72}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}\label{define_8h_aaeabe9b23be3a8baa7ed50f44af82871}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_REPARTITION@{XB\_SUB\_TRAME\_E\_REPARTITION}}
+\index{XB\_SUB\_TRAME\_E\_REPARTITION@{XB\_SUB\_TRAME\_E\_REPARTITION}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_REPARTITION}{XB\_SUB\_TRAME\_E\_REPARTITION}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+REPARTITION~-\/302}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00068}{68}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad021b44108c67217ff3e4c1c707df76e}\label{define_8h_ad021b44108c67217ff3e4c1c707df76e}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_SIZE@{XB\_SUB\_TRAME\_E\_SIZE}}
+\index{XB\_SUB\_TRAME\_E\_SIZE@{XB\_SUB\_TRAME\_E\_SIZE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_SIZE}{XB\_SUB\_TRAME\_E\_SIZE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SIZE~-\/301}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00067}{67}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2fa21a437940dc3ef543bb735716fd00}\label{define_8h_a2fa21a437940dc3ef543bb735716fd00}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_START@{XB\_SUB\_TRAME\_E\_START}}
+\index{XB\_SUB\_TRAME\_E\_START@{XB\_SUB\_TRAME\_E\_START}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_START}{XB\_SUB\_TRAME\_E\_START}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+START~-\/304}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00070}{70}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1fc787b2cf4ce558b24eb81eb460f56e}\label{define_8h_a1fc787b2cf4ce558b24eb81eb460f56e}} 
+\index{define.h@{define.h}!XB\_SUB\_TRAME\_E\_SUCCESS@{XB\_SUB\_TRAME\_E\_SUCCESS}}
+\index{XB\_SUB\_TRAME\_E\_SUCCESS@{XB\_SUB\_TRAME\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_SUB\_TRAME\_E\_SUCCESS}{XB\_SUB\_TRAME\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+SUB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SUCCESS~300}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00066}{66}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}\label{define_8h_a0cfbe4cbec49fd998812f20cbd1ada2d}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_CRC@{XB\_TRAME\_E\_CRC}}
+\index{XB\_TRAME\_E\_CRC@{XB\_TRAME\_E\_CRC}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_CRC}{XB\_TRAME\_E\_CRC}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+CRC~-\/204}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00061}{61}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a23f90681a267a6205f9db6170811be90}\label{define_8h_a23f90681a267a6205f9db6170811be90}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_DEST@{XB\_TRAME\_E\_DEST}}
+\index{XB\_TRAME\_E\_DEST@{XB\_TRAME\_E\_DEST}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_DEST}{XB\_TRAME\_E\_DEST}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+DEST~-\/206}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00063}{63}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad3aab90769e29ca037e8454be70403fe}\label{define_8h_ad3aab90769e29ca037e8454be70403fe}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_END@{XB\_TRAME\_E\_END}}
+\index{XB\_TRAME\_E\_END@{XB\_TRAME\_E\_END}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_END}{XB\_TRAME\_E\_END}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+END~-\/203}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00060}{60}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2b2e42001647159fd6dcc632ce8b5349}\label{define_8h_a2b2e42001647159fd6dcc632ce8b5349}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_EXP@{XB\_TRAME\_E\_EXP}}
+\index{XB\_TRAME\_E\_EXP@{XB\_TRAME\_E\_EXP}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_EXP}{XB\_TRAME\_E\_EXP}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+EXP~-\/205}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00062}{62}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ac21719e85ef616655914aebe4ac00b18}\label{define_8h_ac21719e85ef616655914aebe4ac00b18}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_SIZE@{XB\_TRAME\_E\_SIZE}}
+\index{XB\_TRAME\_E\_SIZE@{XB\_TRAME\_E\_SIZE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_SIZE}{XB\_TRAME\_E\_SIZE}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SIZE~-\/201}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00058}{58}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}\label{define_8h_a0ba11f65a9c9b18e417e8d52655785b4}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_START@{XB\_TRAME\_E\_START}}
+\index{XB\_TRAME\_E\_START@{XB\_TRAME\_E\_START}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_START}{XB\_TRAME\_E\_START}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+START~-\/202}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00059}{59}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}\label{define_8h_a76f9bf3fb5c6d8e2ebbf3cc1e49f4ede}} 
+\index{define.h@{define.h}!XB\_TRAME\_E\_SUCCESS@{XB\_TRAME\_E\_SUCCESS}}
+\index{XB\_TRAME\_E\_SUCCESS@{XB\_TRAME\_E\_SUCCESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_TRAME\_E\_SUCCESS}{XB\_TRAME\_E\_SUCCESS}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+TRAME\+\_\+\+E\+\_\+\+SUCCESS~200}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00057}{57}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}\label{define_8h_a45b2ddae9b642afd6d23790f1b9c8030}} 
+\index{define.h@{define.h}!XB\_V\_ACK@{XB\_V\_ACK}}
+\index{XB\_V\_ACK@{XB\_V\_ACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_V\_ACK}{XB\_V\_ACK}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+V\+\_\+\+ACK~0x06}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00027}{27}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aed2f6788341df71e4b25f91c925ef34f}\label{define_8h_aed2f6788341df71e4b25f91c925ef34f}} 
+\index{define.h@{define.h}!XB\_V\_END@{XB\_V\_END}}
+\index{XB\_V\_END@{XB\_V\_END}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_V\_END}{XB\_V\_END}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+V\+\_\+\+END~0x03}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00041}{41}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aeb765eb40bd0f847f6a83413de2244d9}\label{define_8h_aeb765eb40bd0f847f6a83413de2244d9}} 
+\index{define.h@{define.h}!XB\_V\_NACK@{XB\_V\_NACK}}
+\index{XB\_V\_NACK@{XB\_V\_NACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_V\_NACK}{XB\_V\_NACK}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+V\+\_\+\+NACK~0x15}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00028}{28}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acca99b796bf305986693d2949c07f1b4}\label{define_8h_acca99b796bf305986693d2949c07f1b4}} 
+\index{define.h@{define.h}!XB\_V\_START@{XB\_V\_START}}
+\index{XB\_V\_START@{XB\_V\_START}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{XB\_V\_START}{XB\_V\_START}}
+{\footnotesize\ttfamily \#define XB\+\_\+\+V\+\_\+\+START~0x02}
+
+
+
+Définition à la ligne \mbox{\hyperlink{define_8h_source_l00040}{40}} du fichier \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+

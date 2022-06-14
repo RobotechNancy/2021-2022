@@ -1,0 +1,1448 @@
+\hypertarget{classserialib}{}\doxysection{Référence de la classe serialib}
+\label{classserialib}\index{serialib@{serialib}}
+
+
+This class is used for communication over a serial device.  
+
+
+
+
+{\ttfamily \#include $<$serialib.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialib_a26166f63ad73013ca7cbcd2ae59edc91}{serialib}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class serialib. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserialib_ac44215001ae198f2c196bb7993327a4b}{$\sim$serialib}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class serialib. It close the connection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classserialib_afaed268ce37d18121c4c778041224e5d}{open\+Device}} (const char $\ast$Device, const unsigned int Bauds, \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7}{Serial\+Data\+Bits}} Databits=\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}, \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6}{Serial\+Parity}} Parity=\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\+\_\+\+PARITY\+\_\+\+NONE}}, \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654}{Serial\+Stop\+Bits}} Stopbits=\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}})
+\begin{DoxyCompactList}\small\item\em Open the serial port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a673ed2a43c45a42f96635e54ff38715e}{is\+Device\+Open}} ()
+\item 
+void \mbox{\hyperlink{classserialib_a8a1c8803c8df1a19222d6006328534b8}{close\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Close the connection with the current device. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classserialib_aa6d231cb99664a613bcb503830f73497}{write\+Char}} (char)
+\begin{DoxyCompactList}\small\item\em Write a char on the current serial port. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{read\+Char}} (char $\ast$p\+Byte, const unsigned int time\+Out\+\_\+ms=0)
+\begin{DoxyCompactList}\small\item\em Wait for a byte from the serial device and return the data read. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}{write\+String}} (const char $\ast$String)
+\begin{DoxyCompactList}\small\item\em Write a string on the current serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classserialib_ab155c84352ddefe1304d391c19497ac1}{read\+String}} (char $\ast$received\+String, char final\+Char, unsigned int max\+Nb\+Bytes, const unsigned int time\+Out\+\_\+ms=0)
+\begin{DoxyCompactList}\small\item\em Read a string from the serial device (with timeout) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classserialib_aa14196b6f422584bf5eebc4ddb71d483}{write\+Bytes}} (const void $\ast$Buffer, const unsigned int Nb\+Bytes)
+\begin{DoxyCompactList}\small\item\em Write an array of data on the current serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classserialib_ab05e51ff3bc47c02d7d000d58b45a961}{read\+Bytes}} (void $\ast$buffer, unsigned int max\+Nb\+Bytes, const unsigned int time\+Out\+\_\+ms=0, unsigned int sleep\+Duration\+\_\+us=100)
+\begin{DoxyCompactList}\small\item\em Read an array of bytes from the serial device (with timeout) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classserialib_a572dd8d208511ec81d848de72cb05c7a}{flush\+Receiver}} ()
+\begin{DoxyCompactList}\small\item\em Empty receiver buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classserialib_a50c91bf8cab23afdfdf05ca58392456f}{available}} ()
+\begin{DoxyCompactList}\small\item\em Return the number of bytes in the received buffer (UNIX only) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a3dc0ec56e84ab2b43dc02fc2e02148a1}{DTR}} (bool status)
+\begin{DoxyCompactList}\small\item\em Set or unset the bit DTR (pin 4) DTR stands for Data Terminal Ready Convenience method \+:This method calls set\+DTR and clear\+DTR. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a7564b9e28b1b50675d9d6d3fabc896c0}{set\+DTR}} ()
+\begin{DoxyCompactList}\small\item\em Set the bit DTR (pin 4) DTR stands for Data Terminal Ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_adf49bff6401d3101b41fb52e98309635}{clear\+DTR}} ()
+\begin{DoxyCompactList}\small\item\em Clear the bit DTR (pin 4) DTR stands for Data Terminal Ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a5a73f159762fa4d5c252f36acfe7ab47}{RTS}} (bool status)
+\begin{DoxyCompactList}\small\item\em Set or unset the bit RTS (pin 7) RTS stands for Data Termina Ready Convenience method \+:This method calls set\+DTR and clear\+DTR. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a21767ffe86a76f300a71c496fbcc26a1}{set\+RTS}} ()
+\begin{DoxyCompactList}\small\item\em Set the bit RTS (pin 7) RTS stands for Data Terminal Ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_ab0b5882339240002fccf7701f5321e0a}{clear\+RTS}} ()
+\begin{DoxyCompactList}\small\item\em Clear the bit RTS (pin 7) RTS stands for Data Terminal Ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a605d8a8015fadb5db5521350aefe084e}{is\+RI}} ()
+\begin{DoxyCompactList}\small\item\em Get the RING\textquotesingle{}s status (pin 9) Ring Indicator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a5f451a5eea7c8c1bdcff684ba131d6ff}{is\+DCD}} ()
+\begin{DoxyCompactList}\small\item\em Get the DCD\textquotesingle{}s status (pin 1) CDC stands for Data Carrier Detect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_aca544a6f8dfa33f8e771713646768215}{is\+CTS}} ()
+\begin{DoxyCompactList}\small\item\em Get the CTS\textquotesingle{}s status (pin 8) CTS stands for Clear To Send. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a3f1f0894543dfb17955de50157965dd7}{is\+DSR}} ()
+\begin{DoxyCompactList}\small\item\em Get the DSR\textquotesingle{}s status (pin 6) DSR stands for Data Set Ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_ab2b121af07fb732f82668f6a14e93cfb}{is\+RTS}} ()
+\begin{DoxyCompactList}\small\item\em Get the RTS\textquotesingle{}s status (pin 7) RTS stands for Request To Send May behave abnormally on Windows. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserialib_a4ec78286be81602bf1df44a4eb8372a8}{is\+DTR}} ()
+\begin{DoxyCompactList}\small\item\em Get the DTR\textquotesingle{}s status (pin 4) DTR stands for Data Terminal Ready May behave abnormally on Windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classserialib_a543d9ece0586fb00ae20ee282d325890}{read\+String\+No\+Time\+Out}} (char $\ast$String, char Final\+Char, unsigned int Max\+Nb\+Bytes)
+\begin{DoxyCompactList}\small\item\em Read a string from the serial device (without Time\+Out) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{current\+State\+RTS}}
+\item 
+bool \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{current\+State\+DTR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+This class is used for communication over a serial device. 
+
+Définition à la ligne \mbox{\hyperlink{serialib_8h_source_l00092}{92}} du fichier \mbox{\hyperlink{serialib_8h_source}{serialib.\+h}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classserialib_a26166f63ad73013ca7cbcd2ae59edc91}\label{classserialib_a26166f63ad73013ca7cbcd2ae59edc91}} 
+\index{serialib@{serialib}!serialib@{serialib}}
+\index{serialib@{serialib}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{serialib()}{serialib()}}
+{\footnotesize\ttfamily serialib\+::serialib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class serialib. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00030}{30}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00033     \textcolor{comment}{// Set default value for RTS and DTR (Windows only)}}
+\DoxyCodeLine{00034     \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{currentStateRTS}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00035     \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{currentStateDTR}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00036     hSerial = INVALID\_HANDLE\_VALUE;}
+\DoxyCodeLine{00037 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00039     fd = -\/1;}
+\DoxyCodeLine{00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_ac44215001ae198f2c196bb7993327a4b}\label{classserialib_ac44215001ae198f2c196bb7993327a4b}} 
+\index{serialib@{serialib}!````~serialib@{$\sim$serialib}}
+\index{````~serialib@{$\sim$serialib}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{$\sim$serialib()}{~serialib()}}
+{\footnotesize\ttfamily serialib\+::$\sim$serialib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor of the class serialib. It close the connection. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00048}{48}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     \mbox{\hyperlink{classserialib_a8a1c8803c8df1a19222d6006328534b8}{closeDevice}}();}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classserialib_a50c91bf8cab23afdfdf05ca58392456f}\label{classserialib_a50c91bf8cab23afdfdf05ca58392456f}} 
+\index{serialib@{serialib}!available@{available}}
+\index{available@{available}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int serialib\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the number of bytes in the received buffer (UNIX only) 
+
+\begin{DoxyReturn}{Renvoie}
+The number of bytes received by the serial provider but not yet read. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00702}{702}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00703 \{    }
+\DoxyCodeLine{00704 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00705     \textcolor{comment}{// Device errors}}
+\DoxyCodeLine{00706     DWORD commErrors;}
+\DoxyCodeLine{00707     \textcolor{comment}{// Device status}}
+\DoxyCodeLine{00708     COMSTAT commStatus;}
+\DoxyCodeLine{00709     \textcolor{comment}{// Read status}}
+\DoxyCodeLine{00710     ClearCommError(hSerial, \&commErrors, \&commStatus);}
+\DoxyCodeLine{00711     \textcolor{comment}{// Return the number of pending bytes}}
+\DoxyCodeLine{00712     \textcolor{keywordflow}{return} commStatus.cbInQue;}
+\DoxyCodeLine{00713 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00714 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00715     \textcolor{keywordtype}{int} nBytes=0;}
+\DoxyCodeLine{00716     \textcolor{comment}{// Return number of pending bytes in the receiver}}
+\DoxyCodeLine{00717     ioctl(fd, FIONREAD, \&nBytes);}
+\DoxyCodeLine{00718     \textcolor{keywordflow}{return} nBytes;}
+\DoxyCodeLine{00719 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00720 }
+\DoxyCodeLine{00721 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_adf49bff6401d3101b41fb52e98309635}\label{classserialib_adf49bff6401d3101b41fb52e98309635}} 
+\index{serialib@{serialib}!clearDTR@{clearDTR}}
+\index{clearDTR@{clearDTR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{clearDTR()}{clearDTR()}}
+{\footnotesize\ttfamily bool serialib\+::clear\+DTR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the bit DTR (pin 4) DTR stands for Data Terminal Ready. 
+
+\begin{DoxyReturn}{Renvoie}
+If the function fails, the return value is false If the function succeeds, the return value is true. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00777}{777}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00778 \{}
+\DoxyCodeLine{00779 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00780     \textcolor{comment}{// Clear DTR}}
+\DoxyCodeLine{00781     \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{currentStateDTR}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00782     \textcolor{keywordflow}{return} EscapeCommFunction(hSerial,CLRDTR);}
+\DoxyCodeLine{00783 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00784 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00785     \textcolor{comment}{// Clear DTR}}
+\DoxyCodeLine{00786     \textcolor{keywordtype}{int} status\_DTR=0;}
+\DoxyCodeLine{00787     ioctl(fd, TIOCMGET, \&status\_DTR);}
+\DoxyCodeLine{00788     status\_DTR \&= \string~TIOCM\_DTR;}
+\DoxyCodeLine{00789     ioctl(fd, TIOCMSET, \&status\_DTR);}
+\DoxyCodeLine{00790     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00791 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00792 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_ab0b5882339240002fccf7701f5321e0a}\label{classserialib_ab0b5882339240002fccf7701f5321e0a}} 
+\index{serialib@{serialib}!clearRTS@{clearRTS}}
+\index{clearRTS@{clearRTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{clearRTS()}{clearRTS()}}
+{\footnotesize\ttfamily bool serialib\+::clear\+RTS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the bit RTS (pin 7) RTS stands for Data Terminal Ready. 
+
+\begin{DoxyReturn}{Renvoie}
+If the function fails, the return value is false If the function succeeds, the return value is true. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00847}{847}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00848 \{}
+\DoxyCodeLine{00849 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00850     \textcolor{comment}{// Clear RTS}}
+\DoxyCodeLine{00851     \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{currentStateRTS}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00852     \textcolor{keywordflow}{return} EscapeCommFunction(hSerial,CLRRTS);}
+\DoxyCodeLine{00853 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00854 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00855     \textcolor{comment}{// Clear RTS}}
+\DoxyCodeLine{00856     \textcolor{keywordtype}{int} status\_RTS=0;}
+\DoxyCodeLine{00857     ioctl(fd, TIOCMGET, \&status\_RTS);}
+\DoxyCodeLine{00858     status\_RTS \&= \string~TIOCM\_RTS;}
+\DoxyCodeLine{00859     ioctl(fd, TIOCMSET, \&status\_RTS);}
+\DoxyCodeLine{00860     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00861 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00862 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a8a1c8803c8df1a19222d6006328534b8}\label{classserialib_a8a1c8803c8df1a19222d6006328534b8}} 
+\index{serialib@{serialib}!closeDevice@{closeDevice}}
+\index{closeDevice@{closeDevice}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{closeDevice()}{closeDevice()}}
+{\footnotesize\ttfamily void serialib\+::close\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the connection with the current device. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00317}{317}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00318 \{}
+\DoxyCodeLine{00319 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00320     CloseHandle(hSerial);}
+\DoxyCodeLine{00321     hSerial = INVALID\_HANDLE\_VALUE;}
+\DoxyCodeLine{00322 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00323 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00324     close (fd);}
+\DoxyCodeLine{00325     fd = -\/1;}
+\DoxyCodeLine{00326 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00327 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a3dc0ec56e84ab2b43dc02fc2e02148a1}\label{classserialib_a3dc0ec56e84ab2b43dc02fc2e02148a1}} 
+\index{serialib@{serialib}!DTR@{DTR}}
+\index{DTR@{DTR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{DTR()}{DTR()}}
+{\footnotesize\ttfamily bool serialib\+::\+DTR (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Set or unset the bit DTR (pin 4) DTR stands for Data Terminal Ready Convenience method \+:This method calls set\+DTR and clear\+DTR. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em status} & = true set DTR status = false unset DTR \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+If the function fails, the return value is false If the function succeeds, the return value is true. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00737}{737}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00738 \{}
+\DoxyCodeLine{00739     \textcolor{keywordflow}{if} (status)}
+\DoxyCodeLine{00740         \textcolor{comment}{// Set DTR}}
+\DoxyCodeLine{00741         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classserialib_a7564b9e28b1b50675d9d6d3fabc896c0}{setDTR}}();}
+\DoxyCodeLine{00742     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00743         \textcolor{comment}{// Unset DTR}}
+\DoxyCodeLine{00744         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classserialib_adf49bff6401d3101b41fb52e98309635}{clearDTR}}();}
+\DoxyCodeLine{00745 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a572dd8d208511ec81d848de72cb05c7a}\label{classserialib_a572dd8d208511ec81d848de72cb05c7a}} 
+\index{serialib@{serialib}!flushReceiver@{flushReceiver}}
+\index{flushReceiver@{flushReceiver}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{flushReceiver()}{flushReceiver()}}
+{\footnotesize\ttfamily char serialib\+::flush\+Receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty receiver buffer. 
+
+\begin{DoxyReturn}{Renvoie}
+If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00683}{683}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00684 \{}
+\DoxyCodeLine{00685 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00686     \textcolor{comment}{// Purge receiver}}
+\DoxyCodeLine{00687     \textcolor{keywordflow}{return} PurgeComm (hSerial, PURGE\_RXCLEAR);}
+\DoxyCodeLine{00688 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00689 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00690     \textcolor{comment}{// Purge receiver}}
+\DoxyCodeLine{00691     tcflush(fd,TCIFLUSH);}
+\DoxyCodeLine{00692     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00693 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00694 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_aca544a6f8dfa33f8e771713646768215}\label{classserialib_aca544a6f8dfa33f8e771713646768215}} 
+\index{serialib@{serialib}!isCTS@{isCTS}}
+\index{isCTS@{isCTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isCTS()}{isCTS()}}
+{\footnotesize\ttfamily bool serialib\+::is\+CTS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the CTS\textquotesingle{}s status (pin 8) CTS stands for Clear To Send. 
+
+\begin{DoxyReturn}{Renvoie}
+Return true if CTS is set otherwise false 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00872}{872}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00873 \{}
+\DoxyCodeLine{00874 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00875     DWORD modemStat;}
+\DoxyCodeLine{00876     GetCommModemStatus(hSerial, \&modemStat);}
+\DoxyCodeLine{00877     \textcolor{keywordflow}{return} modemStat \& MS\_CTS\_ON;}
+\DoxyCodeLine{00878 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00879 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00880     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00881     \textcolor{comment}{//Get the current status of the CTS bit}}
+\DoxyCodeLine{00882     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00883     \textcolor{keywordflow}{return} status \& TIOCM\_CTS;}
+\DoxyCodeLine{00884 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00885 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a5f451a5eea7c8c1bdcff684ba131d6ff}\label{classserialib_a5f451a5eea7c8c1bdcff684ba131d6ff}} 
+\index{serialib@{serialib}!isDCD@{isDCD}}
+\index{isDCD@{isDCD}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isDCD()}{isDCD()}}
+{\footnotesize\ttfamily bool serialib\+::is\+DCD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the DCD\textquotesingle{}s status (pin 1) CDC stands for Data Carrier Detect. 
+
+\begin{DoxyReturn}{Renvoie}
+true if DCD is set 
+
+false otherwise 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00920}{920}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00921 \{}
+\DoxyCodeLine{00922 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00923     DWORD modemStat;}
+\DoxyCodeLine{00924     GetCommModemStatus(hSerial, \&modemStat);}
+\DoxyCodeLine{00925     \textcolor{keywordflow}{return} modemStat \& MS\_RLSD\_ON;}
+\DoxyCodeLine{00926 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00927 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00928     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00929     \textcolor{comment}{//Get the current status of the DCD bit}}
+\DoxyCodeLine{00930     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00931     \textcolor{keywordflow}{return} status \& TIOCM\_CAR;}
+\DoxyCodeLine{00932 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00933 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a673ed2a43c45a42f96635e54ff38715e}\label{classserialib_a673ed2a43c45a42f96635e54ff38715e}} 
+\index{serialib@{serialib}!isDeviceOpen@{isDeviceOpen}}
+\index{isDeviceOpen@{isDeviceOpen}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isDeviceOpen()}{isDeviceOpen()}}
+{\footnotesize\ttfamily bool serialib\+::is\+Device\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00304}{304}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00305 \{}
+\DoxyCodeLine{00306 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00307     \textcolor{keywordflow}{return} hSerial != INVALID\_HANDLE\_VALUE;}
+\DoxyCodeLine{00308 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00309 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00310     \textcolor{keywordflow}{return} fd >= 0;}
+\DoxyCodeLine{00311 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00312 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a3f1f0894543dfb17955de50157965dd7}\label{classserialib_a3f1f0894543dfb17955de50157965dd7}} 
+\index{serialib@{serialib}!isDSR@{isDSR}}
+\index{isDSR@{isDSR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isDSR()}{isDSR()}}
+{\footnotesize\ttfamily bool serialib\+::is\+DSR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the DSR\textquotesingle{}s status (pin 6) DSR stands for Data Set Ready. 
+
+\begin{DoxyReturn}{Renvoie}
+Return true if DTR is set otherwise false 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00894}{894}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00895 \{}
+\DoxyCodeLine{00896 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00897     DWORD modemStat;}
+\DoxyCodeLine{00898     GetCommModemStatus(hSerial, \&modemStat);}
+\DoxyCodeLine{00899     \textcolor{keywordflow}{return} modemStat \& MS\_DSR\_ON;}
+\DoxyCodeLine{00900 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00901 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00902     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00903     \textcolor{comment}{//Get the current status of the DSR bit}}
+\DoxyCodeLine{00904     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00905     \textcolor{keywordflow}{return} status \& TIOCM\_DSR;}
+\DoxyCodeLine{00906 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00907 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a4ec78286be81602bf1df44a4eb8372a8}\label{classserialib_a4ec78286be81602bf1df44a4eb8372a8}} 
+\index{serialib@{serialib}!isDTR@{isDTR}}
+\index{isDTR@{isDTR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isDTR()}{isDTR()}}
+{\footnotesize\ttfamily bool serialib\+::is\+DTR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the DTR\textquotesingle{}s status (pin 4) DTR stands for Data Terminal Ready May behave abnormally on Windows. 
+
+\begin{DoxyReturn}{Renvoie}
+Return true if CTS is set otherwise false 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00963}{963}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00964 \{}
+\DoxyCodeLine{00965 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00966     \textcolor{keywordflow}{return} \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{currentStateDTR}};}
+\DoxyCodeLine{00967 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00968 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00969     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00970     \textcolor{comment}{//Get the current status of the DTR bit}}
+\DoxyCodeLine{00971     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00972     \textcolor{keywordflow}{return} status \& TIOCM\_DTR  ;}
+\DoxyCodeLine{00973 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00974 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a605d8a8015fadb5db5521350aefe084e}\label{classserialib_a605d8a8015fadb5db5521350aefe084e}} 
+\index{serialib@{serialib}!isRI@{isRI}}
+\index{isRI@{isRI}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isRI()}{isRI()}}
+{\footnotesize\ttfamily bool serialib\+::is\+RI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the RING\textquotesingle{}s status (pin 9) Ring Indicator. 
+
+\begin{DoxyReturn}{Renvoie}
+Return true if RING is set otherwise false 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00941}{941}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00942 \{}
+\DoxyCodeLine{00943 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00944     DWORD modemStat;}
+\DoxyCodeLine{00945     GetCommModemStatus(hSerial, \&modemStat);}
+\DoxyCodeLine{00946     \textcolor{keywordflow}{return} modemStat \& MS\_RING\_ON;}
+\DoxyCodeLine{00947 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00948 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00949     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00950     \textcolor{comment}{//Get the current status of the RING bit}}
+\DoxyCodeLine{00951     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00952     \textcolor{keywordflow}{return} status \& TIOCM\_RNG;}
+\DoxyCodeLine{00953 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00954 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_ab2b121af07fb732f82668f6a14e93cfb}\label{classserialib_ab2b121af07fb732f82668f6a14e93cfb}} 
+\index{serialib@{serialib}!isRTS@{isRTS}}
+\index{isRTS@{isRTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{isRTS()}{isRTS()}}
+{\footnotesize\ttfamily bool serialib\+::is\+RTS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the RTS\textquotesingle{}s status (pin 7) RTS stands for Request To Send May behave abnormally on Windows. 
+
+\begin{DoxyReturn}{Renvoie}
+Return true if RTS is set otherwise false 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00984}{984}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00985 \{}
+\DoxyCodeLine{00986 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00987     \textcolor{keywordflow}{return} \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{currentStateRTS}};}
+\DoxyCodeLine{00988 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00989 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00990     \textcolor{keywordtype}{int} status=0;}
+\DoxyCodeLine{00991     \textcolor{comment}{//Get the current status of the CTS bit}}
+\DoxyCodeLine{00992     ioctl(fd, TIOCMGET, \&status);}
+\DoxyCodeLine{00993     \textcolor{keywordflow}{return} status \& TIOCM\_RTS;}
+\DoxyCodeLine{00994 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00995 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_afaed268ce37d18121c4c778041224e5d}\label{classserialib_afaed268ce37d18121c4c778041224e5d}} 
+\index{serialib@{serialib}!openDevice@{openDevice}}
+\index{openDevice@{openDevice}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{openDevice()}{openDevice()}}
+{\footnotesize\ttfamily int serialib\+::open\+Device (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Device,  }\item[{const unsigned int}]{Bauds,  }\item[{\mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7}{Serial\+Data\+Bits}}}]{Databits = {\ttfamily \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\+\_\+\+DATABITS\+\_\+8}}},  }\item[{\mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6}{Serial\+Parity}}}]{Parity = {\ttfamily \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\+\_\+\+PARITY\+\_\+\+NONE}}},  }\item[{\mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654}{Serial\+Stop\+Bits}}}]{Stopbits = {\ttfamily \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\+\_\+\+STOPBITS\+\_\+1}}} }\end{DoxyParamCaption})}
+
+
+
+Open the serial port. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Device} & \+: Port name (COM1, COM2, ... for Windows ) or (/dev/tty\+S0, /dev/tty\+ACM0, /dev/tty\+USB0 ... for linux) \\
+\hline
+{\em Bauds} & \+: Baud rate of the serial port. \begin{DoxyVerb}       \n Supported baud rate for Windows :
+               - 110
+               - 300
+               - 600
+               - 1200
+               - 2400
+               - 4800
+               - 9600
+               - 14400
+               - 19200
+               - 38400
+               - 56000
+               - 57600
+               - 115200
+               - 128000
+               - 256000
+
+      \n Supported baud rate for Linux :\n
+               - 110
+               - 300
+               - 600
+               - 1200
+               - 2400
+               - 4800
+               - 9600
+               - 19200
+               - 38400
+               - 57600
+               - 115200
+\end{DoxyVerb}
+ \\
+\hline
+{\em Databits} & \+: Number of data bits in one UART transmission. \begin{DoxyVerb}   \n Supported values: \n
+       - SERIAL_DATABITS_5 (5)
+       - SERIAL_DATABITS_6 (6)
+       - SERIAL_DATABITS_7 (7)
+       - SERIAL_DATABITS_8 (8)
+       - SERIAL_DATABITS_16 (16) (not supported on Unix)
+\end{DoxyVerb}
+ \\
+\hline
+{\em Parity} & Parity type \begin{DoxyVerb}   \n Supported values: \n
+       - SERIAL_PARITY_NONE (N)
+       - SERIAL_PARITY_EVEN (E)
+       - SERIAL_PARITY_ODD (O)
+       - SERIAL_PARITY_MARK (MARK) (not supported on Unix)
+       - SERIAL_PARITY_SPACE (SPACE) (not supported on Unix)
+\end{DoxyVerb}
+ \\
+\hline
+{\em Stopbit} & Number of stop bits \begin{DoxyVerb}    \n Supported values:
+        - SERIAL_STOPBITS_1 (1)
+        - SERIAL_STOPBITS_1_5 (1.5) (not supported on Unix)
+        - SERIAL_STOPBITS_2 (2)
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+500 success 
+
+-\/501 device not found 
+
+-\/502 error while opening the device 
+
+-\/503 error while getting port parameters 
+
+-\/504 Speed (Bauds) not recognized 
+
+-\/505 error while writing port parameters 
+
+-\/506 error while writing timeout parameters 
+
+-\/507 Databits not recognized 
+
+-\/508 Stopbits not recognized 
+
+-\/509 Parity not recognized 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00129}{129}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132                                                    \{}
+\DoxyCodeLine{00133 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00134     \textcolor{comment}{// Open serial port}}
+\DoxyCodeLine{00135     hSerial = CreateFileA(Device,GENERIC\_READ | GENERIC\_WRITE,0,0,OPEN\_EXISTING,\textcolor{comment}{/*FILE\_ATTRIBUTE\_NORMAL*/}0,0);}
+\DoxyCodeLine{00136     \textcolor{keywordflow}{if}(hSerial==INVALID\_HANDLE\_VALUE) \{}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if}(GetLastError()==ERROR\_FILE\_NOT\_FOUND)}
+\DoxyCodeLine{00138             \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_aa1dfe049c80f3b7d1c52db5b0e00371f}{EC\_SER\_E\_NOT\_FOUND}}; \textcolor{comment}{// Device not found}}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140         \textcolor{comment}{// Error while opening the device}}
+\DoxyCodeLine{00141         \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_ab972a3420c5f8feb55bd46670b9469c5}{EC\_SER\_E\_OPEN}};}
+\DoxyCodeLine{00142     \}}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144     \textcolor{comment}{// Set parameters}}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146     \textcolor{comment}{// Structure for the port parameters}}
+\DoxyCodeLine{00147     DCB dcbSerialParams;}
+\DoxyCodeLine{00148     dcbSerialParams.DCBlength=\textcolor{keyword}{sizeof}(dcbSerialParams);}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150     \textcolor{comment}{// Get the port parameters}}
+\DoxyCodeLine{00151     \textcolor{keywordflow}{if} (!GetCommState(hSerial, \&dcbSerialParams)) \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_ad840440d09224af079e399ac3ed2d902}{EC\_SER\_E\_PARAM}};}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153     \textcolor{comment}{// Set the speed (Bauds)}}
+\DoxyCodeLine{00154     \textcolor{keywordflow}{switch} (Bauds)}
+\DoxyCodeLine{00155     \{}
+\DoxyCodeLine{00156     \textcolor{keywordflow}{case} 110  :     dcbSerialParams.BaudRate=CBR\_110; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00157     \textcolor{keywordflow}{case} 300  :     dcbSerialParams.BaudRate=CBR\_300; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00158     \textcolor{keywordflow}{case} 600  :     dcbSerialParams.BaudRate=CBR\_600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00159     \textcolor{keywordflow}{case} 1200 :     dcbSerialParams.BaudRate=CBR\_1200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00160     \textcolor{keywordflow}{case} 2400 :     dcbSerialParams.BaudRate=CBR\_2400; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00161     \textcolor{keywordflow}{case} 4800 :     dcbSerialParams.BaudRate=CBR\_4800; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00162     \textcolor{keywordflow}{case} 9600 :     dcbSerialParams.BaudRate=CBR\_9600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00163     \textcolor{keywordflow}{case} 14400 :    dcbSerialParams.BaudRate=CBR\_14400; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164     \textcolor{keywordflow}{case} 19200 :    dcbSerialParams.BaudRate=CBR\_19200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00165     \textcolor{keywordflow}{case} 38400 :    dcbSerialParams.BaudRate=CBR\_38400; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00166     \textcolor{keywordflow}{case} 56000 :    dcbSerialParams.BaudRate=CBR\_56000; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00167     \textcolor{keywordflow}{case} 57600 :    dcbSerialParams.BaudRate=CBR\_57600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168     \textcolor{keywordflow}{case} 115200 :   dcbSerialParams.BaudRate=CBR\_115200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00169     \textcolor{keywordflow}{case} 128000 :   dcbSerialParams.BaudRate=CBR\_128000; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00170     \textcolor{keywordflow}{case} 256000 :   dcbSerialParams.BaudRate=CBR\_256000; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00171     default : \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a985a02376c46ce6c672f2edfd87ea739}{EC\_SER\_E\_UKN\_BAUDRATE}};}
+\DoxyCodeLine{00172     \}}
+\DoxyCodeLine{00173     \textcolor{comment}{//select data size}}
+\DoxyCodeLine{00174     BYTE bytesize = 0;}
+\DoxyCodeLine{00175     \textcolor{keywordflow}{switch}(Databits) \{}
+\DoxyCodeLine{00176         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7a0af46a1b1917daf04f071cc62409b1d0}{SERIAL\_DATABITS\_5}}: bytesize = 5; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7af037109ad2db2f77d36c2a9806b23978}{SERIAL\_DATABITS\_6}}: bytesize = 6; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7aeaccb09be92b75b1ac6a327eb21fb161}{SERIAL\_DATABITS\_7}}: bytesize = 7; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00179         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\_DATABITS\_8}}: bytesize = 8; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7a5c284f8eb4f32fa561544a95e506227d}{SERIAL\_DATABITS\_16}}: bytesize = 16; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a749133de2abca2a050d1a70c44371027}{EC\_SER\_E\_UKN\_DATABITS}};}
+\DoxyCodeLine{00182     \}}
+\DoxyCodeLine{00183     BYTE stopBits = 0;}
+\DoxyCodeLine{00184     \textcolor{keywordflow}{switch}(Stopbits) \{}
+\DoxyCodeLine{00185         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\_STOPBITS\_1}}: stopBits = ONESTOPBIT; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00186         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5e9a6cef3d12988dba0fa9b9053ec3cc}{SERIAL\_STOPBITS\_1\_5}}: stopBits = ONE5STOPBITS; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00187         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a031c032346661741186af9d0680782ec}{SERIAL\_STOPBITS\_2}}: stopBits = TWOSTOPBITS; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00188         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a8ab9647486dfb3099903912a90078596}{EC\_SER\_E\_UKN\_STOPBITS}};}
+\DoxyCodeLine{00189     \}}
+\DoxyCodeLine{00190     BYTE parity = 0;}
+\DoxyCodeLine{00191     \textcolor{keywordflow}{switch}(Parity) \{}
+\DoxyCodeLine{00192         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\_PARITY\_NONE}}: parity = NOPARITY; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a0392c989829d4e47a2cc54a12cb6125a}{SERIAL\_PARITY\_EVEN}}: parity = EVENPARITY; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6ab3213e8e4b9f1199aac388ed1b671a6e}{SERIAL\_PARITY\_ODD}}: parity = ODDPARITY; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00195         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a2ba4057e060ceb427fb3105ef629ccf6}{SERIAL\_PARITY\_MARK}}: parity = MARKPARITY; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00196         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a10bed0b14962edaf7e883bf186d4773b}{SERIAL\_PARITY\_SPACE}}: parity = SPACEPARITY; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00197         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_af82fc734fb622cc5ac35d571eab1a7d2}{EC\_SER\_E\_UKN\_PARITY}};}
+\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00199     \textcolor{comment}{// configure byte size}}
+\DoxyCodeLine{00200     dcbSerialParams.ByteSize = bytesize;}
+\DoxyCodeLine{00201     \textcolor{comment}{// configure stop bits}}
+\DoxyCodeLine{00202     dcbSerialParams.StopBits = stopBits;}
+\DoxyCodeLine{00203     \textcolor{comment}{// configure parity}}
+\DoxyCodeLine{00204     dcbSerialParams.Parity = parity;}
+\DoxyCodeLine{00205 }
+\DoxyCodeLine{00206     \textcolor{comment}{// Write the parameters}}
+\DoxyCodeLine{00207     \textcolor{keywordflow}{if}(!SetCommState(hSerial, \&dcbSerialParams)) \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a3971c58874e59a8a394a6a592440c330}{EC\_SER\_E\_CONFIG}};}
+\DoxyCodeLine{00208 }
+\DoxyCodeLine{00209     \textcolor{comment}{// Set TimeOut}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211     \textcolor{comment}{// Set the Timeout parameters}}
+\DoxyCodeLine{00212     timeouts.ReadIntervalTimeout=0;}
+\DoxyCodeLine{00213     \textcolor{comment}{// No TimeOut}}
+\DoxyCodeLine{00214     timeouts.ReadTotalTimeoutConstant=MAXDWORD;}
+\DoxyCodeLine{00215     timeouts.ReadTotalTimeoutMultiplier=0;}
+\DoxyCodeLine{00216     timeouts.WriteTotalTimeoutConstant=MAXDWORD;}
+\DoxyCodeLine{00217     timeouts.WriteTotalTimeoutMultiplier=0;}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     \textcolor{comment}{// Write the parameters}}
+\DoxyCodeLine{00220     \textcolor{keywordflow}{if}(!SetCommTimeouts(hSerial, \&timeouts)) \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a25676a14dea7c6c945af61b89eca96ed}{EC\_SER\_E\_TIMOUT}};}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222     \textcolor{comment}{// Opening successfull}}
+\DoxyCodeLine{00223     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00224 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00225 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00226     \textcolor{comment}{// Structure with the device's options}}
+\DoxyCodeLine{00227     \textcolor{keyword}{struct }termios options;}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230     \textcolor{comment}{// Open device}}
+\DoxyCodeLine{00231     fd = open(Device, O\_RDWR | O\_NOCTTY | O\_NDELAY);}
+\DoxyCodeLine{00232     \textcolor{comment}{// If the device is not open, return -\/1}}
+\DoxyCodeLine{00233     \textcolor{keywordflow}{if} (fd == -\/1) \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_ab972a3420c5f8feb55bd46670b9469c5}{EC\_SER\_E\_OPEN}};}
+\DoxyCodeLine{00234     \textcolor{comment}{// Open the device in nonblocking mode}}
+\DoxyCodeLine{00235     fcntl(fd, F\_SETFL, FNDELAY);}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238     \textcolor{comment}{// Get the current options of the port}}
+\DoxyCodeLine{00239     tcgetattr(fd, \&options);}
+\DoxyCodeLine{00240     \textcolor{comment}{// Clear all the options}}
+\DoxyCodeLine{00241     bzero(\&options, \textcolor{keyword}{sizeof}(options));}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243     \textcolor{comment}{// Prepare speed (Bauds)}}
+\DoxyCodeLine{00244     speed\_t         Speed;}
+\DoxyCodeLine{00245     \textcolor{keywordflow}{switch} (Bauds)}
+\DoxyCodeLine{00246     \{}
+\DoxyCodeLine{00247     \textcolor{keywordflow}{case} 110  :     Speed=B110; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00248     \textcolor{keywordflow}{case} 300  :     Speed=B300; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00249     \textcolor{keywordflow}{case} 600  :     Speed=B600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00250     \textcolor{keywordflow}{case} 1200 :     Speed=B1200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00251     \textcolor{keywordflow}{case} 2400 :     Speed=B2400; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00252     \textcolor{keywordflow}{case} 4800 :     Speed=B4800; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253     \textcolor{keywordflow}{case} 9600 :     Speed=B9600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00254     \textcolor{keywordflow}{case} 19200 :    Speed=B19200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00255     \textcolor{keywordflow}{case} 38400 :    Speed=B38400; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00256     \textcolor{keywordflow}{case} 57600 :    Speed=B57600; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00257     \textcolor{keywordflow}{case} 115200 :   Speed=B115200; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00258     default : \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a985a02376c46ce6c672f2edfd87ea739}{EC\_SER\_E\_UKN\_BAUDRATE}};}
+\DoxyCodeLine{00259     \}}
+\DoxyCodeLine{00260     \textcolor{keywordtype}{int} databits\_flag = 0;}
+\DoxyCodeLine{00261     \textcolor{keywordflow}{switch}(Databits) \{}
+\DoxyCodeLine{00262         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7a0af46a1b1917daf04f071cc62409b1d0}{SERIAL\_DATABITS\_5}}: databits\_flag = CS5; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00263         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7af037109ad2db2f77d36c2a9806b23978}{SERIAL\_DATABITS\_6}}: databits\_flag = CS6; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00264         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7aeaccb09be92b75b1ac6a327eb21fb161}{SERIAL\_DATABITS\_7}}: databits\_flag = CS7; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00265         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a1ecb786dca6b3ea0df424552bd25aba7ae7d27f5b5b60277dccbadd399897606d}{SERIAL\_DATABITS\_8}}: databits\_flag = CS8; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00266         \textcolor{comment}{//16 bits and everything else not supported}}
+\DoxyCodeLine{00267         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a749133de2abca2a050d1a70c44371027}{EC\_SER\_E\_UKN\_DATABITS}};}
+\DoxyCodeLine{00268     \}}
+\DoxyCodeLine{00269     \textcolor{keywordtype}{int} stopbits\_flag = 0;}
+\DoxyCodeLine{00270     \textcolor{keywordflow}{switch}(Stopbits) \{}
+\DoxyCodeLine{00271         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a5d487c59b00736410f8512b345ce6a0d}{SERIAL\_STOPBITS\_1}}: stopbits\_flag = 0; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00272         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_aa2678ddd8376c65d7cad07cd6cae5654a031c032346661741186af9d0680782ec}{SERIAL\_STOPBITS\_2}}: stopbits\_flag = CSTOPB; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00273         \textcolor{comment}{//1.5 stopbits and everything else not supported}}
+\DoxyCodeLine{00274         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_a8ab9647486dfb3099903912a90078596}{EC\_SER\_E\_UKN\_STOPBITS}};}
+\DoxyCodeLine{00275     \}}
+\DoxyCodeLine{00276     \textcolor{keywordtype}{int} parity\_flag = 0;}
+\DoxyCodeLine{00277     \textcolor{keywordflow}{switch}(Parity) \{}
+\DoxyCodeLine{00278         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a38bc0d79b89ff9341767232da5448fe8}{SERIAL\_PARITY\_NONE}}: parity\_flag = 0; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00279         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6a0392c989829d4e47a2cc54a12cb6125a}{SERIAL\_PARITY\_EVEN}}: parity\_flag = PARENB; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00280         \textcolor{keywordflow}{case} \mbox{\hyperlink{serialib_8h_a2c48912c12fd98a4f4faffbc7f20a9f6ab3213e8e4b9f1199aac388ed1b671a6e}{SERIAL\_PARITY\_ODD}}: parity\_flag = (PARENB | PARODD); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00281         \textcolor{comment}{//mark and space parity not supported}}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \mbox{\hyperlink{ecran__define_8h_af82fc734fb622cc5ac35d571eab1a7d2}{EC\_SER\_E\_UKN\_PARITY}};}
+\DoxyCodeLine{00283     \}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285     \textcolor{comment}{// Set the baud rate}}
+\DoxyCodeLine{00286     cfsetispeed(\&options, Speed);}
+\DoxyCodeLine{00287     cfsetospeed(\&options, Speed);}
+\DoxyCodeLine{00288     \textcolor{comment}{// Configure the device : data bits, stop bits, parity, no control flow}}
+\DoxyCodeLine{00289     \textcolor{comment}{// Ignore modem control lines (CLOCAL) and Enable receiver (CREAD)}}
+\DoxyCodeLine{00290     options.c\_cflag |= ( CLOCAL | CREAD | databits\_flag | parity\_flag | stopbits\_flag);}
+\DoxyCodeLine{00291     options.c\_iflag |= ( IGNPAR | IGNBRK );}
+\DoxyCodeLine{00292     \textcolor{comment}{// Timer unused}}
+\DoxyCodeLine{00293     options.c\_cc[VTIME]=0;}
+\DoxyCodeLine{00294     \textcolor{comment}{// At least on character before satisfy reading}}
+\DoxyCodeLine{00295     options.c\_cc[VMIN]=0;}
+\DoxyCodeLine{00296     \textcolor{comment}{// Activate the settings}}
+\DoxyCodeLine{00297     tcsetattr(fd, TCSANOW, \&options);}
+\DoxyCodeLine{00298     \textcolor{comment}{// Success}}
+\DoxyCodeLine{00299     \textcolor{keywordflow}{return} (\mbox{\hyperlink{ecran__define_8h_a14e080035b40cd7eebb19b61e91047a5}{EC\_SER\_E\_SUCCESS}});}
+\DoxyCodeLine{00300 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00301 }
+\DoxyCodeLine{00302 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_ab05e51ff3bc47c02d7d000d58b45a961}\label{classserialib_ab05e51ff3bc47c02d7d000d58b45a961}} 
+\index{serialib@{serialib}!readBytes@{readBytes}}
+\index{readBytes@{readBytes}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{readBytes()}{readBytes()}}
+{\footnotesize\ttfamily int serialib\+::read\+Bytes (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{unsigned int}]{max\+Nb\+Bytes,  }\item[{const unsigned int}]{time\+Out\+\_\+ms = {\ttfamily 0},  }\item[{unsigned int}]{sleep\+Duration\+\_\+us = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Read an array of bytes from the serial device (with timeout) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em buffer} & \+: array of bytes read from the serial device \\
+\hline
+{\em max\+Nb\+Bytes} & \+: maximum allowed number of bytes read \\
+\hline
+{\em time\+Out\+\_\+ms} & \+: delay of timeout before giving up the reading \\
+\hline
+{\em sleep\+Duration\+\_\+us} & \+: delay of CPU relaxing in microseconds (Linux only) In the reading loop, a sleep can be performed after each reading This allows CPU to perform other tasks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\texorpdfstring{$>$}{>}=0 return the number of bytes read before timeout or requested data is completed 
+
+-\/1 error while setting the Timeout 
+
+-\/2 error while reading the byte 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00615}{615}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00616 \{}
+\DoxyCodeLine{00617 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00618     \textcolor{comment}{// Avoid warning while compiling}}
+\DoxyCodeLine{00619     \mbox{\hyperlink{serialib_8h_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(sleepDuration\_us);}
+\DoxyCodeLine{00620 }
+\DoxyCodeLine{00621     \textcolor{comment}{// Number of bytes read}}
+\DoxyCodeLine{00622     DWORD dwBytesRead = 0;}
+\DoxyCodeLine{00623 }
+\DoxyCodeLine{00624     \textcolor{comment}{// Set the TimeOut}}
+\DoxyCodeLine{00625     timeouts.ReadTotalTimeoutConstant=(DWORD)timeOut\_ms;}
+\DoxyCodeLine{00626 }
+\DoxyCodeLine{00627     \textcolor{comment}{// Write the parameters and return -\/1 if an error occrured}}
+\DoxyCodeLine{00628     \textcolor{keywordflow}{if}(!SetCommTimeouts(hSerial, \&timeouts)) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00629 }
+\DoxyCodeLine{00630 }
+\DoxyCodeLine{00631     \textcolor{comment}{// Read the bytes from the serial device, return -\/2 if an error occured}}
+\DoxyCodeLine{00632     \textcolor{keywordflow}{if}(!ReadFile(hSerial,buffer,(DWORD)maxNbBytes,\&dwBytesRead, NULL))  \textcolor{keywordflow}{return} -\/2;}
+\DoxyCodeLine{00633 }
+\DoxyCodeLine{00634     \textcolor{comment}{// Return the byte read}}
+\DoxyCodeLine{00635     \textcolor{keywordflow}{return} dwBytesRead;}
+\DoxyCodeLine{00636 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00637 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00638     \textcolor{comment}{// Timer used for timeout}}
+\DoxyCodeLine{00639     \mbox{\hyperlink{classtime_out}{timeOut}}          timer;}
+\DoxyCodeLine{00640     \textcolor{comment}{// Initialise the timer}}
+\DoxyCodeLine{00641     timer.\mbox{\hyperlink{classtime_out_a88b4caef4ce7bfc42b73a61589c098e8}{initTimer}}();}
+\DoxyCodeLine{00642     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}     NbByteRead=0;}
+\DoxyCodeLine{00643     \textcolor{comment}{// While Timeout is not reached}}
+\DoxyCodeLine{00644     \textcolor{keywordflow}{while} (timer.\mbox{\hyperlink{classtime_out_af5db5b5f0db4f6ada19187ef8f214214}{elapsedTime\_ms}}()<timeOut\_ms || timeOut\_ms==0)}
+\DoxyCodeLine{00645     \{}
+\DoxyCodeLine{00646         \textcolor{comment}{// Compute the position of the current byte}}
+\DoxyCodeLine{00647         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* Ptr=(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)buffer+NbByteRead;}
+\DoxyCodeLine{00648         \textcolor{comment}{// Try to read a byte on the device}}
+\DoxyCodeLine{00649         \textcolor{keywordtype}{int} Ret=read(fd,(\textcolor{keywordtype}{void}*)Ptr,maxNbBytes-\/NbByteRead);}
+\DoxyCodeLine{00650         \textcolor{comment}{// Error while reading}}
+\DoxyCodeLine{00651         \textcolor{keywordflow}{if} (Ret==-\/1) \textcolor{keywordflow}{return} -\/2;}
+\DoxyCodeLine{00652 }
+\DoxyCodeLine{00653         \textcolor{comment}{// One or several byte(s) has been read on the device}}
+\DoxyCodeLine{00654         \textcolor{keywordflow}{if} (Ret>0)}
+\DoxyCodeLine{00655         \{}
+\DoxyCodeLine{00656             \textcolor{comment}{// Increase the number of read bytes}}
+\DoxyCodeLine{00657             NbByteRead+=Ret;}
+\DoxyCodeLine{00658             \textcolor{comment}{// Success : bytes has been read}}
+\DoxyCodeLine{00659             \textcolor{keywordflow}{if} (NbByteRead>=maxNbBytes)}
+\DoxyCodeLine{00660                 \textcolor{keywordflow}{return} NbByteRead;}
+\DoxyCodeLine{00661         \}}
+\DoxyCodeLine{00662         \textcolor{comment}{// Suspend the loop to avoid charging the CPU}}
+\DoxyCodeLine{00663         usleep (sleepDuration\_us);}
+\DoxyCodeLine{00664     \}}
+\DoxyCodeLine{00665     \textcolor{comment}{// Timeout reached, return the number of bytes read}}
+\DoxyCodeLine{00666     \textcolor{keywordflow}{return} NbByteRead;}
+\DoxyCodeLine{00667 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00668 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}\label{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}} 
+\index{serialib@{serialib}!readChar@{readChar}}
+\index{readChar@{readChar}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{readChar()}{readChar()}}
+{\footnotesize\ttfamily char serialib\+::read\+Char (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Byte,  }\item[{const unsigned int}]{time\+Out\+\_\+ms = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Wait for a byte from the serial device and return the data read. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Byte} & \+: data read on the serial device \\
+\hline
+{\em time\+Out\+\_\+ms} & \+: delay of timeout before giving up the reading If set to zero, timeout is disable (Optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 success 
+
+0 Timeout reached 
+
+-\/1 error while setting the Timeout 
+
+-\/2 error while reading the byte 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00441}{441}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00442 \{}
+\DoxyCodeLine{00443 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00444     \textcolor{comment}{// Number of bytes read}}
+\DoxyCodeLine{00445     DWORD dwBytesRead = 0;}
+\DoxyCodeLine{00446 }
+\DoxyCodeLine{00447     \textcolor{comment}{// Set the TimeOut}}
+\DoxyCodeLine{00448     timeouts.ReadTotalTimeoutConstant=timeOut\_ms;}
+\DoxyCodeLine{00449 }
+\DoxyCodeLine{00450     \textcolor{comment}{// Write the parameters, return -\/1 if an error occured}}
+\DoxyCodeLine{00451     \textcolor{keywordflow}{if}(!SetCommTimeouts(hSerial, \&timeouts)) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00452 }
+\DoxyCodeLine{00453     \textcolor{comment}{// Read the byte, return -\/2 if an error occured}}
+\DoxyCodeLine{00454     \textcolor{keywordflow}{if}(!ReadFile(hSerial,pByte, 1, \&dwBytesRead, NULL)) \textcolor{keywordflow}{return} -\/2;}
+\DoxyCodeLine{00455 }
+\DoxyCodeLine{00456     \textcolor{comment}{// Return 0 if the timeout is reached}}
+\DoxyCodeLine{00457     \textcolor{keywordflow}{if} (dwBytesRead==0) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{00459     \textcolor{comment}{// The byte is read}}
+\DoxyCodeLine{00460     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00461 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00462 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00463     \textcolor{comment}{// Timer used for timeout}}
+\DoxyCodeLine{00464     \mbox{\hyperlink{classtime_out}{timeOut}}         timer;}
+\DoxyCodeLine{00465     \textcolor{comment}{// Initialise the timer}}
+\DoxyCodeLine{00466     timer.\mbox{\hyperlink{classtime_out_a88b4caef4ce7bfc42b73a61589c098e8}{initTimer}}();}
+\DoxyCodeLine{00467     \textcolor{comment}{// While Timeout is not reached}}
+\DoxyCodeLine{00468     \textcolor{keywordflow}{while} (timer.\mbox{\hyperlink{classtime_out_af5db5b5f0db4f6ada19187ef8f214214}{elapsedTime\_ms}}()<timeOut\_ms || timeOut\_ms==0)}
+\DoxyCodeLine{00469     \{}
+\DoxyCodeLine{00470         \textcolor{comment}{// Try to read a byte on the device}}
+\DoxyCodeLine{00471         \textcolor{keywordflow}{switch} (read(fd,pByte,1)) \{}
+\DoxyCodeLine{00472         \textcolor{keywordflow}{case} 1  : \textcolor{keywordflow}{return} 1; \textcolor{comment}{// Read successfull}}
+\DoxyCodeLine{00473         \textcolor{keywordflow}{case} -\/1 : \textcolor{keywordflow}{return} -\/2; \textcolor{comment}{// Error while reading}}
+\DoxyCodeLine{00474         \}}
+\DoxyCodeLine{00475     \}}
+\DoxyCodeLine{00476     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00477 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00478 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_ab155c84352ddefe1304d391c19497ac1}\label{classserialib_ab155c84352ddefe1304d391c19497ac1}} 
+\index{serialib@{serialib}!readString@{readString}}
+\index{readString@{readString}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}}
+{\footnotesize\ttfamily int serialib\+::read\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{received\+String,  }\item[{char}]{final\+Char,  }\item[{unsigned int}]{max\+Nb\+Bytes,  }\item[{const unsigned int}]{time\+Out\+\_\+ms = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Read a string from the serial device (with timeout) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em received\+String} & \+: string read on the serial device \\
+\hline
+{\em final\+Char} & \+: final char of the string \\
+\hline
+{\em max\+Nb\+Bytes} & \+: maximum allowed number of bytes read \\
+\hline
+{\em time\+Out\+\_\+ms} & \+: delay of timeout before giving up the reading (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\texorpdfstring{$>$}{>}0 success, return the number of bytes read 
+
+0 timeout is reached 
+
+-\/1 error while setting the Timeout 
+
+-\/2 error while reading the byte 
+
+-\/3 Max\+Nb\+Bytes is reached 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00541}{541}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00542 \{}
+\DoxyCodeLine{00543     \textcolor{comment}{// Check if timeout is requested}}
+\DoxyCodeLine{00544     \textcolor{keywordflow}{if} (timeOut\_ms==0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classserialib_a543d9ece0586fb00ae20ee282d325890}{readStringNoTimeOut}}(receivedString,finalChar,maxNbBytes);}
+\DoxyCodeLine{00545 }
+\DoxyCodeLine{00546     \textcolor{comment}{// Number of bytes read}}
+\DoxyCodeLine{00547     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    nbBytes=0;}
+\DoxyCodeLine{00548     \textcolor{comment}{// Character read on serial device}}
+\DoxyCodeLine{00549     \textcolor{keywordtype}{char}            charRead;}
+\DoxyCodeLine{00550     \textcolor{comment}{// Timer used for timeout}}
+\DoxyCodeLine{00551     \mbox{\hyperlink{classtime_out}{timeOut}}         timer;}
+\DoxyCodeLine{00552     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}        timeOutParam;}
+\DoxyCodeLine{00553 }
+\DoxyCodeLine{00554     \textcolor{comment}{// Initialize the timer (for timeout)}}
+\DoxyCodeLine{00555     timer.\mbox{\hyperlink{classtime_out_a88b4caef4ce7bfc42b73a61589c098e8}{initTimer}}();}
+\DoxyCodeLine{00556 }
+\DoxyCodeLine{00557     \textcolor{comment}{// While the buffer is not full}}
+\DoxyCodeLine{00558     \textcolor{keywordflow}{while} (nbBytes<maxNbBytes)}
+\DoxyCodeLine{00559     \{}
+\DoxyCodeLine{00560         \textcolor{comment}{// Compute the TimeOut for the next call of ReadChar}}
+\DoxyCodeLine{00561         timeOutParam = timeOut\_ms-\/timer.\mbox{\hyperlink{classtime_out_af5db5b5f0db4f6ada19187ef8f214214}{elapsedTime\_ms}}();}
+\DoxyCodeLine{00562 }
+\DoxyCodeLine{00563         \textcolor{comment}{// If there is time remaining}}
+\DoxyCodeLine{00564         \textcolor{keywordflow}{if} (timeOutParam>0)}
+\DoxyCodeLine{00565         \{}
+\DoxyCodeLine{00566             \textcolor{comment}{// Wait for a byte on the serial link with the remaining time as timeout}}
+\DoxyCodeLine{00567             charRead=\mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{readChar}}(\&receivedString[nbBytes],timeOutParam);}
+\DoxyCodeLine{00568 }
+\DoxyCodeLine{00569             \textcolor{comment}{// If a byte has been received}}
+\DoxyCodeLine{00570             \textcolor{keywordflow}{if} (charRead==1)}
+\DoxyCodeLine{00571             \{}
+\DoxyCodeLine{00572                 \textcolor{comment}{// Check if the character received is the final one}}
+\DoxyCodeLine{00573                 \textcolor{keywordflow}{if} (receivedString[nbBytes]==finalChar)}
+\DoxyCodeLine{00574                 \{}
+\DoxyCodeLine{00575                     \textcolor{comment}{// Final character: add the end character 0}}
+\DoxyCodeLine{00576                     receivedString  [++nbBytes]=0;}
+\DoxyCodeLine{00577                     \textcolor{comment}{// Return the number of bytes read}}
+\DoxyCodeLine{00578                     \textcolor{keywordflow}{return} nbBytes;}
+\DoxyCodeLine{00579                 \}}
+\DoxyCodeLine{00580                 \textcolor{comment}{// This is not the final character, just increase the number of bytes read}}
+\DoxyCodeLine{00581                 nbBytes++;}
+\DoxyCodeLine{00582             \}}
+\DoxyCodeLine{00583             \textcolor{comment}{// Check if an error occured during reading char}}
+\DoxyCodeLine{00584             \textcolor{comment}{// If an error occurend, return the error number}}
+\DoxyCodeLine{00585             \textcolor{keywordflow}{if} (charRead<0) \textcolor{keywordflow}{return} charRead;}
+\DoxyCodeLine{00586         \}}
+\DoxyCodeLine{00587         \textcolor{comment}{// Check if timeout is reached}}
+\DoxyCodeLine{00588         \textcolor{keywordflow}{if} (timer.\mbox{\hyperlink{classtime_out_af5db5b5f0db4f6ada19187ef8f214214}{elapsedTime\_ms}}()>timeOut\_ms)}
+\DoxyCodeLine{00589         \{}
+\DoxyCodeLine{00590             \textcolor{comment}{// Add the end caracter}}
+\DoxyCodeLine{00591             receivedString[nbBytes]=0;}
+\DoxyCodeLine{00592             \textcolor{comment}{// Return 0 (timeout reached)}}
+\DoxyCodeLine{00593             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00594         \}}
+\DoxyCodeLine{00595     \}}
+\DoxyCodeLine{00596 }
+\DoxyCodeLine{00597     \textcolor{comment}{// Buffer is full : return -\/3}}
+\DoxyCodeLine{00598     \textcolor{keywordflow}{return} -\/3;}
+\DoxyCodeLine{00599 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a543d9ece0586fb00ae20ee282d325890}\label{classserialib_a543d9ece0586fb00ae20ee282d325890}} 
+\index{serialib@{serialib}!readStringNoTimeOut@{readStringNoTimeOut}}
+\index{readStringNoTimeOut@{readStringNoTimeOut}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{readStringNoTimeOut()}{readStringNoTimeOut()}}
+{\footnotesize\ttfamily int serialib\+::read\+String\+No\+Time\+Out (\begin{DoxyParamCaption}\item[{char $\ast$}]{received\+String,  }\item[{char}]{final\+Char,  }\item[{unsigned int}]{max\+Nb\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Read a string from the serial device (without Time\+Out) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em received\+String} & \+: string read on the serial device \\
+\hline
+{\em Final\+Char} & \+: final char of the string \\
+\hline
+{\em Max\+Nb\+Bytes} & \+: maximum allowed number of bytes read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\texorpdfstring{$>$}{>}0 success, return the number of bytes read 
+
+-\/1 error while setting the Timeout 
+
+-\/2 error while reading the byte 
+
+-\/3 Max\+Nb\+Bytes is reached 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00492}{492}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00493 \{}
+\DoxyCodeLine{00494     \textcolor{comment}{// Number of characters read}}
+\DoxyCodeLine{00495     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    NbBytes=0;}
+\DoxyCodeLine{00496     \textcolor{comment}{// Returned value from Read}}
+\DoxyCodeLine{00497     \textcolor{keywordtype}{char}            charRead;}
+\DoxyCodeLine{00498 }
+\DoxyCodeLine{00499     \textcolor{comment}{// While the buffer is not full}}
+\DoxyCodeLine{00500     \textcolor{keywordflow}{while} (NbBytes<maxNbBytes)}
+\DoxyCodeLine{00501     \{}
+\DoxyCodeLine{00502         \textcolor{comment}{// Read a character with the restant time}}
+\DoxyCodeLine{00503         charRead=\mbox{\hyperlink{classserialib_a6c78b8a11ae7b8af57eea3dbc7fa237b}{readChar}}(\&receivedString[NbBytes]);}
+\DoxyCodeLine{00504 }
+\DoxyCodeLine{00505         \textcolor{comment}{// Check a character has been read}}
+\DoxyCodeLine{00506         \textcolor{keywordflow}{if} (charRead==1)}
+\DoxyCodeLine{00507         \{}
+\DoxyCodeLine{00508             \textcolor{comment}{// Check if this is the final char}}
+\DoxyCodeLine{00509             \textcolor{keywordflow}{if} (receivedString[NbBytes]==finalChar)}
+\DoxyCodeLine{00510             \{}
+\DoxyCodeLine{00511                 \textcolor{comment}{// This is the final char, add zero (end of string)}}
+\DoxyCodeLine{00512                 receivedString  [++NbBytes]=0;}
+\DoxyCodeLine{00513                 \textcolor{comment}{// Return the number of bytes read}}
+\DoxyCodeLine{00514                 \textcolor{keywordflow}{return} NbBytes;}
+\DoxyCodeLine{00515             \}}
+\DoxyCodeLine{00516 }
+\DoxyCodeLine{00517             \textcolor{comment}{// The character is not the final char, increase the number of bytes read}}
+\DoxyCodeLine{00518             NbBytes++;}
+\DoxyCodeLine{00519         \}}
+\DoxyCodeLine{00520 }
+\DoxyCodeLine{00521         \textcolor{comment}{// An error occured while reading, return the error number}}
+\DoxyCodeLine{00522         \textcolor{keywordflow}{if} (charRead<0) \textcolor{keywordflow}{return} charRead;}
+\DoxyCodeLine{00523     \}}
+\DoxyCodeLine{00524     \textcolor{comment}{// Buffer is full : return -\/3}}
+\DoxyCodeLine{00525     \textcolor{keywordflow}{return} -\/3;}
+\DoxyCodeLine{00526 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a5a73f159762fa4d5c252f36acfe7ab47}\label{classserialib_a5a73f159762fa4d5c252f36acfe7ab47}} 
+\index{serialib@{serialib}!RTS@{RTS}}
+\index{RTS@{RTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{RTS()}{RTS()}}
+{\footnotesize\ttfamily bool serialib\+::\+RTS (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Set or unset the bit RTS (pin 7) RTS stands for Data Termina Ready Convenience method \+:This method calls set\+DTR and clear\+DTR. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em status} & = true set DTR status = false unset DTR \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+false if the function fails 
+
+true if the function succeeds 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00805}{805}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00806 \{}
+\DoxyCodeLine{00807     \textcolor{keywordflow}{if} (status)}
+\DoxyCodeLine{00808         \textcolor{comment}{// Set RTS}}
+\DoxyCodeLine{00809         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classserialib_a21767ffe86a76f300a71c496fbcc26a1}{setRTS}}();}
+\DoxyCodeLine{00810     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00811         \textcolor{comment}{// Unset RTS}}
+\DoxyCodeLine{00812         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classserialib_ab0b5882339240002fccf7701f5321e0a}{clearRTS}}();}
+\DoxyCodeLine{00813 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a7564b9e28b1b50675d9d6d3fabc896c0}\label{classserialib_a7564b9e28b1b50675d9d6d3fabc896c0}} 
+\index{serialib@{serialib}!setDTR@{setDTR}}
+\index{setDTR@{setDTR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{setDTR()}{setDTR()}}
+{\footnotesize\ttfamily bool serialib\+::set\+DTR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the bit DTR (pin 4) DTR stands for Data Terminal Ready. 
+
+\begin{DoxyReturn}{Renvoie}
+If the function fails, the return value is false If the function succeeds, the return value is true. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00754}{754}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00755 \{}
+\DoxyCodeLine{00756 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00757     \textcolor{comment}{// Set DTR}}
+\DoxyCodeLine{00758     \mbox{\hyperlink{classserialib_ac8a9083c2e0503707e80c019a777e7be}{currentStateDTR}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00759     \textcolor{keywordflow}{return} EscapeCommFunction(hSerial,SETDTR);}
+\DoxyCodeLine{00760 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00761 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00762     \textcolor{comment}{// Set DTR}}
+\DoxyCodeLine{00763     \textcolor{keywordtype}{int} status\_DTR=0;}
+\DoxyCodeLine{00764     ioctl(fd, TIOCMGET, \&status\_DTR);}
+\DoxyCodeLine{00765     status\_DTR |= TIOCM\_DTR;}
+\DoxyCodeLine{00766     ioctl(fd, TIOCMSET, \&status\_DTR);}
+\DoxyCodeLine{00767     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00768 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00769 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a21767ffe86a76f300a71c496fbcc26a1}\label{classserialib_a21767ffe86a76f300a71c496fbcc26a1}} 
+\index{serialib@{serialib}!setRTS@{setRTS}}
+\index{setRTS@{setRTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{setRTS()}{setRTS()}}
+{\footnotesize\ttfamily bool serialib\+::set\+RTS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the bit RTS (pin 7) RTS stands for Data Terminal Ready. 
+
+\begin{DoxyReturn}{Renvoie}
+If the function fails, the return value is false If the function succeeds, the return value is true. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00822}{822}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00823 \{}
+\DoxyCodeLine{00824 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{00825     \textcolor{comment}{// Set RTS}}
+\DoxyCodeLine{00826     \mbox{\hyperlink{classserialib_a7d9151bb3623efa2e857315e04da1439}{currentStateRTS}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00827     \textcolor{keywordflow}{return} EscapeCommFunction(hSerial,SETRTS);}
+\DoxyCodeLine{00828 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00829 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00830     \textcolor{comment}{// Set RTS}}
+\DoxyCodeLine{00831     \textcolor{keywordtype}{int} status\_RTS=0;}
+\DoxyCodeLine{00832     ioctl(fd, TIOCMGET, \&status\_RTS);}
+\DoxyCodeLine{00833     status\_RTS |= TIOCM\_RTS;}
+\DoxyCodeLine{00834     ioctl(fd, TIOCMSET, \&status\_RTS);}
+\DoxyCodeLine{00835     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00836 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00837 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_aa14196b6f422584bf5eebc4ddb71d483}\label{classserialib_aa14196b6f422584bf5eebc4ddb71d483}} 
+\index{serialib@{serialib}!writeBytes@{writeBytes}}
+\index{writeBytes@{writeBytes}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{writeBytes()}{writeBytes()}}
+{\footnotesize\ttfamily char serialib\+::write\+Bytes (\begin{DoxyParamCaption}\item[{const void $\ast$}]{Buffer,  }\item[{const unsigned int}]{Nb\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Write an array of data on the current serial port. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Buffer} & \+: array of bytes to send on the port \\
+\hline
+{\em Nb\+Bytes} & \+: number of byte to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00409}{409}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00410 \{}
+\DoxyCodeLine{00411 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00412     \textcolor{comment}{// Number of bytes written}}
+\DoxyCodeLine{00413     DWORD dwBytesWritten;}
+\DoxyCodeLine{00414     \textcolor{comment}{// Write data}}
+\DoxyCodeLine{00415     \textcolor{keywordflow}{if}(!WriteFile(hSerial, Buffer, NbBytes, \&dwBytesWritten, NULL))}
+\DoxyCodeLine{00416         \textcolor{comment}{// Error while writing, return -\/1}}
+\DoxyCodeLine{00417         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00418     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00419     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00420 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00421 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00422     \textcolor{comment}{// Write data}}
+\DoxyCodeLine{00423     \textcolor{keywordflow}{if} (write (fd,Buffer,NbBytes)!=(ssize\_t)NbBytes) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00424     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00425     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00426 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00427 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_aa6d231cb99664a613bcb503830f73497}\label{classserialib_aa6d231cb99664a613bcb503830f73497}} 
+\index{serialib@{serialib}!writeChar@{writeChar}}
+\index{writeChar@{writeChar}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{writeChar()}{writeChar()}}
+{\footnotesize\ttfamily char serialib\+::write\+Char (\begin{DoxyParamCaption}\item[{char}]{Byte }\end{DoxyParamCaption})}
+
+
+
+Write a char on the current serial port. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Byte} & \+: char to send on the port (must be terminated by \textquotesingle{}\textbackslash{}0\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00343}{343}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00344 \{}
+\DoxyCodeLine{00345 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00346     \textcolor{comment}{// Number of bytes written}}
+\DoxyCodeLine{00347     DWORD dwBytesWritten;}
+\DoxyCodeLine{00348     \textcolor{comment}{// Write the char to the serial device}}
+\DoxyCodeLine{00349     \textcolor{comment}{// Return -\/1 if an error occured}}
+\DoxyCodeLine{00350     \textcolor{keywordflow}{if}(!WriteFile(hSerial,\&Byte,1,\&dwBytesWritten,NULL)) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00351     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00352     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00353 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00354 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00355     \textcolor{comment}{// Write the char}}
+\DoxyCodeLine{00356     \textcolor{keywordflow}{if} (write(fd,\&Byte,1)!=1) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00359     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00360 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00361 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}\label{classserialib_a6a32655c718b998e5b63d8cdc483ac6d}} 
+\index{serialib@{serialib}!writeString@{writeString}}
+\index{writeString@{writeString}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{writeString()}{writeString()}}
+{\footnotesize\ttfamily char serialib\+::write\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{received\+String }\end{DoxyParamCaption})}
+
+
+
+Write a string on the current serial port. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em received\+String} & \+: string to send on the port (must be terminated by \textquotesingle{}\textbackslash{}0\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8cpp_source_l00375}{375}} du fichier \mbox{\hyperlink{serialib_8cpp_source}{serialib.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00376 \{}
+\DoxyCodeLine{00377 \textcolor{preprocessor}{\#if defined (\_WIN32) || defined( \_WIN64)}}
+\DoxyCodeLine{00378     \textcolor{comment}{// Number of bytes written}}
+\DoxyCodeLine{00379     DWORD dwBytesWritten;}
+\DoxyCodeLine{00380     \textcolor{comment}{// Write the string}}
+\DoxyCodeLine{00381     \textcolor{keywordflow}{if}(!WriteFile(hSerial,receivedString,strlen(receivedString),\&dwBytesWritten,NULL))}
+\DoxyCodeLine{00382         \textcolor{comment}{// Error while writing, return -\/1}}
+\DoxyCodeLine{00383         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00384     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00385     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00386 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00387 \textcolor{preprocessor}{\#if defined (\_\_linux\_\_) || defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{00388     \textcolor{comment}{// Lenght of the string}}
+\DoxyCodeLine{00389     \textcolor{keywordtype}{int} Lenght=strlen(receivedString);}
+\DoxyCodeLine{00390     \textcolor{comment}{// Write the string}}
+\DoxyCodeLine{00391     \textcolor{keywordflow}{if} (write(fd,receivedString,Lenght)!=Lenght) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00392     \textcolor{comment}{// Write operation successfull}}
+\DoxyCodeLine{00393     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00394 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00395 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{classserialib_ac8a9083c2e0503707e80c019a777e7be}\label{classserialib_ac8a9083c2e0503707e80c019a777e7be}} 
+\index{serialib@{serialib}!currentStateDTR@{currentStateDTR}}
+\index{currentStateDTR@{currentStateDTR}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{currentStateDTR}{currentStateDTR}}
+{\footnotesize\ttfamily bool serialib\+::current\+State\+DTR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8h_source_l00221}{221}} du fichier \mbox{\hyperlink{serialib_8h_source}{serialib.\+h}}.
+
+\mbox{\Hypertarget{classserialib_a7d9151bb3623efa2e857315e04da1439}\label{classserialib_a7d9151bb3623efa2e857315e04da1439}} 
+\index{serialib@{serialib}!currentStateRTS@{currentStateRTS}}
+\index{currentStateRTS@{currentStateRTS}!serialib@{serialib}}
+\doxysubsubsection{\texorpdfstring{currentStateRTS}{currentStateRTS}}
+{\footnotesize\ttfamily bool serialib\+::current\+State\+RTS\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{serialib_8h_source_l00220}{220}} du fichier \mbox{\hyperlink{serialib_8h_source}{serialib.\+h}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{serialib_8h}{serialib.\+h}}\item 
+\mbox{\hyperlink{serialib_8cpp}{serialib.\+cpp}}\end{DoxyCompactItemize}
