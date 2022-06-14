@@ -17,6 +17,14 @@
 dans le bus can la prioriter des messages en cas de conflit est donner au message avec le champ d'identification le plus faible.
 >ceci implique que les messages sont priorisé par le déstinataire du message
 
+### Adresse des cartes 21-22
+| adresse | carte |
+| :---: | :---: |
+| 1 | raspberry pi |
+| 2 | base roulante |
+| 3 | odometrie |
+| 4 | actionneur |
+| 5 | pi zero |
 
 # Mise en place du bus can
 ## Sur la raspberry
