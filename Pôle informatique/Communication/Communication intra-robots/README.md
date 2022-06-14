@@ -88,5 +88,11 @@ il existe un certain nombre de commande qui permete d'utilise le bus can :
 librairie orienté objet en c++ : voir le dossier **can_raspberry**
 
 ## Sur une STM32
-les messages reçu déclanche une intéruption en appelant la fonction `void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)`
-pour envoyer un message il faut utiliser `int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght, uint idMessage)`
+les messages reçu déclanche une intéruption en appelant la fonction 
+```c
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+```
+pour envoyer un message il faut utiliser 
+```c
+int send(CAN_ADDR addr, CAN_CODE_FCT codeFct , uint8_t data[], uint dataLen, bool isRep, uint repLenght, uint idMessage)
+```
