@@ -1,9 +1,10 @@
 # definition de la trame du bus can
 
 ## Champ d'identification en version étendu (29 bit)
+| msg urgent | desitnataire | emetteur | code fct |  id msg  | reponse ou question | id rep |
 | --- | --- | --- | --- | --- | --- | --- |
 |      0     |     0001     |   0010   | 00000101 | 00000001 |         0           |   001  |
-| msg urgent | desitnataire | emetteur | code fct |  id msg  | reponse ou question | id rep |
+
 
 - msg urgent : 0 pour un message urgent, 1 sinon
 - destinataire : addresse du destinataire du message sur 4 bit (0 à 7)
