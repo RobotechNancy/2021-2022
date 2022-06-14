@@ -15,7 +15,7 @@
 - id rep : si des donners doivent etre transmis sur plusieur trame
 
 dans le bus can la prioriter des messages en cas de conflit est donner au message avec le champ d'identification le plus faible.
->ceci implique que les
+>ceci implique que les messages sont priorisé par le déstinataire du message
 
 
 # Mise en place du bus can
