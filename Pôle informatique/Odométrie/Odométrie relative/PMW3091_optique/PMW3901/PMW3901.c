@@ -12,7 +12,7 @@
 #ifndef SRC_PMW3091_C_
 #define SRC_PMW3091_C_
 
-#define DELTA_X_L 0x03
+#define DELTA_X_L 0x03 // Define qui sont dans la datasheet (cf datasheet du capteur)
 #define DELTA_X_H 0x04
 #define DELTA_Y_L 0x05
 #define DELTA_Y_H 0x06
@@ -20,20 +20,20 @@
 #define PRODUCT_ID 0x49
 #define INVERSE_PRODUCT_ID 0xB6
 
-#define HSPI Descriptor->hspi
+#define HSPI Descriptor->hspi // Define qui initialise le SPI
 #define CS_PORT Descriptor->CS_Port
 #define CS_PIN Descriptor->CS_Pin
 
-typedef union {
+typedef union { // Permet de réunir les données envoyées par le capteur et de les unifier car on les récupère en 2 séries de 8 bits
 	uint8_t raw[2];
 	int16_t unified;
 }PMW3901_Unify_2x8_to_16_t;
 
 
-PMW3901_Descriptor_t *Descriptor;
+PMW3901_Descriptor_t *Descriptor; // Initialise notre port SPI
 
 
-PMW3901_Status_t PMW3901_RegWrite(uint8_t reg, uint8_t val)
+PMW3901_Status_t PMW3901_RegWrite(uint8_t reg, uint8_t val) // Méthode permettant d'écrire dans des registres en SPI
 {
 
 	HAL_StatusTypeDef SPI_status;
@@ -51,7 +51,7 @@ PMW3901_Status_t PMW3901_RegWrite(uint8_t reg, uint8_t val)
 	return PMW3901_SUCCESS;
 }
 
-PMW3901_Status_t PMW3901_RegRead(uint8_t reg, uint8_t *dest)
+PMW3901_Status_t PMW3901_RegRead(uint8_t reg, uint8_t *dest) // Méthode permettant de lire des registres en SPI
 {
 
 	HAL_StatusTypeDef SPI_status;
@@ -74,7 +74,7 @@ PMW3901_Status_t PMW3901_RegRead(uint8_t reg, uint8_t *dest)
 	return PMW3901_SUCCESS;
 }
 
-PMW3901_Status_t PMW3901_SetLed()
+PMW3901_Status_t PMW3901_SetLed() // Fonction permettant d'allumer les leds du capteurs
 {
 	PMW3901_Status_t status;
 
@@ -88,7 +88,7 @@ PMW3901_Status_t PMW3901_SetLed()
 	return status;
 }
 
-PMW3901_Status_t PMW3901_Init(PMW3901_Descriptor_t *_Descriptor)
+PMW3901_Status_t PMW3901_Init(PMW3901_Descriptor_t *_Descriptor) // Permet d'initialiser le capteur
 {
 	PMW3901_Status_t status;
 
@@ -107,7 +107,8 @@ PMW3901_Status_t PMW3901_Init(PMW3901_Descriptor_t *_Descriptor)
 
 	if(Inverse_Product_ID != INVERSE_PRODUCT_ID) return PMW3901_ERROR_UNKNOWN_ID;
 
-	status = PMW3901_RegWrite(0x3A, 0x00); if(status) return status;
+	// Tout ça permet initialiser certains registres du capteur apparaissant dans la datasheet (on se sait pas à quoi ça correspond)
+	status = PMW3901_RegWrite(0x3A, 0x00); if(status) return status; // Les if et return permettent de renvoyer un status afin de savoir si tout se passe bien, si status = 0 => tout est bon, si status = 1 => quelque chose fonctionne mal
 	status = PMW3901_RegWrite(0x7F, 0x00); if(status) return status;
 	status = PMW3901_RegWrite(0x61, 0xAD); if(status) return status;
 	status = PMW3901_RegWrite(0x7F, 0x03); if(status) return status;
@@ -187,7 +188,7 @@ PMW3901_Status_t PMW3901_Init(PMW3901_Descriptor_t *_Descriptor)
 	return status;
 }
 
-PMW3901_Status_t PMW3901_Read_Variation(int16_t *var_x, int16_t *var_y)
+PMW3901_Status_t PMW3901_Read_Variation(int16_t *var_x, int16_t *var_y) // Fonction permettant de lire la valeur de la variation
 {
 
 	PMW3901_Status_t status;
@@ -216,21 +217,7 @@ PMW3901_Status_t PMW3901_Read_Variation(int16_t *var_x, int16_t *var_y)
 	return status;
 }
 
-/*PMW3901_Status_t PMW3901_Get_Position(int16_t *x, int16_t *y)
-{
-	PMW3901_Status_t status;
 
-	float posX = 0;
-	float posY = 0;
-	float dx = 0;
-	float dy = 0;
-
-	dx = 0.2 * &x; // en mm
-	posX = posX + dx;
-
-	dy = 0.2 * &y;
-	posY = posY + dy;
-}*/
 
 
 
