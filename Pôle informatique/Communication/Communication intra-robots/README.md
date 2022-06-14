@@ -21,14 +21,22 @@ dans le bus can la prioriter des messages en cas de conflit est donner au messag
 # Mise en place du bus can
 ## Sur la raspberry
 
-installer le packet can-utils : `sudo apt install can-utils`
+installer le packet can-utils : 
+```bash
+sudo apt install can-utils
+```
 
-ajouter `dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000` cette ligne dans le fichier `sudo nano /boot/config.txt`
+ajouter :
+```bash
+dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000` cette ligne dans le fichier `sudo nano /boot/config.txt
+```
 12000000 dépend du quartz utiliser (souvent 12000000 ou 8000000)
 
 
 il faut lancer cette commande a chaque redémarage de la raspberry :
-`sudo ip link set can0 up type can bitrate 181818 loopback off`
+```bash
+sudo ip link set can0 up type can bitrate 181818 loopback off
+```
 - le bitrate doit etre le meme sur toute les cartes du bus can
 - il est possible de passer en **loopback on** ce qui fait que les messages ne sont **PLUS** envoyer dans le bus can mais sont renvoyer sur la carte.
 - pour arreter le bus can (et pouvoir le redmarer avec d'autre parametre) : `sudo ip link set can0 down`
@@ -44,6 +52,7 @@ Dans le .ioc :
 	- **Time Quanta in Bit Segment 2**
 de tel sorte d'obtenir le **Baud Rate** voulu (identique autre carte connecter au bus can. 181818 bit/s par example).
 Sur une carte en confguration par default :
+
 | PARAMETRE | VALEUR |
 | --- | --- |
 | **Prescaler (for Time Quantum)** | 16 |
