@@ -1,0 +1,13 @@
+<graphe idC="0" idS="0">
+  <etat id="0" nom="ModeAutoTest">
+    <transition id="1" type="3" condition="2">0</transition>
+    <transition id="2" type="2" condition="30">1</transition>
+  </etat>
+  <etat id="1" nom="InitialisationOdometrie">
+    <transition id="0" type="3" condition="3">2</transition>
+  </etat>
+  <etat id="2" nom="ModeArretUrgence">
+    <transition id="0" type="2" condition="25">3</transition>
+  </etat>
+  <enfant id="2" nom="nomenfant">"</enfant>
+</graphe>

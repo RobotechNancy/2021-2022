@@ -21,7 +21,7 @@ typedef enum {
 	PMW3901_SUCCESS = 0, // TOUT BON
 	PMW3901_ERROR_UNKNOWN_ID, // Product_ID pas bon
 	PMW3901_ERROR_SPI, //
-}PMW3901_Status_t;
+}PMW3901_Status_t; // correspond au status et renvoie le SUCCESS quand tout est bon
 
 
 

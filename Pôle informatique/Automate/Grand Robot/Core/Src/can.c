@@ -9,6 +9,7 @@
 #include "can.h"
 #include "defineCan.h"
 #include "stm32f3xx_hal.h"
+#include "servo.h"
 
 struct CanMsg{
 	int addr;
@@ -17,6 +18,9 @@ struct CanMsg{
 	int dataLen;
 	char data[];
 };
+
+extern CAN_HandleTypeDef hcan_p;
+extern uint8_t CanAdresse;
 
 
 /*!
@@ -41,23 +45,23 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	msg = traitement_trame( RxHeader, RxData);
 	/////////////////////////////////////////////////////////////////////////
 	switch(msg.codeFct){
+	uint8_t CR;
+	uint8_t data[1];
 	case ACTION_POMPE:;
-		uint8_t CR=pompe(msg.data[0]);
-		uint8_t data[1] = {CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
-		break;
-	case DEPLACEMENT_COURROIE:;
-		uint8_t CR=deplacement_servo_courroie(msg.data[0]);
-		uint8_t data[1] = {CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
-		break;
-	case DEPLACEMENT_BRAS_POMPE:;
-		uint8_t CR=deplacement_servo_ventouse(msg.data[0]);
-		uint8_t data[1] = {CR};
-		send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,CR,1,true,1,msg.idMessage);
-		break;
-
-
+			CR=pompe(msg.data[0]);
+			data[0] = CR;
+			send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
+			break;
+		case DEPLACEMENT_COURROIE:;
+			CR=deplacement_servo_courroie(msg.data[0]);
+			data[0] = CR;
+			send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
+			break;
+		case DEPLACEMENT_BRAS_POMPE:;
+			CR=deplacement_servo_ventouse(msg.data[0]);
+			data[0] = CR;
+			send(CAN_ADDR_RASPBERRY,ACCUSER_RECPETION,data,1,true,1,msg.idMessage);
+			break;
 	default :
 
 	break;
@@ -73,7 +77,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 	//renvoi un msg sur le bus can
 	//uint8_t data[8] = {0x01,0x02,0xFF,0x34,0x45};
-	//send(CAN_ADDR_RASPBERRY, AVANCE, data, 5, true, 5) ;
+	//send(CAN_ADDR_RASPBERRY, AVANCE, data, 5, true, 5, ) ;
 }
 
 
@@ -94,7 +98,7 @@ void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse) {
 	sFilterConfig.FilterBank = 0;
 	sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK; //Mode de filtrage choisit (avec maqsque ou liste d'adresses)
 	sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; //1 filtre de 32 bits ou 1 de 16 bits
-	sFilterConfig.FilterIdHigh = 0b000100000000000; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort
+	sFilterConfig.FilterIdHigh = 0b010000000000000; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort
 	sFilterConfig.FilterIdLow = 0; //
 	sFilterConfig.FilterMaskIdHigh = 0b111100000000000; //Masque utilisé (FFF pour une adresse unique) sur les bits de poids fort
 	sFilterConfig.FilterMaskIdLow = 0;
