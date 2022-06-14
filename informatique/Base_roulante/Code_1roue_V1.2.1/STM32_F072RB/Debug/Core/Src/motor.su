@@ -1,4 +1,0 @@
-motor.c:23:6:HAL_TIM_OC_DelayElapsedCallback	16	static
-motor.c:38:5:motorStop	24	static
-motor.c:57:5:motorDirection	24	static
-motor.c:74:5:motorStep	16	static
