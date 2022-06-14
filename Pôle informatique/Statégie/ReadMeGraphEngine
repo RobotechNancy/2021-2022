@@ -1,3 +1,0 @@
-Le code déposé contient les structures utilisées dans le moteur de graphe : la structure ARC ne sera pas utilisée, newEtat est basiquement la structure de l'état.
-Les fichiers MesFonctions sont des fichiers de tests qui permettaient de simuler le fonctionnement du moteur.
-Dans le main ici nous cherchons à importer la strucutre d'un grafcet depuis un fichier extérieur et de générer les intances de classes depuis le fichier et à partir des fichiers structures.

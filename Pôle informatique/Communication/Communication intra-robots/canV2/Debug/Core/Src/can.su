@@ -1,5 +1,0 @@
-can.c:44:6:CAN_Config	56	static
-can.c:73:6:is_valid_addr	56	static
-can.c:88:6:is_valid_code_fct	56	static
-can.c:115:5:send	56	static
-can.c:166:22:traitement_trame	64	static
