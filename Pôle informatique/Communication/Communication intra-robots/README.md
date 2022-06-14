@@ -35,11 +35,11 @@ installer le packet can-utils :
 sudo apt install can-utils
 ```
 
-ajouter le fichier `/boot/config.txt :
+ajouter le fichier `/boot/config.txt` :
 ```bash
 dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000
 ```
-12000000 dépend du quartz utiliser (souvent 12000000 ou 8000000)
+12000000 dépend du quartz utilisé (souvent 12000000 ou 8000000)
 
 
 il faut lancer cette commande a chaque redémarage de la raspberry :
@@ -98,7 +98,7 @@ il existe un certain nombre de commande qui permete d'utilise le bus can :
 
 - la librairie possede un grand nombre d'autre commande [cf .doc du packet](https://github.com/linux-can/can-utils)
 
-librairie orienté objet en c++ : voir le dossier **can_raspberry**
+librairie orienté objet en c++ : voir le dossier [can_raspberry](https://github.com/RobotechNancy/2021-2022/edit/main/P%C3%B4le%20informatique/Communication/Communication%20intra-robots/can_raspberry/)
 
 ## Sur une STM32
 les messages reçu déclanche une intéruption en appelant la fonction 
