@@ -38,7 +38,7 @@ il faut lancer cette commande a chaque redémarage de la raspberry :
 sudo ip link set can0 up type can bitrate 181818 loopback off
 ```
 - le bitrate doit etre le meme sur toute les cartes du bus can
-- il est possible de passer en **loopback on** ce qui fait que les messages ne sont **PLUS** envoyer dans le bus can mais sont renvoyer sur la carte.
+- il est possible de passer en **loopback on** ce qui fait que les messages **NE sont PLUS** envoyer dans le bus can mais sont renvoyer sur la carte.
 - pour arreter le bus can (et pouvoir le redmarer avec d'autre parametre) : `sudo ip link set can0 down`
 
 
