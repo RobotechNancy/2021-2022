@@ -4,7 +4,7 @@ Les fichiers MesFonctions sont des fichiers de tests qui permettaient de simuler
 
 Dans le main ici nous cherchons à importer la strucutre d'un grafcet depuis un fichier extérieur de type xml et de générer les intances de classes depuis le fichier et à partir des fichiers structures.
 -> 3 fichiers xml de travail sont disponibles, grapheEnfant est un "brouillon" / test pour la mise en place des graphes enfants parents
--> Parser utilisé : 
+-> Parser utilisé : RapidXML
 
 Après l'idée est de regarder en temps réel si des transitions sont validées sur l'état courant
 -> SI OUI passer la transition = changement d'état courant
