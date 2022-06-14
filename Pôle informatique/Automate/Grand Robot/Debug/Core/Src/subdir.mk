@@ -6,7 +6,6 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/can.c \
-../Core/Src/deplacement.c \
 ../Core/Src/main.c \
 ../Core/Src/servo.c \
 ../Core/Src/stm32f3xx_hal_msp.c \
@@ -18,7 +17,6 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/can.o \
-./Core/Src/deplacement.o \
 ./Core/Src/main.o \
 ./Core/Src/servo.o \
 ./Core/Src/stm32f3xx_hal_msp.o \
@@ -30,7 +28,6 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/can.d \
-./Core/Src/deplacement.d \
 ./Core/Src/main.d \
 ./Core/Src/servo.d \
 ./Core/Src/stm32f3xx_hal_msp.d \
@@ -48,7 +45,7 @@ Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/can.d ./Core/Src/can.o ./Core/Src/can.su ./Core/Src/deplacement.d ./Core/Src/deplacement.o ./Core/Src/deplacement.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/servo.d ./Core/Src/servo.o ./Core/Src/servo.su ./Core/Src/stm32f3xx_hal_msp.d ./Core/Src/stm32f3xx_hal_msp.o ./Core/Src/stm32f3xx_hal_msp.su ./Core/Src/stm32f3xx_it.d ./Core/Src/stm32f3xx_it.o ./Core/Src/stm32f3xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f3xx.d ./Core/Src/system_stm32f3xx.o ./Core/Src/system_stm32f3xx.su ./Core/Src/tor.d ./Core/Src/tor.o ./Core/Src/tor.su
+	-$(RM) ./Core/Src/can.d ./Core/Src/can.o ./Core/Src/can.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/servo.d ./Core/Src/servo.o ./Core/Src/servo.su ./Core/Src/stm32f3xx_hal_msp.d ./Core/Src/stm32f3xx_hal_msp.o ./Core/Src/stm32f3xx_hal_msp.su ./Core/Src/stm32f3xx_it.d ./Core/Src/stm32f3xx_it.o ./Core/Src/stm32f3xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f3xx.d ./Core/Src/system_stm32f3xx.o ./Core/Src/system_stm32f3xx.su ./Core/Src/tor.d ./Core/Src/tor.o ./Core/Src/tor.su
 
 .PHONY: clean-Core-2f-Src
 
