@@ -78,6 +78,7 @@ Sur une carte en confguration par default :
 
 - dans **NVIC Settings** tous cocher !!! (4 cases ou 1 en fonction de la carte)
 - verifier que les pin sont bien ascossier comme cela :
+
 | ---- | ------- |
 | PA12 | CAN1_TX |
 | PA11 | CAN1_RX | 
@@ -168,15 +169,16 @@ Dans le .ioc :
 de tel sorte d'obtenir le **Baud Rate** voulu (identique autre carte connecter au bus can. 181818 bit/s par example).
 Sur une carte en confguration par default :
 | PARAMETRE | VALEUR |
-| ----------- | ----------- |
+| --- | --- |
 | **Prescaler (for Time Quantum)** | 16 |
 | **Time Quanta in Bit Segment 1** | 8 Times | 
 | **Time Quanta in Bit Segment 2** | 2 Times | 
 
 - dans **NVIC Settings** tous cocher !!! (4 cases ou 1 en fonction de la carte)
 - verifier que les pin sont bien ascossier comme cela :
+
 | PIN  | DESCRIPTION |
-| ---- | ------- |
+| --- | --- |
 | PA12 | CAN1_TX |
 | PA11 | CAN1_RX | 
 - Inclure les fichiers : can.c, can.h, defineCan.h
