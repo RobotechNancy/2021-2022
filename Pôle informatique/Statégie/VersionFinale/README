@@ -1,0 +1,13 @@
+Le code déposé contient les structures utilisées dans le moteur de graphe : la structure ARC ne sera pas utilisée, Etat est basiquement la structure de l'état, etc.
+
+Les fichiers MesFonctions sont des fichiers de tests qui permettaient de simuler le fonctionnement du moteur.
+
+Dans le main ici nous cherchons à importer la strucutre d'un grafcet depuis un fichier extérieur de type xml et de générer les intances de classes depuis le fichier et à partir des fichiers structures.
+-> 3 fichiers xml de travail sont disponibles, grapheEnfant est un "brouillon" / test pour la mise en place des graphes enfants parents
+-> Parser utilisé : 
+
+Après l'idée est de regarder en temps réel si des transitions sont validées sur l'état courant
+-> SI OUI passer la transition = changement d'état courant
+-> SI NON mettre à jour les données de temporisation et de bouclage de l'état
+
+A chaque passage de transition on met dans les logs les informations de passage de l'état (temps mis, boucle, condition de la transition passée)
