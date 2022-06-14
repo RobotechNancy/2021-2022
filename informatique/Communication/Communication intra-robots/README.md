@@ -1,5 +1,6 @@
 # definition de la trame du bus can
 
+
 ## Champ d'identification en version étendu (29 bit)
 | msg urgent | desitnataire | emetteur | code fct |  id msg  | reponse ou question | id rep |
 | --- | --- | --- | --- | --- | --- | --- |
