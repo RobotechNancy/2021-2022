@@ -21,7 +21,7 @@
 |Module XBee type S1|RF : 250Kbps - série: jusqu'à 1Mbps|60m (intérieur) - 1200m (extérieur)|Sans fil - Haute Fréquence|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data - chiffrement AES 128 Bits|2,4 GHz avec étalement de spectre|
 |Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data|/|
 
-> Plus d'informations sur le module Digi Xbee 3 DigiMesh 2.4 RF [ici](https://www.digi.com/products/embedded-systems/digi-xbee/rf-modules/2-4-ghz-rf-modules/xbee3-digimesh-2-4#specifications) ou directement sur la [datasheet du module](https://www.digi.com/resources/library/data-sheets/ds_s2c-xbeedigimesh-24)
+> Plus d'informations sur le module Digi Xbee 3 DigiMesh 2.4 RF [ici](https://www.digi.com/products/embedded-systems/digi-xbee/rf-modules/2-4-ghz-rf-modules/xbee3-digimesh-2-4#specifications), sur le module XBee S1 [ici](https://www.digi.com/resources/documentation/Digidocs/90000982/Default.htm) ou directement sur la [datasheet du module](https://www.digi.com/resources/library/data-sheets/ds_s2c-xbeedigimesh-24)
 
 
 # Installation du code (sous Linux x86-64) :
