@@ -12,7 +12,7 @@
 |*1 octet*|*1 octet*|*1 octet*|*2 octets*|*1 octet*|*1 octet*|*<255 octets*|*2 octets*|*1 octet*|
 |STX|0xXX|0xXX|0xXX 0xXX|0xXX|0xXX|DATA|0xXX 0xXX|EOT|
 
-> *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#define.h**
+> *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#xbee_define.h**
 
 # Principales caractéristiques des connexions mises en oeuvre :
 
@@ -72,7 +72,7 @@ git pull && git add * && git commit -m "Version XX.XXR" && git push
 > 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee S1 et XBee S2C ne sont pas compatibles entre eux)
 
 - En cas d'impossibilité d'accès au module XBee et pour vérifier s'il n'est pas endommagé :
-> utiliser le logiciel propriétaire [XCTU](https://hub.digi.com/dp/path=/support/asset/xctu-v-658-windows-x86x64/) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
+> utiliser le logiciel propriétaire [XCTU](http://www.digi.com/xctu) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
 
 > dans le logiciel XCTU, cliquez sur l'icône avec la loupe et non celui avec le + pour ajouter un module
 
