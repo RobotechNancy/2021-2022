@@ -8,8 +8,8 @@
 
 
 - msg urgent : 0 pour un message urgent, 1 sinon
-- destinataire : addresse du destinataire du message sur 4 bit (0 à 7)
-- emetteur : addresse de l'emetteur du message sur 4 bit (0 à 7)
+- destinataire : addresse du destinataire du message sur 4 bit (0 à 15)
+- emetteur : addresse de l'emetteur du message sur 4 bit (0 à 15)
 - code fonction : code fonction du message qui indique a quoi sert le message sur 8 bit (0 à 254)
 - id du message : identique entre une demande et une reponse ce qui permet d'idnetifier la réponse, sur 8 bit (0 à 254)
 - reponse ou question : un bit , 1 pour une reponse et 0 sinon
