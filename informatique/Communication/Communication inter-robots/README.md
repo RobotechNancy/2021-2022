@@ -12,15 +12,16 @@
 |*1 octet*|*1 octet*|*1 octet*|*2 octets*|*1 octet*|*1 octet*|*<255 octets*|*2 octets*|*1 octet*|
 |STX|0xXX|0xXX|0xXX 0xXX|0xXX|0xXX|DATA|0xXX 0xXX|EOT|
 
-> *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#define.h**
+> *Remarque :* Tous les codes et adresses nécessaires pour la trame sont définis dans le fichier **#xbee_define.h**
 
 # Principales caractéristiques des connexions mises en oeuvre :
 
 |Nom de la communication|Vitesse de transfert|Portée|Type de communication|Caractéristiques de transmission utilisés (série)|Bande(s) de fréquence
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|Module XBee type S1|RF : 250Kbps - série: < 1Mbps|60 mètres (intérieur)|Sans fil - Haute Fréquence|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data - chiffrement AES|2,4 GHz avec étalement de spectre|
+|Module XBee type S1|RF : 250Kbps - série: jusqu'à 250Kbps|60m (intérieur) - 90m (extérieur)|Sans fil - Haute Fréquence|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data - chiffrement AES 128 Bits|2,4 GHz avec étalement de spectre|
 |Liaison UART|9600 - 115200 bauds|/|Filaire|9600 bauds - Bit de parité pair - 1 bits de stop - 8 bits de data|/|
 
+> Plus d'informations sur le module Digi Xbee 3 DigiMesh 2.4 RF [ici](https://www.digi.com/products/embedded-systems/digi-xbee/rf-modules/2-4-ghz-rf-modules/xbee3-digimesh-2-4#specifications), sur le module XBee S1 [ici](https://www.digi.com/resources/documentation/Digidocs/90000982/Default.htm) ou directement sur la [datasheet du module](https://www.digi.com/resources/library/data-sheets/ds_s2c-xbeedigimesh-24)
 
 
 # Installation du code (sous Linux x86-64) :
@@ -71,7 +72,7 @@ git pull && git add * && git commit -m "Version XX.XXR" && git push
 > 2 modules XBee ne sont compatibles que s'ils sont du même type (par ex. les modules XBee S1 et XBee S2C ne sont pas compatibles entre eux)
 
 - En cas d'impossibilité d'accès au module XBee et pour vérifier s'il n'est pas endommagé :
-> utiliser le logiciel propriétaire [XCTU](https://hub.digi.com/dp/path=/support/asset/xctu-v-658-windows-x86x64/) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
+> utiliser le logiciel propriétaire [XCTU](http://www.digi.com/xctu) et connecter le module XBee au port USB de votre ordinateur à l'aide de l'[explorer board XBee](./images/explorer_xbee.jpg)
 
 > dans le logiciel XCTU, cliquez sur l'icône avec la loupe et non celui avec le + pour ajouter un module
 
