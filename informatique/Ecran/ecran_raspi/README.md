@@ -1,6 +1,6 @@
 # Le code permet de réaliser :
 
-- la communication entre l'écran STM32F7G-DISCO et la RaspberryPi (envoi/réception de trames)
+- la communication entre l'écran STM32F746G-DISCO et la RaspberryPi (envoi/réception de trames)
 
 > *Remarque :* Tous les codes sont écrits en style **C/C++**
 
