@@ -1,0 +1,17 @@
+../Core/Src/variable.c:163:9:get_id_msg	4	static
+../Core/Src/variable.c:172:6:set_id_msg	16	static
+../Core/Src/variable.c:181:10:get_length	4	static
+../Core/Src/variable.c:190:6:set_length	16	static
+../Core/Src/variable.c:199:11:get_arr	4	static
+../Core/Src/variable.c:208:11:get_r_arr	4	static
+../Core/Src/variable.c:217:10:get_tim_arr	4	static
+../Core/Src/variable.c:229:21:get_deplacement_state	4	static
+../Core/Src/variable.c:241:6:set_deplacement_state	16	static
+../Core/Src/variable.c:250:10:get_target	4	static
+../Core/Src/variable.c:259:6:set_target	16	static
+../Core/Src/variable.c:268:6:reset_steps	4	static
+../Core/Src/variable.c:277:6:count_steps	4	static
+../Core/Src/variable.c:286:10:get_steps	4	static
+../Core/Src/variable.c:295:10:get_steps_left	16	static
+../Core/Src/variable.c:305:10:get_freq	16	static
+../Core/Src/variable.c:317:7:time_left	24	static

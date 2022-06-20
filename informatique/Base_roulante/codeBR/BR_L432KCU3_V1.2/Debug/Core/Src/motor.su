@@ -1,0 +1,9 @@
+../Core/Src/motor.c:41:6:HAL_TIM_PeriodElapsedCallback	56	static
+../Core/Src/motor.c:102:6:start_generate	16	static
+../Core/Src/motor.c:114:6:stop	48	static
+../Core/Src/motor.c:139:6:emergency_stop	32	static
+../Core/Src/motor.c:163:15:avance	24	static
+../Core/Src/motor.c:183:6:motor_step	16	static
+../Core/Src/motor.c:192:6:motor_dir	16	static
+../Core/Src/motor.c:203:6:motor_en	16	static
+../Core/Src/motor.c:215:6:motor_micro_step	16	static

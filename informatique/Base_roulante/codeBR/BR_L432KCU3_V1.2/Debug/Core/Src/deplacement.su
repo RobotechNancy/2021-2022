@@ -1,0 +1,4 @@
+../Core/Src/deplacement.c:27:6:triangle	24	static
+../Core/Src/deplacement.c:87:6:prepare_deplacement	16	static
+../Core/Src/deplacement.c:105:10:calcul_acceleration	24	static
+../Core/Src/deplacement.c:119:10:calcul_deceleration	24	static
