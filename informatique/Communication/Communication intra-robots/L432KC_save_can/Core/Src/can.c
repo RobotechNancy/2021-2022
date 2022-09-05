@@ -88,7 +88,10 @@ void CAN_Config(CAN_HandleTypeDef hcan, CAN_EMIT_ADDR adresse) {
 	sFilterConfig.FilterBank = 0;
 	sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK; //Mode de filtrage choisit (avec maqsque ou liste d'adresses)
 	sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; //1 filtre de 32 bits ou 1 de 16 bits
-	sFilterConfig.FilterIdHigh = 0b000100000000000; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort
+	
+	//sFilterConfig.FilterIdHigh = 0b000100000000000
+	sFilterConfig.FilterIdHigh = adresse>>13; //Adresse de l'émetteur à filtrer (ou du groupe) sur les bits de poids fort 
+						  //à vérifier
 	sFilterConfig.FilterIdLow = 0; //
 	sFilterConfig.FilterMaskIdHigh = 0b111100000000000; //Masque utilisé (FFF pour une adresse unique) sur les bits de poids fort
 	sFilterConfig.FilterMaskIdLow = 0;
