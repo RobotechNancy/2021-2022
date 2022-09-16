@@ -21,13 +21,13 @@
  */
 class Web{
     /** L'en-tête de la page web */
-    private string $head;
+    private $head;
 
     /** Le corps de la page web */
-    private string $body;
+    private $body;
 
     /** Le titre de la page web */
-    private string $title;
+    private $title;
 
     /**
      * Constructeur de la classe Web
