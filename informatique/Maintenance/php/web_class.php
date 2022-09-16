@@ -11,6 +11,7 @@
  * @link https://github.com/RobotechNancy/2021-2022
  */
 
+$theme = "dark";
 
 /**
  * Classe définissant les attributs, accésseurs et méthodes d'un objet de type Web
